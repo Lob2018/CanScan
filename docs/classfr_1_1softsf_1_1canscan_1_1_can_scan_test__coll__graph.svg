@@ -204,18 +204,18 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="33.5" y="-1802.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BYTES</text>
 <text text-anchor="start" x="33.5" y="-1790.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PER_KILOBYTE</text>
 <text text-anchor="start" x="25" y="-1774.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="33.5" y="-1774.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="33.5" y="-1762.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CONFIG</text>
+<text text-anchor="start" x="33.5" y="-1774.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int COLOR</text>
+<text text-anchor="start" x="33.5" y="-1762.5" font-family="Helvetica,sans-Serif" font-size="10.00">_BUTTONS_GAP</text>
 <text text-anchor="start" x="25" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="33.5" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT_GAP</text>
-<text text-anchor="start" x="25" y="-1730.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="33.5" y="-1730.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final double</text>
-<text text-anchor="start" x="33.5" y="-1718.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_GAP_BETWEEN</text>
-<text text-anchor="start" x="33.5" y="-1706.5" font-family="Helvetica,sans-Serif" font-size="10.00">_LOGO_AND_MODULES</text>
-<text text-anchor="start" x="25" y="-1690.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="33.5" y="-1690.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final double</text>
-<text text-anchor="start" x="33.5" y="-1678.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_IMAGE_RATIO</text>
-<text text-anchor="start" x="33.5" y="-1662.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 28 more...</text>
+<text text-anchor="start" x="33.5" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="33.5" y="-1734.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CONFIG</text>
+<text text-anchor="start" x="25" y="-1718.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="33.5" y="-1718.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT_GAP</text>
+<text text-anchor="start" x="25" y="-1702.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="33.5" y="-1702.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final double</text>
+<text text-anchor="start" x="33.5" y="-1690.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_GAP_BETWEEN</text>
+<text text-anchor="start" x="33.5" y="-1678.5" font-family="Helvetica,sans-Serif" font-size="10.00">_LOGO_AND_MODULES</text>
+<text text-anchor="start" x="33.5" y="-1662.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 29 more...</text>
 <text text-anchor="start" x="23.5" y="-1646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="33.5" y="-1646.5" font-family="Helvetica,sans-Serif" font-size="10.00">CanScan()</text>
 <text text-anchor="start" x="23.5" y="-1630.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>

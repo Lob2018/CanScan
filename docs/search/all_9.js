@@ -1,7 +1,7 @@
 var searchData=
 [
   ['large_5fimage_5fthreshold_0',['LARGE_IMAGE_THRESHOLD',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa9d7d0223a368dae4f577fd84fa569a7',1,'fr::softsf::canscan::CanScan']]],
-  ['latest_5freleases_5frepo_5furl_1',['LATEST_RELEASES_REPO_URL',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a881930c8642c5c884fded894088eb552',1,'fr::softsf::canscan::CanScan']]],
+  ['latest_5freleases_5frepo_5furl_1',['LATEST_RELEASES_REPO_URL',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a881930c8642c5c884fded894088eb552',1,'fr.softsf.canscan.CanScan.LATEST_RELEASES_REPO_URL'],['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#aa38cce1b3bbf57882dcc4c21f7512cb4',1,'fr.softsf.canscan.service.VersionService.LATEST_RELEASES_REPO_URL']]],
   ['launchpreviewworker_2',['launchPreviewWorker',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ac7e9244de4b3fc4f7f9a621de453d9cf',1,'fr::softsf::canscan::CanScan']]],
   ['launchresizeworker_3',['launchResizeWorker',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3a59f2d5eae9195b29a42c70f52c0dac',1,'fr::softsf::canscan::CanScan']]],
   ['liens_20utiles_4',['Liens utiles',['../index.html#Liens_utiles',1,'']]],

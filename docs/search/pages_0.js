@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['canscan_0',['Documentation of CanScan',['../index.html',1,'']]]
+  ['canscan_0',['Documentation de CanScan',['../index.html',1,'']]]
 ];

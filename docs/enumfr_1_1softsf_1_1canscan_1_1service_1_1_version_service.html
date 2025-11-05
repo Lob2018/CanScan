@@ -116,7 +116,7 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_ser
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service__coll__graph.svg" width="243" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service__coll__graph.svg" width="246" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -144,6 +144,9 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a9e860e0a69da51da67be284deb2c701c" id="r_a9e860e0a69da51da67be284deb2c701c"><td class="memItemLeft" align="right" valign="top">static SwingWorker&lt; Boolean, Void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e860e0a69da51da67be284deb2c701c">npeCheckLatestVersion</a> (String currentVersion, JButton updateButton)</td></tr>
 <tr class="memdesc:a9e860e0a69da51da67be284deb2c701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates input for version check.  <br /></td></tr>
 <tr class="separator:a9e860e0a69da51da67be284deb2c701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3765b9aae65297cd9337c852ee2fb30" id="r_ac3765b9aae65297cd9337c852ee2fb30"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3765b9aae65297cd9337c852ee2fb30">updateButtonState</a> (JButton button, boolean enabled, String tooltip)</td></tr>
+<tr class="memdesc:ac3765b9aae65297cd9337c852ee2fb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the state and tooltip of the given button based on application logic.  <br /></td></tr>
+<tr class="separator:ac3765b9aae65297cd9337c852ee2fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -152,10 +155,14 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
+<tr class="memitem:a53f8810c4e5c00a7723582a0327a45ec" id="r_a53f8810c4e5c00a7723582a0327a45ec"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53f8810c4e5c00a7723582a0327a45ec">CLOSE_HTML</a> = &quot;&lt;/html&gt;&quot;</td></tr>
+<tr class="separator:a53f8810c4e5c00a7723582a0327a45ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2038f8598d8b13f5869d15286282040c" id="r_a2038f8598d8b13f5869d15286282040c"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2038f8598d8b13f5869d15286282040c">GITHUB_TAGS_API_URL</a></td></tr>
 <tr class="separator:a2038f8598d8b13f5869d15286282040c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70b5c972b50663388aba16cd7f208ce0" id="r_a70b5c972b50663388aba16cd7f208ce0"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70b5c972b50663388aba16cd7f208ce0">HTTP_STATUS_CODE_OK</a> = 200</td></tr>
 <tr class="separator:a70b5c972b50663388aba16cd7f208ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38cce1b3bbf57882dcc4c21f7512cb4" id="r_aa38cce1b3bbf57882dcc4c21f7512cb4"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38cce1b3bbf57882dcc4c21f7512cb4">LATEST_RELEASES_REPO_URL</a></td></tr>
+<tr class="separator:aa38cce1b3bbf57882dcc4c21f7512cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac33081fce6838f0514f1afad3770ad68" id="r_ac33081fce6838f0514f1afad3770ad68"><td class="memItemLeft" align="right" valign="top">static final Pattern&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac33081fce6838f0514f1afad3770ad68">TAG_PATTERN</a> = Pattern.compile(&quot;\&quot;name\&quot;\\s*:\\s*\&quot;([^\&quot;]+)\&quot;&quot;)</td></tr>
 <tr class="separator:ac33081fce6838f0514f1afad3770ad68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -204,11 +211,11 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Asynchronously checks whether the current application version matches the latest GitHub release tag. </p>
-<p>If an update is available, the specified button is made visible; otherwise, it remains hidden.</p>
+<p>If an update is available, the specified button is made enabled; otherwise, it remains disabled.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentVersion</td><td>the current version of the application (e.g., "1.0.0.0") </td></tr>
-    <tr><td class="paramname">updateButton</td><td>the button to toggle visibility based on update status </td></tr>
+    <tr><td class="paramname">updateButton</td><td>the button to toggle enabled state based on update status </td></tr>
   </table>
   </dd>
 </dl>
@@ -219,7 +226,7 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service_a2b832f11011ef637a18e6b81fa163097_cgraph.svg" width="536" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service_a2b832f11011ef637a18e6b81fa163097_cgraph.svg" width="100%" height="428"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -252,15 +259,22 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Validates input for version check. </p>
-<p>If null, returns a fallback <code class="JavaDocCode">SwingWorker</code> that hides the update button; otherwise returns <code class="JavaDocCode">null</code>.</p>
+<p>If null, returns a fallback <code class="JavaDocCode">SwingWorker</code> that disables the update button; otherwise returns <code class="JavaDocCode">null</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentVersion</td><td>current app version </td></tr>
-    <tr><td class="paramname">updateButton</td><td>button to toggle visibility </td></tr>
+    <tr><td class="paramname">updateButton</td><td>button to toggle state </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>fallback worker if input is null; <code class="JavaDocCode">null</code> otherwise </dd></dl>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service_a9e860e0a69da51da67be284deb2c701c_cgraph.svg" width="530" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -305,7 +319,73 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac3765b9aae65297cd9337c852ee2fb30" name="ac3765b9aae65297cd9337c852ee2fb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3765b9aae65297cd9337c852ee2fb30">&#9670;&#160;</a></span>updateButtonState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void fr.softsf.canscan.service.VersionService.updateButtonState </td>
+          <td>(</td>
+          <td class="paramtype">JButton</td>          <td class="paramname"><span class="paramname"><em>button</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>enabled</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>tooltip</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the state and tooltip of the given button based on application logic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>the JButton to update </td></tr>
+    <tr><td class="paramname">enabled</td><td>whether the button should be enabled </td></tr>
+    <tr><td class="paramname">tooltip</td><td>the tooltip text to display on hover </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a53f8810c4e5c00a7723582a0327a45ec" name="a53f8810c4e5c00a7723582a0327a45ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f8810c4e5c00a7723582a0327a45ec">&#9670;&#160;</a></span>CLOSE_HTML</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"> final String fr.softsf.canscan.service.VersionService.CLOSE_HTML = &quot;&lt;/html&gt;&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2038f8598d8b13f5869d15286282040c" name="a2038f8598d8b13f5869d15286282040c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2038f8598d8b13f5869d15286282040c">&#9670;&#160;</a></span>GITHUB_TAGS_API_URL</h2>
 
@@ -388,6 +468,30 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa38cce1b3bbf57882dcc4c21f7512cb4" name="aa38cce1b3bbf57882dcc4c21f7512cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38cce1b3bbf57882dcc4c21f7512cb4">&#9670;&#160;</a></span>LATEST_RELEASES_REPO_URL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"> final String fr.softsf.canscan.service.VersionService.LATEST_RELEASES_REPO_URL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="stringliteral">&quot;https://github.com/Lob2018/CanScan/releases/latest&quot;</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ac33081fce6838f0514f1afad3770ad68" name="ac33081fce6838f0514f1afad3770ad68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac33081fce6838f0514f1afad3770ad68">&#9670;&#160;</a></span>TAG_PATTERN</h2>
 
@@ -419,7 +523,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1service.html">service</a></li><li class="navelem"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html">VersionService</a></li>
-    <li class="footer">Generated on Tue Nov 4 2025 21:49:50 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 5 2025 15:46:33 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

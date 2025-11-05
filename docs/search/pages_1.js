@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['documentation_20of_20canscan_0',['Documentation of CanScan',['../index.html',1,'']]]
+  ['de_20canscan_0',['Documentation de CanScan',['../index.html',1,'']]],
+  ['documentation_20de_20canscan_1',['Documentation de CanScan',['../index.html',1,'']]]
 ];

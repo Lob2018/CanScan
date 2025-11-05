@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "CanScan", "index.html", [
-    [ "Documentation of CanScan", "index.html", "index" ],
+    [ "Documentation de CanScan", "index.html", "index" ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
@@ -53,7 +53,7 @@ var NAVTREEINDEX =
 [
 "_browser_helper_8java.html",
 "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ac7e9244de4b3fc4f7f9a621de453d9cf",
-"enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2b832f11011ef637a18e6b81fa163097"
+"enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2038f8598d8b13f5869d15286282040c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

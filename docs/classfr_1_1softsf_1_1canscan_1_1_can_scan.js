@@ -77,6 +77,7 @@ var classfr_1_1softsf_1_1canscan_1_1_can_scan =
     [ "cardPanel", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afb2117ac961094ef673dab029f9d1d5b", null ],
     [ "charHeight", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a990df2b47ccdc9f236ccbcb16b3ce7d3", null ],
     [ "charWidth", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a61ad89b3e35b964d1cde8dddcef1240e", null ],
+    [ "COLOR_BUTTONS_GAP", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#acbdb1d243b0ddb6b60a3d48b31cf3999", null ],
     [ "CONFIG", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a63f44d2df4e6c2484da7141c3b9e3468", null ],
     [ "currentMode", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a45c69814709eaf34be6c0e10a89fe75b", null ],
     [ "DEFAULT_GAP", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a752acddc0e78935c3b78fb190e96b914", null ],
