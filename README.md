@@ -25,7 +25,7 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 
 ## 🎬 Démo
 
-[<img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/Miniature-tuto-CanScan.jpg" alt="Tutoriel CanScan" width="100" height="56"/>](https://youtu.be/YV2UbsMo910)
+[<img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/Miniature-tuto-CanScan.jpg" alt="Tutoriel CanScan" width="100" height="56"/>](https://youtu.be/gtPi88jfQjo)
 
 ## 📑 Contenu
 
