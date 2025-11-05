@@ -245,39 +245,42 @@ public class CanScan extends JFrame {
         northPanel.setMaximumSize(new Dimension(DEFAULT_LABEL_WIDTH * 3, northPanel.getHeight()));
         northPanel.setBorder(new EmptyBorder(DEFAULT_GAP, DEFAULT_GAP, DEFAULT_GAP, DEFAULT_GAP));
         GridBagConstraints grid = new GridBagConstraints();
-        grid.insets = new Insets(4, 4, 4, 4);
+        grid.insets = new Insets(3, 3, 3, 3);
         grid.fill = GridBagConstraints.HORIZONTAL;
         grid.gridx = 0;
         grid.gridy = -1;
         grid.weightx = 1;
         GridBagLayout layout = (GridBagLayout) northPanel.getLayout();
         layout.columnWidths = new int[] {DEFAULT_LABEL_WIDTH, 0};
-        // Mode
+        // CHOOSE QR CODE TYPE
+        JPanel modePanel = new JPanel(new BorderLayout());
         mecardRadio.setSelected(true);
         ButtonGroup group = new ButtonGroup();
         group.add(mecardRadio);
         group.add(freeRadio);
-        JPanel radioButtonPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, RADIO_BUTTON_GAP, 0));
-        radioButtonPanel.add(mecardRadio);
-        radioButtonPanel.add(freeRadio);
-        // UPDATE
+        JPanel radioButtonsPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbcRadio = new GridBagConstraints();
+        gbcRadio.gridx = 0;
+        gbcRadio.gridy = 0;
+        gbcRadio.insets = new Insets(0, 0, 0, RADIO_BUTTON_GAP);
+        gbcRadio.anchor = GridBagConstraints.CENTER;
+        radioButtonsPanel.add(mecardRadio, gbcRadio);
+        gbcRadio.gridx = 1;
+        gbcRadio.insets = new Insets(0, 0, 0, 0);
+        radioButtonsPanel.add(freeRadio, gbcRadio);
+        modePanel.add(radioButtonsPanel, BorderLayout.WEST);
+        modePanel.add(update, BorderLayout.EAST);
         update.setEnabled(false);
         update.setToolTipText(
                 "<html>Recherche de mise à jour<br>" + LATEST_RELEASES_REPO_URL + "</html>");
         update.addActionListener(
                 e -> BrowserHelper.INSTANCE.openInBrowser(LATEST_RELEASES_REPO_URL));
-        radioButtonPanel.add(update);
         SwingWorker<Boolean, Void> worker =
                 VersionService.INSTANCE.checkLatestVersion(version, update);
         worker.execute();
         mecardRadio.addActionListener(e -> switchMode(Mode.MECARD));
         freeRadio.addActionListener(e -> switchMode(Mode.FREE));
-        addRow(
-                northPanel,
-                grid,
-                "Code QR",
-                "Choisir le type de code QR à générer.",
-                radioButtonPanel);
+        addRow(northPanel, grid, "Code QR", "Choisir le type de code QR à générer.", modePanel);
         JPanel freePanel = new JPanel(new GridBagLayout());
         initFreeCard(freePanel, new GridBagConstraints());
         JPanel mecardPanel = new JPanel(new GridBagLayout());
