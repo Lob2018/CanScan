@@ -354,7 +354,7 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memdesc:a81256a8e00a35676330af2e8542acf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the entire QR code area with the specified background color.  <br /></td></tr>
 <tr class="separator:a81256a8e00a35676330af2e8542acf51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734f691ae3eeecc255c1e43c4f9edb8c" id="r_a734f691ae3eeecc255c1e43c4f9edb8c"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734f691ae3eeecc255c1e43c4f9edb8c">getAvailableMemoryMB</a> ()</td></tr>
-<tr class="memdesc:a734f691ae3eeecc255c1e43c4f9edb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the available memory in the JVM.  <br /></td></tr>
+<tr class="memdesc:a734f691ae3eeecc255c1e43c4f9edb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the available memory in the JVM with safety margin for image generation.  <br /></td></tr>
 <tr class="separator:a734f691ae3eeecc255c1e43c4f9edb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe4d08d96fdc7b2097daf4033bbbb9c" id="r_aefe4d08d96fdc7b2097daf4033bbbb9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefe4d08d96fdc7b2097daf4033bbbb9c">getManifestKeys</a> ()</td></tr>
 <tr class="memdesc:aefe4d08d96fdc7b2097daf4033bbbb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads application metadata from <code>version.properties</code>.  <br /></td></tr>
@@ -1769,8 +1769,8 @@ Free: generates a QR code from arbitrary text or URLs. </li>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the available memory in the JVM. </p>
-<dl class="section return"><dt>Returns</dt><dd>Available memory in megabytes. </dd></dl>
+<p>Gets the available memory in the JVM with safety margin for image generation. </p>
+<dl class="section return"><dt>Returns</dt><dd>Available memory in megabytes, minus the reserved safety margin. Returns 0 if not enough memory is available. </dd></dl>
 
 </div>
 </div>
@@ -4751,7 +4751,7 @@ nameField</code> is empty in <code class="JavaDocCode">MECARD</code> mode. </p>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html">CanScan</a></li>
-    <li class="footer">Generated on Wed Nov 5 2025 15:46:33 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 5 2025 16:48:08 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

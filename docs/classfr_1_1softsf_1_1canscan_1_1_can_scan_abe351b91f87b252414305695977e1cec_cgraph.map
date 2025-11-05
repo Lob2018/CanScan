@@ -31,7 +31,7 @@
 <area shape="poly" id="edge34_Node000004_Node000021" title=" " alt="" coords="770,838,901,835,1044,840,1077,843,1076,849,1043,845,901,840,770,843"/>
 <area shape="rect" id="Node000022" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a81256a8e00a35676330af2e8542acf51" title="Fills the entire QR code area with the specified background color." alt="" coords="833,1236,1028,1279"/>
 <area shape="poly" id="edge35_Node000004_Node000022" title=" " alt="" coords="758,867,771,878,798,919,808,960,806,1000,800,1039,792,1078,790,1118,797,1159,819,1201,847,1226,843,1230,815,1204,792,1161,784,1118,787,1078,794,1038,801,999,802,960,793,921,767,882,755,870"/>
-<area shape="rect" id="Node000023" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" title="Gets the available memory in the JVM." alt="" coords="1108,913,1307,956"/>
+<area shape="rect" id="Node000023" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" title="Gets the available memory in the JVM with safety margin for image generation." alt="" coords="1108,913,1307,956"/>
 <area shape="poly" id="edge37_Node000004_Node000023" title=" " alt="" coords="741,866,771,878,794,893,818,907,887,924,959,934,1029,938,1092,939,1092,944,1029,944,959,939,886,929,816,912,792,898,768,882,739,871"/>
 <area shape="rect" id="Node000024" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8919d8945854ca9cd798a20e9f076bff" title="Validates that sufficient memory is available to generate a square image of the given size." alt="" coords="817,855,1044,897"/>
 <area shape="poly" id="edge39_Node000004_Node000024" title=" " alt="" coords="770,856,802,860,801,865,769,862"/>

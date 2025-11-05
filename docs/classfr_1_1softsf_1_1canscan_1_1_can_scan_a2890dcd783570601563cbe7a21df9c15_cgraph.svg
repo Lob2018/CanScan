@@ -324,7 +324,7 @@ var sectionId = 'dynsection-4';
 <!-- Node22 -->
 <g id="Node000022" class="node">
 <title>Node22</title>
-<g id="a_Node000022"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" target="_top" xlink:title="Gets the available memory in the JVM.">
+<g id="a_Node000022"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" target="_top" xlink:title="Gets the available memory in the JVM with safety margin for image generation.">
 <polygon fill="white" stroke="#666666" points="769,-308 619.5,-308 619.5,-276 769,-276 769,-308"/>
 <text text-anchor="start" x="627.5" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.get</text>
 <text text-anchor="middle" x="694.25" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">AvailableMemoryMB</text>

@@ -173,7 +173,7 @@
 <!-- Node20 -->
 <g id="Node000020" class="node">
 <title>Node20</title>
-<g id="a_Node000020"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" target="_top" xlink:title="Gets the available memory in the JVM.">
+<g id="a_Node000020"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a734f691ae3eeecc255c1e43c4f9edb8c" target="_top" xlink:title="Gets the available memory in the JVM with safety margin for image generation.">
 <polygon fill="white" stroke="#666666" points="576.75,-43.8 427.25,-43.8 427.25,-11.8 576.75,-11.8 576.75,-43.8"/>
 <text text-anchor="start" x="435.25" y="-30.3" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.get</text>
 <text text-anchor="middle" x="502" y="-18.3" font-family="Helvetica,sans-Serif" font-size="10.00">AvailableMemoryMB</text>
