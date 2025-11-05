@@ -263,9 +263,7 @@ public class CanScan extends JFrame {
         // UPDATE
         update.setEnabled(false);
         update.setToolTipText(
-                "<html>Recherche de mise à jour<br>"
-                        + LATEST_RELEASES_REPO_URL
-                        + "</html>");
+                "<html>Recherche de mise à jour<br>" + LATEST_RELEASES_REPO_URL + "</html>");
         update.addActionListener(
                 e -> BrowserHelper.INSTANCE.openInBrowser(LATEST_RELEASES_REPO_URL));
         radioButtonPanel.add(update);
