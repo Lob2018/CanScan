@@ -31,6 +31,7 @@ public enum UseLucioleFont {
     INSTANCE;
 
     private static final String FONT_LUCIOLE_PATH = "/font/Luciole-Regular.ttf";
+    private static final String DEFAULT_FONT = "defaultFont";
 
     /**
      * Initializes and applies the Luciole font as the default Swing UI font. If the font cannot be
@@ -41,7 +42,7 @@ public enum UseLucioleFont {
             if (is == null) {
                 throw new IllegalStateException("La police Luciole n'a pas pu être chargée : " + FONT_LUCIOLE_PATH);
             }
-            Font defaultFont = UIManager.getFont("defaultFont");
+            Font defaultFont = UIManager.getFont(DEFAULT_FONT);
             Font loadedFont = Font.createFont(Font.TRUETYPE_FONT, is);
             GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(loadedFont);
             Font luciole =
@@ -50,7 +51,7 @@ public enum UseLucioleFont {
             AffineTransform shiftDown = AffineTransform.getTranslateInstance(0, 2.5);
             Font adjustedFont =
                     luciole.deriveFont(shiftDown).deriveFont(luciole.getStyle(), luciole.getSize());
-            UIManager.put("defaultFont", adjustedFont);
+            UIManager.put(DEFAULT_FONT, adjustedFont);
             SwingUtilities.invokeLater(FlatLaf::updateUI);
         } catch (FontFormatException | IOException | IllegalStateException e) {
             Popup.INSTANCE.showDialog(
