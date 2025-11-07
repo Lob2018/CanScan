@@ -22,9 +22,9 @@ public enum Loader {
 
     private JLabel qrCodeLabel;
 
-    private transient Timer waitIconTimer;
-    private transient FontMetrics qrCodeLabelFontMetrics;
-    private transient Font qrCodeLabelFont;
+    private Timer waitIconTimer;
+    private FontMetrics qrCodeLabelFontMetrics;
+    private Font qrCodeLabelFont;
 
     /** Injects UI dependencies. Must be called once during initialization. */
     public void init(JLabel qrCodeLabel) {

@@ -38,9 +38,9 @@ public enum QrCodeResize {
     private static final int QR_CODE_LABEL_DEFAULT_SIZE = 50;
     private static final int LARGE_IMAGE_THRESHOLD = 1000;
     private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
-    private transient Timer resizeDebounceTimer;
-    private transient SwingWorker<ImageIcon, Void> resizeWorker;
-    private transient JLabel qrCodeLabel;
+    private Timer resizeDebounceTimer;
+    private SwingWorker<ImageIcon, Void> resizeWorker;
+    private JLabel qrCodeLabel;
     private QrInput qrInput;
 
     /**

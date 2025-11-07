@@ -49,7 +49,7 @@ public enum QrCodeBufferedImage {
     private static final String GENERATE_QR_CODE_IMAGE = "generateQrCodeImage";
     private static final int AVAILABLE_MEMORY_TO_GENERATE_IMAGE = 50;
     private static final int BYTES_PER_KILOBYTE = 1024;
-    private transient BufferedImage qrOriginal;
+    private BufferedImage qrOriginal;
     private final Object imageLock = new Object();
 
     /**

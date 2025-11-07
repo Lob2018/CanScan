@@ -35,9 +35,9 @@ import fr.softsf.canscan.util.StringConstants;
 public enum QrCodePreview {
     INSTANCE;
 
-    private transient Timer previewDebounceTimer;
-    private transient SwingWorker<BufferedImage, Void> previewWorker;
-    private transient JLabel qrCodeLabel;
+    private Timer previewDebounceTimer;
+    private SwingWorker<BufferedImage, Void> previewWorker;
+    private JLabel qrCodeLabel;
     private QrInput qrInput;
 
     /**

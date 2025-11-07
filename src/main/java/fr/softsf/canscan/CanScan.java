@@ -121,51 +121,49 @@ public class CanScan extends JFrame {
     private static String name;
     private static String organization;
     // NORTH wrapper
-    private final transient JPanel northPanelWrapper =
-            new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+    private final JPanel northPanelWrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
     private Mode currentMode = Mode.MECARD;
-    transient JRadioButton mecardRadio = new JRadioButton(Mode.MECARD.text());
-    transient JRadioButton freeRadio = new JRadioButton(Mode.FREE.text());
+    JRadioButton mecardRadio = new JRadioButton(Mode.MECARD.text());
+    JRadioButton freeRadio = new JRadioButton(Mode.FREE.text());
     // Update
     JButton update = new JButton("\uD83D\uDD04");
     // Champs MECARD
-    transient JTextField nameField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField phoneField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField emailField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField orgField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField adrField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField urlField = new JTextField(TEXT_FIELDS_COLUMNS);
+    JTextField nameField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField phoneField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField emailField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField orgField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField adrField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField urlField = new JTextField(TEXT_FIELDS_COLUMNS);
     // Champs FREE
-    final transient JTextArea freeField = new JTextArea("");
-    final transient FontMetrics fm = freeField.getFontMetrics(freeField.getFont());
-    final transient JScrollPane freeScrollPane = new JScrollPane(freeField);
+    final JTextArea freeField = new JTextArea("");
+    final FontMetrics fm = freeField.getFontMetrics(freeField.getFont());
+    final JScrollPane freeScrollPane = new JScrollPane(freeField);
     final int charHeight = fm.getHeight();
     final int charWidth = fm.charWidth('W');
     // CardLayout pour basculer entre MECARD et FREE
-    private final transient CardLayout cardLayout = new CardLayout();
-    private final transient JPanel cardPanel = new JPanel(cardLayout);
+    private final CardLayout cardLayout = new CardLayout();
+    private final JPanel cardPanel = new JPanel(cardLayout);
     // Champs commmuns
-    final transient JTextField logoField = new JTextField(TEXT_FIELDS_COLUMNS);
-    final transient JTextField sizeField = new JTextField(SIZE_FIELD_DEFAULT, TEXT_FIELDS_COLUMNS);
-    final transient JSlider marginSlider = new JSlider(0, MINIMUM_QR_CODE_SIZE, margin);
-    final transient JSlider ratioSlider =
-            new JSlider(0, MAX_PERCENTAGE, (int) (imageRatio * MAX_PERCENTAGE));
-    final transient JCheckBox roundedModulesCheckBox = new JCheckBox();
+    final JTextField logoField = new JTextField(TEXT_FIELDS_COLUMNS);
+    final JTextField sizeField = new JTextField(SIZE_FIELD_DEFAULT, TEXT_FIELDS_COLUMNS);
+    final JSlider marginSlider = new JSlider(0, MINIMUM_QR_CODE_SIZE, margin);
+    final JSlider ratioSlider = new JSlider(0, MAX_PERCENTAGE, (int) (imageRatio * MAX_PERCENTAGE));
+    final JCheckBox roundedModulesCheckBox = new JCheckBox();
     // Rendu dynamique
-    private final transient JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
+    private final JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
 
     // SOUTH
-    private final transient JPanel southSpacer = new JPanel();
+    private final JPanel southSpacer = new JPanel();
 
     // Buttons
     @SuppressWarnings("FieldCanBeLocal")
-    private final transient JButton browseButton = new JButton("\uD83D\uDCC1 Parcourir");
+    private final JButton browseButton = new JButton("\uD83D\uDCC1 Parcourir");
 
-    private final transient JButton qrColorButton = new JButton("#000000");
-    private final transient JButton bgColorButton = new JButton("#FFFFFF");
+    private final JButton qrColorButton = new JButton("#000000");
+    private final JButton bgColorButton = new JButton("#FFFFFF");
 
     @SuppressWarnings("FieldCanBeLocal")
-    private final transient JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
+    private final JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
 
     /**
      * Initializes the CanScan GUI.
