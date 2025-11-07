@@ -1,0 +1,25 @@
+var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize =
+[
+    [ "cancelPreviousResizeWorker", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a8d6601bb69287724be51e8ffac0fc369", null ],
+    [ "createResizeWorker", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a2141e795770aa1577397e33f990d356c", null ],
+    [ "getResizeDebounceTimer", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a9ac7f346c52f752140984fa7a635336c", null ],
+    [ "handleResize", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a9962c344acd3a8046dff04e6da82aa07", null ],
+    [ "handleResizeWorkerCompletion", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#affac6f7db21e00ef84b3d804823c6b51", null ],
+    [ "init", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a5e4fcd5ca38f2373d1419236b434f7b5", null ],
+    [ "isInvalidQrData", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#aa7bb188a82b4cd677a39d8b09dcd4ee4", null ],
+    [ "isRunning", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a43bcfdd826cb50331a01ba51bce05ed2", null ],
+    [ "launchResizeWorker", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#aadf6afa51d8b8667ff70777b0202d4af", null ],
+    [ "resetAndStartResizeWorker", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a1093d8b446a9a20cb0d3a8275283a345", null ],
+    [ "resizeImageInBackground", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a9d652d45dd8f6c5a1715e7c19f27fad5", null ],
+    [ "stop", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a01d0bf550b2174b4aa737e0fdae27f52", null ],
+    [ "updateQrCodeSize", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#ac168b5bcb9913de63928083f8f750d1e", null ],
+    [ "updateResizeDebounceTimer", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#aed47fcf709f5f89a80357729b2878fe7", null ],
+    [ "INSTANCE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a28fb368f22ad4264b4ab5b2087a7ad5d", null ],
+    [ "LARGE_IMAGE_THRESHOLD", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a00ec2a4a80a03011863d8fff51730330", null ],
+    [ "QR_CODE_LABEL_DEFAULT_SIZE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a56c09ecfae6267ed4ce3b060b135070c", null ],
+    [ "qrCodeLabel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#abdb9091e995b2512c0694dc38ea41334", null ],
+    [ "qrInput", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a07fe389fb1c87a17a0b0600136f83d8e", null ],
+    [ "RESIZE_DEBOUNCE_DELAY_MS", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#ae31e9391bf61f1566a66ff339bab3a80", null ],
+    [ "resizeDebounceTimer", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a310e7b2da350d360a93f0b92b141c3f9", null ],
+    [ "resizeWorker", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#afb87f10237ffc28ea242c14e47c056f0", null ]
+];

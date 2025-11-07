@@ -112,14 +112,129 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aec9e84dae3335503158e003e471ad2e1" id="r_aec9e84dae3335503158e003e471ad2e1"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec9e84dae3335503158e003e471ad2e1">ModuleContext</a> (<a class="el" href="#a01dae88dbcdd9c8f8ff58172555a3b1d">QrConfig</a> config, int matrixWidth, int matrixHeight, int whiteBoxX, int whiteBoxY, int whiteBoxSize)</td></tr>
+<tr class="memdesc:aec9e84dae3335503158e003e471ad2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context for QR module rendering, including configuration, matrix dimensions, and logo area.  <br /></td></tr>
+<tr class="separator:aec9e84dae3335503158e003e471ad2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01dae88dbcdd9c8f8ff58172555a3b1d" id="r_a01dae88dbcdd9c8f8ff58172555a3b1d"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01dae88dbcdd9c8f8ff58172555a3b1d">QrConfig</a> (File logoFile, int size, double imageRatio, Color qrColor, Color bgColor, boolean roundedModules, int margin)</td></tr>
+<tr class="memdesc:a01dae88dbcdd9c8f8ff58172555a3b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration parameters used to generate a QR code.  <br /></td></tr>
+<tr class="separator:a01dae88dbcdd9c8f8ff58172555a3b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0694c357710efef6b0c71664b54183c7" id="r_a0694c357710efef6b0c71664b54183c7"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0694c357710efef6b0c71664b54183c7">QrDataResult</a> (String data, String defaultFileName)</td></tr>
 <tr class="memdesc:a0694c357710efef6b0c71664b54183c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the encoded QR data and its associated default file name.  <br /></td></tr>
 <tr class="separator:a0694c357710efef6b0c71664b54183c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4af9ba84516420805b76613a93cb9f60" id="r_a4af9ba84516420805b76613a93cb9f60"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4af9ba84516420805b76613a93cb9f60">QrInput</a> (String name, String tel, String email, String org, String adr, String url, String free)</td></tr>
-<tr class="memdesc:a4af9ba84516420805b76613a93cb9f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structured input for QR code generation.  <br /></td></tr>
-<tr class="separator:a4af9ba84516420805b76613a93cb9f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6274d67b9dd1206460be9fb6c5c93d6" id="r_ac6274d67b9dd1206460be9fb6c5c93d6"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6274d67b9dd1206460be9fb6c5c93d6">QrInput</a> (int availableHeightForQrCode, <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a> currentMode, String free, String name, String org, String tel, String email, String adr, String url, String logoPath, int size, int margin, double ratio, Color qrColor, Color bgColor, boolean isRoundedModules)</td></tr>
+<tr class="memdesc:ac6274d67b9dd1206460be9fb6c5c93d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprehensive input data structure for QR code generation and rendering.  <br /></td></tr>
+<tr class="separator:ac6274d67b9dd1206460be9fb6c5c93d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aec9e84dae3335503158e003e471ad2e1" name="aec9e84dae3335503158e003e471ad2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec9e84dae3335503158e003e471ad2e1">&#9670;&#160;</a></span>ModuleContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">record fr.softsf.canscan.model.ModuleContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a01dae88dbcdd9c8f8ff58172555a3b1d">QrConfig</a></td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>matrixWidth</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>matrixHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>whiteBoxX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>whiteBoxY</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>whiteBoxSize</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Context for QR module rendering, including configuration, matrix dimensions, and logo area. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>QR code configuration </td></tr>
+    <tr><td class="paramname">matrixWidth</td><td>matrix width </td></tr>
+    <tr><td class="paramname">matrixHeight</td><td>matrix height </td></tr>
+    <tr><td class="paramname">whiteBoxX</td><td>logo area X coordinate </td></tr>
+    <tr><td class="paramname">whiteBoxY</td><td>logo area Y coordinate </td></tr>
+    <tr><td class="paramname">whiteBoxSize</td><td>logo area size </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespacefr_1_1softsf_1_1canscan_1_1model_aec9e84dae3335503158e003e471ad2e1_cgraph.svg" width="384" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a01dae88dbcdd9c8f8ff58172555a3b1d" name="a01dae88dbcdd9c8f8ff58172555a3b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01dae88dbcdd9c8f8ff58172555a3b1d">&#9670;&#160;</a></span>QrConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">record fr.softsf.canscan.model.QrConfig </td>
+          <td>(</td>
+          <td class="paramtype">File</td>          <td class="paramname"><span class="paramname"><em>logoFile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>imageRatio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>qrColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>bgColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>roundedModules</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>margin</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration parameters used to generate a QR code. </p>
+
+</div>
+</div>
 <a id="a0694c357710efef6b0c71664b54183c7" name="a0694c357710efef6b0c71664b54183c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0694c357710efef6b0c71664b54183c7">&#9670;&#160;</a></span>QrDataResult()</h2>
 
@@ -150,8 +265,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4af9ba84516420805b76613a93cb9f60" name="a4af9ba84516420805b76613a93cb9f60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4af9ba84516420805b76613a93cb9f60">&#9670;&#160;</a></span>QrInput()</h2>
+<a id="ac6274d67b9dd1206460be9fb6c5c93d6" name="ac6274d67b9dd1206460be9fb6c5c93d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6274d67b9dd1206460be9fb6c5c93d6">&#9670;&#160;</a></span>QrInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,7 +274,27 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">record fr.softsf.canscan.model.QrInput </td>
           <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>availableHeightForQrCode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a></td>          <td class="paramname"><span class="paramname"><em>currentMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>free</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>org</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -174,11 +309,6 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>org</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>adr</em></span>, </td>
         </tr>
         <tr>
@@ -189,21 +319,72 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>free</em></span>&#160;)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>logoPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>margin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ratio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>qrColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color</td>          <td class="paramname"><span class="paramname"><em>bgColor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>isRoundedModules</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Structured input for QR code generation. </p>
+<p>Comprehensive input data structure for QR code generation and rendering. </p>
+<p>Encapsulates all user-provided data and configuration parameters required to generate, style, and display a QR code. Supports both MECARD (structured contact) and FREE (arbitrary text) encoding modes.</p>
+<p>This record serves as an immutable data transfer object (DTO) that aggregates:</p>
+<ul>
+<li>
+Contact information (MECARD mode) </li>
+<li>
+Free-form text content (FREE mode) </li>
+<li>
+Visual customization (colors, modules, logo) </li>
+<li>
+Size and layout constraints </li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>full name of the contact </td></tr>
-    <tr><td class="paramname">tel</td><td>telephone number </td></tr>
-    <tr><td class="paramname">email</td><td>email address </td></tr>
-    <tr><td class="paramname">org</td><td>organization or company name </td></tr>
-    <tr><td class="paramname">adr</td><td>postal address </td></tr>
-    <tr><td class="paramname">url</td><td>website or profile URL </td></tr>
-    <tr><td class="paramname">free</td><td>free-form content for non-MECARD encoding </td></tr>
+    <tr><td class="paramname">availableHeightForQrCode</td><td>the vertical space (in pixels) available for rendering the QR code in the UI; used to calculate optimal display size </td></tr>
+    <tr><td class="paramname">currentMode</td><td>the encoding mode: <code><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c">Mode#MECARD</a></code> for structured contact data or <code><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a8be52de21c11c45113aa4af8104c064e">Mode#FREE</a></code> for arbitrary text content </td></tr>
+    <tr><td class="paramname">free</td><td>free-form text content for non-MECARD encoding; used when <code class="JavaDocCode">currentMode</code> is <code><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a8be52de21c11c45113aa4af8104c064e">Mode#FREE</a></code>; can be any string (URL, message, JSON, etc.) </td></tr>
+    <tr><td class="paramname">name</td><td>full name of the contact (MECARD mode); typically in "LastName, FirstName" format; ignored in FREE mode </td></tr>
+    <tr><td class="paramname">org</td><td>organization or company name associated with the contact (MECARD mode); represents the business or employer; ignored in FREE mode </td></tr>
+    <tr><td class="paramname">tel</td><td>telephone number in international or local format (MECARD mode); should follow E.164 format when possible (e.g., "+33123456789"); ignored in FREE mode </td></tr>
+    <tr><td class="paramname">email</td><td>email address of the contact (MECARD mode); must be a valid email format (e.g., "user@example.com"); ignored in FREE mode </td></tr>
+    <tr><td class="paramname">adr</td><td>postal address of the contact (MECARD mode); can include street, city, postal code, and country; typically comma or newline-separated; ignored in FREE mode </td></tr>
+    <tr><td class="paramname">url</td><td>website or profile URL (MECARD mode); can be a personal site, LinkedIn profile, portfolio, or social media link; must be a valid URL format; ignored in FREE mode </td></tr>
+    <tr><td class="paramname">logoPath</td><td>file system path to an optional logo image to embed in the QR code center; supports PNG, JPG, JPEG formats; if null or empty, no logo is embedded; logo size is automatically scaled based on <code class="JavaDocCode">ratio</code> </td></tr>
+    <tr><td class="paramname">size</td><td>the target dimension (width and height) of the generated QR code image in pixels; </td></tr>
+    <tr><td class="paramname">margin</td><td>the outer margin (quiet zone) around the QR code in modules (QR matrix units); valid range: 0-10; values below 4 may cause scanning issues on some readers; recommended: 3-4 for reliable detection </td></tr>
+    <tr><td class="paramname">ratio</td><td>the logo visibility ratio as a decimal (0.0-1.0); determines the proportion of the QR code center occupied by the logo; typical range: 0.2-0.3; values above 0.3 may compromise scannability despite error correction </td></tr>
+    <tr><td class="paramname">qrColor</td><td>the color of the QR code modules (dark pixels); must provide sufficient contrast with <code class="JavaDocCode">bgColor</code>; default: <code><a class="el" href="">Color#BLACK</a></code>; custom colors allowed but high contrast is essential for reliable scanning </td></tr>
+    <tr><td class="paramname">bgColor</td><td>the background color (light pixels) of the QR code; must provide sufficient contrast with <code class="JavaDocCode">qrColor</code>; default: <code><a class="el" href="">Color#WHITE</a></code>; custom colors allowed but high contrast is essential for reliable scanning </td></tr>
+    <tr><td class="paramname">isRoundedModules</td><td>whether to render QR code modules with rounded corners instead of square pixels; <code class="JavaDocCode">true</code> for aesthetic rounded style, <code class="JavaDocCode">false</code> for traditional square modules; rounded modules may reduce scannability on some readers but are generally supported with high error correction </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,7 +397,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1model.html">model</a></li>
-    <li class="footer">Generated on Thu Nov 6 2025 13:54:46 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Fri Nov 7 2025 21:32:05 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

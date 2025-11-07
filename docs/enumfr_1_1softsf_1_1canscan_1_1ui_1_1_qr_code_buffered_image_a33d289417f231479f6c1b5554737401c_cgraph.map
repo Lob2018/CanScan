@@ -1,0 +1,13 @@
+<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.drawFinderPatterns" name="fr.softsf.canscan.ui.QrCodeBufferedImage.drawFinderPatterns">
+<area shape="rect" id="Node000001" title="Renders the three QR code finder patterns at the corners using the specified style." alt="" coords="5,36,228,79"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="580,36,812,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,33,275,13,347,5,404,3,460,5,532,13,610,29,609,34,532,19,460,11,404,8,348,11,276,19,187,38"/>
+<area shape="rect" id="Node000004" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ae787416583ad529236a223551032e887" title="Draws a QR code finder pattern with rounded corners at the specified pixel coordinates." alt="" coords="291,28,516,87"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,55,276,55,276,60,228,60"/>
+<area shape="rect" id="Node000005" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ad408b9a718a53adbf8891606715a7bba" title="Draws a standard square QR code finder pattern at the specified pixel coordinates." alt="" coords="276,111,532,169"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="194,77,285,103,284,108,193,82"/>
+<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#af3fc9dd2a33f4d12c5db8cf2aeea17d7" title="Validates that the given object is non&#45;null and, if a String, not blank." alt="" coords="860,36,1093,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="813,55,845,55,845,60,813,60"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="517,55,565,55,565,60,517,60"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="509,108,602,81,604,86,511,113"/>
+</map>

@@ -1,15 +1,16 @@
 var searchData=
 [
   ['radio_5fbutton_5fgap_0',['RADIO_BUTTON_GAP',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7527e00a6415a7bb8b81edb30f6c58e1',1,'fr::softsf::canscan::CanScan']]],
-  ['ratiofieldcheck_1',['ratioFieldCheck',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a5201d7140d65530451d641d58e0d6f24',1,'fr::softsf::canscan::CanScan']]],
-  ['ratioslider_2',['ratioSlider',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aff5339f7ede7c528cffbbe7a62e01bb3',1,'fr::softsf::canscan::CanScan']]],
-  ['ratioslidertooltipsimulation_3',['ratioSliderTooltipSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['requestandverifiy_4',['requestAndVerifiy',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a50d6bb31ba86a1981f6311e0caee214e',1,'fr::softsf::canscan::service::VersionService']]],
-  ['resize_5fdebounce_5fdelay_5fms_5',['RESIZE_DEBOUNCE_DELAY_MS',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed98580098872cee65ef07920f4f511b',1,'fr::softsf::canscan::CanScan']]],
-  ['resizedebouncetimer_6',['resizeDebounceTimer',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2b2c15ca61975b8b0b3d1d623a68428e',1,'fr::softsf::canscan::CanScan']]],
-  ['resizeimageinbackground_7',['resizeImageInBackground',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9ecdcaf8fb8d45df31f2bdf3101243df',1,'fr::softsf::canscan::CanScan']]],
-  ['resizeworker_8',['resizeWorker',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a81759123c9f5b2f6726f6bf6ef859773',1,'fr::softsf::canscan::CanScan']]],
-  ['resolvefilenameconflict_9',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a450a5742a56de389ea303ec3977017c8',1,'fr::softsf::canscan::CanScan']]],
-  ['roundedmodulescheckbox_10',['roundedModulesCheckBox',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7b8a36069b0b775d4f473297073b47a9',1,'fr::softsf::canscan::CanScan']]],
-  ['rune2esimulation_11',['runE2ESimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a2a0b386576bdaa60bf8af058bc26310d',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
+  ['ratioslider_1',['ratioSlider',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4394af5e15a04c08f6d005f4b9b0e638',1,'fr::softsf::canscan::CanScan']]],
+  ['ratioslidertooltipsimulation_2',['ratioSliderTooltipSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['requestandverifiy_3',['requestAndVerifiy',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a50d6bb31ba86a1981f6311e0caee214e',1,'fr::softsf::canscan::service::VersionService']]],
+  ['resetandstartpreviewworker_4',['resetAndStartPreviewWorker',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a42d6a5e11bc8f147bed036366316564f',1,'fr::softsf::canscan::CanScan']]],
+  ['resetandstartresizeworker_5',['resetAndStartResizeWorker',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a1093d8b446a9a20cb0d3a8275283a345',1,'fr::softsf::canscan::ui::QrCodeResize']]],
+  ['resize_5fdebounce_5fdelay_5fms_6',['RESIZE_DEBOUNCE_DELAY_MS',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#ae31e9391bf61f1566a66ff339bab3a80',1,'fr::softsf::canscan::ui::QrCodeResize']]],
+  ['resizedebouncetimer_7',['resizeDebounceTimer',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a310e7b2da350d360a93f0b92b141c3f9',1,'fr::softsf::canscan::ui::QrCodeResize']]],
+  ['resizeimageinbackground_8',['resizeImageInBackground',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a9d652d45dd8f6c5a1715e7c19f27fad5',1,'fr::softsf::canscan::ui::QrCodeResize']]],
+  ['resizeworker_9',['resizeWorker',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#afb87f10237ffc28ea242c14e47c056f0',1,'fr::softsf::canscan::ui::QrCodeResize']]],
+  ['resolvefilenameconflict_10',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a450a5742a56de389ea303ec3977017c8',1,'fr::softsf::canscan::CanScan']]],
+  ['roundedmodulescheckbox_11',['roundedModulesCheckBox',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa64e0ee343635d7092f65ea5d1186712',1,'fr::softsf::canscan::CanScan']]],
+  ['rune2esimulation_12',['runE2ESimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a2a0b386576bdaa60bf8af058bc26310d',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

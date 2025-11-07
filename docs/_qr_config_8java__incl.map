@@ -1,0 +1,7 @@
+<map id="src/main/java/fr/softsf/canscan/model/QrConfig.java" name="src/main/java/fr/softsf/canscan/model/QrConfig.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,5,215,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,111,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,50,78,85,74,82,99,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="134,96,219,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,47,160,82,156,85,130,50"/>
+</map>

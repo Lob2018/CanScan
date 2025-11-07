@@ -1,5 +1,5 @@
 <map id="fr.softsf.canscan.CanScan" name="fr.softsf.canscan.CanScan">
-<area shape="rect" id="Node000001" title="CanScan &#45; Swing application to generate QR Codes." alt="" coords="5,123,260,2592"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="106,5,160,75"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,90,136,123,130,123,130,90"/>
+<area shape="rect" id="Node000001" title="CanScan — a Swing&#45;based application for generating QR codes." alt="" coords="5,123,264,1755"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="108,5,162,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,90,138,123,132,123,132,90"/>
 </map>

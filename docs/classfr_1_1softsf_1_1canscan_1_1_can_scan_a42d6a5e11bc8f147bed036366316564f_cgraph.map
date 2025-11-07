@@ -1,0 +1,13 @@
+<map id="fr.softsf.canscan.CanScan.resetAndStartPreviewWorker" name="fr.softsf.canscan.CanScan.resetAndStartPreviewWorker">
+<area shape="rect" id="Node000001" title="Clears the current QR code display and starts a background worker to generate a new preview." alt="" coords="5,105,216,148"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2d26dcd1ae708eae46dba8952351aa1a" title="Builds and returns a QrInput object containing all current user inputs and settings." alt="" coords="264,105,463,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,124,248,124,248,129,216,129"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a22606ca129489c778fbbe17cb8b70697" title="Calculates the available height for QR code rendering." alt="" coords="511,5,744,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="407,102,510,58,530,50,532,56,512,62,409,107"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="514,72,741,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="463,111,499,107,499,112,464,117"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="514,139,741,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="464,137,499,141,499,146,463,142"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="514,205,741,248"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="409,146,512,191,532,198,530,203,510,196,407,151"/>
+</map>

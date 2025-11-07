@@ -13,12 +13,17 @@ var annotated_dup =
           [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", [
             [ "Loader", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader" ],
             [ "Popup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_popup" ],
-            [ "QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util" ]
+            [ "QrCodeBufferedImage", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image" ],
+            [ "QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util" ],
+            [ "QrCodePreview", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview" ],
+            [ "QrCodeResize", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize" ]
           ] ],
           [ "util", "namespacefr_1_1softsf_1_1canscan_1_1util.html", [
             [ "BrowserHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper" ],
             [ "Checker", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker" ],
             [ "FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper" ],
+            [ "IntConstants", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_int_constants.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_int_constants" ],
+            [ "StringConstants", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_string_constants.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_string_constants" ],
             [ "UseLucioleFont", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font" ]
           ] ],
           [ "CanScan", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan" ],

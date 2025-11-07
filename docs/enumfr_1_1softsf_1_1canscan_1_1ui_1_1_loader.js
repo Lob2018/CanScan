@@ -6,9 +6,9 @@ var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader =
     [ "stopWaitIcon", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a7db844fe9a47d8286890e795c2462d0f", null ],
     [ "INSTANCE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a76d1b5dd00ff7cd28d557a803791288c", null ],
     [ "qrCodeLabel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#aa51f29dad95939167ea5d092cb28643e", null ],
-    [ "qrCodeLabelFont", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a0118851045c3a44291075ccf05f9b79d", null ],
-    [ "qrCodeLabelFontMetrics", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a2deaf3f6be7f09a34af4c9c8543fb7bb", null ],
+    [ "qrCodeLabelFont", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#abc9a8f2bb7be1339cb94fb137208d651", null ],
+    [ "qrCodeLabelFontMetrics", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#abfc70dc5881203fd18165ee1d7ccd44e", null ],
     [ "WAIT_FRAMES", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a695fcf3d5afcb26aeebc506aceaa2bd6", null ],
     [ "WAIT_ICON_DELAY_MS", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#abfed3bbbebac3e269b276cd11b5bc7ef", null ],
-    [ "waitIconTimer", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a6b5db167490e9c4f47e9eec3f26e45d5", null ]
+    [ "waitIconTimer", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html#a3c9787b032cbf87c9f263df00cc029dc", null ]
 ];
