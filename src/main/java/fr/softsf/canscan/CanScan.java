@@ -77,6 +77,7 @@ import fr.softsf.canscan.service.BuildQRDataService;
 import fr.softsf.canscan.service.VersionService;
 import fr.softsf.canscan.ui.Loader;
 import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeIconUtil;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
@@ -147,8 +148,8 @@ public class CanScan extends JFrame {
     private final transient JPanel northPanelWrapper =
             new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
     private Mode currentMode = Mode.MECARD;
-    JRadioButton mecardRadio = new JRadioButton(Mode.MECARD.text());
-    JRadioButton freeRadio = new JRadioButton(Mode.FREE.text());
+    transient JRadioButton mecardRadio = new JRadioButton(Mode.MECARD.text());
+    transient JRadioButton freeRadio = new JRadioButton(Mode.FREE.text());
     // Update
     JButton update = new JButton("\uD83D\uDD04");
     // Champs MECARD
@@ -176,7 +177,6 @@ public class CanScan extends JFrame {
     final transient JCheckBox roundedModulesCheckBox = new JCheckBox();
     // Rendu dynamique
     private final transient JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
-    private transient BufferedImage qrOriginal;
 
     // SOUTH
     private final transient JPanel southSpacer = new JPanel();
@@ -423,7 +423,15 @@ public class CanScan extends JFrame {
     private void cleanupResources() {
         stopAllTimers();
         cancelAllWorkers();
-        freeQrOriginal();
+        freeQrOriginalAndQrCodeLabel();
+    }
+
+    /**
+     * Releases the QR code image and its label icon to free resources. Must be called on the EDT.
+     */
+    private void freeQrOriginalAndQrCodeLabel() {
+        QrCodeBufferedImage.INSTANCE.freeQrOriginal();
+        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
     }
 
     /**
@@ -511,7 +519,7 @@ public class CanScan extends JFrame {
         if (isInvalidQrData(qrData)) {
             return;
         }
-        if (qrOriginal == null) {
+        if (QrCodeBufferedImage.INSTANCE.getQrOriginal() == null) {
             return;
         }
         cancelPreviousResizeWorker();
@@ -525,7 +533,7 @@ public class CanScan extends JFrame {
                 || StringUtils.isBlank(qrData.data())) {
             Loader.INSTANCE.stopWaitIcon();
             qrCodeLabel.setIcon(null);
-            freeQrOriginal();
+            freeQrOriginalAndQrCodeLabel();
             return true;
         }
         return false;
@@ -567,7 +575,9 @@ public class CanScan extends JFrame {
      * @return an ImageIcon containing the resized image or null if cancelled or parameters invalid
      */
     private ImageIcon resizeImageInBackground(int squareSize) {
-        if (squareSize <= 0 || qrOriginal == null || Thread.currentThread().isInterrupted()) {
+        if (squareSize <= 0
+                || QrCodeBufferedImage.INSTANCE.getQrOriginal() == null
+                || Thread.currentThread().isInterrupted()) {
             return null;
         }
         BufferedImage scaled =
@@ -579,7 +589,13 @@ public class CanScan extends JFrame {
                     squareSize > LARGE_IMAGE_THRESHOLD
                             ? RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR
                             : RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-            g2d.drawImage(qrOriginal, 0, 0, squareSize, squareSize, null);
+            g2d.drawImage(
+                    QrCodeBufferedImage.INSTANCE.getQrOriginal(),
+                    0,
+                    0,
+                    squareSize,
+                    squareSize,
+                    null);
         } finally {
             g2d.dispose();
         }
@@ -966,7 +982,7 @@ public class CanScan extends JFrame {
                     new QrConfig(
                             logoFile, size, imageRatio, qrColor, bgColor, roundedModules, margin);
             BufferedImage qr = generateQrCodeImage(qrData.data(), config);
-            qrOriginal = qr;
+            QrCodeBufferedImage.INSTANCE.updateQrOriginal(qr);
             JFileChooser chooser = new JFileChooser();
             chooser.setDialogTitle("Enregistrer votre code QR en tant que PNG");
             chooser.setSelectedFile(new File(qrData.defaultFileName()));
@@ -1024,7 +1040,7 @@ public class CanScan extends JFrame {
             return;
         }
         cancelActivePreviewWorker();
-        freeQrOriginal();
+        freeQrOriginalAndQrCodeLabel();
         previewDebounceTimer = new Timer(PREVIEW_DEBOUNCE_DELAY_MS, e -> launchPreviewWorker());
         previewDebounceTimer.setRepeats(false);
         previewDebounceTimer.start();
@@ -1095,8 +1111,8 @@ public class CanScan extends JFrame {
                 }
                 return;
             }
-            qrOriginal = img;
-            if (qrOriginal != null) {
+            QrCodeBufferedImage.INSTANCE.updateQrOriginal(img);
+            if (QrCodeBufferedImage.INSTANCE.getQrOriginal() != null) {
                 updateQrCodeSize();
             } else {
                 qrCodeLabel.setIcon(null);
@@ -1177,20 +1193,6 @@ public class CanScan extends JFrame {
                 adrField.getText(),
                 urlField.getText(),
                 freeField.getText());
-    }
-
-    /**
-     * Releases the currently stored QR code image to free native memory.
-     *
-     * <p>If a QR code image exists in {@code qrOriginal}, its pixel data is flushed and the
-     * reference is cleared to allow garbage collection. Also clears the label icon.
-     */
-    private void freeQrOriginal() {
-        if (qrOriginal != null) {
-            qrOriginal.flush();
-            qrOriginal = null;
-        }
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
     }
 
     /**
