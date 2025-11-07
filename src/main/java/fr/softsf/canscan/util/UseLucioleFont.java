@@ -32,6 +32,7 @@ public enum UseLucioleFont {
 
     private static final String FONT_LUCIOLE_PATH = "/font/Luciole-Regular.ttf";
     private static final String DEFAULT_FONT = "defaultFont";
+    private static final double FONT_SHIFT_DOWN = 2.5;
 
     /**
      * Initializes and applies the Luciole font as the default Swing UI font. If the font cannot be
@@ -49,7 +50,7 @@ public enum UseLucioleFont {
             Font luciole =
                     FontUtils.getCompositeFont(
                             loadedFont.getFamily(), defaultFont.getStyle(), defaultFont.getSize());
-            AffineTransform shiftDown = AffineTransform.getTranslateInstance(0, 2.5);
+            AffineTransform shiftDown = AffineTransform.getTranslateInstance(0, FONT_SHIFT_DOWN);
             Font adjustedFont =
                     luciole.deriveFont(shiftDown).deriveFont(luciole.getStyle(), luciole.getSize());
             UIManager.put(DEFAULT_FONT, adjustedFont);

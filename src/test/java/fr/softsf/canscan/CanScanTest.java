@@ -30,9 +30,11 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
 import fr.softsf.canscan.model.Mode;
+import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
+import fr.softsf.canscan.ui.QrCodeBufferedImage;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -108,10 +110,9 @@ class CanScanTest {
 
     @Test
     void givenConfigWithoutLogo_whenGenerateQrCodeImage_thenReturn400x400Image() throws Exception {
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config = new QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
         BufferedImage qr =
-                CanScan.generateQrCodeImage(
+                QrCodeBufferedImage.INSTANCE.generateQrCodeImage(
                         BuildQRDataService.INSTANCE.buildMecard(
                                 "John", "0123456789", "", "", "", ""),
                         config);
@@ -123,9 +124,8 @@ class CanScanTest {
     @Test
     void givenConfigWithRoundedModules_whenGenerateQrCodeImage_thenReturn400x400Image()
             throws Exception {
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, true, 3);
-        BufferedImage qr = CanScan.generateQrCodeImage("Test data", config);
+        QrConfig config = new QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, true, 3);
+        BufferedImage qr = QrCodeBufferedImage.INSTANCE.generateQrCodeImage("Test data", config);
         assertNotNull(qr);
         assertEquals(400, qr.getWidth());
         assertEquals(400, qr.getHeight());
@@ -134,27 +134,25 @@ class CanScanTest {
     @Test
     void givenConfigWithCustomColors_whenGenerateQrCodeImage_thenReturn300x300Image()
             throws Exception {
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 300, 0.0, Color.RED, Color.YELLOW, false, 2);
-        BufferedImage qr = CanScan.generateQrCodeImage("Test", config);
+        QrConfig config = new QrConfig(null, 300, 0.0, Color.RED, Color.YELLOW, false, 2);
+        BufferedImage qr = QrCodeBufferedImage.INSTANCE.generateQrCodeImage("Test", config);
         assertNotNull(qr);
         assertEquals(300, qr.getWidth());
     }
 
     @Test
     void givenConfigWithZeroMargin_whenGenerateQrCodeImage_thenReturnValidImage() throws Exception {
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 400, 0.1, Color.BLACK, Color.WHITE, false, 0);
-        BufferedImage qr = CanScan.generateQrCodeImage("Test", config);
+        QrConfig config = new QrConfig(null, 400, 0.1, Color.BLACK, Color.WHITE, false, 0);
+        BufferedImage qr = QrCodeBufferedImage.INSTANCE.generateQrCodeImage("Test", config);
         assertNotNull(qr);
     }
 
     @Test
     void givenConfigWithLargeLogoRatio_whenGenerateQrCodeImage_thenReturnValidImage()
             throws Exception {
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 500, 0.5, Color.BLACK, Color.WHITE, true, 4);
-        BufferedImage qr = CanScan.generateQrCodeImage("Large logo test", config);
+        QrConfig config = new QrConfig(null, 500, 0.5, Color.BLACK, Color.WHITE, true, 4);
+        BufferedImage qr =
+                QrCodeBufferedImage.INSTANCE.generateQrCodeImage("Large logo test", config);
         assertNotNull(qr);
     }
 
@@ -245,35 +243,35 @@ class CanScanTest {
     }
 
     @Test
-    void givenValidMargin4_whenMarginFieldCheck_thenMarginUpdatedTo4() {
+    void givenValidMargin4_whenMarginFieldCheck_thenGetMarginUpdatedTo4() {
         generator.marginSlider.setValue(4);
-        generator.marginFieldCheck();
+        generator.getMarginFieldChecked();
         Field marginField = getField("margin");
         assertEquals(4, getFieldValue(marginField));
     }
 
     @Test
-    void givenNegativeMargin_whenMarginFieldCheck_thenMarginSetTo0() {
+    void givenNegativeMargin_whenMarginFieldCheck_thenGetMarginSetTo0() {
         generator.marginSlider.setValue(-2);
-        generator.marginFieldCheck();
+        generator.getMarginFieldChecked();
         Field marginField = getField("margin");
         assertEquals(0, getFieldValue(marginField));
     }
 
     @Test
-    void givenMarginAboveMaximum_whenMarginFieldCheck_thenMarginSetTo10() {
+    void givenMarginAboveMaximum_whenMarginFieldCheck_thenGetMarginSetTo10() {
         generator.marginSlider.setValue(15);
-        generator.marginFieldCheck();
+        generator.getMarginFieldChecked();
         Field marginField = getField("margin");
         assertEquals(10, getFieldValue(marginField));
     }
 
     @ParameterizedTest(name = "given ratio {0}% when ratioFieldCheck then ratio set to {1}")
     @CsvSource({"0,   0.0", "50,  0.5", "100, 1.0"})
-    void givenRatioPercent_whenRatioFieldCheck_thenRatioSetCorrectly(
+    void givenRatioPercent_whenRatioFieldCheck_thenGetRatioSetCorrectly(
             int sliderValue, double expectedRatio) {
         generator.ratioSlider.setValue(sliderValue);
-        generator.ratioFieldCheck();
+        generator.getRatioFieldChecked();
         Field ratioField = getField("imageRatio");
         double actualRatio = (double) getFieldValue(ratioField);
         assertEquals(expectedRatio, actualRatio, 0.01);
@@ -304,7 +302,8 @@ class CanScanTest {
     void givenBlackWhiteImage_whenDrawSquareFinderPattern_thenPatternDrawnAtOrigin() {
         BufferedImage img = new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = img.createGraphics();
-        CanScan.drawSquareFinderPatternAtPixel(g, 0, 0, 21, Color.BLACK, Color.WHITE);
+        QrCodeBufferedImage.INSTANCE.drawSquareFinderPatternAtPixel(
+                g, 0, 0, 21, Color.BLACK, Color.WHITE);
         int rgb = img.getRGB(0, 0);
         assertNotEquals(0, rgb);
     }
@@ -313,12 +312,10 @@ class CanScanTest {
     void givenQrImage_whenDrawFinderPatterns_thenAllThreePatternsDrawn() {
         BufferedImage img = new BufferedImage(100, 100, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = img.createGraphics();
-        CanScan.QrConfig configRounded =
-                new CanScan.QrConfig(null, 100, 0.27, Color.BLACK, Color.WHITE, true, 2);
-        CanScan.drawFinderPatterns(g, 21, configRounded);
-        CanScan.QrConfig configSquare =
-                new CanScan.QrConfig(null, 100, 0.27, Color.BLACK, Color.WHITE, false, 2);
-        CanScan.drawFinderPatterns(g, 21, configSquare);
+        QrConfig configRounded = new QrConfig(null, 100, 0.27, Color.BLACK, Color.WHITE, true, 2);
+        QrCodeBufferedImage.INSTANCE.drawFinderPatterns(g, 21, configRounded);
+        QrConfig configSquare = new QrConfig(null, 100, 0.27, Color.BLACK, Color.WHITE, false, 2);
+        QrCodeBufferedImage.INSTANCE.drawFinderPatterns(g, 21, configSquare);
         double moduleSizeX = (double) configSquare.size() / 21;
         int firstX = (int) (configSquare.margin() * moduleSizeX);
         int firstY = (int) (configSquare.margin() * moduleSizeX);
@@ -398,7 +395,24 @@ class CanScanTest {
 
     @Test
     void givenMecardModeWithContactData_whenBuildQrData_thenReturnMecardString() {
-        QrInput input = new QrInput("Alice", "123456", "", "", "", "", "");
+        QrInput input =
+                new QrInput(
+                        300,
+                        Mode.MECARD,
+                        "",
+                        "Alice",
+                        "",
+                        "123456",
+                        "",
+                        "",
+                        "",
+                        "",
+                        400,
+                        4,
+                        0.25,
+                        Color.BLACK,
+                        Color.WHITE,
+                        false);
         QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.MECARD, input);
         assertNotNull(result);
         String data = result.data();
@@ -409,7 +423,24 @@ class CanScanTest {
 
     @Test
     void givenFreeModeWithText_whenBuildQrData_thenReturnFreeText() {
-        QrInput input = new QrInput("", "", "", "", "", "", "Test data");
+        QrInput input =
+                new QrInput(
+                        300,
+                        Mode.FREE,
+                        "Test data",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        400,
+                        4,
+                        0.25,
+                        Color.BLACK,
+                        Color.WHITE,
+                        false);
         QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.FREE, input);
         assertNotNull(result);
         assertEquals("Test data", result.data());
@@ -417,7 +448,24 @@ class CanScanTest {
 
     @Test
     void givenEmptyMecardFields_whenBuildQrData_thenReturnEmptyString() {
-        QrInput input = new QrInput("", "", "", "", "", "", "");
+        QrInput input =
+                new QrInput(
+                        300,
+                        Mode.FREE,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        400,
+                        4,
+                        0.25,
+                        Color.BLACK,
+                        Color.WHITE,
+                        false);
         QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.MECARD, input);
         assertNotNull(result);
         assertEquals("", result.data());
@@ -428,9 +476,8 @@ class CanScanTest {
         File logoFile = createTestLogoFile("test-logo.png");
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
-        CanScan.drawLogoIfPresent(g, config);
+        QrConfig config = new QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config);
         int centerX = 200;
         int centerY = 200;
         boolean hasModifiedPixels = false;
@@ -450,10 +497,13 @@ class CanScanTest {
     @Test
     void givenNullGraphics_whenDrawLogoIfPresent_thenReturnWithoutException() throws Exception {
         File logoFile = createTestLogoFile("test-logo.png");
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config = new QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
         executeWithoutDialog(
-                () -> assertDoesNotThrow(() -> CanScan.drawLogoIfPresent(null, config)));
+                () ->
+                        assertDoesNotThrow(
+                                () ->
+                                        QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(
+                                                null, config)));
     }
 
     @Test
@@ -465,7 +515,7 @@ class CanScanTest {
                         assertDoesNotThrow(
                                 () -> {
                                     try {
-                                        CanScan.drawLogoIfPresent(g, null);
+                                        QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, null);
                                     } catch (IOException e) {
                                         throw new RuntimeException(e);
                                     }
@@ -477,9 +527,8 @@ class CanScanTest {
     void givenNullLogoFile_whenDrawLogoIfPresent_thenReturnWithoutException() {
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
-        assertDoesNotThrow(() -> CanScan.drawLogoIfPresent(g, config));
+        QrConfig config = new QrConfig(null, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        assertDoesNotThrow(() -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config));
         g.dispose();
     }
 
@@ -488,10 +537,9 @@ class CanScanTest {
         File nonExistentFile = new File(tempDir, "non-existent-logo.png");
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(
-                        nonExistentFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
-        assertDoesNotThrow(() -> CanScan.drawLogoIfPresent(g, config));
+        QrConfig config =
+                new QrConfig(nonExistentFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        assertDoesNotThrow(() -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config));
         g.dispose();
     }
 
@@ -500,9 +548,8 @@ class CanScanTest {
         File logoFile = createTestLogoFile("test-logo.png");
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, 0.0, Color.BLACK, Color.WHITE, false, 3);
-        assertDoesNotThrow(() -> CanScan.drawLogoIfPresent(g, config));
+        QrConfig config = new QrConfig(logoFile, 400, 0.0, Color.BLACK, Color.WHITE, false, 3);
+        assertDoesNotThrow(() -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config));
         g.dispose();
     }
 
@@ -514,10 +561,9 @@ class CanScanTest {
         File logoFile = createTestLogoFile("test-logo-ratio.png");
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, ratio, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config = new QrConfig(logoFile, 400, ratio, Color.BLACK, Color.WHITE, false, 3);
         assertDoesNotThrow(
-                () -> CanScan.drawLogoIfPresent(g, config),
+                () -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config),
                 "drawLogoIfPresent devrait fonctionner avec imageRatio = " + ratio);
         g.dispose();
     }
@@ -527,10 +573,9 @@ class CanScanTest {
         File logoFile = createTestLogoFile("test-logo.jpg");
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config = new QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
         assertDoesNotThrow(
-                () -> CanScan.drawLogoIfPresent(g, config),
+                () -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config),
                 "drawLogoIfPresent devrait fonctionner avec un fichier JPEG");
         g.dispose();
     }
@@ -541,10 +586,10 @@ class CanScanTest {
         int largeSize = 1000;
         BufferedImage qrImage = new BufferedImage(largeSize, largeSize, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, largeSize, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config =
+                new QrConfig(logoFile, largeSize, 0.27, Color.BLACK, Color.WHITE, false, 3);
         assertDoesNotThrow(
-                () -> CanScan.drawLogoIfPresent(g, config),
+                () -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config),
                 "drawLogoIfPresent devrait gérer les grandes tailles de QR code");
         g.dispose();
     }
@@ -555,10 +600,10 @@ class CanScanTest {
         int smallSize = 100;
         BufferedImage qrImage = new BufferedImage(smallSize, smallSize, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, smallSize, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config =
+                new QrConfig(logoFile, smallSize, 0.27, Color.BLACK, Color.WHITE, false, 3);
         assertDoesNotThrow(
-                () -> CanScan.drawLogoIfPresent(g, config),
+                () -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config),
                 "drawLogoIfPresent devrait gérer les petites tailles de QR code");
         g.dispose();
     }
@@ -568,10 +613,9 @@ class CanScanTest {
         File logoFile = createTestLogoFileWithAlpha();
         BufferedImage qrImage = new BufferedImage(400, 400, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = qrImage.createGraphics();
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
+        QrConfig config = new QrConfig(logoFile, 400, 0.27, Color.BLACK, Color.WHITE, false, 3);
         assertDoesNotThrow(
-                () -> CanScan.drawLogoIfPresent(g, config),
+                () -> QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config),
                 "drawLogoIfPresent devrait gérer les logos avec transparence");
         g.dispose();
     }
@@ -585,10 +629,9 @@ class CanScanTest {
         Graphics2D g = qrImage.createGraphics();
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, size, size);
-        CanScan.QrConfig config =
-                new CanScan.QrConfig(
-                        logoFile, size, imageRatio, Color.BLACK, Color.WHITE, false, 3);
-        CanScan.drawLogoIfPresent(g, config);
+        QrConfig config =
+                new QrConfig(logoFile, size, imageRatio, Color.BLACK, Color.WHITE, false, 3);
+        QrCodeBufferedImage.INSTANCE.drawLogoIfPresent(g, config);
         int whiteBoxSize = (int) (size * imageRatio);
         int expectedCenterX = size / 2;
         int expectedCenterY = size / 2;

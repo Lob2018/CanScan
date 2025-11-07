@@ -18,24 +18,17 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.awt.Insets;
-import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.ExecutionException;
 import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
 import javax.swing.Icon;
@@ -63,14 +56,10 @@ import javax.swing.event.DocumentListener;
 import org.apache.commons.lang3.StringUtils;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import fr.softsf.canscan.model.Mode;
+import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
@@ -79,29 +68,30 @@ import fr.softsf.canscan.ui.Loader;
 import fr.softsf.canscan.ui.Popup;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeIconUtil;
+import fr.softsf.canscan.ui.QrCodePreview;
+import fr.softsf.canscan.ui.QrCodeResize;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.UseLucioleFont;
 
 /**
- * CanScan - Swing application to generate QR Codes.
+ * CanScan — a Swing-based application for generating QR codes.
  *
  * <p>Supports two modes:
  *
  * <ul>
- *   <li>MECARD: generates a QR code from structured contact info (name, phone, email, etc.).
- *   <li>Free: generates a QR code from arbitrary text or URLs.
+ *   <li><b>MECARD</b> — generate a QR code from structured contact data (name, phone, email, etc.).
+ *   <li><b>Free</b> — generate a QR code from arbitrary text or URLs.
  * </ul>
  *
- * <p>Features live preview, optional logo embedding, customizable size, colors, margin, and module
- * style (rounded or square). Uses ZXing for QR code generation and FlatLaf for GUI styling.
+ * <p>Includes live preview, optional logo embedding, adjustable size, colors, margins, and module
+ * style (rounded or square). Uses ZXing for QR generation and FlatLaf for modern UI styling.
  */
 public class CanScan extends JFrame {
 
     private static final int DEFAULT_GAP = 15;
     private static final double DEFAULT_IMAGE_RATIO = 0.27;
     private static final int DEFAULT_QR_CODE_SIZE = 400;
-    private static final double DEFAULT_GAP_BETWEEN_LOGO_AND_MODULES = 0.9;
     private static final int MAX_PERCENTAGE = 100;
     private static final int MAJOR_TICK_SPACING = 25;
     private static final int QR_CODE_LABEL_DEFAULT_SIZE = 50;
@@ -111,33 +101,20 @@ public class CanScan extends JFrame {
     private static final int RADIO_BUTTON_GAP = 20;
     private static final int DEFAULT_LABEL_WIDTH = 140;
     private static final String ADD_ROW = "addRow";
-    private static final String CONFIG = "config";
-    private static final String DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL =
-            "drawSquareFinderPatternAtPixel";
-    private static final String BG_COLOR = "bgColor";
-    private static final String DRAW_ROUNDED_FINDER_PATTERN_AT_PIXEL =
-            "drawRoundedFinderPatternAtPixel";
-    private static final String SHOULD_SKIP_MODULE = "shouldSkipModule";
-    private static final String DRAW_MODULES = "drawModules";
-    private static final String MATRIX = "matrix";
-    private static final String GENERATE_QR_CODE_IMAGE = "generateQrCodeImage";
     private static final String GENERATE_QR_CODE = "generateQrCode";
     private static final int GENERATE_BUTTON_EXTRA_HEIGHT = 35;
     private static final int VERTICAL_SCROLL_UNIT_INCREMENT = 16;
-    private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
     private static final String ERREUR = "Erreur";
     private static final int BUTTON_ICON_COLOR_SIZE = 14;
     private static final int BUTTON_COLOR_ICON_TEXT_GAP = 10;
-    private static final int LARGE_IMAGE_THRESHOLD = 1000;
     private static final String SIZE_FIELD_DEFAULT = "400";
-    private static final int AVAILABLE_MEMORY_TO_GENERATE_IMAGE = 50;
-    private static final int BYTES_PER_KILOBYTE = 1024;
     private static final String QR_DATA = "qrData";
     private static final String LATEST_RELEASES_REPO_URL =
             "https://github.com/Lob2018/CanScan/releases/latest";
     private static final int COLOR_BUTTONS_GAP = 10;
     private static final int MARGE_MAXIMUM_VALUE = 10;
+    private static final double GBC_COLOR_BUTTONS_WEIGHT_X = 0.5;
     private Color qrColor = Color.BLACK;
     private Color bgColor = Color.WHITE;
     private int margin = 3;
@@ -192,37 +169,12 @@ public class CanScan extends JFrame {
     @SuppressWarnings("FieldCanBeLocal")
     private final transient JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
 
-    private transient SwingWorker<ImageIcon, Void> resizeWorker;
-    private transient Timer resizeDebounceTimer;
-    private transient SwingWorker<BufferedImage, Void> previewWorker;
-    private transient Timer previewDebounceTimer;
-
-    /** Configuration parameters used to generate a QR code. */
-    public record QrConfig(
-            File logoFile,
-            int size,
-            double imageRatio,
-            Color qrColor,
-            Color bgColor,
-            boolean roundedModules,
-            int margin) {}
-
     /**
-     * Encapsulates contextual data for module rendering decisions.
+     * Initializes the CanScan GUI.
      *
-     * <p>Includes the QR configuration, matrix dimensions, and logo area boundaries.
-     */
-    private record ModuleContext(
-            QrConfig config,
-            int matrixWidth,
-            int matrixHeight,
-            int whiteBoxX,
-            int whiteBoxY,
-            int whiteBoxSize) {}
-
-    /**
-     * Initializes the CanScan GUI: sets up input fields, mode selection, QR code parameters,
-     * preview area, and action buttons. Configures layouts, listeners, and default window behavior.
+     * <p>Sets up the input fields, mode selection (MECARD/Free), QR code parameters, preview area,
+     * and action buttons. Configures layouts, event listeners, sliders, color choosers, and default
+     * window behavior. Also initializes automatic QR code rendering on input changes.
      */
     public CanScan() {
         super(buildTitle());
@@ -231,6 +183,8 @@ public class CanScan extends JFrame {
         setResizable(true);
         // Init
         Loader.INSTANCE.init(qrCodeLabel);
+        QrCodeResize.INSTANCE.init(qrCodeLabel);
+        QrCodePreview.INSTANCE.init(qrCodeLabel);
         // Sliders
         marginSlider.setMajorTickSpacing(1);
         marginSlider.setPaintTicks(true);
@@ -345,7 +299,7 @@ public class CanScan extends JFrame {
                 "<html>Couleur du fond.<br>⚠ Le code QR ne fonctionnera que"
                         + " si le contraste avec les modules est suffisant.</html>");
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.weightx = 0.5;
+        gbc.weightx = GBC_COLOR_BUTTONS_WEIGHT_X;
         gbc.insets = new Insets(0, 0, 0, COLOR_BUTTONS_GAP);
         colorPanel.add(bgColorButton, gbc);
         gbc.gridx = 1;
@@ -382,12 +336,16 @@ public class CanScan extends JFrame {
         // CENTER (code QR dynamique)
         qrCodeLabel.setHorizontalAlignment(SwingConstants.CENTER);
         qrCodeLabel.setVerticalAlignment(SwingConstants.CENTER);
-        addWindowStateListener(e -> SwingUtilities.invokeLater(this::updateQrCodeSize));
+        addWindowStateListener(
+                e ->
+                        SwingUtilities.invokeLater(
+                                () -> QrCodeResize.INSTANCE.updateQrCodeSize(getQrInput())));
         addComponentListener(
                 new ComponentAdapter() {
                     @Override
                     public void componentResized(ComponentEvent e) {
-                        SwingUtilities.invokeLater(() -> updateQrCodeSize());
+                        SwingUtilities.invokeLater(
+                                () -> QrCodeResize.INSTANCE.updateQrCodeSize(getQrInput()));
                     }
                 });
         // SOUTH (marge)
@@ -416,10 +374,10 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Releases all runtime resources associated with the QR code preview and generation workflow.
+     * Releases all runtime resources used by the QR code workflow.
      *
-     * <p>Stops active timers, cancels background workers, and flushes the original QR code image to
-     * ensure memory is released and no lingering tasks remain.
+     * <p>Stops active timers, cancels background workers, and frees any allocated QR code images to
+     * prevent memory leaks and ensure a clean shutdown of the preview and generation system.
      */
     private void cleanupResources() {
         stopAllTimers();
@@ -428,7 +386,10 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Releases the QR code image and its label icon to free resources. Must be called on the EDT.
+     * Frees the QR code image and its label icon to release memory.
+     *
+     * <p>This method must be called on the Event Dispatch Thread (EDT) to safely dispose of Swing
+     * components and graphics resources.
      */
     private void freeQrOriginalAndQrCodeLabel() {
         QrCodeBufferedImage.INSTANCE.freeQrOriginal();
@@ -436,39 +397,33 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Stops and clears all active Swing timers used in the QR code workflow.
+     * Stops all active Swing timers used for QR code preview and resizing.
      *
-     * <p>Ensures memory is released and prevents lingering scheduled tasks by nullifying timer
-     * references.
+     * <p>This ensures that scheduled tasks are canceled and associated resources are released,
+     * preventing memory leaks and lingering timers.
      */
     private void stopAllTimers() {
         Loader.INSTANCE.disposeWaitIconTimer();
-        if (resizeDebounceTimer != null) {
-            resizeDebounceTimer.stop();
-            resizeDebounceTimer = null;
-        }
-        if (previewDebounceTimer != null) {
-            previewDebounceTimer.stop();
-            previewDebounceTimer = null;
-        }
+        QrCodeResize.INSTANCE.stop();
+        QrCodePreview.INSTANCE.stop();
     }
 
     /**
-     * Cancels all active background workers and ensures proper cleanup.
+     * Cancels all active background workers responsible for QR code preview and resizing.
      *
-     * <p>Interrupts ongoing tasks, triggers {@code done()} for resource release, and nullifies
-     * worker references to prevent memory leaks or thread persistence.
+     * <p>This interrupts any ongoing tasks, triggers resource cleanup, and ensures no lingering
+     * threads or memory leaks remain from unfinished background operations.
      */
     private void cancelAllWorkers() {
-        cancelPreviousResizeWorker();
-        cancelActivePreviewWorker();
+        QrCodeResize.INSTANCE.cancelPreviousResizeWorker();
+        QrCodePreview.INSTANCE.cancelActivePreviewWorker();
     }
 
     /**
-     * Overrides {@code dispose()} to ensure explicit resource cleanup before window disposal.
+     * Disposes of the CanScan window, ensuring all resources are explicitly released.
      *
-     * <p>Stops timers, cancels background workers, and flushes image resources to prevent memory
-     * leaks and lingering threads.
+     * <p>Stops timers, cancels background workers, and frees image resources before delegating to
+     * {@link JFrame#dispose()} to prevent memory leaks and lingering threads.
      */
     @Override
     public void dispose() {
@@ -477,10 +432,12 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Constructs the application window title using the name, version, and organization as
-     * retrieved from the version properties.
+     * Constructs the application window title using metadata from the version properties.
      *
-     * @return a formatted title string for display in the UI
+     * <p>Combines the application name, version, and organization into a formatted string for
+     * display in the window title.
+     *
+     * @return a formatted title string, e.g., "📱 CanScan v1.0.0.0 • SOFT64.FR"
      */
     private static String buildTitle() {
         getManifestKeys();
@@ -488,193 +445,13 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Schedules a debounced QR code resize operation based on available vertical space. Cancels any
-     * ongoing resize task and triggers a new one after a short delay to avoid excessive redraws
-     * during rapid layout changes (e.g. window resizing).
-     */
-    private void updateQrCodeSize() {
-        if (resizeDebounceTimer != null && resizeDebounceTimer.isRunning()) {
-            resizeDebounceTimer.restart();
-            return;
-        }
-        resizeDebounceTimer = new Timer(RESIZE_DEBOUNCE_DELAY_MS, e -> handleResize());
-        resizeDebounceTimer.setRepeats(false);
-        resizeDebounceTimer.start();
-    }
-
-    /**
-     * Handles the actual QR code resize logic after debounce delay. Validates available space,
-     * input data, and worker state before launching a new resize task.
-     */
-    private void handleResize() {
-        int squareSize =
-                getHeight()
-                        - northPanelWrapper.getHeight()
-                        - southSpacer.getHeight()
-                        - DEFAULT_GAP * 3;
-        if (squareSize < QR_CODE_LABEL_DEFAULT_SIZE) {
-            squareSize = QR_CODE_LABEL_DEFAULT_SIZE;
-        }
-        qrCodeLabel.setPreferredSize(new Dimension(squareSize, squareSize));
-        QrDataResult qrData = BuildQRDataService.INSTANCE.buildQrData(currentMode, buildQrInput());
-        if (isInvalidQrData(qrData)) {
-            return;
-        }
-        if (QrCodeBufferedImage.INSTANCE.getQrOriginal() == null) {
-            return;
-        }
-        cancelPreviousResizeWorker();
-        prepareForResize();
-        launchResizeWorker(squareSize);
-    }
-
-    /** Determines whether the QR data is invalid or null and handles cleanup if needed. */
-    private boolean isInvalidQrData(QrDataResult qrData) {
-        if (Checker.INSTANCE.checkNPE(qrData, "isInvalidQrData", QR_DATA)
-                || StringUtils.isBlank(qrData.data())) {
-            Loader.INSTANCE.stopWaitIcon();
-            qrCodeLabel.setIcon(null);
-            freeQrOriginalAndQrCodeLabel();
-            return true;
-        }
-        return false;
-    }
-
-    /** Clears previous QR code visuals and starts wait icon animation. */
-    private void prepareForResize() {
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
-        qrCodeLabel.setIcon(null);
-        SwingUtilities.invokeLater(Loader.INSTANCE::startAndAdjustWaitIcon);
-    }
-
-    /**
-     * Cancels any ongoing resize worker if active and waits for its proper termination. Ensures no
-     * overlapping resize tasks run concurrently.
-     */
-    private void cancelPreviousResizeWorker() {
-        if (resizeWorker == null || resizeWorker.isDone()) {
-            return;
-        }
-        resizeWorker.cancel(true);
-        try {
-            resizeWorker.get();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (ExecutionException | CancellationException ignored) {
-            // Expected: CancellationException if cancelled, ExecutionException if task failed
-        }
-        resizeWorker = null;
-        Loader.INSTANCE.stopWaitIcon();
-    }
-
-    /**
-     * Performs the image resizing operation on a background thread. Handles the creation and
-     * drawing of the scaled image with proper resource management. Responds to cancellation
-     * requests promptly.
+     * Switches the application between MECARD and FREE QR code modes.
      *
-     * @param squareSize the target height for resizing the QR code image
-     * @return an ImageIcon containing the resized image or null if cancelled or parameters invalid
-     */
-    private ImageIcon resizeImageInBackground(int squareSize) {
-        if (squareSize <= 0
-                || QrCodeBufferedImage.INSTANCE.getQrOriginal() == null
-                || Thread.currentThread().isInterrupted()) {
-            return null;
-        }
-        BufferedImage scaled =
-                new BufferedImage(squareSize, squareSize, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2d = scaled.createGraphics();
-        try {
-            g2d.setRenderingHint(
-                    RenderingHints.KEY_INTERPOLATION,
-                    squareSize > LARGE_IMAGE_THRESHOLD
-                            ? RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR
-                            : RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-            g2d.drawImage(
-                    QrCodeBufferedImage.INSTANCE.getQrOriginal(),
-                    0,
-                    0,
-                    squareSize,
-                    squareSize,
-                    null);
-        } finally {
-            g2d.dispose();
-        }
-        if (Thread.currentThread().isInterrupted()) {
-            scaled.flush();
-            return null;
-        }
-        return new ImageIcon(scaled);
-    }
-
-    /**
-     * Creates a background task to resize the QR code image to the specified height. Ensures the
-     * resize is performed off the EDT and updates the label only if the task completes
-     * successfully. Disposes of obsolete icons and guarantees wait icon cleanup.
+     * <p>Updates the displayed input panel and refreshes the QR code preview to reflect the
+     * selected mode.
      *
-     * @param height the target height for the resized image
+     * @param mode the {@link Mode} to switch to; if null, no action is performed
      */
-    private SwingWorker<ImageIcon, Void> createResizeWorker(int height) {
-        return new SwingWorker<>() {
-            @Override
-            protected ImageIcon doInBackground() {
-                Thread.currentThread().setName("ResizeWorker");
-                return resizeImageInBackground(height);
-            }
-
-            @Override
-            protected void done() {
-                Loader.INSTANCE.stopWaitIcon();
-                handleResizeWorkerCompletion(this);
-            }
-        };
-    }
-
-    /**
-     * Handles resize worker completion: checks cancellation, disposes obsolete icons, updates UI,
-     * and reports errors.
-     */
-    private void handleResizeWorkerCompletion(SwingWorker<ImageIcon, Void> worker) {
-        if (Checker.INSTANCE.checkNPE(worker, "handleResizeWorkerCompletion", "worker")) {
-            return;
-        }
-        boolean cancelledOrStale = worker.isCancelled() || worker != resizeWorker;
-        try {
-            ImageIcon icon = worker.get();
-            if (cancelledOrStale) {
-                if (icon != null) {
-                    icon.getImage().flush();
-                }
-                return;
-            }
-            if (icon != null) {
-                QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
-                qrCodeLabel.setIcon(icon);
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (CancellationException | ExecutionException ex) {
-            if (cancelledOrStale) {
-                return;
-            }
-            Popup.INSTANCE.showDialog("Pas de redimensionnement\n", ex.getMessage(), ERREUR);
-        }
-    }
-
-    /**
-     * Manages the lifecycle of the resize worker by cancelling any existing worker, creating a new
-     * SwingWorker to resize the image asynchronously, and updating the UI upon completion or
-     * failure.
-     *
-     * @param height the target height for the resized image
-     */
-    private void launchResizeWorker(int height) {
-        cancelPreviousResizeWorker();
-        resizeWorker = createResizeWorker(height);
-        resizeWorker.execute();
-    }
-
-    /** Switches between MECARD and FREE modes and updates the QR code preview accordingly. */
     private void switchMode(Mode mode) {
         if (Checker.INSTANCE.checkNPE(mode, "switchMode", "mode")) {
             return;
@@ -684,7 +461,16 @@ public class CanScan extends JFrame {
         updatePreviewQRCode();
     }
 
-    /** Initializes the MECARD input panel with labeled text fields for contact information. */
+    /**
+     * Initializes the MECARD input panel with labeled text fields for structured contact
+     * information.
+     *
+     * <p>The panel will include fields for name, organization, phone, email, address, and URL,
+     * arranged using {@link GridBagLayout}.
+     *
+     * @param mecardPanel the {@link JPanel} to populate with MECARD input fields
+     * @param grid the {@link GridBagConstraints} used to position components within the panel
+     */
     private void initMecard(JPanel mecardPanel, GridBagConstraints grid) {
         if (Checker.INSTANCE.checkNPE(mecardPanel, "initMecard", "mecardPanel")
                 || Checker.INSTANCE.checkNPE(grid, "initMecard", "grid")) {
@@ -710,8 +496,13 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Sets up the FREE mode panel with a multiline text area wrapped in a scroll pane, and
-     * configures layout, size, and line wrapping.
+     * Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs.
+     *
+     * <p>The text area is wrapped in a scroll pane, with line wrapping and preferred size
+     * configured for comfortable editing. Uses {@link GridBagLayout} for layout management.
+     *
+     * @param freePanel the {@link JPanel} to populate with the free text input area
+     * @param grid the {@link GridBagConstraints} used to position components within the panel
      */
     private void initFreeCard(JPanel freePanel, GridBagConstraints grid) {
         if (Checker.INSTANCE.checkNPE(freePanel, "initFreeCard", "freePanel")
@@ -741,10 +532,11 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Initializes automatic QR code rendering for all input fields and controls.
+     * Sets up automatic QR code preview updates for all input fields and controls.
      *
-     * <p>Any change in text fields, sliders, or the rounded modules checkbox will trigger an
-     * immediate preview update of the QR code without saving to a file.
+     * <p>Any change in text fields, sliders, or the "rounded modules" checkbox triggers an
+     * immediate update of the QR code preview without saving to a file. Also attaches a listener to
+     * validate input and enable or disable the generate button accordingly.
      */
     private void initializeAutomaticQRCodeRendering() {
         DocumentListener docListener = simpleDocumentListener(this::updatePreviewQRCode);
@@ -765,10 +557,14 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Validates input requirements and toggles the generate button accordingly.
+     * Validates the current input fields and toggles the state of the generate button.
      *
-     * <p>Disables the button if {@code freeField} is empty in {@code FREE} mode, or {@code
-     * nameField} is empty in {@code MECARD} mode.
+     * <p>Disables the button if the required fields are empty:
+     *
+     * <ul>
+     *   <li>MECARD mode: {@code nameField} must be non-empty.
+     *   <li>FREE mode: {@code freeField} must be non-empty.
+     * </ul>
      */
     private void updateGenerateButtonState() {
         boolean isFreeFieldEmpty = freeField.getText().trim().isEmpty();
@@ -780,10 +576,15 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Creates a minimal DocumentListener that executes the given action on any document change.
+     * Creates a minimal {@link DocumentListener} that executes the given action on any document
+     * change.
      *
-     * @param action the Runnable to execute on insert, remove, or change events
-     * @return a DocumentListener that triggers the action, or null if the action is null
+     * <p>The action is triggered on insertions, removals, or style/attribute changes in the
+     * document.
+     *
+     * @param action the {@link Runnable} to execute on document updates
+     * @return a {@link DocumentListener} that invokes the action, or {@code null} if the action is
+     *     null
      */
     private static DocumentListener simpleDocumentListener(Runnable action) {
         if (Checker.INSTANCE.checkNPE(action, "simpleDocumentListener", "action")) {
@@ -812,8 +613,10 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Updates the tooltip of the ratio slider to reflect its current value as a percentage. This
-     * provides immediate feedback to the user on the selected ratio when hovering over the slider.
+     * Updates the tooltip of the ratio slider to reflect its current value as a percentage.
+     *
+     * <p>Provides immediate feedback to the user on the selected logo visibility ratio when
+     * hovering over the slider.
      */
     private void setRatioSliderTooltipValue() {
         ratioSlider.setToolTipText(ratioSlider.getValue() + "%");
@@ -822,8 +625,12 @@ public class CanScan extends JFrame {
     /**
      * Opens a color chooser dialog and updates the selected color.
      *
-     * @param button the button representing the color to update
-     * @param isQrColor true if updating the QR code color; false for the background color
+     * <p>If {@code isQrColor} is true, updates the QR code modules color; otherwise, updates the
+     * background color. The corresponding button icon and text are updated, and the QR code preview
+     * is refreshed.
+     *
+     * @param button the JButton representing the color to update
+     * @param isQrColor true to update the QR code color, false to update the background color
      */
     private void chooseColor(JButton button, boolean isQrColor) {
         if (Checker.INSTANCE.checkNPE(button, "chooseColor", "button")) {
@@ -844,13 +651,15 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Returns an icon showing a filled rectangle of the given color with a visible border. Ensures
-     * previous icon is flushed and graphics resources are released explicitly.
+     * Creates a square icon filled with the specified color and a visible border.
      *
-     * @param button the button whose old icon will be flushed and reset
-     * @param color the color to display
-     * @return an Icon with a filled rectangle and a visible border, or {@code null} if {@code
-     *     button} or {@code color} is {@code null}
+     * <p>The previous icon of the button, if any, is disposed to release graphics resources. The
+     * resulting icon can be used to visually represent the color on a JButton.
+     *
+     * @param button the JButton whose previous icon will be disposed and replaced
+     * @param color the color to display in the icon
+     * @return an ImageIcon displaying the color with a border, or {@code null} if {@code button} or
+     *     {@code color} is {@code null}
      */
     private Icon createColorIcon(JButton button, Color color) {
         if (Checker.INSTANCE.checkNPE(button, "createColorIcon", "button")
@@ -886,13 +695,16 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Adds a labeled text field row to a panel using GridBagLayout.
+     * Adds a labeled component row to a panel using GridBagLayout.
      *
-     * @param panel the container panel
-     * @param gbc the GridBagConstraints to configure layout
-     * @param labelText the text for the label
+     * <p>The row consists of a JLabel with a tooltip and the specified JComponent. Optionally, the
+     * label font is set to bold for specific components like the name field or free text area.
+     *
+     * @param panel the container panel to which the row will be added
+     * @param gbc the GridBagConstraints used for layout configuration
+     * @param labelText the text to display in the label
      * @param tooltipText the tooltip text for the label
-     * @param component the JComponent to add
+     * @param component the JComponent to add next to the label
      */
     private void addRow(
             JPanel panel,
@@ -924,7 +736,9 @@ public class CanScan extends JFrame {
     /**
      * Opens a file chooser to select a logo image and updates the logo text field.
      *
-     * @param e the action event triggering the file chooser
+     * <p>If a file is selected, its absolute path is set in {@code logoField}.
+     *
+     * @param e the ActionEvent that triggered the file chooser
      */
     void browseLogo(ActionEvent e) {
         if (Checker.INSTANCE.checkNPE(e, "browseLogo", "e")) {
@@ -937,9 +751,11 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Chooses a file via JFileChooser. Protected to allow mocking in tests.
+     * Opens a file chooser dialog to select a logo image.
      *
-     * @return the selected file or null if canceled
+     * <p>Only PNG, JPG, and JPEG files are allowed. Can be overridden for testing purposes.
+     *
+     * @return the selected File, or {@code null} if the user cancels the selection
      */
     protected File chooseLogoFile() {
         JFileChooser chooser = new JFileChooser();
@@ -955,7 +771,10 @@ public class CanScan extends JFrame {
 
     /**
      * Generates and saves a QR code as a PNG file using the current input and configuration.
-     * Ensures resource cleanup, user feedback, and file conflict resolution.
+     *
+     * <p>Validates input fields, applies visual settings (colors, margin, logo, module style), and
+     * creates the QR code image. Opens a file chooser for saving and handles file name conflicts.
+     * Displays user feedback dialogs for success, errors, or exceptions.
      *
      * @param e the triggering {@link ActionEvent}
      */
@@ -965,7 +784,7 @@ public class CanScan extends JFrame {
         }
         try {
             QrDataResult qrData =
-                    BuildQRDataService.INSTANCE.buildQrData(currentMode, buildQrInput());
+                    BuildQRDataService.INSTANCE.buildQrData(currentMode, getQrInput());
             if (Checker.INSTANCE.checkNPE(qrData, GENERATE_QR_CODE, QR_DATA)) {
                 return;
             }
@@ -976,13 +795,14 @@ public class CanScan extends JFrame {
             }
             File logoFile = logoField.getText().isBlank() ? null : new File(logoField.getText());
             int size = sizeFieldCheck();
-            marginFieldCheck();
-            ratioFieldCheck();
+            getMarginFieldChecked();
+            getRatioFieldChecked();
             boolean roundedModules = roundedModulesCheckBox.isSelected();
             QrConfig config =
                     new QrConfig(
                             logoFile, size, imageRatio, qrColor, bgColor, roundedModules, margin);
-            BufferedImage qr = generateQrCodeImage(qrData.data(), config);
+            BufferedImage qr =
+                    QrCodeBufferedImage.INSTANCE.generateQrCodeImage(qrData.data(), config);
             QrCodeBufferedImage.INSTANCE.updateQrOriginal(qr);
             JFileChooser chooser = new JFileChooser();
             chooser.setDialogTitle("Enregistrer votre code QR en tant que PNG");
@@ -1030,177 +850,73 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Schedules a debounced QR code preview generation based on current input fields and
-     * configuration. Restarts the debounce timer if already running to avoid excessive regeneration
-     * during rapid user input. Only performs cleanup and cancellation when actually launching a new
-     * worker.
+     * Schedules a debounced QR code preview update based on the current input and settings.
+     *
+     * <p>If a preview generation is already in progress, restarts the debounce timer to avoid
+     * excessive regeneration. Otherwise, clears the current preview and launches a new background
+     * worker to generate the QR code preview asynchronously.
      */
     private void updatePreviewQRCode() {
-        if (previewDebounceTimer != null && previewDebounceTimer.isRunning()) {
-            previewDebounceTimer.restart();
+        if (QrCodePreview.INSTANCE.isRunning()) {
+            QrCodePreview.INSTANCE.getPreviewDebounceTimer().restart();
             return;
         }
-        cancelActivePreviewWorker();
         freeQrOriginalAndQrCodeLabel();
-        previewDebounceTimer = new Timer(PREVIEW_DEBOUNCE_DELAY_MS, e -> launchPreviewWorker());
-        previewDebounceTimer.setRepeats(false);
-        previewDebounceTimer.start();
+        QrCodePreview.INSTANCE.updatePreviewDebounceTimer(
+                new Timer(PREVIEW_DEBOUNCE_DELAY_MS, e -> resetAndStartPreviewWorker()));
+        QrCodePreview.INSTANCE.getPreviewDebounceTimer().setRepeats(false);
+        QrCodePreview.INSTANCE.getPreviewDebounceTimer().start();
     }
 
     /**
-     * Launches a new preview worker to generate the QR code image in the background. Clears the
-     * current display and starts the wait icon animation before execution.
+     * Clears the current QR code display and starts a background worker to generate a new preview.
+     *
+     * <p>Resets the preview icon, starts the loading animation, and launches the asynchronous task
+     * to render the QR code based on the latest input and configuration.
      */
-    private void launchPreviewWorker() {
+    private void resetAndStartPreviewWorker() {
         qrCodeLabel.setIcon(null);
         SwingUtilities.invokeLater(Loader.INSTANCE::startAndAdjustWaitIcon);
-        previewWorker = createPreviewWorker();
-        previewWorker.execute();
-    }
-
-    /** Cancels and flushes any active preview worker to ensure clean restart. */
-    private void cancelActivePreviewWorker() {
-        if (previewWorker == null || previewWorker.isDone()) {
-            return;
-        }
-        previewWorker.cancel(true);
-        try {
-            previewWorker.get();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (ExecutionException | CancellationException ignored) {
-            // Expected: cancellation or execution failure
-        }
-        previewWorker = null;
+        QrCodePreview.INSTANCE.launchPreviewWorker(getQrInput());
     }
 
     /**
-     * Creates a background task to generate a QR code image using current input and configuration.
-     * Ensures the image is generated off the EDT and updates the label only if the task completes
-     * successfully. Flushes cancelled result and guarantees wait icon cleanup.
-     */
-    private SwingWorker<BufferedImage, Void> createPreviewWorker() {
-        return new SwingWorker<>() {
-            @Override
-            protected BufferedImage doInBackground() {
-                Thread.currentThread().setName("PreviewWorker");
-                return buildPreviewImage();
-            }
-
-            @Override
-            protected void done() {
-                Loader.INSTANCE.stopWaitIcon();
-                handlePreviewWorkerCompletion(this);
-            }
-        };
-    }
-
-    /**
-     * Handles preview worker completion: checks cancellation, flushes result, updates UI, and
-     * reports errors.
-     */
-    private void handlePreviewWorkerCompletion(SwingWorker<BufferedImage, Void> worker) {
-        if (Checker.INSTANCE.checkNPE(worker, "handlePreviewWorkerCompletion", "worker")) {
-            return;
-        }
-        boolean cancelledOrStale = worker.isCancelled() || worker != previewWorker;
-        try {
-            BufferedImage img = worker.get();
-            if (cancelledOrStale) {
-                if (img != null) {
-                    img.flush();
-                }
-                return;
-            }
-            QrCodeBufferedImage.INSTANCE.updateQrOriginal(img);
-            if (QrCodeBufferedImage.INSTANCE.getQrOriginal() != null) {
-                updateQrCodeSize();
-            } else {
-                qrCodeLabel.setIcon(null);
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (CancellationException | ExecutionException ex) {
-            if (cancelledOrStale) {
-                return;
-            }
-            Popup.INSTANCE.showDialog("Pas d'affichage\n", ex.getMessage(), ERREUR);
-        }
-    }
-
-    /**
-     * Builds and returns the QR code image based on current input and configuration. Returns null
-     * if the thread is interrupted or if input is invalid. Performs cancellation checks only at
-     * critical points to minimize overhead while ensuring responsiveness.
+     * Builds and returns a {@link QrInput} object containing all current user inputs and settings.
      *
-     * @return a BufferedImage containing the QR code, or null if cancelled or invalid
-     */
-    private BufferedImage buildPreviewImage() {
-        if (Thread.currentThread().isInterrupted()) {
-            return null;
-        }
-        try {
-            QrDataResult qrData =
-                    BuildQRDataService.INSTANCE.buildQrData(currentMode, buildQrInput());
-            if (Thread.currentThread().isInterrupted()
-                    || Checker.INSTANCE.checkNPE(qrData, GENERATE_QR_CODE, QR_DATA)) {
-                return null;
-            }
-            Objects.requireNonNull(qrData, "Dans buildPreviewImage qrData ne doit pas être null");
-            String data = qrData.data();
-            if (StringUtils.isBlank(data)) {
-                return null;
-            }
-            File logoFile = logoField.getText().isBlank() ? null : new File(logoField.getText());
-            int size = sizeFieldCheck();
-            marginFieldCheck();
-            ratioFieldCheck();
-            QrConfig config =
-                    new QrConfig(
-                            logoFile,
-                            size,
-                            imageRatio,
-                            qrColor,
-                            bgColor,
-                            roundedModulesCheckBox.isSelected(),
-                            margin);
-            if (Thread.currentThread().isInterrupted()) {
-                return null;
-            }
-            return generateQrCodeImage(qrData.data(), config);
-        } catch (Exception ex) {
-            if (Thread.currentThread().isInterrupted()) {
-                return null;
-            }
-            SwingUtilities.invokeLater(
-                    () ->
-                            Popup.INSTANCE.showDialog(
-                                    "Pas de rendu du code QR\n", ex.getMessage(), ERREUR));
-            return null;
-        }
-    }
-
-    /**
-     * Builds a {@link QrInput} from the current field values.
+     * <p>Aggregates data from MECARD or FREE fields, visual settings (colors, size, margin, logo,
+     * rounded modules), and layout parameters to configure QR code generation.
      *
-     * @return a populated {@link QrInput} instance
+     * @return a fully populated {@link QrInput} instance for QR code generation
      */
-    private QrInput buildQrInput() {
+    private QrInput getQrInput() {
         return new QrInput(
+                getHeight() - northPanelWrapper.getHeight() - southSpacer.getHeight(),
+                currentMode,
+                freeField.getText(),
                 nameField.getText(),
+                orgField.getText(),
                 phoneField.getText(),
                 emailField.getText(),
-                orgField.getText(),
                 adrField.getText(),
                 urlField.getText(),
-                freeField.getText());
+                logoField.getText(),
+                sizeFieldCheck(),
+                getMarginFieldChecked(),
+                getRatioFieldChecked(),
+                qrColor,
+                bgColor,
+                roundedModulesCheckBox.isSelected());
     }
 
     /**
-     * Returns the selected file from the chooser, ensuring it has a .png extension.
+     * Retrieves the selected file from a {@link JFileChooser} and ensures it has a ".png"
+     * extension.
      *
-     * @param chooser the JFileChooser to get the file from
-     * @return a File ending with .png
+     * <p>If the selected file does not end with ".png", the extension is automatically appended.
+     *
+     * @param chooser the {@link JFileChooser} to get the file from
+     * @return a {@link File} guaranteed to have a ".png" extension, or {@code null} if the chooser
+     *     is null
      */
     private File getSelectedPngFile(JFileChooser chooser) {
         if (Checker.INSTANCE.checkNPE(chooser, "getSelectedPngFile", "chooser")) {
@@ -1215,10 +931,14 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Resolves file name conflicts by asking the user to overwrite or automatically renaming.
+     * Resolves potential file name conflicts by checking if the specified file already exists.
      *
-     * @param file the initial file
-     * @return a File ready to be written
+     * <p>If the file exists, the user is prompted to overwrite it. If the user declines, a new file
+     * name is generated by appending a numeric suffix to avoid overwriting existing files.
+     *
+     * @param file the initial {@link File} to check for conflicts
+     * @return a {@link File} ready for writing, either the original, user-approved, or
+     *     auto-renamed, or {@code null} if the input file is null
      */
     private File resolveFileNameConflict(File file) {
         if (Checker.INSTANCE.checkNPE(file, "resolveFileNameConflict", "file")) {
@@ -1248,10 +968,14 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Validates and updates the image ratio from the corresponding text field. Resets to the
-     * default value (0.27) if the input is invalid or out of range [0,1].
+     * Validates and returns the current image-to-QR ratio from the ratio slider.
+     *
+     * <p>If the slider value is out of the valid range [0, 1] or cannot be parsed, the default
+     * ratio {@link #DEFAULT_IMAGE_RATIO} is used.
+     *
+     * @return the validated image ratio as a double between 0 and 1
      */
-    void ratioFieldCheck() {
+    double getRatioFieldChecked() {
         try {
             imageRatio = (double) ratioSlider.getValue() / MAX_PERCENTAGE;
             if (imageRatio < 0 || imageRatio > 1) {
@@ -1260,13 +984,18 @@ public class CanScan extends JFrame {
         } catch (NumberFormatException ex) {
             imageRatio = DEFAULT_IMAGE_RATIO;
         }
+        return imageRatio;
     }
 
     /**
-     * Validates and updates the QR code margin from the corresponding text field. Clamps the value
-     * to the range [0, 10] and defaults to 3 if the input is invalid.
+     * Validates and returns the current QR code margin from the margin slider.
+     *
+     * <p>The value is clamped to the range [0, {@link #MARGE_MAXIMUM_VALUE}]. If parsing fails, the
+     * default margin {@link #margin} is used.
+     *
+     * @return the validated margin value in pixels
      */
-    void marginFieldCheck() {
+    int getMarginFieldChecked() {
         try {
             margin = marginSlider.getValue();
             if (margin < 0) {
@@ -1278,11 +1007,14 @@ public class CanScan extends JFrame {
         } catch (NumberFormatException ex) {
             margin = 3;
         }
+        return margin;
     }
 
     /**
-     * Validates and returns the QR code size from the corresponding text field. Defaults to 400 if
-     * the input is invalid or non-positive.
+     * Validates and returns the QR code size from the corresponding text field.
+     *
+     * <p>If the input is invalid or smaller than {@link #MINIMUM_QR_CODE_SIZE}, it defaults to
+     * {@link #DEFAULT_QR_CODE_SIZE}. Updates the text field if parsing fails.
      *
      * @return the validated QR code size in pixels
      */
@@ -1301,519 +1033,12 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Generates a QR code image with optional logo and custom styling.
-     *
-     * <p>The QR code is generated using the ZXing library with high error correction, allowing a
-     * logo to be embedded without breaking scanability. Modules, colors, margin, and rounded or
-     * square style are applied according to the provided configuration.
-     *
-     * @param data The formatted string to encode in the QR code.
-     * @param config QR code configuration containing size, colors, margin, module style, and
-     *     optional logo.
-     * @return A BufferedImage containing the generated QR code.
-     * @throws WriterException If encoding the MECARD text into a QR code fails.
-     * @throws IOException If reading the logo file fails.
-     * @throws OutOfMemoryError If the requested size exceeds available memory.
-     */
-    static BufferedImage generateQrCodeImage(String data, QrConfig config)
-            throws WriterException, IOException {
-        if (Checker.checkStaticNPE(config, GENERATE_QR_CODE_IMAGE, CONFIG)
-                || Checker.checkStaticNPE(data, GENERATE_QR_CODE_IMAGE, "data")) {
-            return null;
-        }
-        final int size = config.size();
-        validateMemoryForImageSize(size);
-        BitMatrix matrix = createMatrix(data, config.margin());
-        if (Checker.checkStaticNPE(matrix, GENERATE_QR_CODE_IMAGE, MATRIX)) {
-            return null;
-        }
-        BufferedImage qrImage = null;
-        Graphics2D g = null;
-        try {
-            qrImage = new BufferedImage(size, size, BufferedImage.TYPE_INT_RGB);
-            g = qrImage.createGraphics();
-            g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
-            fillBackground(g, size, config.bgColor());
-            drawModules(g, matrix, config);
-            Objects.requireNonNull(matrix, "Dans generateQrCodeImage matrix ne doit pas être null");
-            drawFinderPatterns(g, matrix.getWidth(), config);
-            drawLogoIfPresent(g, config);
-        } catch (OutOfMemoryError oom) {
-            if (g != null) {
-                g.dispose();
-            }
-            if (qrImage != null) {
-                qrImage.flush();
-            }
-            throw new OutOfMemoryError(
-                    String.format(
-                            "Mémoire insuffisante pour générer une image de %dx%d pixels.%nTaille"
-                                    + " estimée %d Mo.%nMémoire disponible %d Mo.",
-                            size, size, estimateImageMemoryMB(size), getAvailableMemoryMB()));
-        } finally {
-            if (g != null) {
-                g.dispose();
-            }
-        }
-        return qrImage;
-    }
-
-    /**
-     * Validates that sufficient memory is available to generate a square image of the given size.
-     * Applies a hard limit of 200M px and ensures a minimum memory margin before allocation.
-     *
-     * @param size the width and height of the square image in pixels
-     * @throws OutOfMemoryError if the image exceeds pixel limits or available memory is
-     *     insufficient
-     */
-    private static void validateMemoryForImageSize(int size) {
-        final long MAX_PIXELS = 200_000_000L;
-        long totalPixels = (long) size * size;
-        if (totalPixels > MAX_PIXELS) {
-            throw new OutOfMemoryError(
-                    String.format(
-                            """
-
-                            Dimension trop grande:
-                            %dx%d pixels (%,d pixels).
-                            Maximum autorisé: %,d pixels.
-                            """,
-                            size, size, totalPixels, MAX_PIXELS));
-        }
-        long estimatedMB = estimateImageMemoryMB(size);
-        long availableMB = getAvailableMemoryMB();
-        if (estimatedMB > availableMB) {
-            throw new OutOfMemoryError(
-                    String.format(
-                            "Mémoire insuffisante pour générer une image de %dx%d pixels.%nMémoire"
-                                    + " nécessaire %d Mo.%nMémoire disponible %d Mo.%nRéduire la"
-                                    + " dimension souhaitée.",
-                            size, size, estimatedMB, availableMB));
-        }
-    }
-
-    /**
-     * Estimates the memory required to create a BufferedImage.
-     *
-     * @param size The width and height of the square image.
-     * @return Estimated memory in megabytes.
-     */
-    private static long estimateImageMemoryMB(int size) {
-        long totalPixels = (long) size * size;
-        long bytesRequired = totalPixels * 4;
-        return bytesRequired / (BYTES_PER_KILOBYTE * BYTES_PER_KILOBYTE);
-    }
-
-    /**
-     * Gets the available memory in the JVM with safety margin for image generation.
-     *
-     * @return Available memory in megabytes, minus the reserved safety margin. Returns 0 if not
-     *     enough memory is available.
-     */
-    private static long getAvailableMemoryMB() {
-        Runtime runtime = Runtime.getRuntime();
-        long maxMemory = runtime.maxMemory();
-        long allocatedMemory = runtime.totalMemory();
-        long freeMemory = runtime.freeMemory();
-        long usedMemory = allocatedMemory - freeMemory;
-        long availableMemory = maxMemory - usedMemory;
-        long safeAvailableMemory =
-                availableMemory
-                        - (AVAILABLE_MEMORY_TO_GENERATE_IMAGE
-                                * BYTES_PER_KILOBYTE
-                                * BYTES_PER_KILOBYTE);
-        return Math.max(0, safeAvailableMemory) / (BYTES_PER_KILOBYTE * BYTES_PER_KILOBYTE);
-    }
-
-    /**
-     * Creates a QR code matrix for the given text.
-     *
-     * @param text The string to encode in the QR code.
-     * @param margin The outer margin of the QR code in modules.
-     * @return A BitMatrix representing the encoded QR code.
-     * @throws WriterException If encoding fails.
-     */
-    private static BitMatrix createMatrix(String text, int margin) throws WriterException {
-        if (Checker.checkStaticNPE(text, "createMatrix", "text")) {
-            return null;
-        }
-        Map<EncodeHintType, Object> hints =
-                Map.of(
-                        EncodeHintType.CHARACTER_SET,
-                        "UTF-8",
-                        EncodeHintType.ERROR_CORRECTION,
-                        ErrorCorrectionLevel.H,
-                        EncodeHintType.MARGIN,
-                        margin);
-        return new MultiFormatWriter().encode(text, BarcodeFormat.QR_CODE, 0, 0, hints);
-    }
-
-    /**
-     * Fills the entire QR code area with the specified background color.
-     *
-     * @param g The graphics context used for drawing.
-     * @param size The width and height of the QR code area in pixels.
-     * @param bgColor The background color to fill.
-     */
-    private static void fillBackground(Graphics2D g, int size, Color bgColor) {
-        if (Checker.checkStaticNPE(g, "fillBackground", "g")
-                || Checker.checkStaticNPE(bgColor, "fillBackground", BG_COLOR)) {
-            return;
-        }
-        g.setColor(bgColor);
-        g.fillRect(0, 0, size, size);
-    }
-
-    /**
-     * Renders all QR code modules onto the provided graphics context.
-     *
-     * <p>Modules that are part of finder patterns or the central logo area are skipped. Supports
-     * rounded or square modules according to configuration.
-     *
-     * @param g the graphics context used for drawing
-     * @param matrix the QR code bit matrix representing module positions
-     * @param config the QR code configuration including size, colors, module shape, margin, and
-     *     logo ratio
-     */
-    private static void drawModules(Graphics2D g, BitMatrix matrix, QrConfig config) {
-        if (Checker.checkStaticNPE(g, DRAW_MODULES, "g")
-                || Checker.checkStaticNPE(matrix, DRAW_MODULES, MATRIX)
-                || Checker.checkStaticNPE(config, DRAW_MODULES, CONFIG)) {
-            return;
-        }
-        int matrixWidth = matrix.getWidth();
-        int matrixHeight = matrix.getHeight();
-        double moduleSizeX = (double) config.size() / matrixWidth;
-        double moduleSizeY = (double) config.size() / matrixHeight;
-        int whiteBoxSize = (int) (config.size() * config.imageRatio());
-        int whiteBoxX = (config.size() - whiteBoxSize) / 2;
-        int whiteBoxY = (config.size() - whiteBoxSize) / 2;
-        g.setColor(config.qrColor());
-        ModuleContext ctx =
-                new ModuleContext(
-                        config, matrixWidth, matrixHeight, whiteBoxX, whiteBoxY, whiteBoxSize);
-        for (int y = 0; y < matrixHeight; y++) {
-            for (int x = 0; x < matrixWidth; x++) {
-                if (shouldSkipModule(x, y, matrix, ctx)) {
-                    continue;
-                }
-                drawModule(g, x, y, moduleSizeX, moduleSizeY, config);
-            }
-        }
-    }
-
-    /**
-     * Determines whether a QR code module should be skipped during rendering.
-     *
-     * <p>A module is skipped if it is unset, part of a finder pattern, or overlaps the central logo
-     * area.
-     *
-     * @param x the module's x-coordinate in the QR matrix
-     * @param y the module's y-coordinate in the QR matrix
-     * @param matrix the QR code bit matrix
-     * @param ctx the module context containing configuration, matrix dimensions, and logo box
-     * @return true if the module should be skipped, false otherwise
-     */
-    private static boolean shouldSkipModule(int x, int y, BitMatrix matrix, ModuleContext ctx) {
-        if (Checker.checkStaticNPE(matrix, SHOULD_SKIP_MODULE, MATRIX)
-                || Checker.checkStaticNPE(ctx, SHOULD_SKIP_MODULE, "ctx")
-                || Checker.checkStaticNPE(ctx.config(), SHOULD_SKIP_MODULE, "ctx.config")) {
-            return true;
-        }
-        if (matrix.get(x, y)) {
-            double scaleX = (double) ctx.config.size() / ctx.matrixWidth;
-            double scaleY = (double) ctx.config.size() / ctx.matrixHeight;
-            double cx = x * scaleX;
-            double cy = y * scaleY;
-            if (isInPositionPattern(x, y, ctx.matrixWidth, ctx.matrixHeight, ctx.config.margin())) {
-                return true;
-            }
-            return cx + scaleX > ctx.whiteBoxX
-                    && cx < ctx.whiteBoxX + ctx.whiteBoxSize
-                    && cy + scaleY > ctx.whiteBoxY
-                    && cy < ctx.whiteBoxY + ctx.whiteBoxSize;
-        }
-        return true;
-    }
-
-    /**
-     * Draws a single QR code module at the specified coordinates with configured size and shape.
-     *
-     * <p>Supports square or rounded modules depending on configuration.
-     *
-     * @param g the graphics context used for rendering
-     * @param x the module's x-coordinate in the matrix
-     * @param y the module's y-coordinate in the matrix
-     * @param moduleSizeX width of the module in pixels
-     * @param moduleSizeY height of the module in pixels
-     * @param config the QR code configuration
-     */
-    private static void drawModule(
-            Graphics2D g, int x, int y, double moduleSizeX, double moduleSizeY, QrConfig config) {
-        if (Checker.checkStaticNPE(g, "drawModule", "g")
-                || Checker.checkStaticNPE(config, "drawModule", CONFIG)) {
-            return;
-        }
-        double cx = x * moduleSizeX;
-        double cy = y * moduleSizeY;
-        if (config.roundedModules()) {
-            g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g.fill(new Ellipse2D.Double(cx, cy, moduleSizeX, moduleSizeY));
-        } else {
-            g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
-            g.fillRect(
-                    (int) cx, (int) cy, (int) Math.ceil(moduleSizeX), (int) Math.ceil(moduleSizeY));
-        }
-    }
-
-    /**
-     * Renders the three QR code finder patterns at the corners using the specified style.
-     *
-     * @param g The graphics context for rendering.
-     * @param matrixWidth Width of the QR code matrix.
-     * @param config Configuration containing size, colors, module shape, and margin.
-     */
-    static void drawFinderPatterns(Graphics2D g, int matrixWidth, QrConfig config) {
-        if (Checker.checkStaticNPE(g, "drawFinderPatterns", "g")
-                || Checker.checkStaticNPE(config, "drawFinderPatterns", CONFIG)) {
-            return;
-        }
-        double moduleSizeX = (double) config.size() / matrixWidth;
-        double marginPixels = config.margin() * moduleSizeX;
-        double diameter = 7 * moduleSizeX;
-        if (config.roundedModules()) {
-            drawRoundedFinderPatternAtPixel(
-                    g, marginPixels, marginPixels, diameter, config.qrColor(), config.bgColor());
-            drawRoundedFinderPatternAtPixel(
-                    g,
-                    marginPixels,
-                    config.size() - marginPixels - diameter,
-                    diameter,
-                    config.qrColor(),
-                    config.bgColor());
-            drawRoundedFinderPatternAtPixel(
-                    g,
-                    config.size() - marginPixels - diameter,
-                    marginPixels,
-                    diameter,
-                    config.qrColor(),
-                    config.bgColor());
-        } else {
-            drawSquareFinderPatternAtPixel(
-                    g, marginPixels, marginPixels, diameter, config.qrColor(), config.bgColor());
-            drawSquareFinderPatternAtPixel(
-                    g,
-                    marginPixels,
-                    config.size() - marginPixels - diameter,
-                    diameter,
-                    config.qrColor(),
-                    config.bgColor());
-            drawSquareFinderPatternAtPixel(
-                    g,
-                    config.size() - marginPixels - diameter,
-                    marginPixels,
-                    diameter,
-                    config.qrColor(),
-                    config.bgColor());
-        }
-    }
-
-    /**
-     * Draws the logo at the center of the QR code if a valid logo file is provided.
-     *
-     * <p>The logo is scaled to fit within 90% of the designated white box area, which is determined
-     * by the QR code size and configured image ratio.
-     *
-     * @param g The Graphics2D context used for rendering the QR code.
-     * @param config QR code configuration containing size, logo file, and image ratio.
-     * @throws IOException If reading the logo file fails or the file is not a valid image.
-     */
-    static void drawLogoIfPresent(Graphics2D g, QrConfig config) throws IOException {
-        if (Checker.checkStaticNPE(g, "drawLogoIfPresent", "g")
-                || Checker.checkStaticNPE(config, "drawLogoIfPresent", CONFIG)
-                || config.logoFile() == null
-                || !config.logoFile().exists()
-                || config.imageRatio() == 0) {
-            return;
-        }
-        final int size = config.size();
-        final int whiteBoxSize = (int) (size * config.imageRatio());
-        final int whiteBoxX = (size - whiteBoxSize) / 2;
-        final int whiteBoxY = (size - whiteBoxSize) / 2;
-        final int logoMaxSize = (int) (whiteBoxSize * DEFAULT_GAP_BETWEEN_LOGO_AND_MODULES);
-        final int logoX = whiteBoxX + (whiteBoxSize - logoMaxSize) / 2;
-        final int logoY = whiteBoxY + (whiteBoxSize - logoMaxSize) / 2;
-        BufferedImage logo = null;
-        BufferedImage scaledLogo = null;
-        Graphics2D gLogo = null;
-        try (InputStream in = new FileInputStream(config.logoFile())) {
-            logo = ImageIO.read(in);
-            scaledLogo = new BufferedImage(logoMaxSize, logoMaxSize, BufferedImage.TYPE_INT_ARGB);
-            gLogo = scaledLogo.createGraphics();
-            gLogo.setRenderingHint(
-                    RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-            gLogo.drawImage(logo, 0, 0, logoMaxSize, logoMaxSize, null);
-        } finally {
-            if (gLogo != null) {
-                gLogo.dispose();
-            }
-            if (logo != null) {
-                logo.flush();
-            }
-            if (scaledLogo != null) {
-                g.drawImage(scaledLogo, logoX, logoY, null);
-                scaledLogo.flush();
-            }
-        }
-    }
-
-    /**
-     * Determines whether the given coordinates fall within any of the three QR code position
-     * patterns.
-     *
-     * @param x X-coordinate in the QR matrix.
-     * @param y Y-coordinate in the QR matrix.
-     * @param matrixWidth Width of the QR matrix.
-     * @param matrixHeight Height of the QR matrix.
-     * @param margin QR code margin in modules.
-     * @return {@code true} if the coordinate is inside a position pattern; {@code false} otherwise.
-     */
-    private static boolean isInPositionPattern(
-            int x, int y, int matrixWidth, int matrixHeight, int margin) {
-        return isInTopLeftPattern(x, y, margin)
-                || isInTopRightPattern(x, y, matrixWidth, margin)
-                || isInBottomLeftPattern(x, y, matrixHeight, margin);
-    }
-
-    /**
-     * Checks if coordinates are within the top-left position pattern.
-     *
-     * @param x X-coordinate
-     * @param y Y-coordinate
-     * @param margin QR code margin
-     * @return {@code true} if inside top-left pattern; {@code false} otherwise
-     */
-    private static boolean isInTopLeftPattern(int x, int y, int margin) {
-        return x >= margin && x < margin + 7 && y >= margin && y < margin + 7;
-    }
-
-    /**
-     * Checks if coordinates are within the top-right position pattern.
-     *
-     * @param x X-coordinate
-     * @param y Y-coordinate
-     * @param matrixWidth Width of the QR matrix
-     * @param margin QR code margin
-     * @return {@code true} if inside top-right pattern; {@code false} otherwise
-     */
-    private static boolean isInTopRightPattern(int x, int y, int matrixWidth, int margin) {
-        return x >= matrixWidth - margin - 7
-                && x < matrixWidth - margin
-                && y >= margin
-                && y < margin + 7;
-    }
-
-    /**
-     * Checks if coordinates are within the bottom-left position pattern.
-     *
-     * @param x X-coordinate
-     * @param y Y-coordinate
-     * @param matrixHeight Height of the QR matrix
-     * @param margin QR code margin
-     * @return {@code true} if inside bottom-left pattern; {@code false} otherwise
-     */
-    private static boolean isInBottomLeftPattern(int x, int y, int matrixHeight, int margin) {
-        return x >= margin
-                && x < margin + 7
-                && y >= matrixHeight - margin - 7
-                && y < matrixHeight - margin;
-    }
-
-    /**
-     * Draws a QR code finder pattern with rounded corners at the specified pixel coordinates.
-     *
-     * @param g Graphics2D context to draw on.
-     * @param x X-coordinate of the top-left corner.
-     * @param y Y-coordinate of the top-left corner.
-     * @param diameter Diameter of the finder pattern.
-     * @param qrColor Color of the QR modules.
-     * @param bgColor Background color inside the pattern.
-     */
-    private static void drawRoundedFinderPatternAtPixel(
-            Graphics2D g, double x, double y, double diameter, Color qrColor, Color bgColor) {
-        if (Checker.checkStaticNPE(g, DRAW_ROUNDED_FINDER_PATTERN_AT_PIXEL, "g")
-                || Checker.checkStaticNPE(qrColor, DRAW_ROUNDED_FINDER_PATTERN_AT_PIXEL, "qrColor")
-                || Checker.checkStaticNPE(
-                        bgColor, DRAW_ROUNDED_FINDER_PATTERN_AT_PIXEL, BG_COLOR)) {
-            return;
-        }
-        double arc = diameter / 4.0;
-        g.setColor(qrColor);
-        g.fill(new RoundRectangle2D.Double(x, y, diameter, diameter, arc, arc));
-        double innerMargin = diameter / 7.0;
-        g.setColor(bgColor);
-        g.fill(
-                new RoundRectangle2D.Double(
-                        x + innerMargin,
-                        y + innerMargin,
-                        diameter - 2 * innerMargin,
-                        diameter - 2 * innerMargin,
-                        arc,
-                        arc));
-        double centerMargin = diameter / 7.0 * 2;
-        g.setColor(qrColor);
-        g.fill(
-                new RoundRectangle2D.Double(
-                        x + centerMargin,
-                        y + centerMargin,
-                        diameter - 2 * centerMargin,
-                        diameter - 2 * centerMargin,
-                        arc,
-                        arc));
-    }
-
-    /**
-     * Draws a standard square QR code finder pattern at the specified pixel coordinates.
-     *
-     * @param g Graphics2D context to draw on.
-     * @param x X-coordinate of the top-left corner.
-     * @param y Y-coordinate of the top-left corner.
-     * @param diameter Diameter of the finder pattern.
-     * @param qrColor Color of the QR modules.
-     * @param bgColor Background color inside the pattern.
-     */
-    static void drawSquareFinderPatternAtPixel(
-            Graphics2D g, double x, double y, double diameter, Color qrColor, Color bgColor) {
-        if (Checker.checkStaticNPE(g, DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL, "g")
-                || Checker.checkStaticNPE(qrColor, DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL, "qrColor")
-                || Checker.checkStaticNPE(bgColor, DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL, BG_COLOR)) {
-            return;
-        }
-        g.setColor(qrColor);
-        g.fillRect((int) x, (int) y, (int) diameter, (int) diameter);
-        double innerMargin = diameter / 7.0;
-        g.setColor(bgColor);
-        g.fillRect(
-                (int) (x + innerMargin),
-                (int) (y + innerMargin),
-                (int) (diameter - 2 * innerMargin),
-                (int) (diameter - 2 * innerMargin));
-        double centerMargin = diameter / 7.0 * 2;
-        g.setColor(qrColor);
-        g.fillRect(
-                (int) (x + centerMargin),
-                (int) (y + centerMargin),
-                (int) (diameter - 2 * centerMargin),
-                (int) (diameter - 2 * centerMargin));
-    }
-
-    /**
      * Converts a {@link Color} object to its hexadecimal RGB string representation.
      *
-     * <p>If the input color is null, returns a default color "#FFFFFF".
+     * <p>Returns a default color of "#FFFFFF" if the input is null.
      *
-     * @param c the Color to convert
-     * @return Hex string in the format "#RRGGBB", e.g. "#FF00AA"
+     * @param c the {@link Color} to convert
+     * @return a hexadecimal string in the format "#RRGGBB", e.g., "#FF00AA"
      */
     private String colorToHex(Color c) {
         if (Checker.checkStaticNPE(c, "colorToHex", "c")) {
@@ -1823,8 +1048,10 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Loads application metadata from `version.properties`. Sets static fields: app version, name,
-     * and organization. Shows an error dialog if the file cannot be read.
+     * Loads application metadata from the `version.properties` file.
+     *
+     * <p>Sets the static fields for the application version, name, and organization. Displays an
+     * error dialog if the properties file cannot be read.
      */
     private static void getManifestKeys() {
         Properties props = new Properties();
@@ -1843,8 +1070,10 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Application entry point. Sets up the FlatCobalt2 theme with the Luciole font and launches the
-     * CanScan GUI on the EDT.
+     * Application entry point.
+     *
+     * <p>Sets up the FlatCobalt2 theme, initializes the Luciole font, and launches the CanScan GUI
+     * on the Event Dispatch Thread (EDT).
      *
      * @param args command-line arguments (ignored)
      */
