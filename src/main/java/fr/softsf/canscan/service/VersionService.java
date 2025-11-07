@@ -23,6 +23,7 @@ import javax.swing.SwingWorker;
 
 import fr.softsf.canscan.ui.Popup;
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.StringConstants;
 
 /**
  * Singleton service for checking application version against GitHub releases. Uses the GitHub API
@@ -56,10 +57,14 @@ public enum VersionService {
                             .build();
         } catch (NoSuchAlgorithmException | KeyManagementException e) {
             Popup.INSTANCE.showDialog(
-                    "TLS 1.3 est requis mais non disponible.\n", e.getMessage(), "ERREUR");
+                    "TLS 1.3 est requis mais non disponible.\n",
+                    e.getMessage(),
+                    StringConstants.ERREUR.getValue());
         } catch (UncheckedIOException | SecurityException e) {
             Popup.INSTANCE.showDialog(
-                    "Impossible de créer HTTP client.\n", e.getMessage(), "ERREUR");
+                    "Impossible de créer HTTP client.\n",
+                    e.getMessage(),
+                    StringConstants.ERREUR.getValue());
         }
         this.httpClient = client;
     }

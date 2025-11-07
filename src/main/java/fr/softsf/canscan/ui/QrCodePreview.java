@@ -22,6 +22,7 @@ import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.StringConstants;
 
 /**
  * Thread-safe singleton responsible for managing the asynchronous generation and display of QR code
@@ -34,9 +35,6 @@ import fr.softsf.canscan.util.Checker;
 public enum QrCodePreview {
     INSTANCE;
 
-    private static final String GENERATE_QR_CODE = "generateQrCode";
-    private static final String QR_DATA = "qrData";
-    private static final String ERREUR = "Erreur";
     private transient Timer previewDebounceTimer;
     private transient SwingWorker<BufferedImage, Void> previewWorker;
     private transient JLabel qrCodeLabel;
@@ -158,7 +156,8 @@ public enum QrCodePreview {
             if (cancelledOrStale) {
                 return;
             }
-            Popup.INSTANCE.showDialog("Pas d'affichage\n", ex.getMessage(), ERREUR);
+            Popup.INSTANCE.showDialog(
+                    "Pas d'affichage\n", ex.getMessage(), StringConstants.ERREUR.getValue());
         }
     }
 
@@ -179,7 +178,10 @@ public enum QrCodePreview {
             QrDataResult qrData =
                     BuildQRDataService.INSTANCE.buildQrData(qrInput.currentMode(), qrInput);
             if (Thread.currentThread().isInterrupted()
-                    || Checker.INSTANCE.checkNPE(qrData, GENERATE_QR_CODE, QR_DATA)) {
+                    || Checker.INSTANCE.checkNPE(
+                            qrData,
+                            StringConstants.GENERATE_QR_CODE.getValue(),
+                            StringConstants.QR_DATA.getValue())) {
                 return null;
             }
             Objects.requireNonNull(qrData, "Dans buildPreviewImage qrData ne doit pas être null");
@@ -208,7 +210,9 @@ public enum QrCodePreview {
             SwingUtilities.invokeLater(
                     () ->
                             Popup.INSTANCE.showDialog(
-                                    "Pas de rendu du code QR\n", ex.getMessage(), ERREUR));
+                                    "Pas de rendu du code QR\n",
+                                    ex.getMessage(),
+                                    StringConstants.ERREUR.getValue()));
             return null;
         }
     }

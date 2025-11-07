@@ -57,7 +57,9 @@ public enum UseLucioleFont {
             SwingUtilities.invokeLater(FlatLaf::updateUI);
         } catch (FontFormatException | IOException | IllegalStateException e) {
             Popup.INSTANCE.showDialog(
-                    "La police Luciole n'a pas pu être utilisée\n", e.getMessage(), "ERREUR");
+                    "La police Luciole n'a pas pu être utilisée\n",
+                    e.getMessage(),
+                    StringConstants.ERREUR.getValue());
         }
     }
 }

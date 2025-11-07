@@ -72,6 +72,8 @@ import fr.softsf.canscan.ui.QrCodePreview;
 import fr.softsf.canscan.ui.QrCodeResize;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.IntConstants;
+import fr.softsf.canscan.util.StringConstants;
 import fr.softsf.canscan.util.UseLucioleFont;
 
 /**
@@ -89,7 +91,6 @@ import fr.softsf.canscan.util.UseLucioleFont;
  */
 public class CanScan extends JFrame {
 
-    private static final int DEFAULT_GAP = 15;
     private static final double DEFAULT_IMAGE_RATIO = 0.27;
     private static final int DEFAULT_QR_CODE_SIZE = 400;
     private static final int MAX_PERCENTAGE = 100;
@@ -101,15 +102,12 @@ public class CanScan extends JFrame {
     private static final int RADIO_BUTTON_GAP = 20;
     private static final int DEFAULT_LABEL_WIDTH = 140;
     private static final String ADD_ROW = "addRow";
-    private static final String GENERATE_QR_CODE = "generateQrCode";
     private static final int GENERATE_BUTTON_EXTRA_HEIGHT = 35;
     private static final int VERTICAL_SCROLL_UNIT_INCREMENT = 16;
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
-    private static final String ERREUR = "Erreur";
     private static final int BUTTON_ICON_COLOR_SIZE = 14;
     private static final int BUTTON_COLOR_ICON_TEXT_GAP = 10;
     private static final String SIZE_FIELD_DEFAULT = "400";
-    private static final String QR_DATA = "qrData";
     private static final String LATEST_RELEASES_REPO_URL =
             "https://github.com/Lob2018/CanScan/releases/latest";
     private static final int COLOR_BUTTONS_GAP = 10;
@@ -179,7 +177,9 @@ public class CanScan extends JFrame {
     public CanScan() {
         super(buildTitle());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setLayout(new BorderLayout(DEFAULT_GAP, DEFAULT_GAP));
+        setLayout(
+                new BorderLayout(
+                        IntConstants.DEFAULT_GAP.getValue(), IntConstants.DEFAULT_GAP.getValue()));
         setResizable(true);
         // Init
         Loader.INSTANCE.init(qrCodeLabel);
@@ -199,7 +199,12 @@ public class CanScan extends JFrame {
         JPanel northPanel = new JPanel(new GridBagLayout());
         northPanelWrapper.add(northPanel);
         northPanel.setMaximumSize(new Dimension(DEFAULT_LABEL_WIDTH * 3, northPanel.getHeight()));
-        northPanel.setBorder(new EmptyBorder(DEFAULT_GAP, DEFAULT_GAP, DEFAULT_GAP, DEFAULT_GAP));
+        northPanel.setBorder(
+                new EmptyBorder(
+                        IntConstants.DEFAULT_GAP.getValue(),
+                        IntConstants.DEFAULT_GAP.getValue(),
+                        IntConstants.DEFAULT_GAP.getValue(),
+                        IntConstants.DEFAULT_GAP.getValue()));
         GridBagConstraints grid = new GridBagConstraints();
         grid.insets = new Insets(3, 3, 3, 3);
         grid.fill = GridBagConstraints.HORIZONTAL;
@@ -349,7 +354,7 @@ public class CanScan extends JFrame {
                     }
                 });
         // SOUTH (marge)
-        southSpacer.setPreferredSize(new Dimension(0, DEFAULT_GAP));
+        southSpacer.setPreferredSize(new Dimension(0, IntConstants.DEFAULT_GAP.getValue()));
         initializeAutomaticQRCodeRendering();
         // MAIN (with scroll)
         JPanel mainPanel = new JPanel(new BorderLayout());
@@ -779,13 +784,16 @@ public class CanScan extends JFrame {
      * @param e the triggering {@link ActionEvent}
      */
     private void generateQrCode(ActionEvent e) {
-        if (Checker.INSTANCE.checkNPE(e, GENERATE_QR_CODE, "e")) {
+        if (Checker.INSTANCE.checkNPE(e, StringConstants.GENERATE_QR_CODE.getValue(), "e")) {
             return;
         }
         try {
             QrDataResult qrData =
                     BuildQRDataService.INSTANCE.buildQrData(currentMode, getQrInput());
-            if (Checker.INSTANCE.checkNPE(qrData, GENERATE_QR_CODE, QR_DATA)) {
+            if (Checker.INSTANCE.checkNPE(
+                    qrData,
+                    StringConstants.GENERATE_QR_CODE.getValue(),
+                    StringConstants.QR_DATA.getValue())) {
                 return;
             }
             Objects.requireNonNull(qrData, "Dans generateQrCode qrData ne doit pas être null");
@@ -816,8 +824,10 @@ public class CanScan extends JFrame {
             Objects.requireNonNull(
                     selectedFile, "Dans generateQrCode selectedFile ne doit pas être null");
             File output = resolveFileNameConflict(selectedFile);
-            if (Checker.INSTANCE.checkNPE(output, GENERATE_QR_CODE, "output")
-                    || Checker.INSTANCE.checkNPE(qr, GENERATE_QR_CODE, "qr")) {
+            if (Checker.INSTANCE.checkNPE(
+                            output, StringConstants.GENERATE_QR_CODE.getValue(), "output")
+                    || Checker.INSTANCE.checkNPE(
+                            qr, StringConstants.GENERATE_QR_CODE.getValue(), "qr")) {
                 return;
             }
             Objects.requireNonNull(qr, "Dans generateQrCode qr ne doit pas être null");
@@ -831,13 +841,17 @@ public class CanScan extends JFrame {
             SwingUtilities.invokeLater(
                     () ->
                             Popup.INSTANCE.showDialog(
-                                    "Manque de mémoire\n", oom.getMessage(), ERREUR));
+                                    "Manque de mémoire\n",
+                                    oom.getMessage(),
+                                    StringConstants.ERREUR.getValue()));
 
         } catch (WriterException we) {
             SwingUtilities.invokeLater(
                     () ->
                             Popup.INSTANCE.showDialog(
-                                    "Pas de génération du QR Code\n", we.getMessage(), ERREUR));
+                                    "Pas de génération du QR Code\n",
+                                    we.getMessage(),
+                                    StringConstants.ERREUR.getValue()));
 
         } catch (IOException ioe) {
             SwingUtilities.invokeLater(
@@ -845,7 +859,7 @@ public class CanScan extends JFrame {
                             Popup.INSTANCE.showDialog(
                                     "Pas de lecture/écriture de fichier\n",
                                     ioe.getMessage(),
-                                    ERREUR));
+                                    StringConstants.ERREUR.getValue()));
         }
     }
 
@@ -881,6 +895,18 @@ public class CanScan extends JFrame {
     }
 
     /**
+     * Calculates the available height for QR code rendering.
+     *
+     * @return available height in pixels after removing header and footer space
+     */
+    private int calculateAvailableQrHeight() {
+        return getHeight()
+                - northPanelWrapper.getHeight()
+                - southSpacer.getHeight()
+                - IntConstants.DEFAULT_GAP.getValue() * 3;
+    }
+
+    /**
      * Builds and returns a {@link QrInput} object containing all current user inputs and settings.
      *
      * <p>Aggregates data from MECARD or FREE fields, visual settings (colors, size, margin, logo,
@@ -890,7 +916,7 @@ public class CanScan extends JFrame {
      */
     private QrInput getQrInput() {
         return new QrInput(
-                getHeight() - northPanelWrapper.getHeight() - southSpacer.getHeight(),
+                calculateAvailableQrHeight(),
                 currentMode,
                 freeField.getText(),
                 nameField.getText(),
@@ -1062,7 +1088,9 @@ public class CanScan extends JFrame {
             }
         } catch (IOException e) {
             Popup.INSTANCE.showDialog(
-                    "Le fichier version.properties est illisible\n", e.getMessage(), ERREUR);
+                    "Le fichier version.properties est illisible\n",
+                    e.getMessage(),
+                    StringConstants.ERREUR.getValue());
         }
         version = props.getProperty("app.version");
         name = props.getProperty("app.name");

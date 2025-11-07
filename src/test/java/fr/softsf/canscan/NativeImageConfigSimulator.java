@@ -29,6 +29,7 @@ import javax.swing.SwingUtilities;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
 
+import fr.softsf.canscan.util.StringConstants;
 import fr.softsf.canscan.util.UseLucioleFont;
 
 /**
@@ -136,7 +137,10 @@ public class NativeImageConfigSimulator {
         freeField.setText("W".repeat(2000));
         robot.delay(500);
         String actual = interceptAndValideDialog(robot);
-        assertEquals("\n=== Test 5 : Verification de free Data too big ===\n", "Erreur", actual);
+        assertEquals(
+                "\n=== Test 5 : Verification de free Data too big ===\n",
+                StringConstants.ERREUR.getValue(),
+                actual);
     }
 
     /**

@@ -23,6 +23,7 @@ import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.StringConstants;
 
 /**
  * Singleton responsible for managing asynchronous resizing of generated QR code images.
@@ -34,12 +35,9 @@ import fr.softsf.canscan.util.Checker;
 public enum QrCodeResize {
     INSTANCE;
 
-    private static final int DEFAULT_GAP = 15;
     private static final int QR_CODE_LABEL_DEFAULT_SIZE = 50;
     private static final int LARGE_IMAGE_THRESHOLD = 1000;
     private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
-    private static final String QR_DATA = "qrData";
-    private static final String ERREUR = "Erreur";
     private transient Timer resizeDebounceTimer;
     private transient SwingWorker<ImageIcon, Void> resizeWorker;
     private transient JLabel qrCodeLabel;
@@ -194,7 +192,10 @@ public enum QrCodeResize {
             if (cancelledOrStale) {
                 return;
             }
-            Popup.INSTANCE.showDialog("Pas de redimensionnement\n", ex.getMessage(), ERREUR);
+            Popup.INSTANCE.showDialog(
+                    "Pas de redimensionnement\n",
+                    ex.getMessage(),
+                    StringConstants.ERREUR.getValue());
         }
     }
 
@@ -241,7 +242,7 @@ public enum QrCodeResize {
      * space, and launches a new resize task.
      */
     private void handleResize() {
-        int squareSize = qrInput.availableHeightForQrCode() - DEFAULT_GAP * 3;
+        int squareSize = qrInput.availableHeightForQrCode();
         if (squareSize < QR_CODE_LABEL_DEFAULT_SIZE) {
             squareSize = QR_CODE_LABEL_DEFAULT_SIZE;
         }
@@ -264,7 +265,7 @@ public enum QrCodeResize {
      * @return true if invalid, false otherwise
      */
     private boolean isInvalidQrData(QrDataResult qrData) {
-        if (Checker.INSTANCE.checkNPE(qrData, "isInvalidQrData", QR_DATA)
+        if (Checker.INSTANCE.checkNPE(qrData, "isInvalidQrData", StringConstants.QR_DATA.getValue())
                 || StringUtils.isBlank(qrData.data())) {
             Loader.INSTANCE.stopWaitIcon();
             QrCodeBufferedImage.INSTANCE.freeQrOriginal();
