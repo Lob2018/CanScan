@@ -495,6 +495,13 @@ public class QrCodeBufferedImage {
         Graphics2D gLogo = null;
         try (InputStream in = new FileInputStream(config.logoFile())) {
             logo = ImageIO.read(in);
+            if (logo == null) {
+                Popup.INSTANCE.showDialog(
+                        "",
+                        "Ce format de logo n'est pas pris en charge (seulement PNG, JPG, ou JPEG).",
+                        "Information");
+                return;
+            }
             scaledLogo = new BufferedImage(logoMaxSize, logoMaxSize, BufferedImage.TYPE_INT_ARGB);
             gLogo = scaledLogo.createGraphics();
             gLogo.setRenderingHint(

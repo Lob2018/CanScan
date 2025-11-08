@@ -691,10 +691,10 @@ public class CanScan extends JFrame {
      */
     protected File chooseLogoFile() {
         JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("Sélectionner le logo");
+        chooser.setDialogTitle("Sélectionner le logo (PNG, JPG, ou JPEG)");
         chooser.setFileFilter(
                 new javax.swing.filechooser.FileNameExtensionFilter(
-                        "Images", "png", "jpg", "jpeg"));
+                        "Images (PNG, JPG, ou JPEG)", "png", "jpg", "jpeg"));
         if (chooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             return chooser.getSelectedFile();
         }

@@ -5,7 +5,7 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 * 👤 **Partager un contact** : Générer un code QR scannable contenant ses coordonnées au format MECARD
 * 🌐 **Partager ce que vous voulez** : Créer un code QR d’un lien vers un site web, un événement de calendrier, etc.
 * 🎨 **Personnaliser l'apparence** : Choisir vos couleurs, modules arrondis, marges et dimensions
-* 🖼️ **Ajouter votre logo** : Intégrer une image centrale sans compromettre la lisibilité
+* 🖼️ **Ajouter votre logo** : Intégrer une image centrale sans compromettre la lisibilité (PNG, JPG, ou JPEG)
 * 📷 **Vérifier et tester** : S’assurer que le code QR est scannable grâce à l’aperçu dynamique
 * 💾 **Enregistrer facilement** : Sauvegarder l’image au format PNG
 
