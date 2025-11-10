@@ -61,7 +61,6 @@ import fr.softsf.canscan.ui.Loader;
 import fr.softsf.canscan.ui.Popup;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeColor;
-import fr.softsf.canscan.ui.QrCodeIconUtil;
 import fr.softsf.canscan.ui.QrCodePreview;
 import fr.softsf.canscan.ui.QrCodeResize;
 import fr.softsf.canscan.util.BrowserHelper;
@@ -376,52 +375,6 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Releases all runtime resources used by the QR code workflow.
-     *
-     * <p>Stops active timers, cancels background workers, and frees any allocated QR code images to
-     * prevent memory leaks and ensure a clean shutdown of the preview and generation system.
-     */
-    private void cleanupResources() {
-        stopAllTimers();
-        cancelAllWorkers();
-        freeQrOriginalAndQrCodeLabel();
-    }
-
-    /**
-     * Frees the QR code image and its label icon to release memory.
-     *
-     * <p>This method must be called on the Event Dispatch Thread (EDT) to safely dispose of Swing
-     * components and graphics resources.
-     */
-    private void freeQrOriginalAndQrCodeLabel() {
-        qrCodeBufferedImage.freeQrOriginal();
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
-    }
-
-    /**
-     * Stops all active Swing timers used for QR code preview and resizing.
-     *
-     * <p>This ensures that scheduled tasks are canceled and associated resources are released,
-     * preventing memory leaks and lingering timers.
-     */
-    private void stopAllTimers() {
-        loader.disposeWaitIconTimer();
-        qrCodeResize.stop();
-        qrCodePreview.stop();
-    }
-
-    /**
-     * Cancels all active background workers responsible for QR code preview and resizing.
-     *
-     * <p>This interrupts any ongoing tasks, triggers resource cleanup, and ensures no lingering
-     * threads or memory leaks remain from unfinished background operations.
-     */
-    private void cancelAllWorkers() {
-        qrCodeResize.cancelPreviousResizeWorker();
-        qrCodePreview.cancelActivePreviewWorker();
-    }
-
-    /**
      * Disposes of the CanScan window, ensuring all resources are explicitly released.
      *
      * <p>Stops timers, cancels background workers, and frees image resources before delegating to
@@ -429,8 +382,19 @@ public class CanScan extends JFrame {
      */
     @Override
     public void dispose() {
-        cleanupResources();
+        disposeAllResourcesOnExit();
         super.dispose();
+    }
+
+    /**
+     * Releases all resources used by the QR code system.
+     *
+     * <p>Stops timers, cancels workers, and frees image data to ensure a clean shutdown and prevent
+     * memory leaks when closing the application.
+     */
+    private void disposeAllResourcesOnExit() {
+        qrCodeResize.disposeAllResourcesOnExit();
+        qrCodePreview.disposeAllResourcesOnExit();
     }
 
     /**

@@ -13,121 +13,92 @@ import java.util.concurrent.ExecutionException;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
-import javax.swing.Timer;
 
 import org.apache.commons.lang3.StringUtils;
 
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
+import fr.softsf.canscan.service.AbstractQrCodeWorker;
 import fr.softsf.canscan.service.BuildQRDataService;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.StringConstants;
 
 /**
- * Handles asynchronous generation and display of QR code previews in a Swing UI.
+ * Asynchronously generates and displays a QR code preview in a Swing UI.
  *
  * <p>Preview generation runs off the Event Dispatch Thread (EDT) to maintain interface
- * responsiveness. Built-in debounce control, worker cancellation, and background image generation
- * ensure efficient, flicker-free updates during frequent input or configuration changes.
+ * responsiveness. This class uses a debounce mechanism and background {@link SwingWorker} to avoid
+ * unnecessary regenerations when multiple input or configuration changes occur rapidly.
  *
- * <p>Each instance manages the preview lifecycle for a specific {@link JLabel} and works with a
- * {@link QrCodeResize} instance to handle dynamic resizing. The optional {@link Loader} allows the
- * UI to indicate ongoing background processing. This design supports multiple independent QR
- * preview components within the same application.
+ * <p>Each instance manages the lifecycle of a QR code preview for a specific {@link JLabel} and
+ * collaborates with a {@link QrCodeResize} instance for dynamic resizing. The optional {@link
+ * Loader} can show a wait/progress indicator during background processing.
+ *
+ * <p>Resources are properly managed: previous images are freed, background workers are cancelled,
+ * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
  */
-public class QrCodePreview {
+public class QrCodePreview extends AbstractQrCodeWorker<BufferedImage> {
 
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
-    private Timer previewDebounceTimer;
-    private SwingWorker<BufferedImage, Void> previewWorker;
-    private QrInput qrInput;
+
     private final QrCodeBufferedImage qrCodeBufferedImage;
     private final QrCodeResize qrCodeResize;
     private final JLabel qrCodeLabel;
-    private final Loader loader;
 
     /**
-     * Creates a new asynchronous QR code preview manager for the specified label.
+     * Constructs a new asynchronous QR code preview manager for the specified label.
      *
-     * @param qrCodeBufferedImage the {@link QrCodeBufferedImage} providing the source QR image;
-     *     must not be {@code null}
+     * @param qrCodeBufferedImage the source QR code image; must not be {@code null}
      * @param qrCodeResize the {@link QrCodeResize} instance responsible for asynchronous resizing;
      *     must not be {@code null}
-     * @param qrCodeLabel the Swing {@link JLabel} used to display the generated QR preview; must
-     *     not be {@code null}
-     * @param loader optional {@link Loader} to indicate background processing; can be {@code null}
+     * @param qrCodeLabel the label where the generated QR code preview will be displayed; must not
+     *     be {@code null}
+     * @param loader optional loader to indicate background processing; can be {@code null}
      */
     public QrCodePreview(
             QrCodeBufferedImage qrCodeBufferedImage,
             QrCodeResize qrCodeResize,
             JLabel qrCodeLabel,
             Loader loader) {
+        super(loader);
         this.qrCodeBufferedImage = qrCodeBufferedImage;
         this.qrCodeResize = qrCodeResize;
         this.qrCodeLabel = qrCodeLabel;
-        this.loader = loader;
     }
 
     /**
-     * Returns the currently active debounce timer.
+     * Updates and schedules a debounced QR code preview refresh.
      *
-     * @return the active {@link Timer}, or {@code null} if none
+     * <p>Uses the unified workflow: cancel → stop → clear → start new worker.
+     *
+     * @param qrInput the latest QR code configuration
      */
-    public Timer getPreviewDebounceTimer() {
-        return previewDebounceTimer;
-    }
-
-    /**
-     * Updates the debounce timer and cancels any active preview worker to ensure a clean restart.
-     *
-     * @param previewDebounceTimer the new debounce timer to apply
-     */
-    public void updatePreviewDebounceTimer(Timer previewDebounceTimer) {
-        stop();
-        cancelActivePreviewWorker();
-        this.previewDebounceTimer = previewDebounceTimer;
-    }
-
-    /** Stops the debounce timer and clears internal references. */
-    public void stop() {
-        if (previewDebounceTimer != null) {
-            previewDebounceTimer.stop();
-            previewDebounceTimer = null;
-        }
-    }
-
-    /**
-     * Checks whether the debounce timer is currently active.
-     *
-     * @return {@code true} if running, {@code false} otherwise
-     */
-    public boolean isRunning() {
-        return previewDebounceTimer != null && previewDebounceTimer.isRunning();
-    }
-
-    /**
-     * Sets the current {@link QrInput} and launches a new asynchronous preview generation task.
-     *
-     * <p>Replaces any existing task and triggers QR code generation off the EDT.
-     *
-     * @param qrInput the latest QR code input data to render
-     */
-    public void launchPreviewWorker(QrInput qrInput) {
+    public void updateQrCodePreview(QrInput qrInput) {
         this.qrInput = qrInput;
-        previewWorker = createPreviewWorker();
-        previewWorker.execute();
+        resetAndStartWorker(PREVIEW_DEBOUNCE_DELAY_MS);
     }
 
     /**
-     * Creates a {@link SwingWorker} responsible for generating the QR code image in a background
-     * thread and updating the UI upon completion.
-     *
-     * <p>Ensures the wait icon is stopped once rendering finishes, whether successful or not.
-     *
-     * @return a new configured SwingWorker instance
+     * Clears the current preview image before generating a new one. Invoked automatically by the
+     * {@link AbstractQrCodeWorker} workflow.
      */
-    private SwingWorker<BufferedImage, Void> createPreviewWorker() {
+    @Override
+    protected void clearResources() {
+        qrCodeBufferedImage.freeQrOriginal();
+        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
+        qrCodeLabel.setIcon(null);
+    }
+
+    /**
+     * Creates a background {@link SwingWorker} that generates the QR code preview image.
+     *
+     * <p>The worker runs off the EDT and ensures the loader is stopped once execution finishes.
+     *
+     * @return a configured {@link SwingWorker} producing a {@link BufferedImage}
+     */
+    @Override
+    protected SwingWorker<BufferedImage, Void> createWorker() {
         return new SwingWorker<>() {
             @Override
             protected BufferedImage doInBackground() {
@@ -137,62 +108,50 @@ public class QrCodePreview {
 
             @Override
             protected void done() {
-                loader.stopWaitIcon();
-                handlePreviewWorkerCompletion(this);
+                stopLoaderIfPresent();
+                try {
+                    if (isCancelled()) {
+                        return;
+                    }
+                    onWorkerSuccess(get());
+                } catch (InterruptedException ie) {
+                    Thread.currentThread().interrupt();
+                    onWorkerFailure(ie);
+                } catch (ExecutionException | CancellationException ex) {
+                    onWorkerFailure(ex);
+                }
             }
         };
     }
 
     /**
-     * Handles completion of the preview worker by validating cancellation state, retrieving the
-     * image, and updating the displayed QR code if appropriate.
+     * Updates the preview image after successful worker completion.
      *
-     * <p>Ensures resources are flushed on cancellation and errors are reported through the {@link
-     * Popup} system.
+     * <p>If the generated image is valid, it updates the source image and triggers resizing.
      *
-     * @param worker the completed SwingWorker instance
+     * @param img the generated QR code preview, or {@code null} if cancelled or invalid
      */
-    private void handlePreviewWorkerCompletion(SwingWorker<BufferedImage, Void> worker) {
-        if (Checker.INSTANCE.checkNPE(worker, "handlePreviewWorkerCompletion", "worker")) {
+    @Override
+    protected void onWorkerSuccess(BufferedImage img) {
+        if (img == null) {
+            qrCodeLabel.setIcon(null);
             return;
         }
-        boolean cancelledOrStale = worker.isCancelled() || worker != previewWorker;
-        try {
-            BufferedImage img = worker.get();
-            if (cancelledOrStale) {
-                if (img != null) {
-                    img.flush();
-                }
-                return;
-            }
-            qrCodeBufferedImage.updateQrOriginal(img);
-            if (qrCodeBufferedImage.getQrOriginal() != null) {
-                qrCodeResize.updateQrCodeResize(qrInput);
-            } else {
-                qrCodeLabel.setIcon(null);
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (CancellationException | ExecutionException ex) {
-            if (cancelledOrStale) {
-                return;
-            }
-            Popup.INSTANCE.showDialog(
-                    "Pas d'affichage\n", ex.getMessage(), StringConstants.ERREUR.getValue());
-        }
+        qrCodeBufferedImage.updateQrOriginal(img);
+        qrCodeResize.updateQrCodeResize(qrInput);
     }
 
     /**
-     * Builds and returns a QR code preview image using the current input and configuration.
+     * Builds and returns the QR code preview image based on the current {@link QrInput}.
      *
-     * <p>Performs intermediate cancellation checks to maintain responsiveness while avoiding
-     * unnecessary overhead. Returns {@code null} if cancelled, invalid, or if an exception occurs.
+     * <p>Performs intermediate cancellation checks to maintain responsiveness. Returns {@code null}
+     * if cancelled, invalid, or if an exception occurs.
      *
-     * @return a {@link BufferedImage} representing the QR preview, or {@code null} if cancelled or
-     *     invalid
+     * @return a {@link BufferedImage} representing the QR preview, or {@code null} if
+     *     cancelled/invalid
      */
     private BufferedImage buildPreviewImage() {
-        if (Thread.currentThread().isInterrupted()) {
+        if (Thread.currentThread().isInterrupted() || qrInput == null) {
             return null;
         }
         try {
@@ -223,7 +182,7 @@ public class QrCodePreview {
             if (Thread.currentThread().isInterrupted()) {
                 return null;
             }
-            return qrCodeBufferedImage.generateQrCodeImage(qrData.data(), config);
+            return qrCodeBufferedImage.generateQrCodeImage(data, config);
         } catch (Exception ex) {
             if (Thread.currentThread().isInterrupted()) {
                 return null;
@@ -236,61 +195,5 @@ public class QrCodePreview {
                                     StringConstants.ERREUR.getValue()));
             return null;
         }
-    }
-
-    /**
-     * Cancels and flushes any active preview worker to ensure a clean restart before a new preview
-     * is generated.
-     *
-     * <p>Blocks until the worker terminates or throws a cancellation-related exception.
-     */
-    public void cancelActivePreviewWorker() {
-        if (previewWorker == null || previewWorker.isDone()) {
-            return;
-        }
-        previewWorker.cancel(true);
-        try {
-            previewWorker.get();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        } catch (ExecutionException | CancellationException ignored) {
-            // Expected: cancellation or execution failure
-        }
-        previewWorker = null;
-    }
-
-    /**
-     * Schedules a debounced update of the QR code preview to avoid excessive regenerations.
-     *
-     * <p>If a preview generation is already in progress, the debounce timer is restarted.
-     * Otherwise, the current preview is cleared and a new background worker is launched to generate
-     * the QR code preview after a delay of {@value #PREVIEW_DEBOUNCE_DELAY_MS} ms.
-     *
-     * @param qrInput All current user inputs and settings used to generate the preview.
-     */
-    public void updateQrCodePreview(QrInput qrInput) {
-        this.qrInput = qrInput;
-        if (isRunning()) {
-            getPreviewDebounceTimer().restart();
-            return;
-        }
-        qrCodeBufferedImage.freeQrOriginal();
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
-        updatePreviewDebounceTimer(
-                new Timer(PREVIEW_DEBOUNCE_DELAY_MS, e -> resetAndStartPreviewWorker()));
-        getPreviewDebounceTimer().setRepeats(false);
-        getPreviewDebounceTimer().start();
-    }
-
-    /**
-     * Clears the current QR code display and starts a background worker to generate a new preview.
-     *
-     * <p>Resets the preview icon, starts the loading animation, and launches the asynchronous task
-     * to render the QR code based on the latest input and configuration.
-     */
-    private void resetAndStartPreviewWorker() {
-        qrCodeLabel.setIcon(null);
-        SwingUtilities.invokeLater(loader::startAndAdjustWaitIcon);
-        launchPreviewWorker(qrInput);
     }
 }
