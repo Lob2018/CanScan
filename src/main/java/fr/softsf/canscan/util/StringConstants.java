@@ -9,7 +9,8 @@ package fr.softsf.canscan.util;
 public enum StringConstants {
     QR_DATA("qrData"),
     ERREUR("Erreur"),
-    GENERATE_QR_CODE("generateQrCode");
+    GENERATE_QR_CODE("generateQrCode"),
+    GENERATE_AND_SAVE_QR_CODE("generateAndSaveQrCode");
 
     private final String value;
 

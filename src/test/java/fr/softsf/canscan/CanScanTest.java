@@ -34,6 +34,7 @@ import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
+import fr.softsf.canscan.service.QrCodeService;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeColor;
 
@@ -63,6 +64,7 @@ class CanScanTest {
 
     private CanScan generator;
     private QrCodeColor qrCodeColor;
+    private QrCodeService qrService;
 
     @TempDir File tempDir;
 
@@ -81,6 +83,8 @@ class CanScanTest {
         generator.marginSlider.setValue(3);
         generator.ratioSlider.setValue((int) (0.27 * 100));
         generator.roundedModulesCheckBox.setSelected(true);
+        QrCodeBufferedImage qrCodeBufferedImage = mock(QrCodeBufferedImage.class);
+        qrService = new QrCodeService(qrCodeBufferedImage);
     }
 
     @Test
@@ -353,12 +357,12 @@ class CanScanTest {
     @Test
     void givenFileWithPngExtension_whenGetSelectedPngFile_thenReturnSameFile() throws Exception {
         Method getSelectedPngFile =
-                CanScan.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
+                QrCodeService.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
         getSelectedPngFile.setAccessible(true);
         JFileChooser chooser = mock(JFileChooser.class);
         File testFile = new File(tempDir, "test.png");
         when(chooser.getSelectedFile()).thenReturn(testFile);
-        File result = (File) getSelectedPngFile.invoke(generator, chooser);
+        File result = (File) getSelectedPngFile.invoke(qrService, chooser);
         assertTrue(result.getName().endsWith(".png"));
     }
 
@@ -366,22 +370,22 @@ class CanScanTest {
     void givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension()
             throws Exception {
         Method getSelectedPngFile =
-                CanScan.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
+                QrCodeService.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
         getSelectedPngFile.setAccessible(true);
         JFileChooser chooser = mock(JFileChooser.class);
         File testFile = new File(tempDir, "test");
         when(chooser.getSelectedFile()).thenReturn(testFile);
-        File result = (File) getSelectedPngFile.invoke(generator, chooser);
+        File result = (File) getSelectedPngFile.invoke(qrService, chooser);
         assertTrue(result.getName().endsWith(".png"));
     }
 
     @Test
     void givenNonExistingFile_whenResolveFileNameConflict_thenReturnSameFile() throws Exception {
         Method resolveFileNameConflict =
-                CanScan.class.getDeclaredMethod("resolveFileNameConflict", File.class);
+                QrCodeService.class.getDeclaredMethod("resolveFileNameConflict", File.class);
         resolveFileNameConflict.setAccessible(true);
         File testFile = new File(tempDir, "nonexistent.png");
-        File result = (File) resolveFileNameConflict.invoke(generator, testFile);
+        File result = (File) resolveFileNameConflict.invoke(qrService, testFile);
         assertEquals(testFile, result);
     }
 

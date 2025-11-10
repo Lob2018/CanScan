@@ -18,15 +18,10 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Objects;
 import java.util.Properties;
-import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -46,16 +41,14 @@ import javax.swing.SwingWorker;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentListener;
 
-import org.apache.commons.lang3.StringUtils;
-
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
-import com.google.zxing.WriterException;
 
 import fr.softsf.canscan.model.Mode;
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.BuildQRDataService;
+import fr.softsf.canscan.service.QrCodeService;
 import fr.softsf.canscan.service.VersionService;
 import fr.softsf.canscan.ui.Loader;
 import fr.softsf.canscan.ui.Popup;
@@ -148,6 +141,7 @@ public class CanScan extends JFrame {
     private final transient QrCodePreview qrCodePreview =
             new QrCodePreview(qrCodeBufferedImage, qrCodeResize, qrCodeLabel, loader);
     private final transient QrCodeColor qrCodeColor = new QrCodeColor();
+    private final transient QrCodeService qrCodeService = new QrCodeService(qrCodeBufferedImage);
     // SOUTH
     private final JPanel southSpacer = new JPanel();
 
@@ -666,11 +660,12 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Generates and saves a QR code as a PNG file using the current input and configuration.
+     * Builds the QR code data and configuration from the current input fields, then delegates the
+     * generation and saving of the QR code to {@link QrCodeService}.
      *
-     * <p>Validates input fields, applies visual settings (colors, margin, logo, module style), and
-     * creates the QR code image. Opens a file chooser for saving and handles file name conflicts.
-     * Displays user feedback dialogs for success, errors, or exceptions.
+     * <p>Collects input from MECARD or FREE fields, applies visual settings (colors, size, margin,
+     * logo, rounded modules), and passes them to the QR service for QR code generation and file
+     * saving.
      *
      * @param e the triggering {@link ActionEvent}
      */
@@ -687,69 +682,21 @@ public class CanScan extends JFrame {
                     StringConstants.QR_DATA.getValue())) {
                 return;
             }
-            Objects.requireNonNull(qrData, "Dans generateQrCode qrData ne doit pas être null");
-            if (StringUtils.isBlank(qrData.data())) {
-                Popup.INSTANCE.showDialog("", "Aucune donnée à encoder", "Information");
-                return;
-            }
-            File logoFile = logoField.getText().isBlank() ? null : new File(logoField.getText());
-            int size = validateAndGetSize();
-            validateAndGetMargin();
-            validateAndGetRatio();
-            boolean roundedModules = roundedModulesCheckBox.isSelected();
             QrConfig config =
                     new QrConfig(
-                            logoFile, size, imageRatio, qrColor, bgColor, roundedModules, margin);
-            BufferedImage qr = qrCodeBufferedImage.generateQrCodeImage(qrData.data(), config);
-            qrCodeBufferedImage.updateQrOriginal(qr);
-            JFileChooser chooser = new JFileChooser();
-            chooser.setDialogTitle("Enregistrer votre code QR en tant que PNG");
-            chooser.setSelectedFile(new File(qrData.defaultFileName()));
-            chooser.setFileFilter(
-                    new javax.swing.filechooser.FileNameExtensionFilter("PNG Images", "png"));
-            if (chooser.showSaveDialog(this) != JFileChooser.APPROVE_OPTION) {
-                return;
-            }
-            File selectedFile = getSelectedPngFile(chooser);
-            Objects.requireNonNull(
-                    selectedFile, "Dans generateQrCode selectedFile ne doit pas être null");
-            File output = resolveFileNameConflict(selectedFile);
-            if (Checker.INSTANCE.checkNPE(
-                            output, StringConstants.GENERATE_QR_CODE.getValue(), "output")
-                    || Checker.INSTANCE.checkNPE(
-                            qr, StringConstants.GENERATE_QR_CODE.getValue(), "qr")) {
-                return;
-            }
-            Objects.requireNonNull(qr, "Dans generateQrCode qr ne doit pas être null");
-            Objects.requireNonNull(output, "Dans generateQrCode output ne doit pas être null");
-            try (OutputStream os = new FileOutputStream(output)) {
-                ImageIO.write(qr, "png", os);
-            }
+                            logoField.getText().isBlank() ? null : new File(logoField.getText()),
+                            validateAndGetSize(),
+                            validateAndGetRatio(),
+                            qrColor,
+                            bgColor,
+                            roundedModulesCheckBox.isSelected(),
+                            validateAndGetMargin());
+            qrCodeService.generateAndSaveQrCode(qrData, config);
+        } catch (Exception ex) {
             Popup.INSTANCE.showDialog(
-                    "Code QR enregistré dans\n", output.getAbsolutePath(), "Confirmation");
-        } catch (OutOfMemoryError oom) {
-            SwingUtilities.invokeLater(
-                    () ->
-                            Popup.INSTANCE.showDialog(
-                                    "Manque de mémoire\n",
-                                    oom.getMessage(),
-                                    StringConstants.ERREUR.getValue()));
-
-        } catch (WriterException we) {
-            SwingUtilities.invokeLater(
-                    () ->
-                            Popup.INSTANCE.showDialog(
-                                    "Pas de génération du QR Code\n",
-                                    we.getMessage(),
-                                    StringConstants.ERREUR.getValue()));
-
-        } catch (IOException ioe) {
-            SwingUtilities.invokeLater(
-                    () ->
-                            Popup.INSTANCE.showDialog(
-                                    "Pas de lecture/écriture de fichier\n",
-                                    ioe.getMessage(),
-                                    StringConstants.ERREUR.getValue()));
+                    "Erreur inattendue lors de la génération du QR Code",
+                    ex.getMessage(),
+                    StringConstants.ERREUR.getValue());
         }
     }
 
@@ -791,65 +738,6 @@ public class CanScan extends JFrame {
                 qrColor,
                 bgColor,
                 roundedModulesCheckBox.isSelected());
-    }
-
-    /**
-     * Retrieves the selected file from a {@link JFileChooser} and ensures it has a ".png"
-     * extension.
-     *
-     * <p>If the selected file does not end with ".png", the extension is automatically appended.
-     *
-     * @param chooser the {@link JFileChooser} to get the file from
-     * @return a {@link File} guaranteed to have a ".png" extension, or {@code null} if the chooser
-     *     is null
-     */
-    private File getSelectedPngFile(JFileChooser chooser) {
-        if (Checker.INSTANCE.checkNPE(chooser, "getSelectedPngFile", "chooser")) {
-            return null;
-        }
-        File output = chooser.getSelectedFile();
-        String fileName = output.getName().toLowerCase();
-        if (fileName.endsWith(".png")) {
-            return output;
-        }
-        return new File(output.getParentFile(), output.getName() + ".png");
-    }
-
-    /**
-     * Resolves potential file name conflicts by checking if the specified file already exists.
-     *
-     * <p>If the file exists, the user is prompted to overwrite it. If the user declines, a new file
-     * name is generated by appending a numeric suffix to avoid overwriting existing files.
-     *
-     * @param file the initial {@link File} to check for conflicts
-     * @return a {@link File} ready for writing, either the original, user-approved, or
-     *     auto-renamed, or {@code null} if the input file is null
-     */
-    private File resolveFileNameConflict(File file) {
-        if (Checker.INSTANCE.checkNPE(file, "resolveFileNameConflict", "file")) {
-            return null;
-        }
-        if (file.exists()) {
-            int choice =
-                    Popup.INSTANCE.showYesNoConfirmDialog(
-                            this,
-                            "Un fichier \""
-                                    + file.getName()
-                                    + "\" existe déjà.\nÉcraser ce fichier ?");
-            if (choice == 0) {
-                return file;
-            }
-            String baseName = file.getName().replaceFirst("\\.png$", "");
-            File parent = file.getParentFile();
-            int counter = 1;
-            File candidate;
-            do {
-                candidate = new File(parent, baseName + "(" + counter + ").png");
-                counter++;
-            } while (candidate.exists());
-            return candidate;
-        }
-        return file;
     }
 
     /**
