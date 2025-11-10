@@ -8,8 +8,6 @@ package fr.softsf.canscan.ui;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Objects;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.ExecutionException;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
@@ -108,18 +106,7 @@ public class QrCodePreview extends AbstractQrCodeWorker<BufferedImage> {
 
             @Override
             protected void done() {
-                stopLoaderIfPresent();
-                try {
-                    if (isCancelled()) {
-                        return;
-                    }
-                    onWorkerSuccess(get());
-                } catch (InterruptedException ie) {
-                    Thread.currentThread().interrupt();
-                    onWorkerFailure(ie);
-                } catch (ExecutionException | CancellationException ex) {
-                    onWorkerFailure(ex);
-                }
+                handleWorkerDone();
             }
         };
     }

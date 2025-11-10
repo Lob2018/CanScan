@@ -75,6 +75,28 @@ public abstract class AbstractQrCodeWorker<T> {
     /** Called when the worker completes successfully with its result. */
     protected abstract void onWorkerSuccess(T result);
 
+    /**
+     * Handles the completion of the current {@link SwingWorker} task.
+     *
+     * <p>Stops the loader indicator, verifies cancellation status, and invokes the appropriate
+     * success or failure callback. Intended to be called from the worker's {@code done()} method to
+     * centralize post-execution logic and avoid duplication in subclasses.
+     */
+    protected void handleWorkerDone() {
+        stopLoaderIfPresent();
+        try {
+            if (worker == null || worker.isCancelled()) {
+                return;
+            }
+            onWorkerSuccess(worker.get());
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            onWorkerFailure(ie);
+        } catch (ExecutionException | CancellationException ex) {
+            onWorkerFailure(ex);
+        }
+    }
+
     /** Called when the worker fails or is cancelled. */
     protected void onWorkerFailure(Exception ex) {
         resetWorker();

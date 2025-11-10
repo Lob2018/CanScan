@@ -8,8 +8,6 @@ package fr.softsf.canscan.ui;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import java.util.concurrent.CancellationException;
-import java.util.concurrent.ExecutionException;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SwingWorker;
@@ -109,18 +107,7 @@ public class QrCodeResize extends AbstractQrCodeWorker<ImageIcon> {
 
             @Override
             protected void done() {
-                stopLoaderIfPresent();
-                try {
-                    if (isCancelled()) {
-                        return;
-                    }
-                    onWorkerSuccess(get());
-                } catch (InterruptedException ie) {
-                    Thread.currentThread().interrupt();
-                    onWorkerFailure(ie);
-                } catch (ExecutionException | CancellationException ex) {
-                    onWorkerFailure(ex);
-                }
+                handleWorkerDone();
             }
         };
     }
