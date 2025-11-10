@@ -21,6 +21,7 @@ var hierarchy =
     [ "fr.softsf.canscan.ui.QrCodeBufferedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html", null ],
     [ "fr.softsf.canscan.ui.QrCodeColor", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html", null ],
     [ "fr.softsf.canscan.ui.QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", null ],
+    [ "fr.softsf.canscan.service.QrCodeService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html", null ],
     [ "fr.softsf.canscan.PopupTest.ShowArgumentErrorDialogTests", "classfr_1_1softsf_1_1canscan_1_1_popup_test_1_1_show_argument_error_dialog_tests.html", null ],
     [ "fr.softsf.canscan.PopupTest.ShowDialogTests", "classfr_1_1softsf_1_1canscan_1_1_popup_test_1_1_show_dialog_tests.html", null ],
     [ "fr.softsf.canscan.PopupTest.ShowYesNoConfirmDialogTests", "classfr_1_1softsf_1_1canscan_1_1_popup_test_1_1_show_yes_no_confirm_dialog_tests.html", null ],

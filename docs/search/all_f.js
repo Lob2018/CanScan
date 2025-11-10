@@ -7,7 +7,7 @@ var searchData=
   ['resetandstartworker_4',['resetAndStartWorker',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#a6558af04f7318a4f74547c95778fed7c',1,'fr::softsf::canscan::service::AbstractQrCodeWorker']]],
   ['resetworker_5',['resetWorker',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#ad2923dae15a1315f89f6df73d846e87d',1,'fr::softsf::canscan::service::AbstractQrCodeWorker']]],
   ['resize_5fdebounce_5fdelay_5fms_6',['RESIZE_DEBOUNCE_DELAY_MS',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a1d84bb4e4b4fcaaa99202c8ead1744ee',1,'fr::softsf::canscan::ui::QrCodeResize']]],
-  ['resolvefilenameconflict_7',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a450a5742a56de389ea303ec3977017c8',1,'fr::softsf::canscan::CanScan']]],
+  ['resolvefilenameconflict_7',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html#a4cdc90060dc742377f513bd23afe26c9',1,'fr::softsf::canscan::service::QrCodeService']]],
   ['roundedmodulescheckbox_8',['roundedModulesCheckBox',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa64e0ee343635d7092f65ea5d1186712',1,'fr::softsf::canscan::CanScan']]],
   ['rune2esimulation_9',['runE2ESimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a2a0b386576bdaa60bf8af058bc26310d',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

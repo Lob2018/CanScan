@@ -1,9 +1,9 @@
 <map id="fr.softsf.canscan.ui.QrCodeResize" name="fr.softsf.canscan.ui.QrCodeResize">
-<area shape="rect" id="Node000001" title="Asynchronously resizes a generated QR code image for display in a Swing UI." alt="" coords="181,1920,414,2229"/>
-<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html" title="Base class managing asynchronous QR code tasks with a unified workflow." alt="" coords="5,880,214,1333"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,1348,176,1594,200,1726,228,1855,246,1920,241,1921,223,1857,195,1727,171,1595,134,1349"/>
+<area shape="rect" id="Node000001" title="Asynchronously resizes a generated QR code image for display in a Swing UI." alt="" coords="181,1904,414,2213"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html" title="Base class managing asynchronous QR code tasks with a unified workflow." alt="" coords="5,861,214,1336"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,1350,177,1589,201,1715,228,1839,246,1904,241,1905,223,1841,196,1716,172,1590,136,1351"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html" title="Manages an animated loading indicator for a JLabel component." alt="" coords="11,5,208,293"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,293,112,863,107,863,107,293"/>
-<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="238,357,483,1856"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,1856,312,1904,306,1903,309,1855"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,293,112,845,107,845,107,293"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="238,357,483,1840"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="315,1840,312,1888,306,1887,309,1839"/>
 </map>

@@ -5,6 +5,7 @@ var classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker =
     [ "clearResources", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#a63c4787bd3dbba55917dde56aa4ef5bc", null ],
     [ "createWorker", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#a40caeb7994a66c7cfee85d78ce764026", null ],
     [ "disposeAllResourcesOnExit", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#ab909d07b5c0970292ccd5cd8c99de0b9", null ],
+    [ "handleWorkerDone", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#ab7ffd831505e43d65d3d3381a90fc524", null ],
     [ "onWorkerFailure", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#ace733ca9c4cf397695cc148a3a458253", null ],
     [ "onWorkerSuccess", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#aa5cb6b962f384211a647d90a7c1214de", null ],
     [ "resetAndStartWorker", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#a6558af04f7318a4f74547c95778fed7c", null ],

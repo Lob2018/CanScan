@@ -9,7 +9,7 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image =
     [ "drawSquareFinderPatternAtPixel", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ad408b9a718a53adbf8891606715a7bba", null ],
     [ "estimateImageMemoryMB", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a9a9498240266cd1874ce471cdd24368f", null ],
     [ "fillBackground", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#abfa8048716b96d926a9348483a69898d", null ],
-    [ "freeQrOriginal", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a30c14d43717bd0859fb613837140d2ae", null ],
+    [ "freeQrOriginal", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a6167bc4593b52b026324757daf47f519", null ],
     [ "generateQrCodeImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#adf946250e00ee2415c34aedf0e2c4e9b", null ],
     [ "getAvailableMemoryMB", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a64887707a74d89b80bc1de3e2a826314", null ],
     [ "getQrOriginal", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a68bc343a9239c07894bc97d36581db1c", null ],

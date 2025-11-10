@@ -1,7 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"functions_w.html":[2,3,0,20],
-"hierarchy.html":[2,2],
 "index.html":[],
 "index.html":[0],
 "index.html#Liens_utiles":[0,1],

@@ -53,7 +53,8 @@ var NAVTREEINDEX =
 [
 "_abstract_qr_code_worker_8java.html",
 "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a95f9e1d6fe094f321cddef2a76a7d581",
-"classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a625144c8fe3de398a3d8e72dbad25130"
+"classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#adf946250e00ee2415c34aedf0e2c4e9b",
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

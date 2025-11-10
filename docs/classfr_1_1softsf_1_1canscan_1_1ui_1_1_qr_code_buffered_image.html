@@ -128,9 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad408b9a718a53adbf8891606715a7bba" id="r_ad408b9a718a53adbf8891606715a7bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad408b9a718a53adbf8891606715a7bba">drawSquareFinderPatternAtPixel</a> (Graphics2D g, double x, double y, double diameter, Color qrColor, Color bgColor)</td></tr>
 <tr class="memdesc:ad408b9a718a53adbf8891606715a7bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a standard square QR code finder pattern at the specified pixel coordinates.  <br /></td></tr>
 <tr class="separator:ad408b9a718a53adbf8891606715a7bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c14d43717bd0859fb613837140d2ae" id="r_a30c14d43717bd0859fb613837140d2ae"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30c14d43717bd0859fb613837140d2ae">freeQrOriginal</a> ()</td></tr>
-<tr class="memdesc:a30c14d43717bd0859fb613837140d2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current QR code image and its resources.  <br /></td></tr>
-<tr class="separator:a30c14d43717bd0859fb613837140d2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6167bc4593b52b026324757daf47f519" id="r_a6167bc4593b52b026324757daf47f519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6167bc4593b52b026324757daf47f519">freeQrOriginal</a> ()</td></tr>
+<tr class="memdesc:a6167bc4593b52b026324757daf47f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases the current QR code image and its resources.  <br /></td></tr>
+<tr class="separator:a6167bc4593b52b026324757daf47f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf946250e00ee2415c34aedf0e2c4e9b" id="r_adf946250e00ee2415c34aedf0e2c4e9b"><td class="memItemLeft" align="right" valign="top">BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf946250e00ee2415c34aedf0e2c4e9b">generateQrCodeImage</a> (String data, QrConfig config)  throws WriterException, IOException </td></tr>
 <tr class="memdesc:adf946250e00ee2415c34aedf0e2c4e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a QR code image with optional logo and custom styling.  <br /></td></tr>
 <tr class="separator:adf946250e00ee2415c34aedf0e2c4e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -652,14 +652,14 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a30c14d43717bd0859fb613837140d2ae" name="a30c14d43717bd0859fb613837140d2ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30c14d43717bd0859fb613837140d2ae">&#9670;&#160;</a></span>freeQrOriginal()</h2>
+<a id="a6167bc4593b52b026324757daf47f519" name="a6167bc4593b52b026324757daf47f519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6167bc4593b52b026324757daf47f519">&#9670;&#160;</a></span>freeQrOriginal()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">synchronized void fr.softsf.canscan.ui.QrCodeBufferedImage.freeQrOriginal </td>
+          <td class="memname">void fr.softsf.canscan.ui.QrCodeBufferedImage.freeQrOriginal </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -668,7 +668,6 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Releases the current QR code image and its resources. </p>
-<p>Must be called on the EDT if Swing components are involved. </p>
 
 </div>
 </div>
@@ -1408,7 +1407,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a></li>
-    <li class="footer">Generated on Mon Nov 10 2025 12:35:36 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Nov 10 2025 17:43:27 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
