@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingWorker;
 
 import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.AbstractQrCodeWorker;
+import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
 
 /**
  * Asynchronously resizes a generated QR code image for display in a Swing UI.
@@ -29,7 +29,7 @@ import fr.softsf.canscan.service.AbstractQrCodeWorker;
  * <p>Resources are properly managed: previous icons are disposed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
  */
-public class QrCodeResize extends AbstractQrCodeWorker<ImageIcon> {
+public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> {
 
     private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
     private static final int DEFAULT_SIZE = 50;
@@ -45,7 +45,7 @@ public class QrCodeResize extends AbstractQrCodeWorker<ImageIcon> {
      *     null}
      * @param loader optional loader to show a wait/progress indicator; can be {@code null}
      */
-    public QrCodeResize(
+    public DynamicQrCodeResize(
             QrCodeBufferedImage qrCodeBufferedImage, JLabel qrCodeLabel, Loader loader) {
         super(loader);
         this.qrCodeBufferedImage = qrCodeBufferedImage;
@@ -66,7 +66,7 @@ public class QrCodeResize extends AbstractQrCodeWorker<ImageIcon> {
 
     /**
      * Clears the current icon before starting a new resize task. Invoked automatically by the
-     * {@link AbstractQrCodeWorker} workflow.
+     * {@link AbstractDynamicQrCodeWorker} workflow.
      */
     @Override
     protected void clearResources() {

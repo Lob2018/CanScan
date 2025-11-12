@@ -25,16 +25,16 @@ import fr.softsf.canscan.util.StringConstants;
 
 /** Service dedicated to QR code generation and saving. */
 @SuppressWarnings("ClassCanBeRecord")
-public class QrCodeService {
+public class GenerateAndSaveService {
 
     private final QrCodeBufferedImage qrCodeBufferedImage;
 
     /**
-     * Constructs a QrCodeService with the given QR code image generator.
+     * Constructs a GenerateAndSaveService with the given QR code image generator.
      *
      * @param qrCodeBufferedImage the QR code image generator; must not be null
      */
-    public QrCodeService(QrCodeBufferedImage qrCodeBufferedImage) {
+    public GenerateAndSaveService(QrCodeBufferedImage qrCodeBufferedImage) {
         this.qrCodeBufferedImage =
                 Objects.requireNonNull(qrCodeBufferedImage, "qrCodeBufferedImage must not be null");
     }
@@ -49,7 +49,7 @@ public class QrCodeService {
      * @param qrData the QR code data; must not be null
      * @param config the QR code visual configuration; must not be null
      */
-    public void generateAndSaveQrCode(QrDataResult qrData, QrConfig config) {
+    public void generateAndSave(QrDataResult qrData, QrConfig config) {
         if (Checker.INSTANCE.checkNPE(
                         qrData,
                         StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(),

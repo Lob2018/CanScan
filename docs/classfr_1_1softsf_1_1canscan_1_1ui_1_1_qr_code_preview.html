@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CanScan: fr.softsf.canscan.ui.QrCodePreview Class Reference</title>
+<title>CanScan: fr.softsf.canscan.ui.DynamicQrCodePreview Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,21 +104,21 @@ $(function(){initNavTree('classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.QrCodePreview Class Reference</div></div>
+  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.DynamicQrCodePreview Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Asynchronously generates and displays a QR code preview in a Swing UI.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for fr.softsf.canscan.ui.QrCodePreview:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for fr.softsf.canscan.ui.DynamicQrCodePreview:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.QrCodePreview:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.DynamicQrCodePreview:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
@@ -220,7 +220,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">fr.softsf.canscan.ui.QrCodePreview.QrCodePreview </td>
+          <td class="memname">fr.softsf.canscan.ui.DynamicQrCodePreview.QrCodePreview</td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a></td>          <td class="paramname"><span class="paramname"><em>qrCodeBufferedImage</em></span>, </td>
         </tr>
@@ -266,7 +266,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BufferedImage fr.softsf.canscan.ui.QrCodePreview.buildPreviewImage </td>
+          <td class="memname">BufferedImage fr.softsf.canscan.ui.DynamicQrCodePreview.buildPreviewImage</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -295,7 +295,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.clearResources </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.clearResources</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -325,7 +325,9 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SwingWorker&lt; BufferedImage, Void &gt; fr.softsf.canscan.ui.QrCodePreview.createWorker </td>
+          <td class="memname">SwingWorker&lt; BufferedImage, Void &gt;
+              fr.softsf.canscan.ui.DynamicQrCodePreview.createWorker
+          </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -363,7 +365,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.onWorkerSuccess </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.onWorkerSuccess</td>
           <td>(</td>
           <td class="paramtype">BufferedImage</td>          <td class="paramname"><span class="paramname"><em>img</em></span></td><td>)</td>
           <td></td>
@@ -394,7 +396,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.updateQrCodePreview </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.updateQrCodePreview</td>
           <td>(</td>
           <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>qrInput</em></span></td><td>)</td>
           <td></td>
@@ -431,7 +433,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final int fr.softsf.canscan.ui.QrCodePreview.PREVIEW_DEBOUNCE_DELAY_MS = 200</td>
+          <td class="memname">final int fr.softsf.canscan.ui.DynamicQrCodePreview.PREVIEW_DEBOUNCE_DELAY_MS = 200</td>
         </tr>
       </table>
   </td>
@@ -453,7 +455,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a> fr.softsf.canscan.ui.QrCodePreview.qrCodeBufferedImage</td>
+          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a> fr.softsf.canscan.ui.DynamicQrCodePreview.qrCodeBufferedImage</td>
         </tr>
       </table>
   </td>
@@ -475,7 +477,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final JLabel fr.softsf.canscan.ui.QrCodePreview.qrCodeLabel</td>
+          <td class="memname">final JLabel fr.softsf.canscan.ui.DynamicQrCodePreview.qrCodeLabel</td>
         </tr>
       </table>
   </td>
@@ -497,7 +499,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a> fr.softsf.canscan.ui.QrCodePreview.qrCodeResize</td>
+          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a> fr.softsf.canscan.ui.DynamicQrCodePreview.qrCodeResize</td>
         </tr>
       </table>
   </td>

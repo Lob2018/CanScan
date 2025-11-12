@@ -17,8 +17,8 @@ import org.apache.commons.lang3.StringUtils;
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.AbstractQrCodeWorker;
-import fr.softsf.canscan.service.BuildQRDataService;
+import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
+import fr.softsf.canscan.service.DataBuilderService;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.StringConstants;
 
@@ -30,33 +30,33 @@ import fr.softsf.canscan.util.StringConstants;
  * unnecessary regenerations when multiple input or configuration changes occur rapidly.
  *
  * <p>Each instance manages the lifecycle of a QR code preview for a specific {@link JLabel} and
- * collaborates with a {@link QrCodeResize} instance for dynamic resizing. The optional {@link
- * Loader} can show a wait/progress indicator during background processing.
+ * collaborates with a {@link DynamicQrCodeResize} instance for dynamic resizing. The optional
+ * {@link Loader} can show a wait/progress indicator during background processing.
  *
  * <p>Resources are properly managed: previous images are freed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
  */
-public class QrCodePreview extends AbstractQrCodeWorker<BufferedImage> {
+public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedImage> {
 
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
 
     private final QrCodeBufferedImage qrCodeBufferedImage;
-    private final QrCodeResize qrCodeResize;
+    private final DynamicQrCodeResize qrCodeResize;
     private final JLabel qrCodeLabel;
 
     /**
      * Constructs a new asynchronous QR code preview manager for the specified label.
      *
      * @param qrCodeBufferedImage the source QR code image; must not be {@code null}
-     * @param qrCodeResize the {@link QrCodeResize} instance responsible for asynchronous resizing;
-     *     must not be {@code null}
+     * @param qrCodeResize the {@link DynamicQrCodeResize} instance responsible for asynchronous
+     *     resizing; must not be {@code null}
      * @param qrCodeLabel the label where the generated QR code preview will be displayed; must not
      *     be {@code null}
      * @param loader optional loader to indicate background processing; can be {@code null}
      */
-    public QrCodePreview(
+    public DynamicQrCodePreview(
             QrCodeBufferedImage qrCodeBufferedImage,
-            QrCodeResize qrCodeResize,
+            DynamicQrCodeResize qrCodeResize,
             JLabel qrCodeLabel,
             Loader loader) {
         super(loader);
@@ -79,7 +79,7 @@ public class QrCodePreview extends AbstractQrCodeWorker<BufferedImage> {
 
     /**
      * Clears the current preview image before generating a new one. Invoked automatically by the
-     * {@link AbstractQrCodeWorker} workflow.
+     * {@link AbstractDynamicQrCodeWorker} workflow.
      */
     @Override
     protected void clearResources() {
@@ -143,7 +143,7 @@ public class QrCodePreview extends AbstractQrCodeWorker<BufferedImage> {
         }
         try {
             QrDataResult qrData =
-                    BuildQRDataService.INSTANCE.buildQrData(qrInput.currentMode(), qrInput);
+                    DataBuilderService.INSTANCE.buildData(qrInput.currentMode(), qrInput);
             if (Thread.currentThread().isInterrupted()
                     || Checker.INSTANCE.checkNPE(
                             qrData,

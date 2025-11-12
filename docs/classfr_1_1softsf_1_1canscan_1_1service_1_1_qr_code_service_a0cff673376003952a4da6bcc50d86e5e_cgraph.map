@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.QrCodeService.generateAndSaveQrCode" name="fr.softsf.canscan.service.QrCodeService.generateAndSaveQrCode">
+<map id="fr.softsf.canscan.service.GenerateAndSaveService.generateAndSaveQrCode" name="fr.softsf.canscan.service.GenerateAndSaveService.generateAndSaveQrCode">
 <area shape="rect" id="Node000001" title="Generates and saves a QR code as a PNG file using the provided data and configuration." alt="" coords="5,39,268,81"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html#a8c0fda18956b7d0c42d57ea5e3e95fef" title="Opens a JFileChooser to select the output PNG file and handles file name conflicts." alt="" coords="316,39,532,81"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,57,300,57,300,63,268,63"/>

@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.AbstractQrCodeWorker.onWorkerFailure" name="fr.softsf.canscan.service.AbstractQrCodeWorker.onWorkerFailure">
+<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.onWorkerFailure" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.onWorkerFailure">
 <area shape="rect" id="Node000001" title="Called when the worker fails or is cancelled." alt="" coords="5,105,260,148"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html#ad2923dae15a1315f89f6df73d846e87d" title="Resets the current worker and associated resources." alt="" coords="308,105,538,148"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,124,292,124,292,129,260,129"/>

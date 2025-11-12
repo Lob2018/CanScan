@@ -22,7 +22,7 @@ import fr.softsf.canscan.ui.Popup;
  *
  * @param <T> type of result produced by the SwingWorker (e.g., ImageIcon, BufferedImage)
  */
-public abstract class AbstractQrCodeWorker<T> {
+public abstract class AbstractDynamicQrCodeWorker<T> {
 
     protected Timer debounceTimer;
     protected SwingWorker<T, Void> worker;
@@ -37,7 +37,7 @@ public abstract class AbstractQrCodeWorker<T> {
      *
      * @param loader optional {@link Loader} for progress indication; may be {@code null}
      */
-    protected AbstractQrCodeWorker(Loader loader) {
+    protected AbstractDynamicQrCodeWorker(Loader loader) {
         this.loader = loader;
     }
 

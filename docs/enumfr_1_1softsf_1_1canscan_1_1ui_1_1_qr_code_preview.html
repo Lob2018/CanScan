@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CanScan: fr.softsf.canscan.ui.QrCodePreview Enum Reference</title>
+<title>CanScan: fr.softsf.canscan.ui.DynamicQrCodePreview Enum Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,14 +103,14 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.QrCodePreview Enum Reference</div></div>
+  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.DynamicQrCodePreview Enum Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Thread-safe singleton responsible for managing the asynchronous generation and display of QR code previews within a Swing UI.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.QrCodePreview:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.DynamicQrCodePreview:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
@@ -183,7 +183,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BufferedImage fr.softsf.canscan.ui.QrCodePreview.buildPreviewImage </td>
+          <td class="memname">BufferedImage fr.softsf.canscan.ui.DynamicQrCodePreview.buildPreviewImage</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -209,7 +209,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.cancelActivePreviewWorker </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.cancelActivePreviewWorker</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -232,7 +232,9 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SwingWorker&lt; BufferedImage, Void &gt; fr.softsf.canscan.ui.QrCodePreview.createPreviewWorker </td>
+          <td class="memname">SwingWorker&lt; BufferedImage, Void &gt;
+              fr.softsf.canscan.ui.DynamicQrCodePreview.createPreviewWorker
+          </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -265,7 +267,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.QrCodePreview.getPreviewDebounceTimer </td>
+          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodePreview.getPreviewDebounceTimer</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -288,7 +290,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.handlePreviewWorkerCompletion </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.handlePreviewWorkerCompletion</td>
           <td>(</td>
           <td class="paramtype">SwingWorker&lt; BufferedImage, Void &gt;</td>          <td class="paramname"><span class="paramname"><em>worker</em></span></td><td>)</td>
           <td></td>
@@ -319,7 +321,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.init </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.init</td>
           <td>(</td>
           <td class="paramtype">JLabel</td>          <td class="paramname"><span class="paramname"><em>qrCodeLabel</em></span></td><td>)</td>
           <td></td>
@@ -344,7 +346,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean fr.softsf.canscan.ui.QrCodePreview.isRunning </td>
+          <td class="memname">boolean fr.softsf.canscan.ui.DynamicQrCodePreview.isRunning</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -364,7 +366,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.launchPreviewWorker </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.launchPreviewWorker</td>
           <td>(</td>
           <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>qrInput</em></span></td><td>)</td>
           <td></td>
@@ -397,7 +399,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.stop </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.stop</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -416,7 +418,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.QrCodePreview.updatePreviewDebounceTimer </td>
+          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.updatePreviewDebounceTimer</td>
           <td>(</td>
           <td class="paramtype">Timer</td>          <td class="paramname"><span class="paramname"><em>previewDebounceTimer</em></span></td><td>)</td>
           <td></td>
@@ -449,7 +451,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">fr.softsf.canscan.ui.QrCodePreview.INSTANCE</td>
+          <td class="memname">fr.softsf.canscan.ui.DynamicQrCodePreview.INSTANCE</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -466,7 +468,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.QrCodePreview.previewDebounceTimer</td>
+          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodePreview.previewDebounceTimer</td>
         </tr>
       </table>
   </td>
@@ -488,7 +490,8 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SwingWorker&lt;BufferedImage, Void&gt; fr.softsf.canscan.ui.QrCodePreview.previewWorker</td>
+          <td class="memname">SwingWorker&lt;BufferedImage, Void&gt;
+              fr.softsf.canscan.ui.DynamicQrCodePreview.previewWorker</td>
         </tr>
       </table>
   </td>
@@ -510,7 +513,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JLabel fr.softsf.canscan.ui.QrCodePreview.qrCodeLabel</td>
+          <td class="memname">JLabel fr.softsf.canscan.ui.DynamicQrCodePreview.qrCodeLabel</td>
         </tr>
       </table>
   </td>
@@ -532,7 +535,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QrInput fr.softsf.canscan.ui.QrCodePreview.qrInput</td>
+          <td class="memname">QrInput fr.softsf.canscan.ui.DynamicQrCodePreview.qrInput</td>
         </tr>
       </table>
   </td>

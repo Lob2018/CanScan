@@ -33,8 +33,8 @@ import fr.softsf.canscan.model.Mode;
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.BuildQRDataService;
-import fr.softsf.canscan.service.QrCodeService;
+import fr.softsf.canscan.service.DataBuilderService;
+import fr.softsf.canscan.service.GenerateAndSaveService;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeColor;
 
@@ -64,7 +64,7 @@ class CanScanTest {
 
     private CanScan generator;
     private QrCodeColor qrCodeColor;
-    private QrCodeService qrService;
+    private GenerateAndSaveService qrService;
 
     @TempDir File tempDir;
 
@@ -84,13 +84,13 @@ class CanScanTest {
         generator.ratioSlider.setValue((int) (0.27 * 100));
         generator.roundedModulesCheckBox.setSelected(true);
         QrCodeBufferedImage qrCodeBufferedImage = mock(QrCodeBufferedImage.class);
-        qrService = new QrCodeService(qrCodeBufferedImage);
+        qrService = new GenerateAndSaveService(qrCodeBufferedImage);
     }
 
     @Test
     void givenAllContactFields_whenBuildMecard_thenReturnCompleteMecardString() {
         String mecard =
-                BuildQRDataService.INSTANCE.buildMecard(
+                DataBuilderService.INSTANCE.buildMecard(
                         "Alice", "12345", "a@b.com", "Org", "Addr", "https://toto.com");
         assertTrue(mecard.startsWith("MECARD:"));
         assertTrue(mecard.contains("N:Alice;"));
@@ -103,7 +103,7 @@ class CanScanTest {
 
     @Test
     void givenOnlyNameField_whenBuildMecard_thenReturnMecardWithNameOnly() {
-        String mecard = BuildQRDataService.INSTANCE.buildMecard("Bob", "", "", "", "", "");
+        String mecard = DataBuilderService.INSTANCE.buildMecard("Bob", "", "", "", "", "");
         assertTrue(mecard.startsWith("MECARD:"));
         assertTrue(mecard.contains("N:Bob;"));
         assertFalse(mecard.contains("TEL:"));
@@ -112,7 +112,7 @@ class CanScanTest {
 
     @Test
     void givenAllBlankFields_whenBuildMecard_thenReturnEmptyMecardStructure() {
-        String mecard = BuildQRDataService.INSTANCE.buildMecard("", "", "", "", "", "");
+        String mecard = DataBuilderService.INSTANCE.buildMecard("", "", "", "", "", "");
         assertEquals("MECARD:;", mecard);
     }
 
@@ -122,7 +122,7 @@ class CanScanTest {
         QrCodeBufferedImage qrCodeBufferedImage = new QrCodeBufferedImage();
         BufferedImage qr =
                 qrCodeBufferedImage.generateQrCodeImage(
-                        BuildQRDataService.INSTANCE.buildMecard(
+                        DataBuilderService.INSTANCE.buildMecard(
                                 "John", "0123456789", "", "", "", ""),
                         config);
         assertNotNull(qr);
@@ -357,7 +357,8 @@ class CanScanTest {
     @Test
     void givenFileWithPngExtension_whenGetSelectedPngFile_thenReturnSameFile() throws Exception {
         Method getSelectedPngFile =
-                QrCodeService.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
+                GenerateAndSaveService.class.getDeclaredMethod(
+                        "getSelectedPngFile", JFileChooser.class);
         getSelectedPngFile.setAccessible(true);
         JFileChooser chooser = mock(JFileChooser.class);
         File testFile = new File(tempDir, "test.png");
@@ -370,7 +371,8 @@ class CanScanTest {
     void givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension()
             throws Exception {
         Method getSelectedPngFile =
-                QrCodeService.class.getDeclaredMethod("getSelectedPngFile", JFileChooser.class);
+                GenerateAndSaveService.class.getDeclaredMethod(
+                        "getSelectedPngFile", JFileChooser.class);
         getSelectedPngFile.setAccessible(true);
         JFileChooser chooser = mock(JFileChooser.class);
         File testFile = new File(tempDir, "test");
@@ -382,7 +384,8 @@ class CanScanTest {
     @Test
     void givenNonExistingFile_whenResolveFileNameConflict_thenReturnSameFile() throws Exception {
         Method resolveFileNameConflict =
-                QrCodeService.class.getDeclaredMethod("resolveFileNameConflict", File.class);
+                GenerateAndSaveService.class.getDeclaredMethod(
+                        "resolveFileNameConflict", File.class);
         resolveFileNameConflict.setAccessible(true);
         File testFile = new File(tempDir, "nonexistent.png");
         File result = (File) resolveFileNameConflict.invoke(qrService, testFile);
@@ -409,7 +412,7 @@ class CanScanTest {
                         Color.BLACK,
                         Color.WHITE,
                         false);
-        QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.MECARD, input);
+        QrDataResult result = DataBuilderService.INSTANCE.buildData(Mode.MECARD, input);
         assertNotNull(result);
         String data = result.data();
         assertTrue(data.startsWith("MECARD:"));
@@ -437,7 +440,7 @@ class CanScanTest {
                         Color.BLACK,
                         Color.WHITE,
                         false);
-        QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.FREE, input);
+        QrDataResult result = DataBuilderService.INSTANCE.buildData(Mode.FREE, input);
         assertNotNull(result);
         assertEquals("Test data", result.data());
     }
@@ -462,7 +465,7 @@ class CanScanTest {
                         Color.BLACK,
                         Color.WHITE,
                         false);
-        QrDataResult result = BuildQRDataService.INSTANCE.buildQrData(Mode.MECARD, input);
+        QrDataResult result = DataBuilderService.INSTANCE.buildData(Mode.MECARD, input);
         assertNotNull(result);
         assertEquals("", result.data());
     }

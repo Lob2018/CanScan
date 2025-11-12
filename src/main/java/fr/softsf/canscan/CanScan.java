@@ -47,15 +47,15 @@ import fr.softsf.canscan.model.Mode;
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
 import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.BuildQRDataService;
-import fr.softsf.canscan.service.QrCodeService;
+import fr.softsf.canscan.service.DataBuilderService;
+import fr.softsf.canscan.service.GenerateAndSaveService;
 import fr.softsf.canscan.service.VersionService;
+import fr.softsf.canscan.ui.DynamicQrCodePreview;
+import fr.softsf.canscan.ui.DynamicQrCodeResize;
 import fr.softsf.canscan.ui.Loader;
 import fr.softsf.canscan.ui.Popup;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeColor;
-import fr.softsf.canscan.ui.QrCodePreview;
-import fr.softsf.canscan.ui.QrCodeResize;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.IntConstants;
@@ -136,12 +136,13 @@ public class CanScan extends JFrame {
     private final JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
     private final transient Loader loader = new Loader(qrCodeLabel);
     private final transient QrCodeBufferedImage qrCodeBufferedImage = new QrCodeBufferedImage();
-    private final transient QrCodeResize qrCodeResize =
-            new QrCodeResize(qrCodeBufferedImage, qrCodeLabel, loader);
-    private final transient QrCodePreview qrCodePreview =
-            new QrCodePreview(qrCodeBufferedImage, qrCodeResize, qrCodeLabel, loader);
+    private final transient DynamicQrCodeResize qrCodeResize =
+            new DynamicQrCodeResize(qrCodeBufferedImage, qrCodeLabel, loader);
+    private final transient DynamicQrCodePreview qrCodePreview =
+            new DynamicQrCodePreview(qrCodeBufferedImage, qrCodeResize, qrCodeLabel, loader);
     private final transient QrCodeColor qrCodeColor = new QrCodeColor();
-    private final transient QrCodeService qrCodeService = new QrCodeService(qrCodeBufferedImage);
+    private final transient GenerateAndSaveService generateAndSaveService =
+            new GenerateAndSaveService(qrCodeBufferedImage);
     // SOUTH
     private final JPanel southSpacer = new JPanel();
 
@@ -662,7 +663,7 @@ public class CanScan extends JFrame {
 
     /**
      * Builds the QR code data and configuration from the current input fields, then delegates the
-     * generation and saving of the QR code to {@link QrCodeService}.
+     * generation and saving of the QR code to {@link GenerateAndSaveService}.
      *
      * <p>Collects input from MECARD or FREE fields, applies visual settings (colors, size, margin,
      * logo, rounded modules), and passes them to the QR service for QR code generation and file
@@ -675,8 +676,7 @@ public class CanScan extends JFrame {
             return;
         }
         try {
-            QrDataResult qrData =
-                    BuildQRDataService.INSTANCE.buildQrData(currentMode, getQrInput());
+            QrDataResult qrData = DataBuilderService.INSTANCE.buildData(currentMode, getQrInput());
             if (Checker.INSTANCE.checkNPE(
                     qrData,
                     StringConstants.GENERATE_QR_CODE.getValue(),
@@ -692,7 +692,7 @@ public class CanScan extends JFrame {
                             bgColor,
                             roundedModulesCheckBox.isSelected(),
                             validateAndGetMargin());
-            qrCodeService.generateAndSaveQrCode(qrData, config);
+            generateAndSaveService.generateAndSave(qrData, config);
         } catch (Exception ex) {
             Popup.INSTANCE.showDialog(
                     "Erreur inattendue lors de la génération du QR Code",

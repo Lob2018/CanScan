@@ -20,7 +20,7 @@ import fr.softsf.canscan.util.Checker;
  * <p>Supports MECARD and FREE modes with input validation and standardized formatting. Returns
  * structured results for encoding and export.
  */
-public enum BuildQRDataService {
+public enum DataBuilderService {
     INSTANCE;
 
     private static final String APPEND_FIELD = "appendField";
@@ -35,7 +35,7 @@ public enum BuildQRDataService {
      * @return a {@link QrDataResult} containing the encoded content and default filename, or {@code
      *     null} if input is invalid
      */
-    public QrDataResult buildQrData(Mode mode, QrInput input) {
+    public QrDataResult buildData(Mode mode, QrInput input) {
         if (Checker.INSTANCE.checkNPE(mode, "buildQrData", "mode")
                 || Checker.INSTANCE.checkNPE(input, "buildQrData", "input")) {
             return null;

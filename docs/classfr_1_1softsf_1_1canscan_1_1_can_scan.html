@@ -2128,7 +2128,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_aa0d0e0832459ed82263c36dd65193f01"><div class="ttname"><a href="#aa0d0e0832459ed82263c36dd65193f01">fr.softsf.canscan.CanScan.loader</a></div><div class="ttdeci">final transient Loader loader</div><div class="ttdef"><b>Definition</b> CanScan.java:137</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_ac7221699a8aa1d73cc7c9de900b24636"><div class="ttname"><a href="#ac7221699a8aa1d73cc7c9de900b24636">fr.softsf.canscan.CanScan.qrCodeLabel</a></div><div class="ttdeci">final JLabel qrCodeLabel</div><div class="ttdef"><b>Definition</b> CanScan.java:136</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_afe6c08ac95245250baf3bab5744f3167"><div class="ttname"><a href="#afe6c08ac95245250baf3bab5744f3167">fr.softsf.canscan.CanScan.qrCodeResize</a></div><div class="ttdeci">final transient QrCodeResize qrCodeResize</div><div class="ttdef"><b>Definition</b> CanScan.java:139</div></div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">fr.softsf.canscan.ui.QrCodePreview</a></div><div class="ttdoc">Asynchronously generates and displays a QR code preview in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodePreview.java:39</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">fr.softsf.canscan.ui.DynamicQrCodePreview</a></div><div class="ttdoc">Asynchronously generates and displays a QR code preview in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodePreview.java:39</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2153,7 +2153,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">fr.softsf.canscan.ui.QrCodeResize</a></div><div class="ttdoc">Asynchronously resizes a generated QR code image for display in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodeResize.java:32</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">fr.softsf.canscan.ui.DynamicQrCodeResize</a></div><div class="ttdoc">Asynchronously resizes a generated QR code image for display in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodeResize.java:32</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2167,7 +2167,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a> fr.softsf.canscan.CanScan.qrCodeService = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a>(<a class="el" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</td>
+          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a> fr.softsf.canscan.CanScan.generateAndSaveService = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a>(<a class="el" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</td>
         </tr>
       </table>
   </td>
