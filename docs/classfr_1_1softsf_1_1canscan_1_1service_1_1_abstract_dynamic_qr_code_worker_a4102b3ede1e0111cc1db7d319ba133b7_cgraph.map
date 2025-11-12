@@ -1,0 +1,13 @@
+<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.disposeAllResourcesOnExit" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.disposeAllResourcesOnExit">
+<area shape="rect" id="Node000001" title="Releases all resources used by this worker." alt="" coords="5,129,263,188"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#ab96e38d883cf01ec5565f6391e20c9ac" title="Resets the current worker and associated resources." alt="" coords="311,129,552,188"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,156,295,156,295,161,263,161"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a827422a0dbc6c5ece6981cdecccbd287" title="Cancels the current SwingWorker and clears its reference safely." alt="" coords="600,5,850,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="487,126,599,74,615,67,617,72,601,78,489,131"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a49e1caf8da3d33dde4b1d7e351aecd19" title="Clears any allocated data, icons, or buffers before starting a new task." alt="" coords="605,88,845,147"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="552,139,589,134,590,139,553,144"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a5ebccb20366b1496129ad831a399c8d0" title="Stops and clears the debounce timer." alt="" coords="606,171,844,229"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="553,173,591,179,591,184,552,178"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a2bb0edd8d59bde00a1f5a60f7fcc02f9" title="Stops the loader&#39;s wait indicator if assigned." alt="" coords="606,253,844,312"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="489,186,601,239,617,245,615,250,599,244,487,191"/>
+</map>

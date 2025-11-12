@@ -7,19 +7,19 @@ var annotated_dup =
             [ "Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode" ]
           ] ],
           [ "service", "namespacefr_1_1softsf_1_1canscan_1_1service.html", [
-            [ "AbstractQrCodeWorker", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_qr_code_worker" ],
-            [ "BuildQRDataService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_build_q_r_data_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_build_q_r_data_service" ],
-            [ "QrCodeService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service" ],
+            [ "AbstractDynamicQrCodeWorker", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker" ],
+            [ "DataBuilderService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service" ],
+            [ "GenerateAndSaveService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service" ],
             [ "VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service" ]
           ] ],
           [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", [
+            [ "DynamicQrCodePreview", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview" ],
+            [ "DynamicQrCodeResize", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize" ],
             [ "Loader", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_loader" ],
             [ "Popup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_popup" ],
             [ "QrCodeBufferedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image" ],
             [ "QrCodeColor", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color" ],
-            [ "QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util" ],
-            [ "QrCodePreview", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview" ],
-            [ "QrCodeResize", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize" ]
+            [ "QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util" ]
           ] ],
           [ "util", "namespacefr_1_1softsf_1_1canscan_1_1util.html", [
             [ "BrowserHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper" ],

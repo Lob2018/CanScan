@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveService.generateAndSave" name="fr.softsf.canscan.service.GenerateAndSaveService.generateAndSave">
+<area shape="rect" id="Node000001" title="Generates and saves a QR code as a PNG file using the provided data and configuration." alt="" coords="5,47,231,105"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a7183f24b962abed6d650fee50fdeaa46" title="Opens a JFileChooser to select the output PNG file and handles file name conflicts." alt="" coords="279,55,556,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,73,263,73,263,79,231,79"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a723bdc3c23de4858c0a30864298fdacd" title="Ensures the selected file has a &quot;.png&quot; extension." alt="" coords="604,5,848,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="556,55,588,50,589,56,557,60"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526" title="Resolves potential file name conflicts by checking if the specified file already exists." alt="" coords="618,88,835,147"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="557,92,603,98,602,103,556,97"/>
+</map>

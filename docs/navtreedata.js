@@ -51,9 +51,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_abstract_qr_code_worker_8java.html",
-"classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a95f9e1d6fe094f321cddef2a76a7d581",
-"classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#adf946250e00ee2415c34aedf0e2c4e9b",
+"_abstract_dynamic_qr_code_worker_8java.html",
+"classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a870eb321c6991b085867e432f6e0a434",
+"classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a5ee7752d5d4faa7be9fb9f6d12e4a3bc",
 "index.html"
 ];
 

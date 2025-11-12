@@ -218,7 +218,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:ad887145828c42c5a60cc59924d48c8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases all resources used by the QR code system.  <br /></td></tr>
 <tr class="separator:ad887145828c42c5a60cc59924d48c8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5b25b481c247871a646961db643caf" id="r_a9f5b25b481c247871a646961db643caf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5b25b481c247871a646961db643caf">generateQrCode</a> (ActionEvent e)</td></tr>
-<tr class="memdesc:a9f5b25b481c247871a646961db643caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the QR code data and configuration from the current input fields, then delegates the generation and saving of the QR code to <code><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a></code>.  <br /></td></tr>
+<tr class="memdesc:a9f5b25b481c247871a646961db643caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the QR code data and configuration from the current input fields, then delegates the generation and saving of the QR code to <code><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a></code>.  <br /></td></tr>
 <tr class="separator:a9f5b25b481c247871a646961db643caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d26dcd1ae708eae46dba8952351aa1a" id="r_a2d26dcd1ae708eae46dba8952351aa1a"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d26dcd1ae708eae46dba8952351aa1a">getQrInput</a> ()</td></tr>
 <tr class="memdesc:a2d26dcd1ae708eae46dba8952351aa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds and returns a <code><a class="el" href="">QrInput</a></code> object containing all current user inputs and settings.  <br /></td></tr>
@@ -268,6 +268,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a09f479907f8a1103c4dc5eea455f74a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45c69814709eaf34be6c0e10a89fe75b" id="r_a45c69814709eaf34be6c0e10a89fe75b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c69814709eaf34be6c0e10a89fe75b">currentMode</a> = <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c">Mode.MECARD</a></td></tr>
 <tr class="separator:a45c69814709eaf34be6c0e10a89fe75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad266467ae20733f06bdfedf0ff2a76e3" id="r_ad266467ae20733f06bdfedf0ff2a76e3"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad266467ae20733f06bdfedf0ff2a76e3">generateAndSaveService</a></td></tr>
+<tr class="separator:ad266467ae20733f06bdfedf0ff2a76e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262c7c7b9075ccf754020574b3ca6855" id="r_a262c7c7b9075ccf754020574b3ca6855"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a262c7c7b9075ccf754020574b3ca6855">generateButton</a> = new JButton(&quot;\uD83D\uDCBE Enregistrer&quot;)</td></tr>
 <tr class="separator:a262c7c7b9075ccf754020574b3ca6855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafe584b7ed133f9669807fb766b40987" id="r_aafe584b7ed133f9669807fb766b40987"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafe584b7ed133f9669807fb766b40987">imageRatio</a> = <a class="el" href="#a45df8d4366866c90e5fb074f95b80cd6">DEFAULT_IMAGE_RATIO</a></td></tr>
@@ -284,12 +286,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7431e56e66fd3038341d7807e3c27509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7221699a8aa1d73cc7c9de900b24636" id="r_ac7221699a8aa1d73cc7c9de900b24636"><td class="memItemLeft" align="right" valign="top">final JLabel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a> = new JLabel(&quot;&quot;, SwingConstants.CENTER)</td></tr>
 <tr class="separator:ac7221699a8aa1d73cc7c9de900b24636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9700f734b204cc34701d8b551207b042" id="r_a9700f734b204cc34701d8b551207b042"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">QrCodePreview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9700f734b204cc34701d8b551207b042">qrCodePreview</a></td></tr>
-<tr class="separator:a9700f734b204cc34701d8b551207b042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe6c08ac95245250baf3bab5744f3167" id="r_afe6c08ac95245250baf3bab5744f3167"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe6c08ac95245250baf3bab5744f3167">qrCodeResize</a></td></tr>
-<tr class="separator:afe6c08ac95245250baf3bab5744f3167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904aa3a49891c7f33934cefa065611f" id="r_a4904aa3a49891c7f33934cefa065611f"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4904aa3a49891c7f33934cefa065611f">qrCodeService</a> = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a>(<a class="el" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</td></tr>
-<tr class="separator:a4904aa3a49891c7f33934cefa065611f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51391a064405a337990dac77881e8da8" id="r_a51391a064405a337990dac77881e8da8"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">DynamicQrCodePreview</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51391a064405a337990dac77881e8da8">qrCodePreview</a></td></tr>
+<tr class="separator:a51391a064405a337990dac77881e8da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48bdd1461f2a0a876e4561514c29fdf6" id="r_a48bdd1461f2a0a876e4561514c29fdf6"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html">DynamicQrCodeResize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48bdd1461f2a0a876e4561514c29fdf6">qrCodeResize</a></td></tr>
+<tr class="separator:a48bdd1461f2a0a876e4561514c29fdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a043320b69991577de80f783375257a4a" id="r_a043320b69991577de80f783375257a4a"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a043320b69991577de80f783375257a4a">qrColor</a> = Color.BLACK</td></tr>
 <tr class="separator:a043320b69991577de80f783375257a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2241fd6885a5901d2bc0480eca92611a" id="r_a2241fd6885a5901d2bc0480eca92611a"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2241fd6885a5901d2bc0480eca92611a">qrColorButton</a> = new JButton(&quot;#000000&quot;)</td></tr>
@@ -650,7 +650,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Builds the QR code data and configuration from the current input fields, then delegates the generation and saving of the QR code to <code><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a></code>. </p>
+<p>Builds the QR code data and configuration from the current input fields, then delegates the generation and saving of the QR code to <code><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a></code>. </p>
 <p>Collects input from MECARD or FREE fields, applies visual settings (colors, size, margin, logo, rounded modules), and passes them to the QR service for QR code generation and file saving.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1595,6 +1595,32 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
+<a id="ad266467ae20733f06bdfedf0ff2a76e3" name="ad266467ae20733f06bdfedf0ff2a76e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad266467ae20733f06bdfedf0ff2a76e3">&#9670;&#160;</a></span>generateAndSaveService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a> fr.softsf.canscan.CanScan.generateAndSaveService</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a80dee7dd2663784754490d076d0ebe96"><div class="ttname"><a href="#a80dee7dd2663784754490d076d0ebe96">fr.softsf.canscan.CanScan.qrCodeBufferedImage</a></div><div class="ttdeci">final transient QrCodeBufferedImage qrCodeBufferedImage</div><div class="ttdef"><b>Definition</b> CanScan.java:138</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">fr.softsf.canscan.service.GenerateAndSaveService</a></div><div class="ttdoc">Service dedicated to QR code generation and saving.</div><div class="ttdef"><b>Definition</b> GenerateAndSaveService.java:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a262c7c7b9075ccf754020574b3ca6855" name="a262c7c7b9075ccf754020574b3ca6855"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a262c7c7b9075ccf754020574b3ca6855">&#9670;&#160;</a></span>generateButton</h2>
 
@@ -2103,8 +2129,8 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
-<a id="a9700f734b204cc34701d8b551207b042" name="a9700f734b204cc34701d8b551207b042"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9700f734b204cc34701d8b551207b042">&#9670;&#160;</a></span>qrCodePreview</h2>
+<a id="a51391a064405a337990dac77881e8da8" name="a51391a064405a337990dac77881e8da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51391a064405a337990dac77881e8da8">&#9670;&#160;</a></span>qrCodePreview</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2113,7 +2139,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">QrCodePreview</a> fr.softsf.canscan.CanScan.qrCodePreview</td>
+          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">DynamicQrCodePreview</a> fr.softsf.canscan.CanScan.qrCodePreview</td>
         </tr>
       </table>
   </td>
@@ -2123,17 +2149,16 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">QrCodePreview</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#afe6c08ac95245250baf3bab5744f3167">qrCodeResize</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a80dee7dd2663784754490d076d0ebe96"><div class="ttname"><a href="#a80dee7dd2663784754490d076d0ebe96">fr.softsf.canscan.CanScan.qrCodeBufferedImage</a></div><div class="ttdeci">final transient QrCodeBufferedImage qrCodeBufferedImage</div><div class="ttdef"><b>Definition</b> CanScan.java:138</div></div>
+<div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">DynamicQrCodePreview</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#a48bdd1461f2a0a876e4561514c29fdf6">qrCodeResize</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a48bdd1461f2a0a876e4561514c29fdf6"><div class="ttname"><a href="#a48bdd1461f2a0a876e4561514c29fdf6">fr.softsf.canscan.CanScan.qrCodeResize</a></div><div class="ttdeci">final transient DynamicQrCodeResize qrCodeResize</div><div class="ttdef"><b>Definition</b> CanScan.java:139</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_aa0d0e0832459ed82263c36dd65193f01"><div class="ttname"><a href="#aa0d0e0832459ed82263c36dd65193f01">fr.softsf.canscan.CanScan.loader</a></div><div class="ttdeci">final transient Loader loader</div><div class="ttdef"><b>Definition</b> CanScan.java:137</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_ac7221699a8aa1d73cc7c9de900b24636"><div class="ttname"><a href="#ac7221699a8aa1d73cc7c9de900b24636">fr.softsf.canscan.CanScan.qrCodeLabel</a></div><div class="ttdeci">final JLabel qrCodeLabel</div><div class="ttdef"><b>Definition</b> CanScan.java:136</div></div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_afe6c08ac95245250baf3bab5744f3167"><div class="ttname"><a href="#afe6c08ac95245250baf3bab5744f3167">fr.softsf.canscan.CanScan.qrCodeResize</a></div><div class="ttdeci">final transient QrCodeResize qrCodeResize</div><div class="ttdef"><b>Definition</b> CanScan.java:139</div></div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.html">fr.softsf.canscan.ui.DynamicQrCodePreview</a></div><div class="ttdoc">Asynchronously generates and displays a QR code preview in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodePreview.java:39</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">fr.softsf.canscan.ui.DynamicQrCodePreview</a></div><div class="ttdoc">Asynchronously generates and displays a QR code preview in a Swing UI.</div><div class="ttdef"><b>Definition</b> DynamicQrCodePreview.java:39</div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="afe6c08ac95245250baf3bab5744f3167" name="afe6c08ac95245250baf3bab5744f3167"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe6c08ac95245250baf3bab5744f3167">&#9670;&#160;</a></span>qrCodeResize</h2>
+<a id="a48bdd1461f2a0a876e4561514c29fdf6" name="a48bdd1461f2a0a876e4561514c29fdf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48bdd1461f2a0a876e4561514c29fdf6">&#9670;&#160;</a></span>qrCodeResize</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2142,7 +2167,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a> fr.softsf.canscan.CanScan.qrCodeResize</td>
+          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html">DynamicQrCodeResize</a> fr.softsf.canscan.CanScan.qrCodeResize</td>
         </tr>
       </table>
   </td>
@@ -2152,31 +2177,9 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">QrCodeResize</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html">fr.softsf.canscan.ui.DynamicQrCodeResize</a></div><div class="ttdoc">Asynchronously resizes a generated QR code image for display in a Swing UI.</div><div class="ttdef"><b>Definition</b> QrCodeResize.java:32</div></div>
+<div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html">DynamicQrCodeResize</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html">fr.softsf.canscan.ui.DynamicQrCodeResize</a></div><div class="ttdoc">Asynchronously resizes a generated QR code image for display in a Swing UI.</div><div class="ttdef"><b>Definition</b> DynamicQrCodeResize.java:32</div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a4904aa3a49891c7f33934cefa065611f" name="a4904aa3a49891c7f33934cefa065611f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4904aa3a49891c7f33934cefa065611f">&#9670;&#160;</a></span>qrCodeService</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a> fr.softsf.canscan.CanScan.generateAndSaveService = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_code_service.html">QrCodeService</a>(<a class="el" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
 </div>
 </div>
 <a id="a043320b69991577de80f783375257a4a" name="a043320b69991577de80f783375257a4a"></a>
@@ -2474,7 +2477,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html">CanScan</a></li>
-    <li class="footer">Generated on Mon Nov 10 2025 17:43:27 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Wed Nov 12 2025 08:20:35 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

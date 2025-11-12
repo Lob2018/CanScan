@@ -52,6 +52,6 @@ var classfr_1_1softsf_1_1canscan_1_1_can_scan_test =
     [ "setUp", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#ac4409e24be0dfc3605386cb93b51e730", null ],
     [ "generator", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a9752a83d1f26338c070bacd57e77c62c", null ],
     [ "qrCodeColor", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a231201fadd3c5a8dae616ec00c8e402f", null ],
-    [ "qrService", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#aadc63d863b920cc4c0022bb25fe9aa7e", null ],
+    [ "qrService", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a7b0362a634cae5cb2b1387378e7019be", null ],
     [ "tempDir", "classfr_1_1softsf_1_1canscan_1_1_can_scan_test.html#a4def5f17b9d36469a039ba7736d5adf5", null ]
 ];

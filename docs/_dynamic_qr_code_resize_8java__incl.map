@@ -1,0 +1,19 @@
+<map id="src/main/java/fr/softsf/canscan/ui/DynamicQrCodeResize.java" name="src/main/java/fr/softsf/canscan/ui/DynamicQrCodeResize.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="614,5,873,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,104,149,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="615,41,401,64,160,99,140,103,139,97,159,93,400,58,614,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="172,104,336,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="617,51,349,99,328,103,327,98,349,93,616,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="361,104,558,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="678,51,515,101,514,96,676,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="582,104,737,131"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="726,50,684,94,680,91,722,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="762,104,894,131"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="765,47,807,91,803,94,761,50"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="918,104,1089,131"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="805,46,953,96,951,101,804,51"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1113,96,1276,139"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="856,46,1099,93,1098,98,855,51"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1300,96,1508,139"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="873,40,1285,93,1284,98,873,45"/>
+</map>

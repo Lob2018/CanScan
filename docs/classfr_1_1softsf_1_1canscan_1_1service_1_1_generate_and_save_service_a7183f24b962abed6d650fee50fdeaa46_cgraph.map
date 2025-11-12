@@ -1,0 +1,7 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveService.chooseOutputFile" name="fr.softsf.canscan.service.GenerateAndSaveService.chooseOutputFile">
+<area shape="rect" id="Node000001" title="Opens a JFileChooser to select the output PNG file and handles file name conflicts." alt="" coords="5,55,283,97"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a723bdc3c23de4858c0a30864298fdacd" title="Ensures the selected file has a &quot;.png&quot; extension." alt="" coords="331,5,575,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,55,315,50,316,56,284,60"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526" title="Resolves potential file name conflicts by checking if the specified file already exists." alt="" coords="344,88,562,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,92,329,98,329,103,283,97"/>
+</map>

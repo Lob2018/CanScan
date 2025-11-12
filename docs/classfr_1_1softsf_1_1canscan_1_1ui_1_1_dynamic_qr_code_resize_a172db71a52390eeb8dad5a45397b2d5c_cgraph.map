@@ -1,0 +1,17 @@
+<map id="fr.softsf.canscan.ui.DynamicQrCodeResize.updateQrCodeResize" name="fr.softsf.canscan.ui.DynamicQrCodeResize.updateQrCodeResize">
+<area shape="rect" id="Node000001" title="Updates the current QR input and schedules a debounced resize operation." alt="" coords="5,96,242,139"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a200fada62fe7977e60f65130dbf11276" title="Executes the unified workflow: cancel previous worker, stop debounce, clear resources,..." alt="" coords="290,88,531,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,115,274,115,274,120,242,120"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a7cc26d48e6fdf5032aa4495a4dea06c7" title="Creates and returns a new SwingWorker for the current operation." alt="" coords="579,47,827,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="531,98,563,93,564,98,532,103"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#ab96e38d883cf01ec5565f6391e20c9ac" title="Resets the current worker and associated resources." alt="" coords="582,129,824,188"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="532,132,567,137,567,142,531,137"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a827422a0dbc6c5ece6981cdecccbd287" title="Cancels the current SwingWorker and clears its reference safely." alt="" coords="875,5,1126,64"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="803,126,826,115,840,105,849,95,859,84,874,74,884,69,886,73,877,78,863,88,853,98,843,109,829,120,806,131"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a49e1caf8da3d33dde4b1d7e351aecd19" title="Clears any allocated data, icons, or buffers before starting a new task." alt="" coords="880,88,1121,147"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="824,139,864,134,865,139,825,144"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a5ebccb20366b1496129ad831a399c8d0" title="Stops and clears the debounce timer." alt="" coords="882,171,1119,229"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="825,173,867,179,866,184,824,178"/>
+<area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a2bb0edd8d59bde00a1f5a60f7fcc02f9" title="Stops the loader&#39;s wait indicator if assigned." alt="" coords="882,253,1119,312"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="763,186,876,239,892,245,890,250,874,244,760,191"/>
+</map>
