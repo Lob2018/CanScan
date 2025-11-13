@@ -239,34 +239,30 @@ class CanScanTest {
     void givenValidMargin4_whenMarginFieldCheck_thenGetMarginUpdatedTo4() {
         generator.setMarginSliderValueForTests(4);
         generator.validateAndGetMargin();
-        Field marginField = getField("margin");
-        assertEquals(4, getFieldValue(marginField));
+        assertEquals(4, generator.getMarginFieldIntForTests());
     }
 
     @Test
     void givenNegativeMargin_whenMarginFieldCheck_thenGetMarginSetTo0() {
         generator.setMarginSliderValueForTests(-2);
         generator.validateAndGetMargin();
-        Field marginField = getField("margin");
-        assertEquals(0, getFieldValue(marginField));
+        assertEquals(0, generator.getMarginFieldIntForTests());
     }
 
     @Test
     void givenMarginAboveMaximum_whenMarginFieldCheck_thenGetMarginSetTo10() {
         generator.setMarginSliderValueForTests(15);
         generator.validateAndGetMargin();
-        Field marginField = getField("margin");
-        assertEquals(10, getFieldValue(marginField));
+        assertEquals(10, generator.getMarginFieldIntForTests());
     }
 
     @ParameterizedTest(name = "given ratio {0}% when ratioFieldCheck then ratio set to {1}")
-    @CsvSource({"0,   0.0", "50,  0.5", "100, 1.0"})
+    @CsvSource({"0,0.0", "50,0.5", "100,1.0"})
     void givenRatioPercent_whenRatioFieldCheck_thenGetRatioSetCorrectly(
             int sliderValue, double expectedRatio) {
         generator.setRatioSliderValueForTests(sliderValue);
         generator.validateAndGetRatio();
-        Field ratioField = getField("imageRatio");
-        double actualRatio = (double) getFieldValue(ratioField);
+        double actualRatio = generator.validateAndGetRatio();
         assertEquals(expectedRatio, actualRatio, 0.01);
     }
 
@@ -738,23 +734,5 @@ class CanScanTest {
         g.dispose();
         ImageIO.write(logo, "png", logoPath.toFile());
         return logoPath.toFile();
-    }
-
-    private Field getField(String fieldName) {
-        try {
-            Field field = CanScan.class.getDeclaredField(fieldName);
-            field.setAccessible(true);
-            return field;
-        } catch (NoSuchFieldException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private Object getFieldValue(Field field) {
-        try {
-            return field.get(generator);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

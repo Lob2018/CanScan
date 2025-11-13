@@ -215,6 +215,11 @@ public class CanScan extends JFrame {
         sizeField.setText(text);
     }
 
+    /** Returns the margin field int for testing. */
+    int getMarginFieldIntForTests() {
+        return marginSlider.getValue();
+    }
+
     /** Sets the margin slider value for testing. */
     void setMarginSliderValueForTests(int value) {
         marginSlider.setValue(value);
@@ -272,7 +277,7 @@ public class CanScan extends JFrame {
      *
      * <p>Sets tick spacing, labels, and listeners to update tooltips dynamically.
      */
-    private void initializeSliders() {
+    protected void initializeSliders() {
         marginSlider.setMajorTickSpacing(1);
         marginSlider.setPaintTicks(true);
         marginSlider.setPaintLabels(true);
