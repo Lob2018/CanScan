@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Switches the application between MECARD and FREE QR code modes." alt="" coords="5,180,257,207"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2d26dcd1ae708eae46dba8952351aa1a" title="Builds and returns a QrInput object containing all current user inputs and settings." alt="" coords="315,105,514,148"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,177,306,150,307,155,192,182"/>
-<area shape="rect" id="Node000007" href="$enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" title="Returns the name of the mode as a string." alt="" coords="334,172,496,215"/>
+<area shape="rect" id="Node000007" href="$enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" title="Returns the mode label." alt="" coords="334,172,496,215"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="257,191,318,191,318,196,257,196"/>
 <area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906" title="Validates the current input fields and toggles the state of the generate button." alt="" coords="305,239,525,281"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="192,205,307,232,306,237,191,210"/>

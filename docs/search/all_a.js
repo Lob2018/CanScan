@@ -9,11 +9,12 @@ var searchData=
   ['matrix_6',['MATRIX',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a05abac60fdd7d4bfc98328b4d93ea4eb',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
   ['max_5fpercentage_7',['MAX_PERCENTAGE',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3a020400c72f67bcd6070472f709aff0',1,'fr::softsf::canscan::CanScan']]],
   ['mecard_8',['MECARD',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c',1,'fr::softsf::canscan::model::Mode']]],
-  ['mecardradio_9',['mecardRadio',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a99c9612e0aca8b22e30700a73383c56d',1,'fr::softsf::canscan::CanScan']]],
-  ['minimum_5fqr_5fcode_5fsize_10',['MINIMUM_QR_CODE_SIZE',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aefe23a4ece414d914191c04f39e5d6b1',1,'fr::softsf::canscan::CanScan']]],
-  ['mode_11',['Mode',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html',1,'fr::softsf::canscan::model']]],
-  ['mode_2ejava_12',['Mode.java',['../_mode_8java.html',1,'']]],
-  ['modulecontext_13',['ModuleContext',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#aec9e84dae3335503158e003e471ad2e1',1,'fr::softsf::canscan::model']]],
-  ['modulecontext_2ejava_14',['ModuleContext.java',['../_module_context_8java.html',1,'']]],
-  ['multiline_5ftext_5ffields_5frows_15',['MULTILINE_TEXT_FIELDS_ROWS',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abf9a6c8ac725ba25a9049fee29703016',1,'fr::softsf::canscan::CanScan']]]
+  ['mecard_9',['mecard',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0',1,'fr::softsf::canscan::CanScan']]],
+  ['mecardradio_10',['mecardRadio',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7c735ad3e1e8c6010403c42e4f3d5ec9',1,'fr::softsf::canscan::CanScan']]],
+  ['minimum_5fqr_5fcode_5fsize_11',['MINIMUM_QR_CODE_SIZE',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aefe23a4ece414d914191c04f39e5d6b1',1,'fr::softsf::canscan::CanScan']]],
+  ['mode_12',['Mode',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html',1,'fr.softsf.canscan.model.Mode'],['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#adad452c36f778ab7a24ab05e07bd5317',1,'fr.softsf.canscan.model.Mode.Mode()']]],
+  ['mode_2ejava_13',['Mode.java',['../_mode_8java.html',1,'']]],
+  ['modulecontext_14',['ModuleContext',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#aec9e84dae3335503158e003e471ad2e1',1,'fr::softsf::canscan::model']]],
+  ['modulecontext_2ejava_15',['ModuleContext.java',['../_module_context_8java.html',1,'']]],
+  ['multiline_5ftext_5ffields_5frows_16',['MULTILINE_TEXT_FIELDS_ROWS',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abf9a6c8ac725ba25a9049fee29703016',1,'fr::softsf::canscan::CanScan']]]
 ];

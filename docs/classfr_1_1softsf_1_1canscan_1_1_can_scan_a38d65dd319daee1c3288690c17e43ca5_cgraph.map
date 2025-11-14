@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.CanScan.freeCard" name="fr.softsf.canscan.CanScan.freeCard">
+<area shape="rect" id="Node000001" title="Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs." alt="" coords="5,5,237,32"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2732ecdc4490a717352975e68fce494c" title="Adds a labeled component row to a panel using GridBagLayout." alt="" coords="285,5,514,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,16,269,16,269,21,237,21"/>
+</map>

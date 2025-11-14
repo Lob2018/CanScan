@@ -1,0 +1,10 @@
+<map id="fr.softsf.canscan.CanScan.addNorthPanelCardPanels" name="fr.softsf.canscan.CanScan.addNorthPanelCardPanels">
+<area shape="rect" id="Node000001" title="Adds MECARD and Free card panels to the north panel." alt="" coords="5,23,208,65"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38d65dd319daee1c3288690c17e43ca5" title="Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs." alt="" coords="256,5,487,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,32,240,29,240,34,208,37"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0" title="Initializes the MECARD input panel with labeled text fields for structured contact information." alt="" coords="259,56,484,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,51,244,54,244,60,208,56"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2732ecdc4490a717352975e68fce494c" title="Adds a labeled component row to a panel using GridBagLayout." alt="" coords="535,31,764,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,27,520,30,519,35,487,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="484,56,519,53,520,59,484,62"/>
+</map>

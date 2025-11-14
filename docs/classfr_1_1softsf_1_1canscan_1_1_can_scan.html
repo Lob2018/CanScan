@@ -102,7 +102,6 @@ $(function(){initNavTree('classfr_1_1softsf_1_1canscan_1_1_can_scan.html',''); i
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pac-methods">Package Functions</a> &#124;
-<a href="#pac-attribs">Package Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -135,7 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a102bcbc6cda608b642e870ba3fde6344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> GUI.  <br /></td></tr>
 <tr class="separator:a102bcbc6cda608b642e870ba3fde6344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e109eadae1f290808f2dedc0023d9d" id="r_a38e109eadae1f290808f2dedc0023d9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e109eadae1f290808f2dedc0023d9d">dispose</a> ()</td></tr>
-<tr class="memdesc:a38e109eadae1f290808f2dedc0023d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disposes of the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> window, ensuring all resources are explicitly released.  <br /></td></tr>
+<tr class="memdesc:a38e109eadae1f290808f2dedc0023d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> window and releases all QR code–related resources.  <br /></td></tr>
 <tr class="separator:a38e109eadae1f290808f2dedc0023d9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -149,12 +148,54 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac0b9579fee0a4d633c23c085d5d9d4ef" id="r_ac0b9579fee0a4d633c23c085d5d9d4ef"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b9579fee0a4d633c23c085d5d9d4ef">chooseLogoFile</a> ()</td></tr>
 <tr class="memdesc:ac0b9579fee0a4d633c23c085d5d9d4ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file chooser dialog to select a logo image.  <br /></td></tr>
 <tr class="separator:ac0b9579fee0a4d633c23c085d5d9d4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358629f85831dc6cd4978c8854d88561" id="r_a358629f85831dc6cd4978c8854d88561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a358629f85831dc6cd4978c8854d88561">initializeSliders</a> ()</td></tr>
+<tr class="memdesc:a358629f85831dc6cd4978c8854d88561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures sliders for logo margin and ratio.  <br /></td></tr>
+<tr class="separator:a358629f85831dc6cd4978c8854d88561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:ab418aab8165b2e96ce08f98422655cde" id="r_ab418aab8165b2e96ce08f98422655cde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab418aab8165b2e96ce08f98422655cde">browseLogo</a> (ActionEvent e)</td></tr>
 <tr class="memdesc:ab418aab8165b2e96ce08f98422655cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file chooser to select a logo image and updates the logo text field.  <br /></td></tr>
 <tr class="separator:ab418aab8165b2e96ce08f98422655cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dc553a27bacbc3156e90afeda25336" id="r_a35dc553a27bacbc3156e90afeda25336"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35dc553a27bacbc3156e90afeda25336">getLogoFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a35dc553a27bacbc3156e90afeda25336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the logo field text for testing.  <br /></td></tr>
+<tr class="separator:a35dc553a27bacbc3156e90afeda25336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace71c953591d075db668442eceabb760" id="r_ace71c953591d075db668442eceabb760"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace71c953591d075db668442eceabb760">getMarginFieldIntForTests</a> ()</td></tr>
+<tr class="memdesc:ace71c953591d075db668442eceabb760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the margin field int for testing.  <br /></td></tr>
+<tr class="separator:ace71c953591d075db668442eceabb760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480afb2507eb780dcc6f77c0a4334d59" id="r_a480afb2507eb780dcc6f77c0a4334d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a480afb2507eb780dcc6f77c0a4334d59">setAdrFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a480afb2507eb780dcc6f77c0a4334d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the address field text for testing.  <br /></td></tr>
+<tr class="separator:a480afb2507eb780dcc6f77c0a4334d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968f0f590c2211f78d1f832a2ee40b55" id="r_a968f0f590c2211f78d1f832a2ee40b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a968f0f590c2211f78d1f832a2ee40b55">setEmailFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a968f0f590c2211f78d1f832a2ee40b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the email field text for testing.  <br /></td></tr>
+<tr class="separator:a968f0f590c2211f78d1f832a2ee40b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa770b51cbc0a4a201711b936bd4748b8" id="r_aa770b51cbc0a4a201711b936bd4748b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa770b51cbc0a4a201711b936bd4748b8">setLogoFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:aa770b51cbc0a4a201711b936bd4748b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the logo field text for testing.  <br /></td></tr>
+<tr class="separator:aa770b51cbc0a4a201711b936bd4748b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8732331b81ec5fcadbb39c9389a016" id="r_a9f8732331b81ec5fcadbb39c9389a016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f8732331b81ec5fcadbb39c9389a016">setMarginSliderValueForTests</a> (int value)</td></tr>
+<tr class="memdesc:a9f8732331b81ec5fcadbb39c9389a016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the margin slider value for testing.  <br /></td></tr>
+<tr class="separator:a9f8732331b81ec5fcadbb39c9389a016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8affcfaf13c69cd340e48e3e7d10ae86" id="r_a8affcfaf13c69cd340e48e3e7d10ae86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8affcfaf13c69cd340e48e3e7d10ae86">setNameFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a8affcfaf13c69cd340e48e3e7d10ae86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name field text for testing.  <br /></td></tr>
+<tr class="separator:a8affcfaf13c69cd340e48e3e7d10ae86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56273b7ccb4290c7d7aad2132452902e" id="r_a56273b7ccb4290c7d7aad2132452902e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56273b7ccb4290c7d7aad2132452902e">setOrgFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a56273b7ccb4290c7d7aad2132452902e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the organization field text for testing.  <br /></td></tr>
+<tr class="separator:a56273b7ccb4290c7d7aad2132452902e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323e90f802787c388da8a03c9b6e47d7" id="r_a323e90f802787c388da8a03c9b6e47d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a323e90f802787c388da8a03c9b6e47d7">setPhoneFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:a323e90f802787c388da8a03c9b6e47d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the phone field text for testing.  <br /></td></tr>
+<tr class="separator:a323e90f802787c388da8a03c9b6e47d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1cb04881a0e23f0b843eed12ce05c7" id="r_abf1cb04881a0e23f0b843eed12ce05c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1cb04881a0e23f0b843eed12ce05c7">setRatioSliderValueForTests</a> (int value)</td></tr>
+<tr class="memdesc:abf1cb04881a0e23f0b843eed12ce05c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ratio slider value for testing.  <br /></td></tr>
+<tr class="separator:abf1cb04881a0e23f0b843eed12ce05c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d13a0cff9f6a08c3d17f0770746139" id="r_a07d13a0cff9f6a08c3d17f0770746139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07d13a0cff9f6a08c3d17f0770746139">setRoundedModulesSelectedForTests</a> ()</td></tr>
+<tr class="memdesc:a07d13a0cff9f6a08c3d17f0770746139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the rounded modules checkbox state for testing.  <br /></td></tr>
+<tr class="separator:a07d13a0cff9f6a08c3d17f0770746139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93eb7e856d16e731c3df3a5d50e3ac9" id="r_ab93eb7e856d16e731c3df3a5d50e3ac9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab93eb7e856d16e731c3df3a5d50e3ac9">setSizeFieldTextForTests</a> (String text)</td></tr>
+<tr class="memdesc:ab93eb7e856d16e731c3df3a5d50e3ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the size field text for testing.  <br /></td></tr>
+<tr class="separator:ab93eb7e856d16e731c3df3a5d50e3ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ca8fca38ccbc56063f1cce9e5b7528" id="r_af8ca8fca38ccbc56063f1cce9e5b7528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8ca8fca38ccbc56063f1cce9e5b7528">setUrlFieldTextForTests</a> ()</td></tr>
+<tr class="memdesc:af8ca8fca38ccbc56063f1cce9e5b7528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the URL field text for testing.  <br /></td></tr>
+<tr class="separator:af8ca8fca38ccbc56063f1cce9e5b7528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e67b1b5c764e72414a5c0f387810f5c" id="r_a4e67b1b5c764e72414a5c0f387810f5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e67b1b5c764e72414a5c0f387810f5c">validateAndGetMargin</a> ()</td></tr>
 <tr class="memdesc:a4e67b1b5c764e72414a5c0f387810f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates and returns the current QR code margin from the margin slider.  <br /></td></tr>
 <tr class="separator:a4e67b1b5c764e72414a5c0f387810f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,73 +206,68 @@ Package Functions</h2></td></tr>
 <tr class="memdesc:a6d139bb8d0a3c7081096c8956189b684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates and returns the QR code size from the corresponding text field.  <br /></td></tr>
 <tr class="separator:a6d139bb8d0a3c7081096c8956189b684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-attribs" name="pac-attribs"></a>
-Package Attributes</h2></td></tr>
-<tr class="memitem:adf41f9e36bb3c7c4d42d04ff049e4ed6" id="r_adf41f9e36bb3c7c4d42d04ff049e4ed6"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf41f9e36bb3c7c4d42d04ff049e4ed6">adrField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:adf41f9e36bb3c7c4d42d04ff049e4ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a990df2b47ccdc9f236ccbcb16b3ce7d3" id="r_a990df2b47ccdc9f236ccbcb16b3ce7d3"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a990df2b47ccdc9f236ccbcb16b3ce7d3">charHeight</a> = fm.getHeight()</td></tr>
-<tr class="separator:a990df2b47ccdc9f236ccbcb16b3ce7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61ad89b3e35b964d1cde8dddcef1240e" id="r_a61ad89b3e35b964d1cde8dddcef1240e"><td class="memItemLeft" align="right" valign="top">final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61ad89b3e35b964d1cde8dddcef1240e">charWidth</a> = fm.charWidth('W')</td></tr>
-<tr class="separator:a61ad89b3e35b964d1cde8dddcef1240e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bded55948bf3fcf33afff1d1511dc85" id="r_a7bded55948bf3fcf33afff1d1511dc85"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bded55948bf3fcf33afff1d1511dc85">emailField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:a7bded55948bf3fcf33afff1d1511dc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee408f2465747251249ac7a09d8834f4" id="r_aee408f2465747251249ac7a09d8834f4"><td class="memItemLeft" align="right" valign="top">final FontMetrics&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee408f2465747251249ac7a09d8834f4">fm</a> = freeField.getFontMetrics(freeField.getFont())</td></tr>
-<tr class="separator:aee408f2465747251249ac7a09d8834f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3790cf68d437d1127655792be562ab3d" id="r_a3790cf68d437d1127655792be562ab3d"><td class="memItemLeft" align="right" valign="top">final JTextArea&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3790cf68d437d1127655792be562ab3d">freeField</a> = new JTextArea(&quot;&quot;)</td></tr>
-<tr class="separator:a3790cf68d437d1127655792be562ab3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f8380095b3e2df7d75ca2e01ec4248f" id="r_a3f8380095b3e2df7d75ca2e01ec4248f"><td class="memItemLeft" align="right" valign="top">JRadioButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f8380095b3e2df7d75ca2e01ec4248f">freeRadio</a> = new JRadioButton(Mode.FREE.text())</td></tr>
-<tr class="separator:a3f8380095b3e2df7d75ca2e01ec4248f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13c0e2c3d5235224fbeb017f67b18196" id="r_a13c0e2c3d5235224fbeb017f67b18196"><td class="memItemLeft" align="right" valign="top">final JScrollPane&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13c0e2c3d5235224fbeb017f67b18196">freeScrollPane</a> = new JScrollPane(<a class="el" href="#a3790cf68d437d1127655792be562ab3d">freeField</a>)</td></tr>
-<tr class="separator:a13c0e2c3d5235224fbeb017f67b18196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6df1515192c53219894766a3f4071c" id="r_a7a6df1515192c53219894766a3f4071c"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a6df1515192c53219894766a3f4071c">logoField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:a7a6df1515192c53219894766a3f4071c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9204fb89f18f277ca8356d2b7b5acb1" id="r_ae9204fb89f18f277ca8356d2b7b5acb1"><td class="memItemLeft" align="right" valign="top">final JSlider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9204fb89f18f277ca8356d2b7b5acb1">marginSlider</a> = new JSlider(0, <a class="el" href="#aefe23a4ece414d914191c04f39e5d6b1">MINIMUM_QR_CODE_SIZE</a>, <a class="el" href="#a309b37d78b4ad197106d3168434452f6">margin</a>)</td></tr>
-<tr class="separator:ae9204fb89f18f277ca8356d2b7b5acb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c9612e0aca8b22e30700a73383c56d" id="r_a99c9612e0aca8b22e30700a73383c56d"><td class="memItemLeft" align="right" valign="top">JRadioButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99c9612e0aca8b22e30700a73383c56d">mecardRadio</a> = new JRadioButton(Mode.MECARD.text())</td></tr>
-<tr class="separator:a99c9612e0aca8b22e30700a73383c56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab72088e51da563d2241cbd8a8eef1ccc" id="r_ab72088e51da563d2241cbd8a8eef1ccc"><td class="memItemLeft" align="right" valign="top">JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab72088e51da563d2241cbd8a8eef1ccc">nameField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:ab72088e51da563d2241cbd8a8eef1ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dc19323952c9652bf831f4e727b4989" id="r_a2dc19323952c9652bf831f4e727b4989"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc19323952c9652bf831f4e727b4989">orgField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:a2dc19323952c9652bf831f4e727b4989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb939df3fc6ae57f32a9cec3a6a46536" id="r_aeb939df3fc6ae57f32a9cec3a6a46536"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb939df3fc6ae57f32a9cec3a6a46536">phoneField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:aeb939df3fc6ae57f32a9cec3a6a46536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4394af5e15a04c08f6d005f4b9b0e638" id="r_a4394af5e15a04c08f6d005f4b9b0e638"><td class="memItemLeft" align="right" valign="top">final JSlider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4394af5e15a04c08f6d005f4b9b0e638">ratioSlider</a> = new JSlider(0, <a class="el" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>, (int) (<a class="el" href="#aafe584b7ed133f9669807fb766b40987">imageRatio</a> * <a class="el" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>))</td></tr>
-<tr class="separator:a4394af5e15a04c08f6d005f4b9b0e638"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa64e0ee343635d7092f65ea5d1186712" id="r_aa64e0ee343635d7092f65ea5d1186712"><td class="memItemLeft" align="right" valign="top">final JCheckBox&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa64e0ee343635d7092f65ea5d1186712">roundedModulesCheckBox</a> = new JCheckBox()</td></tr>
-<tr class="separator:aa64e0ee343635d7092f65ea5d1186712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d7e0d017188e732c23f30053c19490" id="r_a33d7e0d017188e732c23f30053c19490"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33d7e0d017188e732c23f30053c19490">sizeField</a> = new JTextField(<a class="el" href="#a2eeed49947c5553ac3c60fa5a9c00d0f">SIZE_FIELD_DEFAULT</a>, <a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:a33d7e0d017188e732c23f30053c19490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55f4f599a73d982ce369e534a892c845" id="r_a55f4f599a73d982ce369e534a892c845"><td class="memItemLeft" align="right" valign="top">JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f4f599a73d982ce369e534a892c845">update</a> = new JButton(&quot;\uD83D\uDD04&quot;)</td></tr>
-<tr class="separator:a55f4f599a73d982ce369e534a892c845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9495ee2cc95cb2ac38fc6fd2e58e5844" id="r_a9495ee2cc95cb2ac38fc6fd2e58e5844"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9495ee2cc95cb2ac38fc6fd2e58e5844">urlField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
-<tr class="separator:a9495ee2cc95cb2ac38fc6fd2e58e5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:ab2e018ca62c7497c29e84f42ae870daa" id="r_ab2e018ca62c7497c29e84f42ae870daa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2e018ca62c7497c29e84f42ae870daa">addNorthPanelCardPanels</a> (JPanel northPanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:ab2e018ca62c7497c29e84f42ae870daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds MECARD and Free card panels to the north panel.  <br /></td></tr>
+<tr class="separator:ab2e018ca62c7497c29e84f42ae870daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ab4df98de0d05977e6a65ab75f89f0" id="r_a94ab4df98de0d05977e6a65ab75f89f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94ab4df98de0d05977e6a65ab75f89f0">addNorthPanelCommonFields</a> (JPanel northPanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:a94ab4df98de0d05977e6a65ab75f89f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds common input fields to the north panel.  <br /></td></tr>
+<tr class="separator:a94ab4df98de0d05977e6a65ab75f89f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f205dfdb266d5d7f8f8899b69742663" id="r_a9f205dfdb266d5d7f8f8899b69742663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f205dfdb266d5d7f8f8899b69742663">addNorthPanelGenerateButton</a> (JPanel northPanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:a9f205dfdb266d5d7f8f8899b69742663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the generate button to the north panel.  <br /></td></tr>
+<tr class="separator:a9f205dfdb266d5d7f8f8899b69742663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa469763b92dd7cbc6dfdb9aaa0116b33" id="r_aa469763b92dd7cbc6dfdb9aaa0116b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa469763b92dd7cbc6dfdb9aaa0116b33">addNorthPanelModeSelection</a> (JPanel northPanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:aa469763b92dd7cbc6dfdb9aaa0116b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds mode selection controls (MECARD/Free) to the north panel.  <br /></td></tr>
+<tr class="separator:aa469763b92dd7cbc6dfdb9aaa0116b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2732ecdc4490a717352975e68fce494c" id="r_a2732ecdc4490a717352975e68fce494c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2732ecdc4490a717352975e68fce494c">addRow</a> (JPanel panel, GridBagConstraints gbc, String labelText, String tooltipText, JComponent component)</td></tr>
 <tr class="memdesc:a2732ecdc4490a717352975e68fce494c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a labeled component row to a panel using GridBagLayout.  <br /></td></tr>
 <tr class="separator:a2732ecdc4490a717352975e68fce494c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad470e3c0750cf142dc611b1aeeda3a97" id="r_ad470e3c0750cf142dc611b1aeeda3a97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad470e3c0750cf142dc611b1aeeda3a97">automaticQRCodeRenderingForFieldsAndControls</a> ()</td></tr>
+<tr class="memdesc:ad470e3c0750cf142dc611b1aeeda3a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up automatic QR code preview updates for all input fields and controls.  <br /></td></tr>
+<tr class="separator:ad470e3c0750cf142dc611b1aeeda3a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22606ca129489c778fbbe17cb8b70697" id="r_a22606ca129489c778fbbe17cb8b70697"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22606ca129489c778fbbe17cb8b70697">calculateAvailableQrHeight</a> ()</td></tr>
 <tr class="memdesc:a22606ca129489c778fbbe17cb8b70697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the available height for QR code rendering.  <br /></td></tr>
 <tr class="separator:a22606ca129489c778fbbe17cb8b70697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad887145828c42c5a60cc59924d48c8f2" id="r_ad887145828c42c5a60cc59924d48c8f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad887145828c42c5a60cc59924d48c8f2">disposeAllResourcesOnExit</a> ()</td></tr>
-<tr class="memdesc:ad887145828c42c5a60cc59924d48c8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases all resources used by the QR code system.  <br /></td></tr>
-<tr class="separator:ad887145828c42c5a60cc59924d48c8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b0a72ab305f98f86591411b6a352f2" id="r_a17b0a72ab305f98f86591411b6a352f2"><td class="memItemLeft" align="right" valign="top">JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17b0a72ab305f98f86591411b6a352f2">colorPanel</a> ()</td></tr>
+<tr class="memdesc:a17b0a72ab305f98f86591411b6a352f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the color selection panel for QR code and background colors.  <br /></td></tr>
+<tr class="separator:a17b0a72ab305f98f86591411b6a352f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381579d3adc53b1122b38e7fda5c0235" id="r_a381579d3adc53b1122b38e7fda5c0235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a381579d3adc53b1122b38e7fda5c0235">configureUpdateButton</a> ()</td></tr>
+<tr class="memdesc:a381579d3adc53b1122b38e7fda5c0235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the update button for version checking.  <br /></td></tr>
+<tr class="separator:a381579d3adc53b1122b38e7fda5c0235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d65dd319daee1c3288690c17e43ca5" id="r_a38d65dd319daee1c3288690c17e43ca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38d65dd319daee1c3288690c17e43ca5">freeCard</a> (JPanel freePanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:a38d65dd319daee1c3288690c17e43ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs.  <br /></td></tr>
+<tr class="separator:a38d65dd319daee1c3288690c17e43ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5b25b481c247871a646961db643caf" id="r_a9f5b25b481c247871a646961db643caf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f5b25b481c247871a646961db643caf">generateQrCode</a> (ActionEvent e)</td></tr>
 <tr class="memdesc:a9f5b25b481c247871a646961db643caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the QR code data and configuration from the current input fields, then delegates the generation and saving of the QR code to <code><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a></code>.  <br /></td></tr>
 <tr class="separator:a9f5b25b481c247871a646961db643caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d26dcd1ae708eae46dba8952351aa1a" id="r_a2d26dcd1ae708eae46dba8952351aa1a"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d26dcd1ae708eae46dba8952351aa1a">getQrInput</a> ()</td></tr>
 <tr class="memdesc:a2d26dcd1ae708eae46dba8952351aa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds and returns a <code><a class="el" href="">QrInput</a></code> object containing all current user inputs and settings.  <br /></td></tr>
 <tr class="separator:a2d26dcd1ae708eae46dba8952351aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd7b7d7f9cc810756dbbb66218414d4" id="r_addd7b7d7f9cc810756dbbb66218414d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addd7b7d7f9cc810756dbbb66218414d4">initFreeCard</a> (JPanel freePanel, GridBagConstraints grid)</td></tr>
-<tr class="memdesc:addd7b7d7f9cc810756dbbb66218414d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs.  <br /></td></tr>
-<tr class="separator:addd7b7d7f9cc810756dbbb66218414d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4047170747f52f54ee69ddbc834c5373" id="r_a4047170747f52f54ee69ddbc834c5373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4047170747f52f54ee69ddbc834c5373">initializeAutomaticQRCodeRendering</a> ()</td></tr>
-<tr class="memdesc:a4047170747f52f54ee69ddbc834c5373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up automatic QR code preview updates for all input fields and controls.  <br /></td></tr>
-<tr class="separator:a4047170747f52f54ee69ddbc834c5373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab78c47588f2cb82b4395a1268b3c4ca4" id="r_ab78c47588f2cb82b4395a1268b3c4ca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab78c47588f2cb82b4395a1268b3c4ca4">initMecard</a> (JPanel mecardPanel, GridBagConstraints grid)</td></tr>
-<tr class="memdesc:ab78c47588f2cb82b4395a1268b3c4ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the MECARD input panel with labeled text fields for structured contact information.  <br /></td></tr>
-<tr class="separator:ab78c47588f2cb82b4395a1268b3c4ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070115929fdc69b249d21866a00a47cc" id="r_a070115929fdc69b249d21866a00a47cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a070115929fdc69b249d21866a00a47cc">initializeComponentNames</a> ()</td></tr>
+<tr class="memdesc:a070115929fdc69b249d21866a00a47cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns component names for identification.  <br /></td></tr>
+<tr class="separator:a070115929fdc69b249d21866a00a47cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14263ca931024d56cd9bed4af4b74c25" id="r_a14263ca931024d56cd9bed4af4b74c25"><td class="memItemLeft" align="right" valign="top">JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14263ca931024d56cd9bed4af4b74c25">initializeMainPanel</a> ()</td></tr>
+<tr class="memdesc:a14263ca931024d56cd9bed4af4b74c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the main panel containing all GUI sections.  <br /></td></tr>
+<tr class="separator:a14263ca931024d56cd9bed4af4b74c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8d451dc5d6d9c7b6700e4b688c98a3" id="r_afb8d451dc5d6d9c7b6700e4b688c98a3"><td class="memItemLeft" align="right" valign="top">JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb8d451dc5d6d9c7b6700e4b688c98a3">initializeNorthPanel</a> ()</td></tr>
+<tr class="memdesc:afb8d451dc5d6d9c7b6700e4b688c98a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the north panel containing mode selection, card panels, common fields, and the generate button.  <br /></td></tr>
+<tr class="separator:afb8d451dc5d6d9c7b6700e4b688c98a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4928478365bc812571ac037662cc5f6b" id="r_a4928478365bc812571ac037662cc5f6b"><td class="memItemLeft" align="right" valign="top">JScrollPane&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4928478365bc812571ac037662cc5f6b">initializeScrollPane</a> (JPanel mainPanel)</td></tr>
+<tr class="memdesc:a4928478365bc812571ac037662cc5f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps the main panel in a scrollable container.  <br /></td></tr>
+<tr class="separator:a4928478365bc812571ac037662cc5f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a52159db640660477196e337ec62a9b" id="r_a0a52159db640660477196e337ec62a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a52159db640660477196e337ec62a9b">initializeWindow</a> ()</td></tr>
+<tr class="memdesc:a0a52159db640660477196e337ec62a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalizes window layout and appearance.  <br /></td></tr>
+<tr class="separator:a0a52159db640660477196e337ec62a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed7e3048974882318a6519d8d36e8ec0" id="r_aed7e3048974882318a6519d8d36e8ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed7e3048974882318a6519d8d36e8ec0">mecard</a> (JPanel mecardPanel, GridBagConstraints grid)</td></tr>
+<tr class="memdesc:aed7e3048974882318a6519d8d36e8ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the MECARD input panel with labeled text fields for structured contact information.  <br /></td></tr>
+<tr class="separator:aed7e3048974882318a6519d8d36e8ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5550da33925e95999aae23f525f7c5" id="r_aeb5550da33925e95999aae23f525f7c5"><td class="memItemLeft" align="right" valign="top">GridBagConstraints&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb5550da33925e95999aae23f525f7c5">northPanelGridBagConstraints</a> ()</td></tr>
+<tr class="memdesc:aeb5550da33925e95999aae23f525f7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates default GridBagConstraints for consistent layout configuration.  <br /></td></tr>
+<tr class="separator:aeb5550da33925e95999aae23f525f7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8f82f2666e6632015dbc4a8ff2b58e" id="r_a5d8f82f2666e6632015dbc4a8ff2b58e"><td class="memItemLeft" align="right" valign="top">JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d8f82f2666e6632015dbc4a8ff2b58e">radioButtonsPanel</a> ()</td></tr>
+<tr class="memdesc:a5d8f82f2666e6632015dbc4a8ff2b58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the radio button panel for mode selection.  <br /></td></tr>
+<tr class="separator:a5d8f82f2666e6632015dbc4a8ff2b58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe4fb71ad979d6affed0b2c9629b832" id="r_abbe4fb71ad979d6affed0b2c9629b832"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbe4fb71ad979d6affed0b2c9629b832">setRatioSliderTooltipValue</a> ()</td></tr>
 <tr class="memdesc:abbe4fb71ad979d6affed0b2c9629b832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the tooltip of the ratio slider to reflect its current value as a percentage.  <br /></td></tr>
 <tr class="separator:abbe4fb71ad979d6affed0b2c9629b832"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,18 +280,20 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:ad77dc63cc1aac70e3833d39005d42f25" id="r_ad77dc63cc1aac70e3833d39005d42f25"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad77dc63cc1aac70e3833d39005d42f25">buildTitle</a> ()</td></tr>
-<tr class="memdesc:ad77dc63cc1aac70e3833d39005d42f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the application window title using metadata from the version properties.  <br /></td></tr>
-<tr class="separator:ad77dc63cc1aac70e3833d39005d42f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe4d08d96fdc7b2097daf4033bbbb9c" id="r_aefe4d08d96fdc7b2097daf4033bbbb9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefe4d08d96fdc7b2097daf4033bbbb9c">getManifestKeys</a> ()</td></tr>
 <tr class="memdesc:aefe4d08d96fdc7b2097daf4033bbbb9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads application metadata from the <code>version.properties</code> file.  <br /></td></tr>
 <tr class="separator:aefe4d08d96fdc7b2097daf4033bbbb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d7eee5ec656c89834bed84a588334f" id="r_ae9d7eee5ec656c89834bed84a588334f"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9d7eee5ec656c89834bed84a588334f">initializeTitle</a> ()</td></tr>
+<tr class="memdesc:ae9d7eee5ec656c89834bed84a588334f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the application window title using metadata from the version properties.  <br /></td></tr>
+<tr class="separator:ae9d7eee5ec656c89834bed84a588334f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9856545d05ef553c8dfddd95a850a360" id="r_a9856545d05ef553c8dfddd95a850a360"><td class="memItemLeft" align="right" valign="top">static DocumentListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9856545d05ef553c8dfddd95a850a360">simpleDocumentListener</a> (Runnable action)</td></tr>
 <tr class="memdesc:a9856545d05ef553c8dfddd95a850a360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a minimal <code><a class="el" href="">DocumentListener</a></code> that executes the given action on any document change.  <br /></td></tr>
 <tr class="separator:a9856545d05ef553c8dfddd95a850a360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:adf41f9e36bb3c7c4d42d04ff049e4ed6" id="r_adf41f9e36bb3c7c4d42d04ff049e4ed6"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf41f9e36bb3c7c4d42d04ff049e4ed6">adrField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:adf41f9e36bb3c7c4d42d04ff049e4ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e4eafb595ce66d340246ede96e15b0" id="r_a69e4eafb595ce66d340246ede96e15b0"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69e4eafb595ce66d340246ede96e15b0">bgColor</a> = Color.WHITE</td></tr>
 <tr class="separator:a69e4eafb595ce66d340246ede96e15b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedc150c4a936d0e4572f146238753712" id="r_aedc150c4a936d0e4572f146238753712"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedc150c4a936d0e4572f146238753712">bgColorButton</a> = new JButton(&quot;#FFFFFF&quot;)</td></tr>
@@ -268,6 +306,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a09f479907f8a1103c4dc5eea455f74a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45c69814709eaf34be6c0e10a89fe75b" id="r_a45c69814709eaf34be6c0e10a89fe75b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c69814709eaf34be6c0e10a89fe75b">currentMode</a> = <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c">Mode.MECARD</a></td></tr>
 <tr class="separator:a45c69814709eaf34be6c0e10a89fe75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bded55948bf3fcf33afff1d1511dc85" id="r_a7bded55948bf3fcf33afff1d1511dc85"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bded55948bf3fcf33afff1d1511dc85">emailField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:a7bded55948bf3fcf33afff1d1511dc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3790cf68d437d1127655792be562ab3d" id="r_a3790cf68d437d1127655792be562ab3d"><td class="memItemLeft" align="right" valign="top">final JTextArea&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3790cf68d437d1127655792be562ab3d">freeField</a> = new JTextArea(&quot;&quot;)</td></tr>
+<tr class="separator:a3790cf68d437d1127655792be562ab3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4a64b8ae6de7630cb161ca946eb1e3" id="r_a9f4a64b8ae6de7630cb161ca946eb1e3"><td class="memItemLeft" align="right" valign="top">final JRadioButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f4a64b8ae6de7630cb161ca946eb1e3">freeRadio</a></td></tr>
+<tr class="separator:a9f4a64b8ae6de7630cb161ca946eb1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c0e2c3d5235224fbeb017f67b18196" id="r_a13c0e2c3d5235224fbeb017f67b18196"><td class="memItemLeft" align="right" valign="top">final JScrollPane&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13c0e2c3d5235224fbeb017f67b18196">freeScrollPane</a> = new JScrollPane(<a class="el" href="#a3790cf68d437d1127655792be562ab3d">freeField</a>)</td></tr>
+<tr class="separator:a13c0e2c3d5235224fbeb017f67b18196"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad266467ae20733f06bdfedf0ff2a76e3" id="r_ad266467ae20733f06bdfedf0ff2a76e3"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad266467ae20733f06bdfedf0ff2a76e3">generateAndSaveService</a></td></tr>
 <tr class="separator:ad266467ae20733f06bdfedf0ff2a76e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a262c7c7b9075ccf754020574b3ca6855" id="r_a262c7c7b9075ccf754020574b3ca6855"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a262c7c7b9075ccf754020574b3ca6855">generateButton</a> = new JButton(&quot;\uD83D\uDCBE Enregistrer&quot;)</td></tr>
@@ -276,10 +322,22 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aafe584b7ed133f9669807fb766b40987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d0e0832459ed82263c36dd65193f01" id="r_aa0d0e0832459ed82263c36dd65193f01"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html">Loader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a> = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_loader.html">Loader</a>(<a class="el" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>)</td></tr>
 <tr class="separator:aa0d0e0832459ed82263c36dd65193f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6df1515192c53219894766a3f4071c" id="r_a7a6df1515192c53219894766a3f4071c"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a6df1515192c53219894766a3f4071c">logoField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:a7a6df1515192c53219894766a3f4071c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a309b37d78b4ad197106d3168434452f6" id="r_a309b37d78b4ad197106d3168434452f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a309b37d78b4ad197106d3168434452f6">margin</a> = 3</td></tr>
 <tr class="separator:a309b37d78b4ad197106d3168434452f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9204fb89f18f277ca8356d2b7b5acb1" id="r_ae9204fb89f18f277ca8356d2b7b5acb1"><td class="memItemLeft" align="right" valign="top">final JSlider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9204fb89f18f277ca8356d2b7b5acb1">marginSlider</a> = new JSlider(0, <a class="el" href="#aefe23a4ece414d914191c04f39e5d6b1">MINIMUM_QR_CODE_SIZE</a>, <a class="el" href="#a309b37d78b4ad197106d3168434452f6">margin</a>)</td></tr>
+<tr class="separator:ae9204fb89f18f277ca8356d2b7b5acb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c735ad3e1e8c6010403c42e4f3d5ec9" id="r_a7c735ad3e1e8c6010403c42e4f3d5ec9"><td class="memItemLeft" align="right" valign="top">final JRadioButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c735ad3e1e8c6010403c42e4f3d5ec9">mecardRadio</a></td></tr>
+<tr class="separator:a7c735ad3e1e8c6010403c42e4f3d5ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b99b17b3711187a76f921af3548939" id="r_ac4b99b17b3711187a76f921af3548939"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b99b17b3711187a76f921af3548939">nameField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:ac4b99b17b3711187a76f921af3548939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3858b49959ca85feb167c004f0f3fa7f" id="r_a3858b49959ca85feb167c004f0f3fa7f"><td class="memItemLeft" align="right" valign="top">final JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3858b49959ca85feb167c004f0f3fa7f">northPanelWrapper</a> = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0))</td></tr>
 <tr class="separator:a3858b49959ca85feb167c004f0f3fa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dc19323952c9652bf831f4e727b4989" id="r_a2dc19323952c9652bf831f4e727b4989"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dc19323952c9652bf831f4e727b4989">orgField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:a2dc19323952c9652bf831f4e727b4989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb939df3fc6ae57f32a9cec3a6a46536" id="r_aeb939df3fc6ae57f32a9cec3a6a46536"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb939df3fc6ae57f32a9cec3a6a46536">phoneField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:aeb939df3fc6ae57f32a9cec3a6a46536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80dee7dd2663784754490d076d0ebe96" id="r_a80dee7dd2663784754490d076d0ebe96"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a> = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a>()</td></tr>
 <tr class="separator:a80dee7dd2663784754490d076d0ebe96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7431e56e66fd3038341d7807e3c27509" id="r_a7431e56e66fd3038341d7807e3c27509"><td class="memItemLeft" align="right" valign="top">final transient <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html">QrCodeColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7431e56e66fd3038341d7807e3c27509">qrCodeColor</a> = new <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html">QrCodeColor</a>()</td></tr>
@@ -294,8 +352,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a043320b69991577de80f783375257a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2241fd6885a5901d2bc0480eca92611a" id="r_a2241fd6885a5901d2bc0480eca92611a"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2241fd6885a5901d2bc0480eca92611a">qrColorButton</a> = new JButton(&quot;#000000&quot;)</td></tr>
 <tr class="separator:a2241fd6885a5901d2bc0480eca92611a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4394af5e15a04c08f6d005f4b9b0e638" id="r_a4394af5e15a04c08f6d005f4b9b0e638"><td class="memItemLeft" align="right" valign="top">final JSlider&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4394af5e15a04c08f6d005f4b9b0e638">ratioSlider</a></td></tr>
+<tr class="separator:a4394af5e15a04c08f6d005f4b9b0e638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64e0ee343635d7092f65ea5d1186712" id="r_aa64e0ee343635d7092f65ea5d1186712"><td class="memItemLeft" align="right" valign="top">final JCheckBox&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa64e0ee343635d7092f65ea5d1186712">roundedModulesCheckBox</a> = new JCheckBox()</td></tr>
+<tr class="separator:aa64e0ee343635d7092f65ea5d1186712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d7e0d017188e732c23f30053c19490" id="r_a33d7e0d017188e732c23f30053c19490"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33d7e0d017188e732c23f30053c19490">sizeField</a> = new JTextField(<a class="el" href="#a2eeed49947c5553ac3c60fa5a9c00d0f">SIZE_FIELD_DEFAULT</a>, <a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:a33d7e0d017188e732c23f30053c19490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94662f11008aae918883b2b7acd79c4f" id="r_a94662f11008aae918883b2b7acd79c4f"><td class="memItemLeft" align="right" valign="top">final JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94662f11008aae918883b2b7acd79c4f">southSpacer</a> = new JPanel()</td></tr>
 <tr class="separator:a94662f11008aae918883b2b7acd79c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969394599126ddd425f72883db75c9c2" id="r_a969394599126ddd425f72883db75c9c2"><td class="memItemLeft" align="right" valign="top">final JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a969394599126ddd425f72883db75c9c2">update</a> = new JButton(&quot;\uD83D\uDD04&quot;)</td></tr>
+<tr class="separator:a969394599126ddd425f72883db75c9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9495ee2cc95cb2ac38fc6fd2e58e5844" id="r_a9495ee2cc95cb2ac38fc6fd2e58e5844"><td class="memItemLeft" align="right" valign="top">final JTextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9495ee2cc95cb2ac38fc6fd2e58e5844">urlField</a> = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td></tr>
+<tr class="separator:a9495ee2cc95cb2ac38fc6fd2e58e5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -305,7 +373,7 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:acbdb1d243b0ddb6b60a3d48b31cf3999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45df8d4366866c90e5fb074f95b80cd6" id="r_a45df8d4366866c90e5fb074f95b80cd6"><td class="memItemLeft" align="right" valign="top">static final double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45df8d4366866c90e5fb074f95b80cd6">DEFAULT_IMAGE_RATIO</a> = 0.27</td></tr>
 <tr class="separator:a45df8d4366866c90e5fb074f95b80cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c0e36d2705f7b4f72c55ac7e83facc" id="r_ac2c0e36d2705f7b4f72c55ac7e83facc"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2c0e36d2705f7b4f72c55ac7e83facc">DEFAULT_LABEL_WIDTH</a> = 140</td></tr>
+<tr class="memitem:ac2c0e36d2705f7b4f72c55ac7e83facc" id="r_ac2c0e36d2705f7b4f72c55ac7e83facc"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2c0e36d2705f7b4f72c55ac7e83facc">DEFAULT_LABEL_WIDTH</a> = 110</td></tr>
 <tr class="separator:ac2c0e36d2705f7b4f72c55ac7e83facc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f6ecc57df5d5ccf93027e96198079e" id="r_a49f6ecc57df5d5ccf93027e96198079e"><td class="memItemLeft" align="right" valign="top">static final int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f6ecc57df5d5ccf93027e96198079e">DEFAULT_QR_CODE_SIZE</a> = 400</td></tr>
 <tr class="separator:a49f6ecc57df5d5ccf93027e96198079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,7 +437,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initializes the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> GUI. </p>
-<p>Sets up the input fields, mode selection (MECARD/Free), QR code parameters, preview area, and action buttons. Configures layouts, event listeners, sliders, color choosers, and default window behavior. Also initializes automatic QR code rendering on input changes. </p>
+<p>Constructs the main window and orchestrates its setup by delegating to dedicated initialization methods. Configures layout, panels, input fields, QR code preview, and window behavior to provide a complete user interface. </p>
 <div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -381,6 +449,155 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab2e018ca62c7497c29e84f42ae870daa" name="ab2e018ca62c7497c29e84f42ae870daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e018ca62c7497c29e84f42ae870daa">&#9670;&#160;</a></span>addNorthPanelCardPanels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.addNorthPanelCardPanels </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>northPanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds MECARD and Free card panels to the north panel. </p>
+<p>Initializes both panels and registers them in the card layout. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ab2e018ca62c7497c29e84f42ae870daa_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a94ab4df98de0d05977e6a65ab75f89f0" name="a94ab4df98de0d05977e6a65ab75f89f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ab4df98de0d05977e6a65ab75f89f0">&#9670;&#160;</a></span>addNorthPanelCommonFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.addNorthPanelCommonFields </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>northPanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds common input fields to the north panel. </p>
+<p>Includes logo path, margin, ratio, colors, size, and rounded modules options. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a94ab4df98de0d05977e6a65ab75f89f0_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a9f205dfdb266d5d7f8f8899b69742663" name="a9f205dfdb266d5d7f8f8899b69742663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f205dfdb266d5d7f8f8899b69742663">&#9670;&#160;</a></span>addNorthPanelGenerateButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.addNorthPanelGenerateButton </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>northPanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the generate button to the north panel. </p>
+<p>Configures size, action listener, and initial disabled state. </p>
+
+</div>
+</div>
+<a id="aa469763b92dd7cbc6dfdb9aaa0116b33" name="aa469763b92dd7cbc6dfdb9aaa0116b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa469763b92dd7cbc6dfdb9aaa0116b33">&#9670;&#160;</a></span>addNorthPanelModeSelection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.addNorthPanelModeSelection </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>northPanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds mode selection controls (MECARD/Free) to the north panel. </p>
+<p>Configures radio buttons, update button, and mode switching listeners. </p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_aa469763b92dd7cbc6dfdb9aaa0116b33_cgraph.svg" width="100%" height="540"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="a2732ecdc4490a717352975e68fce494c" name="a2732ecdc4490a717352975e68fce494c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2732ecdc4490a717352975e68fce494c">&#9670;&#160;</a></span>addRow()</h2>
 
@@ -424,17 +641,52 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a labeled component row to a panel using GridBagLayout. </p>
-<p>The row consists of a JLabel with a tooltip and the specified JComponent. Optionally, the label font is set to bold for specific components like the name field or free text area.</p>
+<p>The row consists of a JLabel with optional tooltip text and the specified JComponent. The label is created with the provided text, and if a non-blank tooltip is given, it is set on the label. Both the label and the component are then added to the panel using the provided GridBagConstraints.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">panel</td><td>the container panel to which the row will be added </td></tr>
     <tr><td class="paramname">gbc</td><td>the GridBagConstraints used for layout configuration </td></tr>
-    <tr><td class="paramname">labelText</td><td>the text to display in the label </td></tr>
-    <tr><td class="paramname">tooltipText</td><td>the tooltip text for the label </td></tr>
-    <tr><td class="paramname">component</td><td>the JComponent to add next to the label </td></tr>
+    <tr><td class="paramname">labelText</td><td>the text to display in the label (must not be null) </td></tr>
+    <tr><td class="paramname">tooltipText</td><td>the tooltip text for the label (optional, may be null or blank) </td></tr>
+    <tr><td class="paramname">component</td><td>the JComponent to add next to the label (must not be null) </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad470e3c0750cf142dc611b1aeeda3a97" name="ad470e3c0750cf142dc611b1aeeda3a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad470e3c0750cf142dc611b1aeeda3a97">&#9670;&#160;</a></span>automaticQRCodeRenderingForFieldsAndControls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.automaticQRCodeRenderingForFieldsAndControls </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets up automatic QR code preview updates for all input fields and controls. </p>
+<p>Any change in text fields, sliders, or the "rounded modules" checkbox triggers an immediate update of the QR code preview without saving to a file. Also attaches a listener to validate input and enable or disable the generate button accordingly. </p>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ad470e3c0750cf142dc611b1aeeda3a97_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 
 </div>
 </div>
@@ -469,48 +721,12 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ab418aab8165b2e96ce08f98422655cde_cgraph.svg" width="534" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="ad77dc63cc1aac70e3833d39005d42f25" name="ad77dc63cc1aac70e3833d39005d42f25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad77dc63cc1aac70e3833d39005d42f25">&#9670;&#160;</a></span>buildTitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static String fr.softsf.canscan.CanScan.buildTitle </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructs the application window title using metadata from the version properties. </p>
-<p>Combines the application name, version, and organization into a formatted string for display in the window title.</p>
-<dl class="section return"><dt>Returns</dt><dd>a formatted title string, e.g., "📱 CanScan v1.0.0.0 • SOFT64.FR" </dd></dl>
-<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ad77dc63cc1aac70e3833d39005d42f25_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -572,6 +788,69 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a17b0a72ab305f98f86591411b6a352f2" name="a17b0a72ab305f98f86591411b6a352f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b0a72ab305f98f86591411b6a352f2">&#9670;&#160;</a></span>colorPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JPanel fr.softsf.canscan.CanScan.colorPanel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the color selection panel for QR code and background colors. </p>
+<p>Initializes buttons, listeners, and updates preview on color changes. </p>
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a17b0a72ab305f98f86591411b6a352f2_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a381579d3adc53b1122b38e7fda5c0235" name="a381579d3adc53b1122b38e7fda5c0235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381579d3adc53b1122b38e7fda5c0235">&#9670;&#160;</a></span>configureUpdateButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.configureUpdateButton </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configures the update button for version checking. </p>
+<p>Sets tooltip, browser action, and background worker execution. </p>
+
+</div>
+</div>
 <a id="a38e109eadae1f290808f2dedc0023d9d" name="a38e109eadae1f290808f2dedc0023d9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38e109eadae1f290808f2dedc0023d9d">&#9670;&#160;</a></span>dispose()</h2>
 
@@ -587,20 +866,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disposes of the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> window, ensuring all resources are explicitly released. </p>
-<p>Stops timers, cancels background workers, and frees image resources before delegating to <code><a class="el" href="">JFrame#dispose()</a></code> to prevent memory leaks and lingering threads. </p>
-<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a38e109eadae1f290808f2dedc0023d9d_cgraph.svg" width="512" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p>Closes the <a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" title="CanScan — a Swing-based application for generating QR codes.">CanScan</a> window and releases all QR code–related resources. </p>
+<p>Stops background tasks and frees image data to ensure a clean shutdown without memory leaks, then delegates to <code><a class="el" href="">JFrame#dispose()</a></code>. </p>
 
 </div>
 </div>
-<a id="ad887145828c42c5a60cc59924d48c8f2" name="ad887145828c42c5a60cc59924d48c8f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad887145828c42c5a60cc59924d48c8f2">&#9670;&#160;</a></span>disposeAllResourcesOnExit()</h2>
+<a id="a38d65dd319daee1c3288690c17e43ca5" name="a38d65dd319daee1c3288690c17e43ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d65dd319daee1c3288690c17e43ca5">&#9670;&#160;</a></span>freeCard()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -609,10 +881,14 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.CanScan.disposeAllResourcesOnExit </td>
+          <td class="memname">void fr.softsf.canscan.CanScan.freeCard </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>freePanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -622,8 +898,22 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Releases all resources used by the QR code system. </p>
-<p>Stops timers, cancels workers, and frees image data to ensure a clean shutdown and prevent memory leaks when closing the application. </p>
+<p>Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs. </p>
+<p>The text area is wrapped in a scroll pane, with line wrapping and preferred size configured for comfortable editing. Uses <code><a class="el" href="">GridBagLayout</a></code> for layout management.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freePanel</td><td>the <code><a class="el" href="">JPanel</a></code> to populate with the free text input area </td></tr>
+    <tr><td class="paramname">grid</td><td>the <code><a class="el" href="">GridBagConstraints</a></code> used to position components within the panel </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a38d65dd319daee1c3288690c17e43ca5_cgraph.svg" width="520" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -658,13 +948,40 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a9f5b25b481c247871a646961db643caf_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+
+</div>
+</div>
+<a id="a35dc553a27bacbc3156e90afeda25336" name="a35dc553a27bacbc3156e90afeda25336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35dc553a27bacbc3156e90afeda25336">&#9670;&#160;</a></span>getLogoFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String fr.softsf.canscan.CanScan.getLogoFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the logo field text for testing. </p>
 
 </div>
 </div>
@@ -693,13 +1010,40 @@ Static Private Attributes</h2></td></tr>
 
 <p>Loads application metadata from the <code>version.properties</code> file. </p>
 <p>Sets the static fields for the application version, name, and organization. Displays an error dialog if the properties file cannot be read. </p>
-<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_aefe4d08d96fdc7b2097daf4033bbbb9c_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+
+</div>
+</div>
+<a id="ace71c953591d075db668442eceabb760" name="ace71c953591d075db668442eceabb760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace71c953591d075db668442eceabb760">&#9670;&#160;</a></span>getMarginFieldIntForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fr.softsf.canscan.CanScan.getMarginFieldIntForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the margin field int for testing. </p>
 
 </div>
 </div>
@@ -729,18 +1073,18 @@ Static Private Attributes</h2></td></tr>
 <p>Builds and returns a <code><a class="el" href="">QrInput</a></code> object containing all current user inputs and settings. </p>
 <p>Aggregates data from MECARD or FREE fields, visual settings (colors, size, margin, logo, rounded modules), and layout parameters to configure QR code generation.</p>
 <dl class="section return"><dt>Returns</dt><dd>a fully populated <code><a class="el" href="">QrInput</a></code> instance for QR code generation </dd></dl>
-<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-12" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a2d26dcd1ae708eae46dba8952351aa1a_cgraph.svg" width="492" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="addd7b7d7f9cc810756dbbb66218414d4" name="addd7b7d7f9cc810756dbbb66218414d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd7b7d7f9cc810756dbbb66218414d4">&#9670;&#160;</a></span>initFreeCard()</h2>
+<a id="a070115929fdc69b249d21866a00a47cc" name="a070115929fdc69b249d21866a00a47cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070115929fdc69b249d21866a00a47cc">&#9670;&#160;</a></span>initializeComponentNames()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,53 +1093,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.CanScan.initFreeCard </td>
-          <td>(</td>
-          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>freePanel</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initializes the FREE mode input panel with a multiline text area for arbitrary text or URLs. </p>
-<p>The text area is wrapped in a scroll pane, with line wrapping and preferred size configured for comfortable editing. Uses <code><a class="el" href="">GridBagLayout</a></code> for layout management.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">freePanel</td><td>the <code><a class="el" href="">JPanel</a></code> to populate with the free text input area </td></tr>
-    <tr><td class="paramname">grid</td><td>the <code><a class="el" href="">GridBagConstraints</a></code> used to position components within the panel </td></tr>
-  </table>
-  </dd>
-</dl>
-<div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_addd7b7d7f9cc810756dbbb66218414d4_cgraph.svg" width="487" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a4047170747f52f54ee69ddbc834c5373" name="a4047170747f52f54ee69ddbc834c5373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4047170747f52f54ee69ddbc834c5373">&#9670;&#160;</a></span>initializeAutomaticQRCodeRendering()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fr.softsf.canscan.CanScan.initializeAutomaticQRCodeRendering </td>
+          <td class="memname">void fr.softsf.canscan.CanScan.initializeComponentNames </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -808,20 +1106,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets up automatic QR code preview updates for all input fields and controls. </p>
-<p>Any change in text fields, sliders, or the "rounded modules" checkbox triggers an immediate update of the QR code preview without saving to a file. Also attaches a listener to validate input and enable or disable the generate button accordingly. </p>
-<div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a4047170747f52f54ee69ddbc834c5373_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
+<p>Assigns component names for identification. </p>
+<p>Used in testing and configuration generation to reference GUI elements reliably. </p>
 
 </div>
 </div>
-<a id="ab78c47588f2cb82b4395a1268b3c4ca4" name="ab78c47588f2cb82b4395a1268b3c4ca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab78c47588f2cb82b4395a1268b3c4ca4">&#9670;&#160;</a></span>initMecard()</h2>
+<a id="a14263ca931024d56cd9bed4af4b74c25" name="a14263ca931024d56cd9bed4af4b74c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14263ca931024d56cd9bed4af4b74c25">&#9670;&#160;</a></span>initializeMainPanel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -830,14 +1121,10 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.CanScan.initMecard </td>
+          <td class="memname">JPanel fr.softsf.canscan.CanScan.initializeMainPanel </td>
           <td>(</td>
-          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>mecardPanel</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -847,22 +1134,177 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes the MECARD input panel with labeled text fields for structured contact information. </p>
-<p>The panel will include fields for name, organization, phone, email, address, and URL, arranged using <code><a class="el" href="">GridBagLayout</a></code>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mecardPanel</td><td>the <code><a class="el" href="">JPanel</a></code> to populate with MECARD input fields </td></tr>
-    <tr><td class="paramname">grid</td><td>the <code><a class="el" href="">GridBagConstraints</a></code> used to position components within the panel </td></tr>
-  </table>
-  </dd>
-</dl>
-<div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+<p>Creates the main panel containing all GUI sections. </p>
+<p>Centers the QR code label, registers resize listeners for dynamic updates, and adds the north panel, preview area, and spacer in a BorderLayout. </p>
+<div id="dynsection-13" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ab78c47588f2cb82b4395a1268b3c4ca4_cgraph.svg" width="487" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a14263ca931024d56cd9bed4af4b74c25_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+
+</div>
+</div>
+<a id="afb8d451dc5d6d9c7b6700e4b688c98a3" name="afb8d451dc5d6d9c7b6700e4b688c98a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8d451dc5d6d9c7b6700e4b688c98a3">&#9670;&#160;</a></span>initializeNorthPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JPanel fr.softsf.canscan.CanScan.initializeNorthPanel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds the north panel containing mode selection, card panels, common fields, and the generate button. </p>
+<p>Uses a GridBagLayout with consistent spacing and borders. </p>
+<div id="dynsection-14" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_afb8d451dc5d6d9c7b6700e4b688c98a3_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a4928478365bc812571ac037662cc5f6b" name="a4928478365bc812571ac037662cc5f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4928478365bc812571ac037662cc5f6b">&#9670;&#160;</a></span>initializeScrollPane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JScrollPane fr.softsf.canscan.CanScan.initializeScrollPane </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>mainPanel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wraps the main panel in a scrollable container. </p>
+<p>Removes borders and configures smooth vertical scrolling. </p>
+
+</div>
+</div>
+<a id="a358629f85831dc6cd4978c8854d88561" name="a358629f85831dc6cd4978c8854d88561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358629f85831dc6cd4978c8854d88561">&#9670;&#160;</a></span>initializeSliders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.initializeSliders </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configures sliders for logo margin and ratio. </p>
+<p>Sets tick spacing, labels, and listeners to update tooltips dynamically. </p>
+<div id="dynsection-15" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-15-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-15-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a358629f85831dc6cd4978c8854d88561_cgraph.svg" width="487" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae9d7eee5ec656c89834bed84a588334f" name="ae9d7eee5ec656c89834bed84a588334f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d7eee5ec656c89834bed84a588334f">&#9670;&#160;</a></span>initializeTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String fr.softsf.canscan.CanScan.initializeTitle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the application window title using metadata from the version properties. </p>
+<p>Combines the application name, version, and organization into a formatted string for display in the window title.</p>
+<dl class="section return"><dt>Returns</dt><dd>a formatted title string, e.g., "📱 CanScan v1.0.0.0 • Soft64.fr" </dd></dl>
+<div id="dynsection-16" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_ae9d7eee5ec656c89834bed84a588334f_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a0a52159db640660477196e337ec62a9b" name="a0a52159db640660477196e337ec62a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a52159db640660477196e337ec62a9b">&#9670;&#160;</a></span>initializeWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.initializeWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finalizes window layout and appearance. </p>
+<p>Packs components, adjusts size for QR code display, and centers the window on screen. </p>
 
 </div>
 </div>
@@ -897,13 +1339,311 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-12" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-17" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a3452eff1010c69d3f01d23dc2fac7e8e_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+
+</div>
+</div>
+<a id="aed7e3048974882318a6519d8d36e8ec0" name="aed7e3048974882318a6519d8d36e8ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7e3048974882318a6519d8d36e8ec0">&#9670;&#160;</a></span>mecard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.mecard </td>
+          <td>(</td>
+          <td class="paramtype">JPanel</td>          <td class="paramname"><span class="paramname"><em>mecardPanel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GridBagConstraints</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the MECARD input panel with labeled text fields for structured contact information. </p>
+<p>The panel will include fields for name, organization, phone, email, address, and URL, arranged using <code><a class="el" href="">GridBagLayout</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mecardPanel</td><td>the <code><a class="el" href="">JPanel</a></code> to populate with MECARD input fields </td></tr>
+    <tr><td class="paramname">grid</td><td>the <code><a class="el" href="">GridBagConstraints</a></code> used to position components within the panel </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-18" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_aed7e3048974882318a6519d8d36e8ec0_cgraph.svg" width="512" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aeb5550da33925e95999aae23f525f7c5" name="aeb5550da33925e95999aae23f525f7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5550da33925e95999aae23f525f7c5">&#9670;&#160;</a></span>northPanelGridBagConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GridBagConstraints fr.softsf.canscan.CanScan.northPanelGridBagConstraints </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates default GridBagConstraints for consistent layout configuration. </p>
+<p>Defines insets, fill behavior, and initial grid positions. </p>
+
+</div>
+</div>
+<a id="a5d8f82f2666e6632015dbc4a8ff2b58e" name="a5d8f82f2666e6632015dbc4a8ff2b58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8f82f2666e6632015dbc4a8ff2b58e">&#9670;&#160;</a></span>radioButtonsPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JPanel fr.softsf.canscan.CanScan.radioButtonsPanel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the radio button panel for mode selection. </p>
+<p>Aligns MECARD and Free options side by side. </p>
+<div id="dynsection-19" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a5d8f82f2666e6632015dbc4a8ff2b58e_cgraph.svg" width="220" height="78"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a480afb2507eb780dcc6f77c0a4334d59" name="a480afb2507eb780dcc6f77c0a4334d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480afb2507eb780dcc6f77c0a4334d59">&#9670;&#160;</a></span>setAdrFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setAdrFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the address field text for testing. </p>
+
+</div>
+</div>
+<a id="a968f0f590c2211f78d1f832a2ee40b55" name="a968f0f590c2211f78d1f832a2ee40b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968f0f590c2211f78d1f832a2ee40b55">&#9670;&#160;</a></span>setEmailFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setEmailFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the email field text for testing. </p>
+
+</div>
+</div>
+<a id="aa770b51cbc0a4a201711b936bd4748b8" name="aa770b51cbc0a4a201711b936bd4748b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa770b51cbc0a4a201711b936bd4748b8">&#9670;&#160;</a></span>setLogoFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setLogoFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the logo field text for testing. </p>
+
+</div>
+</div>
+<a id="a9f8732331b81ec5fcadbb39c9389a016" name="a9f8732331b81ec5fcadbb39c9389a016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8732331b81ec5fcadbb39c9389a016">&#9670;&#160;</a></span>setMarginSliderValueForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setMarginSliderValueForTests </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the margin slider value for testing. </p>
+
+</div>
+</div>
+<a id="a8affcfaf13c69cd340e48e3e7d10ae86" name="a8affcfaf13c69cd340e48e3e7d10ae86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8affcfaf13c69cd340e48e3e7d10ae86">&#9670;&#160;</a></span>setNameFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setNameFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the name field text for testing. </p>
+
+</div>
+</div>
+<a id="a56273b7ccb4290c7d7aad2132452902e" name="a56273b7ccb4290c7d7aad2132452902e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56273b7ccb4290c7d7aad2132452902e">&#9670;&#160;</a></span>setOrgFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setOrgFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the organization field text for testing. </p>
+
+</div>
+</div>
+<a id="a323e90f802787c388da8a03c9b6e47d7" name="a323e90f802787c388da8a03c9b6e47d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323e90f802787c388da8a03c9b6e47d7">&#9670;&#160;</a></span>setPhoneFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setPhoneFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the phone field text for testing. </p>
 
 </div>
 </div>
@@ -932,6 +1672,114 @@ Static Private Attributes</h2></td></tr>
 
 <p>Updates the tooltip of the ratio slider to reflect its current value as a percentage. </p>
 <p>Provides immediate feedback to the user on the selected logo visibility ratio when hovering over the slider. </p>
+
+</div>
+</div>
+<a id="abf1cb04881a0e23f0b843eed12ce05c7" name="abf1cb04881a0e23f0b843eed12ce05c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1cb04881a0e23f0b843eed12ce05c7">&#9670;&#160;</a></span>setRatioSliderValueForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setRatioSliderValueForTests </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the ratio slider value for testing. </p>
+
+</div>
+</div>
+<a id="a07d13a0cff9f6a08c3d17f0770746139" name="a07d13a0cff9f6a08c3d17f0770746139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d13a0cff9f6a08c3d17f0770746139">&#9670;&#160;</a></span>setRoundedModulesSelectedForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setRoundedModulesSelectedForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the rounded modules checkbox state for testing. </p>
+
+</div>
+</div>
+<a id="ab93eb7e856d16e731c3df3a5d50e3ac9" name="ab93eb7e856d16e731c3df3a5d50e3ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93eb7e856d16e731c3df3a5d50e3ac9">&#9670;&#160;</a></span>setSizeFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setSizeFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the size field text for testing. </p>
+
+</div>
+</div>
+<a id="af8ca8fca38ccbc56063f1cce9e5b7528" name="af8ca8fca38ccbc56063f1cce9e5b7528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ca8fca38ccbc56063f1cce9e5b7528">&#9670;&#160;</a></span>setUrlFieldTextForTests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.CanScan.setUrlFieldTextForTests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the URL field text for testing. </p>
 
 </div>
 </div>
@@ -1001,11 +1849,11 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-13" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-13-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-20" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-13-content" class="dyncontent" style="display:none;">
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_can_scan_a428c742b098fa27d4c8984c1030c238d_cgraph.svg" width="100%" height="515"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
@@ -1170,7 +2018,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1287,50 +2135,6 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
-<a id="a990df2b47ccdc9f236ccbcb16b3ce7d3" name="a990df2b47ccdc9f236ccbcb16b3ce7d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a990df2b47ccdc9f236ccbcb16b3ce7d3">&#9670;&#160;</a></span>charHeight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final int fr.softsf.canscan.CanScan.charHeight = fm.getHeight()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a61ad89b3e35b964d1cde8dddcef1240e" name="a61ad89b3e35b964d1cde8dddcef1240e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61ad89b3e35b964d1cde8dddcef1240e">&#9670;&#160;</a></span>charWidth</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final int fr.softsf.canscan.CanScan.charWidth = fm.charWidth('W')</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="acbdb1d243b0ddb6b60a3d48b31cf3999" name="acbdb1d243b0ddb6b60a3d48b31cf3999"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbdb1d243b0ddb6b60a3d48b31cf3999">&#9670;&#160;</a></span>COLOR_BUTTONS_GAP</h2>
 
@@ -1407,7 +2211,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final int fr.softsf.canscan.CanScan.DEFAULT_LABEL_WIDTH = 140</td>
+          <td class="memname">final int fr.softsf.canscan.CanScan.DEFAULT_LABEL_WIDTH = 110</td>
         </tr>
       </table>
   </td>
@@ -1456,29 +2260,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aee408f2465747251249ac7a09d8834f4" name="aee408f2465747251249ac7a09d8834f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee408f2465747251249ac7a09d8834f4">&#9670;&#160;</a></span>fm</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">final FontMetrics fr.softsf.canscan.CanScan.fm = freeField.getFontMetrics(freeField.getFont())</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1500,15 +2282,15 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a3f8380095b3e2df7d75ca2e01ec4248f" name="a3f8380095b3e2df7d75ca2e01ec4248f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f8380095b3e2df7d75ca2e01ec4248f">&#9670;&#160;</a></span>freeRadio</h2>
+<a id="a9f4a64b8ae6de7630cb161ca946eb1e3" name="a9f4a64b8ae6de7630cb161ca946eb1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4a64b8ae6de7630cb161ca946eb1e3">&#9670;&#160;</a></span>freeRadio</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1517,16 +2299,20 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JRadioButton fr.softsf.canscan.CanScan.freeRadio = new JRadioButton(Mode.FREE.text())</td>
+          <td class="memname">final JRadioButton fr.softsf.canscan.CanScan.freeRadio</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> JRadioButton(<span class="stringliteral">&quot;&lt;html&gt;&lt;b&gt;&quot;</span> + <a class="code hl_class" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a>.<a class="code hl_variable" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a8be52de21c11c45113aa4af8104c064e">FREE</a>.text() + <span class="stringliteral">&quot;&lt;/b&gt;&lt;/html&gt;&quot;</span>)</div>
+<div class="ttc" id="aenumfr_1_1softsf_1_1canscan_1_1model_1_1_mode_html"><div class="ttname"><a href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">fr.softsf.canscan.model.Mode</a></div><div class="ttdoc">Application operation modes.</div><div class="ttdef"><b>Definition</b> Mode.java:9</div></div>
+<div class="ttc" id="aenumfr_1_1softsf_1_1canscan_1_1model_1_1_mode_html_a8be52de21c11c45113aa4af8104c064e"><div class="ttname"><a href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a8be52de21c11c45113aa4af8104c064e">fr.softsf.canscan.model.Mode.FREE</a></div><div class="ttdeci">FREE</div><div class="ttdef"><b>Definition</b> Mode.java:11</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a13c0e2c3d5235224fbeb017f67b18196" name="a13c0e2c3d5235224fbeb017f67b18196"></a>
@@ -1544,7 +2330,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1616,7 +2402,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>)</div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a80dee7dd2663784754490d076d0ebe96"><div class="ttname"><a href="#a80dee7dd2663784754490d076d0ebe96">fr.softsf.canscan.CanScan.qrCodeBufferedImage</a></div><div class="ttdeci">final transient QrCodeBufferedImage qrCodeBufferedImage</div><div class="ttdef"><b>Definition</b> CanScan.java:138</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a80dee7dd2663784754490d076d0ebe96"><div class="ttname"><a href="#a80dee7dd2663784754490d076d0ebe96">fr.softsf.canscan.CanScan.qrCodeBufferedImage</a></div><div class="ttdeci">final transient QrCodeBufferedImage qrCodeBufferedImage</div><div class="ttdef"><b>Definition</b> CanScan.java:142</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">fr.softsf.canscan.service.GenerateAndSaveService</a></div><div class="ttdoc">Service dedicated to QR code generation and saving.</div><div class="ttdef"><b>Definition</b> GenerateAndSaveService.java:28</div></div>
 </div><!-- fragment -->
 </div>
@@ -1726,7 +2512,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1814,7 +2600,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1843,8 +2629,8 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
-<a id="a99c9612e0aca8b22e30700a73383c56d" name="a99c9612e0aca8b22e30700a73383c56d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99c9612e0aca8b22e30700a73383c56d">&#9670;&#160;</a></span>mecardRadio</h2>
+<a id="a7c735ad3e1e8c6010403c42e4f3d5ec9" name="a7c735ad3e1e8c6010403c42e4f3d5ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c735ad3e1e8c6010403c42e4f3d5ec9">&#9670;&#160;</a></span>mecardRadio</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1853,16 +2639,19 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JRadioButton fr.softsf.canscan.CanScan.mecardRadio = new JRadioButton(Mode.MECARD.text())</td>
+          <td class="memname">final JRadioButton fr.softsf.canscan.CanScan.mecardRadio</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> JRadioButton(<span class="stringliteral">&quot;&lt;html&gt;&lt;b&gt;&quot;</span> + <a class="code hl_class" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a>.<a class="code hl_variable" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c">MECARD</a>.text() + <span class="stringliteral">&quot;&lt;/b&gt;&lt;/html&gt;&quot;</span>)</div>
+<div class="ttc" id="aenumfr_1_1softsf_1_1canscan_1_1model_1_1_mode_html_acfb9406c32974c8e4591625a131bf90c"><div class="ttname"><a href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#acfb9406c32974c8e4591625a131bf90c">fr.softsf.canscan.model.Mode.MECARD</a></div><div class="ttdeci">MECARD</div><div class="ttdef"><b>Definition</b> Mode.java:10</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aefe23a4ece414d914191c04f39e5d6b1" name="aefe23a4ece414d914191c04f39e5d6b1"></a>
@@ -1931,8 +2720,8 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
-<a id="ab72088e51da563d2241cbd8a8eef1ccc" name="ab72088e51da563d2241cbd8a8eef1ccc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab72088e51da563d2241cbd8a8eef1ccc">&#9670;&#160;</a></span>nameField</h2>
+<a id="ac4b99b17b3711187a76f921af3548939" name="ac4b99b17b3711187a76f921af3548939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b99b17b3711187a76f921af3548939">&#9670;&#160;</a></span>nameField</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1941,12 +2730,12 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JTextField fr.softsf.canscan.CanScan.nameField = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td>
+          <td class="memname">final JTextField fr.softsf.canscan.CanScan.nameField = new JTextField(<a class="el" href="#a00fc1fdf34314d1783b362bc932e817f">TEXT_FIELDS_COLUMNS</a>)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2012,7 +2801,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2034,7 +2823,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2150,9 +2939,9 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">            <span class="keyword">new</span> <a class="code hl_class" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">DynamicQrCodePreview</a>(<a class="code hl_variable" href="#a80dee7dd2663784754490d076d0ebe96">qrCodeBufferedImage</a>, <a class="code hl_variable" href="#a48bdd1461f2a0a876e4561514c29fdf6">qrCodeResize</a>, <a class="code hl_variable" href="#ac7221699a8aa1d73cc7c9de900b24636">qrCodeLabel</a>, <a class="code hl_variable" href="#aa0d0e0832459ed82263c36dd65193f01">loader</a>)</div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a48bdd1461f2a0a876e4561514c29fdf6"><div class="ttname"><a href="#a48bdd1461f2a0a876e4561514c29fdf6">fr.softsf.canscan.CanScan.qrCodeResize</a></div><div class="ttdeci">final transient DynamicQrCodeResize qrCodeResize</div><div class="ttdef"><b>Definition</b> CanScan.java:139</div></div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_aa0d0e0832459ed82263c36dd65193f01"><div class="ttname"><a href="#aa0d0e0832459ed82263c36dd65193f01">fr.softsf.canscan.CanScan.loader</a></div><div class="ttdeci">final transient Loader loader</div><div class="ttdef"><b>Definition</b> CanScan.java:137</div></div>
-<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_ac7221699a8aa1d73cc7c9de900b24636"><div class="ttname"><a href="#ac7221699a8aa1d73cc7c9de900b24636">fr.softsf.canscan.CanScan.qrCodeLabel</a></div><div class="ttdeci">final JLabel qrCodeLabel</div><div class="ttdef"><b>Definition</b> CanScan.java:136</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a48bdd1461f2a0a876e4561514c29fdf6"><div class="ttname"><a href="#a48bdd1461f2a0a876e4561514c29fdf6">fr.softsf.canscan.CanScan.qrCodeResize</a></div><div class="ttdeci">final transient DynamicQrCodeResize qrCodeResize</div><div class="ttdef"><b>Definition</b> CanScan.java:143</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_aa0d0e0832459ed82263c36dd65193f01"><div class="ttname"><a href="#aa0d0e0832459ed82263c36dd65193f01">fr.softsf.canscan.CanScan.loader</a></div><div class="ttdeci">final transient Loader loader</div><div class="ttdef"><b>Definition</b> CanScan.java:141</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_ac7221699a8aa1d73cc7c9de900b24636"><div class="ttname"><a href="#ac7221699a8aa1d73cc7c9de900b24636">fr.softsf.canscan.CanScan.qrCodeLabel</a></div><div class="ttdeci">final JLabel qrCodeLabel</div><div class="ttdef"><b>Definition</b> CanScan.java:134</div></div>
 <div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview_html"><div class="ttname"><a href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html">fr.softsf.canscan.ui.DynamicQrCodePreview</a></div><div class="ttdoc">Asynchronously generates and displays a QR code preview in a Swing UI.</div><div class="ttdef"><b>Definition</b> DynamicQrCodePreview.java:39</div></div>
 </div><!-- fragment -->
 </div>
@@ -2258,16 +3047,20 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final JSlider fr.softsf.canscan.CanScan.ratioSlider = new JSlider(0, <a class="el" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>, (int) (<a class="el" href="#aafe584b7ed133f9669807fb766b40987">imageRatio</a> * <a class="el" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>))</td>
+          <td class="memname">final JSlider fr.softsf.canscan.CanScan.ratioSlider</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">            <span class="keyword">new</span> JSlider(0, <a class="code hl_variable" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>, (<span class="keywordtype">int</span>) (<a class="code hl_variable" href="#aafe584b7ed133f9669807fb766b40987">imageRatio</a> * <a class="code hl_variable" href="#a3a020400c72f67bcd6070472f709aff0">MAX_PERCENTAGE</a>))</div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_a3a020400c72f67bcd6070472f709aff0"><div class="ttname"><a href="#a3a020400c72f67bcd6070472f709aff0">fr.softsf.canscan.CanScan.MAX_PERCENTAGE</a></div><div class="ttdeci">static final int MAX_PERCENTAGE</div><div class="ttdef"><b>Definition</b> CanScan.java:83</div></div>
+<div class="ttc" id="aclassfr_1_1softsf_1_1canscan_1_1_can_scan_html_aafe584b7ed133f9669807fb766b40987"><div class="ttname"><a href="#aafe584b7ed133f9669807fb766b40987">fr.softsf.canscan.CanScan.imageRatio</a></div><div class="ttdeci">double imageRatio</div><div class="ttdef"><b>Definition</b> CanScan.java:104</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa64e0ee343635d7092f65ea5d1186712" name="aa64e0ee343635d7092f65ea5d1186712"></a>
@@ -2285,7 +3078,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2329,7 +3122,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2380,8 +3173,8 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 
 </div>
 </div>
-<a id="a55f4f599a73d982ce369e534a892c845" name="a55f4f599a73d982ce369e534a892c845"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55f4f599a73d982ce369e534a892c845">&#9670;&#160;</a></span>update</h2>
+<a id="a969394599126ddd425f72883db75c9c2" name="a969394599126ddd425f72883db75c9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a969394599126ddd425f72883db75c9c2">&#9670;&#160;</a></span>update</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2390,12 +3183,12 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JButton fr.softsf.canscan.CanScan.update = new JButton(&quot;\uD83D\uDD04&quot;)</td>
+          <td class="memname">final JButton fr.softsf.canscan.CanScan.update = new JButton(&quot;\uD83D\uDD04&quot;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2417,7 +3210,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2477,7 +3270,7 @@ FREE mode: <code class="JavaDocCode">freeField</code> must be non-empty. </li>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html">CanScan</a></li>
-    <li class="footer">Generated on Wed Nov 12 2025 08:20:35 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Fri Nov 14 2025 10:58:53 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

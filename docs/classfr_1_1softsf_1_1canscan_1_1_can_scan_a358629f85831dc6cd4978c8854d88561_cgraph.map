@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.CanScan.initializeSliders" name="fr.softsf.canscan.CanScan.initializeSliders">
+<area shape="rect" id="Node000001" title="Configures sliders for logo margin and ratio." alt="" coords="5,5,234,48"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abbe4fb71ad979d6affed0b2c9629b832" title="Updates the tooltip of the ratio slider to reflect its current value as a percentage." alt="" coords="282,5,481,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,24,266,24,266,29,234,29"/>
+</map>

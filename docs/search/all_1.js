@@ -12,9 +12,8 @@ var searchData=
   ['builddata_9',['buildData',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#ab3f2c62cde623f2be929c405a97bd5ff',1,'fr::softsf::canscan::service::DataBuilderService']]],
   ['buildmecard_10',['buildMecard',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#ae4a03098abc5bc1f7a6142403703680e',1,'fr::softsf::canscan::service::DataBuilderService']]],
   ['buildpreviewimage_11',['buildPreviewImage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#a21198a66d871f708a8759fb6b6e0c74b',1,'fr::softsf::canscan::ui::DynamicQrCodePreview']]],
-  ['buildtitle_12',['buildTitle',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad77dc63cc1aac70e3833d39005d42f25',1,'fr::softsf::canscan::CanScan']]],
-  ['button_13',['BUTTON',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#ad676ef92ccda7d3b47ebc547da437211',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['button_5fcolor_5ficon_5ftext_5fgap_14',['BUTTON_COLOR_ICON_TEXT_GAP',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a290d1ff77b9c97b46f230e0e3ebc4775',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['button_5ficon_5fcolor_5fsize_15',['BUTTON_ICON_COLOR_SIZE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a57325ae4d52ca9b01660a90b67325b11',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['bytes_5fper_5fkilobyte_16',['BYTES_PER_KILOBYTE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#afdeed865b70ae1d241b8f264e25db8d9',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]]
+  ['button_12',['BUTTON',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#ad676ef92ccda7d3b47ebc547da437211',1,'fr::softsf::canscan::ui::QrCodeColor']]],
+  ['button_5fcolor_5ficon_5ftext_5fgap_13',['BUTTON_COLOR_ICON_TEXT_GAP',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a290d1ff77b9c97b46f230e0e3ebc4775',1,'fr::softsf::canscan::ui::QrCodeColor']]],
+  ['button_5ficon_5fcolor_5fsize_14',['BUTTON_ICON_COLOR_SIZE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a57325ae4d52ca9b01660a90b67325b11',1,'fr::softsf::canscan::ui::QrCodeColor']]],
+  ['bytes_5fper_5fkilobyte_15',['BYTES_PER_KILOBYTE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#afdeed865b70ae1d241b8f264e25db8d9',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]]
 ];
