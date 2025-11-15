@@ -453,8 +453,8 @@ public class CanScan extends JFrame {
                 northPanel,
                 grid,
                 "Dimension ⚠",
-                "<html>Le côté du code QR en pixels.<br>⚠ Peut dégrader les performances de"
-                        + " l'application.</html>",
+                "<html>Le côté du code QR en pixels.<br>⚠ Une trop grande taille, peut dégrader les"
+                        + " performances de l'application.</html>",
                 sizeField);
         addRow(
                 northPanel,
