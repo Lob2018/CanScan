@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Objects;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
@@ -31,7 +32,7 @@ import fr.softsf.canscan.util.StringConstants;
  *
  * <p>Each instance manages the lifecycle of a QR code preview for a specific {@link JLabel} and
  * collaborates with a {@link DynamicQrCodeResize} instance for dynamic resizing. The optional
- * {@link Loader} can show a wait/progress indicator during background processing.
+ * {@link JProgressBar} can show a wait/progress indicator during background processing.
  *
  * <p>Resources are properly managed: previous images are freed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
@@ -52,13 +53,13 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
      *     resizing; must not be {@code null}
      * @param qrCodeLabel the label where the generated QR code preview will be displayed; must not
      *     be {@code null}
-     * @param loader optional loader to indicate background processing; can be {@code null}
+     * @param loader loader to indicate background processing
      */
     public DynamicQrCodePreview(
             QrCodeBufferedImage qrCodeBufferedImage,
             DynamicQrCodeResize qrCodeResize,
             JLabel qrCodeLabel,
-            Loader loader) {
+            JProgressBar loader) {
         super(loader);
         this.qrCodeBufferedImage = qrCodeBufferedImage;
         this.qrCodeResize = qrCodeResize;
@@ -176,7 +177,7 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
             }
             SwingUtilities.invokeLater(
                     () ->
-                            Popup.INSTANCE.showDialog(
+                            MyPopup.INSTANCE.showDialog(
                                     "Pas de rendu du code QR\n",
                                     ex.getMessage(),
                                     StringConstants.ERREUR.getValue()));

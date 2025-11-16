@@ -7,12 +7,13 @@ package fr.softsf.canscan.service;
 
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
+import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 import javax.swing.Timer;
 
 import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.ui.Loader;
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
+import fr.softsf.canscan.util.Checker;
 
 /**
  * Base class managing asynchronous QR code tasks with a unified workflow.
@@ -27,17 +28,15 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
     protected Timer debounceTimer;
     protected SwingWorker<T, Void> worker;
     protected QrInput qrInput;
-    protected final Loader loader;
+    protected final JProgressBar loader;
 
     /**
-     * Initializes the QR code worker with an optional loader.
+     * Initializes the QR code worker with a required loader.
      *
-     * <p>The loader, if provided, is used to display a wait or progress indicator while background
-     * QR code tasks execute.
-     *
-     * @param loader optional {@link Loader} for progress indication; may be {@code null}
+     * @param loader {@link JProgressBar} for progress indication; must not be {@code null}
      */
-    protected AbstractDynamicQrCodeWorker(Loader loader) {
+    protected AbstractDynamicQrCodeWorker(JProgressBar loader) {
+        Checker.INSTANCE.checkNPE(loader, "AbstractDynamicQrCodeWorker", "loader");
         this.loader = loader;
     }
 
@@ -83,7 +82,7 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
      * centralize post-execution logic and avoid duplication in subclasses.
      */
     protected void handleWorkerDone() {
-        stopLoaderIfPresent();
+        stopLoader();
         try {
             if (worker == null || worker.isCancelled()) {
                 return;
@@ -100,7 +99,7 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
     /** Called when the worker fails or is cancelled. */
     protected void onWorkerFailure(Exception ex) {
         resetWorker();
-        Popup.INSTANCE.showDialog("Erreur d’exécution", ex.getMessage(), "Erreur");
+        MyPopup.INSTANCE.showDialog("Erreur d’exécution", ex.getMessage(), "Erreur");
     }
 
     /**
@@ -115,9 +114,7 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
                 new Timer(
                         delayMs,
                         e -> {
-                            if (loader != null) {
-                                loader.startAndAdjustWaitIcon();
-                            }
+                            loader.setVisible(true);
                             worker = createWorker();
                             worker.execute();
                         });
@@ -129,11 +126,11 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
      * Resets the current worker and associated resources.
      *
      * <p>Stops the debounce timer, cancels any running {@link SwingWorker}, clears allocated
-     * resources, and stops the {@link Loader} indicator. Prepares the worker for a new task or
-     * handles failure cleanup.
+     * resources, and stops the {@link JProgressBar} indicator. Prepares the worker for a new task
+     * or handles failure cleanup.
      */
     private void resetWorker() {
-        stopLoaderIfPresent();
+        stopLoader();
         stopDebounceTimer();
         cancelWorker();
         clearResources();
@@ -149,10 +146,8 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
         qrInput = null;
     }
 
-    /** Stops the loader's wait indicator if assigned. */
-    protected void stopLoaderIfPresent() {
-        if (loader != null) {
-            loader.stopWaitIcon();
-        }
+    /** Stops the loader's wait indicator. */
+    protected void stopLoader() {
+        loader.setVisible(false);
     }
 }

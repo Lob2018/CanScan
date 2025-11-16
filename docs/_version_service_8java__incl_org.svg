@@ -296,7 +296,7 @@
 <title>Node17</title>
 <g id="a_Node000017"><a xlink:title=" ">
 <polygon fill="#e0e0e0" stroke="#999999" points="2232.12,-26 2101.38,-26 2101.38,-6 2232.12,-6 2232.12,-26"/>
-<text text-anchor="middle" x="2166.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.Popup</text>
+<text text-anchor="middle" x="2166.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.MyPopup</text>
 </a>
 </g>
 </g>

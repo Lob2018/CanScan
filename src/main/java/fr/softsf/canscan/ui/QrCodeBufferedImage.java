@@ -493,7 +493,7 @@ public class QrCodeBufferedImage {
         try (InputStream in = new FileInputStream(config.logoFile())) {
             logo = ImageIO.read(in);
             if (logo == null) {
-                Popup.INSTANCE.showDialog(
+                MyPopup.INSTANCE.showDialog(
                         "",
                         "Ce format de logo n'est pas pris en charge (seulement PNG, JPG, ou JPEG).",
                         "Information");

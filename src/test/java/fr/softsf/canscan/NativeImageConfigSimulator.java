@@ -219,7 +219,7 @@ public class NativeImageConfigSimulator {
                     chooserLocation.y + fileChooser.getHeight() / 2);
             robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
             robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
-            robot.delay(300);
+            robot.delay(500);
             boolean popupVisible = false;
             for (Window window : Window.getWindows()) {
                 if (window.isVisible()

@@ -5,15 +5,19 @@
  */
 package fr.softsf.canscan.ui;
 
+import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
 import fr.softsf.canscan.model.QrInput;
 import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
+import fr.softsf.canscan.util.IntConstants;
 
 /**
  * Asynchronously resizes a generated QR code image for display in a Swing UI.
@@ -23,8 +27,8 @@ import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
  * unnecessary scaling when multiple layout or configuration changes occur rapidly.
  *
  * <p>Each instance manages resizing for a specific {@link JLabel}, working with a {@link
- * QrCodeBufferedImage} as the source image. The optional {@link Loader} can show a wait/progress
- * indicator while resizing is in progress.
+ * QrCodeBufferedImage} as the source image. The optional {@link JProgressBar} can show a
+ * wait/progress indicator while resizing is in progress.
  *
  * <p>Resources are properly managed: previous icons are disposed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
@@ -43,10 +47,10 @@ public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> 
      * @param qrCodeBufferedImage the source QR code image; must not be {@code null}
      * @param qrCodeLabel the label where the resized QR code will be displayed; must not be {@code
      *     null}
-     * @param loader optional loader to show a wait/progress indicator; can be {@code null}
+     * @param loader loader to show a wait/progress indicator
      */
     public DynamicQrCodeResize(
-            QrCodeBufferedImage qrCodeBufferedImage, JLabel qrCodeLabel, Loader loader) {
+            QrCodeBufferedImage qrCodeBufferedImage, JLabel qrCodeLabel, JProgressBar loader) {
         super(loader);
         this.qrCodeBufferedImage = qrCodeBufferedImage;
         this.qrCodeLabel = qrCodeLabel;
@@ -113,14 +117,36 @@ public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> 
     }
 
     /**
-     * Updates the label icon when the worker successfully completes.
+     * Updates the QR code label with the generated icon and adjusts the loader size to maintain
+     * visual alignment once the worker completes successfully.
      *
      * @param result the resized {@link ImageIcon}, or {@code null} if the task was cancelled
      */
     @Override
     protected void onWorkerSuccess(ImageIcon result) {
-        if (result != null) {
-            qrCodeLabel.setIcon(result);
+        if (result == null) {
+            return;
+        }
+        qrCodeLabel.setIcon(result);
+        int size =
+                qrCodeLabel.getPreferredSize().height + IntConstants.LOADER_SIZE_OFFSET.getValue();
+        updateLoaderSize(size);
+    }
+
+    /**
+     * Resizes the loader to a square dimension based on the given value and refreshes its parent
+     * container to ensure proper layout and rendering.
+     *
+     * @param size the target width and height for the loader
+     */
+    private void updateLoaderSize(int size) {
+        Dimension dim = new Dimension(size, size);
+        loader.setPreferredSize(dim);
+        loader.setMaximumSize(dim);
+        Container parent = loader.getParent();
+        if (parent != null) {
+            parent.revalidate();
+            parent.repaint();
         }
     }
 }

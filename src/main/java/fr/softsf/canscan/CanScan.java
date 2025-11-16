@@ -8,6 +8,7 @@ package fr.softsf.canscan;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.FontMetrics;
@@ -21,6 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -29,11 +31,13 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.OverlayLayout;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
@@ -53,8 +57,7 @@ import fr.softsf.canscan.service.GenerateAndSaveService;
 import fr.softsf.canscan.service.VersionService;
 import fr.softsf.canscan.ui.DynamicQrCodePreview;
 import fr.softsf.canscan.ui.DynamicQrCodeResize;
-import fr.softsf.canscan.ui.Loader;
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.ui.QrCodeColor;
 import fr.softsf.canscan.util.BrowserHelper;
@@ -97,6 +100,7 @@ public class CanScan extends JFrame {
     private static final int COLOR_BUTTONS_GAP = 10;
     private static final int MARGIN_MAXIMUM_VALUE = 10;
     private static final double GBC_COLOR_BUTTONS_WEIGHT_X = 0.5;
+    private static final float OVERLAY_PANEL_ALIGNMENT = 0.5f;
 
     private Color qrColor = Color.BLACK;
     private Color bgColor = Color.WHITE;
@@ -127,10 +131,12 @@ public class CanScan extends JFrame {
     private final JSlider ratioSlider =
             new JSlider(0, MAX_PERCENTAGE, (int) (imageRatio * MAX_PERCENTAGE));
     private final JCheckBox roundedModulesCheckBox = new JCheckBox();
+    private final JProgressBar loader = new JProgressBar();
     // Containers
     private final JPanel northPanelWrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
     private final CardLayout cardLayout = new CardLayout();
     private final JPanel cardPanel = new JPanel(cardLayout);
+    private JPanel overlayPanelForQrCodeLabelAndLoader;
     private final JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
     private final JPanel southSpacer = new JPanel();
     private final JButton browseButton = new JButton("\uD83D\uDCC1 Parcourir");
@@ -138,7 +144,6 @@ public class CanScan extends JFrame {
     private final JButton bgColorButton = new JButton("#FFFFFF");
     private final JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
     // Services
-    private final transient Loader loader = new Loader(qrCodeLabel);
     private final transient QrCodeBufferedImage qrCodeBufferedImage = new QrCodeBufferedImage();
     private final transient DynamicQrCodeResize qrCodeResize =
             new DynamicQrCodeResize(qrCodeBufferedImage, qrCodeLabel, loader);
@@ -251,7 +256,7 @@ public class CanScan extends JFrame {
                 props.load(in);
             }
         } catch (IOException e) {
-            Popup.INSTANCE.showDialog(
+            MyPopup.INSTANCE.showDialog(
                     "Le fichier version.properties est illisible\n",
                     e.getMessage(),
                     StringConstants.ERREUR.getValue());
@@ -519,34 +524,88 @@ public class CanScan extends JFrame {
         northPanel.add(generateButton, grid);
     }
 
+    /** Creates the overlay panel containing the loader and the QR code label. */
+    private JPanel createQrCodeLabelAndLoaderOverlayPanel(JProgressBar loader) {
+        loader.putClientProperty("FlatLaf.style", "arc:0");
+        loader.setBorder(BorderFactory.createEmptyBorder());
+        loader.setIndeterminate(true);
+        loader.setOpaque(false);
+        loader.setAlignmentX(OVERLAY_PANEL_ALIGNMENT);
+        loader.setAlignmentY(OVERLAY_PANEL_ALIGNMENT);
+        JPanel overlayPanel = new JPanel();
+        overlayPanel.setLayout(new OverlayLayout(overlayPanel));
+        overlayPanel.setOpaque(false);
+        overlayPanel.add(loader);
+        overlayPanel.add(qrCodeLabel);
+        return overlayPanel;
+    }
+
     /**
-     * Creates the main panel containing all GUI sections.
+     * Initializes and assembles the main application panel.
      *
-     * <p>Centers the QR code label, registers resize listeners for dynamic updates, and adds the
-     * north panel, preview area, and spacer in a BorderLayout.
+     * <p>This method configures the QR code display area, including an overlay combining the QR
+     * label and a loading indicator. The overlay is created via {@link
+     * #createQrCodeLabelAndLoaderOverlayPanel(JProgressBar)}. Resize listeners are registered to
+     * ensure both the QR code and loader are dynamically resized and remain perfectly aligned when
+     * the window or components change size.
+     *
+     * <p>The final layout uses a BorderLayout with:
+     *
+     * <ul>
+     *   <li>NORTH: header panel (titles, fields, etc.),
+     *   <li>CENTER: overlay panel containing the QR code and loader centered in a transparent
+     *       panel,
+     *   <li>SOUTH: vertical spacer.
+     * </ul>
+     *
+     * @return the fully constructed main panel, ready for display
      */
     private JPanel initializeMainPanel() {
         qrCodeLabel.setHorizontalAlignment(SwingConstants.CENTER);
         qrCodeLabel.setVerticalAlignment(SwingConstants.CENTER);
-        addWindowStateListener(
-                e ->
-                        SwingUtilities.invokeLater(
-                                () -> qrCodeResize.updateQrCodeResize(getQrInput())));
+        qrCodeLabel.setOpaque(false);
+        qrCodeLabel.setAlignmentX(OVERLAY_PANEL_ALIGNMENT);
+        qrCodeLabel.setAlignmentY(OVERLAY_PANEL_ALIGNMENT);
+        overlayPanelForQrCodeLabelAndLoader = createQrCodeLabelAndLoaderOverlayPanel(loader);
+        Runnable resize = () -> qrCodeResize.updateQrCodeResize(getQrInput());
+        addWindowStateListener(e -> SwingUtilities.invokeLater(resize));
         addComponentListener(
                 new ComponentAdapter() {
                     @Override
                     public void componentResized(ComponentEvent e) {
-                        SwingUtilities.invokeLater(
-                                () -> qrCodeResize.updateQrCodeResize(getQrInput()));
+                        SwingUtilities.invokeLater(resize);
                     }
                 });
         southSpacer.setPreferredSize(new Dimension(0, IntConstants.DEFAULT_GAP.getValue()));
         automaticQRCodeRenderingForFieldsAndControls();
+        JPanel centerPanel = new JPanel(new GridBagLayout());
+        centerPanel.setOpaque(false);
+        centerPanel.add(overlayPanelForQrCodeLabelAndLoader);
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.add(northPanelWrapper, BorderLayout.NORTH);
-        mainPanel.add(qrCodeLabel, BorderLayout.CENTER);
+        mainPanel.add(centerPanel, BorderLayout.CENTER);
         mainPanel.add(southSpacer, BorderLayout.SOUTH);
         return mainPanel;
+    }
+
+    /**
+     * Sets the loader size so it matches the QR code label height and remains centered. A small
+     * offset is applied to correct a slight visual misalignment.
+     */
+    private void setLoaderSize() {
+        int h =
+                Math.max(
+                        calculateAvailableQrCodeLabelHeight()
+                                + IntConstants.LOADER_SIZE_OFFSET.getValue(),
+                        QR_CODE_LABEL_DEFAULT_SIZE + IntConstants.LOADER_SIZE_OFFSET.getValue());
+        Dimension size = new Dimension(h, h);
+        loader.setPreferredSize(size);
+        loader.setMaximumSize(size);
+        Container parent = loader.getParent();
+        if (parent != null) {
+            parent.revalidate();
+            parent.repaint();
+        }
     }
 
     /**
@@ -564,11 +623,13 @@ public class CanScan extends JFrame {
     /**
      * Finalizes window layout and appearance.
      *
-     * <p>Packs components, adjusts size for QR code display, and centers the window on screen.
+     * <p>Packs components, adjusts size for QR code display, loader, and centers the window on
+     * screen.
      */
     private void initializeWindow() {
         pack();
         setSize(getWidth(), getHeight() + QR_CODE_LABEL_DEFAULT_SIZE);
+        setLoaderSize();
         setLocationRelativeTo(null);
     }
 
@@ -900,9 +961,9 @@ public class CanScan extends JFrame {
                             bgColor,
                             roundedModulesCheckBox.isSelected(),
                             validateAndGetMargin());
-            generateAndSaveService.generateAndSave(qrData, config);
+            generateAndSaveService.generateAndSave(qrData, config, loader);
         } catch (Exception ex) {
-            Popup.INSTANCE.showDialog(
+            MyPopup.INSTANCE.showDialog(
                     "Erreur inattendue lors de la génération du QR Code",
                     ex.getMessage(),
                     StringConstants.ERREUR.getValue());
@@ -914,7 +975,7 @@ public class CanScan extends JFrame {
      *
      * @return available height in pixels after removing header and footer space
      */
-    private int calculateAvailableQrHeight() {
+    private int calculateAvailableQrCodeLabelHeight() {
         return getHeight()
                 - northPanelWrapper.getHeight()
                 - southSpacer.getHeight()
@@ -931,7 +992,7 @@ public class CanScan extends JFrame {
      */
     private QrInput getQrInput() {
         return new QrInput(
-                calculateAvailableQrHeight(),
+                calculateAvailableQrCodeLabelHeight(),
                 currentMode,
                 freeField.getText(),
                 nameField.getText(),

@@ -21,7 +21,7 @@ import javax.net.ssl.SSLContext;
 import javax.swing.JButton;
 import javax.swing.SwingWorker;
 
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.StringConstants;
 
@@ -56,12 +56,12 @@ public enum VersionService {
                             .connectTimeout(Duration.ofSeconds(5))
                             .build();
         } catch (NoSuchAlgorithmException | KeyManagementException e) {
-            Popup.INSTANCE.showDialog(
+            MyPopup.INSTANCE.showDialog(
                     "TLS 1.3 est requis mais non disponible.\n",
                     e.getMessage(),
                     StringConstants.ERREUR.getValue());
         } catch (UncheckedIOException | SecurityException e) {
-            Popup.INSTANCE.showDialog(
+            MyPopup.INSTANCE.showDialog(
                     "Impossible de créer HTTP client.\n",
                     e.getMessage(),
                     StringConstants.ERREUR.getValue());

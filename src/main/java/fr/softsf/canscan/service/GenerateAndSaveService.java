@@ -7,18 +7,14 @@ package fr.softsf.canscan.service;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.Objects;
-import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
-
-import com.google.zxing.WriterException;
+import javax.swing.JProgressBar;
+import javax.swing.SwingWorker;
 
 import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.model.QrDataResult;
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.ui.QrCodeBufferedImage;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.StringConstants;
@@ -42,52 +38,62 @@ public class GenerateAndSaveService {
     /**
      * Generates and saves a QR code as a PNG file using the provided data and configuration.
      *
-     * <p>Validates the input data, applies visual settings (colors, margin, logo, module style),
-     * generates the QR code image, and opens a file chooser to save the file. Handles file name
-     * conflicts and shows user feedback dialogs for success, errors, or exceptions.
+     * <p>Validates input data, applies visual settings, generates the QR code image, and saves it
+     * to a user-selected file location. All operations are performed asynchronously to prevent UI
+     * blocking.
      *
      * @param qrData the QR code data; must not be null
-     * @param config the QR code visual configuration; must not be null
+     * @param config the visual configuration; must not be null
+     * @param loader the progress indicator to display during generation
      */
-    public void generateAndSave(QrDataResult qrData, QrConfig config) {
-        if (Checker.INSTANCE.checkNPE(
-                        qrData,
-                        StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(),
-                        StringConstants.QR_DATA.getValue())
-                || Checker.INSTANCE.checkNPE(
-                        config, StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(), "config")) {
-            return;
-        }
-        if (qrData.data().isBlank()) {
-            Popup.INSTANCE.showDialog("", "Aucune donnée à encoder", "Information");
-            return;
-        }
-        try {
-            BufferedImage qr = qrCodeBufferedImage.generateQrCodeImage(qrData.data(), config);
-            qrCodeBufferedImage.updateQrOriginal(qr);
+    public void generateAndSave(QrDataResult qrData, QrConfig config, JProgressBar loader) {
+        if (checkNPEInputs(qrData, config, loader)) {
+            if (qrData.data().isBlank()) {
+                MyPopup.INSTANCE.showDialog("", "Aucune donnée à encoder", "Information");
+                return;
+            }
             File outputFile = chooseOutputFile(qrData);
             if (outputFile == null) {
                 return;
             }
-            try (OutputStream os = new FileOutputStream(outputFile)) {
-                ImageIO.write(qr, "png", os);
-            }
-            Popup.INSTANCE.showDialog(
-                    "Code QR enregistré dans\n", outputFile.getAbsolutePath(), "Confirmation");
-        } catch (WriterException we) {
-            Popup.INSTANCE.showDialog(
-                    "Pas de génération du QR Code\n",
-                    we.getMessage(),
-                    StringConstants.ERREUR.getValue());
-        } catch (IOException ioe) {
-            Popup.INSTANCE.showDialog(
-                    "Pas de lecture/écriture de fichier\n",
-                    ioe.getMessage(),
-                    StringConstants.ERREUR.getValue());
-        } catch (OutOfMemoryError oom) {
-            Popup.INSTANCE.showDialog(
-                    "Manque de mémoire\n", oom.getMessage(), StringConstants.ERREUR.getValue());
+            loader.setVisible(true);
+            executeQrGeneration(qrData, config, loader, outputFile);
         }
+    }
+
+    /**
+     * Validates that all required inputs are non-null.
+     *
+     * @param qrData the QR code data to validate
+     * @param config the configuration to validate
+     * @param loader the progress bar to validate
+     * @return true if all inputs are valid, false otherwise
+     */
+    private boolean checkNPEInputs(QrDataResult qrData, QrConfig config, JProgressBar loader) {
+        return !Checker.INSTANCE.checkNPE(
+                        qrData,
+                        StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(),
+                        StringConstants.QR_DATA.getValue())
+                && !Checker.INSTANCE.checkNPE(
+                        config, StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(), "config")
+                && !Checker.INSTANCE.checkNPE(
+                        loader, StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(), "loader");
+    }
+
+    /**
+     * Executes QR code generation asynchronously using a SwingWorker.
+     *
+     * @param qrData the QR code data
+     * @param config the visual configuration
+     * @param loader the progress bar to hide after completion
+     * @param outputFile the file where the QR code will be saved
+     */
+    private void executeQrGeneration(
+            QrDataResult qrData, QrConfig config, JProgressBar loader, File outputFile) {
+        SwingWorker<BufferedImage, Void> worker =
+                new QrGenerateAndSaveWorker(
+                        qrData, config, loader, outputFile, qrCodeBufferedImage);
+        worker.execute();
     }
 
     /**
@@ -142,7 +148,7 @@ public class GenerateAndSaveService {
         }
         if (file.exists()) {
             int choice =
-                    Popup.INSTANCE.showYesNoConfirmDialog(
+                    MyPopup.INSTANCE.showYesNoConfirmDialog(
                             null,
                             "Un fichier \""
                                     + file.getName()

@@ -7,7 +7,8 @@ package fr.softsf.canscan.util;
 
 /** Integer constants for dimensions and spacing. */
 public enum IntConstants {
-    DEFAULT_GAP(15);
+    DEFAULT_GAP(15),
+    LOADER_SIZE_OFFSET(2);
 
     private final int value;
 
