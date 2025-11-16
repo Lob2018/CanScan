@@ -12,15 +12,15 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mockStatic;
 
-@DisplayName("*** Popup tests ***")
-class PopupTest {
+@DisplayName("*** MyPopup tests ***")
+class MyPopupTest {
 
     @Nested
     @DisplayName("showArgumentErrorDialog tests")
@@ -33,7 +33,7 @@ class PopupTest {
             try (MockedStatic<JOptionPane> mocked = mockStatic(JOptionPane.class)) {
                 assertDoesNotThrow(
                         () ->
-                                Popup.INSTANCE.showArgumentErrorDialog(
+                                MyPopup.INSTANCE.showArgumentErrorDialog(
                                         null, "testMethod", "paramName", "null"));
             }
         }
@@ -44,7 +44,7 @@ class PopupTest {
         void givenNullParameters_whenShowArgumentErrorDialog_thenDoesNotThrowException() {
             try (MockedStatic<JOptionPane> mocked = mockStatic(JOptionPane.class)) {
                 assertDoesNotThrow(
-                        () -> Popup.INSTANCE.showArgumentErrorDialog(null, null, null, null));
+                        () -> MyPopup.INSTANCE.showArgumentErrorDialog(null, null, null, null));
             }
         }
     }
@@ -59,7 +59,9 @@ class PopupTest {
         void givenValidArguments_whenShowDialog_thenDoesNotThrowException() {
             try (MockedStatic<JOptionPane> mocked = mockStatic(JOptionPane.class)) {
                 assertDoesNotThrow(
-                        () -> Popup.INSTANCE.showDialog("⚠️ Test:\n", "Message de test", "Titre"));
+                        () ->
+                                MyPopup.INSTANCE.showDialog(
+                                        "⚠️ Test:\n", "Message de test", "Titre"));
             }
         }
 
@@ -68,7 +70,7 @@ class PopupTest {
         @DisplayName("givenNullAndBlankValues_whenShowDialog_thenDoesNotThrowException")
         void givenNullAndBlankValues_whenShowDialog_thenDoesNotThrowException() {
             try (MockedStatic<JOptionPane> mocked = mockStatic(JOptionPane.class)) {
-                assertDoesNotThrow(() -> Popup.INSTANCE.showDialog(null, " ", null));
+                assertDoesNotThrow(() -> MyPopup.INSTANCE.showDialog(null, " ", null));
             }
         }
 
@@ -80,7 +82,7 @@ class PopupTest {
                 String unicodeMessage = "Test message — 你好 🌍 🚀";
                 assertDoesNotThrow(
                         () ->
-                                Popup.INSTANCE.showDialog(
+                                MyPopup.INSTANCE.showDialog(
                                         "🧪 Prefix:\n", unicodeMessage, "Essai Unicode"));
             }
         }
@@ -105,7 +107,7 @@ class PopupTest {
                                                 JOptionPane.WARNING_MESSAGE))
                         .thenReturn(JOptionPane.YES_OPTION);
 
-                int result = Popup.INSTANCE.showYesNoConfirmDialog(null, "Confirmer ?");
+                int result = MyPopup.INSTANCE.showYesNoConfirmDialog(null, "Confirmer ?");
                 assertTrue(result == JOptionPane.YES_OPTION || result == JOptionPane.NO_OPTION);
             }
         }
@@ -118,8 +120,8 @@ class PopupTest {
         @Test
         @DisplayName("givenPopupEnum_whenAccessInstance_thenInstanceIsNotNullAndUnique")
         void givenPopupEnum_whenAccessInstance_thenInstanceIsNotNullAndUnique() {
-            Popup instance1 = Popup.INSTANCE;
-            Popup instance2 = Popup.valueOf("INSTANCE");
+            MyPopup instance1 = MyPopup.INSTANCE;
+            MyPopup instance2 = MyPopup.valueOf("INSTANCE");
             assertSame(instance1, instance2, "Les instances doivent être identiques");
         }
     }

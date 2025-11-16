@@ -18,7 +18,7 @@ import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.util.FontUtils;
 
 import fr.softsf.canscan.CanScan;
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 
 /**
  * Singleton that loads and applies the Luciole font as the default Swing UI font.
@@ -56,7 +56,7 @@ public enum UseLucioleFont {
             UIManager.put(DEFAULT_FONT, adjustedFont);
             SwingUtilities.invokeLater(FlatLaf::updateUI);
         } catch (FontFormatException | IOException | IllegalStateException e) {
-            Popup.INSTANCE.showDialog(
+            MyPopup.INSTANCE.showDialog(
                     "La police Luciole n'a pas pu être utilisée\n",
                     e.getMessage(),
                     StringConstants.ERREUR.getValue());

@@ -17,7 +17,7 @@ import fr.softsf.canscan.util.FrameHelper;
  * <p>Provides error, confirmation, and custom message dialogs for UI feedback and validation
  * reporting.
  */
-public enum Popup {
+public enum MyPopup {
     INSTANCE;
 
     private static final String SHOW_ARGUMENT_ERROR_DIALOG = "showArgumentErrorDialog";

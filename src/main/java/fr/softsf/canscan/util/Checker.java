@@ -7,7 +7,7 @@ package fr.softsf.canscan.util;
 
 import org.apache.commons.lang3.StringUtils;
 
-import fr.softsf.canscan.ui.Popup;
+import fr.softsf.canscan.ui.MyPopup;
 
 /**
  * Centralized argument validation utility for detecting and reporting {@code null} or blank values.
@@ -50,7 +50,7 @@ public enum Checker {
         if (errorType == null) {
             return false;
         }
-        Popup.INSTANCE.showArgumentErrorDialog(
+        MyPopup.INSTANCE.showArgumentErrorDialog(
                 FrameHelper.INSTANCE.getParentFrame(), methodName, name, errorType);
         return true;
     }
