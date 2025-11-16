@@ -136,7 +136,6 @@ public class CanScan extends JFrame {
     private final JPanel northPanelWrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
     private final CardLayout cardLayout = new CardLayout();
     private final JPanel cardPanel = new JPanel(cardLayout);
-    private JPanel overlayPanelForQrCodeLabelAndLoader;
     private final JLabel qrCodeLabel = new JLabel("", SwingConstants.CENTER);
     private final JPanel southSpacer = new JPanel();
     private final JButton browseButton = new JButton("\uD83D\uDCC1 Parcourir");
@@ -561,6 +560,7 @@ public class CanScan extends JFrame {
      * @return the fully constructed main panel, ready for display
      */
     private JPanel initializeMainPanel() {
+        JPanel overlayPanelForQrCodeLabelAndLoader;
         qrCodeLabel.setHorizontalAlignment(SwingConstants.CENTER);
         qrCodeLabel.setVerticalAlignment(SwingConstants.CENTER);
         qrCodeLabel.setOpaque(false);
