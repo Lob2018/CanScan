@@ -4,7 +4,7 @@
   <!-- Project information -->
   <groupId>fr.softsf</groupId>
   <artifactId>canscan</artifactId>
-  <version>0.9.0.7</version>
+  <version>0.10.0.0</version>
   <name>CanScan</name>
   <organization>
     <name>Soft64.fr</name>
@@ -293,6 +293,8 @@
           <consoleOutput>true</consoleOutput>
           <!-- Minimum severity level that fails the build -->
           <violationSeverity>error</violationSeverity>
+          <!-- Exclude module-info.java from Checkstyle -->
+          <excludes>**/module-info.java</excludes>
         </configuration>
         <dependencies>
           <!-- Use a specific version of Checkstyle (must match your checkstyle.xml DTD) -->
