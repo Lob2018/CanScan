@@ -148,7 +148,6 @@ public class GenerateAndSaveService {
         if (file.exists()) {
             int choice =
                     MyPopup.INSTANCE.showYesNoConfirmDialog(
-                            null,
                             "Un fichier \""
                                     + file.getName()
                                     + "\" existe déjà.\nÉcraser ce fichier ?");

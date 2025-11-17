@@ -107,7 +107,7 @@ class MyPopupTest {
                                                 JOptionPane.WARNING_MESSAGE))
                         .thenReturn(JOptionPane.YES_OPTION);
 
-                int result = MyPopup.INSTANCE.showYesNoConfirmDialog(null, "Confirmer ?");
+                int result = MyPopup.INSTANCE.showYesNoConfirmDialog("Confirmer ?");
                 assertTrue(result == JOptionPane.YES_OPTION || result == JOptionPane.NO_OPTION);
             }
         }

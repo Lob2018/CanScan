@@ -76,6 +76,7 @@ public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
      * @param wholeFields the latest QR code configuration
      */
     public void updateQrCodePreview(WholeFields wholeFields) {
+        Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodePreview", "wholeFields");
         this.wholeFields = wholeFields;
         resetAndStartWorker(PREVIEW_DEBOUNCE_DELAY_MS);
     }
@@ -159,17 +160,7 @@ public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
             if (StringUtils.isBlank(data)) {
                 return null;
             }
-            File logoFile =
-                    wholeFields.logoPath().isBlank() ? null : new File(wholeFields.logoPath());
-            CommonFields config =
-                    new CommonFields(
-                            logoFile,
-                            wholeFields.size(),
-                            wholeFields.ratio(),
-                            wholeFields.qrColor(),
-                            wholeFields.bgColor(),
-                            wholeFields.isRoundedModules(),
-                            wholeFields.margin());
+            CommonFields config = getCommonFields();
             if (Thread.currentThread().isInterrupted()) {
                 return null;
             }
@@ -181,6 +172,25 @@ public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
             showPreviewErrorMessage(ex);
             return null;
         }
+    }
+
+    /**
+     * Creates and returns the shared QR generation settings derived from the current {@link
+     * WholeFields}.
+     *
+     * @return a {@link CommonFields} instance populated with size, ratio, colors, margin, and
+     *     optional logo
+     */
+    private CommonFields getCommonFields() {
+        File logoFile = wholeFields.logoPath().isBlank() ? null : new File(wholeFields.logoPath());
+        return new CommonFields(
+                logoFile,
+                wholeFields.size(),
+                wholeFields.ratio(),
+                wholeFields.qrColor(),
+                wholeFields.bgColor(),
+                wholeFields.isRoundedModules(),
+                wholeFields.margin());
     }
 
     /**

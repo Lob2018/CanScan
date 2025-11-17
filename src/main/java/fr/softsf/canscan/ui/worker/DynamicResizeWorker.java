@@ -19,6 +19,7 @@ import fr.softsf.canscan.constant.IntConstants;
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.LabelIconUtil;
+import fr.softsf.canscan.util.Checker;
 
 /**
  * Asynchronously resizes a generated QR code image for display in a Swing UI.
@@ -64,6 +65,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
      * @param wholeFields the latest QR code configuration
      */
     public void updateQrCodeResize(WholeFields wholeFields) {
+        Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodeResize", "wholeFields");
         this.wholeFields = wholeFields;
         resetAndStartWorker(RESIZE_DEBOUNCE_DELAY_MS);
     }

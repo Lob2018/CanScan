@@ -22,12 +22,14 @@ import fr.softsf.canscan.model.CommonFields;
 import fr.softsf.canscan.model.EncodedData;
 import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.MyPopup;
+import fr.softsf.canscan.util.Checker;
 
 /**
  * SwingWorker that generates and saves QR codes in a background thread. Handles UI updates and
  * error reporting on the Event Dispatch Thread.
  */
 public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
+    private static final String GENERATE_AND_SAVE_WORKER = "GenerateAndSaveWorker";
     private final EncodedData qrData;
     private final CommonFields config;
     private final JProgressBar loader;
@@ -51,6 +53,11 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
             JProgressBar loader,
             File outputFile,
             EncodedImage encodedImage) {
+        Checker.INSTANCE.checkNPE(qrData, GENERATE_AND_SAVE_WORKER, "qrData");
+        Checker.INSTANCE.checkNPE(config, GENERATE_AND_SAVE_WORKER, "config");
+        Checker.INSTANCE.checkNPE(loader, GENERATE_AND_SAVE_WORKER, "loader");
+        Checker.INSTANCE.checkNPE(outputFile, GENERATE_AND_SAVE_WORKER, "outputFile");
+        Checker.INSTANCE.checkNPE(encodedImage, GENERATE_AND_SAVE_WORKER, "encodedImage");
         this.qrData = qrData;
         this.config = config;
         this.loader = loader;

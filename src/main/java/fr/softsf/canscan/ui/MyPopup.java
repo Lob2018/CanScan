@@ -73,14 +73,14 @@ public enum MyPopup {
     /**
      * Displays a modal Yes/No confirmation dialog with a warning icon and the given message.
      *
-     * @param parent the parent component for the dialog (can be {@code null})
      * @param message the message to display in the dialog
      * @return {@link JOptionPane#YES_OPTION} or {@link JOptionPane#NO_OPTION} based on user
      *     selection
      */
-    public int showYesNoConfirmDialog(Component parent, String message) {
+    public int showYesNoConfirmDialog(String message) {
+        Checker.INSTANCE.checkNPE(message, "showYesNoConfirmDialog", "message");
         return JOptionPane.showConfirmDialog(
-                parent,
+                FrameHelper.INSTANCE.getParentFrame(),
                 message,
                 "Soft64.fr",
                 JOptionPane.YES_NO_OPTION,
