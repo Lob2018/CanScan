@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.fillBackground" name="fr.softsf.canscan.ui.QrCodeBufferedImage.fillBackground">
+<map id="fr.softsf.canscan.ui.EncodedImage.fillBackground" name="fr.softsf.canscan.ui.EncodedImage.fillBackground">
 <area shape="rect" id="Node000001" title="Fills the entire QR code area with the specified background color." alt="" coords="5,5,197,48"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="245,5,477,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,24,229,24,229,29,197,29"/>

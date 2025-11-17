@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.shouldSkipModule" name="fr.softsf.canscan.ui.QrCodeBufferedImage.shouldSkipModule">
+<map id="fr.softsf.canscan.ui.EncodedImage.shouldSkipModule" name="fr.softsf.canscan.ui.EncodedImage.shouldSkipModule">
 <area shape="rect" id="Node000001" title="Determines whether a QR code module should be skipped during rendering." alt="" coords="5,72,221,115"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="269,23,501,65"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,71,252,65,253,71,222,76"/>

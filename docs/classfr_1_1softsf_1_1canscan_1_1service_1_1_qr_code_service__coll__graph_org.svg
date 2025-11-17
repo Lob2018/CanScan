@@ -18,7 +18,7 @@
 <text text-anchor="start" x="90.38" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <text text-anchor="start" x="16.75" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="26.75" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrCodeService(QrCodeBuffered</text>
-<text text-anchor="start" x="26.75" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image qrCodeBufferedImage)</text>
+<text text-anchor="start" x="26.75" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image encodedImage)</text>
 <text text-anchor="start" x="16.75" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="26.75" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateAndSaveQrCode</text>
 <text text-anchor="start" x="26.75" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrDataResult qrData, QrConfig</text>
@@ -172,7 +172,7 @@
 <polygon fill="none" stroke="#63b8ff" points="91.88,-212.87 87.88,-206.87 91.88,-200.87 95.88,-206.87 91.88,-212.87"/>
 </a>
 </g>
-<text text-anchor="middle" x="142.12" y="-220.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="142.12" y="-220.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 </g>
 </svg>

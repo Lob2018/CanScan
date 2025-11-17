@@ -18,6 +18,7 @@ import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.util.FontUtils;
 
 import fr.softsf.canscan.CanScan;
+import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.ui.MyPopup;
 
 /**

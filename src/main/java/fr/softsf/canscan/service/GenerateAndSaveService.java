@@ -12,27 +12,27 @@ import javax.swing.JFileChooser;
 import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
-import fr.softsf.canscan.model.QrConfig;
-import fr.softsf.canscan.model.QrDataResult;
+import fr.softsf.canscan.constant.StringConstants;
+import fr.softsf.canscan.model.CommonFields;
+import fr.softsf.canscan.model.EncodedData;
+import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.MyPopup;
-import fr.softsf.canscan.ui.QrCodeBufferedImage;
+import fr.softsf.canscan.ui.worker.GenerateAndSaveWorker;
 import fr.softsf.canscan.util.Checker;
-import fr.softsf.canscan.util.StringConstants;
 
 /** Service dedicated to QR code generation and saving. */
 @SuppressWarnings("ClassCanBeRecord")
 public class GenerateAndSaveService {
 
-    private final QrCodeBufferedImage qrCodeBufferedImage;
+    private final EncodedImage encodedImage;
 
     /**
      * Constructs a GenerateAndSaveService with the given QR code image generator.
      *
-     * @param qrCodeBufferedImage the QR code image generator; must not be null
+     * @param encodedImage the QR code image generator; must not be null
      */
-    public GenerateAndSaveService(QrCodeBufferedImage qrCodeBufferedImage) {
-        this.qrCodeBufferedImage =
-                Objects.requireNonNull(qrCodeBufferedImage, "qrCodeBufferedImage must not be null");
+    public GenerateAndSaveService(EncodedImage encodedImage) {
+        this.encodedImage = Objects.requireNonNull(encodedImage, "encodedImage must not be null");
     }
 
     /**
@@ -46,7 +46,7 @@ public class GenerateAndSaveService {
      * @param config the visual configuration; must not be null
      * @param loader the progress indicator to display during generation
      */
-    public void generateAndSave(QrDataResult qrData, QrConfig config, JProgressBar loader) {
+    public void generateAndSave(EncodedData qrData, CommonFields config, JProgressBar loader) {
         if (checkNPEInputs(qrData, config, loader)) {
             if (qrData.data().isBlank()) {
                 MyPopup.INSTANCE.showDialog("", "Aucune donnée à encoder", "Information");
@@ -69,7 +69,7 @@ public class GenerateAndSaveService {
      * @param loader the progress bar to validate
      * @return true if all inputs are valid, false otherwise
      */
-    private boolean checkNPEInputs(QrDataResult qrData, QrConfig config, JProgressBar loader) {
+    private boolean checkNPEInputs(EncodedData qrData, CommonFields config, JProgressBar loader) {
         return !Checker.INSTANCE.checkNPE(
                         qrData,
                         StringConstants.GENERATE_AND_SAVE_QR_CODE.getValue(),
@@ -89,10 +89,9 @@ public class GenerateAndSaveService {
      * @param outputFile the file where the QR code will be saved
      */
     private void executeQrGeneration(
-            QrDataResult qrData, QrConfig config, JProgressBar loader, File outputFile) {
+            EncodedData qrData, CommonFields config, JProgressBar loader, File outputFile) {
         SwingWorker<BufferedImage, Void> worker =
-                new QrGenerateAndSaveWorker(
-                        qrData, config, loader, outputFile, qrCodeBufferedImage);
+                new GenerateAndSaveWorker(qrData, config, loader, outputFile, encodedImage);
         worker.execute();
     }
 
@@ -102,7 +101,7 @@ public class GenerateAndSaveService {
      * @param qrData the QR code data used to generate the default file name
      * @return the selected file ready for writing, or null if the user cancels
      */
-    private File chooseOutputFile(QrDataResult qrData) {
+    private File chooseOutputFile(EncodedData qrData) {
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Enregistrer votre code QR en tant que PNG");
         chooser.setSelectedFile(new File(qrData.defaultFileName()));

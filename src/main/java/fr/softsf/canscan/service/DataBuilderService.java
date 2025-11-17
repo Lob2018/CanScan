@@ -9,9 +9,9 @@ import java.util.Objects;
 
 import org.apache.commons.lang3.StringUtils;
 
+import fr.softsf.canscan.model.EncodedData;
 import fr.softsf.canscan.model.Mode;
-import fr.softsf.canscan.model.QrDataResult;
-import fr.softsf.canscan.model.QrInput;
+import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.util.Checker;
 
 /**
@@ -32,10 +32,10 @@ public enum DataBuilderService {
      *
      * @param mode the QR encoding mode (MECARD or FREE)
      * @param input the structured input data
-     * @return a {@link QrDataResult} containing the encoded content and default filename, or {@code
+     * @return a {@link EncodedData} containing the encoded content and default filename, or {@code
      *     null} if input is invalid
      */
-    public QrDataResult buildData(Mode mode, QrInput input) {
+    public EncodedData buildData(Mode mode, WholeFields input) {
         if (Checker.INSTANCE.checkNPE(mode, "buildQrData", "mode")
                 || Checker.INSTANCE.checkNPE(input, "buildQrData", "input")) {
             return null;
@@ -54,9 +54,9 @@ public enum DataBuilderService {
                 if (data.equals("MECARD:;")) {
                     data = "";
                 }
-                yield new QrDataResult(data, "codeqr_mecard.png");
+                yield new EncodedData(data, "codeqr_mecard.png");
             }
-            case FREE -> new QrDataResult(input.free().trim(), "codeqr_free.png");
+            case FREE -> new EncodedData(input.free().trim(), "codeqr_free.png");
         };
     }
 

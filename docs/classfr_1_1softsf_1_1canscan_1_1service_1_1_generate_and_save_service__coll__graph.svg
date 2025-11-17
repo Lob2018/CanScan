@@ -231,7 +231,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="none" stroke="#63b8ff" points="94.13,-340.68 90.13,-334.68 94.13,-328.68 98.13,-334.68 94.13,-340.68"/>
 </a>
 </g>
-<text text-anchor="middle" x="144.38" y="-348.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="144.38" y="-348.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 </g>
 </svg>

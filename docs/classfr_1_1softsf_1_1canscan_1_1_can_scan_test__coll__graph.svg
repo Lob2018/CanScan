@@ -467,7 +467,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="none" stroke="#63b8ff" points="536.93,-1856.76 532.76,-1850.88 536.58,-1844.76 540.76,-1850.64 536.93,-1856.76"/>
 </a>
 </g>
-<text text-anchor="middle" x="597.89" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="597.89" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
@@ -486,12 +486,12 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="370.12" y="-2632.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="380.12" y="-2632.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicQrCodeResize</text>
 <text text-anchor="start" x="380.12" y="-2620.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrCodeBufferedImage</text>
-<text text-anchor="start" x="380.12" y="-2608.5" font-family="Helvetica,sans-Serif" font-size="10.00"> qrCodeBufferedImage,</text>
+<text text-anchor="start" x="380.12" y="-2608.5" font-family="Helvetica,sans-Serif" font-size="10.00"> encodedImage,</text>
 <text text-anchor="start" x="380.12" y="-2596.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgress</text>
 <text text-anchor="start" x="380.12" y="-2584.5" font-family="Helvetica,sans-Serif" font-size="10.00">Bar loader)</text>
 <text text-anchor="start" x="370.12" y="-2568.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="380.12" y="-2568.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeResize</text>
-<text text-anchor="start" x="380.12" y="-2556.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="380.12" y="-2556.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="370.5" y="-2540.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="380.12" y="-2540.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
 <text text-anchor="start" x="370.5" y="-2524.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
@@ -518,7 +518,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="none" stroke="#63b8ff" points="438.73,-2746.69 434.92,-2740.57 439.1,-2734.69 442.92,-2740.81 438.73,-2746.69"/>
 </a>
 </g>
-<text text-anchor="middle" x="487.62" y="-2804.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="487.62" y="-2804.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
@@ -535,12 +535,12 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="159.5" y="-2170.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="169.5" y="-2170.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicQrCodePreview</text>
 <text text-anchor="start" x="169.5" y="-2158.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrCodeBufferedImage</text>
-<text text-anchor="start" x="169.5" y="-2146.5" font-family="Helvetica,sans-Serif" font-size="10.00"> qrCodeBufferedImage,</text>
+<text text-anchor="start" x="169.5" y="-2146.5" font-family="Helvetica,sans-Serif" font-size="10.00"> encodedImage,</text>
 <text text-anchor="start" x="169.5" y="-2134.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DynamicQrCodeResize qrCodeResize,</text>
 <text text-anchor="start" x="169.5" y="-2122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgressBar loader)</text>
 <text text-anchor="start" x="159.5" y="-2106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="169.5" y="-2106.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodePreview</text>
-<text text-anchor="start" x="169.5" y="-2094.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="169.5" y="-2094.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="159.88" y="-2078.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="169.5" y="-2078.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
 <text text-anchor="start" x="159.88" y="-2062.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
@@ -567,7 +567,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="none" stroke="#63b8ff" points="256.94,-2268.69 252.97,-2262.67 257,-2256.69 260.97,-2262.72 256.94,-2268.69"/>
 </a>
 </g>
-<text text-anchor="middle" x="306.62" y="-2588.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="306.62" y="-2588.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 <!-- Node11 -->
 <g id="Node000011" class="node">
@@ -619,7 +619,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="none" stroke="#63b8ff" points="663.82,-2298.75 660.29,-2292.46 664.74,-2286.79 668.27,-2293.08 663.82,-2298.75"/>
 </a>
 </g>
-<text text-anchor="middle" x="702.59" y="-2588.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="702.59" y="-2588.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 <!-- Node6&#45;&gt;Node2 -->
 <g id="edge5_Node000002_Node000006" class="edge">
@@ -654,7 +654,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="157.75" y="-3522.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
 <text text-anchor="start" x="157.75" y="-3510.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
 <text text-anchor="start" x="144.81" y="-3494.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="157.75" y="-3494.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="157.75" y="-3494.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="144.81" y="-3478.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="157.75" y="-3478.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="157.75" y="-3466.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
@@ -727,7 +727,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="60.75" y="-2726.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
 <text text-anchor="start" x="60.75" y="-2714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
 <text text-anchor="start" x="47.81" y="-2698.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="60.75" y="-2698.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="60.75" y="-2698.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="47.81" y="-2682.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="60.75" y="-2682.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="60.75" y="-2670.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CanScan: fr.softsf.canscan.ui.DynamicQrCodeResize Enum Reference</title>
+<title>CanScan: fr.softsf.canscan.ui.worker.DynamicResizeWorker Enum Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,14 +104,14 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.h
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.DynamicQrCodeResize Enum Reference</div></div>
+  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.worker.DynamicResizeWorker Enum Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Singleton responsible for managing asynchronous resizing of generated QR code images.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.DynamicQrCodeResize:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.worker.DynamicResizeWorker:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a01d0bf550b2174b4aa737e0fdae27f52" id="r_a01d0bf550b2174b4aa737e0fdae27f52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d0bf550b2174b4aa737e0fdae27f52">stop</a> ()</td></tr>
 <tr class="memdesc:a01d0bf550b2174b4aa737e0fdae27f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the current debounce timer and clears its reference.  <br /></td></tr>
 <tr class="separator:a01d0bf550b2174b4aa737e0fdae27f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac168b5bcb9913de63928083f8f750d1e" id="r_ac168b5bcb9913de63928083f8f750d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac168b5bcb9913de63928083f8f750d1e">updateQrCodeSize</a> (QrInput <a class="el" href="#a07fe389fb1c87a17a0b0600136f83d8e">qrInput</a>)</td></tr>
+<tr class="memitem:ac168b5bcb9913de63928083f8f750d1e" id="r_ac168b5bcb9913de63928083f8f750d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac168b5bcb9913de63928083f8f750d1e">updateQrCodeSize</a> (QrInput <a class="el" href="#a07fe389fb1c87a17a0b0600136f83d8e">wholeFields</a>)</td></tr>
 <tr class="memdesc:ac168b5bcb9913de63928083f8f750d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates internal <code><a class="el" href="">QrInput</a></code> and schedules a debounced QR code resize.  <br /></td></tr>
 <tr class="separator:ac168b5bcb9913de63928083f8f750d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed47fcf709f5f89a80357729b2878fe7" id="r_aed47fcf709f5f89a80357729b2878fe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed47fcf709f5f89a80357729b2878fe7">updateResizeDebounceTimer</a> (Timer <a class="el" href="#a310e7b2da350d360a93f0b92b141c3f9">resizeDebounceTimer</a>)</td></tr>
@@ -175,7 +175,7 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:abdb9091e995b2512c0694dc38ea41334" id="r_abdb9091e995b2512c0694dc38ea41334"><td class="memItemLeft" align="right" valign="top">JLabel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdb9091e995b2512c0694dc38ea41334">qrCodeLabel</a></td></tr>
 <tr class="separator:abdb9091e995b2512c0694dc38ea41334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07fe389fb1c87a17a0b0600136f83d8e" id="r_a07fe389fb1c87a17a0b0600136f83d8e"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07fe389fb1c87a17a0b0600136f83d8e">qrInput</a></td></tr>
+<tr class="memitem:a07fe389fb1c87a17a0b0600136f83d8e" id="r_a07fe389fb1c87a17a0b0600136f83d8e"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07fe389fb1c87a17a0b0600136f83d8e">wholeFields</a></td></tr>
 <tr class="separator:a07fe389fb1c87a17a0b0600136f83d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310e7b2da350d360a93f0b92b141c3f9" id="r_a310e7b2da350d360a93f0b92b141c3f9"><td class="memItemLeft" align="right" valign="top">Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a310e7b2da350d360a93f0b92b141c3f9">resizeDebounceTimer</a></td></tr>
 <tr class="separator:a310e7b2da350d360a93f0b92b141c3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,7 +202,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.cancelPreviousResizeWorker</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.cancelPreviousResizeWorker</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -226,7 +226,7 @@ Static Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">SwingWorker&lt; ImageIcon, Void &gt;
-              fr.softsf.canscan.ui.DynamicQrCodeResize.createResizeWorker
+              fr.softsf.canscan.ui.worker.DynamicResizeWorker.createResizeWorker
           </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span></td><td>)</td>
@@ -266,7 +266,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodeResize.getResizeDebounceTimer</td>
+          <td class="memname">Timer fr.softsf.canscan.ui.worker.DynamicResizeWorker.getResizeDebounceTimer</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -289,7 +289,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.handleResize</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.handleResize</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -324,7 +324,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.handleResizeWorkerCompletion</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.handleResizeWorkerCompletion</td>
           <td>(</td>
           <td class="paramtype">SwingWorker&lt; ImageIcon, Void &gt;</td>          <td class="paramname"><span class="paramname"><em>worker</em></span></td><td>)</td>
           <td></td>
@@ -355,7 +355,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.init</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.init</td>
           <td>(</td>
           <td class="paramtype">JLabel</td>          <td class="paramname"><span class="paramname"><em>qrCodeLabel</em></span></td><td>)</td>
           <td></td>
@@ -383,7 +383,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boolean fr.softsf.canscan.ui.DynamicQrCodeResize.isInvalidQrData</td>
+          <td class="memname">boolean fr.softsf.canscan.ui.worker.DynamicResizeWorker.isInvalidQrData</td>
           <td>(</td>
           <td class="paramtype">QrDataResult</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span></td><td>)</td>
           <td></td>
@@ -414,7 +414,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean fr.softsf.canscan.ui.DynamicQrCodeResize.isRunning</td>
+          <td class="memname">boolean fr.softsf.canscan.ui.worker.DynamicResizeWorker.isRunning</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -434,7 +434,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.launchResizeWorker</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.launchResizeWorker</td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span></td><td>)</td>
           <td></td>
@@ -469,7 +469,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.resetAndStartResizeWorker</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.resetAndStartResizeWorker</td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span></td><td>)</td>
           <td></td>
@@ -503,7 +503,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ImageIcon fr.softsf.canscan.ui.DynamicQrCodeResize.resizeImageInBackground</td>
+          <td class="memname">ImageIcon fr.softsf.canscan.ui.worker.DynamicResizeWorker.resizeImageInBackground</td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>squareSize</em></span></td><td>)</td>
           <td></td>
@@ -535,7 +535,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.stop</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.stop</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -554,9 +554,9 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.updateQrCodeSize</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.updateQrCodeSize</td>
           <td>(</td>
-          <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>qrInput</em></span></td><td>)</td>
+          <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>wholeFields</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -566,7 +566,7 @@ Static Private Attributes</h2></td></tr>
 <p>Cancels any active resize and triggers a new one after a short delay.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qrInput</td><td>latest QR code configuration </td></tr>
+    <tr><td class="paramname">wholeFields</td><td>latest QR code configuration </td></tr>
   </table>
   </dd>
 </dl>
@@ -587,7 +587,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodeResize.updateResizeDebounceTimer</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicResizeWorker.updateResizeDebounceTimer</td>
           <td>(</td>
           <td class="paramtype">Timer</td>          <td class="paramname"><span class="paramname"><em>resizeDebounceTimer</em></span></td><td>)</td>
           <td></td>
@@ -613,7 +613,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">fr.softsf.canscan.ui.DynamicQrCodeResize.INSTANCE</td>
+          <td class="memname">fr.softsf.canscan.ui.worker.DynamicResizeWorker.INSTANCE</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -630,7 +630,9 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"> final int fr.softsf.canscan.ui.DynamicQrCodeResize.LARGE_IMAGE_THRESHOLD = 1000</td>
+          <td class="memname"> final int fr.softsf.canscan.ui.worker.DynamicResizeWorker.LARGE_IMAGE_THRESHOLD
+              =
+              1000</td>
         </tr>
       </table>
   </td>
@@ -652,7 +654,8 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"> final int fr.softsf.canscan.ui.DynamicQrCodeResize.QR_CODE_LABEL_DEFAULT_SIZE = 50</td>
+          <td class="memname"> final int
+              fr.softsf.canscan.ui.worker.DynamicResizeWorker.QR_CODE_LABEL_DEFAULT_SIZE = 50</td>
         </tr>
       </table>
   </td>
@@ -674,7 +677,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JLabel fr.softsf.canscan.ui.DynamicQrCodeResize.qrCodeLabel</td>
+          <td class="memname">JLabel fr.softsf.canscan.ui.worker.DynamicResizeWorker.qrCodeLabel</td>
         </tr>
       </table>
   </td>
@@ -687,7 +690,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a07fe389fb1c87a17a0b0600136f83d8e" name="a07fe389fb1c87a17a0b0600136f83d8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07fe389fb1c87a17a0b0600136f83d8e">&#9670;&#160;</a></span>qrInput</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07fe389fb1c87a17a0b0600136f83d8e">&#9670;&#160;</a></span>wholeFields</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -696,7 +699,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QrInput fr.softsf.canscan.ui.DynamicQrCodeResize.qrInput</td>
+          <td class="memname">QrInput fr.softsf.canscan.ui.worker.DynamicResizeWorker.wholeFields</td>
         </tr>
       </table>
   </td>
@@ -718,7 +721,9 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"> final int fr.softsf.canscan.ui.DynamicQrCodeResize.RESIZE_DEBOUNCE_DELAY_MS = 200</td>
+          <td class="memname"> final int
+              fr.softsf.canscan.ui.worker.DynamicResizeWorker.RESIZE_DEBOUNCE_DELAY_MS
+              = 200</td>
         </tr>
       </table>
   </td>
@@ -740,7 +745,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodeResize.resizeDebounceTimer</td>
+          <td class="memname">Timer fr.softsf.canscan.ui.worker.DynamicResizeWorker.resizeDebounceTimer</td>
         </tr>
       </table>
   </td>
@@ -762,7 +767,8 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SwingWorker&lt;ImageIcon, Void&gt; fr.softsf.canscan.ui.DynamicQrCodeResize.resizeWorker</td>
+          <td class="memname">SwingWorker&lt;ImageIcon, Void&gt;
+              fr.softsf.canscan.ui.worker.DynamicResizeWorker.resizeWorker</td>
         </tr>
       </table>
   </td>

@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.ui;
+package fr.softsf.canscan.ui.worker;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -15,9 +15,10 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
-import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
-import fr.softsf.canscan.util.IntConstants;
+import fr.softsf.canscan.constant.IntConstants;
+import fr.softsf.canscan.model.WholeFields;
+import fr.softsf.canscan.ui.EncodedImage;
+import fr.softsf.canscan.ui.LabelIconUtil;
 
 /**
  * Asynchronously resizes a generated QR code image for display in a Swing UI.
@@ -27,32 +28,31 @@ import fr.softsf.canscan.util.IntConstants;
  * unnecessary scaling when multiple layout or configuration changes occur rapidly.
  *
  * <p>Each instance manages resizing for a specific {@link JLabel}, working with a {@link
- * QrCodeBufferedImage} as the source image. The optional {@link JProgressBar} can show a
- * wait/progress indicator while resizing is in progress.
+ * EncodedImage} as the source image. The optional {@link JProgressBar} can show a wait/progress
+ * indicator while resizing is in progress.
  *
  * <p>Resources are properly managed: previous icons are disposed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
  */
-public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> {
+public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
 
     private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
     private static final int DEFAULT_SIZE = 50;
 
-    private final QrCodeBufferedImage qrCodeBufferedImage;
+    private final EncodedImage encodedImage;
     private final JLabel qrCodeLabel;
 
     /**
      * Constructs a new QR code resize manager for a specific label.
      *
-     * @param qrCodeBufferedImage the source QR code image; must not be {@code null}
+     * @param encodedImage the source QR code image; must not be {@code null}
      * @param qrCodeLabel the label where the resized QR code will be displayed; must not be {@code
      *     null}
      * @param loader loader to show a wait/progress indicator
      */
-    public DynamicQrCodeResize(
-            QrCodeBufferedImage qrCodeBufferedImage, JLabel qrCodeLabel, JProgressBar loader) {
+    public DynamicResizeWorker(EncodedImage encodedImage, JLabel qrCodeLabel, JProgressBar loader) {
         super(loader);
-        this.qrCodeBufferedImage = qrCodeBufferedImage;
+        this.encodedImage = encodedImage;
         this.qrCodeLabel = qrCodeLabel;
     }
 
@@ -61,20 +61,20 @@ public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> 
      *
      * <p>Any ongoing resize worker is cancelled and a new one is started after a short delay.
      *
-     * @param qrInput the latest QR code configuration
+     * @param wholeFields the latest QR code configuration
      */
-    public void updateQrCodeResize(QrInput qrInput) {
-        this.qrInput = qrInput;
+    public void updateQrCodeResize(WholeFields wholeFields) {
+        this.wholeFields = wholeFields;
         resetAndStartWorker(RESIZE_DEBOUNCE_DELAY_MS);
     }
 
     /**
      * Clears the current icon before starting a new resize task. Invoked automatically by the
-     * {@link AbstractDynamicQrCodeWorker} workflow.
+     * {@link AbstractDynamicWorker} workflow.
      */
     @Override
     protected void clearResources() {
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
+        LabelIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
         qrCodeLabel.setIcon(null);
     }
 
@@ -88,11 +88,11 @@ public class DynamicQrCodeResize extends AbstractDynamicQrCodeWorker<ImageIcon> 
      */
     @Override
     protected SwingWorker<ImageIcon, Void> createWorker() {
-        int size = Math.max(qrInput.availableHeightForQrCode(), DEFAULT_SIZE);
+        int size = Math.max(wholeFields.availableHeightForQrCode(), DEFAULT_SIZE);
         return new SwingWorker<>() {
             @Override
             protected ImageIcon doInBackground() {
-                BufferedImage src = qrCodeBufferedImage.getQrOriginal();
+                BufferedImage src = encodedImage.getQrOriginal();
                 if (src == null) {
                     return null;
                 }

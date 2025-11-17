@@ -8,8 +8,8 @@ package fr.softsf.canscan.model;
 import java.awt.Color;
 import java.io.File;
 
-/** Configuration parameters used to generate a QR code. */
-public record QrConfig(
+/** Common form fields used to configure QR code generation. */
+public record CommonFields(
         File logoFile,
         int size,
         double imageRatio,

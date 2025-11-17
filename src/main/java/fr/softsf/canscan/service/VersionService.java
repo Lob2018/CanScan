@@ -21,9 +21,9 @@ import javax.net.ssl.SSLContext;
 import javax.swing.JButton;
 import javax.swing.SwingWorker;
 
+import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.util.Checker;
-import fr.softsf.canscan.util.StringConstants;
 
 /**
  * Singleton service for checking application version against GitHub releases. Uses the GitHub API

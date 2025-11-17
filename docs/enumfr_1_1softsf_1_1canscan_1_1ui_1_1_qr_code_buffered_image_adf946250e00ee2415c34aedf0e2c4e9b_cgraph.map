@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.generateQrCodeImage" name="fr.softsf.canscan.ui.QrCodeBufferedImage.generateQrCodeImage">
+<map id="fr.softsf.canscan.ui.EncodedImage.generateQrCodeImage" name="fr.softsf.canscan.ui.EncodedImage.generateQrCodeImage">
 <area shape="rect" id="Node000001" title="Generates a QR code image with optional logo and custom styling." alt="" coords="5,467,246,509"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="874,324,1107,367"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,464,208,411,249,385,293,364,365,343,441,328,517,318,593,313,737,314,859,324,859,329,737,319,593,318,518,323,442,333,367,348,295,369,251,389,211,415,150,468"/>

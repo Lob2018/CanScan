@@ -8,6 +8,10 @@ package fr.softsf.canscan.util;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 
+import fr.softsf.canscan.constant.DoubleConstants;
+import fr.softsf.canscan.constant.IntConstants;
+import fr.softsf.canscan.constant.StringConstants;
+
 /** Validates and sanitizes user input for QR code parameters. */
 public enum ValidationFieldHelper {
     INSTANCE;

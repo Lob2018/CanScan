@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.resetAndStartWorker" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.resetAndStartWorker">
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.resetAndStartWorker" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.resetAndStartWorker">
 <area shape="rect" id="Node000001" title="Executes the unified workflow: cancel previous worker, stop debounce, clear resources,..." alt="" coords="5,88,247,147"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a7cc26d48e6fdf5032aa4495a4dea06c7" title="Creates and returns a new SwingWorker for the current operation." alt="" coords="295,47,543,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,98,279,93,280,98,247,103"/>

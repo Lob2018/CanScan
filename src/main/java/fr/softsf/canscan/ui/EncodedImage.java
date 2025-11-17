@@ -25,15 +25,15 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
+import fr.softsf.canscan.model.CommonFields;
 import fr.softsf.canscan.model.ModuleContext;
-import fr.softsf.canscan.model.QrConfig;
 import fr.softsf.canscan.util.Checker;
 
 /**
  * Thread-safe singleton to hold a shared QR code {@link BufferedImage}. All access is synchronized
  * for thread safety.
  */
-public class QrCodeBufferedImage {
+public class EncodedImage {
 
     private static final double DEFAULT_GAP_BETWEEN_LOGO_AND_MODULES = 0.9;
     private static final String CONFIG = "config";
@@ -82,21 +82,20 @@ public class QrCodeBufferedImage {
     }
 
     /**
-     * Generates a QR code image with optional logo and custom styling.
+     * Generates a QR code image with optional logo and styling.
      *
-     * <p>The QR code is generated using the ZXing library with high error correction, allowing a
-     * logo to be embedded without breaking scanability. Modules, colors, margin, and rounded or
-     * square style are applied according to the provided configuration.
+     * <p>Uses ZXing with high error correction to ensure scanability even when a logo is embedded.
+     * Visual properties such as size, colors, margin, and module style are applied from the given
+     * configuration.
      *
-     * @param data The formatted string to encode in the QR code.
-     * @param config QR code configuration containing size, colors, margin, module style, and
-     *     optional logo.
-     * @return A BufferedImage containing the generated QR code.
-     * @throws WriterException If encoding the MECARD text into a QR code fails.
-     * @throws IOException If reading the logo file fails.
-     * @throws OutOfMemoryError If the requested size exceeds available memory.
+     * @param data the string to encode in the QR code
+     * @param config configuration including size, colors, margin, module style, and optional logo
+     * @return a BufferedImage containing the generated QR code
+     * @throws WriterException if encoding the data fails
+     * @throws IOException if reading the logo file fails
+     * @throws OutOfMemoryError if the requested size exceeds available memory
      */
-    public BufferedImage generateQrCodeImage(String data, QrConfig config)
+    public BufferedImage generateImage(String data, CommonFields config)
             throws WriterException, IOException {
         if (Checker.INSTANCE.checkNPE(config, GENERATE_QR_CODE_IMAGE, CONFIG)
                 || Checker.INSTANCE.checkNPE(data, GENERATE_QR_CODE_IMAGE, "data")) {
@@ -256,7 +255,7 @@ public class QrCodeBufferedImage {
      * @param config the QR code configuration including size, colors, module shape, margin, and
      *     logo ratio
      */
-    private void drawModules(Graphics2D g, BitMatrix matrix, QrConfig config) {
+    private void drawModules(Graphics2D g, BitMatrix matrix, CommonFields config) {
         if (Checker.INSTANCE.checkNPE(g, DRAW_MODULES, "g")
                 || Checker.INSTANCE.checkNPE(matrix, DRAW_MODULES, MATRIX)
                 || Checker.INSTANCE.checkNPE(config, DRAW_MODULES, CONFIG)) {
@@ -331,7 +330,12 @@ public class QrCodeBufferedImage {
      * @param config the QR code configuration
      */
     private void drawModule(
-            Graphics2D g, int x, int y, double moduleSizeX, double moduleSizeY, QrConfig config) {
+            Graphics2D g,
+            int x,
+            int y,
+            double moduleSizeX,
+            double moduleSizeY,
+            CommonFields config) {
         if (Checker.INSTANCE.checkNPE(g, "drawModule", "g")
                 || Checker.INSTANCE.checkNPE(config, "drawModule", CONFIG)) {
             return;
@@ -417,7 +421,7 @@ public class QrCodeBufferedImage {
      * @param matrixWidth Width of the QR code matrix.
      * @param config Configuration containing size, colors, module shape, and margin.
      */
-    public void drawFinderPatterns(Graphics2D g, int matrixWidth, QrConfig config) {
+    public void drawFinderPatterns(Graphics2D g, int matrixWidth, CommonFields config) {
         if (Checker.INSTANCE.checkNPE(g, "drawFinderPatterns", "g")
                 || Checker.INSTANCE.checkNPE(config, "drawFinderPatterns", CONFIG)) {
             return;
@@ -472,7 +476,7 @@ public class QrCodeBufferedImage {
      * @param config QR code configuration containing size, logo file, and image ratio.
      * @throws IOException If reading the logo file fails or the file is not a valid image.
      */
-    public void drawLogoIfPresent(Graphics2D g, QrConfig config) throws IOException {
+    public void drawLogoIfPresent(Graphics2D g, CommonFields config) throws IOException {
         if (Checker.INSTANCE.checkNPE(g, "drawLogoIfPresent", "g")
                 || Checker.INSTANCE.checkNPE(config, "drawLogoIfPresent", CONFIG)
                 || config.logoFile() == null

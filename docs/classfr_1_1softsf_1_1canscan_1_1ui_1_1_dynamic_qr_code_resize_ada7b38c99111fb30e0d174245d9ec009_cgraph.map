@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.DynamicQrCodeResize.createWorker" name="fr.softsf.canscan.ui.DynamicQrCodeResize.createWorker">
+<map id="fr.softsf.canscan.ui.worker.DynamicResizeWorker.createWorker" name="fr.softsf.canscan.ui.worker.DynamicResizeWorker.createWorker">
 <area shape="rect" id="Node000001" title="Creates a background SwingWorker that scales the QR code image to the target size." alt="" coords="5,253,195,296"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a2c43bc6e197cd5ca5fcf859a1f24c4ce" title="Handles the completion of the current SwingWorker task." alt="" coords="243,245,493,304"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,272,227,272,227,277,195,277"/>

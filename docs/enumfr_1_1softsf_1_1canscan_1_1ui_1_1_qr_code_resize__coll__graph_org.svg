@@ -7,7 +7,7 @@
 <svg width="188pt" height="572pt"
  viewBox="0.00 0.00 188.00 572.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 568)">
-<title>fr.softsf.canscan.ui.DynamicQrCodeResize</title>
+<title>fr.softsf.canscan.ui.worker.DynamicResizeWorker</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
@@ -20,7 +20,7 @@
 <text text-anchor="start" x="5.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00">JLabel qrCodeLabel</text>
 <text text-anchor="start" x="5.5" y="-490.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-490.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="14" y="-490.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="5.5" y="-474.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-474.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer resizeDebounceTimer</text>
 <text text-anchor="start" x="5.5" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
@@ -51,7 +51,7 @@
 <text text-anchor="start" x="14" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stop()</text>
 <text text-anchor="start" x="4" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeSize</text>
-<text text-anchor="start" x="14" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="14" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="4" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateResizeDebounce</text>
 <text text-anchor="start" x="14" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer(Timer resizeDebounceTimer)</text>

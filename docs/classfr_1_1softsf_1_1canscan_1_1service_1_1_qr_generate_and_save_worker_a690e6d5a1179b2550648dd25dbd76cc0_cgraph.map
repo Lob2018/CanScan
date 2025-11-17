@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.QrGenerateAndSaveWorker.done" name="fr.softsf.canscan.service.QrGenerateAndSaveWorker.done">
+<map id="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.done" name="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.done">
 <area shape="rect" id="Node000001" title="Handles the completion of the background task." alt="" coords="5,96,220,139"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#ae923aaa569119c39dcc72a7d637eb0a5" title="Handles execution errors by displaying the appropriate error message." alt="" coords="268,5,492,64"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,93,267,67,269,72,185,98"/>

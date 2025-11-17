@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.isInPositionPattern" name="fr.softsf.canscan.ui.QrCodeBufferedImage.isInPositionPattern">
+<map id="fr.softsf.canscan.ui.EncodedImage.isInPositionPattern" name="fr.softsf.canscan.ui.EncodedImage.isInPositionPattern">
 <area shape="rect" id="Node000001" title="Determines whether the given coordinates fall within any of the three QR code position patterns." alt="" coords="5,72,225,115"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#acdbacde2b4cabcb6003fbf7ac3699852" title="Checks if coordinates are within the bottom&#45;left position pattern." alt="" coords="273,5,509,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,69,284,50,286,55,207,74"/>

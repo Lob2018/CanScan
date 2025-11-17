@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CanScan: fr.softsf.canscan.ui.DynamicQrCodePreview Enum Reference</title>
+<title>CanScan: fr.softsf.canscan.ui.worker.DynamicPreviewWorker Enum Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,14 +103,14 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview.
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_preview-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.DynamicQrCodePreview Enum Reference</div></div>
+  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.worker.DynamicPreviewWorker Enum Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Thread-safe singleton responsible for managing the asynchronous generation and display of QR code previews within a Swing UI.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.DynamicQrCodePreview:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.worker.DynamicPreviewWorker:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a173cce533fb1e9bad9f28887bf5b2cbd" id="r_a173cce533fb1e9bad9f28887bf5b2cbd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173cce533fb1e9bad9f28887bf5b2cbd">isRunning</a> ()</td></tr>
 <tr class="memdesc:a173cce533fb1e9bad9f28887bf5b2cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the debounce timer is currently active.  <br /></td></tr>
 <tr class="separator:a173cce533fb1e9bad9f28887bf5b2cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a415a4a4703e813f9298facaa41403b01" id="r_a415a4a4703e813f9298facaa41403b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a415a4a4703e813f9298facaa41403b01">launchPreviewWorker</a> (QrInput <a class="el" href="#a1ef747a81fdea43489b94cb45baa6ad2">qrInput</a>)</td></tr>
+<tr class="memitem:a415a4a4703e813f9298facaa41403b01" id="r_a415a4a4703e813f9298facaa41403b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a415a4a4703e813f9298facaa41403b01">launchPreviewWorker</a> (QrInput <a class="el" href="#a1ef747a81fdea43489b94cb45baa6ad2">wholeFields</a>)</td></tr>
 <tr class="memdesc:a415a4a4703e813f9298facaa41403b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current <code><a class="el" href="">QrInput</a></code> and launches a new asynchronous preview generation task.  <br /></td></tr>
 <tr class="separator:a415a4a4703e813f9298facaa41403b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18464a10348140991e373b711e507d1e" id="r_a18464a10348140991e373b711e507d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18464a10348140991e373b711e507d1e">stop</a> ()</td></tr>
@@ -166,7 +166,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae7f6fdd4717d86e2d13933c02b190b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a5e46029cffd75d41b9f718232a89a" id="r_a69a5e46029cffd75d41b9f718232a89a"><td class="memItemLeft" align="right" valign="top">JLabel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69a5e46029cffd75d41b9f718232a89a">qrCodeLabel</a></td></tr>
 <tr class="separator:a69a5e46029cffd75d41b9f718232a89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ef747a81fdea43489b94cb45baa6ad2" id="r_a1ef747a81fdea43489b94cb45baa6ad2"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ef747a81fdea43489b94cb45baa6ad2">qrInput</a></td></tr>
+<tr class="memitem:a1ef747a81fdea43489b94cb45baa6ad2" id="r_a1ef747a81fdea43489b94cb45baa6ad2"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ef747a81fdea43489b94cb45baa6ad2">wholeFields</a></td></tr>
 <tr class="separator:a1ef747a81fdea43489b94cb45baa6ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -183,7 +183,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BufferedImage fr.softsf.canscan.ui.DynamicQrCodePreview.buildPreviewImage</td>
+          <td class="memname">BufferedImage fr.softsf.canscan.ui.worker.DynamicPreviewWorker.buildPreviewImage</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -209,7 +209,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.cancelActivePreviewWorker</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicPreviewWorker.cancelActivePreviewWorker</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -233,7 +233,7 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">SwingWorker&lt; BufferedImage, Void &gt;
-              fr.softsf.canscan.ui.DynamicQrCodePreview.createPreviewWorker
+              fr.softsf.canscan.ui.worker.DynamicPreviewWorker.createPreviewWorker
           </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
@@ -267,7 +267,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodePreview.getPreviewDebounceTimer</td>
+          <td class="memname">Timer fr.softsf.canscan.ui.worker.DynamicPreviewWorker.getPreviewDebounceTimer</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -290,7 +290,8 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.handlePreviewWorkerCompletion</td>
+          <td class="memname">void
+              fr.softsf.canscan.ui.worker.DynamicPreviewWorker.handlePreviewWorkerCompletion</td>
           <td>(</td>
           <td class="paramtype">SwingWorker&lt; BufferedImage, Void &gt;</td>          <td class="paramname"><span class="paramname"><em>worker</em></span></td><td>)</td>
           <td></td>
@@ -321,7 +322,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.init</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicPreviewWorker.init</td>
           <td>(</td>
           <td class="paramtype">JLabel</td>          <td class="paramname"><span class="paramname"><em>qrCodeLabel</em></span></td><td>)</td>
           <td></td>
@@ -346,7 +347,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boolean fr.softsf.canscan.ui.DynamicQrCodePreview.isRunning</td>
+          <td class="memname">boolean fr.softsf.canscan.ui.worker.DynamicPreviewWorker.isRunning</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -366,9 +367,9 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.launchPreviewWorker</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicPreviewWorker.launchPreviewWorker</td>
           <td>(</td>
-          <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>qrInput</em></span></td><td>)</td>
+          <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>wholeFields</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -378,7 +379,7 @@ Private Attributes</h2></td></tr>
 <p>Replaces any existing task and triggers QR code generation off the EDT.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">qrInput</td><td>the latest QR code input data to render </td></tr>
+    <tr><td class="paramname">wholeFields</td><td>the latest QR code input data to render </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,7 +400,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.stop</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicPreviewWorker.stop</td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -418,7 +419,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.ui.DynamicQrCodePreview.updatePreviewDebounceTimer</td>
+          <td class="memname">void fr.softsf.canscan.ui.worker.DynamicPreviewWorker.updatePreviewDebounceTimer</td>
           <td>(</td>
           <td class="paramtype">Timer</td>          <td class="paramname"><span class="paramname"><em>previewDebounceTimer</em></span></td><td>)</td>
           <td></td>
@@ -451,7 +452,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">fr.softsf.canscan.ui.DynamicQrCodePreview.INSTANCE</td>
+          <td class="memname">fr.softsf.canscan.ui.worker.DynamicPreviewWorker.INSTANCE</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -468,7 +469,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Timer fr.softsf.canscan.ui.DynamicQrCodePreview.previewDebounceTimer</td>
+          <td class="memname">Timer fr.softsf.canscan.ui.worker.DynamicPreviewWorker.previewDebounceTimer</td>
         </tr>
       </table>
   </td>
@@ -491,7 +492,7 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">SwingWorker&lt;BufferedImage, Void&gt;
-              fr.softsf.canscan.ui.DynamicQrCodePreview.previewWorker</td>
+              fr.softsf.canscan.ui.worker.DynamicPreviewWorker.previewWorker</td>
         </tr>
       </table>
   </td>
@@ -513,7 +514,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">JLabel fr.softsf.canscan.ui.DynamicQrCodePreview.qrCodeLabel</td>
+          <td class="memname">JLabel fr.softsf.canscan.ui.worker.DynamicPreviewWorker.qrCodeLabel</td>
         </tr>
       </table>
   </td>
@@ -526,7 +527,7 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a1ef747a81fdea43489b94cb45baa6ad2" name="a1ef747a81fdea43489b94cb45baa6ad2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ef747a81fdea43489b94cb45baa6ad2">&#9670;&#160;</a></span>qrInput</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef747a81fdea43489b94cb45baa6ad2">&#9670;&#160;</a></span>wholeFields</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +536,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QrInput fr.softsf.canscan.ui.DynamicQrCodePreview.qrInput</td>
+          <td class="memname">QrInput fr.softsf.canscan.ui.worker.DynamicPreviewWorker.wholeFields</td>
         </tr>
       </table>
   </td>

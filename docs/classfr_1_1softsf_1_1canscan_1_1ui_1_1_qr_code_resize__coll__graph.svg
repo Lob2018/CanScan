@@ -54,7 +54,7 @@ var sectionId = 'dynsection-1';
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
-<title>fr.softsf.canscan.ui.DynamicQrCodeResize</title>
+<title>fr.softsf.canscan.ui.worker.DynamicResizeWorker</title>
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
@@ -71,11 +71,11 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="146" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
 <text text-anchor="start" x="136" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="146" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrCodeResize(QrCodeBuffered</text>
-<text text-anchor="start" x="146" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image qrCodeBufferedImage,</text>
+<text text-anchor="start" x="146" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image encodedImage,</text>
 <text text-anchor="start" x="146" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, Loader loader)</text>
 <text text-anchor="start" x="136" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="146" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeResize</text>
-<text text-anchor="start" x="146" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="146" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="136.38" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="146" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
 <text text-anchor="start" x="136.38" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
@@ -101,7 +101,7 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="4.38" y="-972.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="14" y="-972.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
 <text text-anchor="start" x="4.38" y="-956.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="14" y="-956.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="14" y="-956.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="4.38" y="-940.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="14" y="-940.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="14" y="-928.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
@@ -331,7 +331,7 @@ var sectionId = 'dynsection-1';
 <polygon fill="none" stroke="#63b8ff" points="227.72,-244.45 223.33,-238.72 226.93,-232.47 231.32,-238.2 227.72,-244.45"/>
 </a>
 </g>
-<text text-anchor="middle" x="278.62" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;qrCodeBufferedImage</text>
+<text text-anchor="middle" x="278.62" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> &#45;encodedImage</text>
 </g>
 </g>
 </svg>

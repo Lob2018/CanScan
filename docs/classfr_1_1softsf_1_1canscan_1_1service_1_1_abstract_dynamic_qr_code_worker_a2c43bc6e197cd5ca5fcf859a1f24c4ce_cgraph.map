@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.handleWorkerDone" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.handleWorkerDone">
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.handleWorkerDone" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.handleWorkerDone">
 <area shape="rect" id="Node000001" title="Handles the completion of the current SwingWorker task." alt="" coords="5,245,256,304"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a5ea567d314cb76b8c4c4abebca360bee" title="Called when the worker fails or is cancelled." alt="" coords="304,175,530,233"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,242,288,233,289,238,253,247"/>

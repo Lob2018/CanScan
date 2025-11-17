@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.service;
+package fr.softsf.canscan.ui.worker;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,22 +17,22 @@ import javax.swing.SwingWorker;
 
 import com.google.zxing.WriterException;
 
-import fr.softsf.canscan.model.QrConfig;
-import fr.softsf.canscan.model.QrDataResult;
+import fr.softsf.canscan.constant.StringConstants;
+import fr.softsf.canscan.model.CommonFields;
+import fr.softsf.canscan.model.EncodedData;
+import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.MyPopup;
-import fr.softsf.canscan.ui.QrCodeBufferedImage;
-import fr.softsf.canscan.util.StringConstants;
 
 /**
  * SwingWorker that generates and saves QR codes in a background thread. Handles UI updates and
  * error reporting on the Event Dispatch Thread.
  */
-public class QrGenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
-    private final QrDataResult qrData;
-    private final QrConfig config;
+public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
+    private final EncodedData qrData;
+    private final CommonFields config;
     private final JProgressBar loader;
     private final File outputFile;
-    private final QrCodeBufferedImage qrCodeBufferedImage;
+    private final EncodedImage encodedImage;
     private String errorTitle = null;
     private String errorMessage = null;
 
@@ -43,19 +43,19 @@ public class QrGenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
      * @param config the visual configuration
      * @param loader the progress bar to hide after completion
      * @param outputFile the target file for saving the QR code
-     * @param qrCodeBufferedImage the service to generate QR code images
+     * @param encodedImage the service to generate QR code images
      */
-    public QrGenerateAndSaveWorker(
-            QrDataResult qrData,
-            QrConfig config,
+    public GenerateAndSaveWorker(
+            EncodedData qrData,
+            CommonFields config,
             JProgressBar loader,
             File outputFile,
-            QrCodeBufferedImage qrCodeBufferedImage) {
+            EncodedImage encodedImage) {
         this.qrData = qrData;
         this.config = config;
         this.loader = loader;
         this.outputFile = outputFile;
-        this.qrCodeBufferedImage = qrCodeBufferedImage;
+        this.encodedImage = encodedImage;
     }
 
     /**
@@ -67,7 +67,7 @@ public class QrGenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
     @Override
     protected BufferedImage doInBackground() throws Exception {
         try {
-            BufferedImage qr = qrCodeBufferedImage.generateQrCodeImage(qrData.data(), config);
+            BufferedImage qr = encodedImage.generateImage(qrData.data(), config);
             saveQrCodeToFile(qr, outputFile);
             return qr;
         } catch (WriterException | IOException | OutOfMemoryError e) {
@@ -137,7 +137,7 @@ public class QrGenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
             return;
         }
         BufferedImage qr = get();
-        qrCodeBufferedImage.updateQrOriginal(qr);
+        encodedImage.updateQrOriginal(qr);
         MyPopup.INSTANCE.showDialog(
                 "Code QR enregistré dans\n", outputFile.getAbsolutePath(), "Confirmation");
     }

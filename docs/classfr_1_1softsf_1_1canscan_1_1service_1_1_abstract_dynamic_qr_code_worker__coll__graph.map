@@ -1,3 +1,3 @@
-<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt;" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt;">
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt;" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt;">
 <area shape="rect" id="Node000001" title="Base class managing asynchronous QR code tasks with a unified workflow." alt="" coords="5,5,234,517"/>
 </map>

@@ -67,7 +67,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="298.38" y="-746.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="308" y="-746.5" font-family="Helvetica,sans-Serif" font-size="10.00">final Loader loader</text>
 <text text-anchor="start" x="298.38" y="-730.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="308" y="-730.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="308" y="-730.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="298.38" y="-714.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="308" y="-714.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="308" y="-702.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
@@ -117,7 +117,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="29.25" y="-322.5" font-family="Helvetica,sans-Serif" font-size="10.00">Preview&lt; BufferedImage &gt;</text>
 <text text-anchor="start" x="5.5" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00">final QrCodeBufferedImage</text>
-<text text-anchor="start" x="14" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00"> qrCodeBufferedImage</text>
+<text text-anchor="start" x="14" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00"> encodedImage</text>
 <text text-anchor="start" x="5.5" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
 <text text-anchor="start" x="5.5" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
@@ -128,12 +128,12 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="14" y="-222.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
 <text text-anchor="start" x="4" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrCodePreview(QrCodeBuffered</text>
-<text text-anchor="start" x="14" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image qrCodeBufferedImage,</text>
+<text text-anchor="start" x="14" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image encodedImage,</text>
 <text text-anchor="start" x="14" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00"> QrCodeResize qrCodeResize,</text>
 <text text-anchor="start" x="14" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, Loader loader)</text>
 <text text-anchor="start" x="4" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodePreview</text>
-<text text-anchor="start" x="14" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="14" y="-142.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="4.38" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="14" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
 <text text-anchor="start" x="4.38" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
@@ -170,7 +170,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="233.12" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">Resize&lt; ImageIcon &gt;</text>
 <text text-anchor="start" x="198.5" y="-280.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="207" y="-280.5" font-family="Helvetica,sans-Serif" font-size="10.00">final QrCodeBufferedImage</text>
-<text text-anchor="start" x="207" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00"> qrCodeBufferedImage</text>
+<text text-anchor="start" x="207" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00"> encodedImage</text>
 <text text-anchor="start" x="198.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="207" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
 <text text-anchor="start" x="198.5" y="-236.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
@@ -180,11 +180,11 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="207" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
 <text text-anchor="start" x="197" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="207" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrCodeResize(QrCodeBuffered</text>
-<text text-anchor="start" x="207" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image qrCodeBufferedImage,</text>
+<text text-anchor="start" x="207" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image encodedImage,</text>
 <text text-anchor="start" x="207" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, Loader loader)</text>
 <text text-anchor="start" x="197" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="207" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeResize</text>
-<text text-anchor="start" x="207" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput qrInput)</text>
+<text text-anchor="start" x="207" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">(QrInput wholeFields)</text>
 <text text-anchor="start" x="197.38" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="207" y="-124.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
 <text text-anchor="start" x="197.38" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
@@ -222,7 +222,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="390.38" y="-314.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="400" y="-314.5" font-family="Helvetica,sans-Serif" font-size="10.00">final Loader loader</text>
 <text text-anchor="start" x="390.38" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="400" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="400" y="-298.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="390.38" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="400" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="400" y="-270.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
@@ -285,7 +285,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="569.31" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="583" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00">final Loader loader</text>
 <text text-anchor="start" x="569.31" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="583" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput qrInput</text>
+<text text-anchor="start" x="583" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput wholeFields</text>
 <text text-anchor="start" x="569.31" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
 <text text-anchor="start" x="583" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
 <text text-anchor="start" x="583" y="-276.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>

@@ -16,7 +16,7 @@ package fr.softsf.canscan.model;
  * @param whiteBoxSize logo area size
  */
 public record ModuleContext(
-        QrConfig config,
+        CommonFields config,
         int matrixWidth,
         int matrixHeight,
         int whiteBoxX,

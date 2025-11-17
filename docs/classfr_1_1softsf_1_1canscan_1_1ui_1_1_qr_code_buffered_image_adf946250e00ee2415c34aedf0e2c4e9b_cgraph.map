@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.generateQrCodeImage" name="fr.softsf.canscan.ui.QrCodeBufferedImage.generateQrCodeImage">
+<map id="fr.softsf.canscan.ui.EncodedImage.generateQrCodeImage" name="fr.softsf.canscan.ui.EncodedImage.generateQrCodeImage">
 <area shape="rect" id="Node000001" title="Generates a QR code image with optional logo and custom styling." alt="" coords="5,241,246,284"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a98136934121352ab51521256225c1e74" title="Creates a QR code matrix for the given text." alt="" coords="314,12,496,55"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,239,162,202,197,155,241,106,292,64,300,60,303,64,295,69,245,110,201,158,166,205,142,242"/>

@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.disposeAllResourcesOnExit" name="fr.softsf.canscan.service.AbstractDynamicQrCodeWorker.disposeAllResourcesOnExit">
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.disposeAllResourcesOnExit" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.disposeAllResourcesOnExit">
 <area shape="rect" id="Node000001" title="Releases all resources used by this worker." alt="" coords="5,129,263,188"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#ab96e38d883cf01ec5565f6391e20c9ac" title="Resets the current worker and associated resources." alt="" coords="311,129,552,188"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,156,295,156,295,161,263,161"/>

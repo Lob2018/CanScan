@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.DynamicQrCodeResize.resetAndStartResizeWorker" name="fr.softsf.canscan.ui.DynamicQrCodeResize.resetAndStartResizeWorker">
+<map id="fr.softsf.canscan.ui.worker.DynamicResizeWorker.resetAndStartResizeWorker" name="fr.softsf.canscan.ui.worker.DynamicResizeWorker.resetAndStartResizeWorker">
 <area shape="rect" id="Node000001" title="Cancels any pending task, clears the current icon, starts the wait animation, and launches a new resi..." alt="" coords="5,39,234,81"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_resize.html#a8d6601bb69287724be51e8ffac0fc369" title="Cancels any active resize worker and waits for proper termination." alt="" coords="282,5,519,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,44,266,40,267,45,234,49"/>

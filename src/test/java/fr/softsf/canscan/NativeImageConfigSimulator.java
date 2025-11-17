@@ -29,7 +29,7 @@ import javax.swing.SwingUtilities;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
 
-import fr.softsf.canscan.util.StringConstants;
+import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.util.UseLucioleFont;
 
 /**

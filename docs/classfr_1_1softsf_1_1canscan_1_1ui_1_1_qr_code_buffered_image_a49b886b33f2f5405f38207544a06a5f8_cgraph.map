@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.drawModules" name="fr.softsf.canscan.ui.QrCodeBufferedImage.drawModules">
+<map id="fr.softsf.canscan.ui.EncodedImage.drawModules" name="fr.softsf.canscan.ui.EncodedImage.drawModules">
 <area shape="rect" id="Node000001" title="Renders all QR code modules onto the provided graphics context." alt="" coords="5,39,192,81"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a7515cc2fe4bc454921afb18d2f6cf5ee" title="Draws a single QR code module at the specified coordinates with configured size and shape." alt="" coords="256,5,438,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,45,240,38,241,44,193,50"/>

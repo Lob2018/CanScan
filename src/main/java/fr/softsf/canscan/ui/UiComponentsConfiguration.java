@@ -28,10 +28,10 @@ import javax.swing.event.DocumentListener;
 
 import org.apache.commons.lang3.StringUtils;
 
+import fr.softsf.canscan.constant.FloatConstants;
+import fr.softsf.canscan.constant.IntConstants;
 import fr.softsf.canscan.model.MecardJFields;
 import fr.softsf.canscan.util.Checker;
-import fr.softsf.canscan.util.FloatConstants;
-import fr.softsf.canscan.util.IntConstants;
 
 /** Creating and configuring UI components. */
 public enum UiComponentsConfiguration {

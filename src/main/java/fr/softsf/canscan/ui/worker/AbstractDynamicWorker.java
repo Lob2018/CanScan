@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.service;
+package fr.softsf.canscan.ui.worker;
 
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.ExecutionException;
@@ -11,7 +11,7 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 import javax.swing.Timer;
 
-import fr.softsf.canscan.model.QrInput;
+import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.util.Checker;
 
@@ -23,11 +23,11 @@ import fr.softsf.canscan.util.Checker;
  *
  * @param <T> type of result produced by the SwingWorker (e.g., ImageIcon, BufferedImage)
  */
-public abstract class AbstractDynamicQrCodeWorker<T> {
+public abstract class AbstractDynamicWorker<T> {
 
     protected Timer debounceTimer;
     protected SwingWorker<T, Void> worker;
-    protected QrInput qrInput;
+    protected WholeFields wholeFields;
     protected final JProgressBar loader;
 
     /**
@@ -35,8 +35,8 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
      *
      * @param loader {@link JProgressBar} for progress indication; must not be {@code null}
      */
-    protected AbstractDynamicQrCodeWorker(JProgressBar loader) {
-        Checker.INSTANCE.checkNPE(loader, "AbstractDynamicQrCodeWorker", "loader");
+    protected AbstractDynamicWorker(JProgressBar loader) {
+        Checker.INSTANCE.checkNPE(loader, "AbstractDynamicWorker", "loader");
         this.loader = loader;
     }
 
@@ -143,7 +143,7 @@ public abstract class AbstractDynamicQrCodeWorker<T> {
      */
     public void disposeAllResourcesOnExit() {
         resetWorker();
-        qrInput = null;
+        wholeFields = null;
     }
 
     /** Stops the loader's wait indicator. */

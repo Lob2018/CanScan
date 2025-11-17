@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CanScan: fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt; Class Template Reference</title>
+<title>CanScan: fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,21 +103,21 @@ $(function(){initNavTree('classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_d
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Base class managing asynchronous QR code tasks with a unified workflow.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt;:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.service.AbstractDynamicQrCodeWorker&lt; T &gt;:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt;:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
@@ -169,7 +169,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aa6aa81f8a0ec676fcc794c616b764553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a395c803a67d260c755319715920aa" id="r_af3a395c803a67d260c755319715920aa"><td class="memItemLeft" align="right" valign="top">final JProgressBar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3a395c803a67d260c755319715920aa">loader</a></td></tr>
 <tr class="separator:af3a395c803a67d260c755319715920aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826b0d287862122b2f0a8ff591030376" id="r_a826b0d287862122b2f0a8ff591030376"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826b0d287862122b2f0a8ff591030376">qrInput</a></td></tr>
+<tr class="memitem:a826b0d287862122b2f0a8ff591030376" id="r_a826b0d287862122b2f0a8ff591030376"><td class="memItemLeft" align="right" valign="top">QrInput&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a826b0d287862122b2f0a8ff591030376">wholeFields</a></td></tr>
 <tr class="separator:a826b0d287862122b2f0a8ff591030376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b200aa7da5dd7aef60d8d151c3e1050" id="r_a9b200aa7da5dd7aef60d8d151c3e1050"><td class="memItemLeft" align="right" valign="top">SwingWorker&lt; T, Void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b200aa7da5dd7aef60d8d151c3e1050">worker</a></td></tr>
 <tr class="separator:a9b200aa7da5dd7aef60d8d151c3e1050"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +200,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.<a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">AbstractDynamicQrCodeWorker</a> </td>
+          <td class="memname"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.<a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">AbstractDynamicQrCodeWorker</a> </td>
           <td>(</td>
           <td class="paramtype">JProgressBar</td>          <td class="paramname"><span class="paramname"><em>loader</em></span></td><td>)</td>
           <td></td>
@@ -234,7 +234,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.cancelWorker </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.cancelWorker </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -261,7 +261,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">abstract void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.clearResources </td>
+          <td class="memname">abstract void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.clearResources </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -276,7 +276,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Clears any allocated data, icons, or buffers before starting a new task. </p>
 
-<p>Reimplemented in <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#ad56c29c83187543cfeb27af95dd89cd6">fr.softsf.canscan.ui.DynamicQrCodePreview</a>, and <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html#a621022dfde1c1fd853d3a82d7d764c96">fr.softsf.canscan.ui.DynamicQrCodeResize</a>.</p>
+<p>Reimplemented in <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#ad56c29c83187543cfeb27af95dd89cd6">fr.softsf.canscan.ui.worker.DynamicPreviewWorker</a>, and <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html#a621022dfde1c1fd853d3a82d7d764c96">fr.softsf.canscan.ui.worker.DynamicResizeWorker</a>.</p>
 
 </div>
 </div>
@@ -290,7 +290,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">abstract SwingWorker&lt; T, Void &gt; <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.createWorker </td>
+          <td class="memname">abstract SwingWorker&lt; T, Void &gt; <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.createWorker </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -305,7 +305,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Creates and returns a new SwingWorker for the current operation. </p>
 
-<p>Reimplemented in <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#a6f85c3dfbf82c86a0e3441f0a8cc1037">fr.softsf.canscan.ui.DynamicQrCodePreview</a>, and <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html#ada7b38c99111fb30e0d174245d9ec009">fr.softsf.canscan.ui.DynamicQrCodeResize</a>.</p>
+<p>Reimplemented in <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#a6f85c3dfbf82c86a0e3441f0a8cc1037">fr.softsf.canscan.ui.worker.DynamicPreviewWorker</a>, and <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html#ada7b38c99111fb30e0d174245d9ec009">fr.softsf.canscan.ui.worker.DynamicResizeWorker</a>.</p>
 
 </div>
 </div>
@@ -316,7 +316,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.disposeAllResourcesOnExit </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.disposeAllResourcesOnExit </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -346,7 +346,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.handleWorkerDone </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.handleWorkerDone </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -381,7 +381,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.onWorkerFailure </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.onWorkerFailure </td>
           <td>(</td>
           <td class="paramtype">Exception</td>          <td class="paramname"><span class="paramname"><em>ex</em></span></td><td>)</td>
           <td></td>
@@ -415,7 +415,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">abstract void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.onWorkerSuccess </td>
+          <td class="memname">abstract void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.onWorkerSuccess </td>
           <td>(</td>
           <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
@@ -442,7 +442,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.resetAndStartWorker </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.resetAndStartWorker </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>delayMs</em></span></td><td>)</td>
           <td></td>
@@ -482,7 +482,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.resetWorker </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.resetWorker </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -517,7 +517,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.stopDebounceTimer </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.stopDebounceTimer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -544,7 +544,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.stopLoader </td>
+          <td class="memname">void <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.stopLoader </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -572,7 +572,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Timer <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.debounceTimer</td>
+          <td class="memname">Timer <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.debounceTimer</td>
         </tr>
       </table>
   </td>
@@ -594,7 +594,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final JProgressBar <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.loader</td>
+          <td class="memname">final JProgressBar <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.loader</td>
         </tr>
       </table>
   </td>
@@ -607,7 +607,7 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a826b0d287862122b2f0a8ff591030376" name="a826b0d287862122b2f0a8ff591030376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a826b0d287862122b2f0a8ff591030376">&#9670;&#160;</a></span>qrInput</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a826b0d287862122b2f0a8ff591030376">&#9670;&#160;</a></span>wholeFields</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,7 +616,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QrInput <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.qrInput</td>
+          <td class="memname">QrInput <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.wholeFields</td>
         </tr>
       </table>
   </td>
@@ -638,7 +638,7 @@ Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SwingWorker&lt;T, Void&gt; <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.service.AbstractDynamicQrCodeWorker</a>&lt; T &gt;.worker</td>
+          <td class="memname">SwingWorker&lt;T, Void&gt; <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html">fr.softsf.canscan.ui.worker.AbstractDynamicWorker</a>&lt; T &gt;.worker</td>
         </tr>
       </table>
   </td>

@@ -41,26 +41,26 @@ import javax.swing.event.DocumentListener;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
 
+import fr.softsf.canscan.constant.DoubleConstants;
+import fr.softsf.canscan.constant.FloatConstants;
+import fr.softsf.canscan.constant.IntConstants;
+import fr.softsf.canscan.constant.StringConstants;
+import fr.softsf.canscan.model.CommonFields;
+import fr.softsf.canscan.model.EncodedData;
 import fr.softsf.canscan.model.MecardJFields;
 import fr.softsf.canscan.model.Mode;
-import fr.softsf.canscan.model.QrConfig;
-import fr.softsf.canscan.model.QrDataResult;
-import fr.softsf.canscan.model.QrInput;
+import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.service.DataBuilderService;
 import fr.softsf.canscan.service.GenerateAndSaveService;
 import fr.softsf.canscan.service.VersionService;
-import fr.softsf.canscan.ui.DynamicQrCodePreview;
-import fr.softsf.canscan.ui.DynamicQrCodeResize;
+import fr.softsf.canscan.ui.ColorOperation;
+import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.MyPopup;
-import fr.softsf.canscan.ui.QrCodeBufferedImage;
-import fr.softsf.canscan.ui.QrCodeColor;
 import fr.softsf.canscan.ui.UiComponentsConfiguration;
+import fr.softsf.canscan.ui.worker.DynamicPreviewWorker;
+import fr.softsf.canscan.ui.worker.DynamicResizeWorker;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
-import fr.softsf.canscan.util.DoubleConstants;
-import fr.softsf.canscan.util.FloatConstants;
-import fr.softsf.canscan.util.IntConstants;
-import fr.softsf.canscan.util.StringConstants;
 import fr.softsf.canscan.util.UseLucioleFont;
 import fr.softsf.canscan.util.ValidationFieldHelper;
 
@@ -131,14 +131,14 @@ public class CanScan extends JFrame {
     private final JButton bgColorButton = new JButton("#FFFFFF");
     private final JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
     // Services
-    private final transient QrCodeBufferedImage qrCodeBufferedImage = new QrCodeBufferedImage();
-    private final transient DynamicQrCodeResize qrCodeResize =
-            new DynamicQrCodeResize(qrCodeBufferedImage, qrCodeLabel, loader);
-    private final transient DynamicQrCodePreview qrCodePreview =
-            new DynamicQrCodePreview(qrCodeBufferedImage, qrCodeResize, qrCodeLabel, loader);
-    private final transient QrCodeColor qrCodeColor = new QrCodeColor();
+    private final transient EncodedImage encodedImage = new EncodedImage();
+    private final transient DynamicResizeWorker qrCodeResize =
+            new DynamicResizeWorker(encodedImage, qrCodeLabel, loader);
+    private final transient DynamicPreviewWorker qrCodePreview =
+            new DynamicPreviewWorker(encodedImage, qrCodeResize, qrCodeLabel, loader);
+    private final transient ColorOperation colorOperation = new ColorOperation();
     private final transient GenerateAndSaveService generateAndSaveService =
-            new GenerateAndSaveService(qrCodeBufferedImage);
+            new GenerateAndSaveService(encodedImage);
 
     /**
      * Initializes the CanScan GUI.
@@ -425,11 +425,11 @@ public class CanScan extends JFrame {
      * <p>Initializes buttons, listeners, and updates preview on color changes.
      */
     private JPanel colorPanel() {
-        qrCodeColor.initializeColorButton(qrColorButton, Color.BLACK, true);
-        qrCodeColor.initializeColorButton(bgColorButton, Color.WHITE, false);
+        colorOperation.initializeColorButton(qrColorButton, Color.BLACK, true);
+        colorOperation.initializeColorButton(bgColorButton, Color.WHITE, false);
         qrColorButton.addActionListener(
                 e -> {
-                    Color newColor = qrCodeColor.chooseColor(qrColorButton, qrColor, true);
+                    Color newColor = colorOperation.chooseColor(qrColorButton, qrColor, true);
                     if (newColor != null) {
                         qrColor = newColor;
                         qrCodePreview.updateQrCodePreview(getQrInput());
@@ -437,7 +437,7 @@ public class CanScan extends JFrame {
                 });
         bgColorButton.addActionListener(
                 e -> {
-                    Color newColor = qrCodeColor.chooseColor(bgColorButton, bgColor, false);
+                    Color newColor = colorOperation.chooseColor(bgColorButton, bgColor, false);
                     if (newColor != null) {
                         bgColor = newColor;
                         qrCodePreview.updateQrCodePreview(getQrInput());
@@ -707,15 +707,15 @@ public class CanScan extends JFrame {
             return;
         }
         try {
-            QrDataResult qrData = DataBuilderService.INSTANCE.buildData(currentMode, getQrInput());
+            EncodedData qrData = DataBuilderService.INSTANCE.buildData(currentMode, getQrInput());
             if (Checker.INSTANCE.checkNPE(
                     qrData,
                     StringConstants.GENERATE_QR_CODE.getValue(),
                     StringConstants.QR_DATA.getValue())) {
                 return;
             }
-            QrConfig config =
-                    new QrConfig(
+            CommonFields config =
+                    new CommonFields(
                             logoField.getText().isBlank() ? null : new File(logoField.getText()),
                             validateAndGetSize(),
                             validateAndGetRatio(),
@@ -745,12 +745,12 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Collects current input and visual settings into a {@link QrInput} for QR code generation.
+     * Collects current input and visual settings into a {@link WholeFields} for QR code generation.
      *
-     * @return a populated {@link QrInput} instance
+     * @return a populated {@link WholeFields} instance
      */
-    private QrInput getQrInput() {
-        return new QrInput(
+    private WholeFields getQrInput() {
+        return new WholeFields(
                 calculateAvailableQrCodeLabelHeight(),
                 currentMode,
                 freeField.getText(),

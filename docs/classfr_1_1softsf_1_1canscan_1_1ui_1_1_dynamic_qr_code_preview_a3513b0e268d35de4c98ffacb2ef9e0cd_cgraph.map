@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.DynamicQrCodePreview.updateQrCodePreview" name="fr.softsf.canscan.ui.DynamicQrCodePreview.updateQrCodePreview">
+<map id="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.updateQrCodePreview" name="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.updateQrCodePreview">
 <area shape="rect" id="Node000001" title="Updates and schedules a debounced QR code preview refresh." alt="" coords="5,96,253,139"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a200fada62fe7977e60f65130dbf11276" title="Executes the unified workflow: cancel previous worker, stop debounce, clear resources,..." alt="" coords="301,88,542,147"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,115,285,115,285,120,253,120"/>

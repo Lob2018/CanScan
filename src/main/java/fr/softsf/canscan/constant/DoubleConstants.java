@@ -3,19 +3,19 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.util;
+package fr.softsf.canscan.constant;
 
-/** Float constants. */
-public enum FloatConstants {
-    OVERLAY_PANEL_ALIGNMENT(0.5f);
+/** Double constants. */
+public enum DoubleConstants {
+    DEFAULT_IMAGE_RATIO(0.27);
 
-    private final float value;
+    private final double value;
 
-    FloatConstants(float value) {
+    DoubleConstants(double value) {
         this.value = value;
     }
 
-    public float getValue() {
+    public double getValue() {
         return value;
     }
 }

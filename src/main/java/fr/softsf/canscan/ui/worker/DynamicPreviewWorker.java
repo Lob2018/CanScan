@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.ui;
+package fr.softsf.canscan.ui.worker;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,13 +15,15 @@ import javax.swing.SwingWorker;
 
 import org.apache.commons.lang3.StringUtils;
 
-import fr.softsf.canscan.model.QrConfig;
-import fr.softsf.canscan.model.QrDataResult;
-import fr.softsf.canscan.model.QrInput;
-import fr.softsf.canscan.service.AbstractDynamicQrCodeWorker;
+import fr.softsf.canscan.constant.StringConstants;
+import fr.softsf.canscan.model.CommonFields;
+import fr.softsf.canscan.model.EncodedData;
+import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.service.DataBuilderService;
+import fr.softsf.canscan.ui.EncodedImage;
+import fr.softsf.canscan.ui.LabelIconUtil;
+import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.util.Checker;
-import fr.softsf.canscan.util.StringConstants;
 
 /**
  * Asynchronously generates and displays a QR code preview in a Swing UI.
@@ -31,37 +33,37 @@ import fr.softsf.canscan.util.StringConstants;
  * unnecessary regenerations when multiple input or configuration changes occur rapidly.
  *
  * <p>Each instance manages the lifecycle of a QR code preview for a specific {@link JLabel} and
- * collaborates with a {@link DynamicQrCodeResize} instance for dynamic resizing. The optional
+ * collaborates with a {@link DynamicResizeWorker} instance for dynamic resizing. The optional
  * {@link JProgressBar} can show a wait/progress indicator during background processing.
  *
  * <p>Resources are properly managed: previous images are freed, background workers are cancelled,
  * and the loader is stopped to prevent memory leaks and ensure smooth UI updates.
  */
-public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedImage> {
+public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
 
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
 
-    private final QrCodeBufferedImage qrCodeBufferedImage;
-    private final DynamicQrCodeResize qrCodeResize;
+    private final EncodedImage encodedImage;
+    private final DynamicResizeWorker qrCodeResize;
     private final JLabel qrCodeLabel;
 
     /**
      * Constructs a new asynchronous QR code preview manager for the specified label.
      *
-     * @param qrCodeBufferedImage the source QR code image; must not be {@code null}
-     * @param qrCodeResize the {@link DynamicQrCodeResize} instance responsible for asynchronous
+     * @param encodedImage the source QR code image; must not be {@code null}
+     * @param qrCodeResize the {@link DynamicResizeWorker} instance responsible for asynchronous
      *     resizing; must not be {@code null}
      * @param qrCodeLabel the label where the generated QR code preview will be displayed; must not
      *     be {@code null}
      * @param loader loader to indicate background processing
      */
-    public DynamicQrCodePreview(
-            QrCodeBufferedImage qrCodeBufferedImage,
-            DynamicQrCodeResize qrCodeResize,
+    public DynamicPreviewWorker(
+            EncodedImage encodedImage,
+            DynamicResizeWorker qrCodeResize,
             JLabel qrCodeLabel,
             JProgressBar loader) {
         super(loader);
-        this.qrCodeBufferedImage = qrCodeBufferedImage;
+        this.encodedImage = encodedImage;
         this.qrCodeResize = qrCodeResize;
         this.qrCodeLabel = qrCodeLabel;
     }
@@ -71,21 +73,21 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
      *
      * <p>Uses the unified workflow: cancel → stop → clear → start new worker.
      *
-     * @param qrInput the latest QR code configuration
+     * @param wholeFields the latest QR code configuration
      */
-    public void updateQrCodePreview(QrInput qrInput) {
-        this.qrInput = qrInput;
+    public void updateQrCodePreview(WholeFields wholeFields) {
+        this.wholeFields = wholeFields;
         resetAndStartWorker(PREVIEW_DEBOUNCE_DELAY_MS);
     }
 
     /**
      * Clears the current preview image before generating a new one. Invoked automatically by the
-     * {@link AbstractDynamicQrCodeWorker} workflow.
+     * {@link AbstractDynamicWorker} workflow.
      */
     @Override
     protected void clearResources() {
-        qrCodeBufferedImage.freeQrOriginal();
-        QrCodeIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
+        encodedImage.freeQrOriginal();
+        LabelIconUtil.INSTANCE.disposeIcon(qrCodeLabel);
         qrCodeLabel.setIcon(null);
     }
 
@@ -125,12 +127,12 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
             qrCodeLabel.setIcon(null);
             return;
         }
-        qrCodeBufferedImage.updateQrOriginal(img);
-        qrCodeResize.updateQrCodeResize(qrInput);
+        encodedImage.updateQrOriginal(img);
+        qrCodeResize.updateQrCodeResize(wholeFields);
     }
 
     /**
-     * Builds and returns the QR code preview image based on the current {@link QrInput}.
+     * Builds and returns the QR code preview image based on the current {@link WholeFields}.
      *
      * <p>Performs intermediate cancellation checks to maintain responsiveness. Returns {@code null}
      * if cancelled, invalid, or if an exception occurs.
@@ -139,12 +141,12 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
      *     cancelled/invalid
      */
     private BufferedImage buildPreviewImage() {
-        if (Thread.currentThread().isInterrupted() || qrInput == null) {
+        if (Thread.currentThread().isInterrupted() || wholeFields == null) {
             return null;
         }
         try {
-            QrDataResult qrData =
-                    DataBuilderService.INSTANCE.buildData(qrInput.currentMode(), qrInput);
+            EncodedData qrData =
+                    DataBuilderService.INSTANCE.buildData(wholeFields.currentMode(), wholeFields);
             if (Thread.currentThread().isInterrupted()
                     || Checker.INSTANCE.checkNPE(
                             qrData,
@@ -157,20 +159,21 @@ public class DynamicQrCodePreview extends AbstractDynamicQrCodeWorker<BufferedIm
             if (StringUtils.isBlank(data)) {
                 return null;
             }
-            File logoFile = qrInput.logoPath().isBlank() ? null : new File(qrInput.logoPath());
-            QrConfig config =
-                    new QrConfig(
+            File logoFile =
+                    wholeFields.logoPath().isBlank() ? null : new File(wholeFields.logoPath());
+            CommonFields config =
+                    new CommonFields(
                             logoFile,
-                            qrInput.size(),
-                            qrInput.ratio(),
-                            qrInput.qrColor(),
-                            qrInput.bgColor(),
-                            qrInput.isRoundedModules(),
-                            qrInput.margin());
+                            wholeFields.size(),
+                            wholeFields.ratio(),
+                            wholeFields.qrColor(),
+                            wholeFields.bgColor(),
+                            wholeFields.isRoundedModules(),
+                            wholeFields.margin());
             if (Thread.currentThread().isInterrupted()) {
                 return null;
             }
-            return qrCodeBufferedImage.generateQrCodeImage(data, config);
+            return encodedImage.generateImage(data, config);
         } catch (Exception ex) {
             if (Thread.currentThread().isInterrupted()) {
                 return null;

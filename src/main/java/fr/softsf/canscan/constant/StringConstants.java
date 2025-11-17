@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan.util;
+package fr.softsf.canscan.constant;
 
 /** String constants for messages and identifiers. */
 public enum StringConstants {

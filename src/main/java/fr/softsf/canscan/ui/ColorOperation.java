@@ -24,7 +24,7 @@ import fr.softsf.canscan.util.FrameHelper;
  * <p>Handles color selection dialogs, button icon generation, and color-to-hex conversions for the
  * QR code generator interface.
  */
-public class QrCodeColor {
+public class ColorOperation {
 
     private static final int BUTTON_ICON_COLOR_SIZE = 14;
     private static final int BUTTON_COLOR_ICON_TEXT_GAP = 10;

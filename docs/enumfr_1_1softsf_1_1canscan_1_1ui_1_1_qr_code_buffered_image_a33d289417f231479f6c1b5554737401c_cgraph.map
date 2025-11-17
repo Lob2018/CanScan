@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.drawFinderPatterns" name="fr.softsf.canscan.ui.QrCodeBufferedImage.drawFinderPatterns">
+<map id="fr.softsf.canscan.ui.EncodedImage.drawFinderPatterns" name="fr.softsf.canscan.ui.EncodedImage.drawFinderPatterns">
 <area shape="rect" id="Node000001" title="Renders the three QR code finder patterns at the corners using the specified style." alt="" coords="5,36,228,79"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="580,36,812,79"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,33,275,13,347,5,404,3,460,5,532,13,610,29,609,34,532,19,460,11,404,8,348,11,276,19,187,38"/>

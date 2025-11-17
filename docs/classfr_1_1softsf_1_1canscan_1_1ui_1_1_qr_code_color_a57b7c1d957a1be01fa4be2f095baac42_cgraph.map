@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeColor.updateButtonWithColor" name="fr.softsf.canscan.ui.QrCodeColor.updateButtonWithColor">
+<map id="fr.softsf.canscan.ui.ColorOperation.updateButtonWithColor" name="fr.softsf.canscan.ui.ColorOperation.updateButtonWithColor">
 <area shape="rect" id="Node000001" title="Updates a button&#39;s icon and text to reflect a new color." alt="" coords="5,39,197,81"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a6e471a263428b03ae94124805629228e" title="Converts a Color object to its hexadecimal RGB string representation." alt="" coords="245,5,427,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,44,229,39,230,44,197,49"/>

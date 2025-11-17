@@ -1,4 +1,4 @@
-<map id="fr.softsf.canscan.ui.QrCodeBufferedImage.drawLogoIfPresent" name="fr.softsf.canscan.ui.QrCodeBufferedImage.drawLogoIfPresent">
+<map id="fr.softsf.canscan.ui.EncodedImage.drawLogoIfPresent" name="fr.softsf.canscan.ui.EncodedImage.drawLogoIfPresent">
 <area shape="rect" id="Node000001" title="Draws the logo at the center of the QR code if a valid logo file is provided." alt="" coords="5,5,224,48"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a38aa8db97b16480c728481f1835da11f" title="Checks if the given object is null in a static context and displays an error dialog if so." alt="" coords="272,5,504,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,24,256,24,256,29,224,29"/>

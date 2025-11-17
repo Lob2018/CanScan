@@ -17,7 +17,7 @@ import fr.softsf.canscan.util.Checker;
  * Utility for releasing memory used by QR code icons. All methods must be called from the Event
  * Dispatch Thread (EDT).
  */
-public enum QrCodeIconUtil {
+public enum LabelIconUtil {
     INSTANCE;
 
     /**
