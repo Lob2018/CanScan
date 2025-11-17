@@ -114,14 +114,14 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builde
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service__coll__graph.svg" width="239" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service__coll__graph.svg" width="239" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab3f2c62cde623f2be929c405a97bd5ff" id="r_ab3f2c62cde623f2be929c405a97bd5ff"><td class="memItemLeft" align="right" valign="top">QrDataResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3f2c62cde623f2be929c405a97bd5ff">buildData</a> (<a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a> mode, QrInput input)</td></tr>
-<tr class="memdesc:ab3f2c62cde623f2be929c405a97bd5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the QR content and default filename based on the selected mode.  <br /></td></tr>
-<tr class="separator:ab3f2c62cde623f2be929c405a97bd5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554f1d10b2c39ead1bd26e5453cfbcbc" id="r_a554f1d10b2c39ead1bd26e5453cfbcbc"><td class="memItemLeft" align="right" valign="top">EncodedData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a554f1d10b2c39ead1bd26e5453cfbcbc">buildData</a> (<a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a> mode, WholeFields input)</td></tr>
+<tr class="memdesc:a554f1d10b2c39ead1bd26e5453cfbcbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the QR content and default filename based on the selected mode.  <br /></td></tr>
+<tr class="separator:a554f1d10b2c39ead1bd26e5453cfbcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a03098abc5bc1f7a6142403703680e" id="r_ae4a03098abc5bc1f7a6142403703680e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4a03098abc5bc1f7a6142403703680e">buildMecard</a> (String name, String tel, String email, String org, String adr, String url)</td></tr>
 <tr class="memdesc:ae4a03098abc5bc1f7a6142403703680e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a MECARD-formatted string from the provided contact fields.  <br /></td></tr>
 <tr class="separator:ae4a03098abc5bc1f7a6142403703680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,21 +190,21 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab3f2c62cde623f2be929c405a97bd5ff" name="ab3f2c62cde623f2be929c405a97bd5ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3f2c62cde623f2be929c405a97bd5ff">&#9670;&#160;</a></span>buildData()</h2>
+<a id="a554f1d10b2c39ead1bd26e5453cfbcbc" name="a554f1d10b2c39ead1bd26e5453cfbcbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554f1d10b2c39ead1bd26e5453cfbcbc">&#9670;&#160;</a></span>buildData()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QrDataResult fr.softsf.canscan.service.DataBuilderService.buildData </td>
+          <td class="memname">EncodedData fr.softsf.canscan.service.DataBuilderService.buildData </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QrInput</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;)</td>
+          <td class="paramtype">WholeFields</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -218,14 +218,14 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a <code><a class="el" href="">QrDataResult</a></code> containing the encoded content and default filename, or <code class="JavaDocCode"><br/>
+<dl class="section return"><dt>Returns</dt><dd>a <code><a class="el" href="">EncodedData</a></code> containing the encoded content and default filename, or <code class="JavaDocCode"><br/>
     null</code> if input is invalid </dd></dl>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_ab3f2c62cde623f2be929c405a97bd5ff_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_a554f1d10b2c39ead1bd26e5453cfbcbc_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -339,7 +339,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1service.html">service</a></li><li class="navelem"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html">DataBuilderService</a></li>
-    <li class="footer">Generated on Sun Nov 16 2025 19:45:03 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Nov 17 2025 13:08:19 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

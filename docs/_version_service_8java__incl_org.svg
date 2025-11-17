@@ -5,7 +5,7 @@
  -->
 <!-- Title: src/main/java/fr/softsf/canscan/service/VersionService.java Pages: 1 -->
 <svg width="2568pt" height="108pt"
- viewBox="0.00 0.00 2567.62 108.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 2568.25 108.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 104)">
 <title>src/main/java/fr/softsf/canscan/service/VersionService.java</title>
 <!-- Node1 -->
@@ -295,8 +295,9 @@
 <g id="Node000017" class="node">
 <title>Node17</title>
 <g id="a_Node000017"><a xlink:title=" ">
-<polygon fill="#e0e0e0" stroke="#999999" points="2244.88,-26 2100.62,-26 2100.62,-6 2244.88,-6 2244.88,-26"/>
-<text text-anchor="middle" x="2172.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.MyPopup</text>
+<polygon fill="#e0e0e0" stroke="#999999" points="2234.25,-32 2101.25,-32 2101.25,0 2234.25,0 2234.25,-32"/>
+<text text-anchor="start" x="2109.25" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.constant.</text>
+<text text-anchor="middle" x="2167.75" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">StringConstants</text>
 </a>
 </g>
 </g>
@@ -304,8 +305,8 @@
 <g id="edge16_Node000001_Node000017" class="edge">
 <title>Node1&#45;&gt;Node17</title>
 <g id="a_edge16_Node000001_Node000017"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1353.83,-81.04C1506.27,-76.91 1824.62,-64.84 2091.75,-32 2099.56,-31.04 2107.76,-29.8 2115.82,-28.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="2116.33,-31.91 2125.57,-26.73 2115.12,-25.01 2116.33,-31.91"/>
+<path fill="none" stroke="#63b8ff" d="M1353.87,-81.38C1504.29,-77.81 1816.14,-66.72 2089.75,-32.13"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="2090.13,-35.61 2099.6,-30.87 2089.24,-28.66 2090.13,-35.61"/>
 </a>
 </g>
 </g>
@@ -313,8 +314,8 @@
 <g id="Node000018" class="node">
 <title>Node18</title>
 <g id="a_Node000018"><a xlink:title=" ">
-<polygon fill="#e0e0e0" stroke="#999999" points="2408.25,-26 2263.25,-26 2263.25,-6 2408.25,-6 2408.25,-26"/>
-<text text-anchor="middle" x="2335.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.util.Checker</text>
+<polygon fill="#e0e0e0" stroke="#999999" points="2396.88,-26 2252.62,-26 2252.62,-6 2396.88,-6 2396.88,-26"/>
+<text text-anchor="middle" x="2324.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.MyPopup</text>
 </a>
 </g>
 </g>
@@ -322,8 +323,8 @@
 <g id="edge17_Node000001_Node000018" class="edge">
 <title>Node1&#45;&gt;Node18</title>
 <g id="a_edge17_Node000001_Node000018"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1353.83,-82.26C1528.17,-79.95 1923.62,-70.53 2253.75,-32 2261.85,-31.05 2270.36,-29.8 2278.71,-28.41"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="2279.19,-31.88 2288.45,-26.72 2277.99,-24.98 2279.19,-31.88"/>
+<path fill="none" stroke="#63b8ff" d="M1353.93,-82.25C1527.04,-79.94 1917.63,-70.51 2243.75,-32 2251.76,-31.05 2260.17,-29.8 2268.41,-28.41"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="2268.77,-31.9 2278.01,-26.72 2267.55,-25.01 2268.77,-31.9"/>
 </a>
 </g>
 </g>
@@ -331,9 +332,8 @@
 <g id="Node000019" class="node">
 <title>Node19</title>
 <g id="a_Node000019"><a xlink:title=" ">
-<polygon fill="#e0e0e0" stroke="#999999" points="2559.62,-32 2425.88,-32 2425.88,0 2559.62,0 2559.62,-32"/>
-<text text-anchor="start" x="2433.88" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.util.String</text>
-<text text-anchor="middle" x="2492.75" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">Constants</text>
+<polygon fill="#e0e0e0" stroke="#999999" points="2560.25,-26 2415.25,-26 2415.25,-6 2560.25,-6 2560.25,-26"/>
+<text text-anchor="middle" x="2487.75" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.util.Checker</text>
 </a>
 </g>
 </g>
@@ -341,8 +341,8 @@
 <g id="edge18_Node000001_Node000019" class="edge">
 <title>Node1&#45;&gt;Node19</title>
 <g id="a_edge18_Node000001_Node000019"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1353.91,-83.7C1547,-84.18 2014.78,-79.92 2414.56,-32.27"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="2414.76,-35.78 2424.27,-31.1 2413.92,-28.83 2414.76,-35.78"/>
+<path fill="none" stroke="#63b8ff" d="M1353.65,-83.14C1546.86,-82.53 2015.79,-76.17 2405.75,-32 2414.05,-31.06 2422.77,-29.78 2431.31,-28.37"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="2431.63,-31.86 2440.88,-26.7 2430.43,-24.97 2431.63,-31.86"/>
 </a>
 </g>
 </g>

@@ -419,9 +419,9 @@
 <g id="Node000024" class="node">
 <title>Node24</title>
 <g id="a_Node000024"><a xlink:title=" ">
-<polygon fill="#e0e0e0" stroke="#999999" points="3040.88,-32 2907.12,-32 2907.12,0 3040.88,0 3040.88,-32"/>
-<text text-anchor="start" x="2915.12" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.util.String</text>
-<text text-anchor="middle" x="2974" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">Constants</text>
+<polygon fill="#e0e0e0" stroke="#999999" points="3040.5,-32 2907.5,-32 2907.5,0 3040.5,0 3040.5,-32"/>
+<text text-anchor="start" x="2915.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.constant.</text>
+<text text-anchor="middle" x="2974" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">StringConstants</text>
 </a>
 </g>
 </g>
@@ -429,8 +429,8 @@
 <g id="edge23_Node000001_Node000024" class="edge">
 <title>Node1&#45;&gt;Node24</title>
 <g id="a_edge23_Node000001_Node000024"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M1578.79,-81.44C1856.89,-76.88 2621.05,-62.04 2895.81,-32.09"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="2895.9,-35.6 2905.45,-31 2895.12,-28.64 2895.9,-35.6"/>
+<path fill="none" stroke="#63b8ff" d="M1578.79,-81.44C1856.89,-76.88 2621.05,-62.04 2896.21,-32.03"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="2896.32,-35.54 2905.86,-30.94 2895.53,-28.58 2896.32,-35.54"/>
 </a>
 </g>
 </g>

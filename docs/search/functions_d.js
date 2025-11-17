@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['qrconfig_0',['QrConfig',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#a01dae88dbcdd9c8f8ff58172555a3b1d',1,'fr::softsf::canscan::model']]],
-  ['qrdataresult_1',['QrDataResult',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#a0694c357710efef6b0c71664b54183c7',1,'fr::softsf::canscan::model']]],
-  ['qrgenerateandsaveworker_2',['QrGenerateAndSaveWorker',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#a1f9f11daeae1b8cf4c19af44a51d8d11',1,'fr::softsf::canscan::service::QrGenerateAndSaveWorker']]],
-  ['qrinput_3',['QrInput',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#ac6274d67b9dd1206460be9fb6c5c93d6',1,'fr::softsf::canscan::model']]]
+  ['ratioslidertooltipsimulation_0',['ratioSliderTooltipSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['requestandverifiy_1',['requestAndVerifiy',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a50d6bb31ba86a1981f6311e0caee214e',1,'fr::softsf::canscan::service::VersionService']]],
+  ['resetandstartworker_2',['resetAndStartWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abd8ce1ed48ee82ef39d7d169a051faf6',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['resetworker_3',['resetWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#ab41292fcd5ef2e86396e25bcccc4e9d4',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['resolvefilenameconflict_4',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
+  ['rune2esimulation_5',['runE2ESimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a2a0b386576bdaa60bf8af058bc26310d',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

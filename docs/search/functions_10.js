@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['text_0',['text',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c',1,'fr::softsf::canscan::model::Mode']]],
-  ['tryopenbrowser_1',['tryOpenBrowser',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#a3d7f19c3819936ea08d925c0c7592aae',1,'fr::softsf::canscan::util::BrowserHelper']]],
-  ['typechar_2',['typeChar',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4c1895b6327fef325b1b0c8047bcfcb7',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['typestring_3',['typeString',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acc5424a9d2c1d44c93a045868f58a5ff',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
+  ['updatebuttonstate_0',['updateButtonState',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#ac3765b9aae65297cd9337c852ee2fb30',1,'fr::softsf::canscan::service::VersionService']]],
+  ['updatebuttonwithcolor_1',['updateButtonWithColor',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['updategeneratebuttonstate_2',['updateGenerateButtonState',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906',1,'fr::softsf::canscan::CanScan']]],
+  ['updateloadersize_3',['updateLoaderSize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a778f14bcb991d77eb99de3ed95d9a15f',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
+  ['updateqrcodepreview_4',['updateQrCodePreview',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#aab1382704fa1f4c27f1eab80fc8534b1',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
+  ['updateqrcoderesize_5',['updateQrCodeResize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a214a6314f095a389ee6bf2eaa71a6190',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
+  ['updateqroriginal_6',['updateQrOriginal',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac0cfbc18aa43c23ef8d22f24fd5f2c7f',1,'fr::softsf::canscan::ui::EncodedImage']]]
 ];

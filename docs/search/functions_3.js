@@ -1,17 +1,18 @@
 var searchData=
 [
   ['dispose_0',['dispose',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38e109eadae1f290808f2dedc0023d9d',1,'fr::softsf::canscan::CanScan']]],
-  ['disposeallresourcesonexit_1',['disposeAllResourcesOnExit',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_abstract_dynamic_qr_code_worker.html#a4102b3ede1e0111cc1db7d319ba133b7',1,'fr::softsf::canscan::service::AbstractDynamicQrCodeWorker']]],
-  ['disposebuttonicon_2',['disposeButtonIcon',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a90b951053218f84d455569a3a29a4b52',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['disposeicon_3',['disposeIcon',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html#aee28c6b7cc5ff0beeccba29c8ac25cc1',1,'fr::softsf::canscan::ui::QrCodeIconUtil']]],
-  ['doinbackground_4',['doInBackground',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#a7af27081b731e0ca1eca195c6dfac716',1,'fr::softsf::canscan::service::QrGenerateAndSaveWorker']]],
-  ['done_5',['done',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#a690e6d5a1179b2550648dd25dbd76cc0',1,'fr::softsf::canscan::service::QrGenerateAndSaveWorker']]],
-  ['drawfinderpatterns_6',['drawFinderPatterns',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a33d289417f231479f6c1b5554737401c',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['drawlogoifpresent_7',['drawLogoIfPresent',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a7b57fa714bbbc6001476ed03fb148fdc',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['drawmodule_8',['drawModule',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a7515cc2fe4bc454921afb18d2f6cf5ee',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['drawmodules_9',['drawModules',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a49b886b33f2f5405f38207544a06a5f8',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['drawroundedfinderpatternatpixel_10',['drawRoundedFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ae787416583ad529236a223551032e887',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['drawsquarefinderpatternatpixel_11',['drawSquareFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ad408b9a718a53adbf8891606715a7bba',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
-  ['dynamicqrcodepreview_12',['DynamicQrCodePreview',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#aa7fdc627927af18a2aa6aa7905dac80b',1,'fr::softsf::canscan::ui::DynamicQrCodePreview']]],
-  ['dynamicqrcoderesize_13',['DynamicQrCodeResize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html#a59e2f7fd0452d62e4152b1b3bce84962',1,'fr::softsf::canscan::ui::DynamicQrCodeResize']]]
+  ['disposeallresourcesonexit_1',['disposeAllResourcesOnExit',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a20f6edfe70f15d55db2a43781d8023f0',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['disposebuttonicon_2',['disposeButtonIcon',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a98d693b64c1f7003ca834a41a0f123cb',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['disposeicon_3',['disposeIcon',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html#a231d9a3fe4040288c2a1990457510967',1,'fr::softsf::canscan::ui::LabelIconUtil']]],
+  ['doinbackground_4',['doInBackground',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#ad2936afb2066a3217fd3bb2942651ead',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
+  ['done_5',['done',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a829d62309e8297a6c6913d205e0d147f',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
+  ['doubleconstants_6',['DoubleConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants.html#a9ab9a9061ce35aff86fe9394c8790fb6',1,'fr::softsf::canscan::constant::DoubleConstants']]],
+  ['drawfinderpatterns_7',['drawFinderPatterns',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a5724cc65ce9613fa741b437515143b51',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['drawlogoifpresent_8',['drawLogoIfPresent',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ade10f89c4a09ef2a68d99169cbf5f4fb',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['drawmodule_9',['drawModule',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a39d00e8741eea56385de5b2401cea25e',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['drawmodules_10',['drawModules',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#aa8ff2803efd64fa8cfbbf2aaff43bacb',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['drawroundedfinderpatternatpixel_11',['drawRoundedFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a8c9390de6c95571f3660c32e90662535',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['drawsquarefinderpatternatpixel_12',['drawSquareFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#adc8966dc4ad0994973f517355dee4c00',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['dynamicpreviewworker_13',['DynamicPreviewWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a039d35209726a71faa0cf0012659d446',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
+  ['dynamicresizeworker_14',['DynamicResizeWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a987100a1c7576ee2badffe25266865d7',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]]
 ];

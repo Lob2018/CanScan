@@ -1,9 +1,9 @@
 var namespacefr_1_1softsf_1_1canscan_1_1ui =
 [
-    [ "DynamicQrCodePreview", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview" ],
-    [ "DynamicQrCodeResize", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_resize" ],
+    [ "worker", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker.html", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker" ],
+    [ "ColorOperation", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation" ],
+    [ "EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image" ],
+    [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util" ],
     [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup" ],
-    [ "QrCodeBufferedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image" ],
-    [ "QrCodeColor", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color" ],
-    [ "QrCodeIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_icon_util" ]
+    [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration" ]
 ];

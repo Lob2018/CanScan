@@ -1,0 +1,26 @@
+var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration =
+[
+    [ "addRow", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a15f235f9284faf8c8a343544a8d98d23", null ],
+    [ "assignComponentNames", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aab7497027f7f4fdf86ecf319d1a86e1f", null ],
+    [ "configureFreeTextArea", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a3d8dc40e728c516a45d968f9c20a4ff0", null ],
+    [ "configureGenerateButton", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a15519000be85723036167764585965d7", null ],
+    [ "configureMarginSlider", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ab7ed49a11e59771aca3540f7f0e66d19", null ],
+    [ "configureRatioSlider", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a4445e87b02316e4cfab8308ed85caa23", null ],
+    [ "createColorPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a23a071613d1fcbfe2d1af5cdae234294", null ],
+    [ "createDefaultConstraints", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a847d60134ee0342c62bd02232e8f2ed7", null ],
+    [ "createDocumentListener", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa700d9f2a270f6e54fcb53111855fa44", null ],
+    [ "createModePanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a7b726fde1f703f290b4068c0f2b73386", null ],
+    [ "createQrCodeOverlayPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a94404c0c52c8ebabf4d7479e844ea1c9", null ],
+    [ "createRadioButtonsPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ac856d314c552b2c2df02c6af54397705", null ],
+    [ "populateFreePanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa92005bb8f61d6438f3aca2827b7077c", null ],
+    [ "populateMecardPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5955ca8e11648b9ef65136c115fb812a", null ],
+    [ "ADD_ROW", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#af96089a669639b4b6e3437d86e80835b", null ],
+    [ "COLOR_BUTTONS_GAP", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a30b081c5d3e9ff593d7c125e77cb8116", null ],
+    [ "CREATE_MODE_PANEL", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a600fae62d64747c2675b5c896fbbdca8", null ],
+    [ "GBC_COLOR_BUTTONS_WEIGHT_X", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aeb1c50691fd4993de7a57b8b9247875d", null ],
+    [ "GENERATE_BUTTON_EXTRA_HEIGHT", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ab72a39ead464eaa891ee28d3d0e2c0f2", null ],
+    [ "INSTANCE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa21f1786237fa7f4f89cb5ce20cae717", null ],
+    [ "MAJOR_TICK_SPACING", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5c170899beb995a0b893f81d6a678ee6", null ],
+    [ "MULTILINE_TEXT_FIELDS_ROWS", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a34d041c1f968ed8160ec44cb6e15ab22", null ],
+    [ "RADIO_BUTTON_GAP", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#add30b57823fae41368f262263b70559e", null ]
+];

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Builds the QR code data and configuration from the current input fields, then delegates the generatio...">
+<g id="a_Node000001"><a xlink:title="Generates a QR code from current input fields and visual settings, then saves it via GenerateAndSaveS...">
 <polygon fill="#999999" stroke="#666666" points="173.5,-104 0,-104 0,-72 173.5,-72 173.5,-104"/>
 <text text-anchor="start" x="8" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.generate</text>
 <text text-anchor="middle" x="86.75" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrCode</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2d26dcd1ae708eae46dba8952351aa1a" target="_top" xlink:title="Builds and returns a QrInput object containing all current user inputs and settings.">
+<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" target="_top" xlink:title="Collects current input and visual settings into a WholeFields for QR code generation.">
 <polygon fill="white" stroke="#666666" points="359,-126 209.5,-126 209.5,-94 359,-94 359,-126"/>
 <text text-anchor="start" x="217.5" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.get</text>
 <text text-anchor="middle" x="284.25" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">QrInput</text>

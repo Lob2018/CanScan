@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_int_constants.html" title="Integer constants for dimensions and spacing." alt="" coords="5,5,165,48"/>
+<area shape="rect" id="Node000000" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" title=" " alt="" coords="5,5,229,64"/>
+<area shape="rect" id="Node000001" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html" title="Asynchronously generates and displays a QR code preview in a Swing UI." alt="" coords="277,13,457,56"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="244,32,276,32,276,37,244,37"/>
 </map>

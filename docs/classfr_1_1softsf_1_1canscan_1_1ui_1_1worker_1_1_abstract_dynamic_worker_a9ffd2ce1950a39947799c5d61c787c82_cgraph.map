@@ -1,0 +1,13 @@
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.onWorkerFailure" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.onWorkerFailure">
+<area shape="rect" id="Node000001" title="Called when the worker fails or is cancelled." alt="" coords="5,105,267,148"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#ab41292fcd5ef2e86396e25bcccc4e9d4" title="Resets the current worker and associated resources." alt="" coords="315,105,552,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,124,299,124,299,129,267,129"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#aa3eebdde5dae919a4d905ef2d2d4a8fb" title="Cancels the current SwingWorker and clears its reference safely." alt="" coords="619,5,865,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,102,599,57,625,50,626,55,601,63,484,107"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a49ea00730d7f891f40c32550130625df" title="Clears any allocated data, icons, or buffers before starting a new task." alt="" coords="613,72,871,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="552,111,597,106,598,112,553,116"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a04dbe18f6ba608487e5170c1c3ac391a" title="Stops and clears the debounce timer." alt="" coords="600,139,884,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="553,137,585,140,584,146,552,142"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abba94ac3074b49f7bfcf9669f8a68b67" title="Stops the loader&#39;s wait indicator." alt="" coords="626,205,858,248"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="484,146,601,191,626,198,625,203,599,196,483,151"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.buildPreviewImage" name="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.buildPreviewImage">
+<area shape="rect" id="Node000001" title="Builds and returns the QR code preview image based on the current WholeFields." alt="" coords="5,13,281,56"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a6aae1ee68e2d4201c3bd2716f5bd23e9" title="Displays an error dialog on the EDT based on the given exception." alt="" coords="329,5,572,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,32,313,32,313,37,281,37"/>
+</map>

@@ -118,24 +118,24 @@ $(function(){initNavTree('classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_a
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a237e9a0b7d2610a719a4d6770e0e3ab2" id="r_a237e9a0b7d2610a719a4d6770e0e3ab2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237e9a0b7d2610a719a4d6770e0e3ab2">GenerateAndSaveService</a> (<a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a> <a class="el" href="#ad660d1b7ba508af046a3acd6f35e7b67">encodedImage</a>)</td></tr>
-<tr class="memdesc:a237e9a0b7d2610a719a4d6770e0e3ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html" title="Service dedicated to QR code generation and saving.">GenerateAndSaveService</a> with the given QR code image generator.  <br /></td></tr>
-<tr class="separator:a237e9a0b7d2610a719a4d6770e0e3ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479ebf9d697747efbd2cd14695ef83b1" id="r_a479ebf9d697747efbd2cd14695ef83b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a479ebf9d697747efbd2cd14695ef83b1">generateAndSave</a> (QrDataResult qrData, QrConfig config, JProgressBar loader)</td></tr>
-<tr class="memdesc:a479ebf9d697747efbd2cd14695ef83b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates and saves a QR code as a PNG file using the provided data and configuration.  <br /></td></tr>
-<tr class="separator:a479ebf9d697747efbd2cd14695ef83b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab411d97860e5e469e5b387e4017ff8ab" id="r_ab411d97860e5e469e5b387e4017ff8ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab411d97860e5e469e5b387e4017ff8ab">GenerateAndSaveService</a> (<a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a> <a class="el" href="#a6f29588ca10480bac732772861f06322">encodedImage</a>)</td></tr>
+<tr class="memdesc:ab411d97860e5e469e5b387e4017ff8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html" title="Service dedicated to QR code generation and saving.">GenerateAndSaveService</a> with the given QR code image generator.  <br /></td></tr>
+<tr class="separator:ab411d97860e5e469e5b387e4017ff8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165443738e1833533e7771d37ead17ed" id="r_a165443738e1833533e7771d37ead17ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a165443738e1833533e7771d37ead17ed">generateAndSave</a> (EncodedData qrData, CommonFields config, JProgressBar loader)</td></tr>
+<tr class="memdesc:a165443738e1833533e7771d37ead17ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates and saves a QR code as a PNG file using the provided data and configuration.  <br /></td></tr>
+<tr class="separator:a165443738e1833533e7771d37ead17ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:adf363b081ce6f875faf15b76cf701bc3" id="r_adf363b081ce6f875faf15b76cf701bc3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf363b081ce6f875faf15b76cf701bc3">checkNPEInputs</a> (QrDataResult qrData, QrConfig config, JProgressBar loader)</td></tr>
-<tr class="memdesc:adf363b081ce6f875faf15b76cf701bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates that all required inputs are non-null.  <br /></td></tr>
-<tr class="separator:adf363b081ce6f875faf15b76cf701bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7183f24b962abed6d650fee50fdeaa46" id="r_a7183f24b962abed6d650fee50fdeaa46"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7183f24b962abed6d650fee50fdeaa46">chooseOutputFile</a> (QrDataResult qrData)</td></tr>
-<tr class="memdesc:a7183f24b962abed6d650fee50fdeaa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a JFileChooser to select the output PNG file and handles file name conflicts.  <br /></td></tr>
-<tr class="separator:a7183f24b962abed6d650fee50fdeaa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823b1c588d50ad7a5d260b29bcb066a1" id="r_a823b1c588d50ad7a5d260b29bcb066a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823b1c588d50ad7a5d260b29bcb066a1">executeQrGeneration</a> (QrDataResult qrData, QrConfig config, JProgressBar loader, File outputFile)</td></tr>
-<tr class="memdesc:a823b1c588d50ad7a5d260b29bcb066a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes QR code generation asynchronously using a SwingWorker.  <br /></td></tr>
-<tr class="separator:a823b1c588d50ad7a5d260b29bcb066a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c838511d72dc8bc2172e76dcc94d46" id="r_a97c838511d72dc8bc2172e76dcc94d46"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c838511d72dc8bc2172e76dcc94d46">checkNPEInputs</a> (EncodedData qrData, CommonFields config, JProgressBar loader)</td></tr>
+<tr class="memdesc:a97c838511d72dc8bc2172e76dcc94d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates that all required inputs are non-null.  <br /></td></tr>
+<tr class="separator:a97c838511d72dc8bc2172e76dcc94d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed7c1dbcd3e50d890844affd8605995" id="r_a5ed7c1dbcd3e50d890844affd8605995"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ed7c1dbcd3e50d890844affd8605995">chooseOutputFile</a> (EncodedData qrData)</td></tr>
+<tr class="memdesc:a5ed7c1dbcd3e50d890844affd8605995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a JFileChooser to select the output PNG file and handles file name conflicts.  <br /></td></tr>
+<tr class="separator:a5ed7c1dbcd3e50d890844affd8605995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c878cf95f9493c6d4382597d8ee66e" id="r_a09c878cf95f9493c6d4382597d8ee66e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09c878cf95f9493c6d4382597d8ee66e">executeQrGeneration</a> (EncodedData qrData, CommonFields config, JProgressBar loader, File outputFile)</td></tr>
+<tr class="memdesc:a09c878cf95f9493c6d4382597d8ee66e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes QR code generation asynchronously using a SwingWorker.  <br /></td></tr>
+<tr class="separator:a09c878cf95f9493c6d4382597d8ee66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a723bdc3c23de4858c0a30864298fdacd" id="r_a723bdc3c23de4858c0a30864298fdacd"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a723bdc3c23de4858c0a30864298fdacd">getSelectedPngFile</a> (JFileChooser chooser)</td></tr>
 <tr class="memdesc:a723bdc3c23de4858c0a30864298fdacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the selected file has a ".png" extension.  <br /></td></tr>
 <tr class="separator:a723bdc3c23de4858c0a30864298fdacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,14 +145,14 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad660d1b7ba508af046a3acd6f35e7b67" id="r_ad660d1b7ba508af046a3acd6f35e7b67"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad660d1b7ba508af046a3acd6f35e7b67">encodedImage</a></td></tr>
-<tr class="separator:ad660d1b7ba508af046a3acd6f35e7b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f29588ca10480bac732772861f06322" id="r_a6f29588ca10480bac732772861f06322"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f29588ca10480bac732772861f06322">encodedImage</a></td></tr>
+<tr class="separator:a6f29588ca10480bac732772861f06322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Service dedicated to QR code generation and saving. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a237e9a0b7d2610a719a4d6770e0e3ab2" name="a237e9a0b7d2610a719a4d6770e0e3ab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a237e9a0b7d2610a719a4d6770e0e3ab2">&#9670;&#160;</a></span>GenerateAndSaveService()</h2>
+<a id="ab411d97860e5e469e5b387e4017ff8ab" name="ab411d97860e5e469e5b387e4017ff8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab411d97860e5e469e5b387e4017ff8ab">&#9670;&#160;</a></span>GenerateAndSaveService()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +160,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">fr.softsf.canscan.service.GenerateAndSaveService.GenerateAndSaveService </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a></td>          <td class="paramname"><span class="paramname"><em>encodedImage</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a></td>          <td class="paramname"><span class="paramname"><em>encodedImage</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -177,8 +177,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="adf363b081ce6f875faf15b76cf701bc3" name="adf363b081ce6f875faf15b76cf701bc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf363b081ce6f875faf15b76cf701bc3">&#9670;&#160;</a></span>checkNPEInputs()</h2>
+<a id="a97c838511d72dc8bc2172e76dcc94d46" name="a97c838511d72dc8bc2172e76dcc94d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c838511d72dc8bc2172e76dcc94d46">&#9670;&#160;</a></span>checkNPEInputs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,12 +189,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">boolean fr.softsf.canscan.service.GenerateAndSaveService.checkNPEInputs </td>
           <td>(</td>
-          <td class="paramtype">QrDataResult</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
+          <td class="paramtype">EncodedData</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QrConfig</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+          <td class="paramtype">CommonFields</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -222,8 +222,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7183f24b962abed6d650fee50fdeaa46" name="a7183f24b962abed6d650fee50fdeaa46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7183f24b962abed6d650fee50fdeaa46">&#9670;&#160;</a></span>chooseOutputFile()</h2>
+<a id="a5ed7c1dbcd3e50d890844affd8605995" name="a5ed7c1dbcd3e50d890844affd8605995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed7c1dbcd3e50d890844affd8605995">&#9670;&#160;</a></span>chooseOutputFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +234,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">File fr.softsf.canscan.service.GenerateAndSaveService.chooseOutputFile </td>
           <td>(</td>
-          <td class="paramtype">QrDataResult</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span></td><td>)</td>
+          <td class="paramtype">EncodedData</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -258,13 +258,13 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_a7183f24b962abed6d650fee50fdeaa46_cgraph.svg" width="580" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_a5ed7c1dbcd3e50d890844affd8605995_cgraph.svg" width="580" height="152"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a823b1c588d50ad7a5d260b29bcb066a1" name="a823b1c588d50ad7a5d260b29bcb066a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a823b1c588d50ad7a5d260b29bcb066a1">&#9670;&#160;</a></span>executeQrGeneration()</h2>
+<a id="a09c878cf95f9493c6d4382597d8ee66e" name="a09c878cf95f9493c6d4382597d8ee66e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c878cf95f9493c6d4382597d8ee66e">&#9670;&#160;</a></span>executeQrGeneration()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,12 +275,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void fr.softsf.canscan.service.GenerateAndSaveService.executeQrGeneration </td>
           <td>(</td>
-          <td class="paramtype">QrDataResult</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
+          <td class="paramtype">EncodedData</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QrConfig</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+          <td class="paramtype">CommonFields</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -313,8 +313,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a479ebf9d697747efbd2cd14695ef83b1" name="a479ebf9d697747efbd2cd14695ef83b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a479ebf9d697747efbd2cd14695ef83b1">&#9670;&#160;</a></span>generateAndSave()</h2>
+<a id="a165443738e1833533e7771d37ead17ed" name="a165443738e1833533e7771d37ead17ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165443738e1833533e7771d37ead17ed">&#9670;&#160;</a></span>generateAndSave()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,12 +322,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void fr.softsf.canscan.service.GenerateAndSaveService.generateAndSave </td>
           <td>(</td>
-          <td class="paramtype">QrDataResult</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
+          <td class="paramtype">EncodedData</td>          <td class="paramname"><span class="paramname"><em>qrData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QrConfig</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+          <td class="paramtype">CommonFields</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -352,7 +352,7 @@ Private Attributes</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_a479ebf9d697747efbd2cd14695ef83b1_cgraph.svg" width="100%" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_a165443738e1833533e7771d37ead17ed_cgraph.svg" width="100%" height="452"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -427,8 +427,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad660d1b7ba508af046a3acd6f35e7b67" name="ad660d1b7ba508af046a3acd6f35e7b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad660d1b7ba508af046a3acd6f35e7b67">&#9670;&#160;</a></span>encodedImage</h2>
+<a id="a6f29588ca10480bac732772861f06322" name="a6f29588ca10480bac732772861f06322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f29588ca10480bac732772861f06322">&#9670;&#160;</a></span>encodedImage</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,7 +437,8 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html">QrCodeBufferedImage</a> fr.softsf.canscan.service.GenerateAndSaveService.encodedImagee      </tr>
+          <td class="memname">final <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a> fr.softsf.canscan.service.GenerateAndSaveService.encodedImage</td>
+        </tr>
       </table>
   </td>
   <td class="mlabels-right">
@@ -457,7 +458,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1service.html">service</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a></li>
-    <li class="footer">Generated on Sun Nov 16 2025 19:45:03 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Nov 17 2025 13:08:19 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.done" name="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.done">
+<area shape="rect" id="Node000001" title="Handles the completion of the background task." alt="" coords="5,72,206,115"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a1f72dcb35fac027651a43af262249d61" title="Handles execution errors by displaying the appropriate error message." alt="" coords="254,5,550,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,69,289,49,290,55,204,74"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#aa957d875f8642b9682a5745cfc2bf000" title="Handles thread interruption by restoring the interrupt status and displaying an error dialog." alt="" coords="264,72,540,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,91,249,91,249,96,206,96"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#abc16f79cac34059c9e5ced8d08da3504" title="Handles successful QR code generation by updating the original image and displaying a confirmation di..." alt="" coords="271,139,532,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,113,290,132,289,137,203,118"/>
+</map>

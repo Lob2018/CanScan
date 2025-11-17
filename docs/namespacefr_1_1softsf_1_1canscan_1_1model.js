@@ -1,8 +1,9 @@
 var namespacefr_1_1softsf_1_1canscan_1_1model =
 [
     [ "Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode" ],
-    [ "ModuleContext", "namespacefr_1_1softsf_1_1canscan_1_1model.html#aec9e84dae3335503158e003e471ad2e1", null ],
-    [ "QrConfig", "namespacefr_1_1softsf_1_1canscan_1_1model.html#a01dae88dbcdd9c8f8ff58172555a3b1d", null ],
-    [ "QrDataResult", "namespacefr_1_1softsf_1_1canscan_1_1model.html#a0694c357710efef6b0c71664b54183c7", null ],
-    [ "QrInput", "namespacefr_1_1softsf_1_1canscan_1_1model.html#ac6274d67b9dd1206460be9fb6c5c93d6", null ]
+    [ "CommonFields", "namespacefr_1_1softsf_1_1canscan_1_1model.html#abf69832bf730a181f86508dc823333a7", null ],
+    [ "EncodedData", "namespacefr_1_1softsf_1_1canscan_1_1model.html#a68226a83a17db167d46ba2c880f483f5", null ],
+    [ "MecardJFields", "namespacefr_1_1softsf_1_1canscan_1_1model.html#a5e9d06ce59a729606040036143bafd66", null ],
+    [ "ModuleContext", "namespacefr_1_1softsf_1_1canscan_1_1model.html#a3c0c10eef363d788444e34095d56bb86", null ],
+    [ "WholeFields", "namespacefr_1_1softsf_1_1canscan_1_1model.html#afe4dd484d882665b288b7a32f53e10ea", null ]
 ];

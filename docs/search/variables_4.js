@@ -1,8 +1,9 @@
 var searchData=
 [
   ['emailfield_0',['emailField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7bded55948bf3fcf33afff1d1511dc85',1,'fr::softsf::canscan::CanScan']]],
-  ['erreur_1',['ERREUR',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_string_constants.html#a57702b92a57b308eb26b45a2c1754ea4',1,'fr::softsf::canscan::util::StringConstants']]],
-  ['error_2',['ERROR',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#aaace37facd56525bd1e9154b70dc315e',1,'fr::softsf::canscan::util::BrowserHelper']]],
-  ['errormessage_3',['errorMessage',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#ad7f29237df506039035c35b82268bd08',1,'fr::softsf::canscan::service::QrGenerateAndSaveWorker']]],
-  ['errortitle_4',['errorTitle',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_qr_generate_and_save_worker.html#a5242083b5919a9b3cb0ce32a7020a065',1,'fr::softsf::canscan::service::QrGenerateAndSaveWorker']]]
+  ['encodedimage_1',['encodedImage',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afa9e79893347befeb1e8a9233c2ffdaf',1,'fr.softsf.canscan.CanScan.encodedImage'],['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6f29588ca10480bac732772861f06322',1,'fr.softsf.canscan.service.GenerateAndSaveService.encodedImage'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a2d17ea6666899458edbaa996fa341a60',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker.encodedImage'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#afb101a0034482a8720dfd9b49a7b6bfb',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker.encodedImage'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#af6983ca5e07f92b285ee1ff11d234ccb',1,'fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.encodedImage']]],
+  ['erreur_2',['ERREUR',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a68e647b7ddc5ea05eb7f8ebc9973c554',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['error_3',['ERROR',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#aaace37facd56525bd1e9154b70dc315e',1,'fr::softsf::canscan::util::BrowserHelper']]],
+  ['errormessage_4',['errorMessage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a82414f4f55814b0afdeecc6dc6798cd6',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
+  ['errortitle_5',['errorTitle',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#aed3159397b2bb220021a145dac4f9890',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]]
 ];

@@ -1,5 +1,6 @@
 var namespacefr_1_1softsf_1_1canscan =
 [
+    [ "constant", "namespacefr_1_1softsf_1_1canscan_1_1constant.html", "namespacefr_1_1softsf_1_1canscan_1_1constant" ],
     [ "model", "namespacefr_1_1softsf_1_1canscan_1_1model.html", "namespacefr_1_1softsf_1_1canscan_1_1model" ],
     [ "service", "namespacefr_1_1softsf_1_1canscan_1_1service.html", "namespacefr_1_1softsf_1_1canscan_1_1service" ],
     [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", "namespacefr_1_1softsf_1_1canscan_1_1ui" ],

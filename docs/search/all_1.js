@@ -1,19 +1,19 @@
 var searchData=
 [
-  ['bg_5fcolor_0',['BG_COLOR',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#ac45392fac172657f4aee5d3286ca0426',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
+  ['bg_5fcolor_0',['BG_COLOR',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a08bb5f29f695498909ea11b81f9beb4f',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['bgcolor_1',['bgColor',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a69e4eafb595ce66d340246ede96e15b0',1,'fr::softsf::canscan::CanScan']]],
   ['bgcolorbutton_2',['bgColorButton',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aedc150c4a936d0e4572f146238753712',1,'fr::softsf::canscan::CanScan']]],
-  ['border_5fcolor_3',['BORDER_COLOR',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a960af47d863e72231d32ddc83e68aac6',1,'fr::softsf::canscan::ui::QrCodeColor']]],
+  ['border_5fcolor_3',['BORDER_COLOR',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aa428d1645e4c1be1f71a58de1eaa0f5d',1,'fr::softsf::canscan::ui::ColorOperation']]],
   ['browsebutton_4',['browseButton',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a994685ac3d9f854a3aafa5c1b662c2e7',1,'fr::softsf::canscan::CanScan']]],
   ['browsefolderssimulation_5',['browseFoldersSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acbf2b92c5c36da7ad4329966d92f1a1b',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
   ['browselogo_6',['browseLogo',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ab418aab8165b2e96ce08f98422655cde',1,'fr::softsf::canscan::CanScan']]],
   ['browserhelper_7',['BrowserHelper',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html',1,'fr::softsf::canscan::util']]],
   ['browserhelper_2ejava_8',['BrowserHelper.java',['../_browser_helper_8java.html',1,'']]],
-  ['builddata_9',['buildData',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#ab3f2c62cde623f2be929c405a97bd5ff',1,'fr::softsf::canscan::service::DataBuilderService']]],
+  ['builddata_9',['buildData',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#a554f1d10b2c39ead1bd26e5453cfbcbc',1,'fr::softsf::canscan::service::DataBuilderService']]],
   ['buildmecard_10',['buildMecard',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#ae4a03098abc5bc1f7a6142403703680e',1,'fr::softsf::canscan::service::DataBuilderService']]],
-  ['buildpreviewimage_11',['buildPreviewImage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_dynamic_qr_code_preview.html#a21198a66d871f708a8759fb6b6e0c74b',1,'fr::softsf::canscan::ui::DynamicQrCodePreview']]],
-  ['button_12',['BUTTON',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#ad676ef92ccda7d3b47ebc547da437211',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['button_5fcolor_5ficon_5ftext_5fgap_13',['BUTTON_COLOR_ICON_TEXT_GAP',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a290d1ff77b9c97b46f230e0e3ebc4775',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['button_5ficon_5fcolor_5fsize_14',['BUTTON_ICON_COLOR_SIZE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_color.html#a57325ae4d52ca9b01660a90b67325b11',1,'fr::softsf::canscan::ui::QrCodeColor']]],
-  ['bytes_5fper_5fkilobyte_15',['BYTES_PER_KILOBYTE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#afdeed865b70ae1d241b8f264e25db8d9',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]]
+  ['buildpreviewimage_11',['buildPreviewImage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#ad393d963bb16532fe9de3366b05cb7d4',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
+  ['button_12',['BUTTON',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aff624de7ed30dff4c4ed29ce2684c1d7',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['button_5fcolor_5ficon_5ftext_5fgap_13',['BUTTON_COLOR_ICON_TEXT_GAP',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#af65c169183eabf70bfed75ed37347c93',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['button_5ficon_5fcolor_5fsize_14',['BUTTON_ICON_COLOR_SIZE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a82e42fe89273f7fde06abf402b8e9a72',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['bytes_5fper_5fkilobyte_15',['BYTES_PER_KILOBYTE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ad546711c6b1241e86366f6a3fba89570',1,'fr::softsf::canscan::ui::EncodedImage']]]
 ];

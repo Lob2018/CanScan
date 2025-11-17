@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.updateQrCodePreview" name="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.updateQrCodePreview">
+<area shape="rect" id="Node000001" title="Updates and schedules a debounced QR code preview refresh." alt="" coords="5,5,255,64"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abd8ce1ed48ee82ef39d7d169a051faf6" title=" " alt="" coords="303,5,526,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,32,287,32,287,37,255,37"/>
+</map>

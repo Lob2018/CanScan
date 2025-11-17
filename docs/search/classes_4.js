@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['framehelper_0',['FrameHelper',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html',1,'fr::softsf::canscan::util']]]
+  ['encodedimage_0',['EncodedImage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html',1,'fr::softsf::canscan::ui']]]
 ];

@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['fillbackground_0',['fillBackground',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#abfa8048716b96d926a9348483a69898d',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]],
+  ['fillbackground_0',['fillBackground',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a35a254b6d7e2b30d329f2fad559cd927',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['findcomponent_1',['findComponent',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ad18c2e9f57e07032b9a48a10e02e61f6',1,'fr.softsf.canscan.NativeImageConfigSimulator.findComponent(Container container, String name, Class&lt; T &gt; type)'],['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a841902b24e0160455b0a55411afe4b8a',1,'fr.softsf.canscan.NativeImageConfigSimulator.findComponent(Container root, Container current, String name, Class&lt; T &gt; type)']]],
   ['findoptionpane_2',['findOptionPane',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ac80dbcb1d031bb72c93cf21315c09f27',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['freecard_3',['freeCard',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38d65dd319daee1c3288690c17e43ca5',1,'fr::softsf::canscan::CanScan']]],
-  ['freedatatoobig_4',['freeDataTooBig',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a38fd2d97bfc693365a8dc700273ada47',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['freeqroriginal_5',['freeQrOriginal',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_qr_code_buffered_image.html#a6167bc4593b52b026324757daf47f519',1,'fr::softsf::canscan::ui::QrCodeBufferedImage']]]
+  ['floatconstants_3',['FloatConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html#a002e5a7353db023b44e0f5275595569e',1,'fr::softsf::canscan::constant::FloatConstants']]],
+  ['freecard_4',['freeCard',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38d65dd319daee1c3288690c17e43ca5',1,'fr::softsf::canscan::CanScan']]],
+  ['freedatatoobig_5',['freeDataTooBig',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a38fd2d97bfc693365a8dc700273ada47',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['freeqroriginal_6',['freeQrOriginal',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a1f675a96edbc6fb8d417920bd4e26c41',1,'fr::softsf::canscan::ui::EncodedImage']]]
 ];

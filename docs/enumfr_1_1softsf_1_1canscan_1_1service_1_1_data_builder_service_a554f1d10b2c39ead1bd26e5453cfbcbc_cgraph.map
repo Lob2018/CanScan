@@ -1,0 +1,7 @@
+<map id="fr.softsf.canscan.service.DataBuilderService.buildData" name="fr.softsf.canscan.service.DataBuilderService.buildData">
+<area shape="rect" id="Node000001" title="Builds the QR content and default filename based on the selected mode." alt="" coords="5,5,198,48"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#ae4a03098abc5bc1f7a6142403703680e" title="Builds a MECARD&#45;formatted string from the provided contact fields." alt="" coords="246,5,453,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,24,230,24,230,29,198,29"/>
+<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html#a6fa530a9b7142a30788a1d82023e7253" title="Appends a field to the MECARD string if the value is non&#45;null and non&#45;blank." alt="" coords="501,5,708,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="453,24,486,24,486,29,453,29"/>
+</map>
