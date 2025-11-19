@@ -10,6 +10,7 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 - [x] 💾 **Enregistrer facilement** : Sauvegarder l’image au format PNG
 
 <br>[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme)<br>
+[![Snyk Scan](https://img.shields.io/badge/Snyk%20Scan-authentication%20required-brightgreen?logo=snyk)](https://app.snyk.io/org/lob2018/project/d091601e-bd98-48ed-bd26-d3f369708314)<br>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Lob2018_CanScan&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Lob2018_CanScan)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Lob2018_CanScan&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Lob2018_CanScan)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Lob2018_CanScan&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Lob2018_CanScan)
