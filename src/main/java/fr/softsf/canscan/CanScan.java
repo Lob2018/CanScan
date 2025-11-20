@@ -38,6 +38,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentListener;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
+import com.github.lgooddatepicker.components.DatePicker;
+import com.github.lgooddatepicker.components.TimePicker;
 
 import fr.softsf.canscan.constant.DoubleConstants;
 import fr.softsf.canscan.constant.FloatConstants;
@@ -46,13 +48,17 @@ import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.model.CommonFields;
 import fr.softsf.canscan.model.EncodedData;
 import fr.softsf.canscan.model.MecardJFields;
+import fr.softsf.canscan.model.MeetJFields;
 import fr.softsf.canscan.model.Mode;
+import fr.softsf.canscan.model.NativeImageUiComponents;
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.service.DataBuilderService;
 import fr.softsf.canscan.service.GenerateAndSaveService;
 import fr.softsf.canscan.service.VersionService;
 import fr.softsf.canscan.ui.ColorOperation;
 import fr.softsf.canscan.ui.EncodedImage;
+import fr.softsf.canscan.ui.FlatLafDatePicker;
+import fr.softsf.canscan.ui.FlatLafTimePicker;
 import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.ui.UiComponentsConfiguration;
 import fr.softsf.canscan.ui.worker.DynamicPreviewWorker;
@@ -60,19 +66,12 @@ import fr.softsf.canscan.ui.worker.DynamicResizeWorker;
 import fr.softsf.canscan.util.ApplicationMetadata;
 import fr.softsf.canscan.util.BrowserHelper;
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.CoordinateHelper;
+import fr.softsf.canscan.util.DateHelper;
 import fr.softsf.canscan.util.UseLucioleFont;
 import fr.softsf.canscan.util.ValidationFieldHelper;
 
-/**
- * CanScan — Swing application for QR code generation.
- *
- * <p>Provides two modes:
- *
- * <ul>
- *   <li><b>MECARD</b> — structured contact data.
- *   <li><b>Free</b> — arbitrary text or URLs.
- * </ul>
- */
+/** CanScan — Swing QR code generator with MECARD, MEET, and FREE modes. */
 public class CanScan extends JFrame {
 
     private static final int VERTICAL_SCROLL_UNIT_INCREMENT = 16;
@@ -81,18 +80,25 @@ public class CanScan extends JFrame {
     private static final int MINIMUM_QR_CODE_SIZE = 10;
     private static final int QR_CODE_LABEL_DEFAULT_SIZE = 50;
     private static final String NORTH_PANEL = "northPanel";
-    private static final String VERSION = ApplicationMetadata.INSTANCE.getVersion();
+    private static final String HTML_B_STRING_B_HTML = "<html><b>%s</b></html>";
+    private static final int MAX_COORDINATE_LENGTH = 12;
     private Color qrColor = Color.BLACK;
     private Color bgColor = Color.WHITE;
     private int margin = 3;
     private double imageRatio = DoubleConstants.DEFAULT_IMAGE_RATIO.getValue();
     private Mode currentMode = Mode.MECARD;
-    // UI Components
+    // UI COMPONENTS
+    private final JProgressBar loader = new JProgressBar();
+    // radio
     private final JRadioButton mecardRadio =
-            new JRadioButton("<html><b>" + Mode.MECARD.text() + "</b></html>");
+            new JRadioButton(String.format(HTML_B_STRING_B_HTML, Mode.MECARD.text()));
+    private final JRadioButton meetRadio =
+            new JRadioButton(String.format(HTML_B_STRING_B_HTML, Mode.MEET.text()));
     private final JRadioButton freeRadio =
-            new JRadioButton("<html><b>" + Mode.FREE.text() + "</b></html>");
+            new JRadioButton(String.format(HTML_B_STRING_B_HTML, Mode.FREE.text()));
+    // update
     private final JButton update = new JButton("\uD83D\uDD04");
+    // MeCard
     private final JTextField nameField =
             new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
     private final JTextField phoneField =
@@ -102,8 +108,23 @@ public class CanScan extends JFrame {
     private final JTextField orgField = new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
     private final JTextField adrField = new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
     private final JTextField urlField = new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
+    // Meet
+    private final JTextField meetTitleField =
+            new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
+    private final JTextField meetUIdField =
+            new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
+    private final JTextField meetNameField =
+            new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
+    private final DatePicker meetBeginDatePicker = new FlatLafDatePicker();
+    private final TimePicker meetBeginTimePicker = new FlatLafTimePicker();
+    private final DatePicker meetEndDatePicker = new FlatLafDatePicker();
+    private final TimePicker meetEndTimePicker = new FlatLafTimePicker();
+    private final JTextField meetLatField = new JTextField();
+    private final JTextField meetLongField = new JTextField();
+    // Free
     private final JTextArea freeField = new JTextArea("");
     private final JScrollPane freeScrollPane = new JScrollPane(freeField);
+    // common
     private final JTextField logoField =
             new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
     private final JTextField sizeField =
@@ -117,8 +138,7 @@ public class CanScan extends JFrame {
                     IntConstants.MAX_PERCENTAGE.getValue(),
                     (int) (imageRatio * IntConstants.MAX_PERCENTAGE.getValue()));
     private final JCheckBox roundedModulesCheckBox = new JCheckBox();
-    private final JProgressBar loader = new JProgressBar();
-    // Containers
+    // CONTAINERS
     private final JPanel northPanelWrapper = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
     private final CardLayout cardLayout = new CardLayout();
     private final JPanel cardPanel = new JPanel(cardLayout);
@@ -127,8 +147,8 @@ public class CanScan extends JFrame {
     private final JButton browseButton = new JButton("\uD83D\uDCC1 Parcourir");
     private final JButton qrColorButton = new JButton("#000000");
     private final JButton bgColorButton = new JButton("#FFFFFF");
-    private final JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer");
-    // Services
+    private final JButton generateButton = new JButton("\uD83D\uDCBE Enregistrer et copier");
+    // SERVICES
     private final transient EncodedImage encodedImage = new EncodedImage();
     private final transient DynamicResizeWorker qrCodeResize =
             new DynamicResizeWorker(encodedImage, qrCodeLabel, loader);
@@ -138,12 +158,7 @@ public class CanScan extends JFrame {
     private final transient GenerateAndSaveService generateAndSaveService =
             new GenerateAndSaveService(encodedImage);
 
-    /**
-     * Initializes the CanScan GUI.
-     *
-     * <p>Builds the main window and delegates setup to dedicated initialization methods,
-     * configuring layout, panels, input fields, QR preview, and window behavior.
-     */
+    /** Constructs the CanScan GUI, setting up layout, panels, inputs, and QR preview. */
     public CanScan() {
         super(ApplicationMetadata.INSTANCE.initializeTitle());
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -248,10 +263,8 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Builds the north panel containing mode selection, card panels, common fields, and the
-     * generate button.
-     *
-     * <p>Uses a GridBagLayout with consistent spacing and borders.
+     * Builds the north panel with mode selection, card panels, common fields, and generate button.
+     * Uses GridBagLayout with consistent spacing.
      */
     private JPanel initializeNorthPanel() {
         JPanel northPanel = getNorthJPanel();
@@ -294,7 +307,7 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Adds mode selection controls (MECARD/Free) to the north panel.
+     * Adds mode selection controls (MECARD/MEET/FREE) to the north panel.
      *
      * <p>Configures radio buttons, update button, and mode switching listeners.
      */
@@ -306,16 +319,17 @@ public class CanScan extends JFrame {
         ButtonGroup group = new ButtonGroup();
         JPanel modePanel =
                 UiComponentsConfiguration.INSTANCE.createModePanel(
-                        mecardRadio, freeRadio, update, group);
+                        mecardRadio, meetRadio, freeRadio, update, group);
         configureUpdateButton();
         mecardRadio.addActionListener(e -> switchMode(Mode.MECARD));
+        meetRadio.addActionListener(e -> switchMode(Mode.MEET));
         freeRadio.addActionListener(e -> switchMode(Mode.FREE));
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
                 "<html><b>Mode</b></html>",
                 "<html>Le format du code QR à générer :<br>"
-                        + "Un contact MeCard ou la saisie libre.</html>",
+                        + "Un contact MeCard, un rendez-vous, la saisie libre.</html>",
                 modePanel);
     }
 
@@ -331,12 +345,13 @@ public class CanScan extends JFrame {
         update.addActionListener(
                 e -> BrowserHelper.INSTANCE.openInBrowser(LATEST_RELEASES_REPO_URL));
         SwingWorker<Boolean, Void> worker =
-                VersionService.INSTANCE.checkLatestVersion(VERSION, update);
+                VersionService.INSTANCE.checkLatestVersion(
+                        StringConstants.VERSION.getValue(), update);
         worker.execute();
     }
 
     /**
-     * Adds MECARD and Free card panels to the north panel.
+     * Adds MECARD MEET FREE card panels to the north panel.
      *
      * <p>Initializes both panels and registers them in the card layout.
      */
@@ -347,6 +362,8 @@ public class CanScan extends JFrame {
         }
         JPanel freePanel = new JPanel(new GridBagLayout());
         freeCard(freePanel, new GridBagConstraints());
+        JPanel meetPanel = new JPanel(new GridBagLayout());
+        meetCard(meetPanel, new GridBagConstraints());
         JPanel mecardPanel = new JPanel(new GridBagLayout());
         mecard(mecardPanel, new GridBagConstraints());
         grid.gridy += 1;
@@ -354,6 +371,7 @@ public class CanScan extends JFrame {
         grid.weightx = 1.0;
         grid.gridwidth = GridBagConstraints.HORIZONTAL;
         cardPanel.add(mecardPanel, Mode.MECARD.text());
+        cardPanel.add(meetPanel, Mode.MEET.text());
         cardPanel.add(freePanel, Mode.FREE.text());
         northPanel.add(cardPanel, grid);
         grid.gridwidth = GridBagConstraints.BOTH;
@@ -445,13 +463,15 @@ public class CanScan extends JFrame {
     /**
      * Adds the generate button to the north panel.
      *
-     * <p>Configures size, action listener, and initial disabled state.
+     * <p>Configures size, action listener, tooltip, and initial disabled state.
      */
     private void addNorthPanelGenerateButton(JPanel northPanel, GridBagConstraints grid) {
         if (Checker.INSTANCE.checkNPE(northPanel, "addNorthPanelGenerateButton", NORTH_PANEL)
                 || Checker.INSTANCE.checkNPE(grid, "addNorthPanelGenerateButton", "grid")) {
             return;
         }
+        generateButton.setToolTipText(
+                "<html>Enregistre le code QR, et copie les données dans le presse‑papiers.</html>");
         grid.gridy += 1;
         UiComponentsConfiguration.INSTANCE.configureGenerateButton(
                 generateButton, this::generateQrCode);
@@ -459,11 +479,8 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Builds the main panel with header, QR preview overlay, and spacer.
-     *
-     * <p>Registers resize listeners and enables automatic QR preview updates.
-     *
-     * <p><strong>Layout:</strong> NORTH: header • CENTER: preview overlay • SOUTH: spacer
+     * Builds the main panel with header, QR preview overlay, and bottom spacer. Registers resize
+     * listeners and enables automatic QR updates.
      *
      * @return the main {@link JPanel}
      */
@@ -532,10 +549,8 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Finalizes window layout and appearance.
-     *
-     * <p>Packs components, adjusts size for QR code display, loader, and centers the window on
-     * screen.
+     * Finalizes window layout: packs components, adjusts size for QR display and loader, and
+     * centers the window on screen.
      */
     private void initializeWindow() {
         pack();
@@ -544,22 +559,21 @@ public class CanScan extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    /**
-     * Assigns component names for identification.
-     *
-     * <p>Used in testing and configuration generation to reference GUI elements reliably.
-     */
+    /** Assigns stable component names for testing and native-image configuration. */
     private void initializeComponentNames() {
         UiComponentsConfiguration.INSTANCE.assignComponentNames(
-                nameField, browseButton, ratioSlider, qrColorButton, freeRadio, freeField);
+                new NativeImageUiComponents(
+                        nameField,
+                        browseButton,
+                        ratioSlider,
+                        qrColorButton,
+                        freeRadio,
+                        meetRadio,
+                        freeField,
+                        meetBeginTimePicker));
     }
 
-    /**
-     * Closes the CanScan window and releases all QR code–related resources.
-     *
-     * <p>Stops background tasks and frees image data to ensure a clean shutdown without memory
-     * leaks, then delegates to {@link JFrame#dispose()}.
-     */
+    /** Releases QR-code resources and closes the window. */
     @Override
     public void dispose() {
         qrCodeResize.disposeAllResourcesOnExit();
@@ -568,9 +582,7 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Switches the application between MECARD and FREE modes.
-     *
-     * <p>Updates the visible input panel and refreshes the QR preview accordingly.
+     * Switches between MECARD, MEET, and FREE modes, updating the panel and QR preview.
      *
      * @param mode the selected {@link Mode}; ignored if null
      */
@@ -585,12 +597,9 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Populates the MECARD panel with structured contact fields.
+     * Populates the MECARD panel with contact fields.
      *
-     * <p>Includes name, organization, phone, email, address, and URL, arranged with {@link
-     * GridBagLayout}.
-     *
-     * @param mecardPanel the panel to populate
+     * @param mecardPanel target panel
      * @param grid layout constraints
      */
     private void mecard(JPanel mecardPanel, GridBagConstraints grid) {
@@ -605,9 +614,34 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Populates the FREE panel with a multiline text area for arbitrary text or URLs.
+     * Populates the MEET panel with meet fields.
      *
-     * <p>Uses a scroll pane with line wrapping and {@link GridBagLayout} for layout.
+     * @param meetPanel target panel
+     * @param grid layout constraints
+     */
+    private void meetCard(JPanel meetPanel, GridBagConstraints grid) {
+        if (Checker.INSTANCE.checkNPE(meetPanel, "meet", "meetPanel")
+                || Checker.INSTANCE.checkNPE(grid, "meet", "grid")) {
+            return;
+        }
+        meetUIdField.setEditable(false);
+        UiComponentsConfiguration.INSTANCE.populateMeetPanel(
+                meetPanel,
+                grid,
+                new MeetJFields(
+                        meetTitleField,
+                        meetUIdField,
+                        meetNameField,
+                        meetBeginDatePicker,
+                        meetBeginTimePicker,
+                        meetEndDatePicker,
+                        meetEndTimePicker,
+                        meetLatField,
+                        meetLongField));
+    }
+
+    /**
+     * Populates the FREE panel with a multiline text area.
      *
      * @param freePanel the panel to populate
      * @param grid layout constraints
@@ -621,46 +655,117 @@ public class CanScan extends JFrame {
                 freePanel, grid, freeField, freeScrollPane);
     }
 
-    /**
-     * Attaches automatic QR code preview updates to all input fields and controls.
-     *
-     * <p>Any change in text fields, sliders, or the "rounded modules" checkbox refreshes the QR
-     * code preview and validates input to update the generate button state.
-     */
+    /** Attaches automatic QR preview updates and input validation to all fields and controls. */
     private void automaticQRCodeRenderingForFieldsAndControls() {
         DocumentListener docListener =
                 UiComponentsConfiguration.createDocumentListener(
                         () -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        DocumentListener validationListener =
-                UiComponentsConfiguration.createDocumentListener(this::updateGenerateButtonState);
         JTextField[] textFields = {
-            nameField, phoneField, emailField, orgField, adrField, urlField, logoField, sizeField
+            nameField,
+            phoneField,
+            emailField,
+            orgField,
+            adrField,
+            urlField,
+            meetTitleField,
+            meetNameField,
+            logoField,
+            sizeField
         };
         for (JTextField field : textFields) {
             field.getDocument().addDocumentListener(docListener);
         }
+        UiComponentsConfiguration.attachLimitedDocumentListener(
+                meetLatField,
+                MAX_COORDINATE_LENGTH,
+                () -> qrCodePreview.updateQrCodePreview(getQrInput()));
+        UiComponentsConfiguration.attachLimitedDocumentListener(
+                meetLongField,
+                MAX_COORDINATE_LENGTH,
+                () -> qrCodePreview.updateQrCodePreview(getQrInput()));
         freeField.getDocument().addDocumentListener(docListener);
-        nameField.getDocument().addDocumentListener(validationListener);
-        freeField.getDocument().addDocumentListener(validationListener);
         marginSlider.addChangeListener(e -> qrCodePreview.updateQrCodePreview(getQrInput()));
         ratioSlider.addChangeListener(e -> qrCodePreview.updateQrCodePreview(getQrInput()));
         roundedModulesCheckBox.addActionListener(
                 e -> qrCodePreview.updateQrCodePreview(getQrInput()));
+        meetBeginDatePicker
+                .getComponentDateTextField()
+                .getDocument()
+                .addDocumentListener(docListener);
+        meetBeginTimePicker
+                .getComponentTimeTextField()
+                .getDocument()
+                .addDocumentListener(docListener);
+        meetEndDatePicker
+                .getComponentDateTextField()
+                .getDocument()
+                .addDocumentListener(docListener);
+        meetEndTimePicker
+                .getComponentTimeTextField()
+                .getDocument()
+                .addDocumentListener(docListener);
+        DocumentListener generateButtonValidationListener =
+                UiComponentsConfiguration.createDocumentListener(this::updateGenerateButtonState);
+        nameField.getDocument().addDocumentListener(generateButtonValidationListener);
+        freeField.getDocument().addDocumentListener(generateButtonValidationListener);
+        meetTitleField.getDocument().addDocumentListener(generateButtonValidationListener);
+        meetUIdField.getDocument().addDocumentListener(generateButtonValidationListener);
+        meetBeginDatePicker
+                .getComponentDateTextField()
+                .getDocument()
+                .addDocumentListener(generateButtonValidationListener);
+        meetBeginTimePicker
+                .getComponentTimeTextField()
+                .getDocument()
+                .addDocumentListener(generateButtonValidationListener);
+        meetEndDatePicker
+                .getComponentDateTextField()
+                .getDocument()
+                .addDocumentListener(generateButtonValidationListener);
+        meetEndTimePicker
+                .getComponentTimeTextField()
+                .getDocument()
+                .addDocumentListener(generateButtonValidationListener);
+    }
+
+    /** Enables or disables the "Generate" button based on required fields for the current mode. */
+    private void updateGenerateButtonState() {
+        generateButton.setEnabled(!shouldDisableGenerateButton());
     }
 
     /**
-     * Updates the generate button state based on input validation.
+     * Determines whether the "Generate" button should be disabled for the current mode.
      *
-     * <p>Disables the button if the required fields are empty: MECARD → {@code nameField}, FREE →
-     * {@code freeField}.
+     * @return {@code true} if the button should be disabled, {@code false} otherwise
      */
-    private void updateGenerateButtonState() {
-        boolean isFreeFieldEmpty = freeField.getText().trim().isEmpty();
-        boolean isNameFieldEmpty = nameField.getText().trim().isEmpty();
-        boolean disable =
-                currentMode == Mode.MECARD && isNameFieldEmpty
-                        || currentMode == Mode.FREE && isFreeFieldEmpty;
-        generateButton.setEnabled(!disable);
+    private boolean shouldDisableGenerateButton() {
+        return switch (currentMode) {
+            case MECARD -> nameField.getText().trim().isEmpty();
+            case FREE -> freeField.getText().trim().isEmpty();
+            case MEET ->
+                    meetTitleField.getText().trim().isEmpty()
+                            || meetUIdField.getText().trim().isEmpty()
+                            || meetBeginDatePicker
+                                    .getComponentDateTextField()
+                                    .getText()
+                                    .trim()
+                                    .isEmpty()
+                            || meetBeginTimePicker
+                                    .getComponentTimeTextField()
+                                    .getText()
+                                    .trim()
+                                    .isEmpty()
+                            || meetEndDatePicker
+                                    .getComponentDateTextField()
+                                    .getText()
+                                    .trim()
+                                    .isEmpty()
+                            || meetEndTimePicker
+                                    .getComponentTimeTextField()
+                                    .getText()
+                                    .trim()
+                                    .isEmpty();
+        };
     }
 
     /**
@@ -759,6 +864,15 @@ public class CanScan extends JFrame {
                 emailField.getText(),
                 adrField.getText(),
                 urlField.getText(),
+                meetTitleField.getText(),
+                validateAndGetMeetUID(),
+                meetNameField.getText(),
+                DateHelper.INSTANCE.validateAndGetDateAndTime(
+                        meetBeginDatePicker.getDate(), meetBeginTimePicker.getTime()),
+                DateHelper.INSTANCE.validateAndGetDateAndTime(
+                        meetEndDatePicker.getDate(), meetEndTimePicker.getTime()),
+                CoordinateHelper.INSTANCE.getValidatedCoordinate(meetLatField, true),
+                CoordinateHelper.INSTANCE.getValidatedCoordinate(meetLongField, false),
                 logoField.getText(),
                 validateAndGetSize(),
                 validateAndGetMargin(),
@@ -766,6 +880,13 @@ public class CanScan extends JFrame {
                 qrColor,
                 bgColor,
                 roundedModulesCheckBox.isSelected());
+    }
+
+    /** Validates and returns the current meet UID from the meet title field. */
+    String validateAndGetMeetUID() {
+        meetUIdField.setText(
+                ValidationFieldHelper.INSTANCE.validateAndGetMeetUID(meetTitleField.getText()));
+        return meetUIdField.getText();
     }
 
     /** Validates and returns the current image-to-QR ratio from the ratio slider. */

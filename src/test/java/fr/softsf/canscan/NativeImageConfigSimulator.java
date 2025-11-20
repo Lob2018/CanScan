@@ -28,6 +28,7 @@ import javax.swing.JWindow;
 import javax.swing.SwingUtilities;
 
 import com.formdev.flatlaf.intellijthemes.FlatCobalt2IJTheme;
+import com.github.lgooddatepicker.components.TimePicker;
 
 import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.util.UseLucioleFont;
@@ -102,7 +103,10 @@ public class NativeImageConfigSimulator {
             JButton browseButton = findComponent(rootContainer, "browseButton", JButton.class);
             JButton qrColorButton = findComponent(rootContainer, "qrColorButton", JButton.class);
             JRadioButton freeRadio = findComponent(rootContainer, "freeRadio", JRadioButton.class);
+            JRadioButton meetRadio = findComponent(rootContainer, "meetRadio", JRadioButton.class);
             JTextArea freeField = findComponent(rootContainer, "freeField", JTextArea.class);
+            TimePicker meetBeginTimePicker =
+                    findComponent(rootContainer, "meetBeginTimePicker", TimePicker.class);
             System.out.println("Tous les composants ont ete trouves");
             // Tests
             ratioSliderTooltipSimulation(ratioSlider, robot);
@@ -110,12 +114,42 @@ public class NativeImageConfigSimulator {
             browseFoldersSimulation(browseButton, robot);
             chooseModuleColor(qrColorButton, robot);
             freeDataTooBig(freeRadio, freeField, robot);
+            selectABeginTime(meetRadio, meetBeginTimePicker, robot);
             System.out.println("\n=== SIMULATION E2E TERMINEE ===\n");
         } catch (Exception e) {
             System.err.println("[e2e ERROR] Dans la simulation E2E: " + e.getMessage());
             e.printStackTrace();
             System.exit(1);
         }
+    }
+
+    /**
+     * Simulates activating the meeting mode and selecting a start time through the TimePicker.
+     * Opens the time menu, chooses the first value using keyboard navigation, and verifies the
+     * resulting selected time.
+     *
+     * @param meetRadio the radio button used to enable meeting mode
+     * @param meetBeginTimePicker the TimePicker used to select the start time
+     * @param robot the Robot used for UI interaction
+     * @throws Exception if UI interaction fails or validation does not match
+     */
+    private static void selectABeginTime(
+            JRadioButton meetRadio, TimePicker meetBeginTimePicker, Robot robot) throws Exception {
+        String expected = "00:00";
+        Point meetRadioLocation = meetRadio.getLocationOnScreen();
+        robot.mouseMove(meetRadioLocation.x + 10, meetRadioLocation.y + 10);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        robot.delay(500);
+        Point beginTimePickerLocation =
+                meetBeginTimePicker.getComponentToggleTimeMenuButton().getLocationOnScreen();
+        robot.mouseMove(beginTimePickerLocation.x + 10, beginTimePickerLocation.y + 10);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        pressDown(robot);
+        pressEnter(robot);
+        String actual = meetBeginTimePicker.getComponentTimeTextField().getText();
+        assertEquals("\n=== Test 6 : Verification du selecteur horaire ===\n", expected, actual);
     }
 
     /**
@@ -459,6 +493,18 @@ public class NativeImageConfigSimulator {
     private static void pressEnter(Robot robot) {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.delay(300);
+    }
+
+    /**
+     * Simulates pressing the Down arrow key using the provided {@link Robot}, followed by a short
+     * delay.
+     *
+     * @param robot the Robot instance used to perform the key press
+     */
+    private static void pressDown(Robot robot) {
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
         robot.delay(300);
     }
 }

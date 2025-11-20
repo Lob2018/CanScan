@@ -95,9 +95,9 @@ class CanScanUTest {
     }
 
     @Test
-    void givenAllBlankFields_whenBuildMecard_thenReturnEmptyMecardStructure() {
+    void givenAllBlankFields_whenBuildMecard_thenReturnEmptyString() {
         String mecard = DataBuilderService.INSTANCE.buildMecard("", "", "", "", "", "");
-        assertEquals("MECARD:;", mecard);
+        assertEquals("", mecard);
     }
 
     @Test
@@ -347,6 +347,13 @@ class CanScanUTest {
                         "",
                         "",
                         "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
                         400,
                         4,
                         0.25,
@@ -375,6 +382,13 @@ class CanScanUTest {
                         "",
                         "",
                         "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
                         400,
                         4,
                         0.25,
@@ -392,6 +406,13 @@ class CanScanUTest {
                 new WholeFields(
                         300,
                         Mode.FREE,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
                         "",
                         "",
                         "",

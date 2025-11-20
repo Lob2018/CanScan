@@ -1,8 +1,9 @@
 # 📲 CanScan
 
-Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous voulez** !
+Générez en un instant un code QR pour **ajouter un contact**, **créer un événement de calendrier** ou **ce que vous voulez** !
 
 - [x] 👤 **Partager un contact** : Générer un code QR scannable contenant ses coordonnées au format MECARD
+- [x] 📅 **Créer un événement** : Générer un code QR pour ajouter un événement au calendrier au format VCALENDAR (iCalendar)
 - [x] 🌐 **Partager ce que vous voulez** : Créer un code QR d’un lien vers un site web, un événement de calendrier, etc.
 - [x] 🎨 **Personnaliser l'apparence** : Choisir vos couleurs, modules arrondis, marges et dimensions
 - [x] 🖼️ **Ajouter votre logo** : Intégrer une image centrale sans compromettre la lisibilité (PNG, JPG, ou JPEG)
@@ -26,13 +27,14 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 
 ## 🎬 Démo
 
-[<img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/Miniature-tuto-CanScan.jpg" alt="Tutoriel CanScan" width="100" height="56"/>](https://youtu.be/gtPi88jfQjo)
+[<img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/Miniature-tuto-CanScan.jpg" alt="Tutoriel CanScan" width="100" height="56"/>](https://youtu.be/uJBtth4vPvE)
 
 ## 📑 Contenu
 
 - ✨ [Fonctionnalités](#-fonctionnalités)
-  - [Champs MECARD](#les-champs-de-la-mecard)
-  - [Champ libre](#le-champ-de-la-saisie-libre-requis)
+  - [Les champs de la MECARD](#les-champs-de-la-mecard)
+  - [Les champs de l'Agenda](#les-champs-de-lagenda)
+  - [Le champ de Saisie libre](#le-champ-de-saisie-libre-requis)
   - [Personnalisation](#réglages-disponibles)
   - [Aperçu](#aperçu)
   - [Export](#export)
@@ -57,9 +59,18 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 - **Organisation** : Nom de l'entreprise
 - **Adresse** : Adresse postale
 - **Lien** : URL de site ou profil
-- **Logo** : Image centrale
 
-### Le champ de la Saisie libre (requis)
+### Les champs de l'Agenda
+- **Titre** : Nom de l'événement (requis)
+- **Identifiant** : Identifiant unique de l'événement au format `NOM@SOFT64.FR` (requis et généré automatiquement)
+- **Début** : Date et heure de début de l'événement (requis)
+- **Fin** : Date et heure de fin de l'événement (requis)
+- **Nom** : Nom de l'organisateur
+- **Coordonnées** : Latitude et longitude du lieu (format : `latitude;longitude`)
+
+> 📍 Les coordonnées géographiques génèrent automatiquement deux champs : GEO (coordonnées brutes) et LOCATION (lien OpenStreetMap cliquable)
+
+### Le champ de Saisie libre (requis)
 
 📚 [Documentation complète des formats ZXing](https://github.com/zxing/zxing/wiki/Barcode-Contents)
 
@@ -76,6 +87,7 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 | 📝 Texte brut      | `Un texte à copier`              | Affiche le texte |
 
 ### Réglages disponibles
+- **Logo** : Image centrale
 - **Taille du logo** : 27% par défaut ⚠️
 - **Marge** : 3 par défaut ⚠️
 - **Couleur du fond** : Blanc ⚠️
@@ -96,11 +108,16 @@ Générez en un instant un code QR pour **ajouter un contact** ou **ce que vous 
 
 ### Étapes d’utilisation
 
-1. **Remplir** les champs
-2. **Ajouter** un logo *(optionnel)*
-3. **Personnaliser** les réglages *(optionnel)*
-4. **Vérifier** la lisibilité avec l’aperçu
-5. **Exporter** en PNG
+## 🪄 Utilisation
+
+### Étapes d'utilisation
+
+1. **Sélectionner** le mode (Contact, Agenda ou Saisie libre)
+2. **Remplir** les champs
+3. **Ajouter** un logo *(optionnel)*
+4. **Personnaliser** les réglages *(optionnel)*
+5. **Vérifier** la lisibilité avec l'aperçu
+6. **Enregistrer** en PNG, et copier les données en texte brut dans le presse-papiers
 
 ### Vérification dynamique
 
@@ -153,6 +170,7 @@ CanScan détecte automatiquement les nouvelles versions et affiche un bouton de 
 
 - Java Swing
 - FlatLaf
+- LGoodDatePicker
 - ZXing
 - Correction d'erreur niveau H
 - Liberica Native Image

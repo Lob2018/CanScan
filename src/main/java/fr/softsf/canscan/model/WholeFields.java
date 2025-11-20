@@ -10,34 +10,52 @@ import java.awt.Color;
 /**
  * Input data structure for QR code generation and rendering.
  *
- * <p>Encapsulates user-provided content and visual configuration for generating a QR code. Supports
- * both MECARD (structured contact) and FREE (arbitrary text) modes.
+ * <p>Encapsulates all user-provided content and common configuration required to generate a QR
+ * code. Supports multiple encoding profiles, including:
+ *
+ * <ul>
+ *   <li>MECARD (structured contact information)
+ *   <li>MEETING (event / meeting data)
+ *   <li>FREE (arbitrary text)
+ * </ul>
  *
  * <p>This record is immutable and aggregates:
  *
  * <ul>
  *   <li>Contact details (MECARD mode)
+ *   <li>Meeting/event metadata (MEETING mode)
  *   <li>Free-form text (FREE mode)
- *   <li>Visual customization (colors, logo, modules)
+ *   <li>Common customization (colors, logo, modules)
  *   <li>Size and layout options
  * </ul>
  *
  * @param availableHeightForQrCode vertical space available for rendering in the UI
- * @param currentMode encoding mode: {@link Mode#MECARD} or {@link Mode#FREE}
- * @param free free-form text content (used in FREE mode)
- * @param name contact full name (MECARD mode)
- * @param org organization or company (MECARD mode)
- * @param tel telephone number (MECARD mode)
- * @param email email address (MECARD mode)
- * @param adr postal address (MECARD mode)
- * @param url website or profile URL (MECARD mode)
+ * @param currentMode encoding mode: {@link Mode#MECARD}, {@link Mode#MEET}, {@link Mode#FREE}
+ *     <!-- MECARD mode -->
+ * @param name full name
+ * @param org organization or company
+ * @param tel telephone number
+ * @param email email address
+ * @param adr postal address
+ * @param url website or profile URL
+ *     <!-- MEETING mode -->
+ * @param meetTitle meeting title
+ * @param meetUId unique meeting identifier
+ * @param meetName organizer or meeting name
+ * @param meetBeginDateTime start date and time UTC (19970715T040000Z)
+ * @param meetEndDateTime end date and time UTC (19970715T040000Z)
+ * @param meetLat latitude for meeting location
+ * @param meetLong longitude for meeting location
+ *     <!-- FREE mode -->
+ * @param free free-form text content
+ *     <!-- Common configuration -->
  * @param logoPath optional logo file path to embed in the QR code
- * @param size target dimension (pixels) of the QR code image
- * @param margin quiet zone around the QR code (modules)
+ * @param size target image size in pixels
+ * @param margin quiet zone in modules
  * @param ratio logo visibility ratio (0.0–1.0)
- * @param qrColor color of QR code modules
+ * @param qrColor QR modules color
  * @param bgColor background color
- * @param isRoundedModules whether modules are rendered with rounded corners
+ * @param isRoundedModules whether modules are drawn with rounded corners
  */
 public record WholeFields(
         int availableHeightForQrCode,
@@ -49,6 +67,13 @@ public record WholeFields(
         String email,
         String adr,
         String url,
+        String meetTitle,
+        String meetUId,
+        String meetName,
+        String meetBeginDateTime,
+        String meetEndDateTime,
+        String meetLat,
+        String meetLong,
         String logoPath,
         int size,
         int margin,

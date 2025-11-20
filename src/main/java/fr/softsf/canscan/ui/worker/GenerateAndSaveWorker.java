@@ -5,6 +5,9 @@
  */
 package fr.softsf.canscan.ui.worker;
 
+import java.awt.HeadlessException;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -66,15 +69,27 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
     }
 
     /**
-     * Generates the QR code image and saves it to the output file. Executed in a background thread.
+     * Generates the QR code, saves it, and copies data to the clipboard. Runs in a background
+     * thread; clipboard errors do not block export.
      *
      * @return the generated QR code image
-     * @throws Exception if generation or file saving fails
+     * @throws Exception if generation or saving fails
      */
     @Override
     protected BufferedImage doInBackground() throws Exception {
+        String data = qrData.data();
         try {
-            BufferedImage qr = encodedImage.generateImage(qrData.data(), config);
+            Toolkit.getDefaultToolkit()
+                    .getSystemClipboard()
+                    .setContents(new StringSelection(data), null);
+        } catch (IllegalStateException | HeadlessException ce) {
+            MyPopup.INSTANCE.showDialog(
+                    "La copie dans le presse-papiers a échoué",
+                    ce.getMessage(),
+                    StringConstants.ERREUR.getValue());
+        }
+        try {
+            BufferedImage qr = encodedImage.generateImage(data, config);
             saveQrCodeToFile(qr, outputFile);
             return qr;
         } catch (WriterException | IOException | OutOfMemoryError e) {

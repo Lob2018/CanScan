@@ -8,7 +8,7 @@ package fr.softsf.canscan.constant;
 /** Int constants. */
 public enum IntConstants {
     DEFAULT_GAP(15),
-    LOADER_SIZE_OFFSET(2),
+    LOADER_SIZE_OFFSET(4),
     MAX_PERCENTAGE(100),
     TEXT_FIELDS_COLUMNS(25),
     DEFAULT_LABEL_WIDTH(110);

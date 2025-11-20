@@ -58,7 +58,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
     }
 
     /**
-     * Updates the current QR input and schedules a debounced resize operation.
+     * Updates the current QR input, resize the loader, and schedules a debounced resize operation.
      *
      * <p>Any ongoing resize worker is cancelled and a new one is started after a short delay.
      *
@@ -67,6 +67,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
     public void updateQrCodeResize(WholeFields wholeFields) {
         Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodeResize", "wholeFields");
         this.wholeFields = wholeFields;
+        updateLoaderSize();
         resetAndStartWorker(RESIZE_DEBOUNCE_DELAY_MS);
     }
 
@@ -130,18 +131,19 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
             return;
         }
         qrCodeLabel.setIcon(result);
-        int size =
-                qrCodeLabel.getPreferredSize().height + IntConstants.LOADER_SIZE_OFFSET.getValue();
-        updateLoaderSize(size);
+        updateLoaderSize();
     }
 
     /**
      * Resizes the loader to a square dimension based on the given value and refreshes its parent
      * container to ensure proper layout and rendering.
-     *
-     * @param size the target width and height for the loader
      */
-    private void updateLoaderSize(int size) {
+    private void updateLoaderSize() {
+        int size =
+                qrCodeLabel.getPreferredSize().height + IntConstants.LOADER_SIZE_OFFSET.getValue();
+        if (size == IntConstants.LOADER_SIZE_OFFSET.getValue()) {
+            size = Math.max(wholeFields.availableHeightForQrCode(), DEFAULT_SIZE);
+        }
         Dimension dim = new Dimension(size, size);
         loader.setPreferredSize(dim);
         loader.setMaximumSize(dim);

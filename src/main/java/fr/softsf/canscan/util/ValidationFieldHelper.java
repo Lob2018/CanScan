@@ -5,6 +5,7 @@
  */
 package fr.softsf.canscan.util;
 
+import java.text.Normalizer;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 
@@ -79,5 +80,31 @@ public enum ValidationFieldHelper {
             sizeField.setText(StringConstants.DEFAULT_QR_CODE_DIMENSION_FIELD.getValue());
             return DEFAULT_QR_CODE_DIMENSION;
         }
+    }
+
+    /**
+     * Generates a sanitized, uppercase, domain-suffixed UID based on a meeting title.
+     *
+     * <p>Transforms the input title by removing accents, whitespace, and unsafe characters, keeping
+     * only Unicode letters, digits, underscores, and hyphens. The resulting string is uppercased
+     * and concatenated with the application domain suffix. The original title is not modified.
+     *
+     * @param meetTitle the meeting title used as source text
+     * @return a normalized and domain-qualified UID
+     */
+    public String validateAndGetMeetUID(String meetTitle) {
+        String normalized = Normalizer.normalize(meetTitle, Normalizer.Form.NFD);
+        StringBuilder builder = new StringBuilder(normalized.length());
+        for (int i = 0; i < normalized.length(); i++) {
+            char c = normalized.charAt(i);
+            if (Character.getType(c) != Character.NON_SPACING_MARK) {
+                builder.append(c);
+            }
+        }
+        return builder.toString()
+                        .replaceAll("\\s+", "")
+                        .replaceAll("[^\\p{L}0-9_-]", "")
+                        .toUpperCase()
+                + StringConstants.DOMAIN.getValue();
     }
 }
