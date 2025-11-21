@@ -3,7 +3,7 @@
  * Licensed under the MIT License (MIT).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
-package fr.softsf.canscan;
+package fr.softsf.canscan.util;
 
 import java.awt.Font;
 import javax.swing.UIManager;
@@ -11,8 +11,6 @@ import javax.swing.UIManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import fr.softsf.canscan.util.UseLucioleFont;
 
 import static org.junit.jupiter.api.Assertions.*;
 
