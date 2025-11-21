@@ -6,6 +6,7 @@
 package fr.softsf.canscan.ui;
 
 import java.awt.Dimension;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 import javax.swing.JTextField;
@@ -39,7 +40,11 @@ public class FlatLafDatePicker extends DatePicker implements IFlatLafStyledForLG
 
     /** Prepares DatePickerSettings with FlatLaf colors and borders. */
     private static DatePickerSettings createSettings() {
-        DatePickerSettings settings = new DatePickerSettings(Locale.FRANCE);
+        Locale localeFR = Locale.FRANCE;
+        DatePickerSettings settings = new DatePickerSettings(localeFR);
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", localeFR);
+        settings.setFormatForDatesCommonEra(dateFormatter);
+        settings.setFormatForDatesBeforeCommonEra(dateFormatter);
         settings.setColor(
                 DatePickerSettings.DateArea.BackgroundOverallCalendarPanel,
                 UIManager.getColor("Panel.background"));

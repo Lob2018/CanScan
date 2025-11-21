@@ -17,7 +17,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.io.File;
-import java.util.Locale;
 import java.util.Objects;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -913,7 +912,6 @@ public class CanScan extends JFrame {
      * @param args command-line arguments (ignored)
      */
     public static void main(String[] args) {
-        Locale.setDefault(Locale.FRANCE);
         FlatCobalt2IJTheme.setup();
         UseLucioleFont.INSTANCE.initialize();
         SwingUtilities.invokeLater(() -> new CanScan().setVisible(true));
