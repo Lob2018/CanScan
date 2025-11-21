@@ -16,7 +16,6 @@ jobs:
       LIBERICA_MSI: bellsoft-liberica-vm-openjdk21.0.9+12-23.1.9+1-windows-amd64.msi
       MSVC_VCVARS: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat
       INNOSETUP_EXE: C:\Program Files (x86)\Inno Setup 6\ISCC.exe
-      JAVA_TOOL_OPTIONS: -Duser.language=fr -Duser.country=FR -Duser.region=FR
 
     steps:
       - name: Harden Runner
@@ -28,6 +27,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Extract locale properties from pom.xml
+        shell: bash
+        run: |
+          lang=$(mvn help:evaluate -Dexpression=app.lang -q -DforceStdout)
+          country=$(mvn help:evaluate -Dexpression=app.country -q -DforceStdout)
+          echo "APP_LANG=$lang" >> $GITHUB_ENV
+          echo "APP_COUNTRY=$country" >> $GITHUB_ENV
+
+      - name: Set JAVA_TOOL_OPTIONS from pom.xml
+        shell: pwsh
+        run: |
+          echo "JAVA_TOOL_OPTIONS=-Duser.language=$env:APP_LANG -Duser.country=$env:APP_COUNTRY -Duser.region=$env:APP_COUNTRY" >> $env:GITHUB_ENV
 
       - name: Cache Maven dependencies
         uses: actions/cache@v3
@@ -173,8 +185,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Extract version
-        run: echo "POM_VERSION=$(awk '/<parent>/,/<\/parent>/ {next} /<version>/ {gsub(/.*<version>|<\/version>.*/, ""); print; exit}' pom.xml)" >> $GITHUB_ENV
+      - name: Extract version from pom.xml
+        shell: bash
+        run: |
+          version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          echo "POM_VERSION=$version" >> $GITHUB_ENV
 
       - name: Download output folder (Windows)
         uses: actions/download-artifact@v4

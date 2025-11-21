@@ -7,6 +7,8 @@ echo [INFO] Application name           : %1
 echo [INFO] Version                    : %2
 echo [INFO] Organization               : %3
 echo [INFO] Main Class                 : %4
+echo [INFO] Lang                       : %5
+echo [INFO] Country                    : %6
 echo -----------------------------------------------
 echo.
 echo [0/6] Cleaning and packaging application...
@@ -35,9 +37,9 @@ echo   NativeImageConfigSimulator    : Classe simulant l'usage runtime de l'app
 echo.
 java -agentlib:native-image-agent=config-output-dir=../config ^
      -Djava.awt.headless=false ^
-     -Duser.language=fr ^
-     -Duser.country=FR ^
-     -Duser.region=FR ^
+     -Duser.language=%5 ^
+     -Duser.country=%6 ^
+     -Duser.region=%6 ^
      -cp "../target/canscan-%2.jar;../target/test-classes" ^
           fr.softsf.canscan.NativeImageConfigSimulator
 
@@ -69,9 +71,9 @@ call native-image --no-fallback ^
                   -H:Class=%4 ^
                   -H:NativeLinkerOption=/SUBSYSTEM:WINDOWS ^
                   -H:NativeLinkerOption=/ENTRY:mainCRTStartup ^
-                  -Duser.language=fr ^
-                  -Duser.country=FR ^
-                  -Duser.region=FR ^
+                  -Duser.language=%5 ^
+                  -Duser.country=%6 ^
+                  -Duser.region=%6 ^
                   -Djava.awt.headless=false ^
                   -Dsun.java2d.d3d=false ^
                   -J-Xmx7G ^

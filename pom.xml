@@ -21,6 +21,8 @@
   </developers>
   <!-- Project properties -->
   <properties>
+    <app.country>FR</app.country>
+    <app.lang>fr</app.lang>
     <app.main-class>fr.softsf.canscan.CanScan</app.main-class>
     <app.name>${project.name}</app.name>
     <app.organization>${project.organization.name}</app.organization>
@@ -485,6 +487,8 @@
                     <argument>${app.version}</argument>
                     <argument>${app.organization}</argument>
                     <argument>${app.main-class}</argument>
+                    <argument>${app.lang}</argument>
+                    <argument>${app.country}</argument>
                   </arguments>
                 </configuration>
               </execution>
