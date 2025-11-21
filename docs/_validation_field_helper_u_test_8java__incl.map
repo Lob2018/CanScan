@@ -1,0 +1,21 @@
+<map id="src/test/java/fr/softsf/canscan/service/ValidationFieldHelperUTest.java" name="src/test/java/fr/softsf/canscan/service/ValidationFieldHelperUTest.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="742,5,950,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,120,140,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="741,46,473,70,312,89,152,115,133,118,132,113,151,109,311,84,472,64,741,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="163,120,318,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="742,52,550,78,330,115,309,119,308,114,329,109,549,73,741,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="342,120,552,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="742,64,515,118,514,113,740,59"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="577,120,733,147"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="790,67,695,115,692,110,788,62"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="757,112,934,155"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="848,64,848,97,843,97,843,64"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="958,112,1136,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="907,62,991,102,989,107,905,67"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1160,112,1361,155"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="951,58,1157,105,1156,111,950,63"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1385,112,1618,155"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="951,48,1370,109,1370,114,950,53"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1643,120,1902,147"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="950,42,1256,70,1631,109,1673,115,1672,120,1631,115,1256,75,950,47"/>
+</map>

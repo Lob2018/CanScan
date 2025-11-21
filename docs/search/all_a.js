@@ -42,6 +42,6 @@ var searchData=
   ['multiline_5ftext_5ffields_5frows_39',['MULTILINE_TEXT_FIELDS_ROWS',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a34d041c1f968ed8160ec44cb6e15ab22',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
   ['mypopup_40',['MyPopup',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html',1,'fr::softsf::canscan::ui']]],
   ['mypopup_2ejava_41',['MyPopup.java',['../_my_popup_8java.html',1,'']]],
-  ['mypopuputest_42',['MyPopupUTest',['../classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test.html',1,'fr::softsf::canscan']]],
+  ['mypopuputest_42',['MyPopupUTest',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html',1,'fr::softsf::canscan::ui']]],
   ['mypopuputest_2ejava_43',['MyPopupUTest.java',['../_my_popup_u_test_8java.html',1,'']]]
 ];

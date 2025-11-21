@@ -1,0 +1,4 @@
+var classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_singleton_tests =
+[
+    [ "givenPopupEnum_whenAccessInstance_thenInstanceIsNotNullAndUnique", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_singleton_tests.html#a402840d7ec90da5ea9fb3cca43b0eaee", null ]
+];

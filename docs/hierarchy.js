@@ -13,8 +13,11 @@ var hierarchy =
     [ "fr.softsf.canscan.util.Checker", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html", null ],
     [ "fr.softsf.canscan.ui.ColorOperation", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html", null ],
     [ "fr.softsf.canscan.util.CoordinateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html", null ],
+    [ "fr.softsf.canscan.util.CoordinateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test.html", null ],
     [ "fr.softsf.canscan.service.DataBuilderService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html", null ],
+    [ "fr.softsf.canscan.service.DataBuilderServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test.html", null ],
     [ "fr.softsf.canscan.util.DateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html", null ],
+    [ "fr.softsf.canscan.util.DateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test.html", null ],
     [ "DatePicker", null, [
       [ "fr.softsf.canscan.ui.FlatLafDatePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_date_picker.html", null ]
     ] ],
@@ -35,12 +38,12 @@ var hierarchy =
     [ "fr.softsf.canscan.ui.LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", null ],
     [ "fr.softsf.canscan.model.Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html", null ],
     [ "fr.softsf.canscan.ui.MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", null ],
-    [ "fr.softsf.canscan.MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test.html", null ],
+    [ "fr.softsf.canscan.ui.MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html", null ],
     [ "fr.softsf.canscan.NativeImageConfigSimulator", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html", null ],
-    [ "fr.softsf.canscan.MyPopupUTest.ShowArgumentErrorDialogTests", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test_1_1_show_argument_error_dialog_tests.html", null ],
-    [ "fr.softsf.canscan.MyPopupUTest.ShowDialogTests", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test_1_1_show_dialog_tests.html", null ],
-    [ "fr.softsf.canscan.MyPopupUTest.ShowYesNoConfirmDialogTests", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test_1_1_show_yes_no_confirm_dialog_tests.html", null ],
-    [ "fr.softsf.canscan.MyPopupUTest.SingletonTests", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test_1_1_singleton_tests.html", null ],
+    [ "fr.softsf.canscan.ui.MyPopupUTest.ShowArgumentErrorDialogTests", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_show_argument_error_dialog_tests.html", null ],
+    [ "fr.softsf.canscan.ui.MyPopupUTest.ShowDialogTests", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_show_dialog_tests.html", null ],
+    [ "fr.softsf.canscan.ui.MyPopupUTest.ShowYesNoConfirmDialogTests", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_show_yes_no_confirm_dialog_tests.html", null ],
+    [ "fr.softsf.canscan.ui.MyPopupUTest.SingletonTests", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test_1_1_singleton_tests.html", null ],
     [ "fr.softsf.canscan.constant.StringConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html", null ],
     [ "SwingWorker", null, [
       [ "fr.softsf.canscan.ui.worker.GenerateAndSaveWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html", null ]
@@ -50,7 +53,8 @@ var hierarchy =
     ] ],
     [ "fr.softsf.canscan.ui.UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", null ],
     [ "fr.softsf.canscan.util.UseLucioleFont", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html", null ],
-    [ "fr.softsf.canscan.UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1_use_luciole_font_u_test.html", null ],
+    [ "fr.softsf.canscan.util.UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test.html", null ],
     [ "fr.softsf.canscan.util.ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html", null ],
+    [ "fr.softsf.canscan.service.ValidationFieldHelperUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test.html", null ],
     [ "fr.softsf.canscan.service.VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", null ]
 ];

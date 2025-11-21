@@ -14,8 +14,10 @@ var annotated_dup =
           ] ],
           [ "service", "namespacefr_1_1softsf_1_1canscan_1_1service.html", [
             [ "DataBuilderService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service" ],
+            [ "DataBuilderServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test" ],
             [ "GenerateAndSaveService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service" ],
             [ "GenerateAndSaveServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test" ],
+            [ "ValidationFieldHelperUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test" ],
             [ "VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service" ]
           ] ],
           [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", [
@@ -32,6 +34,7 @@ var annotated_dup =
             [ "IFlatLafStyledForLGoodDatePicker", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker.html", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker" ],
             [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util" ],
             [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup" ],
+            [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test" ],
             [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration" ]
           ] ],
           [ "util", "namespacefr_1_1softsf_1_1canscan_1_1util.html", [
@@ -39,16 +42,17 @@ var annotated_dup =
             [ "BrowserHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper" ],
             [ "Checker", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker" ],
             [ "CoordinateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper" ],
+            [ "CoordinateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test" ],
             [ "DateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper" ],
+            [ "DateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test" ],
             [ "FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper" ],
             [ "UseLucioleFont", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font" ],
+            [ "UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test" ],
             [ "ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper" ]
           ] ],
           [ "CanScan", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan" ],
           [ "CanScanUTest", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test" ],
-          [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test.html", "classfr_1_1softsf_1_1canscan_1_1_my_popup_u_test" ],
-          [ "NativeImageConfigSimulator", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator" ],
-          [ "UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1_use_luciole_font_u_test.html", "classfr_1_1softsf_1_1canscan_1_1_use_luciole_font_u_test" ]
+          [ "NativeImageConfigSimulator", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator" ]
         ] ]
       ] ]
     ] ]

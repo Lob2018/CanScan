@@ -8,5 +8,6 @@ var namespacefr_1_1softsf_1_1canscan_1_1ui =
     [ "IFlatLafStyledForLGoodDatePicker", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker.html", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker" ],
     [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util" ],
     [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup" ],
+    [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test" ],
     [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration" ]
 ];
