@@ -176,7 +176,7 @@ public class NativeImageConfigSimulator {
         robot.delay(200);
         pressEnter(robot);
         robot.waitForIdle();
-        robot.delay(1000);
+        robot.delay(2500);
         String actual = meetBeginTimePicker.getComponentTimeTextField().getText();
         assertEquals("\n=== Test 6 : Verification du selecteur horaire ===\n", expected, actual);
     }
