@@ -246,12 +246,17 @@ jobs:
           echo "LANG_CODE=$LANG_CODE" >> $GITHUB_ENV
           echo "COUNTRY_CODE=$COUNTRY_CODE" >> $GITHUB_ENV
 
-      - name: Build native Linux package with Xvfb
-        uses: coactions/setup-xvfb@b6b4fcfb9f5a895edadc3bc76318fae0ac17c8b3 # v1.0.1
-        with:
-          run: |
-            echo "Starting Maven build in virtual display environment..."
-            mvn package -Plinux-native
+      - name: Install Xvfb
+        run: sudo apt-get install -y xvfb
+
+      - name: Start Xvfb and set DISPLAY
+        run: |
+          Xvfb :99 -screen 0 1920x1080x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      - name: Build native Linux package
+        shell: bash
+        run: mvn package -Plinux-native
 
       - name: Generate hash file for AppImage
         shell: bash
