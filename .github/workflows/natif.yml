@@ -252,7 +252,8 @@ jobs:
     permissions:
       contents: write
     name: Publish the release and tag it
-    needs: [package_for_windows, package_for_ubuntu]
+#    needs: [package_for_windows, package_for_ubuntu]
+    needs: [ package_for_ubuntu ]
     runs-on: ubuntu-latest
     env:
       GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }}
