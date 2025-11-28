@@ -17,6 +17,7 @@ import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.JList;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
@@ -147,7 +148,7 @@ public class NativeImageConfigSimulator {
 
     /**
      * Simulates activating the meeting mode and selecting a start time through the TimePicker.
-     * Opens the time menu, chooses the first value using keyboard navigation, and verifies the
+     * Opens the time menu, chooses the first value using a direct mouse click, and verifies the
      * resulting selected time.
      *
      * @param meetRadio the radio button used to enable meeting mode
@@ -158,6 +159,7 @@ public class NativeImageConfigSimulator {
     private static void selectABeginTime(
             JRadioButton meetRadio, TimePicker meetBeginTimePicker, Robot robot) throws Exception {
         String expected = "00:00";
+        String actual = "";
         Point meetRadioLocation = meetRadio.getLocationOnScreen();
         robot.mouseMove(meetRadioLocation.x + 10, meetRadioLocation.y + 10);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
@@ -171,13 +173,28 @@ public class NativeImageConfigSimulator {
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.waitForIdle();
         robot.delay(1500);
-        pressDown(robot);
-        robot.waitForIdle();
-        robot.delay(200);
-        pressEnter(robot);
-        robot.waitForIdle();
-        robot.delay(2500);
-        String actual = meetBeginTimePicker.getComponentTimeTextField().getText();
+        JList<?> timeList = findVisibleJList(robot);
+        if (timeList != null) {
+            Point listLocation = timeList.getLocationOnScreen();
+            robot.mouseMove(listLocation.x + 10, listLocation.y + 10);
+            robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+            robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+            robot.waitForIdle();
+            robot.delay(500);
+            int maxAttempts = 15;
+            int delayMs = 200;
+            for (int i = 0; i < maxAttempts; i++) {
+                actual = meetBeginTimePicker.getComponentTimeTextField().getText();
+                if (expected.equals(actual)) {
+                    break;
+                }
+                robot.delay(delayMs);
+                robot.waitForIdle();
+            }
+        } else {
+            System.out.println(
+                    "La JList des heures n'a pas ete trouvee apres l'ouverture du TimePicker.");
+        }
         assertEquals("\n=== Test 6 : Verification du selecteur horaire ===\n", expected, actual);
     }
 
@@ -527,14 +544,35 @@ public class NativeImageConfigSimulator {
     }
 
     /**
-     * Simulates pressing the Down arrow key using the provided {@link Robot}, followed by a short
-     * delay.
-     *
-     * @param robot the Robot instance used to perform the key press
+     * Recursively searches for the visible JList across all open windows. The JList represents the
+     * TimePicker's list of hours.
      */
-    private static void pressDown(Robot robot) {
-        robot.keyPress(KeyEvent.VK_DOWN);
-        robot.keyRelease(KeyEvent.VK_DOWN);
-        robot.delay(300);
+    private static JList<?> findVisibleJList(Robot robot) {
+        for (int i = 0; i < 10; i++) {
+            for (Window window : Window.getWindows()) {
+                if (window.isShowing()) {
+                    JList<?> list = findJListInContainer(window);
+                    if (list != null && list.getModel().getSize() > 0) {
+                        return list;
+                    }
+                }
+            }
+            robot.delay(200);
+        }
+        return null;
+    }
+
+    /** Recursively searches for a JList within a given container. */
+    private static JList<?> findJListInContainer(Container container) {
+        for (Component comp : container.getComponents()) {
+            if (comp instanceof JList<?> list) {
+                return list;
+            }
+            if (comp instanceof Container child) {
+                JList<?> found = findJListInContainer(child);
+                if (found != null) return found;
+            }
+        }
+        return null;
     }
 }

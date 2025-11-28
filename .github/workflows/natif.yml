@@ -211,7 +211,7 @@ jobs:
             echo "Downloading NIK from $DOWNLOAD_URL"
             curl -L -o "$NIK_FILE" "$DOWNLOAD_URL"
           fi
-          
+
           # Crée le dossier cible et extrait l'archive
           mkdir -p ${{ env.NIK_INSTALL_DIR }}
           tar -xzf "$NIK_FILE" -C ${{ env.NIK_INSTALL_DIR }} --strip-components=1
