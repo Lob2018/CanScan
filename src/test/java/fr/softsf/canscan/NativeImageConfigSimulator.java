@@ -129,31 +129,22 @@ public class NativeImageConfigSimulator {
 
     /**
      * Simulates opening the latest release repository URL in the system browser using the Java
-     * Desktop API. This test verifies that the Java call is successfully initiated in a
-     * non-blocking thread, ensuring the code is traced for Native Image configuration.
+     * Desktop API. This test verifies that the Java call is successfully initiated and completed
+     * (returns {@code true}) within the specified timeout.
      *
-     * @param robot the Robot used for UI interaction
+     * @param robot the Robot used for UI synchronization.
+     * @throws Exception if the browser operation fails and the result is not "true".
      */
     private static void openLatestReleaseRepoInBrowser(Robot robot) throws Exception {
-        Thread browserThread =
-                new Thread(
-                        () -> {
-                            try {
-                                BrowserHelper.INSTANCE.openInBrowser(
-                                        StringConstants.LATEST_RELEASES_REPO_URL.getValue());
-                            } catch (Exception ignored) {
-                                // Ignorer les erreurs d'ouverture du navigateur en CI/Xvfb.
-                            }
-                        },
-                        "Browser-Call-Tracer");
-        browserThread.setDaemon(true);
-        browserThread.start();
-        robot.delay(500);
+        boolean operationSuccess =
+                BrowserHelper.INSTANCE.openInBrowser(
+                        StringConstants.LATEST_RELEASES_REPO_URL.getValue());
         robot.waitForIdle();
+        robot.delay(1000);
         assertEquals(
                 "\n=== Test 7 : Verification de l'ouverture du navigateur ===\n",
                 "true",
-                String.valueOf(true));
+                String.valueOf(operationSuccess));
     }
 
     /**
