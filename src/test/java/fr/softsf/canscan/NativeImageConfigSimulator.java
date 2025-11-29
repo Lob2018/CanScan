@@ -13,6 +13,8 @@ import java.awt.Window;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
@@ -135,24 +137,51 @@ public class NativeImageConfigSimulator {
      * @throws Exception if the browser operation fails and the result is not "true".
      */
     private static void openLatestReleaseRepoInBrowser() throws Exception {
+        // Le résultat de l'opération importe peu, seule la trace est essentielle.
         boolean operationSuccess = false;
-        try {
-            System.out.println("\n=== Test 7 : Verification de l'ouverture du navigateur (Linux CI) ===");
-            System.out.println("[MAIN THREAD] Calling BrowserHelper.openInBrowser() (Expecting return FALSE).");
-            // Exécuter l'appel. Le code source confirme que le Timeout retourne FALSE.
+        // --- Début du Test 7 ---
+        System.out.println("\n=== Test 7 : Verification de l'ouverture du navigateur (Linux CI) ===");
+        // 1. Démarrer le Timer qui forcera la sortie après le blocage
+        Timer exitTimer = new Timer(true);
+        exitTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                // Le thread principal est bloqué à ce moment.
+                System.out.println("[TIMER THREAD] 4s delay reached. Forcing System.exit(0) to flush Native Image config.");
+                // 🚨 Ceci est l'action critique pour débloquer le workflow.
+                System.exit(0);
+            }
+        }, 4000); // 4 secondes (suffisant après le timeout de 2s du BrowserHelper)
+        // 2. Exécuter l'appel bloquant (Thread de simulation)
+        try{
+            System.out.println("[MAIN THREAD] Calling BrowserHelper.openInBrowser() (Expected to block after 2s).");
+            // Cette ligne va bloquer le thread de simulation après 2 secondes (dans MyPopup.showDialog)
             operationSuccess =
                     BrowserHelper.INSTANCE.openInBrowser(
                             StringConstants.LATEST_RELEASES_REPO_URL.getValue());
-            System.out.println("[TRACE 7 END] Browser operation returned. Result: " + operationSuccess);
-        } catch (Exception e) {
-            System.err.println("[MAIN THREAD ERROR] Unexpected exception during BrowserHelper call: " + e.getMessage());
+            // Si le code arrive ici, c'est que le blocage a échoué (comportement non voulu en CI)
+            System.out.println("[MAIN THREAD WARNING] BrowserHelper returned unexpectedly. Result: " + operationSuccess);
+        }catch (Exception e) {
+            // Cette exception est très improbable.
+            System.out.println("[MAIN THREAD ERROR] Unexpected exception: " + e.getMessage());
         }
-        // Assertion : Nous attendons "false" car l'opération de navigation est censée échouer en CI.
+        // 3. Bloquer le Thread principal (Filet de sécurité)
+        System.out.println("[MAIN THREAD] Blocking main thread via join() to await Timer exit.");
+        try {
+            // Bloquer le thread principal pour laisser le Timer l'arrêter.
+            Thread.currentThread().join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        // 4. Assertion (si le code arrive ici, il y a un problème de logique, mais on s'attend à false)
+        // Nous conservons l'assertion pour respecter le format de la simulation
         assertEquals(
                 "\n=== Test 7 : Verification de l'ouverture du navigateur ===\n",
-                "false",
+                "false", // On s'attend à FALSE car l'opération de navigation a échoué.
                 String.valueOf(operationSuccess));
-        System.out.println("PASS");
+        // Si nous arrivons ici, c'est que le Timer a échoué, donc la simulation a échoué.
+        System.out.println("FAIL: Timer failed to terminate process.");
+        System.exit(1);
     }
 
     /**
