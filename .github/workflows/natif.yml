@@ -382,8 +382,8 @@ jobs:
 
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows EXE](https://img.shields.io/badge/Windows_EXE-CanScan--${{ env.POM_VERSION }}--x64.exe-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64.exe)
 
-            🐧 Linux (AppImage)
-            Lien de l'AppImage (compatible avec la plupart des distributions Linux) :
+            🐧 Linux (AppImage x86_64)
+            Lien du binaire natif (glibc/Debian) :
 
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux AppImage](https://img.shields.io/badge/Linux_AppImage-CanScan--${{ env.POM_VERSION }}--x86__64.AppImage-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x86_64.AppImage)
 
