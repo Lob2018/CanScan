@@ -371,10 +371,8 @@ jobs:
           tag: v${{ env.POM_VERSION }}
           body: |
             ## 📲 CanScan v${{ env.POM_VERSION }}
-  
-            ### ⬇️ Téléchargements
-  
-            💻 Windows (64-bit Installer)
+            
+            🪟 Windows (64-bit Installer)
             Lien de l'installateur Windows x64 :
   
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows EXE](https://img.shields.io/badge/Windows_EXE-CanScan--${{ env.POM_VERSION }}--x64.exe-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64.exe)
@@ -384,8 +382,7 @@ jobs:
   
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux AppImage](https://img.shields.io/badge/Linux_AppImage-CanScan--${{ env.POM_VERSION }}--x86__64.AppImage-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x86_64.AppImage)
             
-            
-            ## Vérification de l'intégrité du fichier avec GPG
+            ## 🔒 Vérifications
   
             **Pour garantir l'intégrité des fichiers téléchargés, vérifiez leur signature à l'aide de la clé publique GPG correspondante**
   
@@ -402,9 +399,8 @@ jobs:
             Lien vers la signature Linux GPG disponible :
   
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux Signature](https://img.shields.io/badge/Signature-CanScan--${{ env.POM_VERSION }}--x86__64.AppImage.asc-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x86_64.AppImage.asc)
-            
-            
-            ### 🖥️ Empreintes des Fichiers (Hashes)
+       
+            ### 🧮️ Empreintes des Fichiers (Hashes)
   
             L'intégrité des fichiers téléchargés peut être vérifiée à l'aide du fichier de hash correspondant
   
