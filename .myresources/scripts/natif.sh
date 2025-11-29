@@ -65,7 +65,6 @@ echo "[3/5] Simulating runtime usage to generate native-image config..."
 # Passage des propriétés au simulateur pour la génération de la config
 java -agentlib:native-image-agent=config-output-dir=../config \
      -Djava.awt.headless=false \
-     -Djavax.accessibility.assistive_technologies= \
      -Duser.language="$LANG_CODE" \
      -Duser.country="$COUNTRY_CODE" \
      -Duser.region="$COUNTRY_CODE" \

@@ -13,6 +13,8 @@ import java.awt.Window;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
@@ -136,23 +138,67 @@ public class NativeImageConfigSimulator {
      * @throws Exception if the browser operation fails and the result is not "true".
      */
     private static void openLatestReleaseRepoInBrowser(Robot robot) throws Exception {
-        boolean operationSuccess =
-                BrowserHelper.INSTANCE.openInBrowser(
-                        StringConstants.LATEST_RELEASES_REPO_URL.getValue());
-        robot.waitForIdle();
-        robot.delay(3000);
-
-        String dialogTitleForLinux="";
+        boolean operationSuccess = false;
+        // La variable doit être 'final' ou effective 'final' pour être utilisée dans le TimerTask.
+        final String[] dialogTitleHolder = {""};
+        // --- Début du Test 7 ---
+        System.out.println("\n[TRACE 7 START] Initializing asynchronous dialog handler.");
+        // 1. Démarrer le Timer qui exécutera l'interception de manière asynchrone
+        Timer dialogTimer = new Timer(true);
+        dialogTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                // --- Début du Thread asynchrone (Timer) ---
+                System.out.println("[TIMER THREAD] 3.5s delay reached. Attempting to intercept AWT dialog...");
+                try {
+                    // Tâche asynchrone : Intercepter et fermer le dialogue (Thread non bloqué)
+                    dialogTitleHolder[0] = interceptAndValideDialog(robot);
+                    System.out.println("[TIMER THREAD SUCCESS] Dialog intercepted and closed: " + dialogTitleHolder[0]);
+                    // Si l'interception réussit, nous forçons l'arrêt pour écrire la configuration.
+                    System.out.println("[TRACE 7 END] Forcing System.exit(0) to flush Native Image config.");
+                    System.exit(0);
+                } catch (Exception e) {
+                    // Si le robot échoue à trouver/cliquer sur le dialogue (problème Xvfb/Focus)
+                    System.err.println("[TIMER THREAD FAIL] Interception via Timer failed: " + e.getMessage());
+                    // Nous forçons l'arrêt pour ne pas bloquer indéfiniment le workflow CI/CD.
+                    System.out.println("[TRACE 7 END] Forcing System.exit(1) due to Robot interception failure.");
+                    System.exit(1);
+                }
+            }
+        }, 3500); // 3.5 secondes pour s'assurer que le dialogue est affiché.
+        // 2. Exécuter l'appel de blocage (Thread de simulation)
         try{
-            dialogTitleForLinux=interceptAndValideDialog(robot);
-        }catch(RuntimeException re){
-          // Ne rien faire
+            System.out.println("[MAIN THREAD] Calling BrowserHelper.openInBrowser() (expected to block).");
+            // Cette ligne bloque le Thread de simulation pendant que le Timer attend
+            operationSuccess = BrowserHelper.INSTANCE.openInBrowser(
+                    StringConstants.LATEST_RELEASES_REPO_URL.getValue());
+            // Ce code est atteint SEULEMENT si BrowserHelper.openInBrowser() revient "proprement"
+            System.out.println("[MAIN THREAD WARNING] BrowserHelper returned without blocking. Result: " + operationSuccess);
+        }catch (Exception e) {
+            // Cette exception est très improbable car le blocage se fait en aval du .showDialog().
+            System.out.println("[MAIN THREAD ERROR] Unexpected exception captured during BrowserHelper call: " + e.getMessage());
+        }finally {
+            // ATTENTION : Cette section n'est atteinte que si le Thread est tué ou se termine PROPREMENT.
+            // Si le Timer appelle System.exit(0), cette section n'est PAS exécutée !
+            System.out.println("[MAIN THREAD WARNING] The 'finally' block was reached, meaning System.exit(0) was NOT executed by the Timer.");
+            System.out.println("[MAIN THREAD ASSERT] The dialog title is :"+dialogTitleHolder[0]);
+            assertEquals(
+                    "\n=== Test 7 : Verification de l'ouverture du navigateur ===\n",
+                    "true",
+                    dialogTitleHolder[0].isBlank()?String.valueOf(operationSuccess):"true");
+            // Le Timer n'a pas réussi à prendre la main et arrêter le processus.
+            dialogTimer.cancel();
         }
-        System.out.println("The dialog title is :"+dialogTitleForLinux);
-        assertEquals(
-                "\n=== Test 7 : Verification de l'ouverture du navigateur ===\n",
-                "true",
-                dialogTitleForLinux.isBlank()?String.valueOf(operationSuccess):"true");
+        // 3. Empêcher la sortie propre du Thread principal (pour laisser le Timer faire son travail)
+        System.out.println("[MAIN THREAD] Blocking main thread via join() to await Timer action.");
+        try {
+            Thread.currentThread().join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.out.println("[MAIN THREAD] Interrupted, exiting.");
+        }
+        // Ce point est normalement INATTEIGNABLE car le Timer (ou le timeout Bash) devrait avoir appelé System.exit().
+        System.out.println("[MAIN THREAD WARNING] Main thread exited join() without System.exit().");
     }
 
     /**
