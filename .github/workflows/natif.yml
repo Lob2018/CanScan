@@ -313,9 +313,9 @@ jobs:
       - name: Merge output folders
         run: |
           mkdir -p output
-          # Copie des fichiers de Windows 
+          # Copie des fichiers de Windows
           cp output-windows/* output/
-          # Copie des fichiers d'Ubuntu 
+          # Copie des fichiers d'Ubuntu
           cp output-ubuntu/* output/
 
       - name: List files in final output directory
@@ -341,11 +341,11 @@ jobs:
         run: |
           echo "::add-mask::$GPG_PASSPHRASE"
           export GPG_TTY=$(tty)
-  
+
           # List files in output directory
           echo "Files in output directory:"
           ls -la output/
-  
+
           for file in output/*; do
             if [[ -f "$file" && ! "$file" == *.txt && ! "$file" == *.asc ]]; then
               echo "Signing file: $file"
@@ -371,45 +371,45 @@ jobs:
           tag: v${{ env.POM_VERSION }}
           body: |
             ## 📲 CanScan v${{ env.POM_VERSION }}
-            
+
             🪟 Windows (64-bit Installer)
             Lien de l'installateur Windows x64 :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows EXE](https://img.shields.io/badge/Windows_EXE-CanScan--${{ env.POM_VERSION }}--x64.exe-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64.exe)
-  
+
             🐧 Linux (AppImage)
             Lien de l'AppImage (compatible avec la plupart des distributions Linux) :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux AppImage](https://img.shields.io/badge/Linux_AppImage-CanScan--${{ env.POM_VERSION }}--x86__64.AppImage-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x86_64.AppImage)
-            
+
             ## 🔒 Vérifications
-  
+
             **Pour garantir l'intégrité des fichiers téléchargés, vérifiez leur signature à l'aide de la clé publique GPG correspondante**
-  
+
             ### 🔑 Clé Publique et Signatures GPG
-  
+
             Lien vers la clé publique GPG :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Public GPG (GNU Privacy Guard)](https://img.shields.io/badge/Public_GPG-canscan--public--key.asc-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/canscan-public-key.asc)
-  
+
             Lien vers la signature Windows GPG disponible :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows Signature](https://img.shields.io/badge/Signature-CanScan--${{ env.POM_VERSION }}--x64.exe.asc-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64.exe.asc)
-  
+
             Lien vers la signature Linux GPG disponible :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux Signature](https://img.shields.io/badge/Signature-CanScan--${{ env.POM_VERSION }}--x86__64.AppImage.asc-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x86_64.AppImage.asc)
-       
+
             ### 🧮️ Empreintes des Fichiers (Hashes)
-  
+
             L'intégrité des fichiers téléchargés peut être vérifiée à l'aide du fichier de hash correspondant
-  
+
             Lien du fichier de hash Windows :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows Hash](https://img.shields.io/badge/Hash_File-hash_windows.txt-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/hash_windows.txt)
-  
+
             Lien du fichier de hash Linux :
-  
+
             &nbsp;&nbsp;&nbsp;&nbsp;[![Linux Hash](https://img.shields.io/badge/Hash_File-hash_ubuntu.txt-blue.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/hash_ubuntu.txt)
 
           artifacts: 'output/*'
