@@ -128,7 +128,7 @@ $(function(){initNavTree('classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynam
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a039d35209726a71faa0cf0012659d446" id="r_a039d35209726a71faa0cf0012659d446"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a039d35209726a71faa0cf0012659d446">DynamicPreviewWorker</a> (<a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a> <a class="el" href="#a2d17ea6666899458edbaa996fa341a60">encodedImage</a>, <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html">DynamicResizeWorker</a> <a class="el" href="#a2be1a733758ccaad17be957f723e8f0c">qrCodeResize</a>, JLabel <a class="el" href="#a1a1ae98ad0a808df963ce960e76ed05a">qrCodeLabel</a>, JProgressBar <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a60b86c771072f07119aafa1881593c10">loader</a>)</td></tr>
-<tr class="memdesc:a039d35209726a71faa0cf0012659d446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new asynchronous QR code preview manager for the specified label.  <br /></td></tr>
+<tr class="memdesc:a039d35209726a71faa0cf0012659d446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the asynchronous QR code preview manager.  <br /></td></tr>
 <tr class="separator:a039d35209726a71faa0cf0012659d446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab1382704fa1f4c27f1eab80fc8534b1" id="r_aab1382704fa1f4c27f1eab80fc8534b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab1382704fa1f4c27f1eab80fc8534b1">updateQrCodePreview</a> (WholeFields <a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a7b1f4dfd3230f814d1c14b1bfdc69bf9">wholeFields</a>)</td></tr>
 <tr class="memdesc:aab1382704fa1f4c27f1eab80fc8534b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates and schedules a debounced QR code preview refresh.  <br /></td></tr>
@@ -254,7 +254,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a new asynchronous QR code preview manager for the specified label. </p>
+<p>Constructs the asynchronous QR code preview manager. </p>
+<p>NOTE: References to mutable dependencies (<a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" title="Thread-safe singleton to hold a shared QR code BufferedImage.">EncodedImage</a>, Swing components) are intentionally stored as they represent shared application state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">encodedImage</td><td>the source QR code image; must not be <code class="JavaDocCode">null</code> </td></tr>
@@ -264,6 +265,13 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker_a039d35209726a71faa0cf0012659d446_cgraph.svg" width="275" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -294,11 +302,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Builds and returns the QR code preview image based on the current <code><a class="el" href="">WholeFields</a></code>. </p>
 <p>Performs intermediate cancellation checks to maintain responsiveness. Returns <code class="JavaDocCode">null</code> if cancelled, invalid, or if an exception occurs.</p>
 <dl class="section return"><dt>Returns</dt><dd>a <code><a class="el" href="">BufferedImage</a></code> representing the QR preview, or <code class="JavaDocCode">null</code> if cancelled/invalid </dd></dl>
-<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker_ad393d963bb16532fe9de3366b05cb7d4_cgraph.svg" width="606" height="136"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -358,11 +366,11 @@ Additional Inherited Members</h2></td></tr>
 <p>Creates a background <code><a class="el" href="">SwingWorker</a></code> that generates the QR code preview image. </p>
 <p>The worker runs off the EDT and ensures the loader is stopped once execution finishes.</p>
 <dl class="section return"><dt>Returns</dt><dd>a configured <code><a class="el" href="">SwingWorker</a></code> producing a <code><a class="el" href="">BufferedImage</a></code> </dd></dl>
-<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker_a9938a9b5dc1c561d4173bc6da4458ca8_cgraph.svg" width="100%" height="430"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
@@ -487,11 +495,11 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker_aab1382704fa1f4c27f1eab80fc8534b1_cgraph.svg" width="532" height="70"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -595,7 +603,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker.html">worker</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html">DynamicPreviewWorker</a></li>
-    <li class="footer">Generated on Sun Nov 23 2025 17:19:34 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Nov 29 2025 21:20:55 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

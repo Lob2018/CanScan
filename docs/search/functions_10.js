@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['updatebuttonstate_0',['updateButtonState',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#ac3765b9aae65297cd9337c852ee2fb30',1,'fr::softsf::canscan::service::VersionService']]],
-  ['updatebuttonwithcolor_1',['updateButtonWithColor',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71',1,'fr::softsf::canscan::ui::ColorOperation']]],
-  ['updategeneratebuttonstate_2',['updateGenerateButtonState',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906',1,'fr::softsf::canscan::CanScan']]],
-  ['updateloadersize_3',['updateLoaderSize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a5299a7f976198123d1da10f8d27af9a4',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
-  ['updateqrcodepreview_4',['updateQrCodePreview',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#aab1382704fa1f4c27f1eab80fc8534b1',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
-  ['updateqrcoderesize_5',['updateQrCodeResize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a214a6314f095a389ee6bf2eaa71a6190',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
-  ['updateqroriginal_6',['updateQrOriginal',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac0cfbc18aa43c23ef8d22f24fd5f2c7f',1,'fr::softsf::canscan::ui::EncodedImage']]]
+  ['text_0',['text',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c',1,'fr::softsf::canscan::model::Mode']]],
+  ['truncate_1',['truncate',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#a338999645531baf26c056cd4021e4cbe',1,'fr::softsf::canscan::util::CoordinateHelper']]],
+  ['tryopenbrowser_2',['tryOpenBrowser',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#aac1d2c71ece15b8ebca246ddd853912b',1,'fr::softsf::canscan::util::BrowserHelper']]],
+  ['typechar_3',['typeChar',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4c1895b6327fef325b1b0c8047bcfcb7',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['typestring_4',['typeString',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acc5424a9d2c1d44c93a045868f58a5ff',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

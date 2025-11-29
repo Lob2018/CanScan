@@ -5,7 +5,7 @@ var dir_550e25c4f0b66c7d418995e829686afc =
     [ "Checker.java", "_checker_8java.html", "_checker_8java" ],
     [ "CoordinateHelper.java", "_coordinate_helper_8java.html", "_coordinate_helper_8java" ],
     [ "DateHelper.java", "_date_helper_8java.html", "_date_helper_8java" ],
+    [ "FontManager.java", "_font_manager_8java.html", "_font_manager_8java" ],
     [ "FrameHelper.java", "_frame_helper_8java.html", "_frame_helper_8java" ],
-    [ "UseLucioleFont.java", "_use_luciole_font_8java.html", "_use_luciole_font_8java" ],
     [ "ValidationFieldHelper.java", "_validation_field_helper_8java.html", "_validation_field_helper_8java" ]
 ];

@@ -1,5 +1,6 @@
 var module_info_8java =
 [
+    [ "annotations", "module-info_8java.html#a89f1e5ce81f9bb4ac937a8c2dd086285", null ],
     [ "canscan", "module-info_8java.html#a6ff768cb0358514c63bb0e60935ebc9c", null ],
     [ "flatlaf", "module-info_8java.html#affbd526e15138396d8269cd4bddb569f", null ],
     [ "http", "module-info_8java.html#add27a91699d3d8a68e0febd4571dd067", null ],

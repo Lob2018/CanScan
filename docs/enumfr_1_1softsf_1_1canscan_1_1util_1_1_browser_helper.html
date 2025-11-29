@@ -119,9 +119,9 @@ $(function(){initNavTree('enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2fd98db3e42ce0705ff75bc960a4fb7f" id="r_a2fd98db3e42ce0705ff75bc960a4fb7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fd98db3e42ce0705ff75bc960a4fb7f">openInBrowser</a> (String url)</td></tr>
-<tr class="memdesc:a2fd98db3e42ce0705ff75bc960a4fb7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a URL in the system's default browser with timeout protection.  <br /></td></tr>
-<tr class="separator:a2fd98db3e42ce0705ff75bc960a4fb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2092c0cacb38780ccf93f88f8fd5fc" id="r_aec2092c0cacb38780ccf93f88f8fd5fc"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2092c0cacb38780ccf93f88f8fd5fc">openInBrowser</a> (String url)</td></tr>
+<tr class="memdesc:aec2092c0cacb38780ccf93f88f8fd5fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to open a URL in the default browser asynchronously with a 2-second timeout.  <br /></td></tr>
+<tr class="separator:aec2092c0cacb38780ccf93f88f8fd5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -133,9 +133,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ad01d21b7d4e978f4819503ba20e891f2" id="r_ad01d21b7d4e978f4819503ba20e891f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad01d21b7d4e978f4819503ba20e891f2">handleError</a> (String message, Exception e, String url)</td></tr>
 <tr class="memdesc:ad01d21b7d4e978f4819503ba20e891f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays error dialog to user with failure details.  <br /></td></tr>
 <tr class="separator:ad01d21b7d4e978f4819503ba20e891f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d7f19c3819936ea08d925c0c7592aae" id="r_a3d7f19c3819936ea08d925c0c7592aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d7f19c3819936ea08d925c0c7592aae">tryOpenBrowser</a> (String url)</td></tr>
-<tr class="memdesc:a3d7f19c3819936ea08d925c0c7592aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to open the URL using Java's Desktop API.  <br /></td></tr>
-<tr class="separator:a3d7f19c3819936ea08d925c0c7592aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1d2c71ece15b8ebca246ddd853912b" id="r_aac1d2c71ece15b8ebca246ddd853912b"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac1d2c71ece15b8ebca246ddd853912b">tryOpenBrowser</a> (String url)</td></tr>
+<tr class="memdesc:aac1d2c71ece15b8ebca246ddd853912b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes <code class="JavaDocCode">Desktop.browse</code> or falls back to the native <code class="JavaDocCode">xdg-open</code> command on Linux if the AWT Desktop API fails to support the BROWSE action.  <br /></td></tr>
+<tr class="separator:aac1d2c71ece15b8ebca246ddd853912b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -192,14 +192,14 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2fd98db3e42ce0705ff75bc960a4fb7f" name="a2fd98db3e42ce0705ff75bc960a4fb7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fd98db3e42ce0705ff75bc960a4fb7f">&#9670;&#160;</a></span>openInBrowser()</h2>
+<a id="aec2092c0cacb38780ccf93f88f8fd5fc" name="aec2092c0cacb38780ccf93f88f8fd5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2092c0cacb38780ccf93f88f8fd5fc">&#9670;&#160;</a></span>openInBrowser()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.util.BrowserHelper.openInBrowser </td>
+          <td class="memname">boolean fr.softsf.canscan.util.BrowserHelper.openInBrowser </td>
           <td>(</td>
           <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>url</em></span></td><td>)</td>
           <td></td>
@@ -207,17 +207,18 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Opens a URL in the system's default browser with timeout protection. </p>
-<p>Requires Desktop API support on the platform.</p>
+<p>Attempts to open a URL in the default browser asynchronously with a 2-second timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>the URL to open (must be valid URI format) </td></tr>
+    <tr><td class="paramname">url</td><td>The URL to open. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code class="JavaDocCode">true</code> if the launch command completed successfully within the timeout; <code class="JavaDocCode"><br/>
+    false</code> otherwise (error details are displayed via a dialog). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">NullPointerException</td><td>if url is null </td></tr>
+    <tr><td class="paramname">NullPointerException</td><td>if url is <code class="JavaDocCode">null</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,13 +227,13 @@ Static Private Attributes</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper_a2fd98db3e42ce0705ff75bc960a4fb7f_cgraph.svg" width="100%" height="362"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper_aec2092c0cacb38780ccf93f88f8fd5fc_cgraph.svg" width="100%" height="362"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="a3d7f19c3819936ea08d925c0c7592aae" name="a3d7f19c3819936ea08d925c0c7592aae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d7f19c3819936ea08d925c0c7592aae">&#9670;&#160;</a></span>tryOpenBrowser()</h2>
+<a id="aac1d2c71ece15b8ebca246ddd853912b" name="aac1d2c71ece15b8ebca246ddd853912b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1d2c71ece15b8ebca246ddd853912b">&#9670;&#160;</a></span>tryOpenBrowser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +242,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fr.softsf.canscan.util.BrowserHelper.tryOpenBrowser </td>
+          <td class="memname">boolean fr.softsf.canscan.util.BrowserHelper.tryOpenBrowser </td>
           <td>(</td>
           <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>url</em></span></td><td>)</td>
           <td></td>
@@ -254,19 +255,20 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Attempts to open the URL using Java's Desktop API. </p>
+<p>Executes <code class="JavaDocCode">Desktop.browse</code> or falls back to the native <code class="JavaDocCode">xdg-open</code> command on Linux if the AWT Desktop API fails to support the BROWSE action. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">url</td><td>the URL to open </td></tr>
+    <tr><td class="paramname">url</td><td>The URL to open. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><code class="JavaDocCode">true</code> if the browser was successfully called; <code class="JavaDocCode">false</code> on internal error. </dd></dl>
 <div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper_a3d7f19c3819936ea08d925c0c7592aae_cgraph.svg" width="444" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper_aac1d2c71ece15b8ebca246ddd853912b_cgraph.svg" width="444" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -339,7 +341,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1util.html">util</a></li><li class="navelem"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html">BrowserHelper</a></li>
-    <li class="footer">Generated on Sun Nov 23 2025 17:19:34 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Nov 29 2025 21:20:55 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

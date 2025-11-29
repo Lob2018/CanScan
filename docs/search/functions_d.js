@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['ratioslidertooltipsimulation_0',['ratioSliderTooltipSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['requestandverifiy_1',['requestAndVerifiy',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a50d6bb31ba86a1981f6311e0caee214e',1,'fr::softsf::canscan::service::VersionService']]],
-  ['resetandstartworker_2',['resetAndStartWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abd8ce1ed48ee82ef39d7d169a051faf6',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['resetworker_3',['resetWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#ab41292fcd5ef2e86396e25bcccc4e9d4',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['resolvefilenameconflict_4',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
-  ['resolvefilenameconflictfortests_5',['resolveFileNameConflictForTests',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6b1521b6d9c68366080969bc5ac74f99',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
-  ['rune2esimulation_6',['runE2ESimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a2a0b386576bdaa60bf8af058bc26310d',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
+  ['parseandtruncate_0',['parseAndTruncate',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ae227bbf4a7079511cdf599a0a5399fd3',1,'fr::softsf::canscan::util::CoordinateHelper']]],
+  ['populatefreepanel_1',['populateFreePanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa92005bb8f61d6438f3aca2827b7077c',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['populatemecardpanel_2',['populateMecardPanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5955ca8e11648b9ef65136c115fb812a',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['populatemeetpanel_3',['populateMeetPanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a4a891de561e1562c1b8cf95fde5070a6',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['pressenter_4',['pressEnter',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab4d4463dc9177237a8de0a7b6713e7cf',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

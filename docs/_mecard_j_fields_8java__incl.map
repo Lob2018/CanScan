@@ -1,5 +1,7 @@
 <map id="src/main/java/fr/softsf/canscan/model/MecardJFields.java" name="src/main/java/fr/softsf/canscan/model/MecardJFields.java">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,236,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="43,96,198,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,49,123,80,118,80,118,49"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="71,5,302,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,104,160,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,50,110,96,107,92,161,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="183,96,400,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,46,258,84,254,88,209,50"/>
 </map>

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['onworkerfailure_0',['onWorkerFailure',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a9ffd2ce1950a39947799c5d61c787c82',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['onworkersuccess_1',['onWorkerSuccess',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a9e96e581d50405318cb949e249c53f53',1,'fr.softsf.canscan.ui.worker.AbstractDynamicWorker.onWorkerSuccess()'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a56762be9ba836f708b848f1ca2c11161',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker.onWorkerSuccess()'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a78a98ddc7187d454df16acd989c9bda2',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker.onWorkerSuccess()']]],
-  ['openinbrowser_2',['openInBrowser',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#a2fd98db3e42ce0705ff75bc960a4fb7f',1,'fr::softsf::canscan::util::BrowserHelper']]]
+  ['nametypingsimulation_0',['nameTypingSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ae2840980d77f2806ab5f1bd471186ed3',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['nativeimageuicomponents_1',['NativeImageUiComponents',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#ade078294142dba87e944b149ce5d87d2',1,'fr::softsf::canscan::model']]],
+  ['northpanelgridbagconstraints_2',['northPanelGridBagConstraints',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb5550da33925e95999aae23f525f7c5',1,'fr::softsf::canscan::CanScan']]],
+  ['nowutc_3',['nowUtc',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a17871d50aacaf2ca58aef8bc023b45fd',1,'fr::softsf::canscan::util::DateHelper']]],
+  ['npechecklatestversion_4',['npeCheckLatestVersion',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a9e860e0a69da51da67be284deb2c701c',1,'fr::softsf::canscan::service::VersionService']]]
 ];

@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['parseandtruncate_0',['parseAndTruncate',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ae227bbf4a7079511cdf599a0a5399fd3',1,'fr::softsf::canscan::util::CoordinateHelper']]],
-  ['phonefield_1',['phoneField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb939df3fc6ae57f32a9cec3a6a46536',1,'fr::softsf::canscan::CanScan']]],
-  ['populate_5fmecard_5fpanel_2',['POPULATE_MECARD_PANEL',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#af5373a165ba2f8bbd397934e8564a22f',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['populatefreepanel_3',['populateFreePanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa92005bb8f61d6438f3aca2827b7077c',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['populatemecardpanel_4',['populateMecardPanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5955ca8e11648b9ef65136c115fb812a',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['populatemeetpanel_5',['populateMeetPanel',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a4a891de561e1562c1b8cf95fde5070a6',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['pressdown_6',['pressDown',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a408544bcaf9c2fb999521466aa9d2233',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['pressenter_7',['pressEnter',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab4d4463dc9177237a8de0a7b6713e7cf',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
-  ['preview_5fdebounce_5fdelay_5fms_8',['PREVIEW_DEBOUNCE_DELAY_MS',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a90eb33bb265febd83b45305b6d9ee941',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]]
+  ['onworkerfailure_0',['onWorkerFailure',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a9ffd2ce1950a39947799c5d61c787c82',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['onworkersuccess_1',['onWorkerSuccess',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a9e96e581d50405318cb949e249c53f53',1,'fr.softsf.canscan.ui.worker.AbstractDynamicWorker.onWorkerSuccess()'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a56762be9ba836f708b848f1ca2c11161',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker.onWorkerSuccess()'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a78a98ddc7187d454df16acd989c9bda2',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker.onWorkerSuccess()']]],
+  ['openinbrowser_2',['openInBrowser',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#aec2092c0cacb38780ccf93f88f8fd5fc',1,'fr::softsf::canscan::util::BrowserHelper']]],
+  ['openlatestreleaserepoinbrowser_3',['openLatestReleaseRepoInBrowser',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aca8bae30971c2243dc992ef4dc9d3ca8',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['organization_4',['organization',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html#a5c7e468fc63abd296a3a7027a1d6eaf4',1,'fr::softsf::canscan::util::ApplicationMetadata']]],
+  ['orgfield_5',['orgField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2dc19323952c9652bf831f4e727b4989',1,'fr::softsf::canscan::CanScan']]],
+  ['outputfile_6',['outputFile',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#afac93461a8df245221a0be32fa402c63',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
+  ['overlay_5fpanel_5falignment_7',['OVERLAY_PANEL_ALIGNMENT',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html#a3bc10913006e205729f3c1a94c87ae72',1,'fr::softsf::canscan::constant::FloatConstants']]]
 ];

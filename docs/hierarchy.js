@@ -24,6 +24,8 @@ var hierarchy =
     [ "fr.softsf.canscan.constant.DoubleConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants.html", null ],
     [ "fr.softsf.canscan.ui.EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html", null ],
     [ "fr.softsf.canscan.constant.FloatConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html", null ],
+    [ "fr.softsf.canscan.util.FontManager", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html", null ],
+    [ "fr.softsf.canscan.util.FontManagerUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test.html", null ],
     [ "fr.softsf.canscan.util.FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html", null ],
     [ "fr.softsf.canscan.service.GenerateAndSaveService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html", null ],
     [ "fr.softsf.canscan.service.GenerateAndSaveServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test.html", null ],
@@ -52,8 +54,6 @@ var hierarchy =
       [ "fr.softsf.canscan.ui.FlatLafTimePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_time_picker.html", null ]
     ] ],
     [ "fr.softsf.canscan.ui.UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", null ],
-    [ "fr.softsf.canscan.util.UseLucioleFont", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html", null ],
-    [ "fr.softsf.canscan.util.UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test.html", null ],
     [ "fr.softsf.canscan.util.ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html", null ],
     [ "fr.softsf.canscan.service.ValidationFieldHelperUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test.html", null ],
     [ "fr.softsf.canscan.service.VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", null ]

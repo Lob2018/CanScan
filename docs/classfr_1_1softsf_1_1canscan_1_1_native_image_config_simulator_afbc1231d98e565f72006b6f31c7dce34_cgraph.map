@@ -1,0 +1,45 @@
+<map id="fr.softsf.canscan.NativeImageConfigSimulator.runSimulation" name="fr.softsf.canscan.NativeImageConfigSimulator.runSimulation">
+<area shape="rect" id="Node000001" title="Runs the full end&#45;to&#45;end UI simulation for Native Image configuration using a Robot." alt="" coords="5,287,239,329"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acbf2b92c5c36da7ad4329966d92f1a1b" title="Simulates clicking a browse button to open a JFileChooser, performs a right&#45;click inside it,..." alt="" coords="302,72,541,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,285,197,214,239,175,285,140,294,136,296,140,288,145,242,179,201,218,141,288"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a3ce8b70d660baabe5ed741e64dfd0af3" title="Simulates selecting a color via JColorChooser, confirms the dialog with Enter, and verifies the selec..." alt="" coords="287,5,556,48"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="129,285,149,238,182,176,227,112,255,83,285,58,292,53,295,58,288,62,258,87,232,115,187,179,154,240,134,287"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ad18c2e9f57e07032b9a48a10e02e61f6" title="Searches for a component of the specified type and name within the given container hierarchy." alt="" coords="300,576,542,619"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="136,329,158,372,192,427,236,486,288,538,337,567,334,572,285,542,232,490,188,430,154,374,131,331"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a38fd2d97bfc693365a8dc700273ada47" title="Simulates selecting the free data mode and entering an oversized payload into the input field." alt="" coords="319,320,524,379"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="240,322,304,330,303,336,239,327"/>
+<area shape="rect" id="Node000010" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ae2840980d77f2806ab5f1bd471186ed3" title="Simulates typing &quot;Test&quot; into a JTextField and verifies the input using a Robot." alt="" coords="309,403,534,461"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="163,328,221,358,288,388,304,395,302,399,286,393,219,363,161,332"/>
+<area shape="rect" id="Node000013" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aca8bae30971c2243dc992ef4dc9d3ca8" title="Simulates opening the latest release repository URL in the system browser." alt="" coords="312,155,530,213"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="161,284,219,253,286,223,302,217,304,221,288,228,221,258,163,288"/>
+<area shape="rect" id="Node000014" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af" title="Simulates hovering over a JSlider to verify its tooltip matches the current slider value." alt="" coords="315,237,528,296"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="239,289,299,281,300,286,240,294"/>
+<area shape="rect" id="Node000015" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a346e85bc50a5fd264ba680c0c5a3d51a" title="Simulates activating the meeting mode and selecting a start time through the TimePicker." alt="" coords="291,485,552,528"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="141,328,200,399,241,438,288,471,298,476,296,481,285,476,238,442,196,403,137,332"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aaadd03094f00bbe2258c6e9742be224d" title="Compares two strings and prints the test result with a label." alt="" coords="610,245,840,288"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="532,129,557,140,630,186,690,233,687,237,627,190,555,145,529,134"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="538,46,558,58,576,76,585,94,593,113,606,134,650,187,693,232,689,236,646,191,602,138,588,115,581,96,572,79,554,62,535,51"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab4d4463dc9177237a8de0a7b6713e7cf" title="Simulates pressing the Enter key using the provided Robot, followed by a short delay." alt="" coords="907,165,1125,208"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="512,46,557,57,924,158,922,163,555,63,511,51"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="365,576,363,566,372,557,392,551,421,549,453,552,472,558,471,563,452,557,421,555,393,557,375,561,368,567,370,575"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="523,319,629,290,630,295,524,324"/>
+<area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4795cbc2d8717311fd26b8589a618616" title="Confirms and closes a visible JOptionPane by pressing Enter, then returns the dialog title." alt="" coords="623,316,827,375"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="524,345,607,344,607,350,524,351"/>
+<area shape="poly" id="edge13_Node000008_Node000005" title=" " alt="" coords="812,313,845,298,914,257,973,215,976,220,917,261,848,302,814,318"/>
+<area shape="rect" id="Node000009" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ac80dbcb1d031bb72c93cf21315c09f27" title="Recursively searches the given container and its descendants for a JOptionPane instance." alt="" coords="894,324,1138,367"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="828,343,879,343,879,348,828,348"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="961,324,959,314,968,305,987,299,1016,297,1047,300,1066,306,1064,311,1046,305,1016,303,988,305,971,309,964,315,967,323"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="532,403,554,389,571,368,577,347,585,324,602,302,614,294,617,298,606,306,589,327,583,348,575,371,558,393,535,407"/>
+<area shape="rect" id="Node000011" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acc5424a9d2c1d44c93a045868f58a5ff" title="Simulates typing a full string using the Robot class." alt="" coords="618,407,832,449"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="534,428,603,427,603,432,534,433"/>
+<area shape="rect" id="Node000012" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4c1895b6327fef325b1b0c8047bcfcb7" title="Simulates typing a single character using the Robot class." alt="" coords="912,399,1120,441"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="832,422,897,421,897,426,832,428"/>
+<area shape="poly" id="edge19_Node000013_Node000003" title=" " alt="" coords="532,211,630,238,629,243,530,216"/>
+<area shape="poly" id="edge21_Node000014_Node000003" title=" " alt="" coords="528,264,595,264,595,269,528,269"/>
+<area shape="poly" id="edge23_Node000015_Node000003" title=" " alt="" coords="540,483,554,471,570,451,577,431,578,389,579,346,586,324,602,302,610,295,613,299,606,306,591,326,584,347,583,389,582,432,574,454,558,475,543,487"/>
+<area shape="rect" id="Node000016" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aaf2a12382a791fc827de25518f612449" title="Recursively searches for the visible JList across all open windows." alt="" coords="604,487,846,529"/>
+<area shape="poly" id="edge24_Node000015_Node000016" title=" " alt="" coords="552,505,588,505,588,510,552,510"/>
+<area shape="rect" id="Node000017" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a00f369f6ee9b0eea8bacef585d45b4c0" title="Recursively searches for a JList within a given container." alt="" coords="914,489,1118,548"/>
+<area shape="poly" id="edge25_Node000016_Node000017" title=" " alt="" coords="847,510,899,512,899,517,847,515"/>
+<area shape="poly" id="edge26_Node000017_Node000017" title=" " alt="" coords="959,489,961,479,971,470,989,465,1016,463,1047,465,1065,473,1063,477,1045,471,1016,468,990,470,974,475,965,481,965,489"/>
+</map>

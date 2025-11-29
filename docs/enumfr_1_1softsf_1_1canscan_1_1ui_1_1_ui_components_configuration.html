@@ -150,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a847d60134ee0342c62bd02232e8f2ed7" id="r_a847d60134ee0342c62bd02232e8f2ed7"><td class="memItemLeft" align="right" valign="top">GridBagConstraints&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a847d60134ee0342c62bd02232e8f2ed7">createDefaultConstraints</a> ()</td></tr>
 <tr class="memdesc:a847d60134ee0342c62bd02232e8f2ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates default <code><a class="el" href="">GridBagConstraints</a></code> for consistent layout.  <br /></td></tr>
 <tr class="separator:a847d60134ee0342c62bd02232e8f2ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3400aaec73c96f695ff9bfc11b525d0" id="r_ae3400aaec73c96f695ff9bfc11b525d0"><td class="memItemLeft" align="right" valign="top">JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3400aaec73c96f695ff9bfc11b525d0">createIconButton</a> (String iconCode, String text)</td></tr>
+<tr class="memdesc:ae3400aaec73c96f695ff9bfc11b525d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a JButton styled with a Material Icon and a text label.  <br /></td></tr>
+<tr class="separator:ae3400aaec73c96f695ff9bfc11b525d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a140cdf06b78d5f2b0d588f7cc4c88178" id="r_a140cdf06b78d5f2b0d588f7cc4c88178"><td class="memItemLeft" align="right" valign="top">JPanel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140cdf06b78d5f2b0d588f7cc4c88178">createModePanel</a> (JRadioButton mecardRadio, JRadioButton meetRadio, JRadioButton freeRadio, JButton updateButton, ButtonGroup buttonGroup)</td></tr>
 <tr class="memdesc:a140cdf06b78d5f2b0d588f7cc4c88178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a mode selection panel containing radio buttons for different modes and an update button.  <br /></td></tr>
 <tr class="separator:a140cdf06b78d5f2b0d588f7cc4c88178"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +177,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa700d9f2a270f6e54fcb53111855fa44" id="r_aa700d9f2a270f6e54fcb53111855fa44"><td class="memItemLeft" align="right" valign="top">static DocumentListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa700d9f2a270f6e54fcb53111855fa44">createDocumentListener</a> (Runnable action)</td></tr>
 <tr class="memdesc:aa700d9f2a270f6e54fcb53111855fa44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a simple <code><a class="el" href="">DocumentListener</a></code> that executes the given action on any change to the document.  <br /></td></tr>
 <tr class="separator:aa700d9f2a270f6e54fcb53111855fa44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7439c5f2797059c2d6b5700a5ccf4e75" id="r_a7439c5f2797059c2d6b5700a5ccf4e75"><td class="memItemLeft" align="right" valign="top">static JButton&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7439c5f2797059c2d6b5700a5ccf4e75">createIconOnlyButton</a> (String iconCode)</td></tr>
+<tr class="memdesc:a7439c5f2797059c2d6b5700a5ccf4e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a JButton styled to display a <b>bold</b> Material Icon only.  <br /></td></tr>
+<tr class="separator:a7439c5f2797059c2d6b5700a5ccf4e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953922164a79d6b4a86eb426b782c730" id="r_a953922164a79d6b4a86eb426b782c730"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a953922164a79d6b4a86eb426b782c730">getIconAfterTextHtml</a> (String text, String iconCode)</td></tr>
+<tr class="memdesc:a953922164a79d6b4a86eb426b782c730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the HTML string for a JLabel with text followed by an icon.  <br /></td></tr>
+<tr class="separator:a953922164a79d6b4a86eb426b782c730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -623,6 +632,72 @@ COLOR_BUTTONS_GAP</code>.</p>
 
 </div>
 </div>
+<a id="ae3400aaec73c96f695ff9bfc11b525d0" name="ae3400aaec73c96f695ff9bfc11b525d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3400aaec73c96f695ff9bfc11b525d0">&#9670;&#160;</a></span>createIconButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JButton fr.softsf.canscan.ui.UiComponentsConfiguration.createIconButton </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>iconCode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a JButton styled with a Material Icon and a text label. </p>
+<p>Uses an HTML table structure for consistent vertical alignment of the icon and text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iconCode</td><td>The Unicode value of the Material Icon (e.g., <code class="JavaDocCode">"\uE2C7"</code>). </td></tr>
+    <tr><td class="paramname">text</td><td>The text label to display next to the icon. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new, styled <code class="JavaDocCode">JButton</code> configured with the icon and text. </dd></dl>
+
+</div>
+</div>
+<a id="a7439c5f2797059c2d6b5700a5ccf4e75" name="a7439c5f2797059c2d6b5700a5ccf4e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7439c5f2797059c2d6b5700a5ccf4e75">&#9670;&#160;</a></span>createIconOnlyButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static JButton fr.softsf.canscan.ui.UiComponentsConfiguration.createIconOnlyButton </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>iconCode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a JButton styled to display a <b>bold</b> Material Icon only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iconCode</td><td>The Unicode value of the Material Icon (e.g., "\uE863"). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new JButton containing only the icon. </dd></dl>
+
+</div>
+</div>
 <a id="a140cdf06b78d5f2b0d588f7cc4c88178" name="a140cdf06b78d5f2b0d588f7cc4c88178"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a140cdf06b78d5f2b0d588f7cc4c88178">&#9670;&#160;</a></span>createModePanel()</h2>
 
@@ -755,6 +830,45 @@ COLOR_BUTTONS_GAP</code>.</p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <code><a class="el" href="">JPanel</a></code> containing the aligned radio buttons </dd></dl>
+
+</div>
+</div>
+<a id="a953922164a79d6b4a86eb426b782c730" name="a953922164a79d6b4a86eb426b782c730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a953922164a79d6b4a86eb426b782c730">&#9670;&#160;</a></span>getIconAfterTextHtml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String fr.softsf.canscan.ui.UiComponentsConfiguration.getIconAfterTextHtml </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>iconCode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates the HTML string for a JLabel with text followed by an icon. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The text label to display first. </td></tr>
+    <tr><td class="paramname">iconCode</td><td>The Unicode value of the Material Icon (e.g., <code class="JavaDocCode">"\uE161"</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The formatted HTML string. </dd></dl>
 
 </div>
 </div>
@@ -1140,7 +1254,7 @@ COLOR_BUTTONS_GAP</code>.</p>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html">UiComponentsConfiguration</a></li>
-    <li class="footer">Generated on Sun Nov 23 2025 17:19:34 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Nov 29 2025 21:20:55 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

@@ -45,9 +45,9 @@ var annotated_dup =
             [ "CoordinateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test" ],
             [ "DateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper" ],
             [ "DateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test" ],
+            [ "FontManager", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager" ],
+            [ "FontManagerUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test" ],
             [ "FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper" ],
-            [ "UseLucioleFont", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font" ],
-            [ "UseLucioleFontUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font_u_test" ],
             [ "ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper" ]
           ] ],
           [ "CanScan", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan" ],

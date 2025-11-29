@@ -128,7 +128,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3c0c10eef363d788444e34095d56bb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context for QR module rendering, including configuration, matrix dimensions, and logo area.  <br /></td></tr>
 <tr class="separator:a3c0c10eef363d788444e34095d56bb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade078294142dba87e944b149ce5d87d2" id="r_ade078294142dba87e944b149ce5d87d2"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade078294142dba87e944b149ce5d87d2">NativeImageUiComponents</a> (JTextField nameField, JButton browseButton, JSlider ratioSlider, JButton qrColorButton, JRadioButton freeRadio, JRadioButton meetRadio, JTextArea freeField, TimePicker meetBeginTimePicker)</td></tr>
-<tr class="memdesc:ade078294142dba87e944b149ce5d87d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates GUI components used for simulating Native Image configuration behavior in UI tests and previews.  <br /></td></tr>
+<tr class="memdesc:ade078294142dba87e944b149ce5d87d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulates core Swing GUI components used for UI testing and previews simulating Native Image configuration.  <br /></td></tr>
 <tr class="separator:ade078294142dba87e944b149ce5d87d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2996a4ea469202fb4965d618eda30940" id="r_a2996a4ea469202fb4965d618eda30940"><td class="memItemLeft" align="right" valign="top">record&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2996a4ea469202fb4965d618eda30940">WholeFields</a> (int availableHeightForQrCode, <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html">Mode</a> currentMode, String free, String name, String org, String tel, String email, String adr, String url, String meetTitle, String meetUId, String meetName, String meetBeginDateTime, String meetEndDateTime, String meetLat, String meetLong, String logoPath, int size, int margin, double ratio, Color qrColor, Color bgColor, boolean isRoundedModules)</td></tr>
 <tr class="memdesc:a2996a4ea469202fb4965d618eda30940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input data structure for QR code generation and rendering.  <br /></td></tr>
@@ -253,6 +253,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Encapsulates all MECARD input fields for QR code generation. </p>
+<p>NOTE: This record intentionally stores direct references to mutable UI JTextField. Copying these components is impractical, and they are expected to be treated as shared UI state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nameField</td><td>text field for the contact name </td></tr>
@@ -322,6 +323,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Encapsulates all MEET fields for QR code generation. </p>
+<p>NOTE: This record intentionally stores direct references to mutable UI components (JTextField, DatePicker, etc.). Copying these components is impractical, and they are expected to be treated as shared UI state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">meetTitleField</td><td>text field for the event summary/title </td></tr>
@@ -449,8 +451,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Encapsulates GUI components used for simulating Native Image configuration behavior in UI tests and previews. </p>
-<p>Provides a method to assign unique names to each component to allow test frameworks to reliably identify them. </p>
+<p>Encapsulates core Swing GUI components used for UI testing and previews simulating Native Image configuration. </p>
+<p>The record holds direct references to mutable Swing components (e.g., JButton, JTextField); this is intentional as copying them is impractical.</p>
+<p>Provides a method to assign unique names for reliable identification by test frameworks. </p>
 <p>Assigns unique names to all non-null components for automated tests.</p>
 <p>This ensures that each component can be reliably identified by UI testing frameworks or native image simulators.</p>
 
@@ -640,7 +643,7 @@ Size and layout options </li>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1model.html">model</a></li>
-    <li class="footer">Generated on Sun Nov 23 2025 17:19:34 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Nov 29 2025 21:20:55 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

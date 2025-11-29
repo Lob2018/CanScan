@@ -1,0 +1,15 @@
+<map id="src/test/java/fr/softsf/canscan/util/FontManagerUTest.java" name="src/test/java/fr/softsf/canscan/util/FontManagerUTest.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="407,5,645,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,106,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="407,50,121,98,120,93,406,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="130,96,288,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="445,51,274,94,273,89,444,46"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="312,96,511,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="498,51,444,89,441,85,495,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="536,96,746,123"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="557,46,612,85,609,89,554,51"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="771,96,927,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="610,46,784,89,783,94,609,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="952,96,1154,123"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="646,44,955,91,955,96,645,49"/>
+</map>

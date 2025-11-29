@@ -42,7 +42,7 @@
 <text text-anchor="start" x="14" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String currentVersion, JButton</text>
 <text text-anchor="start" x="14" y="-138.5" font-family="Helvetica,sans-Serif" font-size="10.00"> updateButton)</text>
 <text text-anchor="start" x="5.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">Boolean requestAndVerifiy</text>
+<text text-anchor="start" x="14" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">Boolean requestAndVerify</text>
 <text text-anchor="start" x="14" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String currentVersion)</text>
 <text text-anchor="start" x="5.5" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">static SwingWorker</text>

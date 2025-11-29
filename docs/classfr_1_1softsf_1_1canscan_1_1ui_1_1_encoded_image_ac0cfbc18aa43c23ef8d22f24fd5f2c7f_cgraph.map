@@ -1,0 +1,7 @@
+<map id="fr.softsf.canscan.ui.EncodedImage.updateQrOriginal" name="fr.softsf.canscan.ui.EncodedImage.updateQrOriginal">
+<area shape="rect" id="Node000001" title="Updates the QR code image using a defensive copy." alt="" coords="5,39,194,81"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a85e20778f91dad2dbf3e67ded698db16" title="Creates a defensive copy of the source image." alt="" coords="242,5,430,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,44,226,39,227,45,195,49"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a1f675a96edbc6fb8d417920bd4e26c41" title="Releases the current QR code image and its resources." alt="" coords="242,72,430,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,71,227,75,226,81,194,76"/>
+</map>

@@ -7,6 +7,7 @@ var enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants =
     [ "ERREUR", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a68e647b7ddc5ea05eb7f8ebc9973c554", null ],
     [ "GENERATE_AND_SAVE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aedcf68f1b7469cc54558758f632af6e6", null ],
     [ "GENERATE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#abe9a6f3aaa13bbcad32cac256fe4598b", null ],
+    [ "LATEST_RELEASES_REPO_URL", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#ad86483fea469a22c82d59c3f710ae2db", null ],
     [ "QR_DATA", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#ad16cc9547af1a3e2ea2b61ea660a6a83", null ],
     [ "value", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aba52e9f364c88089f11f3cc87c1a5486", null ],
     [ "VERSION", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aa80de836dc39dc285b6f1bf5b79fe3e4", null ]

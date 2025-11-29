@@ -66,7 +66,6 @@ var classfr_1_1softsf_1_1canscan_1_1_can_scan =
     [ "generateButton", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a262c7c7b9075ccf754020574b3ca6855", null ],
     [ "HTML_B_STRING_B_HTML", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a1a8c3fc127849a46c292b2299983f0a3", null ],
     [ "imageRatio", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aafe584b7ed133f9669807fb766b40987", null ],
-    [ "LATEST_RELEASES_REPO_URL", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a881930c8642c5c884fded894088eb552", null ],
     [ "loader", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a92b1eb5654d57a1e4d1918aec94bbb0b", null ],
     [ "logoField", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7a6df1515192c53219894766a3f4071c", null ],
     [ "margin", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a309b37d78b4ad197106d3168434452f6", null ],
@@ -101,5 +100,6 @@ var classfr_1_1softsf_1_1canscan_1_1_can_scan =
     [ "southSpacer", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a94662f11008aae918883b2b7acd79c4f", null ],
     [ "update", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a969394599126ddd425f72883db75c9c2", null ],
     [ "urlField", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9495ee2cc95cb2ac38fc6fd2e58e5844", null ],
-    [ "VERTICAL_SCROLL_UNIT_INCREMENT", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a21be7bda0cc0b1083763f01a81d2600c", null ]
+    [ "VERTICAL_SCROLL_UNIT_INCREMENT", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a21be7bda0cc0b1083763f01a81d2600c", null ],
+    [ "WARNING_ICON", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad003468ca54e87897ec4f76611933577", null ]
 ];

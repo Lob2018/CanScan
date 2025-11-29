@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html#a82d6ad2884d836f266106bf5048aa670',1,'fr::softsf::canscan::util::UseLucioleFont']]],
+  ['initialize_0',['initialize',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ae28fec4c553db3b3c347e9af1b2f57ff',1,'fr::softsf::canscan::util::FontManager']]],
   ['initializecolorbutton_1',['initializeColorButton',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a097b6f73395cc3945d514006a38dba21',1,'fr::softsf::canscan::ui::ColorOperation']]],
   ['initializecomponentnames_2',['initializeComponentNames',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a070115929fdc69b249d21866a00a47cc',1,'fr::softsf::canscan::CanScan']]],
   ['initializemainpanel_3',['initializeMainPanel',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a14263ca931024d56cd9bed4af4b74c25',1,'fr::softsf::canscan::CanScan']]],

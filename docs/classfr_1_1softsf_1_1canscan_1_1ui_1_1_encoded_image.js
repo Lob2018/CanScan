@@ -1,5 +1,6 @@
 var classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image =
 [
+    [ "createDefensiveCopy", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a85e20778f91dad2dbf3e67ded698db16", null ],
     [ "createMatrix", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ae482672e4d0f995350dce61ca3e94976", null ],
     [ "drawFinderPatterns", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a5724cc65ce9613fa741b437515143b51", null ],
     [ "drawLogoIfPresent", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ade10f89c4a09ef2a68d99169cbf5f4fb", null ],

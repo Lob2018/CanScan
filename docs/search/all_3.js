@@ -11,7 +11,7 @@ var searchData=
   ['de_20canscan_8',['Documentation de CanScan',['../index.html',1,'']]],
   ['debouncetimer_9',['debounceTimer',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a72f69694f4b43ddb10eaa86c76d619e2',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
   ['decimal_5fbase_10',['DECIMAL_BASE',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ae97241e81fac43027f9820360dd5d024',1,'fr::softsf::canscan::util::CoordinateHelper']]],
-  ['default_5ffont_11',['DEFAULT_FONT',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_use_luciole_font.html#a73540ec5a5794b238eb63a67ab08e740',1,'fr::softsf::canscan::util::UseLucioleFont']]],
+  ['default_5ffont_11',['DEFAULT_FONT',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#a43e7e34addacf43a3b39c128b48a3fa2',1,'fr::softsf::canscan::util::FontManager']]],
   ['default_5fgap_12',['DEFAULT_GAP',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#ac76d9e9114b4e0f989571ec6fb57b6b3',1,'fr::softsf::canscan::constant::IntConstants']]],
   ['default_5fgap_5fbetween_5flogo_5fand_5fmodules_13',['DEFAULT_GAP_BETWEEN_LOGO_AND_MODULES',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac2a676d3af5ffaa623b549d8e66b7fda',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['default_5fhex_5fcolor_14',['DEFAULT_HEX_COLOR',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a743e5cce64d30d5f7d06b4538c77d869',1,'fr::softsf::canscan::ui::ColorOperation']]],
@@ -39,8 +39,9 @@ var searchData=
   ['drawmodules_36',['drawModules',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#aa8ff2803efd64fa8cfbbf2aaff43bacb',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['drawroundedfinderpatternatpixel_37',['drawRoundedFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a8c9390de6c95571f3660c32e90662535',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['drawsquarefinderpatternatpixel_38',['drawSquareFinderPatternAtPixel',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#adc8966dc4ad0994973f517355dee4c00',1,'fr::softsf::canscan::ui::EncodedImage']]],
-  ['dynamicpreviewworker_39',['DynamicPreviewWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a039d35209726a71faa0cf0012659d446',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker.DynamicPreviewWorker()']]],
-  ['dynamicpreviewworker_2ejava_40',['DynamicPreviewWorker.java',['../_dynamic_preview_worker_8java.html',1,'']]],
-  ['dynamicresizeworker_41',['DynamicResizeWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a987100a1c7576ee2badffe25266865d7',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker.DynamicResizeWorker()']]],
-  ['dynamicresizeworker_2ejava_42',['DynamicResizeWorker.java',['../_dynamic_resize_worker_8java.html',1,'']]]
+  ['dummy_5fjlabel_39',['DUMMY_JLABEL',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ad858d8487ebf4059c984ba6e019d46d8',1,'fr::softsf::canscan::util::FontManager']]],
+  ['dynamicpreviewworker_40',['DynamicPreviewWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a039d35209726a71faa0cf0012659d446',1,'fr.softsf.canscan.ui.worker.DynamicPreviewWorker.DynamicPreviewWorker()']]],
+  ['dynamicpreviewworker_2ejava_41',['DynamicPreviewWorker.java',['../_dynamic_preview_worker_8java.html',1,'']]],
+  ['dynamicresizeworker_42',['DynamicResizeWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a987100a1c7576ee2badffe25266865d7',1,'fr.softsf.canscan.ui.worker.DynamicResizeWorker.DynamicResizeWorker()']]],
+  ['dynamicresizeworker_2ejava_43',['DynamicResizeWorker.java',['../_dynamic_resize_worker_8java.html',1,'']]]
 ];

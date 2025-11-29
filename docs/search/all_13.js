@@ -1,19 +1,15 @@
 var searchData=
 [
-  ['validateandgetdateandtime_0',['validateAndGetDateAndTime',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a1485363ae3cbb5c37d096ed43e4b256e',1,'fr::softsf::canscan::util::DateHelper']]],
-  ['validateandgetmargin_1',['validateAndGetMargin',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c',1,'fr.softsf.canscan.CanScan.validateAndGetMargin()'],['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html#aaff068b1bff4bf25788efcc15e5c64f9',1,'fr.softsf.canscan.util.ValidationFieldHelper.validateAndGetMargin()']]],
-  ['validateandgetmeetuid_2',['validateAndGetMeetUID',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8a2b238ac4af96d8710b3e5d7d051f77',1,'fr.softsf.canscan.CanScan.validateAndGetMeetUID()'],['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html#a9dd183a49a851ea170719823b8da605a',1,'fr.softsf.canscan.util.ValidationFieldHelper.validateAndGetMeetUID()']]],
-  ['validateandgetratio_3',['validateAndGetRatio',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d',1,'fr.softsf.canscan.CanScan.validateAndGetRatio()'],['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html#a6ce70bd385c21c1601782c192b1289cd',1,'fr.softsf.canscan.util.ValidationFieldHelper.validateAndGetRatio()']]],
-  ['validateandgetsize_4',['validateAndGetSize',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684',1,'fr.softsf.canscan.CanScan.validateAndGetSize()'],['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html#a5877fbd0653ccc6bd21d115ff5608d5c',1,'fr.softsf.canscan.util.ValidationFieldHelper.validateAndGetSize()']]],
-  ['validatememoryforimagesize_5',['validateMemoryForImageSize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ad2f4fef7b92fee167354dd11065d34e2',1,'fr::softsf::canscan::ui::EncodedImage']]],
-  ['validationfieldhelper_6',['ValidationFieldHelper',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html',1,'fr::softsf::canscan::util']]],
-  ['validationfieldhelper_2ejava_7',['ValidationFieldHelper.java',['../_validation_field_helper_8java.html',1,'']]],
-  ['validationfieldhelperutest_8',['ValidationFieldHelperUTest',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test.html',1,'fr::softsf::canscan::service']]],
-  ['validationfieldhelperutest_2ejava_9',['ValidationFieldHelperUTest.java',['../_validation_field_helper_u_test_8java.html',1,'']]],
-  ['value_10',['value',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants.html#ac1375ff81befcb93641b2f9ac5d5245b',1,'fr.softsf.canscan.constant.DoubleConstants.value'],['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html#a438c3b9cb2589e851bda48e9860a5135',1,'fr.softsf.canscan.constant.FloatConstants.value'],['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a752b4427f0654e6a72710a9c08165d86',1,'fr.softsf.canscan.constant.IntConstants.value'],['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aba52e9f364c88089f11f3cc87c1a5486',1,'fr.softsf.canscan.constant.StringConstants.value']]],
-  ['version_11',['VERSION',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aa80de836dc39dc285b6f1bf5b79fe3e4',1,'fr::softsf::canscan::constant::StringConstants']]],
-  ['version_12',['version',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html#afec7974499f662b5f3594cf85f78acbe',1,'fr::softsf::canscan::util::ApplicationMetadata']]],
-  ['versionservice_13',['VersionService',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html',1,'fr.softsf.canscan.service.VersionService'],['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a71d28e7931c7ded96b9bc7adb07f674c',1,'fr.softsf.canscan.service.VersionService.VersionService()']]],
-  ['versionservice_2ejava_14',['VersionService.java',['../_version_service_8java.html',1,'']]],
-  ['vertical_5fscroll_5funit_5fincrement_15',['VERTICAL_SCROLL_UNIT_INCREMENT',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a21be7bda0cc0b1083763f01a81d2600c',1,'fr::softsf::canscan::CanScan']]]
+  ['uicomponentsconfiguration_0',['UiComponentsConfiguration',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html',1,'fr::softsf::canscan::ui']]],
+  ['uicomponentsconfiguration_2ejava_1',['UiComponentsConfiguration.java',['../_ui_components_configuration_8java.html',1,'']]],
+  ['update_2',['update',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a969394599126ddd425f72883db75c9c2',1,'fr::softsf::canscan::CanScan']]],
+  ['updatebuttonstate_3',['updateButtonState',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#ac3765b9aae65297cd9337c852ee2fb30',1,'fr::softsf::canscan::service::VersionService']]],
+  ['updatebuttonwithcolor_4',['updateButtonWithColor',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['updategeneratebuttonstate_5',['updateGenerateButtonState',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906',1,'fr::softsf::canscan::CanScan']]],
+  ['updateloadersize_6',['updateLoaderSize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a5299a7f976198123d1da10f8d27af9a4',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
+  ['updateqrcodepreview_7',['updateQrCodePreview',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#aab1382704fa1f4c27f1eab80fc8534b1',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
+  ['updateqrcoderesize_8',['updateQrCodeResize',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a214a6314f095a389ee6bf2eaa71a6190',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
+  ['updateqroriginal_9',['updateQrOriginal',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac0cfbc18aa43c23ef8d22f24fd5f2c7f',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['urlfield_10',['urlField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9495ee2cc95cb2ac38fc6fd2e58e5844',1,'fr::softsf::canscan::CanScan']]],
+  ['utiles_11',['Liens utiles',['../index.html#Liens_utiles',1,'']]]
 ];

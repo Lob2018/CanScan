@@ -142,7 +142,7 @@ jobs:
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar ^
           -Dsonar.projectKey=Lob2018_CanScan ^
           -Dsonar.qualitygate.wait=true ^
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml          
+          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
 
       - name: Build native Windows package
         shell: cmd

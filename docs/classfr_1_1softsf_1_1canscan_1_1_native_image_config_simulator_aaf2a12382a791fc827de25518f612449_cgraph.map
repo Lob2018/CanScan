@@ -1,0 +1,6 @@
+<map id="fr.softsf.canscan.NativeImageConfigSimulator.findVisibleJList" name="fr.softsf.canscan.NativeImageConfigSimulator.findVisibleJList">
+<area shape="rect" id="Node000001" title="Recursively searches for the visible JList across all open windows." alt="" coords="5,37,248,80"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a00f369f6ee9b0eea8bacef585d45b4c0" title="Recursively searches for a JList within a given container." alt="" coords="296,29,499,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,56,280,56,280,61,248,61"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="345,29,346,19,355,10,373,5,397,3,426,5,443,13,441,17,425,11,397,8,374,10,358,15,350,21,350,29"/>
+</map>

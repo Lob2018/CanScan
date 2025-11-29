@@ -135,13 +135,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa3deebd610599088a79dcc90b3b980fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a QR code image with optional logo and styling.  <br /></td></tr>
 <tr class="separator:aa3deebd610599088a79dcc90b3b980fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b5dfef531c7a285f816c9034146d0d0" id="r_a0b5dfef531c7a285f816c9034146d0d0"><td class="memItemLeft" align="right" valign="top">BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b5dfef531c7a285f816c9034146d0d0">getQrOriginal</a> ()</td></tr>
+<tr class="memdesc:a0b5dfef531c7a285f816c9034146d0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a defensive copy of the QR code image.  <br /></td></tr>
 <tr class="separator:a0b5dfef531c7a285f816c9034146d0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0cfbc18aa43c23ef8d22f24fd5f2c7f" id="r_ac0cfbc18aa43c23ef8d22f24fd5f2c7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0cfbc18aa43c23ef8d22f24fd5f2c7f">updateQrOriginal</a> (BufferedImage newImage)</td></tr>
-<tr class="memdesc:ac0cfbc18aa43c23ef8d22f24fd5f2c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the QR code image.  <br /></td></tr>
+<tr class="memdesc:ac0cfbc18aa43c23ef8d22f24fd5f2c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the QR code image using a defensive copy.  <br /></td></tr>
 <tr class="separator:ac0cfbc18aa43c23ef8d22f24fd5f2c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a85e20778f91dad2dbf3e67ded698db16" id="r_a85e20778f91dad2dbf3e67ded698db16"><td class="memItemLeft" align="right" valign="top">BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85e20778f91dad2dbf3e67ded698db16">createDefensiveCopy</a> (BufferedImage sourceImage)</td></tr>
+<tr class="memdesc:a85e20778f91dad2dbf3e67ded698db16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a defensive copy of the source image.  <br /></td></tr>
+<tr class="separator:a85e20778f91dad2dbf3e67ded698db16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae482672e4d0f995350dce61ca3e94976" id="r_ae482672e4d0f995350dce61ca3e94976"><td class="memItemLeft" align="right" valign="top">BitMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae482672e4d0f995350dce61ca3e94976">createMatrix</a> (String text, int margin)  throws WriterException </td></tr>
 <tr class="memdesc:ae482672e4d0f995350dce61ca3e94976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a QR code matrix for the given text.  <br /></td></tr>
 <tr class="separator:ae482672e4d0f995350dce61ca3e94976"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +222,40 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock"><p>Thread-safe singleton to hold a shared QR code <code><a class="el" href="">BufferedImage</a></code>. </p>
 <p>All access is synchronized for thread safety. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a85e20778f91dad2dbf3e67ded698db16" name="a85e20778f91dad2dbf3e67ded698db16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e20778f91dad2dbf3e67ded698db16">&#9670;&#160;</a></span>createDefensiveCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferedImage fr.softsf.canscan.ui.EncodedImage.createDefensiveCopy </td>
+          <td>(</td>
+          <td class="paramtype">BufferedImage</td>          <td class="paramname"><span class="paramname"><em>sourceImage</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a defensive copy of the source image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceImage</td><td>The image to copy (must not be null). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new BufferedImage instance with the content of the source image. </dd></dl>
+
+</div>
+</div>
 <a id="ae482672e4d0f995350dce61ca3e94976" name="ae482672e4d0f995350dce61ca3e94976"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae482672e4d0f995350dce61ca3e94976">&#9670;&#160;</a></span>createMatrix()</h2>
 
@@ -760,7 +798,17 @@ Static Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>the current QR code image, or null if not set. </dd></dl>
+
+<p>Retrieves a defensive copy of the QR code image. </p>
+<p>Synchronized. Returns a copy to prevent external mutation of the internal state.</p>
+<dl class="section return"><dt>Returns</dt><dd>A defensive copy of the image, or <code class="JavaDocCode">null</code>. </dd></dl>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image_a0b5dfef531c7a285f816c9034146d0d0_cgraph.svg" width="436" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -869,11 +917,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code class="JavaDocCode">true</code> if the coordinate is inside a position pattern; <code class="JavaDocCode">false</code> otherwise. </dd></dl>
-<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image_ac5ca4991b2826e1655e2f4afe5f2659f_cgraph.svg" width="436" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -1024,11 +1072,11 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the module should be skipped, false otherwise </dd></dl>
-<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image_a0a54994d696c706a8bf3e6dfc9c7eb5e_cgraph.svg" width="100%" height="440"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
@@ -1049,14 +1097,21 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the QR code image. </p>
-<p>Should only be called by internal components.</p>
+<p>Updates the QR code image using a defensive copy. </p>
+<p>Stores a copy of the input (input defense).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">newImage</td><td>the new image, can be null. </td></tr>
+    <tr><td class="paramname">newImage</td><td>The new image; <code class="JavaDocCode">null</code> clears the current image. </td></tr>
   </table>
   </dd>
 </dl>
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image_ac0cfbc18aa43c23ef8d22f24fd5f2c7f_cgraph.svg" width="436" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -1097,11 +1152,11 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image_ad2f4fef7b92fee167354dd11065d34e2_cgraph.svg" width="508" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -1407,7 +1462,7 @@ Static Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>fr</b></li><li class="navelem"><b>softsf</b></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan.html">canscan</a></li><li class="navelem"><a class="el" href="namespacefr_1_1softsf_1_1canscan_1_1ui.html">ui</a></li><li class="navelem"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html">EncodedImage</a></li>
-    <li class="footer">Generated on Sun Nov 23 2025 17:19:34 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Nov 29 2025 21:20:55 for CanScan by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
