@@ -54,7 +54,8 @@ echo
 echo "[2/5] Preparing distribution and output folders..."
 rm -rf dist output 2>/dev/null
 mkdir -p dist output
-# On entre dans 'dist' pour la compilation
+
+# On entre dans 'dist' pour la simulation
 cd dist || { echo "Failure of cd dist"; exit 1; }
 
 echo
