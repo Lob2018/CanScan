@@ -337,7 +337,7 @@ class CanScanUTest {
     void givenMecardModeWithContactData_whenBuildQrData_thenReturnMecardString() {
         WholeFields input =
                 new WholeFields(
-                        300,
+                        () -> 300,
                         Mode.MECARD,
                         "",
                         "Alice",
@@ -372,7 +372,7 @@ class CanScanUTest {
     void givenFreeModeWithText_whenBuildQrData_thenReturnFreeText() {
         WholeFields input =
                 new WholeFields(
-                        300,
+                        () -> 300,
                         Mode.FREE,
                         "Test data",
                         "",
@@ -404,7 +404,7 @@ class CanScanUTest {
     void givenEmptyMecardFields_whenBuildQrData_thenReturnEmptyString() {
         WholeFields input =
                 new WholeFields(
-                        300,
+                        () -> 300,
                         Mode.FREE,
                         "",
                         "",

@@ -16,7 +16,6 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import fr.softsf.canscan.constant.IntConstants;
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.LabelIconUtil;
@@ -96,7 +95,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
      */
     @Override
     protected SwingWorker<ImageIcon, Void> createWorker() {
-        int size = Math.max(wholeFields.availableHeightForQrCode(), DEFAULT_SIZE);
+        int size = Math.max(wholeFields.availableHeightForQrCode().getAsInt(), DEFAULT_SIZE);
         return new SwingWorker<>() {
             @Override
             protected ImageIcon doInBackground() {
@@ -144,11 +143,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
      * container to ensure proper layout and rendering.
      */
     private void updateLoaderSize() {
-        int size =
-                qrCodeLabel.getPreferredSize().height + IntConstants.LOADER_SIZE_OFFSET.getValue();
-        if (size == IntConstants.LOADER_SIZE_OFFSET.getValue()) {
-            size = Math.max(wholeFields.availableHeightForQrCode(), DEFAULT_SIZE);
-        }
+        int size = Math.max(wholeFields.availableHeightForQrCode().getAsInt(), DEFAULT_SIZE);
         Dimension dim = new Dimension(size, size);
         loader.setPreferredSize(dim);
         loader.setMaximumSize(dim);

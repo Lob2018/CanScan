@@ -861,7 +861,7 @@ public class CanScan extends JFrame {
      */
     private WholeFields getQrInput() {
         return new WholeFields(
-                calculateAvailableQrCodeLabelHeight(),
+                this::calculateAvailableQrCodeLabelHeight,
                 currentMode,
                 freeField.getText(),
                 nameField.getText(),
