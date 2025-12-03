@@ -795,7 +795,7 @@ public class CanScan extends JFrame {
      * @return the selected file, or {@code null} if canceled
      */
     File chooseLogoFile() {
-        JFileChooser chooser = new JFileChooser();
+        JFileChooser chooser = new JFileChooser(System.getProperty("user.home"));
         chooser.setDialogTitle("Sélectionner le logo (PNG, JPG, ou JPEG)");
         chooser.setFileFilter(
                 new javax.swing.filechooser.FileNameExtensionFilter(

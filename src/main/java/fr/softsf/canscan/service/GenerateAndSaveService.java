@@ -102,7 +102,7 @@ public class GenerateAndSaveService {
      * @return the selected file ready for writing, or null if the user cancels
      */
     private File chooseOutputFile(EncodedData qrData) {
-        JFileChooser chooser = new JFileChooser();
+        JFileChooser chooser = new JFileChooser(System.getProperty("user.home"));
         chooser.setDialogTitle("Enregistrer votre code QR en tant que PNG");
         chooser.setSelectedFile(new File(qrData.defaultFileName()));
         chooser.setFileFilter(
