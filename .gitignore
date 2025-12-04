@@ -2,7 +2,7 @@
 output/
 target/
 config/
-config-*/
+config-trace/
 
 # Ignore Maven Wrapper binary files
 .mvn/wrapper/maven-wrapper.jar
