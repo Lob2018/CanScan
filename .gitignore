@@ -1,7 +1,8 @@
-# Ignore target and output
+# Ignore target configs and output
 output/
 target/
 config/
+config-*/
 
 # Ignore Maven Wrapper binary files
 .mvn/wrapper/maven-wrapper.jar
