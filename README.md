@@ -95,7 +95,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 - **Dimension** : 400x400px par défaut ⚡️
 - **Modules ronds** : Optionnel ⚠️
 
-> ⚡️ Trop grande dimension = baisse de performance
+> ⚡️ Trop grande dimension = baisse de performance<br>
 > ⚠️ Toujours tester la lisibilité du QR
 
 ### Aperçu
@@ -141,7 +141,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
    ```bash
    chmod +x CanScan-v.v.v.v-x86_64.AppImage
    ```
-3.  **Lancer** le fichier :
+3.  **Lancer** le fichier en double-cliquant dessus, ou en utilisant la commande suivante :
     ```bash
     ./CanScan-v.v.v.v-x86_64.AppImage
     ```
