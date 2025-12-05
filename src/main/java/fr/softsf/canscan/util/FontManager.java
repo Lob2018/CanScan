@@ -54,7 +54,7 @@ public enum FontManager {
         loadMaterialIconsFont();
     }
 
-    private static void loadLucioleFontAsDefaultFont() {
+    private void loadLucioleFontAsDefaultFont() {
         try (InputStream is = CanScan.class.getResourceAsStream(FONT_LUCIOLE_PATH)) {
             if (is == null) {
                 throw new IllegalStateException(
