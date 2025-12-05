@@ -96,7 +96,8 @@ public class CanScan extends JFrame {
             new JRadioButton(String.format(HTML_B_STRING_B_HTML, Mode.MEET.text()));
     private final JRadioButton freeRadio =
             new JRadioButton(String.format(HTML_B_STRING_B_HTML, Mode.FREE.text()));
-    private final JButton update = UiComponentsConfiguration.createIconOnlyButton("\uE863");
+    private final JButton update =
+            UiComponentsConfiguration.INSTANCE.createIconOnlyButton("\uE863");
     // MeCard
     private final JTextField nameField =
             new JTextField(IntConstants.TEXT_FIELDS_COLUMNS.getValue());
@@ -666,7 +667,7 @@ public class CanScan extends JFrame {
     /** Attaches automatic QR preview updates and input validation to all fields and controls. */
     private void automaticQRCodeRenderingForFieldsAndControls() {
         DocumentListener docListener =
-                UiComponentsConfiguration.createDocumentListener(
+                UiComponentsConfiguration.INSTANCE.createDocumentListener(
                         () -> qrCodePreview.updateQrCodePreview(getQrInput()));
         JTextField[] textFields = {
             nameField,
@@ -683,11 +684,11 @@ public class CanScan extends JFrame {
         for (JTextField field : textFields) {
             field.getDocument().addDocumentListener(docListener);
         }
-        UiComponentsConfiguration.attachLimitedDocumentListener(
+        UiComponentsConfiguration.INSTANCE.attachLimitedDocumentListener(
                 meetLatField,
                 MAX_COORDINATE_LENGTH,
                 () -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        UiComponentsConfiguration.attachLimitedDocumentListener(
+        UiComponentsConfiguration.INSTANCE.attachLimitedDocumentListener(
                 meetLongField,
                 MAX_COORDINATE_LENGTH,
                 () -> qrCodePreview.updateQrCodePreview(getQrInput()));
@@ -713,7 +714,8 @@ public class CanScan extends JFrame {
                 .getDocument()
                 .addDocumentListener(docListener);
         DocumentListener generateButtonValidationListener =
-                UiComponentsConfiguration.createDocumentListener(this::updateGenerateButtonState);
+                UiComponentsConfiguration.INSTANCE.createDocumentListener(
+                        this::updateGenerateButtonState);
         nameField.getDocument().addDocumentListener(generateButtonValidationListener);
         freeField.getDocument().addDocumentListener(generateButtonValidationListener);
         meetTitleField.getDocument().addDocumentListener(generateButtonValidationListener);

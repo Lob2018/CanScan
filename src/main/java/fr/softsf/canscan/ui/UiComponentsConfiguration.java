@@ -522,7 +522,7 @@ public enum UiComponentsConfiguration {
      * @return a {@link DocumentListener} that triggers the action on insert, remove, or change
      *     events, or {@code null} if the action is null
      */
-    public static DocumentListener createDocumentListener(Runnable action) {
+    public DocumentListener createDocumentListener(Runnable action) {
         if (Checker.INSTANCE.checkNPE(action, "createDocumentListener", "action")) {
             return null;
         }
@@ -565,8 +565,7 @@ public enum UiComponentsConfiguration {
      * @param maxLength the maximum number of characters allowed in the field
      * @param action the {@link Runnable} to execute on document changes; must not be null
      */
-    public static void attachLimitedDocumentListener(
-            JTextField field, int maxLength, Runnable action) {
+    public void attachLimitedDocumentListener(JTextField field, int maxLength, Runnable action) {
         if (Checker.INSTANCE.checkNPE(field, "attachLimitedDocumentListener", "field")
                 || Checker.INSTANCE.checkNPE(action, "attachLimitedDocumentListener", "action")) {
             return;
@@ -697,7 +696,7 @@ public enum UiComponentsConfiguration {
      * @param iconCode The Unicode value of the Material Icon (e.g., "\uE863").
      * @return A new JButton containing only the icon.
      */
-    public static JButton createIconOnlyButton(String iconCode) {
+    public JButton createIconOnlyButton(String iconCode) {
         String html =
                 String.format(
                         "<html><b><font face=\"Material Icons\" size=\"+1\">%s</font></b></html>",
