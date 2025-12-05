@@ -173,7 +173,7 @@ public enum VersionService {
      * @param updateButton button to toggle state
      * @return fallback worker if input is null; {@code null} otherwise
      */
-    private static SwingWorker<Boolean, Void> npeCheckLatestVersion(
+    private SwingWorker<Boolean, Void> npeCheckLatestVersion(
             String currentVersion, JButton updateButton) {
         if (Checker.INSTANCE.checkNPE(currentVersion, "checkLatestVersion", "currentVersion")
                 || Checker.INSTANCE.checkNPE(updateButton, "checkLatestVersion", "updateButton")) {
@@ -205,7 +205,7 @@ public enum VersionService {
      * @param enabled whether the button should be enabled
      * @param tooltip the tooltip text to display on hover
      */
-    private static void updateButtonState(JButton button, boolean enabled, String tooltip) {
+    private void updateButtonState(JButton button, boolean enabled, String tooltip) {
         button.setEnabled(enabled);
         button.setToolTipText(tooltip);
     }
