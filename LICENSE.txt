@@ -697,3 +697,12 @@ These fonts are freely available under Creative Commons Attribution 4.0 Internat
 https://creativecommons.org/licenses/by/4.0/legalcode
 
 Luciole © Laurent Bourcellier & Jonathan Perez
+
+### Licence Apache 2.0
+
+* Material Icons
+These icons are provided by Google under the **Apache License, Version 2.0** (the "License").
+
+A copy of the Apache 2.0 License is available at: http://www.apache.org/licenses/LICENSE-2.0
+
+These icons are used unmodified and solely for graphical representation within the application's user interface.
