@@ -40,7 +40,7 @@ public enum Checker {
      * @param name the name of the parameter
      * @return {@code true} if the object is invalid; {@code false} otherwise
      */
-    private static boolean checkNullOrBlankInternal(Object obj, String methodName, String name) {
+    private boolean checkNullOrBlankInternal(Object obj, String methodName, String name) {
         String errorType = null;
         if (obj == null) {
             errorType = "null";
