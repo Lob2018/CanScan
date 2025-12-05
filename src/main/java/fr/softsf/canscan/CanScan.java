@@ -81,7 +81,7 @@ public class CanScan extends JFrame {
     private static final String NORTH_PANEL = "northPanel";
     private static final String HTML_B_STRING_B_HTML = "<html><b>%s</b></html>";
     private static final int MAX_COORDINATE_LENGTH = 12;
-    public static final String WARNING_ICON = "\uE002";
+    private static final String WARNING_ICON = "\uE002";
     private Color qrColor = Color.BLACK;
     private Color bgColor = Color.WHITE;
     private int margin = 3;
