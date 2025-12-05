@@ -407,34 +407,36 @@ public class CanScan extends JFrame {
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                UiComponentsConfiguration.getIconAfterTextHtml("Taille du logo", WARNING_ICON),
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml(
+                        "Taille du logo", WARNING_ICON),
                 "<html>Le pourcentage du logo dans le code QR.<br>Cela peut gêner la"
                         + " détection.</html>",
                 ratioSlider);
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                UiComponentsConfiguration.getIconAfterTextHtml("Marge", WARNING_ICON),
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml("Marge", WARNING_ICON),
                 "<html>La marge extérieure entre 0 et 10.<br>Cela peut gêner la détection.</html>",
                 marginSlider);
         JPanel colorPanel = colorPanel();
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                UiComponentsConfiguration.getIconAfterTextHtml("Couleurs", WARNING_ICON),
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml("Couleurs", WARNING_ICON),
                 "Le code QR ne fonctionnera que si le contraste est suffisant.",
                 colorPanel);
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                UiComponentsConfiguration.getIconAfterTextHtml("Dimension", WARNING_ICON),
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml("Dimension", WARNING_ICON),
                 "<html>Le côté du code QR en pixels.<br>Une trop grande taille, peut dégrader les"
                         + " performances de l'application.</html>",
                 sizeField);
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                UiComponentsConfiguration.getIconAfterTextHtml("Modules ronds", WARNING_ICON),
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml(
+                        "Modules ronds", WARNING_ICON),
                 "<html>Arrondir les modules.<br>Cela peut gêner la détection.</html>",
                 roundedModulesCheckBox);
     }

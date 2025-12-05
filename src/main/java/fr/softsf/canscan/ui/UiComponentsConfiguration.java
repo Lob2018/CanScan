@@ -712,7 +712,7 @@ public enum UiComponentsConfiguration {
      * @param iconCode The Unicode value of the Material Icon (e.g., {@code "\uE161"}).
      * @return The formatted HTML string.
      */
-    public static String getIconAfterTextHtml(String text, String iconCode) {
+    public String getIconAfterTextHtml(String text, String iconCode) {
         return String.format(
                 "<html>"
                         + "<table cellpadding=0 cellspacing=0>"
