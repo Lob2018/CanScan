@@ -79,6 +79,7 @@ echo
 native_image_command="native-image \
     --no-fallback \
     --strict-image-heap \
+    -march=compatibility \
     -H:+UnlockExperimentalVMOptions \
     -H:ConfigurationFileDirectories=../.myresources/scripts/config-manual/linux,../config-trace \
     -H:Name=$CANONICAL_NAME \
