@@ -106,10 +106,6 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 
 ## 🪄 Utilisation
 
-### Étapes d’utilisation
-
-## 🪄 Utilisation
-
 ### Étapes d'utilisation
 
 1. **Sélectionner** le mode (Contact, Agenda ou Saisie libre)
