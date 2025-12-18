@@ -146,6 +146,7 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
         int size = Math.max(wholeFields.availableHeightForQrCode().getAsInt(), DEFAULT_SIZE);
         Dimension dim = new Dimension(size, size);
         loader.setPreferredSize(dim);
+        loader.setMinimumSize(dim);
         loader.setMaximumSize(dim);
         Container parent = loader.getParent();
         if (parent != null) {
