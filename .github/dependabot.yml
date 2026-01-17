@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # 1. Surveillance des dépendances Java (Maven)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Regrouper les mises à jour pour éviter de multiplier les commits individuels
+    groups:
+      maven-dependencies:
+        patterns:
+          - "*"
+
+  # 2. Surveillance des GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions-dependencies:
+        patterns:
+          - "*"
