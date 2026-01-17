@@ -21,6 +21,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 [![Open Pull Requests](https://img.shields.io/github/issues-pr/lob2018/CanScan)](https://github.com/Lob2018/CanScan/pulls)
 [![GitHub release](https://img.shields.io/github/v/release/lob2018/CanScan)](https://github.com/Lob2018/CanScan/releases)
 
+
 <a href="https://github.com/Lob2018/CanScan/releases/latest">
  <img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/CanScan_in_action.png" alt="CanScan in action"  width="400"/>
 </a>
@@ -214,9 +215,9 @@ To ensure the integrity of the binaries, the following policy is applied:
 
 #### Privacy & Data Security
 * **Data Transmission:** During the build process, the compiled Windows binary is transmitted to SignPath for signing via a secure connector. No source code or user data is transmitted.
-* **No Tracking:** CanScan does not collect or transmit any personal user information.
+* **Privacy Policy:** CanScan is committed to user privacy. Our full policy is available in the [PRIVACY.txt](https://github.com/Lob2018/CanScan/blob/main/PRIVACY.txt) file.
 
 ## 📜 Licence
 
 GPLv3.0 License © 2025 SOFT64.FR Lob2018<br>
-📜 [Consulter la licence complète](https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme)
+📜 [Consulter la licence complète LICENSE.txt](https://github.com/Lob2018/CanScan/blob/main/LICENSE.txt)

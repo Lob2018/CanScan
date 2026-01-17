@@ -1,0 +1,17 @@
+# Privacy Policy for CanScan
+
+CanScan is a privacy-focused, open-source desktop application for generating QR codes.
+
+1. Data Privacy:
+CanScan is a local-only application. It does not collect, store, or transmit any personal data or information entered by the user. All QR code generation is performed strictly on your local machine.
+
+2. Internet Access:
+The application does not require an internet connection to function and does not communicate with any external servers or third-party services.
+
+3. Logs and Cookies:
+CanScan does not use cookies, trackers, or any analytics tools. No usage logs are created or transmitted.
+
+4. Changes to this Policy:
+Any future updates to this policy will be reflected in this document and available on the official GitHub repository.
+
+Contact: For any questions regarding this privacy policy, please open an issue on the project's GitHub repository: https://github.com/Lob2018/CanScan
