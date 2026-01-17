@@ -1,4 +1,4 @@
-# 📲 CanScan
+# 📲 CanScan (interface en Français 🇫🇷)
 
 Générez en un instant un code QR pour **ajouter un contact**, **créer un événement de calendrier** ou **ce que vous voulez** !
 
@@ -48,7 +48,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
     - [Désinstallation](#désinstallation)
 - 📘 [Informations techniques](#-informations-techniques)
     - [Technologies utilisées](#technologies)
-    - [Documentation](https://lob2018.github.io/CanScan/)
+    - [Documentation technique (en anglais)](https://lob2018.github.io/CanScan/)
     - [Code Signing Policy (Windows)](#code-signing-policy-windows)
 - 📜 [Licence](#-licence)
 
