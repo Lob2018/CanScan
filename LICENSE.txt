@@ -698,7 +698,7 @@ https://creativecommons.org/licenses/by/4.0/legalcode
 
 Luciole © Laurent Bourcellier & Jonathan Perez
 
-### Licence Apache 2.0
+### License Apache 2.0
 
 * Material Icons
 These icons are provided by Google under the **Apache License, Version 2.0** (the "License").
