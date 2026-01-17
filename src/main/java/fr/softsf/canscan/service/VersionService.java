@@ -151,6 +151,7 @@ public enum VersionService {
                 HttpRequest.newBuilder()
                         .uri(URI.create(GITHUB_TAGS_API_URL))
                         .timeout(Duration.ofSeconds(5))
+                        .header("User-Agent", "CanScan")
                         .GET()
                         .build();
         HttpResponse<String> response =
