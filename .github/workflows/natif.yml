@@ -62,7 +62,7 @@ jobs:
         shell: cmd
         run: |
           if not exist liberica-nik.msi (
-            curl -L -o liberica-nik.msi https://download.bell-sw.com/vm/${{ env.LIBERICA_VERSION }}/${{ env.LIBERICA_MSI }}
+            curl -L --proto "=https" -o liberica-nik.msi https://download.bell-sw.com/vm/${{ env.LIBERICA_VERSION }}/${{ env.LIBERICA_MSI }}
           )
           msiexec /quiet /i liberica-nik.msi
 
@@ -110,7 +110,7 @@ jobs:
         shell: cmd
         run: |
           if not exist "%TEMP%\is.exe" (
-            powershell -Command "Invoke-WebRequest 'https://jrsoftware.org/download.php/is.exe' -OutFile '%TEMP%\is.exe'"
+            curl -L --proto "=https" -o "%TEMP%\is.exe" https://jrsoftware.org/download.php/is.exe
           )
           "%TEMP%\is.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
 
@@ -214,7 +214,7 @@ jobs:
 
           if [ ! -f "$NIK_FILE" ]; then
             echo "Downloading NIK from $DOWNLOAD_URL"
-            curl -L -o "$NIK_FILE" "$DOWNLOAD_URL"
+            curl -L --proto "=https" -o "$NIK_FILE" "$DOWNLOAD_URL"
           fi
 
           # Crée le dossier cible et extrait l'archive
