@@ -128,6 +128,12 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 
 #### 🪟 Windows (64 bits)
 
+**Via le gestionnaire de paquets (recommandé) :**
+```bash
+winget install -e --id Soft64.fr.CanScan
+```
+**Via l'installateur classique :**
+
 1. **Télécharger** la dernière version : [Releases](https://github.com/Lob2018/CanScan/releases/latest)
 2. **Lancer** `CanScan-v.v.v.v-x64.exe`
 3. **Suivre** les étapes : dossier, raccourci, lancement
