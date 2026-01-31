@@ -128,11 +128,11 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 
 #### 🪟 Windows (64 bits)
 
-**Via le gestionnaire de paquets (recommandé) :**
+**Avec Winget (recommandé) :**
 ```bash
 winget install -e --id Soft64.fr.CanScan
 ```
-**Via l'installateur classique :**
+**Méthode manuelle :**
 
 1. **Télécharger** la dernière version : [Releases](https://github.com/Lob2018/CanScan/releases/latest)
 2. **Lancer** `CanScan-v.v.v.v-x64.exe`
@@ -167,24 +167,23 @@ gpg --verify CanScan-0.9.0.0-x86_64.AppImage.asc CanScan-0.9.0.0-x86_64.AppImage
 
 CanScan détecte automatiquement les nouvelles versions et affiche un bouton de mise à jour dans l’interface.
 
-1. **Cliquer** sur le bouton de mise à jour ou télécharger la dernière version depuis les [releases GitHub](https://github.com/Lob2018/CanScan/releases/latest).
+* **Avec Winget (Windows)** :
+```bash
+winget upgrade Soft64.fr.CanScan
+```
 
-2. **Lancer** le fichier :
-    * **🪟 Windows (.exe) :** Lancer le nouveau fichier `.exe`. La version précédente sera automatiquement reconnue et mise à jour.
-    * **🐧 Linux (AppImage) :** **Supprimer l'ancienne AppImage**, puis utiliser la nouvelle version téléchargée.
-
-3. **Suivre** les instructions :
-    - Le raccourci est mis à jour *(si présent)*
-    - La nouvelle version est disponible immédiatement
+* **Méthode manuelle** :
+1. **Cliquer** sur le bouton de mise à jour ou télécharger la dernière version depuis [GitHub Releases](https://github.com/Lob2018/CanScan/releases/latest).
+2. **Installer** selon votre système :
+   - **🪟 Windows** : Lancer le nouveau `.exe` (écrase l'ancienne version).
+   - **🐧 Linux** : Remplacer l'ancien fichier `.AppImage` par le nouveau.
 
 ### Désinstallation
 
-#### 🪟 Windows (via l'installateur)
+#### 🪟 Windows
 
-1. Ouvrir **Panneau de configuration** → *Programmes*
-2. Rechercher **CanScan**
-3. Cliquer sur **Désinstaller**
-4. Suivre les instructions
+* **Avec Winget** : `winget uninstall Soft64.fr.CanScan`
+* **Méthode manuelle** : `Paramètres` > `Applications` > `CanScan` > `Désinstaller`.
 
 > Tous les fichiers installés seront supprimés, y compris les raccourcis et les entrées du registre
 >
