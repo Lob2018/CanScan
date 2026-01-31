@@ -1,17 +1,17 @@
-# Privacy Policy for CanScan
+Politique de confidentialité pour CanScan
 
-CanScan is a privacy-focused, open-source desktop application for generating QR codes.
+CanScan est une application de bureau open-source axée sur la protection de la vie privée pour la génération de codes QR.
 
-1. Data Privacy:
-CanScan is a local-only application. It does not collect, store, or transmit any personal data or information entered by the user. All QR code generation is performed strictly on your local machine.
+1. Confidentialité des données
+CanScan est une application de bureau. Elle ne collecte, ne stocke, ni ne transmet aucune donnée personnelle ou information saisie par l'utilisateur. Toute la génération des codes QR est effectuée exclusivement sur votre machine locale.
 
-2. Internet Access:
-The application does not require an internet connection to function and does not communicate with any external servers or third-party services.
+2. Accès Internet et Mises à jour
+L'application peut utiliser une connexion internet exclusivement pour vérifier la disponibilité d'une nouvelle version sur le dépôt officiel GitHub. Aucune donnée utilisateur n'est transmise lors de cette vérification. En dehors de cette fonctionnalité, l'application fonctionne de manière autonome sans communication avec des serveurs tiers.
 
-3. Logs and Cookies:
-CanScan does not use cookies, trackers, or any analytics tools. No usage logs are created or transmitted.
+3. Logs et Cookies
+CanScan n'utilise aucun cookie, tracker ou outil d'analyse. Aucun log d'utilisation n'est créé ou transmis.
 
-4. Changes to this Policy:
-Any future updates to this policy will be reflected in this document and available on the official GitHub repository.
+4. Modifications de cette politique
+Toute mise à jour future de cette politique sera reportée dans ce document et disponible sur le dépôt officiel GitHub.
 
-Contact: For any questions regarding this privacy policy, please open an issue on the project's GitHub repository: https://github.com/Lob2018/CanScan
+Contact : Pour toute question concernant cette politique de confidentialité, merci d'ouvrir une "issue" sur le dépôt GitHub du projet : https://github.com/Lob2018/CanScan

@@ -50,7 +50,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 - 📘 [Informations techniques](#-informations-techniques)
     - [Technologies utilisées](#technologies)
     - [Documentation technique (en anglais)](https://lob2018.github.io/CanScan/)
-    - [Code Signing Policy (Windows)](#code-signing-policy-windows)
+- 🔒 [Confidentialité](#-politique-de-confidentialité)
 - 📜 [Licence](#-licence)
 
 ## ✨ Fonctionnalités
@@ -200,23 +200,9 @@ Pour "désinstaller" CanScan, il suffit de **supprimer le fichier AppImage** té
 - Liberica Native Image
 - VC_redist.x64.exe inclus
 
-### Code Signing Policy (Windows)
+## 🔒 Politique de Confidentialité
 
-This project uses free code signing for **Windows binaries** provided by [SignPath.io](https://signpath.io/) and a certificate by [SignPath Foundation](https://signpath.org/).
-
-#### Trust Model
-To ensure the integrity of the binaries, the following policy is applied:
-* **Source Code:** The code is public and hosted on this GitHub repository.
-* **Build Process:** Binaries are built automatically using GitHub Actions. No manual intervention is allowed for release builds.
-* **Signing:** Signing is only triggered for tags or releases. **This process applies exclusively to Windows MSIX packages**, ensuring they match the public source code.
-
-#### Roles
-* **Maintainer/Approver:** [@Lob2018](https://github.com/Lob2018)
-* **Build System:** GitHub Actions (Automated)
-
-#### Privacy & Data Security
-* **Data Transmission:** During the build process, the compiled Windows binary is transmitted to SignPath for signing via a secure connector. No source code or user data is transmitted.
-* **Privacy Policy:** CanScan is committed to user privacy. Our full policy is available in the [PRIVACY.txt](https://github.com/Lob2018/CanScan/blob/main/PRIVACY.txt) file.
+**Respect de la vie privée :** CanScan s'engage à protéger la vie privée des utilisateurs. La politique complète est consultable dans le fichier [PRIVACY.txt](https://github.com/Lob2018/CanScan/blob/main/PRIVACY.txt).
 
 ## 📜 Licence
 
