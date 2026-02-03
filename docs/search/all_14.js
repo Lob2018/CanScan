@@ -15,5 +15,7 @@ var searchData=
   ['version_12',['version',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html#afec7974499f662b5f3594cf85f78acbe',1,'fr::softsf::canscan::util::ApplicationMetadata']]],
   ['versionservice_13',['VersionService',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html',1,'fr.softsf.canscan.service.VersionService'],['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a71d28e7931c7ded96b9bc7adb07f674c',1,'fr.softsf.canscan.service.VersionService.VersionService()']]],
   ['versionservice_2ejava_14',['VersionService.java',['../_version_service_8java.html',1,'']]],
-  ['vertical_5fscroll_5funit_5fincrement_15',['VERTICAL_SCROLL_UNIT_INCREMENT',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a21be7bda0cc0b1083763f01a81d2600c',1,'fr::softsf::canscan::CanScan']]]
+  ['versionvalue_15',['VersionValue',['../namespacefr_1_1softsf_1_1canscan_1_1model.html#a0fd5c284c38e4a9a31f46abcc918a44a',1,'fr::softsf::canscan::model']]],
+  ['versionvalue_2ejava_16',['VersionValue.java',['../_version_value_8java.html',1,'']]],
+  ['vertical_5fscroll_5funit_5fincrement_17',['VERTICAL_SCROLL_UNIT_INCREMENT',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a21be7bda0cc0b1083763f01a81d2600c',1,'fr::softsf::canscan::CanScan']]]
 ];

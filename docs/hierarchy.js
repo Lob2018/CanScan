@@ -1,10 +1,10 @@
 var hierarchy =
 [
-    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker< T >", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", null ],
-    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker< BufferedImage >", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", [
+    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; T &gt;", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", null ],
+    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; BufferedImage &gt;", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", [
       [ "fr.softsf.canscan.ui.worker.DynamicPreviewWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html", null ]
     ] ],
-    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker< ImageIcon >", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", [
+    [ "fr.softsf.canscan.ui.worker.AbstractDynamicWorker&lt; ImageIcon &gt;", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", [
       [ "fr.softsf.canscan.ui.worker.DynamicResizeWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html", null ]
     ] ],
     [ "fr.softsf.canscan.util.ApplicationMetadata", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html", null ],

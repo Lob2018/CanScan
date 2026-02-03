@@ -3,7 +3,7 @@ var searchData=
   ['calculateavailableqrcodelabelheight_0',['calculateAvailableQrCodeLabelHeight',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a381368b99c4a0857c6abe6349b2c6d27',1,'fr::softsf::canscan::CanScan']]],
   ['cancelworker_1',['cancelWorker',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#aa3eebdde5dae919a4d905ef2d2d4a8fb',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
   ['canscan_2',['CanScan',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a102bcbc6cda608b642e870ba3fde6344',1,'fr::softsf::canscan::CanScan']]],
-  ['checklatestversion_3',['checkLatestVersion',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2b832f11011ef637a18e6b81fa163097',1,'fr::softsf::canscan::service::VersionService']]],
+  ['checklatestversion_3',['checkLatestVersion',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a47820618b5de48670618f3c20cd2c819',1,'fr::softsf::canscan::service::VersionService']]],
   ['checknpe_4',['checkNPE',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a88f59798782812f0fcf61267db09a8b9',1,'fr::softsf::canscan::util::Checker']]],
   ['checknpeinputs_5',['checkNPEInputs',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a97c838511d72dc8bc2172e76dcc94d46',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
   ['checknullorblankinternal_6',['checkNullOrBlankInternal',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html#a254e5e0b787c8424dff543d8554d790b',1,'fr::softsf::canscan::util::Checker']]],
