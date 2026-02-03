@@ -22,6 +22,7 @@ import javax.swing.JButton;
 import javax.swing.SwingWorker;
 
 import fr.softsf.canscan.constant.StringConstants;
+import fr.softsf.canscan.model.VersionValue;
 import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.util.Checker;
 
@@ -70,51 +71,49 @@ public enum VersionService {
     }
 
     /**
-     * Asynchronously checks whether the current application version matches the latest GitHub
-     * release tag. If an update is available, the specified button is made enabled; otherwise, it
-     * remains disabled.
+     * Asynchronously checks for updates and returns detailed version metadata.
      *
-     * @param currentVersion the current version of the application (e.g., "1.0.0.0")
-     * @param updateButton the button to toggle enabled state based on update status
-     * @return a {@code SwingWorker} that returns {@code true} if the version is up-to-date, {@code
-     *     false} if an update is available
+     * @param currentVersion Current application version.
+     * @param updateButton Target button for state updates.
+     * @return A SwingWorker providing the complete VersionValue result.
      */
-    public SwingWorker<Boolean, Void> checkLatestVersion(
+    public SwingWorker<VersionValue, Void> checkLatestVersion(
             String currentVersion, JButton updateButton) {
-        SwingWorker<Boolean, Void> npe = npeCheckLatestVersion(currentVersion, updateButton);
+        SwingWorker<VersionValue, Void> npe = npeCheckLatestVersion(currentVersion, updateButton);
         if (npe != null) {
             return npe;
         }
         return new SwingWorker<>() {
             @Override
-            protected Boolean doInBackground() {
-                if (httpClient == null) {
-                    return true;
-                }
+            protected VersionValue doInBackground() {
                 try {
                     return requestAndVerify(currentVersion);
                 } catch (IOException e) {
-                    return true;
+                    return new VersionValue(
+                            0,
+                            e.getMessage() == null
+                                    ? "Erreur réseau"
+                                    : "Erreur réseau : " + e.getMessage(),
+                            null,
+                            true);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
-                    return true;
+                    return new VersionValue(0, "Vérification interrompue", null, true);
                 }
             }
 
             @Override
             protected void done() {
                 try {
-                    boolean isUpToDate = get();
+                    VersionValue result = get();
                     updateButtonState(
                             updateButton,
-                            !isUpToDate,
-                            isUpToDate
-                                    ? "<html>Votre version est à jour.<br>"
-                                            + LATEST_RELEASES_REPO_URL
-                                            + CLOSE_HTML
-                                    : "<html>Cliquer pour télécharger la nouvelle version.<br>"
-                                            + LATEST_RELEASES_REPO_URL
-                                            + CLOSE_HTML);
+                            !result.isUpToDate() && result.statusCode() == HTTP_STATUS_CODE_OK,
+                            "<html>"
+                                    + result.statusMessage()
+                                    + "<br>"
+                                    + LATEST_RELEASES_REPO_URL
+                                    + CLOSE_HTML);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                     updateButtonState(
@@ -136,17 +135,18 @@ public enum VersionService {
     }
 
     /**
-     * Sends an HTTP request to the GitHub tags API and verifies if the latest release tag matches
-     * the current version.
+     * Performs synchronous HTTP resolution and evaluates the version state.
      *
-     * @param currentVersion the current version of the application
-     * @return {@code true} if the version is up-to-date or if verification fails; {@code false} if
-     *     an update is available
-     * @throws IOException if the request fails due to network issues
-     * @throws InterruptedException if the thread is interrupted during the request
+     * @param currentVersion Application version string to compare against.
+     * @return A {@code VersionValue} mapping the HTTP outcome to update logic.
+     * @throws IOException If a network or protocol error occurs.
+     * @throws InterruptedException If the operation is canceled during execution.
      */
-    private Boolean requestAndVerify(String currentVersion)
+    private VersionValue requestAndVerify(String currentVersion)
             throws IOException, InterruptedException {
+        if (httpClient == null) {
+            return new VersionValue(0, "HTTP client non initialisé.", null, true);
+        }
         HttpRequest request =
                 HttpRequest.newBuilder()
                         .uri(URI.create(GITHUB_TAGS_API_URL))
@@ -156,32 +156,56 @@ public enum VersionService {
                         .build();
         HttpResponse<String> response =
                 httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() == HTTP_STATUS_CODE_OK) {
-            Matcher matcher = TAG_PATTERN.matcher(response.body());
-            if (matcher.find()) {
-                String latestTag = matcher.group(1).trim();
-                return latestTag.equalsIgnoreCase("v" + currentVersion);
+        int code = response.statusCode();
+        return switch (code) {
+            case HTTP_STATUS_CODE_OK -> {
+                Matcher matcher = TAG_PATTERN.matcher(response.body());
+                if (matcher.find()) {
+                    String latestTag = matcher.group(1).trim();
+                    boolean upToDate = latestTag.equalsIgnoreCase("v" + currentVersion);
+                    yield new VersionValue(
+                            code,
+                            upToDate
+                                    ? "Votre version est à jour (" + latestTag + ")."
+                                    : "Nouvelle version disponible : " + latestTag + ".",
+                            latestTag,
+                            upToDate);
+                }
+                yield new VersionValue(code, "Échec de l'analyse du tag en local.", null, true);
             }
-        }
-        return true;
+            case 403 ->
+                    new VersionValue(
+                            code,
+                            "Limite de requêtes API GitHub atteinte (code HTTP:403).",
+                            null,
+                            true);
+            case 404 ->
+                    new VersionValue(
+                            code, "Dépôt introuvable sur GitHub (code HTTP:404).", null, true);
+            default ->
+                    new VersionValue(
+                            code,
+                            "Erreur lors de la vérification (code HTTP: " + code + ").",
+                            null,
+                            true);
+        };
     }
 
     /**
-     * Validates input for version check. If null, returns a fallback {@code SwingWorker} that
-     * disables the update button; otherwise returns {@code null}.
+     * Validates inputs and provides a fallback worker if parameters are missing.
      *
-     * @param currentVersion current app version
-     * @param updateButton button to toggle state
-     * @return fallback worker if input is null; {@code null} otherwise
+     * @param currentVersion Application version string.
+     * @param updateButton UI button reference.
+     * @return Fallback SwingWorker or null if validation passes.
      */
-    private SwingWorker<Boolean, Void> npeCheckLatestVersion(
+    private SwingWorker<VersionValue, Void> npeCheckLatestVersion(
             String currentVersion, JButton updateButton) {
         if (Checker.INSTANCE.checkNPE(currentVersion, "checkLatestVersion", "currentVersion")
                 || Checker.INSTANCE.checkNPE(updateButton, "checkLatestVersion", "updateButton")) {
             return new SwingWorker<>() {
                 @Override
-                protected Boolean doInBackground() {
-                    return true;
+                protected VersionValue doInBackground() {
+                    return new VersionValue(0, "Paramètre manquant.", null, true);
                 }
 
                 @Override

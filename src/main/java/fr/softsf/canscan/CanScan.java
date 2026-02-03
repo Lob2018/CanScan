@@ -52,6 +52,7 @@ import fr.softsf.canscan.model.MecardJFields;
 import fr.softsf.canscan.model.MeetJFields;
 import fr.softsf.canscan.model.Mode;
 import fr.softsf.canscan.model.NativeImageUiComponents;
+import fr.softsf.canscan.model.VersionValue;
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.service.DataBuilderService;
 import fr.softsf.canscan.service.GenerateAndSaveService;
@@ -351,7 +352,7 @@ public class CanScan extends JFrame {
                 e ->
                         BrowserHelper.INSTANCE.openInBrowser(
                                 StringConstants.LATEST_RELEASES_REPO_URL.getValue()));
-        SwingWorker<Boolean, Void> worker =
+        SwingWorker<VersionValue, Void> worker =
                 VersionService.INSTANCE.checkLatestVersion(
                         StringConstants.VERSION.getValue(), update);
         worker.execute();
