@@ -5,6 +5,8 @@
  */
 package fr.softsf.canscan.constant;
 
+import java.util.Locale;
+
 import fr.softsf.canscan.util.ApplicationMetadata;
 
 /** String constants for messages and identifiers. */
@@ -17,7 +19,7 @@ public enum StringConstants {
     DEFAULT_QR_CODE_DIMENSION_FIELD("400"),
     DOMAIN("@SOFT64.FR"),
     LATEST_RELEASES_REPO_URL("https://github.com/Lob2018/CanScan/releases/latest"),
-    CURRENT_OS(System.getProperty("os.name").toLowerCase()),
+    CURRENT_OS(System.getProperty("os.name").toLowerCase(Locale.ROOT)),
     OS_WINDOWS_KEY("win"),
     OS_LINUX_KEY("linux"),
     JAVA_2D_DPI_AWARE("sun.java2d.dpiaware"),
