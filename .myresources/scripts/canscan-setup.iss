@@ -201,7 +201,7 @@ begin
     ExtractTemporaryFile('VC_redist.x64.exe');
 
     VCInstallPage.SetText(
-      'Installation de Visual C++ Redistributable v14.44.35211 en cours...',
+      'Installation de Microsoft Visual C++ v14 Redistributable en cours...',
       'Cela peut prendre quelques minutes');
     VCInstallPage.Show;
 
@@ -212,7 +212,7 @@ begin
       if not Exec(VCRedistPath, '/quiet /norestart', '', SW_HIDE,
                   ewWaitUntilTerminated, ResultCode) then
       begin
-        Result := 'Erreur lors de l''installation de Visual C++ Redistributable.' + #13#10 +
+        Result := 'Erreur lors de l''installation de Microsoft Visual C++ v14 Redistributable.' + #13#10 +
                   'Impossible de lancer l''installateur.';
         Exit;
       end;
@@ -222,7 +222,7 @@ begin
 
       if (ResultCode <> 0) and (ResultCode <> 3010) then
       begin
-        Result := 'L''installation de Visual C++ Redistributable a échoué.' + #13#10 +
+        Result := 'L''installation de Microsoft Visual C++ v14 Redistributable a échoué.' + #13#10 +
                   'Code d''erreur: ' + IntToStr(ResultCode) + #13#10#13#10 +
                   'L''installation de {#AppName} va continuer, mais l''application pourrait ne pas fonctionner correctement.';
         Result := '';

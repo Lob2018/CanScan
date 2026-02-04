@@ -937,12 +937,18 @@ public class CanScan extends JFrame {
      */
     private static void configureGraphicsPipeline() {
         String os = StringConstants.CURRENT_OS.getValue();
-        if (os.contains(StringConstants.OS_WINDOWS_KEY.getValue())) {
-            System.setProperty(
-                    StringConstants.JAVA_2D_DPI_AWARE.getValue(), StringConstants.TRUE.getValue());
-        } else if (os.contains(StringConstants.OS_LINUX_KEY.getValue())) {
-            System.setProperty(
-                    StringConstants.JAVA_2D_OPENGL.getValue(), StringConstants.TRUE.getValue());
+        switch (os) {
+            case String s when s.contains(StringConstants.OS_WINDOWS_KEY.getValue()) ->
+                    System.setProperty(
+                            StringConstants.JAVA_2D_DPI_AWARE.getValue(),
+                            StringConstants.TRUE.getValue());
+            case String s when s.contains(StringConstants.OS_LINUX_KEY.getValue()) ->
+                    System.setProperty(
+                            StringConstants.JAVA_2D_OPENGL.getValue(),
+                            StringConstants.TRUE.getValue());
+            default -> {
+                /* Aucun réglage spécifique pour macOS ou autres */
+            }
         }
         System.setProperty(
                 StringConstants.JAVA_2D_UI_SCALE_ENABLED.getValue(),
