@@ -96,7 +96,7 @@ public enum VersionService {
                                     : "Erreur réseau : " + e.getMessage(),
                             null,
                             true);
-                } catch (InterruptedException e) {
+                } catch (InterruptedException _) {
                     Thread.currentThread().interrupt();
                     return new VersionValue(0, "Vérification interrompue", null, true);
                 }
@@ -114,7 +114,7 @@ public enum VersionService {
                                     + "<br>"
                                     + LATEST_RELEASES_REPO_URL
                                     + CLOSE_HTML);
-                } catch (InterruptedException e) {
+                } catch (InterruptedException _) {
                     Thread.currentThread().interrupt();
                     updateButtonState(
                             updateButton,
@@ -122,7 +122,7 @@ public enum VersionService {
                             "<html>Vérification de la mise à jour interrompue.<br>"
                                     + LATEST_RELEASES_REPO_URL
                                     + CLOSE_HTML);
-                } catch (ExecutionException e) {
+                } catch (ExecutionException _) {
                     updateButtonState(
                             updateButton,
                             false,
