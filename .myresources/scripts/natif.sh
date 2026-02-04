@@ -56,8 +56,11 @@ cd dist || { echo "Failure of cd dist"; exit 1; }
 
 echo
 echo "[3/5] Simulating runtime usage to generate native-image config-trace..."
-java -agentlib:native-image-agent=config-output-dir=../config-trace \
+java --enable-native-access=ALL-UNNAMED \
+     -agentlib:native-image-agent=config-output-dir=../config-trace \
      -Djava.awt.headless=false \
+     -Dsun.java2d.opengl=true \
+     -Dsun.java2d.uiScale.enabled=true \
      -Duser.language="$LANG_CODE" \
      -Duser.country="$COUNTRY_CODE" \
      -Duser.region="$COUNTRY_CODE" \
@@ -76,23 +79,23 @@ echo
 echo "[4/5] Building native image (GLibC Standard)..."
 echo "=========================================================="
 echo
-native_image_command="native-image \
+native-image --enable-native-access=ALL-UNNAMED \
     --no-fallback \
     --strict-image-heap \
     -march=compatibility \
     -H:+UnlockExperimentalVMOptions \
+    -H:IncludeLocales="$LANG_CODE" \
     -H:ConfigurationFileDirectories=../.myresources/scripts/config-manual/linux,../config-trace \
     -H:Name=$CANONICAL_NAME \
-    -H:Class=\"$MAIN_CLASS\" \
-    -Duser.language=\"$LANG_CODE\" \
-    -Duser.country=\"$COUNTRY_CODE\" \
-    -Duser.region=\"$COUNTRY_CODE\" \
+    -H:Class="$MAIN_CLASS" \
+    -Duser.language="$LANG_CODE" \
+    -Duser.country="$COUNTRY_CODE" \
+    -Duser.region="$COUNTRY_CODE" \
     -Djava.awt.headless=false \
+    -Dsun.java2d.opengl=true \
+    -Dsun.java2d.uiScale.enabled=true \
     -J-Xmx7G \
-    -jar \"../target/canscan-$APP_VERSION.jar\""
-
-# Exécution de la commande
-eval "$native_image_command"
+    -jar "../target/canscan-$APP_VERSION.jar"
 
 if [ $? -ne 0 ]; then
     echo
@@ -114,8 +117,8 @@ OUTPUT_APPIMAGE="output/$APP_NAME-$APP_VERSION-x86_64.AppImage"
 ICON_SOURCE_PATH="$PROJECT_ROOT/.myresources/images/CanScanx256.png"
 
 # --- VÉRIFICATION DU BINAIRE ---
-# MAINTIENT LE CHEMIN DE L'ANCIEN SCRIPT (si c'est bien celui qui fonctionne pour vous)
-EXECUTABLE_PATH="dist/$CANONICAL_NAME-$APP_VERSION"
+# MAINTIENT LE CHEMIN DE L'ANCIEN SCRIPT
+EXECUTABLE_PATH="dist/$CANONICAL_NAME"
 if [ ! -f "$EXECUTABLE_PATH" ]; then
     echo
     echo "[CRITICAL ERROR] Le binaire natif $EXECUTABLE_PATH n'a pas été trouvé. (Vérifiez la casse du nom ou la compilation GraalVM)."
@@ -134,7 +137,7 @@ cp "$EXECUTABLE_PATH" "$APP_DIR/usr/bin/$CANONICAL_NAME"
 
 # 3. Copie des librairies dynamiques (.so)
 echo "[INFO] Copying dynamic libraries..."
-cp dist/*.so "$APP_DIR/usr/lib/"
+cp dist/*.so "$APP_DIR/usr/lib/" 2>/dev/null
 
 # 4. Création du script AppRun (Le point d'entrée) - Injecte les AppID XDG/GTK
 echo "[INFO] Creating AppRun and forcing XDG/GTK Application ID..."
@@ -160,10 +163,11 @@ Name=$APP_NAME
 Exec=AppRun
 Icon=canscan
 Type=Application
-Categories=Utility;
+Categories=Graphics;
 Comment=Application $APP_NAME Version $APP_VERSION
 StartupWMClass=$CANONICAL_NAME
 Terminal=false
+Keywords=qrcode;
 EOF
 
 # 6. Gestion de l'icône

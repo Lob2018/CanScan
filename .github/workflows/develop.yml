@@ -24,11 +24,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up JDK 21
+      - name: Set up JDK 25
         uses: actions/setup-java@v5
         with:
           distribution: 'liberica'
-          java-version: '21'
+          java-version: '25'
           cache: 'maven'
 
       - name: Compile, Test, and analyze with Maven profile

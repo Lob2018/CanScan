@@ -64,9 +64,9 @@ public enum ApplicationMetadata {
     /**
      * Builds the application window title using loaded metadata.
      *
-     * @return formatted title, e.g., "📱 CanScan v1.0.0.0 • Soft64.fr"
+     * @return formatted title, e.g., "CanScan v1.0.0.0 • Soft64.fr"
      */
     public String initializeTitle() {
-        return String.format("\uD83D\uDCF1 %s v%s • %s", name, version, organization);
+        return String.format("%s v%s • %s", name, version, organization);
     }
 }

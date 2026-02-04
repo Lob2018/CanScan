@@ -680,15 +680,16 @@ Public License instead of this License.  But first, please read
 
 ## Third-party components
 
-### Licence propriétaire Microsoft, redistribution sous conditions du contrat de licence logiciel Microsoft
+### Microsoft Visual C++ Redistributable (v14 family: 2015-2022)
 
-* Microsoft Visual C++ Redistributable 2022 (x64)
+This application requires the Microsoft Visual C++ Runtime to function. The licensing and distribution terms vary based on the installation method:
 
-This application redistributes the Microsoft Visual C++ Redistributable 2022 (x64),
-version 14.44.36211, as provided by Microsoft via https://aka.ms/vs/17/release/vc_redist.x64.exe.
-This package includes ARM64 and x64 runtime binaries required for execution on modern
-Windows systems. Redistribution is performed in accordance with Microsoft's licensing
-terms. The redistributable is used unmodified and solely to enable runtime compatibility.
+1. **Standard Edition (Setup)**:
+This version redistributes the Microsoft Visual C++ Redistributable (x64), **version 14.50.35719**, as provided by Microsoft. Redistribution is performed in accordance with Microsoft's licensing terms for Visual Studio. The redistributable is used unmodified solely to enable runtime compatibility for the **GraalVM native-image** execution environment.
+2. **Winget Edition**:
+This version does **not** bundle the redistributable binaries. The Microsoft Visual C++ Runtime is treated as a system dependency. When installed via **Winget**, this dependency is automatically managed and fetched from Microsoft's official sources.
+
+Usage of the runtime, whether bundled or installed separately, remains subject to the **Microsoft Software License Terms**.
 
 ### Licence CC BY 4.0
 

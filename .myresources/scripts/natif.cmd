@@ -12,6 +12,7 @@ echo [INFO] Country                    : %6
 echo -----------------------------------------------
 echo.
 echo [0/6] Cleaning and packaging application...
+set "MAVEN_OPTS=--enable-native-access=ALL-UNNAMED"
 call mvn clean package -DskipTests
 
 echo.
@@ -35,8 +36,12 @@ echo   -Djava.awt.headless=false     : Active l'interface graphique Swing/AWT
 echo   -cp                           : Classpath (JAR + classes de test)
 echo   NativeImageConfigSimulator    : Classe simulant l'usage runtime de l'app
 echo.
-java -agentlib:native-image-agent=config-output-dir=../config-trace ^
+java --enable-native-access=ALL-UNNAMED ^
+     -agentlib:native-image-agent=config-output-dir=../config-trace ^
      -Djava.awt.headless=false ^
+     -Dsun.java2d.d3d=true ^
+     -Dsun.java2d.uiScale.enabled=true ^
+     -Dsun.java2d.dpiaware=true ^
      -Duser.language=%5 ^
      -Duser.country=%6 ^
      -Duser.region=%6 ^
@@ -51,21 +56,28 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo [4/6] Building native image...
-echo   --no-fallback                 : Force la compilation native (pas de fallback JVM)
-echo   --strict-image-heap           : Prepare pour les prochaines versions GraalVM
+echo   --enable-native-access          : Autorise les appels natifs pour le code hors-module (ALL-UNNAMED)
+echo   --no-fallback                   : Force la compilation native (pas de fallback JVM)
 echo   -H:+UnlockExperimentalVMOptions : Deverrouille les options experimentales
+echo   -H:IncludeLocales=%5            : Force l'inclusion des données de localisation (%5)
 echo   -H:ConfigurationFileDirectories : Charge les configs de reflexion/ressources/JNI
-echo   -H:Name                       : Nom de l'executable (canscan.exe)
-echo   -H:Class                      : Classe main a executer
+echo   -H:Name                         : Nom de l executable (canscan.exe)
+echo   -H:Class                        : Classe main a executer (%4)
 echo   -H:NativeLinkerOption=SUBSYSTEM : Supprime la console Windows
-echo   -H:NativeLinkerOption=ENTRY   : Point d'entree sans console
-echo   -Djava.awt.headless=false     : Active l'interface graphique Swing/AWT
-echo   -Dsun.java2d.d3d=false        : Desactive Direct3D (stabilite Windows)
-echo   -J-Xmx7G                      : Memoire max pour la compilation (7 GB)
+echo   -H:NativeLinkerOption=ENTRY     : Point d entree sans console
+echo   -Djava.awt.headless=false       : Active l'interface graphique Swing/AWT
+echo   -Dsun.java2d.d3d=false          : Desactive Direct3D (stabilite Windows)
+echo   -J-Xmx7G                        : Memoire max pour la compilation (7 GB)
 echo.
-call native-image --no-fallback ^
-                  --strict-image-heap ^
+
+set "FINAL_CP=../target/canscan-%2.jar"
+if defined CP set "FINAL_CP=%CP%;%FINAL_CP%"
+
+call native-image --enable-native-access=ALL-UNNAMED ^
+                  -cp "%FINAL_CP%" ^
+                  --no-fallback ^
                   -H:+UnlockExperimentalVMOptions ^
+                  -H:IncludeLocales=%5 ^
                   -H:ConfigurationFileDirectories=../.myresources/scripts/config-manual/windows,../config-trace ^
                   -H:Name=canscan ^
                   -H:Class=%4 ^
@@ -75,9 +87,10 @@ call native-image --no-fallback ^
                   -Duser.country=%6 ^
                   -Duser.region=%6 ^
                   -Djava.awt.headless=false ^
-                  -Dsun.java2d.d3d=false ^
-                  -J-Xmx7G ^
-                  -jar ../target/canscan-%2.jar
+                  -Dsun.java2d.d3d=true ^
+                  -Dsun.java2d.uiScale.enabled=true ^
+                  -Dsun.java2d.dpiaware=true ^
+                  -J-Xmx7G
 
 cd ..
 
@@ -96,7 +109,13 @@ if not defined INNOSETUP (
   /DAppName=%1 ^
   /DAppVersion=%2 ^
   /DOrganization=%3 ^
-  .myresources/scripts/canscan.iss
+  .myresources/scripts/canscan-setup.iss
+
+"%INNOSETUP%" ^
+  /DAppName=%1 ^
+  /DAppVersion=%2 ^
+  /DOrganization=%3 ^
+  .myresources/scripts/canscan-winget.iss
 
 echo.
 echo [INFO] Inno Setup compilation with :

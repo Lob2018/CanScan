@@ -4,7 +4,6 @@
 ; Version: 1.0.0.0+ (Utiliser la version actuelle pour la compilation)
 ; ============================================================================
 
-; Définitions par défaut (peuvent être surchargées par /D en ligne de commande)
 #ifndef AppName
   #define AppName "CanScan"
 #endif
@@ -40,7 +39,7 @@ DisableProgramGroupPage=yes
 
 ; Répertoires de sortie
 OutputDir=../../output
-OutputBaseFilename={#AppName}-{#AppVersion}-x64
+OutputBaseFilename={#AppName}-{#AppVersion}-x64-Setup
 
 ; Compression
 Compression=lzma2/max
@@ -68,7 +67,7 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 
 [Files]
 ; Application principale
-Source: "../../dist/{#AppName}-{#AppVersion}.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "../../dist/{#AppName}.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "../images/{#AppName}.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 ; DLLs
@@ -86,21 +85,21 @@ Source: "../../LICENSE.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 ; Menu Démarrer
-Name: "{group}\{#AppName}"; Filename: "{app}\{#AppName}-{#AppVersion}.exe"; IconFilename: "{app}\{#AppName}.ico"; Comment: "{#AppName}"
+Name: "{group}\{#AppName}"; Filename: "{app}\{#AppName}.exe"; IconFilename: "{app}\{#AppName}.ico"; Comment: "{#AppName}"
 Name: "{group}\Désinstaller {#AppName}"; Filename: "{uninstallexe}"; Comment: "Désinstaller {#AppName}"
 
 ; Bureau (optionnel)
-Name: "{userdesktop}\{#AppName}"; Filename: "{app}\{#AppName}-{#AppVersion}.exe"; IconFilename: "{app}\{#AppName}.ico"; Comment: "{#AppName}"; Tasks: desktopicon
+Name: "{userdesktop}\{#AppName}"; Filename: "{app}\{#AppName}.exe"; IconFilename: "{app}\{#AppName}.ico"; Comment: "{#AppName}"; Tasks: desktopicon
 
 [Tasks]
 Name: "desktopicon"; Description: "Ajouter un raccourci sur le bureau"; GroupDescription: "Raccourcis :"; Flags: unchecked
 
 [Run]
 ; Lancer l'application après installation (optionnel mais coché)
-Filename: "{app}\{#AppName}-{#AppVersion}.exe"; Description: "Lancer {#AppName}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#AppName}.exe"; Description: "Lancer {#AppName}"; Flags: nowait postinstall skipifsilent
 
 ; Afficher le fichier README (optionnel non coché)
-Filename: "{app}\README.txt"; Description: "Afficher le fichier README"; Flags: postinstall skipifsilent unchecked
+Filename: "{app}\README.txt"; Description: "Afficher le fichier README"; Flags: postinstall shellexec skipifsilent unchecked
 
 [InstallDelete]
 ; Stratégie de mise à jour : Suppression de TOUS les fichiers de l'application
