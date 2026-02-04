@@ -77,7 +77,7 @@ public enum CoordinateHelper {
                 return truncate(value, isLatitude);
             }
             return clearAndReturnEmpty(field);
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException _) {
             return clearAndReturnEmpty(field);
         }
     }

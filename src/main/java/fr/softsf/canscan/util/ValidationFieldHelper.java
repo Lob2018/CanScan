@@ -37,7 +37,7 @@ public enum ValidationFieldHelper {
                 return DoubleConstants.DEFAULT_IMAGE_RATIO.getValue();
             }
             return ratio;
-        } catch (NumberFormatException ex) {
+        } catch (NumberFormatException _) {
             return DoubleConstants.DEFAULT_IMAGE_RATIO.getValue();
         }
     }
@@ -58,7 +58,7 @@ public enum ValidationFieldHelper {
                 return 0;
             }
             return Math.min(margin, MARGIN_MAXIMUM_VALUE);
-        } catch (NumberFormatException ex) {
+        } catch (NumberFormatException _) {
             return 3;
         }
     }
@@ -76,7 +76,7 @@ public enum ValidationFieldHelper {
         try {
             int size = Integer.parseInt(sizeField.getText());
             return Math.max(size, MINIMUM_QR_CODE_DIMENSION);
-        } catch (NumberFormatException ex) {
+        } catch (NumberFormatException _) {
             sizeField.setText(StringConstants.DEFAULT_QR_CODE_DIMENSION_FIELD.getValue());
             return DEFAULT_QR_CODE_DIMENSION;
         }

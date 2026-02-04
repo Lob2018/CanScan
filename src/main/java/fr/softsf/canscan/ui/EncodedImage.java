@@ -135,7 +135,7 @@ public class EncodedImage {
             Objects.requireNonNull(matrix, "Dans generateQrCodeImage matrix ne doit pas être null");
             drawFinderPatterns(g, matrix.getWidth(), config);
             drawLogoIfPresent(g, config);
-        } catch (OutOfMemoryError oom) {
+        } catch (OutOfMemoryError _) {
             if (g != null) {
                 g.dispose();
             }

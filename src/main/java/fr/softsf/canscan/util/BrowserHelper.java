@@ -77,7 +77,7 @@ public enum BrowserHelper {
             try {
                 Desktop.getDesktop().browse(uri);
                 return true;
-            } catch (UnsupportedOperationException | IOException e) {
+            } catch (UnsupportedOperationException | IOException _) {
                 // Moved to B plan
             }
         }

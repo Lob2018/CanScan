@@ -56,9 +56,9 @@ public abstract class AbstractDynamicWorker<T> {
         worker.cancel(true);
         try {
             worker.get();
-        } catch (InterruptedException e) {
+        } catch (InterruptedException _) {
             Thread.currentThread().interrupt();
-        } catch (ExecutionException | CancellationException ignored) {
+        } catch (ExecutionException | CancellationException _) {
             // Expected on cancellation or execution failure
         } finally {
             worker = null;

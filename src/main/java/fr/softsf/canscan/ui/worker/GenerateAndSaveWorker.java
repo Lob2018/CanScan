@@ -143,7 +143,7 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
     protected void done() {
         try {
             handleSuccess();
-        } catch (InterruptedException ie) {
+        } catch (InterruptedException _) {
             handleInterruption();
         } catch (ExecutionException ee) {
             handleExecutionError(ee);
