@@ -16,7 +16,14 @@ public enum StringConstants {
     GENERATE_AND_SAVE_QR_CODE("generateAndSaveQrCode"),
     DEFAULT_QR_CODE_DIMENSION_FIELD("400"),
     DOMAIN("@SOFT64.FR"),
-    LATEST_RELEASES_REPO_URL("https://github.com/Lob2018/CanScan/releases/latest");
+    LATEST_RELEASES_REPO_URL("https://github.com/Lob2018/CanScan/releases/latest"),
+    CURRENT_OS(System.getProperty("os.name").toLowerCase()),
+    OS_WINDOWS_KEY("win"),
+    OS_LINUX_KEY("linux"),
+    JAVA_2D_DPI_AWARE("sun.java2d.dpiaware"),
+    JAVA_2D_OPENGL("sun.java2d.opengl"),
+    JAVA_2D_UI_SCALE_ENABLED("sun.java2d.uiScale.enabled"),
+    TRUE("true");
 
     private final String value;
 

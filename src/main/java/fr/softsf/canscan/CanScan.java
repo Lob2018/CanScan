@@ -20,6 +20,7 @@ import java.awt.event.ComponentEvent;
 import java.io.File;
 import java.util.Objects;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
@@ -164,6 +165,7 @@ public class CanScan extends JFrame {
     /** Constructs the CanScan GUI, setting up layout, panels, inputs, and QR preview. */
     public CanScan() {
         super(ApplicationMetadata.INSTANCE.initializeTitle());
+        initializeWindowIcon();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(
                 new BorderLayout(
@@ -178,6 +180,18 @@ public class CanScan extends JFrame {
         add(scrollPane, BorderLayout.CENTER);
         initializeWindow();
         initializeComponentNames();
+    }
+
+    /** Sets the application window icon using an image resource. */
+    private void initializeWindowIcon() {
+        try {
+            java.net.URL iconURL = getClass().getResource("/image/CanScanx256.png");
+            if (iconURL != null) {
+                this.setIconImage(new ImageIcon(iconURL).getImage());
+            }
+        } catch (Exception _) {
+            // Silent fallback
+        }
     }
 
     /** Sets the name field text for testing. */
@@ -324,9 +338,9 @@ public class CanScan extends JFrame {
                 UiComponentsConfiguration.INSTANCE.createModePanel(
                         mecardRadio, meetRadio, freeRadio, update, group);
         configureUpdateButton();
-        mecardRadio.addActionListener(e -> switchMode(Mode.MECARD));
-        meetRadio.addActionListener(e -> switchMode(Mode.MEET));
-        freeRadio.addActionListener(e -> switchMode(Mode.FREE));
+        mecardRadio.addActionListener(_ -> switchMode(Mode.MECARD));
+        meetRadio.addActionListener(_ -> switchMode(Mode.MEET));
+        freeRadio.addActionListener(_ -> switchMode(Mode.FREE));
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
@@ -349,7 +363,7 @@ public class CanScan extends JFrame {
                         + StringConstants.LATEST_RELEASES_REPO_URL.getValue()
                         + "</html>");
         update.addActionListener(
-                e ->
+                _ ->
                         BrowserHelper.INSTANCE.openInBrowser(
                                 StringConstants.LATEST_RELEASES_REPO_URL.getValue()));
         SwingWorker<VersionValue, Void> worker =
@@ -452,7 +466,7 @@ public class CanScan extends JFrame {
         colorOperation.initializeColorButton(qrColorButton, Color.BLACK, true);
         colorOperation.initializeColorButton(bgColorButton, Color.WHITE, false);
         qrColorButton.addActionListener(
-                e -> {
+                _ -> {
                     Color newColor = colorOperation.chooseColor(qrColorButton, qrColor, true);
                     if (newColor != null) {
                         qrColor = newColor;
@@ -460,7 +474,7 @@ public class CanScan extends JFrame {
                     }
                 });
         bgColorButton.addActionListener(
-                e -> {
+                _ -> {
                     Color newColor = colorOperation.chooseColor(bgColorButton, bgColor, false);
                     if (newColor != null) {
                         bgColor = newColor;
@@ -503,7 +517,7 @@ public class CanScan extends JFrame {
         JPanel overlayPanelForQrCodeLabelAndLoader =
                 UiComponentsConfiguration.INSTANCE.createQrCodeOverlayPanel(loader, qrCodeLabel);
         Runnable resize = () -> qrCodeResize.updateQrCodeResize(getQrInput());
-        addWindowStateListener(e -> SwingUtilities.invokeLater(resize));
+        addWindowStateListener(_ -> SwingUtilities.invokeLater(resize));
         addComponentListener(
                 new ComponentAdapter() {
                     @Override
@@ -694,10 +708,10 @@ public class CanScan extends JFrame {
                 MAX_COORDINATE_LENGTH,
                 () -> qrCodePreview.updateQrCodePreview(getQrInput()));
         freeField.getDocument().addDocumentListener(docListener);
-        marginSlider.addChangeListener(e -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        ratioSlider.addChangeListener(e -> qrCodePreview.updateQrCodePreview(getQrInput()));
+        marginSlider.addChangeListener(_ -> qrCodePreview.updateQrCodePreview(getQrInput()));
+        ratioSlider.addChangeListener(_ -> qrCodePreview.updateQrCodePreview(getQrInput()));
         roundedModulesCheckBox.addActionListener(
-                e -> qrCodePreview.updateQrCodePreview(getQrInput()));
+                _ -> qrCodePreview.updateQrCodePreview(getQrInput()));
         meetBeginDatePicker
                 .getComponentDateTextField()
                 .getDocument()
@@ -918,11 +932,26 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Application entry point. Initializes the UI theme, font, and launches the GUI on the EDT.
-     *
-     * @param args command-line arguments (ignored)
+     * Configures the Java2D pipeline and HiDPI settings based on the current operating system. This
+     * ensures sharp rendering and hardware acceleration in native image mode.
      */
-    public static void main(String[] args) {
+    private static void configureGraphicsPipeline() {
+        String os = StringConstants.CURRENT_OS.getValue();
+        if (os.contains(StringConstants.OS_WINDOWS_KEY.getValue())) {
+            System.setProperty(
+                    StringConstants.JAVA_2D_DPI_AWARE.getValue(), StringConstants.TRUE.getValue());
+        } else if (os.contains(StringConstants.OS_LINUX_KEY.getValue())) {
+            System.setProperty(
+                    StringConstants.JAVA_2D_OPENGL.getValue(), StringConstants.TRUE.getValue());
+        }
+        System.setProperty(
+                StringConstants.JAVA_2D_UI_SCALE_ENABLED.getValue(),
+                StringConstants.TRUE.getValue());
+    }
+
+    /** Application entry point. Initializes the UI theme, font, and launches the GUI on the EDT. */
+    public static void main() {
+        configureGraphicsPipeline();
         FlatCobalt2IJTheme.setup();
         FontManager.INSTANCE.initialize();
         SwingUtilities.invokeLater(() -> new CanScan().setVisible(true));
