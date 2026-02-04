@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3452eff1010c69d3f01d23dc2fac7e8e',1,'fr.softsf.canscan.CanScan.main()'],['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab8c7880da3362ba3c790d51a0918e774',1,'fr.softsf.canscan.NativeImageConfigSimulator.main()']]],
+  ['main_0',['main',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9739b7ba67a9dc3a327038a48a23cb40',1,'fr.softsf.canscan.CanScan.main()'],['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab8c7880da3362ba3c790d51a0918e774',1,'fr.softsf.canscan.NativeImageConfigSimulator.main()']]],
   ['mainpage_2edox_1',['mainpage.dox',['../mainpage_8dox.html',1,'']]],
   ['major_5ftick_5fspacing_2',['MAJOR_TICK_SPACING',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5c170899beb995a0b893f81d6a678ee6',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
   ['margin_3',['margin',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a309b37d78b4ad197106d3168434452f6',1,'fr::softsf::canscan::CanScan']]],

@@ -12,5 +12,6 @@ var searchData=
   ['config_9',['config',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a09d3feb92d472391457cc17185b4de97',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
   ['coordinates_5ffields_5fgap_10',['COORDINATES_FIELDS_GAP',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a9f9666534b9dffef8e4e950f278230c1',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
   ['create_5fmode_5fpanel_11',['CREATE_MODE_PANEL',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a600fae62d64747c2675b5c896fbbdca8',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['currentmode_12',['currentMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a45c69814709eaf34be6c0e10a89fe75b',1,'fr::softsf::canscan::CanScan']]]
+  ['current_5fos_12',['CURRENT_OS',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a7a0f10d4c18c043d35ccc2ed68ad62bd',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['currentmode_13',['currentMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a45c69814709eaf34be6c0e10a89fe75b',1,'fr::softsf::canscan::CanScan']]]
 ];

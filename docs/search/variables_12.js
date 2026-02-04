@@ -6,5 +6,6 @@ var searchData=
   ['text_5ffield_5fforeground_3',['TEXT_FIELD_FOREGROUND',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_date_picker.html#acc03974df0a5b7e9277b1ec69939258e',1,'fr::softsf::canscan::ui::FlatLafDatePicker']]],
   ['text_5ffield_5fheight_4',['TEXT_FIELD_HEIGHT',['../interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker.html#a756c3e6d808b3ff738b17bff84e744ca',1,'fr::softsf::canscan::ui::IFlatLafStyledForLGoodDatePicker']]],
   ['text_5ffields_5fcolumns_5',['TEXT_FIELDS_COLUMNS',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a2da043c8cdfb5572803e2398306db7cd',1,'fr::softsf::canscan::constant::IntConstants']]],
-  ['timeout_5fseconds_6',['TIMEOUT_SECONDS',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#a70eded2d7f96c8da044fed08e10c1587',1,'fr::softsf::canscan::util::BrowserHelper']]]
+  ['timeout_5fseconds_6',['TIMEOUT_SECONDS',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#a70eded2d7f96c8da044fed08e10c1587',1,'fr::softsf::canscan::util::BrowserHelper']]],
+  ['true_7',['TRUE',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aa3d0bee26f737cab1d0f87beae4eae63',1,'fr::softsf::canscan::constant::StringConstants']]]
 ];
