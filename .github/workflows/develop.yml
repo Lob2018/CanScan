@@ -12,6 +12,7 @@ jobs:
   test_and_analyze:
     name: Test and SonarQube Analysis
     runs-on: windows-latest
+    environment: production
 
     steps:
       - name: Harden Runner
@@ -37,7 +38,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn -B test -f pom.xml ^
+          .\mvnw.cmd -B test -f pom.xml ^
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar ^
           -Dsonar.projectKey=Lob2018_CanScan ^
           -Dsonar.qualitygate.wait=true ^

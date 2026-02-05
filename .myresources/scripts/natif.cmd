@@ -13,7 +13,7 @@ echo -----------------------------------------------
 echo.
 echo [0/6] Cleaning and packaging application...
 set "MAVEN_OPTS=--enable-native-access=ALL-UNNAMED"
-call mvn clean package -DskipTests
+call .\mvnw.cmd clean package -DskipTests
 
 echo.
 echo [1/6] Cleaning previous config-trace, dist, output...

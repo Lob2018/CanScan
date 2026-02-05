@@ -35,8 +35,8 @@ jobs:
       - name: Extract locale properties from pom.xml
         shell: bash
         run: |
-          lang=$(mvn help:evaluate -Dexpression=app.lang -q -DforceStdout)
-          country=$(mvn help:evaluate -Dexpression=app.country -q -DforceStdout)
+          lang=$(.\mvnw.cmd help:evaluate -Dexpression=app.lang -q -DforceStdout)
+          country=$(.\mvnw.cmd  help:evaluate -Dexpression=app.country -q -DforceStdout)
           echo "APP_LANG=$lang" >> $GITHUB_ENV
           echo "APP_COUNTRY=$country" >> $GITHUB_ENV
 
@@ -138,7 +138,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn -B test -f pom.xml ^
+          .\mvnw.cmd -B test -f pom.xml ^
           org.sonarsource.scanner.maven:sonar-maven-plugin:sonar ^
           -Dsonar.projectKey=Lob2018_CanScan ^
           -Dsonar.qualitygate.wait=true ^
@@ -146,7 +146,7 @@ jobs:
 
       - name: Build native Windows package
         shell: cmd
-        run: mvn package -Pwindows-native
+        run: .\mvnw.cmd package -Pwindows-native
 
       - name: List files in output directory
         shell: pwsh
@@ -237,12 +237,12 @@ jobs:
       - name: Extract app properties from pom.xml
         id: properties
         run: |
-          APP_NAME=$(mvn help:evaluate -Dexpression=app.name -q -DforceStdout)
-          APP_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-          ORG_NAME=$(mvn help:evaluate -Dexpression=app.org -q -DforceStdout)
-          MAIN_CLASS=$(mvn help:evaluate -Dexpression=app.mainclass -q -DforceStdout)
-          LANG_CODE=$(mvn help:evaluate -Dexpression=app.lang -q -DforceStdout)
-          COUNTRY_CODE=$(mvn help:evaluate -Dexpression=app.country -q -DforceStdout)
+          APP_NAME=$(./mvnw help:evaluate -Dexpression=app.name -q -DforceStdout)
+          APP_VERSION=$(./mvnw help:evaluate -Dexpression=project.version -q -DforceStdout)
+          ORG_NAME=$(./mvnw help:evaluate -Dexpression=app.org -q -DforceStdout)
+          MAIN_CLASS=$(./mvnw help:evaluate -Dexpression=app.mainclass -q -DforceStdout)
+          LANG_CODE=$(./mvnw help:evaluate -Dexpression=app.lang -q -DforceStdout)
+          COUNTRY_CODE=$(./mvnw help:evaluate -Dexpression=app.country -q -DforceStdout)
           echo "APP_NAME=$APP_NAME" >> $GITHUB_ENV
           echo "POM_VERSION=$APP_VERSION" >> $GITHUB_ENV
           echo "ORG_NAME=$ORG_NAME" >> $GITHUB_ENV
@@ -261,7 +261,7 @@ jobs:
 
       - name: Build native Linux package
         shell: bash
-        run: mvn package -Plinux-native
+        run: ./mvnw package -Plinux-native
 
       - name: Generate hash file for AppImage
         shell: bash
@@ -306,7 +306,7 @@ jobs:
       - name: Extract version from pom.xml
         shell: bash
         run: |
-          version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+          version=$(./mvnw help:evaluate -Dexpression=project.version -q -DforceStdout)
           echo "POM_VERSION=$version" >> $GITHUB_ENV
 
       - name: Download all output folders

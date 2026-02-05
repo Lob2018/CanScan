@@ -29,6 +29,7 @@
     <app.version>${project.version}</app.version>
     <java.version>25</java.version>
     <license.name>GPLv3.0</license.name>
+    <maven.version>3.9.9</maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.organization>lob2018</sonar.organization>
@@ -377,7 +378,7 @@
                 <requireMavenVersion>
                   <version>${maven.version}</version>
                   <message>The version of Maven must be at least ${maven.version}. Please update your
-                                        Maven installation.</message>
+                    Maven installation.</message>
                 </requireMavenVersion>
               </rules>
             </configuration>

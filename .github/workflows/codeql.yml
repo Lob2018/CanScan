@@ -1,0 +1,80 @@
+# For most projects, this workflow file will not need changing; you simply need
+# to commit it to your repository.
+#
+# You may wish to alter this file to override the set of languages analyzed,
+# or to provide custom queries or build logic.
+#
+# ******** NOTE ********
+# We have attempted to detect the languages in your repository. Please check
+# the `language` matrix defined below to confirm you have the correct set of
+# supported CodeQL languages.
+#
+name: "CodeQL"
+
+on:
+  push:
+    branches: ["main","develop"]
+  pull_request:
+    branches: ["main","develop"]
+  schedule:
+    - cron: "0 0 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["java"]
+        # CodeQL supports [ $supported-codeql-languages ]
+        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@e3f713f2d8f53843e71c69a996d56f51aa9adfb9 # v2.14.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install JDK
+        uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654 # v5.2.0
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          check-latest: true
+          cache: 'maven'
+      - name: Verify Java Installation
+        run: java -version
+      - name: Install Xvfb
+        run: sudo apt-get install -y xvfb
+      - name: Start Xvfb
+        run: |
+          Xvfb :99 -screen 0 1920x1080x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@b20883b0cd1f46c72ae0ba6d1090936928f9fa30 # v4.32.0
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Build and Test with Maven
+        run: |
+          echo "Run, tests with Maven"
+          ./mvnw clean test -f pom.xml
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@b20883b0cd1f46c72ae0ba6d1090936928f9fa30 # v4.32.0
+        with:
+          category: "/language:${{matrix.language}}"
