@@ -111,12 +111,6 @@ if not defined INNOSETUP (
   /DOrganization=%3 ^
   .myresources/scripts/canscan-setup.iss
 
-"%INNOSETUP%" ^
-  /DAppName=%1 ^
-  /DAppVersion=%2 ^
-  /DOrganization=%3 ^
-  .myresources/scripts/canscan-winget.iss
-
 echo.
 echo [INFO] Inno Setup compilation with :
 echo   AppName      = %1

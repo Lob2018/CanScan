@@ -381,10 +381,6 @@ jobs:
 
             &nbsp;&nbsp;&nbsp;&nbsp;[![Windows Setup](https://img.shields.io/badge/Setup-CanScan--${{ env.POM_VERSION }}--x64--Setup.exe-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64-Setup.exe)
 
-            Lien de la version pour Winget (sans VC Redist) :
-
-            &nbsp;&nbsp;&nbsp;&nbsp;[![Windows Winget](https://img.shields.io/badge/Winget-CanScan--${{ env.POM_VERSION }}--x64--Winget.exe-orange.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64-Winget.exe)
-
             🐧 Linux (AppImage x86_64)
 
             Lien du binaire natif (glibc/Debian) :
@@ -405,7 +401,6 @@ jobs:
 
             &nbsp;&nbsp;&nbsp;&nbsp;[![Setup Signature](https://img.shields.io/badge/Signature-Setup.exe.asc-brightgreen.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64-Setup.exe.asc)
             &nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;[![Winget Signature](https://img.shields.io/badge/Signature-Winget.exe.asc-orange.svg)](https://github.com/${{ github.repository }}/releases/download/v${{ env.POM_VERSION }}/CanScan-${{ env.POM_VERSION }}-x64-Winget.exe.asc)
 
             Lien vers la signature Linux GPG :
 
