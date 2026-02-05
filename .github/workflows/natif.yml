@@ -12,6 +12,7 @@ jobs:
   package_for_windows:
     name: Package for Windows
     runs-on: windows-latest
+    environment: production
     env:
       LIBERICA_VERSION: 25.0.2
       OPENJDK_VERSION: 25.0.2+13
