@@ -205,7 +205,6 @@ Pour "désinstaller" CanScan, il suffit de **supprimer le fichier AppImage** té
 - Liberica Native Image
 - Microsoft Visual C++ v14 Redistributable (x64) :
   - Inclus dans l'installateur Windows Standard (Setup).
-  - Dépendance externe pour la version Winget.
 
 ## 🔒 Politique de Confidentialité
 
