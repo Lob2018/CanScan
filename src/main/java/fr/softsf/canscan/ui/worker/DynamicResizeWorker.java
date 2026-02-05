@@ -69,7 +69,9 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
      * @param wholeFields the latest QR code configuration
      */
     public void updateQrCodeResize(WholeFields wholeFields) {
-        Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodeResize", "wholeFields");
+        if (Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodeResize", "wholeFields")) {
+            return;
+        }
         this.wholeFields = wholeFields;
         updateLoaderSize();
         resetAndStartWorker(RESIZE_DEBOUNCE_DELAY_MS);

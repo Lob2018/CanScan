@@ -37,7 +37,7 @@ public abstract class AbstractDynamicWorker<T> {
      */
     protected AbstractDynamicWorker(JProgressBar loader) {
         Checker.INSTANCE.checkNPE(loader, "AbstractDynamicWorker", "loader");
-        this.loader = java.util.Objects.requireNonNull(loader, "loader must not be null");
+        this.loader = java.util.Objects.requireNonNull(loader, "loader ne doit pas être null");
     }
 
     /** Stops and clears the debounce timer. */

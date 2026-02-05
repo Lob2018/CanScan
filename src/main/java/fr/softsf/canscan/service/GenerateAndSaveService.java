@@ -33,7 +33,8 @@ public class GenerateAndSaveService {
      * @param encodedImage the QR code image generator; must not be null
      */
     public GenerateAndSaveService(EncodedImage encodedImage) {
-        this.encodedImage = Objects.requireNonNull(encodedImage, "encodedImage must not be null");
+        this.encodedImage =
+                Objects.requireNonNull(encodedImage, "encodedImage ne doit pas être null");
     }
 
     /**

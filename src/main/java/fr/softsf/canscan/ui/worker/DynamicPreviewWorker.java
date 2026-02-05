@@ -81,7 +81,9 @@ public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
      * @param wholeFields the latest QR code configuration
      */
     public void updateQrCodePreview(WholeFields wholeFields) {
-        Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodePreview", "wholeFields");
+        if (Checker.INSTANCE.checkNPE(wholeFields, "updateQrCodePreview", "wholeFields")) {
+            return;
+        }
         this.wholeFields = wholeFields;
         resetAndStartWorker(PREVIEW_DEBOUNCE_DELAY_MS);
     }

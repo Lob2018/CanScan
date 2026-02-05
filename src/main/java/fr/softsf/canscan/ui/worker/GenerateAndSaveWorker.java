@@ -20,7 +20,6 @@ import javax.swing.SwingWorker;
 
 import com.google.zxing.WriterException;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.model.CommonFields;
 import fr.softsf.canscan.model.EncodedData;
@@ -54,7 +53,6 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
      * @param outputFile the target file for saving the QR code
      * @param encodedImage the service to generate QR code images
      */
-    @SuppressFBWarnings("EI_EXPOSE_REP2")
     public GenerateAndSaveWorker(
             EncodedData qrData,
             CommonFields config,
@@ -66,11 +64,14 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
         Checker.INSTANCE.checkNPE(loader, GENERATE_AND_SAVE_WORKER, "loader");
         Checker.INSTANCE.checkNPE(outputFile, GENERATE_AND_SAVE_WORKER, "outputFile");
         Checker.INSTANCE.checkNPE(encodedImage, GENERATE_AND_SAVE_WORKER, "encodedImage");
-        this.qrData = qrData;
-        this.config = config;
-        this.loader = loader;
-        this.outputFile = outputFile;
-        this.encodedImage = encodedImage;
+        this.qrData = java.util.Objects.requireNonNull(qrData, "qrData ne doit pas être null");
+        this.config = java.util.Objects.requireNonNull(config, "config ne doit pas être null");
+        this.loader = java.util.Objects.requireNonNull(loader, "loader ne doit pas être null");
+        this.outputFile =
+                java.util.Objects.requireNonNull(outputFile, "outputFile ne doit pas être null");
+        this.encodedImage =
+                java.util.Objects.requireNonNull(
+                        encodedImage, "encodedImage ne doit pas être null");
     }
 
     /**

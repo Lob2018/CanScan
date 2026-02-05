@@ -79,6 +79,7 @@ public enum MyPopup {
      */
     public int showYesNoConfirmDialog(String message) {
         Checker.INSTANCE.checkNPE(message, "showYesNoConfirmDialog", "message");
+        java.util.Objects.requireNonNull(message, "message ne doit pas être null");
         return JOptionPane.showConfirmDialog(
                 FrameHelper.INSTANCE.getParentFrame(),
                 message,

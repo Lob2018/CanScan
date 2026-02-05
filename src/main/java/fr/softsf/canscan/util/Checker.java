@@ -19,21 +19,24 @@ public enum Checker {
     INSTANCE;
 
     /**
-     * Validates that the specified object is not {@code null} and displays an error dialog if
-     * invalid.
+     * Performs a non-blocking null or blank check and triggers a diagnostic dialog upon failure. *
      *
-     * <p><b>Important:</b> This method does not throw exceptions. It MUST be used either:
+     * <p><b>Note:</b> This method does not throw exceptions. Callers must handle the boolean return
+     * value to ensure thread safety and prevent downstream {@link NullPointerException}. *
+     *
+     * <p><b>Execution Patterns:</b>
      *
      * <ul>
-     *   <li>Within a guard clause: {@code if (checkNPE(...)) return;}
-     *   <li>In a constructor, followed by {@code Objects.requireNonNull(obj)} to halt instantiation
-     *       and satisfy static analysis.
+     *   <li>Standard guard clause: {@code if (Checker.INSTANCE.checkNPE(arg, "method", "arg"))
+     *       return;}
+     *   <li>Constructor validation: {@code Checker.INSTANCE.checkNPE(arg, ...); this.field =
+     *       Objects.requireNonNull(arg);}
      * </ul>
      *
-     * @param obj the object to validate
-     * @param methodName calling method name
-     * @param name parameter name
-     * @return {@code true} if null; {@code false} otherwise
+     * @param obj the object to validate; performs blank check if instance of {@link String}
+     * @param methodName diagnostic context identifying the caller
+     * @param name display name of the validated parameter
+     * @return {@code true} if the object is {@code null} or blank; {@code false} otherwise
      */
     public boolean checkNPE(Object obj, String methodName, String name) {
         return checkNullOrBlankInternal(obj, methodName, name);

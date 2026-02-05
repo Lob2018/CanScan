@@ -182,7 +182,7 @@ public final class CanScan extends JFrame {
         northPanelWrapper.add(northPanel);
         JPanel mainPanel = initializeMainPanel();
         JScrollPane scrollPane = initializeScrollPane(mainPanel);
-        Objects.requireNonNull(scrollPane);
+        Objects.requireNonNull(scrollPane, "scrollPane ne doit pas être null");
         add(scrollPane, BorderLayout.CENTER);
         initializeWindow();
         initializeComponentNames();

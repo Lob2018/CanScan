@@ -38,7 +38,7 @@ public enum BrowserHelper {
      * @throws NullPointerException if url is {@code null}.
      */
     public boolean openInBrowser(String url) {
-        Objects.requireNonNull(url, "URL cannot be null");
+        Objects.requireNonNull(url, "url ne doit pas être null");
 
         try (ExecutorService executor = Executors.newSingleThreadExecutor()) {
             Future<Boolean> future = executor.submit(() -> tryOpenBrowser(url));

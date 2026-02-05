@@ -53,7 +53,7 @@ public enum DataBuilderService {
                                 input.org().trim(),
                                 input.adr().trim(),
                                 input.url().trim());
-                Objects.requireNonNull(data, "data must not be null");
+                Objects.requireNonNull(data, "data ne doit pas être null");
                 yield new EncodedData(data, "codeqr_mecard.png");
             }
             case MEET -> {
@@ -66,7 +66,7 @@ public enum DataBuilderService {
                                 input.meetName().trim(),
                                 input.meetLat().trim(),
                                 input.meetLong().trim());
-                Objects.requireNonNull(data, "data must not be null");
+                Objects.requireNonNull(data, "data ne doit pas être null");
                 yield new EncodedData(data, "codeqr_calendar.png");
             }
             case FREE -> new EncodedData(input.free().trim(), "codeqr_free.png");
