@@ -1,5 +1,7 @@
 <map id="src/main/java/fr/softsf/canscan/constant/StringConstants.java" name="src/main/java/fr/softsf/canscan/constant/StringConstants.java">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,260,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="28,96,237,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,48,135,81,130,81,130,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,5,277,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,104,114,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,50,85,95,81,91,127,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="138,96,346,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,46,212,84,208,87,170,50"/>
 </map>
