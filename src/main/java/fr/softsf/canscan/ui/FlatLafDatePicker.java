@@ -32,6 +32,14 @@ public class FlatLafDatePicker extends DatePicker implements IFlatLafStyledForLG
         applyTheme();
     }
 
+    /**
+     * Applies the FlatLaf theme. Marked final to prevent MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR.
+     */
+    @Override
+    public final void applyTheme() {
+        IFlatLafStyledForLGoodDatePicker.super.applyTheme();
+    }
+
     /** Configures DatePickerSettings with FlatLaf colors and borders. */
     private static DatePickerSettings createSettings() {
         DatePickerSettings settings = new DatePickerSettings();

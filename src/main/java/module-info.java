@@ -7,4 +7,5 @@ module fr.softsf.canscan {
     requires com.formdev.flatlaf;
     requires com.github.lgooddatepicker;
     requires com.github.spotbugs.annotations;
+    requires java.logging;
 }

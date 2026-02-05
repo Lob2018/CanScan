@@ -6,6 +6,7 @@
 package fr.softsf.canscan.util;
 
 import java.text.Normalizer;
+import java.util.Locale;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 
@@ -104,7 +105,7 @@ public enum ValidationFieldHelper {
         return builder.toString()
                         .replaceAll("\\s+", "")
                         .replaceAll("[^\\p{L}0-9_-]", "")
-                        .toUpperCase()
+                        .toUpperCase(Locale.ROOT)
                 + StringConstants.DOMAIN.getValue();
     }
 }

@@ -78,4 +78,31 @@ public record WholeFields(
         double ratio,
         Color qrColor,
         Color bgColor,
-        boolean isRoundedModules) {}
+        boolean isRoundedModules) {
+    /** Sentinel value for uninitialized or default state. */
+    public static final WholeFields EMPTY =
+            new WholeFields(
+                    () -> 0,
+                    Mode.FREE,
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "0.0",
+                    "0.0",
+                    null,
+                    200,
+                    1,
+                    0.2,
+                    Color.WHITE,
+                    Color.BLACK,
+                    false);
+}

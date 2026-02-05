@@ -27,7 +27,7 @@ public abstract class AbstractDynamicWorker<T> {
 
     protected Timer debounceTimer;
     protected SwingWorker<T, Void> worker;
-    protected WholeFields wholeFields;
+    protected WholeFields wholeFields = WholeFields.EMPTY;
     protected final JProgressBar loader;
 
     /**
@@ -37,7 +37,7 @@ public abstract class AbstractDynamicWorker<T> {
      */
     protected AbstractDynamicWorker(JProgressBar loader) {
         Checker.INSTANCE.checkNPE(loader, "AbstractDynamicWorker", "loader");
-        this.loader = loader;
+        this.loader = java.util.Objects.requireNonNull(loader, "loader must not be null");
     }
 
     /** Stops and clears the debounce timer. */
@@ -113,7 +113,7 @@ public abstract class AbstractDynamicWorker<T> {
         debounceTimer =
                 new Timer(
                         delayMs,
-                        e -> {
+                        _ -> {
                             loader.setVisible(true);
                             worker = createWorker();
                             worker.execute();

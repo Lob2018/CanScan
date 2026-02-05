@@ -222,28 +222,28 @@ class CanScanUTest {
     void givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult(
             String input, int expected) {
         generator.setSizeFieldTextForTests(input);
-        int result = generator.validateAndGetSize();
+        int result = generator.validateAndGetSizeForTests();
         assertEquals(expected, result);
     }
 
     @Test
     void givenValidMargin4_whenMarginFieldCheck_thenGetMarginUpdatedTo4() {
         generator.setMarginSliderValueForTests(4);
-        generator.validateAndGetMargin();
+        generator.validateAndGetMarginForTests();
         assertEquals(4, generator.getMarginFieldIntForTests());
     }
 
     @Test
     void givenNegativeMargin_whenMarginFieldCheck_thenGetMarginSetTo0() {
         generator.setMarginSliderValueForTests(-2);
-        generator.validateAndGetMargin();
+        generator.validateAndGetMarginForTests();
         assertEquals(0, generator.getMarginFieldIntForTests());
     }
 
     @Test
     void givenMarginAboveMaximum_whenMarginFieldCheck_thenGetMarginSetTo10() {
         generator.setMarginSliderValueForTests(15);
-        generator.validateAndGetMargin();
+        generator.validateAndGetMarginForTests();
         assertEquals(10, generator.getMarginFieldIntForTests());
     }
 
@@ -252,8 +252,8 @@ class CanScanUTest {
     void givenRatioPercent_whenRatioFieldCheck_thenGetRatioSetCorrectly(
             int sliderValue, double expectedRatio) {
         generator.setRatioSliderValueForTests(sliderValue);
-        generator.validateAndGetRatio();
-        double actualRatio = generator.validateAndGetRatio();
+        generator.validateAndGetRatioForTests();
+        double actualRatio = generator.validateAndGetRatioForTests();
         assertEquals(expectedRatio, actualRatio, 0.01);
     }
 
@@ -661,31 +661,31 @@ class CanScanUTest {
                             () ->
                                     JOptionPane.showMessageDialog(
                                             null, null, null, JOptionPane.INFORMATION_MESSAGE))
-                    .thenAnswer(inv -> null);
+                    .thenAnswer(_ -> null);
             optionPaneMock
                     .when(
                             () ->
                                     JOptionPane.showMessageDialog(
                                             null, null, null, JOptionPane.WARNING_MESSAGE))
-                    .thenAnswer(inv -> null);
+                    .thenAnswer(_ -> null);
             optionPaneMock
                     .when(
                             () ->
                                     JOptionPane.showMessageDialog(
                                             null, null, null, JOptionPane.ERROR_MESSAGE))
-                    .thenAnswer(inv -> null);
+                    .thenAnswer(_ -> null);
             optionPaneMock
                     .when(
                             () ->
                                     JOptionPane.showMessageDialog(
                                             null, null, null, JOptionPane.QUESTION_MESSAGE))
-                    .thenAnswer(inv -> null);
+                    .thenAnswer(_ -> null);
             optionPaneMock
                     .when(
                             () ->
                                     JOptionPane.showMessageDialog(
                                             null, null, null, JOptionPane.PLAIN_MESSAGE))
-                    .thenAnswer(inv -> null);
+                    .thenAnswer(_ -> null);
             test.run();
         }
     }

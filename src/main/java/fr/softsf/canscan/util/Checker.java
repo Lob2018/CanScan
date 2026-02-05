@@ -19,13 +19,21 @@ public enum Checker {
     INSTANCE;
 
     /**
-     * Validates that the specified object is not {@code null}. Displays an error dialog if the
-     * value is invalid.
+     * Validates that the specified object is not {@code null} and displays an error dialog if
+     * invalid.
+     *
+     * <p><b>Important:</b> This method does not throw exceptions. It MUST be used either:
+     *
+     * <ul>
+     *   <li>Within a guard clause: {@code if (checkNPE(...)) return;}
+     *   <li>In a constructor, followed by {@code Objects.requireNonNull(obj)} to halt instantiation
+     *       and satisfy static analysis.
+     * </ul>
      *
      * @param obj the object to validate
-     * @param methodName the name of the calling method, used for context in the error dialog
-     * @param name the parameter name, displayed in the error dialog
-     * @return {@code true} if the object is {@code null}; {@code false} otherwise
+     * @param methodName calling method name
+     * @param name parameter name
+     * @return {@code true} if null; {@code false} otherwise
      */
     public boolean checkNPE(Object obj, String methodName, String name) {
         return checkNullOrBlankInternal(obj, methodName, name);

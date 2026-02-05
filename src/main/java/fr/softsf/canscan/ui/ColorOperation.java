@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.util.Locale;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -154,6 +155,6 @@ public class ColorOperation {
         if (Checker.INSTANCE.checkNPE(color, "colorToHex", COLOR)) {
             return DEFAULT_HEX_COLOR;
         }
-        return "#" + Integer.toHexString(color.getRGB()).substring(2).toUpperCase();
+        return "#" + Integer.toHexString(color.getRGB()).substring(2).toUpperCase(Locale.ROOT);
     }
 }

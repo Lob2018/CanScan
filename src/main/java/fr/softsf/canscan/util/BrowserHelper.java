@@ -16,6 +16,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
+import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.ui.MyPopup;
 
 /**
@@ -81,7 +82,9 @@ public enum BrowserHelper {
                 // Moved to B plan
             }
         }
-        if (System.getProperty("os.name", "").toLowerCase().contains("linux")) {
+        if (StringConstants.CURRENT_OS
+                .getValue()
+                .contains(StringConstants.OS_LINUX_KEY.getValue())) {
             try {
                 new ProcessBuilder("/usr/bin/xdg-open", url).start();
                 return true;

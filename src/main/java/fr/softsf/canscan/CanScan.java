@@ -18,9 +18,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.io.File;
+import java.net.URL;
 import java.util.Objects;
+import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
@@ -74,8 +75,13 @@ import fr.softsf.canscan.util.DateHelper;
 import fr.softsf.canscan.util.FontManager;
 import fr.softsf.canscan.util.ValidationFieldHelper;
 
+import static java.util.logging.Level.WARNING;
+
 /** CanScan — Swing QR code generator with MECARD, MEET, and FREE modes. */
-public class CanScan extends JFrame {
+public final class CanScan extends JFrame {
+
+    private static final java.util.logging.Logger LOGGER =
+            java.util.logging.Logger.getLogger(CanScan.class.getName());
 
     private static final int VERTICAL_SCROLL_UNIT_INCREMENT = 16;
     private static final int MINIMUM_QR_CODE_SIZE = 10;
@@ -185,12 +191,15 @@ public class CanScan extends JFrame {
     /** Sets the application window icon using an image resource. */
     private void initializeWindowIcon() {
         try {
-            java.net.URL iconURL = getClass().getResource("/image/CanScanx256.png");
+            URL iconURL = CanScan.class.getResource("/image/CanScanx256.png");
             if (iconURL != null) {
-                this.setIconImage(new ImageIcon(iconURL).getImage());
+                this.setIconImage(ImageIO.read(iconURL));
             }
-        } catch (Exception _) {
-            // Silent fallback
+        } catch (Exception ex) {
+            LOGGER.log(
+                    WARNING,
+                    "Impossible de charger et de définir l'icône depuis /image/CanScanx256.png",
+                    ex);
         }
     }
 
@@ -303,8 +312,7 @@ public class CanScan extends JFrame {
     private static JPanel getNorthJPanel() {
         JPanel northPanel = new JPanel(new GridBagLayout());
         northPanel.setMaximumSize(
-                new Dimension(
-                        IntConstants.DEFAULT_LABEL_WIDTH.getValue() * 3, northPanel.getHeight()));
+                new Dimension(IntConstants.DEFAULT_LABEL_WIDTH.getValue() * 3, Short.MAX_VALUE));
         northPanel.setBorder(
                 new EmptyBorder(
                         IntConstants.DEFAULT_GAP.getValue(),
@@ -573,14 +581,15 @@ public class CanScan extends JFrame {
     }
 
     /**
-     * Finalizes window layout: packs components, adjusts size for QR display and loader, and
-     * centers the window on screen.
+     * Finalizes window layout and dimensions. Using super calls to mitigate
+     * MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR for Swing API.
      */
     private void initializeWindow() {
-        pack();
-        setSize(getWidth(), getHeight() + QR_CODE_LABEL_DEFAULT_SIZE);
+        super.pack();
+        Dimension prefSize = super.getPreferredSize();
+        super.setSize(prefSize.width, prefSize.height + QR_CODE_LABEL_DEFAULT_SIZE);
         setLoaderSize();
-        setLocationRelativeTo(null);
+        super.setLocationRelativeTo(null);
     }
 
     /** Assigns stable component names for testing and native-image configuration. */
@@ -908,27 +917,42 @@ public class CanScan extends JFrame {
     }
 
     /** Validates and returns the current meet UID from the meet title field. */
-    String validateAndGetMeetUID() {
+    private String validateAndGetMeetUID() {
         meetUIdField.setText(
                 ValidationFieldHelper.INSTANCE.validateAndGetMeetUID(meetTitleField.getText()));
         return meetUIdField.getText();
     }
 
     /** Validates and returns the current image-to-QR ratio from the ratio slider. */
-    double validateAndGetRatio() {
+    private double validateAndGetRatio() {
         imageRatio = ValidationFieldHelper.INSTANCE.validateAndGetRatio(ratioSlider);
         return imageRatio;
     }
 
+    /** Validates and returns the current image-to-QR ratio from the ratio slider for testing. */
+    double validateAndGetRatioForTests() {
+        return validateAndGetRatio();
+    }
+
     /** Validates and returns the current QR code margin from the margin slider. */
-    int validateAndGetMargin() {
+    private int validateAndGetMargin() {
         margin = ValidationFieldHelper.INSTANCE.validateAndGetMargin(marginSlider);
         return margin;
     }
 
+    /** Validates and returns the current QR code margin from the margin slider for tests. */
+    void validateAndGetMarginForTests() {
+        validateAndGetMargin();
+    }
+
     /** Validates and returns the QR code size from the corresponding text field. */
-    int validateAndGetSize() {
+    private int validateAndGetSize() {
         return ValidationFieldHelper.INSTANCE.validateAndGetSize(sizeField);
+    }
+
+    /** Validates and returns the QR code size from the corresponding text field for tests. */
+    int validateAndGetSizeForTests() {
+        return validateAndGetSize();
     }
 
     /**

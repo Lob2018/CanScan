@@ -28,6 +28,14 @@ public class FlatLafTimePicker extends TimePicker implements IFlatLafStyledForLG
         applyTheme();
     }
 
+    /**
+     * Applies the FlatLaf theme. Marked final to prevent MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR.
+     */
+    @Override
+    public final void applyTheme() {
+        IFlatLafStyledForLGoodDatePicker.super.applyTheme();
+    }
+
     /** Configures TimePickerSettings with FlatLaf colors and borders. */
     private static TimePickerSettings createSettings() {
         TimePickerSettings settings = new TimePickerSettings();

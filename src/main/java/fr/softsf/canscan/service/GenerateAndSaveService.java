@@ -7,6 +7,7 @@ package fr.softsf.canscan.service;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Locale;
 import java.util.Objects;
 import javax.swing.JFileChooser;
 import javax.swing.JProgressBar;
@@ -127,7 +128,7 @@ public class GenerateAndSaveService {
             return null;
         }
         File output = chooser.getSelectedFile();
-        String fileName = output.getName().toLowerCase();
+        String fileName = output.getName().toLowerCase(Locale.ROOT);
         if (fileName.endsWith(".png")) {
             return output;
         }
