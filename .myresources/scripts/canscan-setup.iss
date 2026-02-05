@@ -29,6 +29,10 @@ VersionInfoVersion={#AppVersion}.0
 VersionInfoCompany={#Organization}
 VersionInfoDescription={#AppName}
 VersionInfoCopyright=Copyright (C) 2025 {#Organization}
+; Gestion des processus en cours
+AppMutex=CanScan_Global_Mutex
+CloseApplications=yes
+AllowCancelDuringInstall=yes
 
 ; Répertoires d'installation
 ; Nouvelle stratégie : Installation sans privilèges dans le répertoire utilisateur
