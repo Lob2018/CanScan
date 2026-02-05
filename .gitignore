@@ -3,6 +3,7 @@ output/
 target/
 config/
 config-trace/
+dist/
 
 # Ignore Maven Wrapper binary files
 .mvn/wrapper/maven-wrapper.jar
@@ -37,7 +38,6 @@ pom.xml.versionsBackup
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
 build/
@@ -49,3 +49,16 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Python (Virtual Environments) ###
+.venv/
+venv/
+ENV/
+env/
+.env
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+
+### IA ###
+.aider*
