@@ -19,7 +19,6 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.io.File;
 import java.net.URL;
-import java.util.Objects;
 import javax.imageio.ImageIO;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -34,6 +33,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JViewport;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
@@ -178,12 +178,12 @@ public final class CanScan extends JFrame {
                         IntConstants.DEFAULT_GAP.getValue(), IntConstants.DEFAULT_GAP.getValue()));
         setResizable(true);
         initializeSliders();
-        JPanel northPanel = initializeNorthPanel();
-        northPanelWrapper.add(northPanel);
+        northPanelWrapper.add(initializeNorthPanel());
         JPanel mainPanel = initializeMainPanel();
         JScrollPane scrollPane = initializeScrollPane(mainPanel);
-        Objects.requireNonNull(scrollPane, "scrollPane ne doit pas être null");
-        add(scrollPane, BorderLayout.CENTER);
+        if (scrollPane != null) {
+            add(scrollPane, BorderLayout.CENTER);
+        }
         initializeWindow();
         initializeComponentNames();
     }
@@ -581,14 +581,22 @@ public final class CanScan extends JFrame {
     }
 
     /**
-     * Finalizes window layout and dimensions. Using super calls to mitigate
-     * MC_OVERRIDABLE_METHOD_CALL_IN_CONSTRUCTOR for Swing API.
+     * Finalizes layout and dimensions using dynamic system metrics. Configures the loader and
+     * calculates the window size by adding native scrollbar widths and window insets to the
+     * preferred size, ensuring no layout clipping or redundant scrollbars across platforms.
      */
     private void initializeWindow() {
+        setLoaderSize();
         super.pack();
         Dimension prefSize = super.getPreferredSize();
-        super.setSize(prefSize.width, prefSize.height + QR_CODE_LABEL_DEFAULT_SIZE);
-        setLoaderSize();
+        Insets insets = super.getInsets();
+        int scrollBarWidth = (int) javax.swing.UIManager.get("ScrollBar.width");
+        if (scrollBarWidth <= 0) {
+            scrollBarWidth = 15;
+        }
+        int optimizedWidth = prefSize.width + scrollBarWidth;
+        int optimizedHeight = prefSize.height + insets.top + insets.bottom;
+        super.setSize(optimizedWidth, optimizedHeight);
         super.setLocationRelativeTo(null);
     }
 
@@ -871,15 +879,21 @@ public final class CanScan extends JFrame {
     }
 
     /**
-     * Calculates the available height for QR code rendering.
+     * Calculates the available height for QR code rendering. Uses viewport bounds or content pane
+     * height as a fallback to ensure accurate sizing regardless of window insets or layout gaps.
      *
-     * @return available height in pixels after removing header and footer space
+     * @return available height in pixels.
      */
     private int calculateAvailableQrCodeLabelHeight() {
-        return getHeight()
-                - northPanelWrapper.getHeight()
-                - southSpacer.getHeight()
-                - IntConstants.DEFAULT_GAP.getValue() * 3;
+        Container parent = qrCodeLabel.getParent();
+        if (parent != null && parent.getParent() instanceof JViewport viewport) {
+            return viewport.getHeight() - northPanelWrapper.getHeight() - southSpacer.getHeight();
+        }
+        return Math.max(
+                QR_CODE_LABEL_DEFAULT_SIZE,
+                super.getContentPane().getHeight()
+                        - northPanelWrapper.getHeight()
+                        - southSpacer.getHeight());
     }
 
     /**

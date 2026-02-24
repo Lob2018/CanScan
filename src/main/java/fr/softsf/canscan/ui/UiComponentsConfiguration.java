@@ -98,7 +98,7 @@ public enum UiComponentsConfiguration {
         slider.setMinorTickSpacing(1);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
-        slider.addChangeListener(e -> slider.setToolTipText(slider.getValue() + "%"));
+        slider.addChangeListener(_ -> slider.setToolTipText(slider.getValue() + "%"));
         slider.setToolTipText(slider.getValue() + "%");
     }
 
@@ -228,26 +228,23 @@ public enum UiComponentsConfiguration {
     }
 
     /**
-     * Configures a generate button with a standard size, attaches an action listener, and sets its
-     * initial state to disabled.
+     * Configures the generate button with an increased height and attaches an action listener. Sets
+     * the button's preferred and minimum dimensions based on its intrinsic width plus a vertical
+     * offset, then initializes its state to disabled.
      *
-     * <p>The button's height is increased by {@code GENERATE_BUTTON_EXTRA_HEIGHT}, and its minimum,
-     * preferred, and maximum sizes are all set to this dimension. The provided {@link
-     * ActionListener} is added to handle button actions.
-     *
-     * @param button the {@link JButton} to configure; must not be null
-     * @param listener the {@link ActionListener} to attach; must not be null
+     * @param button the {@link JButton} to configure
+     * @param listener the {@link ActionListener} to attach
      */
     public void configureGenerateButton(JButton button, ActionListener listener) {
         if (Checker.INSTANCE.checkNPE(button, "configureGenerateButton", "button")
                 || Checker.INSTANCE.checkNPE(listener, "configureGenerateButton", "listener")) {
             return;
         }
-        Dimension d =
-                new Dimension(button.getWidth(), button.getHeight() + GENERATE_BUTTON_EXTRA_HEIGHT);
-        button.setMinimumSize(d);
-        button.setPreferredSize(d);
-        button.setMaximumSize(d);
+        Dimension baseDim = button.getPreferredSize();
+        Dimension finalDim =
+                new Dimension(baseDim.width, baseDim.height + GENERATE_BUTTON_EXTRA_HEIGHT);
+        button.setPreferredSize(finalDim);
+        button.setMinimumSize(finalDim);
         button.addActionListener(listener);
         button.setEnabled(false);
     }
@@ -665,64 +662,55 @@ public enum UiComponentsConfiguration {
     }
 
     /**
-     * Creates a JButton styled with a Material Icon and a text label.
+     * Creates a JButton styled with a Material Icon and a text label using HTML/CSS. Uses an HTML
+     * table with CSS vertical alignment and font scaling (120%) for consistent rendering of the
+     * Material Icon next to the text.
      *
-     * <p>Uses an HTML table structure for consistent vertical alignment of the icon and text.
-     *
-     * @param iconCode The Unicode value of the Material Icon (e.g., {@code "\uE2C7"}).
-     * @param text The text label to display next to the icon.
-     * @return A new, styled {@code JButton} configured with the icon and text.
+     * @param iconCode Unicode value of the Material Icon
+     * @param text Label to display
+     * @return Styled JButton instance
      */
     public JButton createIconButton(String iconCode, String text) {
         String html =
                 String.format(
-                        "<html>"
-                                + "<table cellpadding=0 cellspacing=0>"
-                                + "<tr>"
-                                + "<td style='vertical-align: middle;'>"
-                                + "<font face=\"Material Icons\" size=\"+1\">%s</font>"
-                                + "</td>"
-                                + "<td style='vertical-align: middle;'>&nbsp;%s</td>"
-                                + "</tr>"
-                                + "</table>"
-                                + "</html>",
+                        "<html><table cellpadding=0 cellspacing=0><tr><td style='vertical-align:"
+                            + " middle; font-family: \"Material Icons\"; font-size:"
+                            + " 120%%;'>%s</td><td style='vertical-align: middle;'>&nbsp;%s</td>"
+                            + "</tr></table></html>",
                         iconCode, text);
         return new JButton(html);
     }
 
     /**
-     * Creates a JButton styled to display a **bold** Material Icon only.
+     * Creates a JButton containing only a bold Material Icon. Uses CSS font-family and 120% scaling
+     * to ensure the icon is centered and visually consistent with text-based icon buttons.
      *
-     * @param iconCode The Unicode value of the Material Icon (e.g., "\uE863").
-     * @return A new JButton containing only the icon.
+     * @param iconCode Unicode value of the Material Icon
+     * @return Styled JButton instance
      */
     public JButton createIconOnlyButton(String iconCode) {
         String html =
                 String.format(
-                        "<html><b><font face=\"Material Icons\" size=\"+1\">%s</font></b></html>",
+                        "<html><span style='font-family: \"Material Icons\"; font-size:"
+                                + " 120%%;'><b>%s</b></span></html>",
                         iconCode);
         return new JButton(html);
     }
 
     /**
-     * Generates the HTML string for a JLabel with text followed by an icon.
+     * Generates an HTML string for a JLabel with text followed by an icon. Uses an HTML table with
+     * CSS-based font styling (100% scale) to ensure precise vertical alignment between the label
+     * text and the Material Icon.
      *
-     * @param text The text label to display first.
-     * @param iconCode The Unicode value of the Material Icon (e.g., {@code "\uE161"}).
-     * @return The formatted HTML string.
+     * @param text The text label to display.
+     * @param iconCode Unicode value of the Material Icon.
+     * @return Formatted HTML string.
      */
     public String getIconAfterTextHtml(String text, String iconCode) {
         return String.format(
-                "<html>"
-                        + "<table cellpadding=0 cellspacing=0>"
-                        + "<tr>"
-                        + "<td style='vertical-align: middle;'>%s&nbsp;</td>"
-                        + "<td style='vertical-align: middle;'>"
-                        + "<font face=\"Material Icons\" size=\"+0\">%s</font>"
-                        + "</td>"
-                        + "</tr>"
-                        + "</table>"
-                        + "</html>",
+                "<html><table cellpadding=0 cellspacing=0><tr><td style='vertical-align:"
+                        + " middle;'>%s&nbsp;</td><td style='vertical-align: middle; font-family:"
+                        + " \"Material Icons\"; font-size: 100%%;'>%s</td></tr></table></html>",
                 text, iconCode);
     }
 }
