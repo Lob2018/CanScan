@@ -17,6 +17,7 @@ import javax.swing.JButton;
 import javax.swing.JColorChooser;
 
 import fr.softsf.canscan.util.Checker;
+import fr.softsf.canscan.util.FontManager;
 import fr.softsf.canscan.util.FrameHelper;
 
 /**
@@ -27,7 +28,6 @@ import fr.softsf.canscan.util.FrameHelper;
  */
 public class ColorOperation {
 
-    private static final int BUTTON_ICON_COLOR_SIZE = 14;
     private static final int BUTTON_COLOR_ICON_TEXT_GAP = 10;
     private static final float STROKE_WIDTH = 2f;
     private static final String BORDER_COLOR = "#003f5e";
@@ -95,7 +95,7 @@ public class ColorOperation {
     /**
      * Creates a square icon filled with the specified color and a visible border.
      *
-     * <p>The previous icon of the button is disposed to release graphics resources.
+     * <p>The icon size is dynamically optimized using the FontManager's reference width.
      *
      * @param button the button whose previous icon will be disposed
      * @param color the color to display in the icon
@@ -107,21 +107,23 @@ public class ColorOperation {
             return null;
         }
         disposeButtonIcon(button);
-        final int size = BUTTON_ICON_COLOR_SIZE;
-        final int offset = (int) (STROKE_WIDTH / 2);
+        final int size = FontManager.INSTANCE.getCharWidth();
+        final float stroke = STROKE_WIDTH;
         BufferedImage image = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = null;
+        Graphics2D g2 = image.createGraphics();
         try {
-            g2 = image.createGraphics();
+            g2.setRenderingHint(
+                    java.awt.RenderingHints.KEY_ANTIALIASING,
+                    java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
             g2.setColor(color);
             g2.fillRect(0, 0, size, size);
             g2.setColor(Color.decode(BORDER_COLOR));
-            g2.setStroke(new BasicStroke(STROKE_WIDTH));
-            g2.drawRect(offset, offset, size - (int) STROKE_WIDTH, size - (int) STROKE_WIDTH);
+            g2.setStroke(new BasicStroke(stroke));
+            g2.draw(
+                    new java.awt.geom.Rectangle2D.Float(
+                            stroke / 2f, stroke / 2f, size - stroke, size - stroke));
         } finally {
-            if (g2 != null) {
-                g2.dispose();
-            }
+            g2.dispose();
         }
         return new ImageIcon(image);
     }
