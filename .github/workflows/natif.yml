@@ -35,8 +35,8 @@ jobs:
       - name: Extract locale properties from pom.xml
         shell: bash
         run: |
-          lang=$(.\mvnw.cmd help:evaluate -Dexpression=app.lang -q -DforceStdout)
-          country=$(.\mvnw.cmd  help:evaluate -Dexpression=app.country -q -DforceStdout)
+          lang=$(./mvnw.cmd help:evaluate -Dexpression=app.lang -q -DforceStdout)
+          country=$(./mvnw.cmd  help:evaluate -Dexpression=app.country -q -DforceStdout)
           echo "APP_LANG=$lang" >> $GITHUB_ENV
           echo "APP_COUNTRY=$country" >> $GITHUB_ENV
 
@@ -193,6 +193,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Ensure mvnw is executable
+        run: chmod +x mvnw
+
       - name: Install native dependencies
         run: |
           sudo apt update
@@ -302,6 +305,9 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v6
+
+      - name: Ensure mvnw is executable
+        run: chmod +x mvnw
 
       - name: Extract version from pom.xml
         shell: bash
