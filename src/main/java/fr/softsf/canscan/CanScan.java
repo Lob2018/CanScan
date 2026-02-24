@@ -554,7 +554,8 @@ public final class CanScan extends JFrame {
                 Math.max(
                         calculateAvailableQrCodeLabelHeight()
                                 + IntConstants.LOADER_SIZE_OFFSET.getValue(),
-                        QR_CODE_LABEL_DEFAULT_SIZE + IntConstants.LOADER_SIZE_OFFSET.getValue());
+                        FontManager.INSTANCE.getScaledDimension(QR_CODE_LABEL_DEFAULT_SIZE)
+                                + IntConstants.LOADER_SIZE_OFFSET.getValue());
         Dimension size = new Dimension(h, h);
         loader.setPreferredSize(size);
         loader.setMaximumSize(size);
@@ -890,7 +891,7 @@ public final class CanScan extends JFrame {
             return viewport.getHeight() - northPanelWrapper.getHeight() - southSpacer.getHeight();
         }
         return Math.max(
-                QR_CODE_LABEL_DEFAULT_SIZE,
+                FontManager.INSTANCE.getScaledDimension(QR_CODE_LABEL_DEFAULT_SIZE),
                 super.getContentPane().getHeight()
                         - northPanelWrapper.getHeight()
                         - southSpacer.getHeight());
@@ -960,13 +961,8 @@ public final class CanScan extends JFrame {
     }
 
     /** Validates and returns the QR code size from the corresponding text field. */
-    private int validateAndGetSize() {
+    int validateAndGetSize() {
         return ValidationFieldHelper.INSTANCE.validateAndGetSize(sizeField);
-    }
-
-    /** Validates and returns the QR code size from the corresponding text field for tests. */
-    int validateAndGetSizeForTests() {
-        return validateAndGetSize();
     }
 
     /**
@@ -982,7 +978,7 @@ public final class CanScan extends JFrame {
                             StringConstants.TRUE.getValue());
             case String s when s.contains(StringConstants.OS_LINUX_KEY.getValue()) ->
                     System.setProperty(
-                            StringConstants.JAVA_2D_OPENGL.getValue(),
+                            StringConstants.JAVA_2D_XRENDER.getValue(),
                             StringConstants.TRUE.getValue());
             default -> {
                 /* Aucun réglage spécifique pour macOS ou autres */
