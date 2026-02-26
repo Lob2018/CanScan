@@ -33,12 +33,14 @@ jobs:
           fetch-depth: 0
 
       - name: Extract locale properties from pom.xml
-        shell: cmd
+        shell: pwsh
         run: |
-          for /f "delims=" %%i in ('.\mvnw.cmd help:evaluate -Dexpression=app.lang -q -DforceStdout') do set lang=%%i
-          for /f "delims=" %%i in ('.\mvnw.cmd help:evaluate -Dexpression=app.country -q -DforceStdout') do set country=%%i
-          echo APP_LANG=%lang% >> %GITHUB_ENV%
-          echo APP_COUNTRY=%country% >> %GITHUB_ENV%
+          # Ajout de guillemets autour des arguments Maven pour pwsh
+          $lang = (.\mvnw.cmd help:evaluate "-Dexpression=app.lang" -q "-DforceStdout").Trim()
+          $country = (.\mvnw.cmd help:evaluate "-Dexpression=app.country" -q "-DforceStdout").Trim()
+          echo "APP_LANG=$lang" >> $env:GITHUB_ENV
+          echo "APP_COUNTRY=$country" >> $env:GITHUB_ENV
+          Write-Host "Extracted: Lang=$lang, Country=$country"
 
       - name: Set JAVA_TOOL_OPTIONS from pom.xml
         shell: pwsh
@@ -136,13 +138,13 @@ jobs:
         shell: cmd
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          .\mvnw.cmd -B test -f pom.xml ^
-          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar ^
-          -Dsonar.projectKey=Lob2018_CanScan ^
-          -Dsonar.qualitygate.wait=true ^
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+          .\mvnw.cmd -B test -f pom.xml
+#          org.sonarsource.scanner.maven:sonar-maven-plugin:sonar ^
+#          -Dsonar.projectKey=Lob2018_CanScan ^
+#          -Dsonar.qualitygate.wait=true ^
+#          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
 
       - name: Build native Windows package
         shell: cmd

@@ -44,10 +44,8 @@ public class NativeImageConfigSimulator {
 
     /**
      * Launches the Native Image configuration UI and runs the simulation in a background thread.
-     *
-     * @param args command-line arguments (unused)
      */
-    public static void main(String[] args) {
+    static void main() {
         System.out.println(
                 "\n[Simulation INFO] Demarrage de la generation de configuration Native Image...");
         try {

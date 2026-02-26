@@ -165,9 +165,11 @@ public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
             return;
         }
         BufferedImage qr = get();
-        encodedImage.updateQrOriginal(qr);
-        MyPopup.INSTANCE.showDialog(
-                "Code QR enregistré dans\n", outputFile.getAbsolutePath(), "Confirmation");
+        if (encodedImage != null && qr != null) {
+            encodedImage.updateQrOriginal(qr);
+            MyPopup.INSTANCE.showDialog(
+                    "Code QR enregistré dans\n", outputFile.getAbsolutePath(), "Confirmation");
+        }
     }
 
     /**

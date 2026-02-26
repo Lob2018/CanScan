@@ -59,7 +59,8 @@ echo "[3/5] Simulating runtime usage to generate native-image config-trace..."
 java --enable-native-access=ALL-UNNAMED \
      -agentlib:native-image-agent=config-output-dir=../config-trace \
      -Djava.awt.headless=false \
-     -Dsun.java2d.opengl=true \
+     -Dawt.appname="$CANONICAL_NAME" \
+     -Dsun.java2d.xrender=true \
      -Dsun.java2d.uiScale.enabled=true \
      -Duser.language="$LANG_CODE" \
      -Duser.country="$COUNTRY_CODE" \
@@ -88,11 +89,12 @@ native-image --enable-native-access=ALL-UNNAMED \
     -H:ConfigurationFileDirectories=../.myresources/scripts/config-manual/linux,../config-trace \
     -H:Name=$CANONICAL_NAME \
     -H:Class="$MAIN_CLASS" \
+    -Dawt.appname="$CANONICAL_NAME" \
     -Duser.language="$LANG_CODE" \
     -Duser.country="$COUNTRY_CODE" \
     -Duser.region="$COUNTRY_CODE" \
     -Djava.awt.headless=false \
-    -Dsun.java2d.opengl=true \
+    -Dsun.java2d.xrender=true \
     -Dsun.java2d.uiScale.enabled=true \
     -J-Xmx7G \
     -jar "../target/canscan-$APP_VERSION.jar"
@@ -155,28 +157,29 @@ echo "exec \"\$SELF/usr/bin/$CANONICAL_NAME\" \"\$@\"" >> "$APP_DIR/AppRun"
 chmod +x "$APP_DIR/AppRun"
 
 # 5. Création du fichier .desktop
-echo "[INFO] Creating .desktop file (using WM Class: $CANONICAL_NAME)..."
-# La valeur StartupWMClass est ce que le gestionnaire de fenêtres tente de faire correspondre.
-cat > "$APP_DIR/canscan.desktop" <<EOF
+echo "[INFO] Creating .desktop file (using WM Class: $APP_NAME)..."
+cat > "$APP_DIR/$CANONICAL_NAME.desktop" <<EOF
 [Desktop Entry]
 Name=$APP_NAME
 Exec=AppRun
-Icon=canscan
+Icon=$CANONICAL_NAME
 Type=Application
 Categories=Graphics;
 Comment=Application $APP_NAME Version $APP_VERSION
 StartupWMClass=$CANONICAL_NAME
 Terminal=false
 Keywords=qrcode;
+X-AppImage-Version=$APP_VERSION
+X-AppImage-Identifier=$APP_ID_DOMAIN
 EOF
 
 # 6. Gestion de l'icône
 echo "[INFO] Copying icon from $ICON_SOURCE_PATH..."
 if [ -f "$ICON_SOURCE_PATH" ]; then
-    cp "$ICON_SOURCE_PATH" "$APP_DIR/canscan.png"
+    cp "$ICON_SOURCE_PATH" "$APP_DIR/$CANONICAL_NAME.png"
 else
     echo "[ERROR] Icon file '$ICON_SOURCE_PATH' not found. AppImage build may fail or use a default icon."
-    touch "$APP_DIR/canscan.png"
+    touch "$APP_DIR/$CANONICAL_NAME.png"
 fi
 
 # 7. Téléchargement de l'outil appimagetool
