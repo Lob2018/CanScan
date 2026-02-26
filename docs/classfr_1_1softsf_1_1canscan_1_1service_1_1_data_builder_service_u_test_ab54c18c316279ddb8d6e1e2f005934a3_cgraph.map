@@ -1,0 +1,4 @@
+<map id="fr.softsf.canscan.service.DataBuilderServiceUTest.givenBlankMecardFieldsWhenBuildMecardThenReturnEmptyString" name="fr.softsf.canscan.service.DataBuilderServiceUTest.givenBlankMecardFieldsWhenBuildMecardThenReturnEmptyString">
+<area shape="rect" id="Node000001" title="Vérifie qu&#39;une saisie vide pour MECARD retourne une chaîne vide." alt="" coords="5,29,351,88"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="111,29,113,19,125,10,147,5,178,3,215,5,236,13,235,18,213,11,178,8,147,10,127,15,117,21,117,29"/>
+</map>

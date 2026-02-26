@@ -107,35 +107,45 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Singleton responsible for loading and applying custom fonts in the Swing UI.  
+<p>Singleton responsible for loading, applying, and scaling custom fonts in the Swing UI.  
  <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.util.FontManager:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager__coll__graph.svg" width="254" height="475"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a22ce663b6ae70895f35b2cc8857a2141" id="r_a22ce663b6ae70895f35b2cc8857a2141"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a22ce663b6ae70895f35b2cc8857a2141">getCharWidth</a> ()</td></tr>
-<tr class="memdesc:a22ce663b6ae70895f35b2cc8857a2141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference character width based on 'W'.  <br /></td></tr>
+<tr class="memdesc:a22ce663b6ae70895f35b2cc8857a2141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of a reference character ('W') for grid alignments.  <br /></td></tr>
 <tr class="memitem:a0059f88bdf6d679363a86fd8206e1971" id="r_a0059f88bdf6d679363a86fd8206e1971"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0059f88bdf6d679363a86fd8206e1971">getLineHeight</a> ()</td></tr>
-<tr class="memdesc:a0059f88bdf6d679363a86fd8206e1971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total line height (ascent + descent + leading).  <br /></td></tr>
+<tr class="memdesc:a0059f88bdf6d679363a86fd8206e1971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total line height based on current UI font metrics.  <br /></td></tr>
+<tr class="memitem:a6d2ac20d121fffe69bab7274b377fb8e" id="r_a6d2ac20d121fffe69bab7274b377fb8e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6d2ac20d121fffe69bab7274b377fb8e">getScaledDimension</a> (int basePx)</td></tr>
+<tr class="memdesc:a6d2ac20d121fffe69bab7274b377fb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates a scaled dimension based on the current font's line height.  <br /></td></tr>
 <tr class="memitem:ae28fec4c553db3b3c347e9af1b2f57ff" id="r_ae28fec4c553db3b3c347e9af1b2f57ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae28fec4c553db3b3c347e9af1b2f57ff">initialize</a> ()</td></tr>
-<tr class="memdesc:ae28fec4c553db3b3c347e9af1b2f57ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and sets the <b>Luciole font</b> as the default Swing UI font (including scaling/shifting).  <br /></td></tr>
+<tr class="memdesc:ae28fec4c553db3b3c347e9af1b2f57ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point to load resources and refresh the Look and Feel.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afd072333e48c808045ec5d9e72ad15a1" id="r_afd072333e48c808045ec5d9e72ad15a1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afd072333e48c808045ec5d9e72ad15a1">INSTANCE</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a005c2fcbf201969ccf08c3a6f5ef2f50" id="r_a005c2fcbf201969ccf08c3a6f5ef2f50"><td class="memItemLeft">static final double&#160;</td><td class="memItemRight"><a class="el" href="#a005c2fcbf201969ccf08c3a6f5ef2f50">BASE_LINE_HEIGHT_REFERENCE</a> = 16.0</td></tr>
+<tr class="memitem:a186e58d3601ac4781ae2e2698a5e68c5" id="r_a186e58d3601ac4781ae2e2698a5e68c5"><td class="memItemLeft">static final double&#160;</td><td class="memItemRight"><a class="el" href="#a186e58d3601ac4781ae2e2698a5e68c5">BASELINE_CORRECTION_FACTOR</a> = 0.11</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:ac81bc280b6595dbb001f8358a2b8ceb3" id="r_ac81bc280b6595dbb001f8358a2b8ceb3"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ac81bc280b6595dbb001f8358a2b8ceb3">calculateVerticalOffset</a> (Font font)</td></tr>
+<tr class="memdesc:ac81bc280b6595dbb001f8358a2b8ceb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the vertical offset required to center the font baseline.  <br /></td></tr>
 <tr class="memitem:ada59e3acd5ab9e18046ddc50cc1bc6d0" id="r_ada59e3acd5ab9e18046ddc50cc1bc6d0"><td class="memItemLeft">FontMetrics&#160;</td><td class="memItemRight"><a class="el" href="#ada59e3acd5ab9e18046ddc50cc1bc6d0">getCurrentFontMetrics</a> ()</td></tr>
-<tr class="memdesc:ada59e3acd5ab9e18046ddc50cc1bc6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves <code><a class="el" href="">FontMetrics</a></code> safely.  <br /></td></tr>
+<tr class="memdesc:ada59e3acd5ab9e18046ddc50cc1bc6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current font metrics from UIManager or provides a JRE fallback.  <br /></td></tr>
 <tr class="memitem:af9227cd80e4e531e1279363241f87193" id="r_af9227cd80e4e531e1279363241f87193"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9227cd80e4e531e1279363241f87193">loadLucioleFontAsDefaultFont</a> ()</td></tr>
+<tr class="memdesc:af9227cd80e4e531e1279363241f87193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the Luciole TTF, registers it in the environment, and applies it to UIManager.  <br /></td></tr>
 <tr class="memitem:a9efcfe369b3d1cac6b75b8e15d782be5" id="r_a9efcfe369b3d1cac6b75b8e15d782be5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9efcfe369b3d1cac6b75b8e15d782be5">loadMaterialIconsFont</a> ()</td></tr>
-<tr class="memdesc:a9efcfe369b3d1cac6b75b8e15d782be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads Material Icons (TTF) and registers it in the JVM's Graphics Environment.  <br /></td></tr>
+<tr class="memdesc:a9efcfe369b3d1cac6b75b8e15d782be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads Material Icons font into the Graphics Environment for icon rendering.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -143,13 +153,46 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:ad858d8487ebf4059c984ba6e019d46d8" id="r_ad858d8487ebf4059c984ba6e019d46d8"><td class="memItemLeft">static final JLabel&#160;</td><td class="memItemRight"><a class="el" href="#ad858d8487ebf4059c984ba6e019d46d8">DUMMY_JLABEL</a> = new JLabel()</td></tr>
 <tr class="memitem:ae2ad62fcc25b151aa21c2a56a6766696" id="r_ae2ad62fcc25b151aa21c2a56a6766696"><td class="memItemLeft">static final String&#160;</td><td class="memItemRight"><a class="el" href="#ae2ad62fcc25b151aa21c2a56a6766696">FONT_LUCIOLE_PATH</a> = &quot;/font/Luciole-Regular.ttf&quot;</td></tr>
 <tr class="memitem:a74661d9828b28d8d9a624bc4360b0c84" id="r_a74661d9828b28d8d9a624bc4360b0c84"><td class="memItemLeft">static final String&#160;</td><td class="memItemRight"><a class="el" href="#a74661d9828b28d8d9a624bc4360b0c84">FONT_MATERIAL_ICONS_PATH</a> = &quot;/font/MaterialIcons-Regular.ttf&quot;</td></tr>
-<tr class="memitem:a461d015dc1209467040402b4753dd274" id="r_a461d015dc1209467040402b4753dd274"><td class="memItemLeft">static final double&#160;</td><td class="memItemRight"><a class="el" href="#a461d015dc1209467040402b4753dd274">FONT_SHIFT_DOWN</a> = 2.5</td></tr>
 <tr class="memitem:a93dd4377071409c701eff80845973862" id="r_a93dd4377071409c701eff80845973862"><td class="memItemLeft">static final Font&#160;</td><td class="memItemRight"><a class="el" href="#a93dd4377071409c701eff80845973862">JRE_GUARANTEED_FONT_FALLBACK_FOR_UNIT_TESTS</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Singleton responsible for loading and applying custom fonts in the Swing UI. </p>
-<p>It loads the <b>Luciole font</b> as the default <code><a class="el" href="">UIManager</a></code> font (with vertical adjustment) and registers the <b>Material Icons font</b> for use in specialized UI components. This class is accessed via the <code class="JavaDocCode">INSTANCE</code> enum constant. </p>
+<div class="textblock"><p>Singleton responsible for loading, applying, and scaling custom fonts in the Swing UI. </p>
+<p>This manager handles the <b>Luciole</b> and <b>Material Icons</b> fonts. It automatically calculates vertical offsets and scaling ratios to ensure consistent rendering across different operating systems (Windows, Linux) and High-DPI displays. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ac81bc280b6595dbb001f8358a2b8ceb3" name="ac81bc280b6595dbb001f8358a2b8ceb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81bc280b6595dbb001f8358a2b8ceb3">&#9670;&#160;</a></span>calculateVerticalOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fr.softsf.canscan.util.FontManager.calculateVerticalOffset </td>
+          <td>(</td>
+          <td class="paramtype">Font</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the vertical offset required to center the font baseline. </p>
+<p>*</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">font</td><td>The font to measure.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The calculated Y-axis translation. </dd></dl>
+
+</div>
+</div>
 <a id="a22ce663b6ae70895f35b2cc8857a2141" name="a22ce663b6ae70895f35b2cc8857a2141"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a22ce663b6ae70895f35b2cc8857a2141">&#9670;&#160;</a></span>getCharWidth()</h2>
 
@@ -165,9 +208,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the reference character width based on 'W'. </p>
-<p>Uses an internal JLabel context to calculate exact metrics.</p>
-<dl class="section return"><dt>Returns</dt><dd>The width of 'W' in pixels. </dd></dl>
+<p>Returns the width of a reference character ('W') for grid alignments. </p>
+<ul>
+<li><dl class="section return"><dt>Returns</dt><dd>Width in pixels. </dd></dl>
+</li>
+</ul>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
@@ -200,9 +245,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves <code><a class="el" href="">FontMetrics</a></code> safely. </p>
-<p>Guarantees non-null return, resolving the Font and relying on client catch blocks for fault tolerance in headless environments.</p>
-<dl class="section return"><dt>Returns</dt><dd>The real <code><a class="el" href="">FontMetrics</a></code> object. </dd></dl>
+<p>Retrieves the current font metrics from UIManager or provides a JRE fallback. </p>
+<ul>
+<li><dl class="section return"><dt>Returns</dt><dd>Valid FontMetrics object. </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>
@@ -221,13 +268,49 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the total line height (ascent + descent + leading). </p>
-<dl class="section return"><dt>Returns</dt><dd>The line height in pixels. </dd></dl>
+<p>Returns the total line height based on current UI font metrics. </p>
+<ul>
+<li><dl class="section return"><dt>Returns</dt><dd>Height in pixels (ascent + descent + leading). </dd></dl>
+</li>
+</ul>
 <div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_a0059f88bdf6d679363a86fd8206e1971_cgraph.svg" width="435" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6d2ac20d121fffe69bab7274b377fb8e" name="a6d2ac20d121fffe69bab7274b377fb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2ac20d121fffe69bab7274b377fb8e">&#9670;&#160;</a></span>getScaledDimension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fr.softsf.canscan.util.FontManager.getScaledDimension </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>basePx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates a scaled dimension based on the current font's line height. </p>
+<p>This ensures graphical elements (like QR Codes) maintain visual consistency between Windows (HiDPI) and Linux environments.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">basePx</td><td>The reference dimension in pixels (e.g., 50px). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The scaled dimension adjusted for the current OS scaling factor. </dd></dl>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_a6d2ac20d121fffe69bab7274b377fb8e_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -247,16 +330,12 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes and sets the <b>Luciole font</b> as the default Swing UI font (including scaling/shifting). </p>
-<p>It also loads and registers the <b>Material Icons font</b> for UI components.</p><ul>
-<li></li>
-</ul>
-<p>The UI is updated asynchronously on the EDT using <code><a class="el" href="">SwingUtilities#invokeLater(Runnable)</a></code> after fonts are loaded. </p>
-<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<p>Entry point to load resources and refresh the Look and Feel. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_ae28fec4c553db3b3c347e9af1b2f57ff_cgraph.svg" width="480" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_ae28fec4c553db3b3c347e9af1b2f57ff_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -284,6 +363,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Loads the Luciole TTF, registers it in the environment, and applies it to UIManager. </p>
+<p>Includes automated baseline correction via AffineTransform. </p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_af9227cd80e4e531e1279363241f87193_cgraph.svg" width="515" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a9efcfe369b3d1cac6b75b8e15d782be5" name="a9efcfe369b3d1cac6b75b8e15d782be5"></a>
@@ -309,12 +397,55 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Loads Material Icons (TTF) and registers it in the JVM's Graphics Environment. </p>
-<p>The font is then accessible using the family name "Material Icons". </p>
+<p>Loads Material Icons font into the Graphics Environment for icon rendering. </p>
 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a005c2fcbf201969ccf08c3a6f5ef2f50" name="a005c2fcbf201969ccf08c3a6f5ef2f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005c2fcbf201969ccf08c3a6f5ef2f50">&#9670;&#160;</a></span>BASE_LINE_HEIGHT_REFERENCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"> final double fr.softsf.canscan.util.FontManager.BASE_LINE_HEIGHT_REFERENCE = 16.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a186e58d3601ac4781ae2e2698a5e68c5" name="a186e58d3601ac4781ae2e2698a5e68c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186e58d3601ac4781ae2e2698a5e68c5">&#9670;&#160;</a></span>BASELINE_CORRECTION_FACTOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"> final double fr.softsf.canscan.util.FontManager.BASELINE_CORRECTION_FACTOR = 0.11</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a43e7e34addacf43a3b39c128b48a3fa2" name="a43e7e34addacf43a3b39c128b48a3fa2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43e7e34addacf43a3b39c128b48a3fa2">&#9670;&#160;</a></span>DEFAULT_FONT</h2>
 
@@ -392,28 +523,6 @@ Static Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"> final String fr.softsf.canscan.util.FontManager.FONT_MATERIAL_ICONS_PATH = &quot;/font/MaterialIcons-Regular.ttf&quot;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a461d015dc1209467040402b4753dd274" name="a461d015dc1209467040402b4753dd274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a461d015dc1209467040402b4753dd274">&#9670;&#160;</a></span>FONT_SHIFT_DOWN</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"> final double fr.softsf.canscan.util.FontManager.FONT_SHIFT_DOWN = 2.5</td>
         </tr>
       </table>
   </td>

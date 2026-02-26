@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html" target="_top" xlink:title="Suite de tests unitaires pour la gestion des fenêtres contextuelles via MyPopup.">
 <polygon fill="white" stroke="#666666" points="144.25,-32 0,-32 0,0 144.25,0 144.25,-32"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.MyPopup</text>
 <text text-anchor="middle" x="72.12" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest</text>

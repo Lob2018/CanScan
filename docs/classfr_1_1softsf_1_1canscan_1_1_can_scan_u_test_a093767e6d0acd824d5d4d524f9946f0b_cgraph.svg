@@ -30,10 +30,19 @@
 </a>
 </g>
 </g>
+<!-- Node1&#45;&gt;Node1 -->
+<g id="edge3_Node000001_Node000001" class="edge">
+<title>Node1&#45;&gt;Node1</title>
+<g id="a_edge3_Node000001_Node000001"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M57.04,-63.21C53.99,-72.8 66.39,-81 94.25,-81 110.79,-81 121.88,-78.11 127.53,-73.75"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="130.71,-75.22 130.93,-64.63 124.16,-72.77 130.71,-75.22"/>
+</a>
+</g>
+</g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#abe028cb3381791e1ae35aaedbdf52e9b" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#abe028cb3381791e1ae35aaedbdf52e9b" target="_top" xlink:title="Crée un fichier image temporaire pour les besoins des tests.">
 <polygon fill="white" stroke="#666666" points="361.62,-82 228.62,-82 228.62,-50 361.62,-50 361.62,-82"/>
 <text text-anchor="start" x="236.62" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
 <text text-anchor="middle" x="295.12" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest.createTestLogoFile</text>

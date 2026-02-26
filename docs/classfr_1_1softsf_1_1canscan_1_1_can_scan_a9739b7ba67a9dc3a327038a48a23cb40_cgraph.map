@@ -14,7 +14,7 @@
 <area shape="poly" id="edge29_Node000002_Node000027" title=" " alt="" coords="471,440,529,433,530,438,471,445"/>
 <area shape="rect" id="Node000028" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a358629f85831dc6cd4978c8854d88561" title="Configures sliders for logo margin and ratio." alt="" coords="545,465,773,508"/>
 <area shape="poly" id="edge30_Node000002_Node000028" title=" " alt="" coords="471,462,530,469,529,474,471,467"/>
-<area shape="rect" id="Node000029" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0a52159db640660477196e337ec62a9b" title="Finalizes window layout and dimensions." alt="" coords="545,532,773,575"/>
+<area shape="rect" id="Node000029" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0a52159db640660477196e337ec62a9b" title="Finalizes layout and dimensions using dynamic system metrics." alt="" coords="545,532,773,575"/>
 <area shape="poly" id="edge31_Node000002_Node000029" title=" " alt="" coords="470,473,498,484,523,501,546,518,560,524,558,528,544,522,519,505,496,489,468,478"/>
 <area shape="rect" id="Node000032" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6804e999a867e3d11b3d77e24f9b789e" title="Sets the application window icon using an image resource." alt="" coords="545,599,773,641"/>
 <area shape="poly" id="edge34_Node000002_Node000032" title=" " alt="" coords="453,473,477,483,499,497,516,519,523,542,527,564,537,586,532,588,522,566,518,543,511,521,495,501,475,487,451,478"/>

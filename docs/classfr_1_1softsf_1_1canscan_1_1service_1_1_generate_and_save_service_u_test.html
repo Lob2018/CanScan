@@ -106,6 +106,9 @@ $(function() {
   <div class="headertitle"><div class="title">fr.softsf.canscan.service.GenerateAndSaveServiceUTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Suite de tests unitaires pour le service de génération et de sauvegarde des fichiers QR.  
+ <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.service.GenerateAndSaveServiceUTest:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -116,9 +119,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:afc0161bc9c6467f78141fd8e50f3c824" id="r_afc0161bc9c6467f78141fd8e50f3c824"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc0161bc9c6467f78141fd8e50f3c824">givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension</a> ()</td></tr>
+<tr class="memdesc:afc0161bc9c6467f78141fd8e50f3c824"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie l'ajout automatique de l'extension .png si elle est absente lors de la sélection.  <br /></td></tr>
 <tr class="memitem:a1752d1c6253c33de2489f5db76a7933f" id="r_a1752d1c6253c33de2489f5db76a7933f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1752d1c6253c33de2489f5db76a7933f">givenFileWithPngExtension_whenGetSelectedPngFile_thenReturnSameFile</a> ()</td></tr>
+<tr class="memdesc:a1752d1c6253c33de2489f5db76a7933f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que l'extension .png est conservée si elle est déjà présente.  <br /></td></tr>
 <tr class="memitem:aaca40c65c1e07fff7093b9a330098a00" id="r_aaca40c65c1e07fff7093b9a330098a00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaca40c65c1e07fff7093b9a330098a00">givenNonExistingFile_whenResolveFileNameConflict_thenReturnSameFile</a> ()</td></tr>
+<tr class="memdesc:aaca40c65c1e07fff7093b9a330098a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie qu'aucun conflit n'est détecté pour un nouveau fichier.  <br /></td></tr>
 <tr class="memitem:aedafb42d0944bf08f4dbfc97d2a4bff4" id="r_aedafb42d0944bf08f4dbfc97d2a4bff4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aedafb42d0944bf08f4dbfc97d2a4bff4">setUp</a> ()</td></tr>
+<tr class="memdesc:aedafb42d0944bf08f4dbfc97d2a4bff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation du service avec un mock pour la partie rendu d'image.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pac-attribs" class="groupheader"><a id="pac-attribs" name="pac-attribs"></a>
 Package Attributes</h2></td></tr>
@@ -128,7 +135,9 @@ Package Attributes</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:adaa84ca2054fb9000c8dbe37f5cb0528" id="r_adaa84ca2054fb9000c8dbe37f5cb0528"><td class="memItemLeft"><a class="el" href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html">GenerateAndSaveService</a>&#160;</td><td class="memItemRight"><a class="el" href="#adaa84ca2054fb9000c8dbe37f5cb0528">qrService</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Suite de tests unitaires pour le service de génération et de sauvegarde des fichiers QR. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="afc0161bc9c6467f78141fd8e50f3c824" name="afc0161bc9c6467f78141fd8e50f3c824"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc0161bc9c6467f78141fd8e50f3c824">&#9670;&#160;</a></span>givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension()</h2>
 
@@ -151,6 +160,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie l'ajout automatique de l'extension .png si elle est absente lors de la sélection. </p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test_afc0161bc9c6467f78141fd8e50f3c824_cgraph.svg" width="290" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -177,6 +194,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie que l'extension .png est conservée si elle est déjà présente. </p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test_a1752d1c6253c33de2489f5db76a7933f_cgraph.svg" width="295" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="aaca40c65c1e07fff7093b9a330098a00" name="aaca40c65c1e07fff7093b9a330098a00"></a>
@@ -202,6 +227,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie qu'aucun conflit n'est détecté pour un nouveau fichier. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test_aaca40c65c1e07fff7093b9a330098a00_cgraph.svg" width="311" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="aedafb42d0944bf08f4dbfc97d2a4bff4" name="aedafb42d0944bf08f4dbfc97d2a4bff4"></a>
@@ -226,6 +259,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initialisation du service avec un mock pour la partie rendu d'image. </p>
 
 </div>
 </div>

@@ -1,5 +1,6 @@
 <map id="fr.softsf.canscan.CanScanUTest.givenQrImage_whenDrawFinderPatterns_thenAllThreePatternsDrawn" name="fr.softsf.canscan.CanScanUTest.givenQrImage_whenDrawFinderPatterns_thenAllThreePatternsDrawn">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,31,252,89"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="77,30,78,20,87,11,104,6,129,4,157,7,173,14,171,19,155,12,128,9,105,11,90,16,83,22,82,31"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a5724cc65ce9613fa741b437515143b51" title="Renders the three QR code finder patterns at the corners using the specified style." alt="" coords="300,39,488,81"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,57,284,57,284,63,252,63"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a8c9390de6c95571f3660c32e90662535" title="Draws a QR code finder pattern with rounded corners at the specified pixel coordinates." alt="" coords="536,5,797,48"/>

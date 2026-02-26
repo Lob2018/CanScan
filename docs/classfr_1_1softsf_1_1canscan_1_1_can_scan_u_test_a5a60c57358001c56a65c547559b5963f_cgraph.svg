@@ -49,7 +49,7 @@
 <script type="application/ecmascript">
 var viewWidth = 1230;
 var viewHeight = 363;
-var sectionId = 'dynsection-6';
+var sectionId = 'dynsection-11';
 </script>
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
 <svg id="graph" class="graph">
@@ -63,6 +63,15 @@ var sectionId = 'dynsection-6';
 <text text-anchor="start" x="8" y="-175.12" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
 <text text-anchor="start" x="8" y="-163.12" font-family="Helvetica,sans-Serif" font-size="10.00">UTest.givenConfigWithZeroMargin</text>
 <text text-anchor="middle" x="123.12" y="-151.12" font-family="Helvetica,sans-Serif" font-size="10.00">_whenGenerateQrCodeImage_thenReturnValidImage</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node1 -->
+<g id="edge20_Node000001_Node000001" class="edge">
+<title>Node1&#45;&gt;Node1</title>
+<g id="a_edge20_Node000001_Node000001"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M80.56,-188.84C77.08,-198.42 91.27,-206.62 123.12,-206.62 142.04,-206.62 154.73,-203.73 161.18,-199.38"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="164.38,-200.8 165.09,-190.23 157.95,-198.05 164.38,-200.8"/>
 </a>
 </g>
 </g>

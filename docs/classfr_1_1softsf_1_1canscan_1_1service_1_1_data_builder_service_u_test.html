@@ -106,6 +106,9 @@ $(function() {
   <div class="headertitle"><div class="title">fr.softsf.canscan.service.DataBuilderServiceUTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Suite de tests unitaires pour la construction des chaînes de données (MECARD, VEVENT).  
+ <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.service.DataBuilderServiceUTest:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -116,12 +119,19 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:a45c60a476e54711d48109e8c4d742e2d" id="r_a45c60a476e54711d48109e8c4d742e2d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a45c60a476e54711d48109e8c4d742e2d">givenAllMecardFieldsWhenBuildMecardThenReturnValidString</a> ()</td></tr>
+<tr class="memdesc:a45c60a476e54711d48109e8c4d742e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la génération d'une chaîne MECARD complète avec tous les attributs.  <br /></td></tr>
 <tr class="memitem:ab54c18c316279ddb8d6e1e2f005934a3" id="r_ab54c18c316279ddb8d6e1e2f005934a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab54c18c316279ddb8d6e1e2f005934a3">givenBlankMecardFieldsWhenBuildMecardThenReturnEmptyString</a> ()</td></tr>
+<tr class="memdesc:ab54c18c316279ddb8d6e1e2f005934a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie qu'une saisie vide pour MECARD retourne une chaîne vide.  <br /></td></tr>
 <tr class="memitem:ab1316b5ae490b5b7e557420f1aedf662" id="r_ab1316b5ae490b5b7e557420f1aedf662"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab1316b5ae490b5b7e557420f1aedf662">givenBlankMeetFieldsWhenBuildMeetThenReturnEmptyString</a> ()</td></tr>
+<tr class="memdesc:ab1316b5ae490b5b7e557420f1aedf662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie qu'une saisie vide pour MEET retourne une chaîne vide.  <br /></td></tr>
 <tr class="memitem:ac167992ecd6ad8e2c73b43212e000576" id="r_ac167992ecd6ad8e2c73b43212e000576"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac167992ecd6ad8e2c73b43212e000576">givenMeetFieldsWithGeoWhenBuildMeetThenIncludeGeoAndLocation</a> ()</td></tr>
+<tr class="memdesc:ac167992ecd6ad8e2c73b43212e000576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la génération d'un événement VEVENT incluant les coordonnées géographiques et le lien OSM.  <br /></td></tr>
 <tr class="memitem:af8451721e49c009b29f28a37584cda41" id="r_af8451721e49c009b29f28a37584cda41"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af8451721e49c009b29f28a37584cda41">givenMeetFieldsWithoutGeoWhenBuildMeetThenSkipGeoAndLocation</a> ()</td></tr>
+<tr class="memdesc:af8451721e49c009b29f28a37584cda41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que les champs GEO et LOCATION sont omis si les coordonnées sont absentes.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Suite de tests unitaires pour la construction des chaînes de données (MECARD, VEVENT). </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a45c60a476e54711d48109e8c4d742e2d" name="a45c60a476e54711d48109e8c4d742e2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45c60a476e54711d48109e8c4d742e2d">&#9670;&#160;</a></span>givenAllMecardFieldsWhenBuildMecardThenReturnValidString()</h2>
 
@@ -144,6 +154,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie la génération d'une chaîne MECARD complète avec tous les attributs. </p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test_a45c60a476e54711d48109e8c4d742e2d_cgraph.svg" width="284" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -170,6 +188,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie qu'une saisie vide pour MECARD retourne une chaîne vide. </p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test_ab54c18c316279ddb8d6e1e2f005934a3_cgraph.svg" width="356" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ab1316b5ae490b5b7e557420f1aedf662" name="ab1316b5ae490b5b7e557420f1aedf662"></a>
@@ -194,6 +220,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie qu'une saisie vide pour MEET retourne une chaîne vide. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test_ab1316b5ae490b5b7e557420f1aedf662_cgraph.svg" width="328" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -220,6 +254,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie la génération d'un événement VEVENT incluant les coordonnées géographiques et le lien OSM. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test_ac167992ecd6ad8e2c73b43212e000576_cgraph.svg" width="306" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="af8451721e49c009b29f28a37584cda41" name="af8451721e49c009b29f28a37584cda41"></a>
@@ -244,6 +286,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie que les champs GEO et LOCATION sont omis si les coordonnées sont absentes. </p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test_af8451721e49c009b29f28a37584cda41_cgraph.svg" width="307" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

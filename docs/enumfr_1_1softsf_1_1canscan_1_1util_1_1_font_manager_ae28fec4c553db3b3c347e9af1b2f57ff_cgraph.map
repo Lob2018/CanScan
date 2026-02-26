@@ -1,7 +1,9 @@
 <map id="fr.softsf.canscan.util.FontManager.initialize" name="fr.softsf.canscan.util.FontManager.initialize">
-<area shape="rect" id="Node000001" title="Initializes and sets the Luciole font as the default Swing UI font (including scaling/shifting)." alt="" coords="5,39,176,81"/>
-<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#af9227cd80e4e531e1279363241f87193" title=" " alt="" coords="224,5,474,48"/>
+<area shape="rect" id="Node000001" title="Entry point to load resources and refresh the Look and Feel." alt="" coords="5,39,176,81"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#af9227cd80e4e531e1279363241f87193" title="Loads the Luciole TTF, registers it in the environment, and applies it to UIManager." alt="" coords="224,5,474,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,46,208,42,209,47,177,52"/>
-<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#a9efcfe369b3d1cac6b75b8e15d782be5" title="Loads Material Icons (TTF) and registers it in the JVM&#39;s Graphics Environment." alt="" coords="247,72,450,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,68,232,76,231,81,176,74"/>
+<area shape="rect" id="Node000004" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#a9efcfe369b3d1cac6b75b8e15d782be5" title="Loads Material Icons font into the Graphics Environment for icon rendering." alt="" coords="247,72,450,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,68,232,76,231,81,176,74"/>
+<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ac81bc280b6595dbb001f8358a2b8ceb3" title="Calculates the vertical offset required to center the font baseline." alt="" coords="522,5,727,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,24,506,24,506,29,474,29"/>
 </map>

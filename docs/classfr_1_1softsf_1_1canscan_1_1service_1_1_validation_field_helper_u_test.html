@@ -106,6 +106,9 @@ $(function() {
   <div class="headertitle"><div class="title">fr.softsf.canscan.service.ValidationFieldHelperUTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Suite de tests unitaires pour le service de validation des champs de saisie (UI).  
+ <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.service.ValidationFieldHelperUTest:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -116,16 +119,27 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:adbd20647e80bf7f4206ddd1a1b5ca4d1" id="r_adbd20647e80bf7f4206ddd1a1b5ca4d1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adbd20647e80bf7f4206ddd1a1b5ca4d1">givenInvalidSizeFieldWhenValidateAndGetSizeThenReturnDefaultAndResetField</a> ()</td></tr>
+<tr class="memdesc:adbd20647e80bf7f4206ddd1a1b5ca4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie le retour à la valeur par défaut et la réinitialisation du champ en cas de saisie invalide.  <br /></td></tr>
 <tr class="memitem:a8843c05d0b2e63bf95cc81551c95ec5c" id="r_a8843c05d0b2e63bf95cc81551c95ec5c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8843c05d0b2e63bf95cc81551c95ec5c">givenMeetTitleWithAccentsAndSpacesWhenValidateAndGetMeetUIDThenReturnSanitizedUid</a> ()</td></tr>
+<tr class="memdesc:a8843c05d0b2e63bf95cc81551c95ec5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la sanitisation d'un titre de réunion (suppression accents, espaces, ponctuation).  <br /></td></tr>
 <tr class="memitem:ac4b383260ad2af84f189f7d577b9329d" id="r_ac4b383260ad2af84f189f7d577b9329d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4b383260ad2af84f189f7d577b9329d">givenNegativeSliderValueWhenValidateAndGetMarginThenReturnZero</a> ()</td></tr>
+<tr class="memdesc:ac4b383260ad2af84f189f7d577b9329d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que les marges négatives sont ramenées à zéro.  <br /></td></tr>
 <tr class="memitem:a901e4dee2acad2989f7b19b47758b3b7" id="r_a901e4dee2acad2989f7b19b47758b3b7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a901e4dee2acad2989f7b19b47758b3b7">givenOverMaximumSliderValueWhenValidateAndGetRatioThenReturnOne</a> ()</td></tr>
+<tr class="memdesc:a901e4dee2acad2989f7b19b47758b3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie le plafonnement du ratio à 1.0 en cas de dépassement.  <br /></td></tr>
 <tr class="memitem:a71914df0c708c7aac723602818b17b55" id="r_a71914df0c708c7aac723602818b17b55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a71914df0c708c7aac723602818b17b55">givenTooLargeSliderValueWhenValidateAndGetMarginThenReturnMaximum</a> ()</td></tr>
+<tr class="memdesc:a71914df0c708c7aac723602818b17b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie le plafonnement de la marge à sa valeur maximale autorisée (10).  <br /></td></tr>
 <tr class="memitem:a6bb9891c885f9fb10776ab1734cbc11e" id="r_a6bb9891c885f9fb10776ab1734cbc11e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6bb9891c885f9fb10776ab1734cbc11e">givenTooSmallSizeFieldWhenValidateAndGetSizeThenReturnMinimum</a> ()</td></tr>
+<tr class="memdesc:a6bb9891c885f9fb10776ab1734cbc11e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que les tailles trop petites sont ramenées au minimum (10).  <br /></td></tr>
 <tr class="memitem:a1f2a16008b2bcf7b2f4dfca87d582da1" id="r_a1f2a16008b2bcf7b2f4dfca87d582da1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f2a16008b2bcf7b2f4dfca87d582da1">givenValidSizeFieldWhenValidateAndGetSizeThenReturnSize</a> ()</td></tr>
+<tr class="memdesc:a1f2a16008b2bcf7b2f4dfca87d582da1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la validation d'une taille de QR Code correcte.  <br /></td></tr>
 <tr class="memitem:afbf4b3080d612762ef4a9f0776f0a0b4" id="r_afbf4b3080d612762ef4a9f0776f0a0b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbf4b3080d612762ef4a9f0776f0a0b4">givenValidSliderValueWhenValidateAndGetMarginThenReturnMargin</a> ()</td></tr>
+<tr class="memdesc:afbf4b3080d612762ef4a9f0776f0a0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la récupération d'une valeur de marge valide.  <br /></td></tr>
 <tr class="memitem:a390af0a3343db0e8c8facbd178e2afa7" id="r_a390af0a3343db0e8c8facbd178e2afa7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a390af0a3343db0e8c8facbd178e2afa7">givenValidSliderValueWhenValidateAndGetRatioThenReturnNormalizedRatio</a> ()</td></tr>
+<tr class="memdesc:a390af0a3343db0e8c8facbd178e2afa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie la normalisation du ratio (pourcentage vers double entre 0 et 1).  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Suite de tests unitaires pour le service de validation des champs de saisie (UI). </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="adbd20647e80bf7f4206ddd1a1b5ca4d1" name="adbd20647e80bf7f4206ddd1a1b5ca4d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbd20647e80bf7f4206ddd1a1b5ca4d1">&#9670;&#160;</a></span>givenInvalidSizeFieldWhenValidateAndGetSizeThenReturnDefaultAndResetField()</h2>
 
@@ -148,6 +162,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie le retour à la valeur par défaut et la réinitialisation du champ en cas de saisie invalide. </p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_adbd20647e80bf7f4206ddd1a1b5ca4d1_cgraph.svg" width="275" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -174,6 +196,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie la sanitisation d'un titre de réunion (suppression accents, espaces, ponctuation). </p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a8843c05d0b2e63bf95cc81551c95ec5c_cgraph.svg" width="308" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ac4b383260ad2af84f189f7d577b9329d" name="ac4b383260ad2af84f189f7d577b9329d"></a>
@@ -198,6 +228,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie que les marges négatives sont ramenées à zéro. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_ac4b383260ad2af84f189f7d577b9329d_cgraph.svg" width="274" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -224,6 +262,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie le plafonnement du ratio à 1.0 en cas de dépassement. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a901e4dee2acad2989f7b19b47758b3b7_cgraph.svg" width="286" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a71914df0c708c7aac723602818b17b55" name="a71914df0c708c7aac723602818b17b55"></a>
@@ -248,6 +294,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie le plafonnement de la marge à sa valeur maximale autorisée (10). </p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a71914df0c708c7aac723602818b17b55_cgraph.svg" width="275" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -274,6 +328,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie que les tailles trop petites sont ramenées au minimum (10). </p>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a6bb9891c885f9fb10776ab1734cbc11e_cgraph.svg" width="291" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a1f2a16008b2bcf7b2f4dfca87d582da1" name="a1f2a16008b2bcf7b2f4dfca87d582da1"></a>
@@ -298,6 +360,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie la validation d'une taille de QR Code correcte. </p>
+<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a1f2a16008b2bcf7b2f4dfca87d582da1_cgraph.svg" width="264" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -324,6 +394,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie la récupération d'une valeur de marge valide. </p>
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_afbf4b3080d612762ef4a9f0776f0a0b4_cgraph.svg" width="288" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a390af0a3343db0e8c8facbd178e2afa7" name="a390af0a3343db0e8c8facbd178e2afa7"></a>
@@ -348,6 +426,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie la normalisation du ratio (pourcentage vers double entre 0 et 1). </p>
+<div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test_a390af0a3343db0e8c8facbd178e2afa7_cgraph.svg" width="280" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

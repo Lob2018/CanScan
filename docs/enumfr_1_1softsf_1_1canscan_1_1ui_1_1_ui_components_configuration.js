@@ -26,7 +26,7 @@ var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration =
     [ "COORDINATES_FIELDS_GAP", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a9f9666534b9dffef8e4e950f278230c1", null ],
     [ "CREATE_MODE_PANEL", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a600fae62d64747c2675b5c896fbbdca8", null ],
     [ "GBC_HALF_WEIGHT_X", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#abcbd64afa72da45efd00b7de3019f0da", null ],
-    [ "GENERATE_BUTTON_EXTRA_HEIGHT", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ab72a39ead464eaa891ee28d3d0e2c0f2", null ],
+    [ "GENRATE_BUTTON_HEIGHT_SCALING_FACTOR", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a8cd55d4d6c109ef63eac2c3ad24620d4", null ],
     [ "INSTANCE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa21f1786237fa7f4f89cb5ce20cae717", null ],
     [ "MAJOR_TICK_SPACING", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5c170899beb995a0b893f81d6a678ee6", null ],
     [ "MULTILINE_TEXT_FIELDS_ROWS", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a34d041c1f968ed8160ec44cb6e15ab22", null ],

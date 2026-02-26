@@ -1,0 +1,4 @@
+<map id="fr.softsf.canscan.util.CoordinateHelperUTest.givenValidLongitudeWhenGetValidatedCoordinateThenReturnTruncatedValue" name="fr.softsf.canscan.util.CoordinateHelperUTest.givenValidLongitudeWhenGetValidatedCoordinateThenReturnTruncatedValue">
+<area shape="rect" id="Node000001" title="Vérifie que la longitude est correctement tronquée après validation." alt="" coords="5,29,322,88"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="102,29,104,19,115,10,135,5,164,3,197,5,217,13,215,18,196,11,163,8,136,10,117,15,108,21,108,29"/>
+</map>

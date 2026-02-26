@@ -10,6 +10,5 @@ var searchData=
   ['north_5fpanel_7',['NORTH_PANEL',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a5a943406c18be186d8fd93a288a46582',1,'fr::softsf::canscan::CanScan']]],
   ['northpanelgridbagconstraints_8',['northPanelGridBagConstraints',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb5550da33925e95999aae23f525f7c5',1,'fr::softsf::canscan::CanScan']]],
   ['northpanelwrapper_9',['northPanelWrapper',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3858b49959ca85feb167c004f0f3fa7f',1,'fr::softsf::canscan::CanScan']]],
-  ['nowutc_10',['nowUtc',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a17871d50aacaf2ca58aef8bc023b45fd',1,'fr::softsf::canscan::util::DateHelper']]],
-  ['npechecklatestversion_11',['npeCheckLatestVersion',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#adee1a8191191ecacfa90cdc9212fe73f',1,'fr::softsf::canscan::service::VersionService']]]
+  ['nowutc_10',['nowUtc',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a17871d50aacaf2ca58aef8bc023b45fd',1,'fr::softsf::canscan::util::DateHelper']]]
 ];

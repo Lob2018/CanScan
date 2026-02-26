@@ -1,0 +1,4 @@
+<map id="fr.softsf.canscan.util.FontManagerUTest.givenLargeFont_whenGetScaledDimension_thenReturnLargerValue" name="fr.softsf.canscan.util.FontManagerUTest.givenLargeFont_whenGetScaledDimension_thenReturnLargerValue">
+<area shape="rect" id="Node000001" title="Verifies scaling with a large font to simulate HiDPI/Windows Scaling." alt="" coords="5,29,327,88"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="104,29,105,19,117,10,137,5,166,3,200,5,220,13,219,18,199,11,166,8,138,10,119,15,110,21,109,29"/>
+</map>

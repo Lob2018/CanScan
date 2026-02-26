@@ -1,0 +1,4 @@
+<map id="fr.softsf.canscan.service.DataBuilderServiceUTest.givenMeetFieldsWithoutGeoWhenBuildMeetThenSkipGeoAndLocation" name="fr.softsf.canscan.service.DataBuilderServiceUTest.givenMeetFieldsWithoutGeoWhenBuildMeetThenSkipGeoAndLocation">
+<area shape="rect" id="Node000001" title="Vérifie que les champs GEO et LOCATION sont omis si les coordonnées sont absentes." alt="" coords="5,29,302,104"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="95,28,99,18,110,10,128,5,154,3,184,6,203,13,201,18,183,11,153,8,129,10,113,15,103,21,100,30"/>
+</map>

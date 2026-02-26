@@ -106,6 +106,9 @@ $(function() {
   <div class="headertitle"><div class="title">fr.softsf.canscan.util.CoordinateHelperUTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Suite de tests unitaires pour la validation et le formatage des coordonnées géographiques.  
+ <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.util.CoordinateHelperUTest:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
@@ -116,12 +119,19 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:a46400c27239daa126f25353a47be47ce" id="r_a46400c27239daa126f25353a47be47ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46400c27239daa126f25353a47be47ce">givenInvalidInputWhenGetValidatedCoordinateThenReturnEmptyAndClearField</a> (String input, boolean isLatitude)</td></tr>
+<tr class="memdesc:a46400c27239daa126f25353a47be47ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que les entrées hors limites ou mal formatées vident le champ et retournent une chaîne vide.  <br /></td></tr>
 <tr class="memitem:a3e293ff36078ca4ca25d0c4f1a2cc290" id="r_a3e293ff36078ca4ca25d0c4f1a2cc290"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3e293ff36078ca4ca25d0c4f1a2cc290">givenMinusSignOnlyWhenGetValidatedCoordinateThenReturnMinusZero</a> ()</td></tr>
+<tr class="memdesc:a3e293ff36078ca4ca25d0c4f1a2cc290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie le comportement spécifique lorsqu'un signe moins est saisi seul.  <br /></td></tr>
 <tr class="memitem:a57980184be1e504a5b1fc730db1595cf" id="r_a57980184be1e504a5b1fc730db1595cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a57980184be1e504a5b1fc730db1595cf">givenNegativeLatitudeWhenGetValidatedCoordinateThenReturnTruncatedNegativeValue</a> ()</td></tr>
+<tr class="memdesc:a57980184be1e504a5b1fc730db1595cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie le traitement des latitudes négatives.  <br /></td></tr>
 <tr class="memitem:ae53136a61de5664d14dea628f4f170df" id="r_ae53136a61de5664d14dea628f4f170df"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae53136a61de5664d14dea628f4f170df">givenValidLatitudeWhenGetValidatedCoordinateThenReturnTruncatedValue</a> ()</td></tr>
+<tr class="memdesc:ae53136a61de5664d14dea628f4f170df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que la latitude est correctement tronquée après validation.  <br /></td></tr>
 <tr class="memitem:a8460686dfd18a01d2465bdb32235020f" id="r_a8460686dfd18a01d2465bdb32235020f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8460686dfd18a01d2465bdb32235020f">givenValidLongitudeWhenGetValidatedCoordinateThenReturnTruncatedValue</a> ()</td></tr>
+<tr class="memdesc:a8460686dfd18a01d2465bdb32235020f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie que la longitude est correctement tronquée après validation.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Suite de tests unitaires pour la validation et le formatage des coordonnées géographiques. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a46400c27239daa126f25353a47be47ce" name="a46400c27239daa126f25353a47be47ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46400c27239daa126f25353a47be47ce">&#9670;&#160;</a></span>givenInvalidInputWhenGetValidatedCoordinateThenReturnEmptyAndClearField()</h2>
 
@@ -149,6 +159,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie que les entrées hors limites ou mal formatées vident le champ et retournent une chaîne vide. </p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test_a46400c27239daa126f25353a47be47ce_cgraph.svg" width="336" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a3e293ff36078ca4ca25d0c4f1a2cc290" name="a3e293ff36078ca4ca25d0c4f1a2cc290"></a>
@@ -173,6 +191,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie le comportement spécifique lorsqu'un signe moins est saisi seul. </p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test_a3e293ff36078ca4ca25d0c4f1a2cc290_cgraph.svg" width="283" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -199,6 +225,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie le traitement des latitudes négatives. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test_a57980184be1e504a5b1fc730db1595cf_cgraph.svg" width="379" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="ae53136a61de5664d14dea628f4f170df" name="ae53136a61de5664d14dea628f4f170df"></a>
@@ -224,6 +258,14 @@ Package Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Vérifie que la latitude est correctement tronquée après validation. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test_ae53136a61de5664d14dea628f4f170df_cgraph.svg" width="307" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a8460686dfd18a01d2465bdb32235020f" name="a8460686dfd18a01d2465bdb32235020f"></a>
@@ -248,6 +290,14 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Vérifie que la longitude est correctement tronquée après validation. </p>
+<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test_a8460686dfd18a01d2465bdb32235020f_cgraph.svg" width="327" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>

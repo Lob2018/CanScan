@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Suite de tests unitaires pour la construction des chaînes de données (MECARD, VEVENT).">
 <polygon fill="#999999" stroke="none" points="224.25,-212 0,-212 0,0 224.25,0 224.25,-212"/>
 <text text-anchor="start" x="56.62" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
 <text text-anchor="start" x="57" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">DataBuilderServiceUTest</text>

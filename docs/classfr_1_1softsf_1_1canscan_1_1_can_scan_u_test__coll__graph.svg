@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript">
-var viewWidth = 914;
+var viewWidth = 911;
 var viewHeight = 4834;
 var sectionId = 'dynsection-0';
 </script>
@@ -58,64 +58,64 @@ var sectionId = 'dynsection-0';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
-<polygon fill="#999999" stroke="none" points="783.78,-524 553.53,-524 553.53,0 783.78,0 783.78,-524"/>
-<text text-anchor="start" x="610.15" y="-510.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
-<text text-anchor="start" x="655.53" y="-498.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest</text>
-<text text-anchor="start" x="557.53" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">File tempDir</text>
-<text text-anchor="start" x="557.53" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenAllBlankFields</text>
-<text text-anchor="start" x="567.53" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenBuildMecard_thenReturnEmpty</text>
-<text text-anchor="start" x="567.53" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">String()</text>
-<text text-anchor="start" x="557.53" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenAllContactFields</text>
-<text text-anchor="start" x="567.53" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenBuildMecard_thenReturnComplete</text>
-<text text-anchor="start" x="567.53" y="-402.5" font-family="Helvetica,sans-Serif" font-size="10.00">MecardString()</text>
-<text text-anchor="start" x="557.53" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlackColor</text>
-<text text-anchor="start" x="567.53" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenConvertToHex_thenReturn000000()</text>
-<text text-anchor="start" x="557.53" y="-358.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-358.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlackWhiteImage</text>
-<text text-anchor="start" x="567.53" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenDrawSquareFinderPattern</text>
-<text text-anchor="start" x="567.53" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenPatternDrawnAtOrigin()</text>
-<text text-anchor="start" x="557.53" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlueColorSelected</text>
-<text text-anchor="start" x="567.53" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenChooseBgColor_thenButtonText</text>
-<text text-anchor="start" x="567.53" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndColorUpdated()</text>
-<text text-anchor="start" x="557.53" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenColorDialogCancelled</text>
-<text text-anchor="start" x="567.53" y="-266.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenChooseColor_thenButtonTextUnchanged()</text>
-<text text-anchor="start" x="557.53" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithCustom</text>
-<text text-anchor="start" x="567.53" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00">Colors_whenGenerateQrCodeImage</text>
-<text text-anchor="start" x="567.53" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn300x300Image()</text>
-<text text-anchor="start" x="557.53" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithLarge</text>
-<text text-anchor="start" x="567.53" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogoRatio_whenGenerateQrCodeImage</text>
-<text text-anchor="start" x="567.53" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturnValidImage()</text>
-<text text-anchor="start" x="557.53" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithoutLogo</text>
-<text text-anchor="start" x="567.53" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenGenerateQrCodeImage</text>
-<text text-anchor="start" x="567.53" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn400x400Image()</text>
-<text text-anchor="start" x="557.53" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="567.53" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithRounded</text>
-<text text-anchor="start" x="567.53" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">Modules_whenGenerateQrCodeImage</text>
-<text text-anchor="start" x="567.53" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn400x400Image()</text>
-<text text-anchor="start" x="567.53" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 33 more...</text>
-<text text-anchor="start" x="559.03" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="567.53" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">File createTestLogoFile</text>
-<text text-anchor="start" x="567.53" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String filename)</text>
-<text text-anchor="start" x="559.03" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="567.53" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">File createTestLogoFileWith</text>
-<text text-anchor="start" x="567.53" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">Alpha()</text>
-<text text-anchor="start" x="559.03" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="567.53" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">void executeWithoutDialog</text>
-<text text-anchor="start" x="567.53" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Runnable test)</text>
-<polygon fill="#666666" stroke="#666666" points="553.53,-494 553.53,-494 783.78,-494 783.78,-494 553.53,-494"/>
-<polygon fill="#666666" stroke="#666666" points="553.53,-478 553.53,-478 565.53,-478 565.53,-478 553.53,-478"/>
-<polygon fill="#666666" stroke="#666666" points="565.53,-478 565.53,-478 783.78,-478 783.78,-478 565.53,-478"/>
-<polygon fill="none" stroke="#666666" points="553.53,0 553.53,-524 783.78,-524 783.78,0 553.53,0"/>
+<g id="a_Node000001"><a xlink:title="Suite de tests unitaires pour la logique principale de CanScan.">
+<polygon fill="#999999" stroke="none" points="781.07,-524 550.82,-524 550.82,0 781.07,0 781.07,-524"/>
+<text text-anchor="start" x="607.45" y="-510.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
+<text text-anchor="start" x="652.82" y="-498.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest</text>
+<text text-anchor="start" x="554.82" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">File tempDir</text>
+<text text-anchor="start" x="554.82" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenAllBlankFields</text>
+<text text-anchor="start" x="564.82" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenBuildMecard_thenReturnEmpty</text>
+<text text-anchor="start" x="564.82" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00">String()</text>
+<text text-anchor="start" x="554.82" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenAllContactFields</text>
+<text text-anchor="start" x="564.82" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenBuildMecard_thenReturnComplete</text>
+<text text-anchor="start" x="564.82" y="-402.5" font-family="Helvetica,sans-Serif" font-size="10.00">MecardString()</text>
+<text text-anchor="start" x="554.82" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlackColor</text>
+<text text-anchor="start" x="564.82" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenConvertToHex_thenReturn000000()</text>
+<text text-anchor="start" x="554.82" y="-358.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-358.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlackWhiteImage</text>
+<text text-anchor="start" x="564.82" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenDrawSquareFinderPattern</text>
+<text text-anchor="start" x="564.82" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenPatternDrawnAtOrigin()</text>
+<text text-anchor="start" x="554.82" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenBlueColorSelected</text>
+<text text-anchor="start" x="564.82" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenChooseBgColor_thenButtonText</text>
+<text text-anchor="start" x="564.82" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndColorUpdated()</text>
+<text text-anchor="start" x="554.82" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-278.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenColorDialogCancelled</text>
+<text text-anchor="start" x="564.82" y="-266.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenChooseColor_thenButtonTextUnchanged()</text>
+<text text-anchor="start" x="554.82" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithCustom</text>
+<text text-anchor="start" x="564.82" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00">Colors_whenGenerateQrCodeImage</text>
+<text text-anchor="start" x="564.82" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn300x300Image()</text>
+<text text-anchor="start" x="554.82" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithLarge</text>
+<text text-anchor="start" x="564.82" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogoRatio_whenGenerateQrCodeImage</text>
+<text text-anchor="start" x="564.82" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturnValidImage()</text>
+<text text-anchor="start" x="554.82" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-170.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithoutLogo</text>
+<text text-anchor="start" x="564.82" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">_whenGenerateQrCodeImage</text>
+<text text-anchor="start" x="564.82" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn400x400Image()</text>
+<text text-anchor="start" x="554.82" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="564.82" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">void givenConfigWithRounded</text>
+<text text-anchor="start" x="564.82" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">Modules_whenGenerateQrCodeImage</text>
+<text text-anchor="start" x="564.82" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">_thenReturn400x400Image()</text>
+<text text-anchor="start" x="564.82" y="-90.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 34 more...</text>
+<text text-anchor="start" x="556.32" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="564.82" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">File createTestLogoFile</text>
+<text text-anchor="start" x="564.82" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String filename)</text>
+<text text-anchor="start" x="556.32" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="564.82" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">File createTestLogoFileWith</text>
+<text text-anchor="start" x="564.82" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">Alpha()</text>
+<text text-anchor="start" x="556.32" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="564.82" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">void executeWithoutDialog</text>
+<text text-anchor="start" x="564.82" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Runnable test)</text>
+<polygon fill="#666666" stroke="#666666" points="550.82,-494 550.82,-494 781.07,-494 781.07,-494 550.82,-494"/>
+<polygon fill="#666666" stroke="#666666" points="550.82,-478 550.82,-478 562.82,-478 562.82,-478 550.82,-478"/>
+<polygon fill="#666666" stroke="#666666" points="562.82,-478 562.82,-478 781.07,-478 781.07,-478 562.82,-478"/>
+<polygon fill="none" stroke="#666666" points="550.82,0 550.82,-524 781.07,-524 781.07,0 550.82,0"/>
 </a>
 </g>
 </g>
@@ -123,127 +123,130 @@ var sectionId = 'dynsection-0';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html" target="_top" xlink:title="CanScan — Swing QR code generator with MECARD, MEET, and FREE modes.">
-<polygon fill="white" stroke="none" points="635.53,-1646 421.78,-1646 421.78,-578 635.53,-578 635.53,-1646"/>
-<text text-anchor="start" x="470.15" y="-1632.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
-<text text-anchor="start" x="427.28" y="-1616.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1616.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField adrField</text>
-<text text-anchor="start" x="427.28" y="-1600.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1600.5" font-family="Helvetica,sans-Serif" font-size="10.00">Color bgColor</text>
-<text text-anchor="start" x="427.28" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JButton bgColorButton</text>
-<text text-anchor="start" x="427.28" y="-1568.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1568.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JButton browseButton</text>
-<text text-anchor="start" x="427.28" y="-1552.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1552.5" font-family="Helvetica,sans-Serif" font-size="10.00">final CardLayout cardLayout</text>
-<text text-anchor="start" x="427.28" y="-1536.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1536.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JPanel cardPanel</text>
-<text text-anchor="start" x="427.28" y="-1520.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1520.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField emailField</text>
-<text text-anchor="start" x="427.28" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextArea freeField</text>
-<text text-anchor="start" x="427.28" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JRadioButton</text>
-<text text-anchor="start" x="435.78" y="-1476.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freeRadio</text>
-<text text-anchor="start" x="427.28" y="-1460.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1460.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JScrollPane freeScrollPane</text>
-<text text-anchor="start" x="435.78" y="-1444.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 30 more...</text>
-<text text-anchor="start" x="427.28" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="435.78" y="-1416.5" font-family="Helvetica,sans-Serif" font-size="10.00"> HTML_B_STRING_B_HTML</text>
-<text text-anchor="start" x="427.28" y="-1400.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1400.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final java.util.logging.</text>
-<text text-anchor="start" x="435.78" y="-1388.5" font-family="Helvetica,sans-Serif" font-size="10.00">Logger LOGGER</text>
-<text text-anchor="start" x="427.28" y="-1372.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1372.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int MAX</text>
-<text text-anchor="start" x="435.78" y="-1360.5" font-family="Helvetica,sans-Serif" font-size="10.00">_COORDINATE_LENGTH</text>
-<text text-anchor="start" x="427.28" y="-1344.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1344.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int MINIMUM</text>
-<text text-anchor="start" x="435.78" y="-1332.5" font-family="Helvetica,sans-Serif" font-size="10.00">_QR_CODE_SIZE</text>
-<text text-anchor="start" x="427.28" y="-1316.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1316.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="435.78" y="-1304.5" font-family="Helvetica,sans-Serif" font-size="10.00"> NORTH_PANEL</text>
-<text text-anchor="start" x="427.28" y="-1288.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1288.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int QR</text>
-<text text-anchor="start" x="435.78" y="-1276.5" font-family="Helvetica,sans-Serif" font-size="10.00">_CODE_LABEL_DEFAULT_SIZE</text>
-<text text-anchor="start" x="427.28" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int VERTICAL</text>
-<text text-anchor="start" x="435.78" y="-1248.5" font-family="Helvetica,sans-Serif" font-size="10.00">_SCROLL_UNIT_INCREMENT</text>
-<text text-anchor="start" x="427.28" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="435.78" y="-1220.5" font-family="Helvetica,sans-Serif" font-size="10.00"> WARNING_ICON</text>
-<text text-anchor="start" x="425.78" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="435.78" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">CanScan()</text>
-<text text-anchor="start" x="425.78" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="435.78" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dispose()</text>
-<text text-anchor="start" x="425.78" y="-1172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="435.78" y="-1172.5" font-family="Helvetica,sans-Serif" font-size="10.00">static void main()</text>
-<text text-anchor="start" x="425.78" y="-1156.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1156.5" font-family="Helvetica,sans-Serif" font-size="10.00">void browseLogo(ActionEvent e)</text>
-<text text-anchor="start" x="425.78" y="-1140.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1140.5" font-family="Helvetica,sans-Serif" font-size="10.00">File chooseLogoFile()</text>
-<text text-anchor="start" x="425.78" y="-1124.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1124.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode getCurrentModeForTests()</text>
-<text text-anchor="start" x="425.78" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00">String getLogoFieldTextFor</text>
-<text text-anchor="start" x="435.78" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
-<text text-anchor="start" x="425.78" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">int getMarginFieldIntFor</text>
-<text text-anchor="start" x="435.78" y="-1068.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
-<text text-anchor="start" x="425.78" y="-1052.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1052.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setAdrFieldTextForTests()</text>
-<text text-anchor="start" x="425.78" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setCurrentModeForTests</text>
-<text text-anchor="start" x="435.78" y="-1024.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Mode mode)</text>
-<text text-anchor="start" x="425.78" y="-1008.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-1008.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setEmailFieldTextFor</text>
-<text text-anchor="start" x="435.78" y="-996.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
-<text text-anchor="start" x="425.78" y="-980.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-980.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setLogoFieldTextFor</text>
-<text text-anchor="start" x="435.78" y="-968.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests(String text)</text>
-<text text-anchor="start" x="425.78" y="-952.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="435.78" y="-952.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setMarginSliderValue</text>
-<text text-anchor="start" x="435.78" y="-940.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForTests(int value)</text>
-<text text-anchor="start" x="435.78" y="-924.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 10 more...</text>
-<text text-anchor="start" x="427.28" y="-908.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-908.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelCardPanels</text>
-<text text-anchor="start" x="435.78" y="-896.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JPanel northPanel, GridBagConstraints grid)</text>
-<text text-anchor="start" x="427.28" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelCommon</text>
-<text text-anchor="start" x="435.78" y="-868.5" font-family="Helvetica,sans-Serif" font-size="10.00">Fields(JPanel northPanel,</text>
-<text text-anchor="start" x="435.78" y="-856.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GridBagConstraints grid)</text>
-<text text-anchor="start" x="427.28" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelGenerate</text>
-<text text-anchor="start" x="435.78" y="-828.5" font-family="Helvetica,sans-Serif" font-size="10.00">Button(JPanel northPanel,</text>
-<text text-anchor="start" x="435.78" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GridBagConstraints grid)</text>
-<text text-anchor="start" x="427.28" y="-800.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-800.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelModeSelection</text>
-<text text-anchor="start" x="435.78" y="-788.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JPanel northPanel, GridBagConstraints grid)</text>
-<text text-anchor="start" x="427.28" y="-772.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-772.5" font-family="Helvetica,sans-Serif" font-size="10.00">void automaticQRCodeRendering</text>
-<text text-anchor="start" x="435.78" y="-760.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForFieldsAndControls()</text>
-<text text-anchor="start" x="427.28" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">int calculateAvailableQr</text>
-<text text-anchor="start" x="435.78" y="-732.5" font-family="Helvetica,sans-Serif" font-size="10.00">CodeLabelHeight()</text>
-<text text-anchor="start" x="427.28" y="-716.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-716.5" font-family="Helvetica,sans-Serif" font-size="10.00">JPanel colorPanel()</text>
-<text text-anchor="start" x="427.28" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00">void configureUpdateButton()</text>
-<text text-anchor="start" x="427.28" y="-684.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-684.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeCard(JPanel</text>
-<text text-anchor="start" x="435.78" y="-672.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freePanel, GridBagConstraints grid)</text>
-<text text-anchor="start" x="427.28" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateQrCode</text>
-<text text-anchor="start" x="435.78" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">(ActionEvent e)</text>
-<text text-anchor="start" x="435.78" y="-628.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 19 more...</text>
-<text text-anchor="start" x="427.28" y="-612.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-612.5" font-family="Helvetica,sans-Serif" font-size="10.00">static void configureGraphics</text>
-<text text-anchor="start" x="435.78" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pipeline()</text>
-<text text-anchor="start" x="427.28" y="-584.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="435.78" y="-584.5" font-family="Helvetica,sans-Serif" font-size="10.00">static JPanel getNorthJPanel()</text>
-<polygon fill="#666666" stroke="#666666" points="421.78,-1628 421.78,-1628 635.53,-1628 635.53,-1628 421.78,-1628"/>
-<polygon fill="#666666" stroke="#666666" points="421.78,-1216 421.78,-1216 433.78,-1216 433.78,-1216 421.78,-1216"/>
-<polygon fill="#666666" stroke="#666666" points="433.78,-1216 433.78,-1216 635.53,-1216 635.53,-1216 433.78,-1216"/>
-<polygon fill="none" stroke="#666666" points="421.78,-578 421.78,-1646 635.53,-1646 635.53,-578 421.78,-578"/>
+<polygon fill="white" stroke="none" points="632.82,-1674 419.07,-1674 419.07,-578 632.82,-578 632.82,-1674"/>
+<text text-anchor="start" x="467.45" y="-1660.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
+<text text-anchor="start" x="423.07" y="-1644.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="433.07" y="-1644.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT</text>
+<text text-anchor="start" x="433.07" y="-1632.5" font-family="Helvetica,sans-Serif" font-size="10.00">_SCROLLBAR_WIDTH</text>
+<text text-anchor="start" x="424.57" y="-1616.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1616.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField adrField</text>
+<text text-anchor="start" x="424.57" y="-1600.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1600.5" font-family="Helvetica,sans-Serif" font-size="10.00">Color bgColor</text>
+<text text-anchor="start" x="424.57" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JButton bgColorButton</text>
+<text text-anchor="start" x="424.57" y="-1568.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1568.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JButton browseButton</text>
+<text text-anchor="start" x="424.57" y="-1552.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1552.5" font-family="Helvetica,sans-Serif" font-size="10.00">final CardLayout cardLayout</text>
+<text text-anchor="start" x="424.57" y="-1536.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1536.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JPanel cardPanel</text>
+<text text-anchor="start" x="424.57" y="-1520.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1520.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField emailField</text>
+<text text-anchor="start" x="424.57" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextArea freeField</text>
+<text text-anchor="start" x="424.57" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JRadioButton</text>
+<text text-anchor="start" x="433.07" y="-1476.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freeRadio</text>
+<text text-anchor="start" x="424.57" y="-1460.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1460.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JScrollPane freeScrollPane</text>
+<text text-anchor="start" x="433.07" y="-1444.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 30 more...</text>
+<text text-anchor="start" x="424.57" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="433.07" y="-1416.5" font-family="Helvetica,sans-Serif" font-size="10.00"> HTML_B_STRING_B_HTML</text>
+<text text-anchor="start" x="424.57" y="-1400.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1400.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final java.util.logging.</text>
+<text text-anchor="start" x="433.07" y="-1388.5" font-family="Helvetica,sans-Serif" font-size="10.00">Logger LOGGER</text>
+<text text-anchor="start" x="424.57" y="-1372.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1372.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int MAX</text>
+<text text-anchor="start" x="433.07" y="-1360.5" font-family="Helvetica,sans-Serif" font-size="10.00">_COORDINATE_LENGTH</text>
+<text text-anchor="start" x="424.57" y="-1344.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1344.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int MINIMUM</text>
+<text text-anchor="start" x="433.07" y="-1332.5" font-family="Helvetica,sans-Serif" font-size="10.00">_QR_CODE_SIZE</text>
+<text text-anchor="start" x="424.57" y="-1316.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1316.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="433.07" y="-1304.5" font-family="Helvetica,sans-Serif" font-size="10.00"> NORTH_PANEL</text>
+<text text-anchor="start" x="424.57" y="-1288.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1288.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int QR</text>
+<text text-anchor="start" x="433.07" y="-1276.5" font-family="Helvetica,sans-Serif" font-size="10.00">_CODE_LABEL_DEFAULT_SIZE</text>
+<text text-anchor="start" x="424.57" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int VERTICAL</text>
+<text text-anchor="start" x="433.07" y="-1248.5" font-family="Helvetica,sans-Serif" font-size="10.00">_SCROLL_UNIT_INCREMENT</text>
+<text text-anchor="start" x="424.57" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="433.07" y="-1220.5" font-family="Helvetica,sans-Serif" font-size="10.00"> WARNING_ICON</text>
+<text text-anchor="start" x="423.07" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="433.07" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">CanScan()</text>
+<text text-anchor="start" x="423.07" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="433.07" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">void dispose()</text>
+<text text-anchor="start" x="423.07" y="-1172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="433.07" y="-1172.5" font-family="Helvetica,sans-Serif" font-size="10.00">static void main()</text>
+<text text-anchor="start" x="423.07" y="-1156.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1156.5" font-family="Helvetica,sans-Serif" font-size="10.00">void browseLogo(ActionEvent e)</text>
+<text text-anchor="start" x="423.07" y="-1140.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1140.5" font-family="Helvetica,sans-Serif" font-size="10.00">File chooseLogoFile()</text>
+<text text-anchor="start" x="423.07" y="-1124.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1124.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode getCurrentModeForTests()</text>
+<text text-anchor="start" x="423.07" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00">String getLogoFieldTextFor</text>
+<text text-anchor="start" x="433.07" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
+<text text-anchor="start" x="423.07" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">int getMarginFieldIntFor</text>
+<text text-anchor="start" x="433.07" y="-1068.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
+<text text-anchor="start" x="423.07" y="-1052.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1052.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setAdrFieldTextForTests()</text>
+<text text-anchor="start" x="423.07" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setCurrentModeForTests</text>
+<text text-anchor="start" x="433.07" y="-1024.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Mode mode)</text>
+<text text-anchor="start" x="423.07" y="-1008.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-1008.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setEmailFieldTextFor</text>
+<text text-anchor="start" x="433.07" y="-996.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests()</text>
+<text text-anchor="start" x="423.07" y="-980.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-980.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setLogoFieldTextFor</text>
+<text text-anchor="start" x="433.07" y="-968.5" font-family="Helvetica,sans-Serif" font-size="10.00">Tests(String text)</text>
+<text text-anchor="start" x="423.07" y="-952.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="433.07" y="-952.5" font-family="Helvetica,sans-Serif" font-size="10.00">void setMarginSliderValue</text>
+<text text-anchor="start" x="433.07" y="-940.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForTests(int value)</text>
+<text text-anchor="start" x="433.07" y="-924.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 10 more...</text>
+<text text-anchor="start" x="424.57" y="-908.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-908.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelCardPanels</text>
+<text text-anchor="start" x="433.07" y="-896.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JPanel northPanel, GridBagConstraints grid)</text>
+<text text-anchor="start" x="424.57" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelCommon</text>
+<text text-anchor="start" x="433.07" y="-868.5" font-family="Helvetica,sans-Serif" font-size="10.00">Fields(JPanel northPanel,</text>
+<text text-anchor="start" x="433.07" y="-856.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GridBagConstraints grid)</text>
+<text text-anchor="start" x="424.57" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelGenerate</text>
+<text text-anchor="start" x="433.07" y="-828.5" font-family="Helvetica,sans-Serif" font-size="10.00">Button(JPanel northPanel,</text>
+<text text-anchor="start" x="433.07" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GridBagConstraints grid)</text>
+<text text-anchor="start" x="424.57" y="-800.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-800.5" font-family="Helvetica,sans-Serif" font-size="10.00">void addNorthPanelModeSelection</text>
+<text text-anchor="start" x="433.07" y="-788.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JPanel northPanel, GridBagConstraints grid)</text>
+<text text-anchor="start" x="424.57" y="-772.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-772.5" font-family="Helvetica,sans-Serif" font-size="10.00">void automaticQRCodeRendering</text>
+<text text-anchor="start" x="433.07" y="-760.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForFieldsAndControls()</text>
+<text text-anchor="start" x="424.57" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">int calculateAvailableQr</text>
+<text text-anchor="start" x="433.07" y="-732.5" font-family="Helvetica,sans-Serif" font-size="10.00">CodeLabelHeight()</text>
+<text text-anchor="start" x="424.57" y="-716.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-716.5" font-family="Helvetica,sans-Serif" font-size="10.00">JPanel colorPanel()</text>
+<text text-anchor="start" x="424.57" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00">void configureUpdateButton()</text>
+<text text-anchor="start" x="424.57" y="-684.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-684.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeCard(JPanel</text>
+<text text-anchor="start" x="433.07" y="-672.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freePanel, GridBagConstraints grid)</text>
+<text text-anchor="start" x="424.57" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateQrCode</text>
+<text text-anchor="start" x="433.07" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">(ActionEvent e)</text>
+<text text-anchor="start" x="433.07" y="-628.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 18 more...</text>
+<text text-anchor="start" x="424.57" y="-612.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-612.5" font-family="Helvetica,sans-Serif" font-size="10.00">static void configureGraphics</text>
+<text text-anchor="start" x="433.07" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pipeline()</text>
+<text text-anchor="start" x="424.57" y="-584.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="433.07" y="-584.5" font-family="Helvetica,sans-Serif" font-size="10.00">static JPanel getNorthJPanel()</text>
+<polygon fill="#666666" stroke="#666666" points="419.07,-1656 419.07,-1656 632.82,-1656 632.82,-1656 419.07,-1656"/>
+<polygon fill="#666666" stroke="#666666" points="419.07,-1216 419.07,-1216 431.07,-1216 431.07,-1216 419.07,-1216"/>
+<polygon fill="#666666" stroke="#666666" points="431.07,-1216 431.07,-1216 632.82,-1216 632.82,-1216 431.07,-1216"/>
+<polygon fill="none" stroke="#666666" points="419.07,-578 419.07,-1674 632.82,-1674 632.82,-578 419.07,-578"/>
 </a>
 </g>
 </g>
@@ -251,23 +254,23 @@ var sectionId = 'dynsection-0';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node2&#45;&gt;Node1</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M616.62,-578.16C618.95,-564.04 621.25,-550.1 623.52,-536.39"/>
-<polygon fill="none" stroke="#63b8ff" points="623.48,-536.61 620.51,-530.03 625.44,-524.77 628.41,-531.34 623.48,-536.61"/>
+<path fill="none" stroke="#63b8ff" d="M614.76,-578.17C617.06,-564 619.33,-550.02 621.56,-536.28"/>
+<polygon fill="none" stroke="#63b8ff" points="621.53,-536.47 618.54,-529.91 623.45,-524.63 626.44,-531.19 621.53,-536.47"/>
 </a>
 </g>
-<text text-anchor="start" x="624.38" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;generator</text>
+<text text-anchor="start" x="621.67" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;generator</text>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
 <g id="a_Node000003"><a xlink:title=" ">
-<polygon fill="white" stroke="none" points="393.15,-1956 352.15,-1956 352.15,-1904 393.15,-1904 393.15,-1956"/>
-<text text-anchor="start" x="356.15" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">JFrame</text>
-<text text-anchor="start" x="371.15" y="-1926.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<text text-anchor="start" x="371.15" y="-1910.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polygon fill="#666666" stroke="#666666" points="352.15,-1938 352.15,-1938 393.15,-1938 393.15,-1938 352.15,-1938"/>
-<polygon fill="#666666" stroke="#666666" points="352.15,-1922 352.15,-1922 393.15,-1922 393.15,-1922 352.15,-1922"/>
-<polygon fill="none" stroke="#666666" points="352.15,-1904 352.15,-1956 393.15,-1956 393.15,-1904 352.15,-1904"/>
+<polygon fill="white" stroke="none" points="390.45,-1970 349.45,-1970 349.45,-1918 390.45,-1918 390.45,-1970"/>
+<text text-anchor="start" x="353.45" y="-1956.5" font-family="Helvetica,sans-Serif" font-size="10.00">JFrame</text>
+<text text-anchor="start" x="368.45" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="368.45" y="-1924.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="#666666" stroke="#666666" points="349.45,-1952 349.45,-1952 390.45,-1952 390.45,-1952 349.45,-1952"/>
+<polygon fill="#666666" stroke="#666666" points="349.45,-1936 349.45,-1936 390.45,-1936 390.45,-1936 349.45,-1936"/>
+<polygon fill="none" stroke="#666666" points="349.45,-1918 349.45,-1970 390.45,-1970 390.45,-1918 349.45,-1918"/>
 </a>
 </g>
 </g>
@@ -275,8 +278,8 @@ var sectionId = 'dynsection-0';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node3&#45;&gt;Node2</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M376.24,-1892.89C380.97,-1847.64 390.05,-1767.81 401.65,-1700 407.79,-1664.16 414.61,-1627.19 421.81,-1590.06"/>
-<polygon fill="none" stroke="#63b8ff" points="372.78,-1892.35 375.24,-1902.65 379.74,-1893.06 372.78,-1892.35"/>
+<path fill="none" stroke="#63b8ff" d="M373.99,-1906.85C378.98,-1864.02 388.13,-1790.59 398.95,-1728 405.14,-1692.14 411.95,-1655.16 419.08,-1618"/>
+<polygon fill="none" stroke="#63b8ff" points="370.54,-1906.24 372.87,-1916.58 377.49,-1907.04 370.54,-1906.24"/>
 </a>
 </g>
 </g>
@@ -284,24 +287,24 @@ var sectionId = 'dynsection-0';
 <g id="Node000004" class="node">
 <title>Node4</title>
 <g id="a_Node000004"><a xlink:href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html" target="_top" xlink:title="Application operation modes.">
-<polygon fill="white" stroke="none" points="548.53,-1988 410.78,-1988 410.78,-1872 548.53,-1872 548.53,-1988"/>
-<text text-anchor="start" x="414.78" y="-1974.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.model.Mode</text>
-<text text-anchor="start" x="425.03" y="-1958.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="445.28" y="-1958.5" font-family="Helvetica,sans-Serif" font-size="10.00">FREE</text>
-<text text-anchor="start" x="425.03" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="445.28" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">MECARD</text>
-<text text-anchor="start" x="425.03" y="-1926.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="445.28" y="-1926.5" font-family="Helvetica,sans-Serif" font-size="10.00">MEET</text>
-<text text-anchor="start" x="426.53" y="-1910.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="445.28" y="-1910.5" font-family="Helvetica,sans-Serif" font-size="10.00">final String label</text>
-<text text-anchor="start" x="425.03" y="-1894.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="445.28" y="-1894.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode(String label)</text>
-<text text-anchor="start" x="425.03" y="-1878.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="445.28" y="-1878.5" font-family="Helvetica,sans-Serif" font-size="10.00">String text()</text>
-<polygon fill="#666666" stroke="#666666" points="410.78,-1970 410.78,-1970 548.53,-1970 548.53,-1970 410.78,-1970"/>
-<polygon fill="#666666" stroke="#666666" points="410.78,-1906 410.78,-1906 443.28,-1906 443.28,-1906 410.78,-1906"/>
-<polygon fill="#666666" stroke="#666666" points="443.28,-1906 443.28,-1906 548.53,-1906 548.53,-1906 443.28,-1906"/>
-<polygon fill="none" stroke="#666666" points="410.78,-1872 410.78,-1988 548.53,-1988 548.53,-1872 410.78,-1872"/>
+<polygon fill="white" stroke="none" points="545.82,-2002 408.07,-2002 408.07,-1886 545.82,-1886 545.82,-2002"/>
+<text text-anchor="start" x="412.07" y="-1988.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.model.Mode</text>
+<text text-anchor="start" x="422.32" y="-1972.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="442.57" y="-1972.5" font-family="Helvetica,sans-Serif" font-size="10.00">FREE</text>
+<text text-anchor="start" x="422.32" y="-1956.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="442.57" y="-1956.5" font-family="Helvetica,sans-Serif" font-size="10.00">MECARD</text>
+<text text-anchor="start" x="422.32" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="442.57" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00">MEET</text>
+<text text-anchor="start" x="423.82" y="-1924.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="442.57" y="-1924.5" font-family="Helvetica,sans-Serif" font-size="10.00">final String label</text>
+<text text-anchor="start" x="422.32" y="-1908.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="442.57" y="-1908.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode(String label)</text>
+<text text-anchor="start" x="422.32" y="-1892.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="442.57" y="-1892.5" font-family="Helvetica,sans-Serif" font-size="10.00">String text()</text>
+<polygon fill="#666666" stroke="#666666" points="408.07,-1984 408.07,-1984 545.82,-1984 545.82,-1984 408.07,-1984"/>
+<polygon fill="#666666" stroke="#666666" points="408.07,-1920 408.07,-1920 440.57,-1920 440.57,-1920 408.07,-1920"/>
+<polygon fill="#666666" stroke="#666666" points="440.57,-1920 440.57,-1920 545.82,-1920 545.82,-1920 440.57,-1920"/>
+<polygon fill="none" stroke="#666666" points="408.07,-1886 408.07,-2002 545.82,-2002 545.82,-1886 408.07,-1886"/>
 </a>
 </g>
 </g>
@@ -309,138 +312,138 @@ var sectionId = 'dynsection-0';
 <g id="edge3_Node000002_Node000004" class="edge">
 <title>Node4&#45;&gt;Node2</title>
 <g id="a_edge3_Node000002_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M483.06,-1872.27C486.03,-1822.75 490.68,-1745.36 495.89,-1658.57"/>
-<polygon fill="none" stroke="#63b8ff" points="495.89,-1658.57 492.26,-1652.34 496.61,-1646.59 500.24,-1652.82 495.89,-1658.57"/>
+<path fill="none" stroke="#63b8ff" d="M480.35,-1886.27C483.17,-1839.39 487.48,-1767.54 492.36,-1686.37"/>
+<polygon fill="none" stroke="#63b8ff" points="492.35,-1686.42 488.72,-1680.19 493.07,-1674.44 496.71,-1680.67 492.35,-1686.42"/>
 </a>
 </g>
-<text text-anchor="start" x="498.5" y="-1669.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;currentMode</text>
+<text text-anchor="start" x="494.42" y="-1697.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;currentMode</text>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" target="_top" xlink:title="Thread&#45;safe singleton to hold a shared QR code BufferedImage.">
-<polygon fill="white" stroke="none" points="523.53,-4388 339.78,-4388 339.78,-3248 523.53,-3248 523.53,-4388"/>
-<text text-anchor="start" x="369.03" y="-4374.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.Encoded</text>
-<text text-anchor="start" x="418.15" y="-4362.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image</text>
-<text text-anchor="start" x="345.28" y="-4346.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4346.5" font-family="Helvetica,sans-Serif" font-size="10.00">final Object imageLock</text>
-<text text-anchor="start" x="345.28" y="-4330.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4330.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage qrOriginal</text>
-<text text-anchor="start" x="345.28" y="-4314.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4314.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int AVAILABLE</text>
-<text text-anchor="start" x="353.78" y="-4302.5" font-family="Helvetica,sans-Serif" font-size="10.00">_MEMORY_TO_GENERATE_IMAGE</text>
-<text text-anchor="start" x="345.28" y="-4286.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4286.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4274.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BG_COLOR</text>
-<text text-anchor="start" x="345.28" y="-4258.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4258.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BYTES</text>
-<text text-anchor="start" x="353.78" y="-4246.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PER_KILOBYTE</text>
-<text text-anchor="start" x="345.28" y="-4230.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4230.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4218.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CONFIG</text>
-<text text-anchor="start" x="345.28" y="-4202.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4202.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final double</text>
-<text text-anchor="start" x="353.78" y="-4190.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_GAP_BETWEEN</text>
-<text text-anchor="start" x="353.78" y="-4178.5" font-family="Helvetica,sans-Serif" font-size="10.00">_LOGO_AND_MODULES</text>
-<text text-anchor="start" x="345.28" y="-4162.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4162.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4150.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_MODULES</text>
-<text text-anchor="start" x="345.28" y="-4134.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4134.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_ROUNDED_FINDER</text>
-<text text-anchor="start" x="353.78" y="-4110.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PATTERN_AT_PIXEL</text>
-<text text-anchor="start" x="345.28" y="-4094.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4094.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4082.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_SQUARE_FINDER</text>
-<text text-anchor="start" x="353.78" y="-4070.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PATTERN_AT_PIXEL</text>
-<text text-anchor="start" x="345.28" y="-4054.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4054.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4042.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GENERATE_QR_CODE_IMAGE</text>
-<text text-anchor="start" x="345.28" y="-4026.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-4026.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-4014.5" font-family="Helvetica,sans-Serif" font-size="10.00"> MATRIX</text>
-<text text-anchor="start" x="345.28" y="-3998.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3998.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="353.78" y="-3986.5" font-family="Helvetica,sans-Serif" font-size="10.00"> SHOULD_SKIP_MODULE</text>
-<text text-anchor="start" x="343.78" y="-3970.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3970.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawFinderPatterns</text>
-<text text-anchor="start" x="353.78" y="-3958.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, int matrixWidth,</text>
-<text text-anchor="start" x="353.78" y="-3946.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
-<text text-anchor="start" x="343.78" y="-3930.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3930.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawLogoIfPresent</text>
-<text text-anchor="start" x="353.78" y="-3918.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, CommonFields</text>
-<text text-anchor="start" x="353.78" y="-3906.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config)</text>
-<text text-anchor="start" x="343.78" y="-3890.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3890.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawSquareFinderPattern</text>
-<text text-anchor="start" x="353.78" y="-3878.5" font-family="Helvetica,sans-Serif" font-size="10.00">AtPixel(Graphics2D g, double</text>
-<text text-anchor="start" x="353.78" y="-3866.5" font-family="Helvetica,sans-Serif" font-size="10.00"> x, double y, double diameter,</text>
-<text text-anchor="start" x="353.78" y="-3854.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color qrColor, Color bgColor)</text>
-<text text-anchor="start" x="343.78" y="-3838.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3838.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeQrOriginal()</text>
-<text text-anchor="start" x="343.78" y="-3822.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3822.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage generateImage</text>
-<text text-anchor="start" x="353.78" y="-3810.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String data, CommonFields</text>
-<text text-anchor="start" x="353.78" y="-3798.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config)</text>
-<text text-anchor="start" x="343.78" y="-3782.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3782.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage getQrOriginal()</text>
-<text text-anchor="start" x="343.78" y="-3766.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="353.78" y="-3766.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrOriginal</text>
-<text text-anchor="start" x="353.78" y="-3754.5" font-family="Helvetica,sans-Serif" font-size="10.00">(BufferedImage newImage)</text>
-<text text-anchor="start" x="345.28" y="-3738.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3738.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage createDefensive</text>
-<text text-anchor="start" x="353.78" y="-3726.5" font-family="Helvetica,sans-Serif" font-size="10.00">Copy(BufferedImage sourceImage)</text>
-<text text-anchor="start" x="345.28" y="-3710.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3710.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitMatrix createMatrix</text>
-<text text-anchor="start" x="353.78" y="-3698.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String text, int margin)</text>
-<text text-anchor="start" x="345.28" y="-3682.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3682.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawModule(Graphics2</text>
-<text text-anchor="start" x="353.78" y="-3670.5" font-family="Helvetica,sans-Serif" font-size="10.00">D g, int x, int y, double</text>
-<text text-anchor="start" x="353.78" y="-3658.5" font-family="Helvetica,sans-Serif" font-size="10.00"> moduleSizeX, double moduleSizeY,</text>
-<text text-anchor="start" x="353.78" y="-3646.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
-<text text-anchor="start" x="345.28" y="-3630.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3630.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawModules(Graphics2</text>
-<text text-anchor="start" x="353.78" y="-3618.5" font-family="Helvetica,sans-Serif" font-size="10.00">D g, BitMatrix matrix,</text>
-<text text-anchor="start" x="353.78" y="-3606.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
-<text text-anchor="start" x="345.28" y="-3590.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3590.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawRoundedFinderPattern</text>
-<text text-anchor="start" x="353.78" y="-3578.5" font-family="Helvetica,sans-Serif" font-size="10.00">AtPixel(Graphics2D g, double</text>
-<text text-anchor="start" x="353.78" y="-3566.5" font-family="Helvetica,sans-Serif" font-size="10.00"> x, double y, double diameter,</text>
-<text text-anchor="start" x="353.78" y="-3554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color qrColor, Color bgColor)</text>
-<text text-anchor="start" x="345.28" y="-3538.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3538.5" font-family="Helvetica,sans-Serif" font-size="10.00">long estimateImageMemory</text>
-<text text-anchor="start" x="353.78" y="-3526.5" font-family="Helvetica,sans-Serif" font-size="10.00">MB(int size)</text>
-<text text-anchor="start" x="345.28" y="-3510.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3510.5" font-family="Helvetica,sans-Serif" font-size="10.00">void fillBackground</text>
-<text text-anchor="start" x="353.78" y="-3498.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, int size,</text>
-<text text-anchor="start" x="353.78" y="-3486.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color bgColor)</text>
-<text text-anchor="start" x="345.28" y="-3470.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3470.5" font-family="Helvetica,sans-Serif" font-size="10.00">long getAvailableMemoryMB()</text>
-<text text-anchor="start" x="345.28" y="-3454.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3454.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInBottomLeftPattern</text>
-<text text-anchor="start" x="353.78" y="-3442.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixHeight,</text>
-<text text-anchor="start" x="353.78" y="-3430.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int margin)</text>
-<text text-anchor="start" x="345.28" y="-3414.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3414.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInPositionPattern</text>
-<text text-anchor="start" x="353.78" y="-3402.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixWidth,</text>
-<text text-anchor="start" x="353.78" y="-3390.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int matrixHeight, int margin)</text>
-<text text-anchor="start" x="345.28" y="-3374.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3374.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInTopLeftPattern</text>
-<text text-anchor="start" x="353.78" y="-3362.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int margin)</text>
-<text text-anchor="start" x="345.28" y="-3346.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3346.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInTopRightPattern</text>
-<text text-anchor="start" x="353.78" y="-3334.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixWidth,</text>
-<text text-anchor="start" x="353.78" y="-3322.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int margin)</text>
-<text text-anchor="start" x="345.28" y="-3306.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3306.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean shouldSkipModule</text>
-<text text-anchor="start" x="353.78" y="-3294.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, BitMatrix</text>
-<text text-anchor="start" x="353.78" y="-3282.5" font-family="Helvetica,sans-Serif" font-size="10.00"> matrix, ModuleContext ctx)</text>
-<text text-anchor="start" x="345.28" y="-3266.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="353.78" y="-3266.5" font-family="Helvetica,sans-Serif" font-size="10.00">void validateMemoryForImage</text>
-<text text-anchor="start" x="353.78" y="-3254.5" font-family="Helvetica,sans-Serif" font-size="10.00">Size(int size)</text>
-<polygon fill="#666666" stroke="#666666" points="339.78,-4358 339.78,-4358 523.53,-4358 523.53,-4358 339.78,-4358"/>
-<polygon fill="#666666" stroke="#666666" points="339.78,-3982 339.78,-3982 351.78,-3982 351.78,-3982 339.78,-3982"/>
-<polygon fill="#666666" stroke="#666666" points="351.78,-3982 351.78,-3982 523.53,-3982 523.53,-3982 351.78,-3982"/>
-<polygon fill="none" stroke="#666666" points="339.78,-3248 339.78,-4388 523.53,-4388 523.53,-3248 339.78,-3248"/>
+<polygon fill="white" stroke="none" points="520.82,-4388 337.07,-4388 337.07,-3248 520.82,-3248 520.82,-4388"/>
+<text text-anchor="start" x="366.32" y="-4374.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.Encoded</text>
+<text text-anchor="start" x="415.45" y="-4362.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image</text>
+<text text-anchor="start" x="342.57" y="-4346.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4346.5" font-family="Helvetica,sans-Serif" font-size="10.00">final Object imageLock</text>
+<text text-anchor="start" x="342.57" y="-4330.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4330.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage qrOriginal</text>
+<text text-anchor="start" x="342.57" y="-4314.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4314.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int AVAILABLE</text>
+<text text-anchor="start" x="351.07" y="-4302.5" font-family="Helvetica,sans-Serif" font-size="10.00">_MEMORY_TO_GENERATE_IMAGE</text>
+<text text-anchor="start" x="342.57" y="-4286.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4286.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4274.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BG_COLOR</text>
+<text text-anchor="start" x="342.57" y="-4258.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4258.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BYTES</text>
+<text text-anchor="start" x="351.07" y="-4246.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PER_KILOBYTE</text>
+<text text-anchor="start" x="342.57" y="-4230.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4230.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4218.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CONFIG</text>
+<text text-anchor="start" x="342.57" y="-4202.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4202.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final double</text>
+<text text-anchor="start" x="351.07" y="-4190.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_GAP_BETWEEN</text>
+<text text-anchor="start" x="351.07" y="-4178.5" font-family="Helvetica,sans-Serif" font-size="10.00">_LOGO_AND_MODULES</text>
+<text text-anchor="start" x="342.57" y="-4162.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4162.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4150.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_MODULES</text>
+<text text-anchor="start" x="342.57" y="-4134.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4134.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_ROUNDED_FINDER</text>
+<text text-anchor="start" x="351.07" y="-4110.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PATTERN_AT_PIXEL</text>
+<text text-anchor="start" x="342.57" y="-4094.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4094.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4082.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DRAW_SQUARE_FINDER</text>
+<text text-anchor="start" x="351.07" y="-4070.5" font-family="Helvetica,sans-Serif" font-size="10.00">_PATTERN_AT_PIXEL</text>
+<text text-anchor="start" x="342.57" y="-4054.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4054.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4042.5" font-family="Helvetica,sans-Serif" font-size="10.00"> GENERATE_QR_CODE_IMAGE</text>
+<text text-anchor="start" x="342.57" y="-4026.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-4026.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-4014.5" font-family="Helvetica,sans-Serif" font-size="10.00"> MATRIX</text>
+<text text-anchor="start" x="342.57" y="-3998.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3998.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="351.07" y="-3986.5" font-family="Helvetica,sans-Serif" font-size="10.00"> SHOULD_SKIP_MODULE</text>
+<text text-anchor="start" x="341.07" y="-3970.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3970.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawFinderPatterns</text>
+<text text-anchor="start" x="351.07" y="-3958.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, int matrixWidth,</text>
+<text text-anchor="start" x="351.07" y="-3946.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
+<text text-anchor="start" x="341.07" y="-3930.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3930.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawLogoIfPresent</text>
+<text text-anchor="start" x="351.07" y="-3918.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, CommonFields</text>
+<text text-anchor="start" x="351.07" y="-3906.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config)</text>
+<text text-anchor="start" x="341.07" y="-3890.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3890.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawSquareFinderPattern</text>
+<text text-anchor="start" x="351.07" y="-3878.5" font-family="Helvetica,sans-Serif" font-size="10.00">AtPixel(Graphics2D g, double</text>
+<text text-anchor="start" x="351.07" y="-3866.5" font-family="Helvetica,sans-Serif" font-size="10.00"> x, double y, double diameter,</text>
+<text text-anchor="start" x="351.07" y="-3854.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color qrColor, Color bgColor)</text>
+<text text-anchor="start" x="341.07" y="-3838.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3838.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeQrOriginal()</text>
+<text text-anchor="start" x="341.07" y="-3822.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3822.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage generateImage</text>
+<text text-anchor="start" x="351.07" y="-3810.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String data, CommonFields</text>
+<text text-anchor="start" x="351.07" y="-3798.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config)</text>
+<text text-anchor="start" x="341.07" y="-3782.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3782.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage getQrOriginal()</text>
+<text text-anchor="start" x="341.07" y="-3766.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="351.07" y="-3766.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrOriginal</text>
+<text text-anchor="start" x="351.07" y="-3754.5" font-family="Helvetica,sans-Serif" font-size="10.00">(BufferedImage newImage)</text>
+<text text-anchor="start" x="342.57" y="-3738.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3738.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage createDefensive</text>
+<text text-anchor="start" x="351.07" y="-3726.5" font-family="Helvetica,sans-Serif" font-size="10.00">Copy(BufferedImage sourceImage)</text>
+<text text-anchor="start" x="342.57" y="-3710.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3710.5" font-family="Helvetica,sans-Serif" font-size="10.00">BitMatrix createMatrix</text>
+<text text-anchor="start" x="351.07" y="-3698.5" font-family="Helvetica,sans-Serif" font-size="10.00">(String text, int margin)</text>
+<text text-anchor="start" x="342.57" y="-3682.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3682.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawModule(Graphics2</text>
+<text text-anchor="start" x="351.07" y="-3670.5" font-family="Helvetica,sans-Serif" font-size="10.00">D g, int x, int y, double</text>
+<text text-anchor="start" x="351.07" y="-3658.5" font-family="Helvetica,sans-Serif" font-size="10.00"> moduleSizeX, double moduleSizeY,</text>
+<text text-anchor="start" x="351.07" y="-3646.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
+<text text-anchor="start" x="342.57" y="-3630.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3630.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawModules(Graphics2</text>
+<text text-anchor="start" x="351.07" y="-3618.5" font-family="Helvetica,sans-Serif" font-size="10.00">D g, BitMatrix matrix,</text>
+<text text-anchor="start" x="351.07" y="-3606.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config)</text>
+<text text-anchor="start" x="342.57" y="-3590.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3590.5" font-family="Helvetica,sans-Serif" font-size="10.00">void drawRoundedFinderPattern</text>
+<text text-anchor="start" x="351.07" y="-3578.5" font-family="Helvetica,sans-Serif" font-size="10.00">AtPixel(Graphics2D g, double</text>
+<text text-anchor="start" x="351.07" y="-3566.5" font-family="Helvetica,sans-Serif" font-size="10.00"> x, double y, double diameter,</text>
+<text text-anchor="start" x="351.07" y="-3554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color qrColor, Color bgColor)</text>
+<text text-anchor="start" x="342.57" y="-3538.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3538.5" font-family="Helvetica,sans-Serif" font-size="10.00">long estimateImageMemory</text>
+<text text-anchor="start" x="351.07" y="-3526.5" font-family="Helvetica,sans-Serif" font-size="10.00">MB(int size)</text>
+<text text-anchor="start" x="342.57" y="-3510.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3510.5" font-family="Helvetica,sans-Serif" font-size="10.00">void fillBackground</text>
+<text text-anchor="start" x="351.07" y="-3498.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Graphics2D g, int size,</text>
+<text text-anchor="start" x="351.07" y="-3486.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Color bgColor)</text>
+<text text-anchor="start" x="342.57" y="-3470.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3470.5" font-family="Helvetica,sans-Serif" font-size="10.00">long getAvailableMemoryMB()</text>
+<text text-anchor="start" x="342.57" y="-3454.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3454.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInBottomLeftPattern</text>
+<text text-anchor="start" x="351.07" y="-3442.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixHeight,</text>
+<text text-anchor="start" x="351.07" y="-3430.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int margin)</text>
+<text text-anchor="start" x="342.57" y="-3414.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3414.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInPositionPattern</text>
+<text text-anchor="start" x="351.07" y="-3402.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixWidth,</text>
+<text text-anchor="start" x="351.07" y="-3390.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int matrixHeight, int margin)</text>
+<text text-anchor="start" x="342.57" y="-3374.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3374.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInTopLeftPattern</text>
+<text text-anchor="start" x="351.07" y="-3362.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int margin)</text>
+<text text-anchor="start" x="342.57" y="-3346.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3346.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean isInTopRightPattern</text>
+<text text-anchor="start" x="351.07" y="-3334.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, int matrixWidth,</text>
+<text text-anchor="start" x="351.07" y="-3322.5" font-family="Helvetica,sans-Serif" font-size="10.00"> int margin)</text>
+<text text-anchor="start" x="342.57" y="-3306.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3306.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean shouldSkipModule</text>
+<text text-anchor="start" x="351.07" y="-3294.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int x, int y, BitMatrix</text>
+<text text-anchor="start" x="351.07" y="-3282.5" font-family="Helvetica,sans-Serif" font-size="10.00"> matrix, ModuleContext ctx)</text>
+<text text-anchor="start" x="342.57" y="-3266.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="351.07" y="-3266.5" font-family="Helvetica,sans-Serif" font-size="10.00">void validateMemoryForImage</text>
+<text text-anchor="start" x="351.07" y="-3254.5" font-family="Helvetica,sans-Serif" font-size="10.00">Size(int size)</text>
+<polygon fill="#666666" stroke="#666666" points="337.07,-4358 337.07,-4358 520.82,-4358 520.82,-4358 337.07,-4358"/>
+<polygon fill="#666666" stroke="#666666" points="337.07,-3982 337.07,-3982 349.07,-3982 349.07,-3982 337.07,-3982"/>
+<polygon fill="#666666" stroke="#666666" points="349.07,-3982 349.07,-3982 520.82,-3982 520.82,-3982 349.07,-3982"/>
+<polygon fill="none" stroke="#666666" points="337.07,-3248 337.07,-4388 520.82,-4388 520.82,-3248 337.07,-3248"/>
 </a>
 </g>
 </g>
@@ -448,48 +451,48 @@ var sectionId = 'dynsection-0';
 <g id="edge4_Node000002_Node000005" class="edge">
 <title>Node5&#45;&gt;Node2</title>
 <g id="a_edge4_Node000002_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M484.15,-3248.14C511.32,-2928.64 541.99,-2522.46 557.65,-2160 566.82,-1947.74 561.54,-1894.45 562.65,-1682 562.69,-1674.22 562.7,-1666.38 562.67,-1658.49"/>
-<polygon fill="none" stroke="#63b8ff" points="562.67,-1658.53 558.64,-1652.55 562.61,-1646.53 566.64,-1652.5 562.67,-1658.53"/>
+<path fill="none" stroke="#63b8ff" d="M481.98,-3248.16C509.31,-2928.67 539.97,-2522.48 554.95,-2160 563.2,-1960.17 557.28,-1910 557.95,-1710 557.97,-1702.37 557.97,-1694.68 557.94,-1686.95"/>
+<polygon fill="none" stroke="#63b8ff" points="557.94,-1686.8 553.9,-1680.83 557.86,-1674.8 561.9,-1680.78 557.94,-1686.8"/>
 </a>
 </g>
-<text text-anchor="start" x="559.14" y="-2354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
+<text text-anchor="start" x="556.49" y="-2354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html" target="_top" xlink:title="Asynchronously resizes a generated QR code image for display in a Swing UI.">
-<polygon fill="white" stroke="none" points="221.9,-2816 49.4,-2816 49.4,-2556 221.9,-2556 221.9,-2816"/>
-<text text-anchor="start" x="76.03" y="-2802.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
-<text text-anchor="start" x="85.4" y="-2790.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicResizeWorker</text>
-<text text-anchor="start" x="54.9" y="-2774.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="63.4" y="-2774.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
-<text text-anchor="start" x="54.9" y="-2758.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="63.4" y="-2758.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT_SIZE</text>
-<text text-anchor="start" x="54.9" y="-2742.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="63.4" y="-2742.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int RESIZE</text>
-<text text-anchor="start" x="63.4" y="-2730.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
-<text text-anchor="start" x="53.4" y="-2714.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="63.4" y="-2714.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicResizeWorker</text>
-<text text-anchor="start" x="63.4" y="-2702.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage,</text>
-<text text-anchor="start" x="63.4" y="-2690.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgressBar</text>
-<text text-anchor="start" x="63.4" y="-2678.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader)</text>
-<text text-anchor="start" x="53.4" y="-2662.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="63.4" y="-2662.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeResize</text>
-<text text-anchor="start" x="63.4" y="-2650.5" font-family="Helvetica,sans-Serif" font-size="10.00">(WholeFields wholeFields)</text>
-<text text-anchor="start" x="53.78" y="-2634.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="63.4" y="-2634.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
-<text text-anchor="start" x="53.78" y="-2618.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="63.4" y="-2618.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; ImageIcon,</text>
-<text text-anchor="start" x="63.4" y="-2606.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Void &gt; createWorker()</text>
-<text text-anchor="start" x="53.78" y="-2590.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="63.4" y="-2590.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerSuccess</text>
-<text text-anchor="start" x="63.4" y="-2578.5" font-family="Helvetica,sans-Serif" font-size="10.00">(ImageIcon result)</text>
-<text text-anchor="start" x="54.9" y="-2562.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="63.4" y="-2562.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateLoaderSize()</text>
-<polygon fill="#666666" stroke="#666666" points="49.4,-2786 49.4,-2786 221.9,-2786 221.9,-2786 49.4,-2786"/>
-<polygon fill="#666666" stroke="#666666" points="49.4,-2726 49.4,-2726 61.4,-2726 61.4,-2726 49.4,-2726"/>
-<polygon fill="#666666" stroke="#666666" points="61.4,-2726 61.4,-2726 221.9,-2726 221.9,-2726 61.4,-2726"/>
-<polygon fill="none" stroke="#666666" points="49.4,-2556 49.4,-2816 221.9,-2816 221.9,-2556 49.4,-2556"/>
+<polygon fill="white" stroke="none" points="219.2,-2816 46.7,-2816 46.7,-2556 219.2,-2556 219.2,-2816"/>
+<text text-anchor="start" x="73.32" y="-2802.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
+<text text-anchor="start" x="82.7" y="-2790.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicResizeWorker</text>
+<text text-anchor="start" x="52.2" y="-2774.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="60.7" y="-2774.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
+<text text-anchor="start" x="52.2" y="-2758.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="60.7" y="-2758.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT_SIZE</text>
+<text text-anchor="start" x="52.2" y="-2742.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="60.7" y="-2742.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int RESIZE</text>
+<text text-anchor="start" x="60.7" y="-2730.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
+<text text-anchor="start" x="50.7" y="-2714.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="60.7" y="-2714.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicResizeWorker</text>
+<text text-anchor="start" x="60.7" y="-2702.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage,</text>
+<text text-anchor="start" x="60.7" y="-2690.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgressBar</text>
+<text text-anchor="start" x="60.7" y="-2678.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader)</text>
+<text text-anchor="start" x="50.7" y="-2662.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="60.7" y="-2662.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodeResize</text>
+<text text-anchor="start" x="60.7" y="-2650.5" font-family="Helvetica,sans-Serif" font-size="10.00">(WholeFields wholeFields)</text>
+<text text-anchor="start" x="51.07" y="-2634.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="60.7" y="-2634.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
+<text text-anchor="start" x="51.07" y="-2618.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="60.7" y="-2618.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; ImageIcon,</text>
+<text text-anchor="start" x="60.7" y="-2606.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Void &gt; createWorker()</text>
+<text text-anchor="start" x="51.07" y="-2590.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="60.7" y="-2590.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerSuccess</text>
+<text text-anchor="start" x="60.7" y="-2578.5" font-family="Helvetica,sans-Serif" font-size="10.00">(ImageIcon result)</text>
+<text text-anchor="start" x="52.2" y="-2562.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="60.7" y="-2562.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateLoaderSize()</text>
+<polygon fill="#666666" stroke="#666666" points="46.7,-2786 46.7,-2786 219.2,-2786 219.2,-2786 46.7,-2786"/>
+<polygon fill="#666666" stroke="#666666" points="46.7,-2726 46.7,-2726 58.7,-2726 58.7,-2726 46.7,-2726"/>
+<polygon fill="#666666" stroke="#666666" points="58.7,-2726 58.7,-2726 219.2,-2726 219.2,-2726 58.7,-2726"/>
+<polygon fill="none" stroke="#666666" points="46.7,-2556 46.7,-2816 219.2,-2816 219.2,-2556 46.7,-2556"/>
 </a>
 </g>
 </g>
@@ -497,52 +500,52 @@ var sectionId = 'dynsection-0';
 <g id="edge8_Node000006_Node000005" class="edge">
 <title>Node5&#45;&gt;Node6</title>
 <g id="a_edge8_Node000006_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M339.88,-3352.52C317.75,-3313.34 290.41,-3277.5 256.65,-3248 219.76,-3215.76 180.01,-3267 147.9,-3230 134.89,-3215 133.7,-2984.47 134.41,-2828.65"/>
-<polygon fill="none" stroke="#63b8ff" points="134.41,-2828.59 130.44,-2822.57 134.47,-2816.59 138.44,-2822.61 134.41,-2828.59"/>
+<path fill="none" stroke="#63b8ff" d="M337.17,-3352.52C315.04,-3313.34 287.7,-3277.5 253.95,-3248 217.06,-3215.76 177.3,-3267 145.2,-3230 132.18,-3215 130.99,-2984.47 131.7,-2828.65"/>
+<polygon fill="none" stroke="#63b8ff" points="131.7,-2828.59 127.73,-2822.57 131.76,-2816.59 135.73,-2822.61 131.7,-2828.59"/>
 </a>
 </g>
-<text text-anchor="start" x="150.9" y="-3028.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
+<text text-anchor="start" x="148.2" y="-3028.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
 </g>
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
 <g id="a_Node000009"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html" target="_top" xlink:title="Asynchronously generates and displays a QR code preview in a Swing UI.">
-<polygon fill="white" stroke="none" points="334.03,-2080 129.28,-2080 129.28,-1780 334.03,-1780 334.03,-2080"/>
-<text text-anchor="start" x="172.03" y="-2066.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
-<text text-anchor="start" x="179.15" y="-2054.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicPreviewWorker</text>
-<text text-anchor="start" x="134.78" y="-2038.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="143.28" y="-2038.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
-<text text-anchor="start" x="134.78" y="-2022.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="143.28" y="-2022.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int PREVIEW</text>
-<text text-anchor="start" x="143.28" y="-2010.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
-<text text-anchor="start" x="133.28" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="143.28" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicPreviewWorker</text>
-<text text-anchor="start" x="143.28" y="-1982.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage,</text>
-<text text-anchor="start" x="143.28" y="-1970.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DynamicResizeWorker qrCodeResize,</text>
-<text text-anchor="start" x="143.28" y="-1958.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgressBar loader)</text>
-<text text-anchor="start" x="133.28" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="143.28" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodePreview</text>
-<text text-anchor="start" x="143.28" y="-1930.5" font-family="Helvetica,sans-Serif" font-size="10.00">(WholeFields wholeFields)</text>
-<text text-anchor="start" x="133.65" y="-1914.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="143.28" y="-1914.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
-<text text-anchor="start" x="133.65" y="-1898.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="143.28" y="-1898.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; BufferedImage,</text>
-<text text-anchor="start" x="143.28" y="-1886.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Void &gt; createWorker()</text>
-<text text-anchor="start" x="133.65" y="-1870.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="143.28" y="-1870.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerSuccess</text>
-<text text-anchor="start" x="143.28" y="-1858.5" font-family="Helvetica,sans-Serif" font-size="10.00">(BufferedImage img)</text>
-<text text-anchor="start" x="134.78" y="-1842.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="143.28" y="-1842.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage buildPreview</text>
-<text text-anchor="start" x="143.28" y="-1830.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image()</text>
-<text text-anchor="start" x="134.78" y="-1814.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="143.28" y="-1814.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommonFields getCommonFields()</text>
-<text text-anchor="start" x="134.78" y="-1798.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="143.28" y="-1798.5" font-family="Helvetica,sans-Serif" font-size="10.00">void showPreviewErrorMessage</text>
-<text text-anchor="start" x="143.28" y="-1786.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
-<polygon fill="#666666" stroke="#666666" points="129.28,-2050 129.28,-2050 334.03,-2050 334.03,-2050 129.28,-2050"/>
-<polygon fill="#666666" stroke="#666666" points="129.28,-2006 129.28,-2006 141.28,-2006 141.28,-2006 129.28,-2006"/>
-<polygon fill="#666666" stroke="#666666" points="141.28,-2006 141.28,-2006 334.03,-2006 334.03,-2006 141.28,-2006"/>
-<polygon fill="none" stroke="#666666" points="129.28,-1780 129.28,-2080 334.03,-2080 334.03,-1780 129.28,-1780"/>
+<polygon fill="white" stroke="none" points="331.32,-2094 126.57,-2094 126.57,-1794 331.32,-1794 331.32,-2094"/>
+<text text-anchor="start" x="169.32" y="-2080.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
+<text text-anchor="start" x="176.45" y="-2068.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicPreviewWorker</text>
+<text text-anchor="start" x="132.07" y="-2052.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="140.57" y="-2052.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JLabel qrCodeLabel</text>
+<text text-anchor="start" x="132.07" y="-2036.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="140.57" y="-2036.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int PREVIEW</text>
+<text text-anchor="start" x="140.57" y="-2024.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEBOUNCE_DELAY_MS</text>
+<text text-anchor="start" x="130.57" y="-2008.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="140.57" y="-2008.5" font-family="Helvetica,sans-Serif" font-size="10.00">DynamicPreviewWorker</text>
+<text text-anchor="start" x="140.57" y="-1996.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage,</text>
+<text text-anchor="start" x="140.57" y="-1984.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DynamicResizeWorker qrCodeResize,</text>
+<text text-anchor="start" x="140.57" y="-1972.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JLabel qrCodeLabel, JProgressBar loader)</text>
+<text text-anchor="start" x="130.57" y="-1956.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="140.57" y="-1956.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateQrCodePreview</text>
+<text text-anchor="start" x="140.57" y="-1944.5" font-family="Helvetica,sans-Serif" font-size="10.00">(WholeFields wholeFields)</text>
+<text text-anchor="start" x="130.95" y="-1928.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="140.57" y="-1928.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearResources()</text>
+<text text-anchor="start" x="130.95" y="-1912.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="140.57" y="-1912.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; BufferedImage,</text>
+<text text-anchor="start" x="140.57" y="-1900.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Void &gt; createWorker()</text>
+<text text-anchor="start" x="130.95" y="-1884.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="140.57" y="-1884.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerSuccess</text>
+<text text-anchor="start" x="140.57" y="-1872.5" font-family="Helvetica,sans-Serif" font-size="10.00">(BufferedImage img)</text>
+<text text-anchor="start" x="132.07" y="-1856.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="140.57" y="-1856.5" font-family="Helvetica,sans-Serif" font-size="10.00">BufferedImage buildPreview</text>
+<text text-anchor="start" x="140.57" y="-1844.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image()</text>
+<text text-anchor="start" x="132.07" y="-1828.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="140.57" y="-1828.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommonFields getCommonFields()</text>
+<text text-anchor="start" x="132.07" y="-1812.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="140.57" y="-1812.5" font-family="Helvetica,sans-Serif" font-size="10.00">void showPreviewErrorMessage</text>
+<text text-anchor="start" x="140.57" y="-1800.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
+<polygon fill="#666666" stroke="#666666" points="126.57,-2064 126.57,-2064 331.32,-2064 331.32,-2064 126.57,-2064"/>
+<polygon fill="#666666" stroke="#666666" points="126.57,-2020 126.57,-2020 138.57,-2020 138.57,-2020 126.57,-2020"/>
+<polygon fill="#666666" stroke="#666666" points="138.57,-2020 138.57,-2020 331.32,-2020 331.32,-2020 138.57,-2020"/>
+<polygon fill="none" stroke="#666666" points="126.57,-1794 126.57,-2094 331.32,-2094 331.32,-1794 126.57,-1794"/>
 </a>
 </g>
 </g>
@@ -550,55 +553,55 @@ var sectionId = 'dynsection-0';
 <g id="edge12_Node000009_Node000005" class="edge">
 <title>Node5&#45;&gt;Node9</title>
 <g id="a_edge12_Node000009_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M424.22,-3248.05C419.22,-3112.18 411.25,-2967.77 398.65,-2834 370.99,-2540.24 356.94,-2466.83 296.65,-2178 290.85,-2150.21 283.89,-2120.87 276.7,-2092.49"/>
-<polygon fill="none" stroke="#63b8ff" points="276.7,-2092.47 271.33,-2087.64 273.72,-2080.84 279.09,-2085.66 276.7,-2092.47"/>
+<path fill="none" stroke="#63b8ff" d="M421.51,-3248.05C416.52,-3112.18 408.54,-2967.77 395.95,-2834 368.28,-2540.24 356.36,-2466.38 293.95,-2178 288.9,-2154.67 282.88,-2130.21 276.59,-2106.28"/>
+<polygon fill="none" stroke="#63b8ff" points="276.59,-2106.29 271.18,-2101.52 273.5,-2094.69 278.91,-2099.46 276.59,-2106.29"/>
 </a>
 </g>
-<text text-anchor="start" x="399.83" y="-2682.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
+<text text-anchor="start" x="397.12" y="-2682.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
 </g>
 <!-- Node12 -->
 <g id="Node000012" class="node">
 <title>Node12</title>
 <g id="a_Node000012"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html" target="_top" xlink:title="Service dedicated to QR code generation and saving.">
-<polygon fill="white" stroke="none" points="838.9,-2538 654.4,-2538 654.4,-2178 838.9,-2178 838.9,-2538"/>
-<text text-anchor="start" x="690.4" y="-2524.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
-<text text-anchor="start" x="690.4" y="-2512.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService</text>
-<text text-anchor="start" x="745.15" y="-2496.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<text text-anchor="start" x="658.4" y="-2480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="668.4" y="-2480.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService</text>
-<text text-anchor="start" x="668.4" y="-2468.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage)</text>
-<text text-anchor="start" x="658.4" y="-2452.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="668.4" y="-2452.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateAndSave</text>
-<text text-anchor="start" x="668.4" y="-2440.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData,</text>
-<text text-anchor="start" x="668.4" y="-2428.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config,</text>
-<text text-anchor="start" x="668.4" y="-2416.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JProgressBar loader)</text>
-<text text-anchor="start" x="658.4" y="-2400.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="668.4" y="-2400.5" font-family="Helvetica,sans-Serif" font-size="10.00">File getSelectedFileForTests</text>
-<text text-anchor="start" x="668.4" y="-2388.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JFileChooser chooser)</text>
-<text text-anchor="start" x="658.4" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
-<text text-anchor="start" x="668.4" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00">File resolveFileNameConflict</text>
-<text text-anchor="start" x="668.4" y="-2360.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForTests(File file)</text>
-<text text-anchor="start" x="659.9" y="-2344.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="668.4" y="-2344.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean checkNPEInputs</text>
-<text text-anchor="start" x="668.4" y="-2332.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData, CommonFields</text>
-<text text-anchor="start" x="668.4" y="-2320.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config, JProgressBar loader)</text>
-<text text-anchor="start" x="659.9" y="-2304.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="668.4" y="-2304.5" font-family="Helvetica,sans-Serif" font-size="10.00">File chooseOutputFile</text>
-<text text-anchor="start" x="668.4" y="-2292.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData)</text>
-<text text-anchor="start" x="659.9" y="-2276.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="668.4" y="-2276.5" font-family="Helvetica,sans-Serif" font-size="10.00">void executeQrGeneration</text>
-<text text-anchor="start" x="668.4" y="-2264.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData, CommonFields</text>
-<text text-anchor="start" x="668.4" y="-2252.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config, JProgressBar loader,</text>
-<text text-anchor="start" x="668.4" y="-2240.5" font-family="Helvetica,sans-Serif" font-size="10.00"> File outputFile)</text>
-<text text-anchor="start" x="659.9" y="-2224.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="668.4" y="-2224.5" font-family="Helvetica,sans-Serif" font-size="10.00">File getSelectedPngFile</text>
-<text text-anchor="start" x="668.4" y="-2212.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JFileChooser chooser)</text>
-<text text-anchor="start" x="659.9" y="-2196.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="668.4" y="-2196.5" font-family="Helvetica,sans-Serif" font-size="10.00">File resolveFileNameConflict</text>
-<text text-anchor="start" x="668.4" y="-2184.5" font-family="Helvetica,sans-Serif" font-size="10.00">(File file)</text>
-<polygon fill="#666666" stroke="#666666" points="654.4,-2508 654.4,-2508 838.9,-2508 838.9,-2508 654.4,-2508"/>
-<polygon fill="#666666" stroke="#666666" points="654.4,-2492 654.4,-2492 838.9,-2492 838.9,-2492 654.4,-2492"/>
-<polygon fill="none" stroke="#666666" points="654.4,-2178 654.4,-2538 838.9,-2538 838.9,-2178 654.4,-2178"/>
+<polygon fill="white" stroke="none" points="836.2,-2538 651.7,-2538 651.7,-2178 836.2,-2178 836.2,-2538"/>
+<text text-anchor="start" x="687.7" y="-2524.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
+<text text-anchor="start" x="687.7" y="-2512.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService</text>
+<text text-anchor="start" x="742.45" y="-2496.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="655.7" y="-2480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="665.7" y="-2480.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService</text>
+<text text-anchor="start" x="665.7" y="-2468.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedImage encodedImage)</text>
+<text text-anchor="start" x="655.7" y="-2452.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="665.7" y="-2452.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateAndSave</text>
+<text text-anchor="start" x="665.7" y="-2440.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData,</text>
+<text text-anchor="start" x="665.7" y="-2428.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CommonFields config,</text>
+<text text-anchor="start" x="665.7" y="-2416.5" font-family="Helvetica,sans-Serif" font-size="10.00"> JProgressBar loader)</text>
+<text text-anchor="start" x="655.7" y="-2400.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="665.7" y="-2400.5" font-family="Helvetica,sans-Serif" font-size="10.00">File getSelectedFileForTests</text>
+<text text-anchor="start" x="665.7" y="-2388.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JFileChooser chooser)</text>
+<text text-anchor="start" x="655.7" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00">~</text>
+<text text-anchor="start" x="665.7" y="-2372.5" font-family="Helvetica,sans-Serif" font-size="10.00">File resolveFileNameConflict</text>
+<text text-anchor="start" x="665.7" y="-2360.5" font-family="Helvetica,sans-Serif" font-size="10.00">ForTests(File file)</text>
+<text text-anchor="start" x="657.2" y="-2344.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="665.7" y="-2344.5" font-family="Helvetica,sans-Serif" font-size="10.00">boolean checkNPEInputs</text>
+<text text-anchor="start" x="665.7" y="-2332.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData, CommonFields</text>
+<text text-anchor="start" x="665.7" y="-2320.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config, JProgressBar loader)</text>
+<text text-anchor="start" x="657.2" y="-2304.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="665.7" y="-2304.5" font-family="Helvetica,sans-Serif" font-size="10.00">File chooseOutputFile</text>
+<text text-anchor="start" x="665.7" y="-2292.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData)</text>
+<text text-anchor="start" x="657.2" y="-2276.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="665.7" y="-2276.5" font-family="Helvetica,sans-Serif" font-size="10.00">void executeQrGeneration</text>
+<text text-anchor="start" x="665.7" y="-2264.5" font-family="Helvetica,sans-Serif" font-size="10.00">(EncodedData qrData, CommonFields</text>
+<text text-anchor="start" x="665.7" y="-2252.5" font-family="Helvetica,sans-Serif" font-size="10.00"> config, JProgressBar loader,</text>
+<text text-anchor="start" x="665.7" y="-2240.5" font-family="Helvetica,sans-Serif" font-size="10.00"> File outputFile)</text>
+<text text-anchor="start" x="657.2" y="-2224.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="665.7" y="-2224.5" font-family="Helvetica,sans-Serif" font-size="10.00">File getSelectedPngFile</text>
+<text text-anchor="start" x="665.7" y="-2212.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JFileChooser chooser)</text>
+<text text-anchor="start" x="657.2" y="-2196.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="665.7" y="-2196.5" font-family="Helvetica,sans-Serif" font-size="10.00">File resolveFileNameConflict</text>
+<text text-anchor="start" x="665.7" y="-2184.5" font-family="Helvetica,sans-Serif" font-size="10.00">(File file)</text>
+<polygon fill="#666666" stroke="#666666" points="651.7,-2508 651.7,-2508 836.2,-2508 836.2,-2508 651.7,-2508"/>
+<polygon fill="#666666" stroke="#666666" points="651.7,-2492 651.7,-2492 836.2,-2492 836.2,-2492 651.7,-2492"/>
+<polygon fill="none" stroke="#666666" points="651.7,-2178 651.7,-2538 836.2,-2538 836.2,-2178 651.7,-2178"/>
 </a>
 </g>
 </g>
@@ -606,83 +609,83 @@ var sectionId = 'dynsection-0';
 <g id="edge16_Node000012_Node000005" class="edge">
 <title>Node5&#45;&gt;Node12</title>
 <g id="a_edge16_Node000012_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M523.49,-3497.99C546.93,-3411.42 571.02,-3317.44 590.65,-3230 642.76,-2997.93 688.9,-2727.97 717.23,-2550.84"/>
-<polygon fill="none" stroke="#63b8ff" points="717.25,-2550.73 714.25,-2544.17 719.14,-2538.88 722.15,-2545.43 717.25,-2550.73"/>
+<path fill="none" stroke="#63b8ff" d="M520.79,-3497.99C544.22,-3411.42 568.31,-3317.44 587.95,-3230 640.05,-2997.93 686.2,-2727.97 714.53,-2550.84"/>
+<polygon fill="none" stroke="#63b8ff" points="714.54,-2550.73 711.54,-2544.17 716.43,-2538.88 719.44,-2545.43 714.54,-2550.73"/>
 </a>
 </g>
-<text text-anchor="start" x="671.4" y="-3028.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
+<text text-anchor="start" x="668.69" y="-3028.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;encodedImage</text>
 </g>
 <!-- Node6&#45;&gt;Node2 -->
 <g id="edge5_Node000002_Node000006" class="edge">
 <title>Node6&#45;&gt;Node2</title>
 <g id="a_edge5_Node000002_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M90.92,-2556.27C31.4,-2363.89 -54.9,-1992.68 49.4,-1700 121.21,-1498.5 295.14,-1316.16 412.49,-1209.93"/>
-<polygon fill="none" stroke="#63b8ff" points="412.31,-1210.1 414.09,-1203.11 421.23,-1202.07 419.44,-1209.06 412.31,-1210.1"/>
+<path fill="none" stroke="#63b8ff" d="M88.19,-2556.2C30.22,-2368.42 -52.34,-2011.03 46.7,-1728 118.36,-1523.19 292.32,-1336.1 409.73,-1226.84"/>
+<polygon fill="none" stroke="#63b8ff" points="409.67,-1226.9 411.35,-1219.89 418.47,-1218.75 416.79,-1225.76 409.67,-1226.9"/>
 </a>
 </g>
-<text text-anchor="start" x="52.4" y="-1926.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodeResize</text>
+<text text-anchor="start" x="49.7" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodeResize</text>
 </g>
 <!-- Node6&#45;&gt;Node9 -->
 <g id="edge13_Node000009_Node000006" class="edge">
 <title>Node6&#45;&gt;Node9</title>
 <g id="a_edge13_Node000009_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M151.23,-2556.02C163.7,-2453.52 181.8,-2306.53 198.4,-2178 201.98,-2150.34 205.86,-2120.95 209.67,-2092.45"/>
-<polygon fill="none" stroke="#63b8ff" points="209.64,-2092.65 206.47,-2086.18 211.23,-2080.76 214.4,-2087.24 209.64,-2092.65"/>
+<path fill="none" stroke="#63b8ff" d="M148.21,-2556.24C160.53,-2453.71 178.57,-2306.58 195.7,-2178 198.77,-2154.91 202.13,-2130.55 205.48,-2106.63"/>
+<polygon fill="none" stroke="#63b8ff" points="205.49,-2106.56 202.37,-2100.06 207.17,-2094.68 210.29,-2101.18 205.49,-2106.56"/>
 </a>
 </g>
-<text text-anchor="start" x="201.4" y="-2354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodeResize</text>
+<text text-anchor="start" x="198.7" y="-2354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodeResize</text>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
 <g id="a_Node000007"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="none" points="247.78,-4010 69.53,-4010 69.53,-3626 247.78,-3626 247.78,-4010"/>
-<text text-anchor="start" x="73.53" y="-3996.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
-<text text-anchor="start" x="73.53" y="-3984.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; ImageIcon &gt;</text>
-<text text-anchor="start" x="79.28" y="-3968.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3968.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
-<text text-anchor="start" x="79.28" y="-3952.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3952.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
-<text text-anchor="start" x="94.28" y="-3940.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
-<text text-anchor="start" x="79.28" y="-3924.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3924.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
-<text text-anchor="start" x="79.28" y="-3908.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3908.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
-<text text-anchor="start" x="94.28" y="-3896.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
-<text text-anchor="start" x="78.9" y="-3880.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="94.28" y="-3880.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
-<text text-anchor="start" x="94.28" y="-3868.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
-<text text-anchor="start" x="79.28" y="-3852.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3852.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
-<text text-anchor="start" x="94.28" y="-3840.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
-<text text-anchor="start" x="79.28" y="-3824.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3824.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
-<text text-anchor="start" x="79.28" y="-3808.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3808.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
-<text text-anchor="start" x="79.28" y="-3792.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3792.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
-<text text-anchor="start" x="94.28" y="-3780.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
-<text text-anchor="start" x="79.28" y="-3764.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3764.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
-<text text-anchor="start" x="79.28" y="-3748.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3748.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
-<text text-anchor="start" x="94.28" y="-3736.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
-<text text-anchor="start" x="79.28" y="-3720.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3720.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
-<text text-anchor="start" x="94.28" y="-3708.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
-<text text-anchor="start" x="79.28" y="-3692.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3692.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
-<text text-anchor="start" x="94.28" y="-3680.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
-<text text-anchor="start" x="79.28" y="-3664.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3664.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
-<text text-anchor="start" x="79.28" y="-3648.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="94.28" y="-3648.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
-<text text-anchor="start" x="80.4" y="-3632.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="94.28" y="-3632.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
-<polygon fill="#666666" stroke="#666666" points="69.53,-3980 69.53,-3980 247.78,-3980 247.78,-3980 69.53,-3980"/>
-<polygon fill="#666666" stroke="#666666" points="69.53,-3892 69.53,-3892 92.28,-3892 92.28,-3892 69.53,-3892"/>
-<polygon fill="#666666" stroke="#666666" points="92.28,-3892 92.28,-3892 247.78,-3892 247.78,-3892 92.28,-3892"/>
-<polygon fill="none" stroke="#666666" points="69.53,-3626 69.53,-4010 247.78,-4010 247.78,-3626 69.53,-3626"/>
+<polygon fill="white" stroke="none" points="245.07,-4010 66.82,-4010 66.82,-3626 245.07,-3626 245.07,-4010"/>
+<text text-anchor="start" x="70.82" y="-3996.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
+<text text-anchor="start" x="70.82" y="-3984.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; ImageIcon &gt;</text>
+<text text-anchor="start" x="76.57" y="-3968.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3968.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
+<text text-anchor="start" x="76.57" y="-3952.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3952.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
+<text text-anchor="start" x="91.57" y="-3940.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
+<text text-anchor="start" x="76.57" y="-3924.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3924.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
+<text text-anchor="start" x="76.57" y="-3908.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3908.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
+<text text-anchor="start" x="91.57" y="-3896.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
+<text text-anchor="start" x="76.2" y="-3880.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="91.57" y="-3880.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
+<text text-anchor="start" x="91.57" y="-3868.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
+<text text-anchor="start" x="76.57" y="-3852.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3852.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
+<text text-anchor="start" x="91.57" y="-3840.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
+<text text-anchor="start" x="76.57" y="-3824.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3824.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
+<text text-anchor="start" x="76.57" y="-3808.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3808.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
+<text text-anchor="start" x="76.57" y="-3792.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3792.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
+<text text-anchor="start" x="91.57" y="-3780.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
+<text text-anchor="start" x="76.57" y="-3764.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3764.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
+<text text-anchor="start" x="76.57" y="-3748.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3748.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
+<text text-anchor="start" x="91.57" y="-3736.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
+<text text-anchor="start" x="76.57" y="-3720.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3720.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
+<text text-anchor="start" x="91.57" y="-3708.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
+<text text-anchor="start" x="76.57" y="-3692.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3692.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
+<text text-anchor="start" x="91.57" y="-3680.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
+<text text-anchor="start" x="76.57" y="-3664.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3664.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
+<text text-anchor="start" x="76.57" y="-3648.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="91.57" y="-3648.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
+<text text-anchor="start" x="77.7" y="-3632.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="91.57" y="-3632.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
+<polygon fill="#666666" stroke="#666666" points="66.82,-3980 66.82,-3980 245.07,-3980 245.07,-3980 66.82,-3980"/>
+<polygon fill="#666666" stroke="#666666" points="66.82,-3892 66.82,-3892 89.57,-3892 89.57,-3892 66.82,-3892"/>
+<polygon fill="#666666" stroke="#666666" points="89.57,-3892 89.57,-3892 245.07,-3892 245.07,-3892 89.57,-3892"/>
+<polygon fill="none" stroke="#666666" points="66.82,-3626 66.82,-4010 245.07,-4010 245.07,-3626 66.82,-3626"/>
 </a>
 </g>
 </g>
@@ -690,8 +693,8 @@ var sectionId = 'dynsection-0';
 <g id="edge6_Node000006_Node000007" class="edge">
 <title>Node7&#45;&gt;Node6</title>
 <g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M147.49,-3614.87C141.8,-3501.72 135.49,-3358.06 132.65,-3230 128.76,-3054.04 130.86,-3009.99 132.65,-2834 132.71,-2828 132.79,-2821.87 132.88,-2815.67"/>
-<polygon fill="none" stroke="#63b8ff" points="143.98,-3614.75 147.98,-3624.56 150.97,-3614.39 143.98,-3614.75"/>
+<path fill="none" stroke="#63b8ff" d="M144.78,-3614.87C139.09,-3501.72 132.78,-3358.06 129.95,-3230 126.05,-3054.04 128.15,-3009.99 129.95,-2834 130.01,-2828 130.08,-2821.87 130.17,-2815.67"/>
+<polygon fill="none" stroke="#63b8ff" points="141.27,-3614.75 145.27,-3624.56 148.26,-3614.39 141.27,-3614.75"/>
 </a>
 </g>
 </g>
@@ -699,53 +702,53 @@ var sectionId = 'dynsection-0';
 <g id="Node000008" class="node">
 <title>Node8</title>
 <g id="a_Node000008"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" target="_top" xlink:title="Base class managing asynchronous QR code tasks with a unified workflow.">
-<polygon fill="white" stroke="none" points="319.03,-4826 162.28,-4826 162.28,-4442 319.03,-4442 319.03,-4826"/>
-<text text-anchor="start" x="175.78" y="-4812.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
-<text text-anchor="start" x="175.78" y="-4800.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; T &gt;</text>
-<text text-anchor="start" x="166.65" y="-4784.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4784.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
-<text text-anchor="start" x="166.65" y="-4768.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4768.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
-<text text-anchor="start" x="176.28" y="-4756.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
-<text text-anchor="start" x="166.65" y="-4740.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4740.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
-<text text-anchor="start" x="166.65" y="-4724.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4724.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
-<text text-anchor="start" x="176.28" y="-4712.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
-<text text-anchor="start" x="166.28" y="-4696.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="176.28" y="-4696.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
-<text text-anchor="start" x="176.28" y="-4684.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
-<text text-anchor="start" x="166.65" y="-4668.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4668.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
-<text text-anchor="start" x="176.28" y="-4656.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
-<text text-anchor="start" x="166.65" y="-4640.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4640.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
-<text text-anchor="start" x="166.65" y="-4624.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4624.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
-<text text-anchor="start" x="166.65" y="-4608.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4608.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
-<text text-anchor="start" x="176.28" y="-4596.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
-<text text-anchor="start" x="166.65" y="-4580.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4580.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
-<text text-anchor="start" x="166.65" y="-4564.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4564.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
-<text text-anchor="start" x="176.28" y="-4552.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
-<text text-anchor="start" x="166.65" y="-4536.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4536.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
-<text text-anchor="start" x="176.28" y="-4524.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
-<text text-anchor="start" x="166.65" y="-4508.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4508.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
-<text text-anchor="start" x="176.28" y="-4496.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
-<text text-anchor="start" x="166.65" y="-4480.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4480.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
-<text text-anchor="start" x="166.65" y="-4464.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="176.28" y="-4464.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
-<text text-anchor="start" x="167.78" y="-4448.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="176.28" y="-4448.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
-<polygon fill="#666666" stroke="#666666" points="162.28,-4796 162.28,-4796 319.03,-4796 319.03,-4796 162.28,-4796"/>
-<polygon fill="#666666" stroke="#666666" points="162.28,-4708 162.28,-4708 174.28,-4708 174.28,-4708 162.28,-4708"/>
-<polygon fill="#666666" stroke="#666666" points="174.28,-4708 174.28,-4708 319.03,-4708 319.03,-4708 174.28,-4708"/>
-<polygon fill="none" stroke="#666666" points="162.28,-4442 162.28,-4826 319.03,-4826 319.03,-4442 162.28,-4442"/>
+<polygon fill="white" stroke="none" points="316.32,-4826 159.57,-4826 159.57,-4442 316.32,-4442 316.32,-4826"/>
+<text text-anchor="start" x="173.07" y="-4812.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
+<text text-anchor="start" x="173.07" y="-4800.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; T &gt;</text>
+<text text-anchor="start" x="163.95" y="-4784.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4784.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
+<text text-anchor="start" x="163.95" y="-4768.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4768.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
+<text text-anchor="start" x="173.57" y="-4756.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
+<text text-anchor="start" x="163.95" y="-4740.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4740.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
+<text text-anchor="start" x="163.95" y="-4724.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4724.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
+<text text-anchor="start" x="173.57" y="-4712.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
+<text text-anchor="start" x="163.57" y="-4696.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="173.57" y="-4696.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
+<text text-anchor="start" x="173.57" y="-4684.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
+<text text-anchor="start" x="163.95" y="-4668.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4668.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
+<text text-anchor="start" x="173.57" y="-4656.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
+<text text-anchor="start" x="163.95" y="-4640.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4640.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
+<text text-anchor="start" x="163.95" y="-4624.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4624.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
+<text text-anchor="start" x="163.95" y="-4608.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4608.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
+<text text-anchor="start" x="173.57" y="-4596.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
+<text text-anchor="start" x="163.95" y="-4580.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4580.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
+<text text-anchor="start" x="163.95" y="-4564.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4564.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
+<text text-anchor="start" x="173.57" y="-4552.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
+<text text-anchor="start" x="163.95" y="-4536.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4536.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
+<text text-anchor="start" x="173.57" y="-4524.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
+<text text-anchor="start" x="163.95" y="-4508.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4508.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
+<text text-anchor="start" x="173.57" y="-4496.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
+<text text-anchor="start" x="163.95" y="-4480.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4480.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
+<text text-anchor="start" x="163.95" y="-4464.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="173.57" y="-4464.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
+<text text-anchor="start" x="165.07" y="-4448.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="173.57" y="-4448.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
+<polygon fill="#666666" stroke="#666666" points="159.57,-4796 159.57,-4796 316.32,-4796 316.32,-4796 159.57,-4796"/>
+<polygon fill="#666666" stroke="#666666" points="159.57,-4708 159.57,-4708 171.57,-4708 171.57,-4708 159.57,-4708"/>
+<polygon fill="#666666" stroke="#666666" points="171.57,-4708 171.57,-4708 316.32,-4708 316.32,-4708 171.57,-4708"/>
+<polygon fill="none" stroke="#666666" points="159.57,-4442 159.57,-4826 316.32,-4826 316.32,-4442 159.57,-4442"/>
 </a>
 </g>
 </g>
@@ -753,64 +756,64 @@ var sectionId = 'dynsection-0';
 <g id="edge7_Node000007_Node000008" class="edge">
 <title>Node8&#45;&gt;Node7</title>
 <g id="a_edge7_Node000007_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="orange" d="M208.71,-4430.7C208.44,-4428.46 208.17,-4426.22 207.9,-4424 191.47,-4285.74 178.88,-4129.04 170.54,-4009.76"/>
-<polygon fill="orange" stroke="orange" points="205.23,-4431.03 209.95,-4440.51 212.17,-4430.15 205.23,-4431.03"/>
+<path fill="none" stroke="orange" d="M206.01,-4430.7C205.73,-4428.46 205.46,-4426.22 205.2,-4424 188.76,-4285.74 176.17,-4129.04 167.83,-4009.76"/>
+<polygon fill="orange" stroke="orange" points="202.52,-4431.03 207.24,-4440.51 209.46,-4430.15 202.52,-4431.03"/>
 </a>
 </g>
-<text text-anchor="start" x="210.9" y="-4411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&lt; ImageIcon &gt;</text>
+<text text-anchor="start" x="208.2" y="-4411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&lt; ImageIcon &gt;</text>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
 <g id="a_Node000010"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="none" points="389.4,-3230 229.9,-3230 229.9,-2834 389.4,-2834 389.4,-3230"/>
-<text text-anchor="start" x="233.9" y="-3216.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
-<text text-anchor="start" x="233.9" y="-3204.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; Buffered</text>
-<text text-anchor="start" x="291.65" y="-3192.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image &gt;</text>
-<text text-anchor="start" x="234.97" y="-3176.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3176.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
-<text text-anchor="start" x="234.97" y="-3160.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3160.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
-<text text-anchor="start" x="245.28" y="-3148.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
-<text text-anchor="start" x="234.97" y="-3132.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3132.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
-<text text-anchor="start" x="234.97" y="-3116.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3116.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
-<text text-anchor="start" x="245.28" y="-3104.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
-<text text-anchor="start" x="234.59" y="-3088.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="245.28" y="-3088.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
-<text text-anchor="start" x="245.28" y="-3076.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
-<text text-anchor="start" x="234.97" y="-3060.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3060.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
-<text text-anchor="start" x="245.28" y="-3048.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
-<text text-anchor="start" x="234.97" y="-3032.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3032.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
-<text text-anchor="start" x="234.97" y="-3016.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3016.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
-<text text-anchor="start" x="234.97" y="-3000.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-3000.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
-<text text-anchor="start" x="245.28" y="-2988.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
-<text text-anchor="start" x="234.97" y="-2972.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2972.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
-<text text-anchor="start" x="234.97" y="-2956.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2956.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
-<text text-anchor="start" x="245.28" y="-2944.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
-<text text-anchor="start" x="234.97" y="-2928.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2928.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
-<text text-anchor="start" x="245.28" y="-2916.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
-<text text-anchor="start" x="234.97" y="-2900.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2900.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
-<text text-anchor="start" x="245.28" y="-2888.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
-<text text-anchor="start" x="234.97" y="-2872.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2872.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
-<text text-anchor="start" x="234.97" y="-2856.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
-<text text-anchor="start" x="245.28" y="-2856.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
-<text text-anchor="start" x="236.09" y="-2840.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="245.28" y="-2840.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
-<polygon fill="#666666" stroke="#666666" points="229.9,-3188 229.9,-3188 389.4,-3188 389.4,-3188 229.9,-3188"/>
-<polygon fill="#666666" stroke="#666666" points="229.9,-3100 229.9,-3100 243.28,-3100 243.28,-3100 229.9,-3100"/>
-<polygon fill="#666666" stroke="#666666" points="243.28,-3100 243.28,-3100 389.4,-3100 389.4,-3100 243.28,-3100"/>
-<polygon fill="none" stroke="#666666" points="229.9,-2834 229.9,-3230 389.4,-3230 389.4,-2834 229.9,-2834"/>
+<polygon fill="white" stroke="none" points="386.7,-3230 227.2,-3230 227.2,-2834 386.7,-2834 386.7,-3230"/>
+<text text-anchor="start" x="231.2" y="-3216.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.worker.</text>
+<text text-anchor="start" x="231.2" y="-3204.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker&lt; Buffered</text>
+<text text-anchor="start" x="288.95" y="-3192.5" font-family="Helvetica,sans-Serif" font-size="10.00">Image &gt;</text>
+<text text-anchor="start" x="232.26" y="-3176.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3176.5" font-family="Helvetica,sans-Serif" font-size="10.00">Timer debounceTimer</text>
+<text text-anchor="start" x="232.26" y="-3160.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3160.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JProgressBar</text>
+<text text-anchor="start" x="242.57" y="-3148.5" font-family="Helvetica,sans-Serif" font-size="10.00"> loader</text>
+<text text-anchor="start" x="232.26" y="-3132.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3132.5" font-family="Helvetica,sans-Serif" font-size="10.00">WholeFields wholeFields</text>
+<text text-anchor="start" x="232.26" y="-3116.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3116.5" font-family="Helvetica,sans-Serif" font-size="10.00">SwingWorker&lt; T, Void</text>
+<text text-anchor="start" x="242.57" y="-3104.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &gt; worker</text>
+<text text-anchor="start" x="231.88" y="-3088.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="242.57" y="-3088.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeAllResources</text>
+<text text-anchor="start" x="242.57" y="-3076.5" font-family="Helvetica,sans-Serif" font-size="10.00">OnExit()</text>
+<text text-anchor="start" x="232.26" y="-3060.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3060.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractDynamicWorker</text>
+<text text-anchor="start" x="242.57" y="-3048.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JProgressBar loader)</text>
+<text text-anchor="start" x="232.26" y="-3032.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3032.5" font-family="Helvetica,sans-Serif" font-size="10.00">void cancelWorker()</text>
+<text text-anchor="start" x="232.26" y="-3016.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3016.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void clearResources()</text>
+<text text-anchor="start" x="232.26" y="-3000.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-3000.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract SwingWorker</text>
+<text text-anchor="start" x="242.57" y="-2988.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; T, Void &gt; createWorker()</text>
+<text text-anchor="start" x="232.26" y="-2972.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2972.5" font-family="Helvetica,sans-Serif" font-size="10.00">void handleWorkerDone()</text>
+<text text-anchor="start" x="232.26" y="-2956.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2956.5" font-family="Helvetica,sans-Serif" font-size="10.00">void onWorkerFailure</text>
+<text text-anchor="start" x="242.57" y="-2944.5" font-family="Helvetica,sans-Serif" font-size="10.00">(Exception ex)</text>
+<text text-anchor="start" x="232.26" y="-2928.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2928.5" font-family="Helvetica,sans-Serif" font-size="10.00">abstract void onWorkerSuccess</text>
+<text text-anchor="start" x="242.57" y="-2916.5" font-family="Helvetica,sans-Serif" font-size="10.00">(T result)</text>
+<text text-anchor="start" x="232.26" y="-2900.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2900.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetAndStartWorker</text>
+<text text-anchor="start" x="242.57" y="-2888.5" font-family="Helvetica,sans-Serif" font-size="10.00">(int delayMs)</text>
+<text text-anchor="start" x="232.26" y="-2872.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2872.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopDebounceTimer()</text>
+<text text-anchor="start" x="232.26" y="-2856.5" font-family="Helvetica,sans-Serif" font-size="10.00">#</text>
+<text text-anchor="start" x="242.57" y="-2856.5" font-family="Helvetica,sans-Serif" font-size="10.00">void stopLoader()</text>
+<text text-anchor="start" x="233.38" y="-2840.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="242.57" y="-2840.5" font-family="Helvetica,sans-Serif" font-size="10.00">void resetWorker()</text>
+<polygon fill="#666666" stroke="#666666" points="227.2,-3188 227.2,-3188 386.7,-3188 386.7,-3188 227.2,-3188"/>
+<polygon fill="#666666" stroke="#666666" points="227.2,-3100 227.2,-3100 240.57,-3100 240.57,-3100 227.2,-3100"/>
+<polygon fill="#666666" stroke="#666666" points="240.57,-3100 240.57,-3100 386.7,-3100 386.7,-3100 240.57,-3100"/>
+<polygon fill="none" stroke="#666666" points="227.2,-2834 227.2,-3230 386.7,-3230 386.7,-2834 227.2,-2834"/>
 </a>
 </g>
 </g>
@@ -818,28 +821,28 @@ var sectionId = 'dynsection-0';
 <g id="edge11_Node000010_Node000008" class="edge">
 <title>Node8&#45;&gt;Node10</title>
 <g id="a_edge11_Node000010_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="orange" d="M276.96,-4430.74C277.2,-4428.48 277.43,-4426.23 277.65,-4424 319.81,-4000.04 319.07,-3500 314.53,-3229.95"/>
-<polygon fill="orange" stroke="orange" points="273.49,-4430.26 275.84,-4440.59 280.44,-4431.05 273.49,-4430.26"/>
+<path fill="none" stroke="orange" d="M274.25,-4430.74C274.49,-4428.48 274.72,-4426.23 274.95,-4424 317.1,-4000.04 316.36,-3500 311.82,-3229.95"/>
+<polygon fill="orange" stroke="orange" points="270.78,-4430.26 273.13,-4440.59 277.74,-4431.05 270.78,-4430.26"/>
 </a>
 </g>
-<text text-anchor="start" x="280.65" y="-4411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&lt; BufferedImage &gt;</text>
+<text text-anchor="start" x="277.95" y="-4411.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&lt; BufferedImage &gt;</text>
 </g>
 <!-- Node9&#45;&gt;Node2 -->
 <g id="edge9_Node000002_Node000009" class="edge">
 <title>Node9&#45;&gt;Node2</title>
 <g id="a_edge9_Node000002_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M285.71,-1780.08C299.47,-1742.21 314.22,-1701.6 327.9,-1664 356.87,-1584.37 388.22,-1498.28 417.34,-1418.34"/>
-<polygon fill="none" stroke="#63b8ff" points="417.39,-1418.21 415.69,-1411.2 421.5,-1406.93 423.21,-1413.94 417.39,-1418.21"/>
+<path fill="none" stroke="#63b8ff" d="M283.07,-1794.28C319.83,-1693.3 369.75,-1556.15 414.77,-1432.44"/>
+<polygon fill="none" stroke="#63b8ff" points="414.7,-1432.64 413,-1425.63 418.81,-1421.36 420.51,-1428.37 414.7,-1432.64"/>
 </a>
 </g>
-<text text-anchor="start" x="330.9" y="-1669.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodePreview</text>
+<text text-anchor="start" x="319.71" y="-1697.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;qrCodePreview</text>
 </g>
 <!-- Node10&#45;&gt;Node9 -->
 <g id="edge10_Node000009_Node000010" class="edge">
 <title>Node10&#45;&gt;Node9</title>
 <g id="a_edge10_Node000009_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M306.04,-2822.79C301.56,-2649.8 291.61,-2397.41 269.65,-2178 266.47,-2146.16 261.96,-2112.17 257.16,-2079.9"/>
-<polygon fill="none" stroke="#63b8ff" points="302.53,-2822.64 306.28,-2832.55 309.53,-2822.47 302.53,-2822.64"/>
+<path fill="none" stroke="#63b8ff" d="M303.85,-2822.73C299.68,-2649.71 289.89,-2397.31 266.95,-2178 264.09,-2150.69 260.12,-2121.71 255.83,-2093.82"/>
+<polygon fill="none" stroke="#63b8ff" points="300.35,-2822.59 304.08,-2832.5 307.34,-2822.42 300.35,-2822.59"/>
 </a>
 </g>
 </g>
@@ -847,58 +850,55 @@ var sectionId = 'dynsection-0';
 <g id="Node000011" class="node">
 <title>Node11</title>
 <g id="a_Node000011"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html" target="_top" xlink:title="Utility class for managing QR code colors and color&#45;related UI operations.">
-<polygon fill="white" stroke="none" points="905.78,-2160 759.53,-2160 759.53,-1700 905.78,-1700 905.78,-2160"/>
-<text text-anchor="start" x="777.53" y="-2146.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.Color</text>
-<text text-anchor="start" x="811.65" y="-2134.5" font-family="Helvetica,sans-Serif" font-size="10.00">Operation</text>
-<text text-anchor="start" x="765.03" y="-2118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-2118.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="773.53" y="-2106.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BORDER_COLOR</text>
-<text text-anchor="start" x="765.03" y="-2090.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-2090.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="773.53" y="-2078.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BUTTON</text>
-<text text-anchor="start" x="765.03" y="-2062.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-2062.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BUTTON</text>
-<text text-anchor="start" x="773.53" y="-2050.5" font-family="Helvetica,sans-Serif" font-size="10.00">_COLOR_ICON_TEXT_GAP</text>
-<text text-anchor="start" x="765.03" y="-2034.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-2034.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BUTTON</text>
-<text text-anchor="start" x="773.53" y="-2022.5" font-family="Helvetica,sans-Serif" font-size="10.00">_ICON_COLOR_SIZE</text>
-<text text-anchor="start" x="765.03" y="-2006.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-2006.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="773.53" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CHOOSE_COLOR</text>
-<text text-anchor="start" x="765.03" y="-1978.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-1978.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="773.53" y="-1966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> COLOR</text>
-<text text-anchor="start" x="765.03" y="-1950.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-1950.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
-<text text-anchor="start" x="773.53" y="-1938.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_HEX_COLOR</text>
-<text text-anchor="start" x="765.03" y="-1922.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-1922.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final float</text>
-<text text-anchor="start" x="773.53" y="-1910.5" font-family="Helvetica,sans-Serif" font-size="10.00"> STROKE_WIDTH</text>
-<text text-anchor="start" x="763.53" y="-1894.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="773.53" y="-1894.5" font-family="Helvetica,sans-Serif" font-size="10.00">Color chooseColor(JButton</text>
-<text text-anchor="start" x="773.53" y="-1882.5" font-family="Helvetica,sans-Serif" font-size="10.00"> button, Color currentColor,</text>
-<text text-anchor="start" x="773.53" y="-1870.5" font-family="Helvetica,sans-Serif" font-size="10.00"> boolean isQrColor)</text>
-<text text-anchor="start" x="763.53" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="773.53" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00">String colorToHex(Color</text>
-<text text-anchor="start" x="773.53" y="-1842.5" font-family="Helvetica,sans-Serif" font-size="10.00"> color)</text>
-<text text-anchor="start" x="763.53" y="-1826.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="773.53" y="-1826.5" font-family="Helvetica,sans-Serif" font-size="10.00">void initializeColorButton</text>
-<text text-anchor="start" x="773.53" y="-1814.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color color,</text>
-<text text-anchor="start" x="773.53" y="-1802.5" font-family="Helvetica,sans-Serif" font-size="10.00"> boolean isQrColor)</text>
-<text text-anchor="start" x="763.53" y="-1786.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="773.53" y="-1786.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateButtonWithColor</text>
-<text text-anchor="start" x="773.53" y="-1774.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color color)</text>
-<text text-anchor="start" x="765.03" y="-1758.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-1758.5" font-family="Helvetica,sans-Serif" font-size="10.00">Icon createColorIcon</text>
-<text text-anchor="start" x="773.53" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color</text>
-<text text-anchor="start" x="773.53" y="-1734.5" font-family="Helvetica,sans-Serif" font-size="10.00"> color)</text>
-<text text-anchor="start" x="765.03" y="-1718.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="773.53" y="-1718.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeButtonIcon</text>
-<text text-anchor="start" x="773.53" y="-1706.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button)</text>
-<polygon fill="#666666" stroke="#666666" points="759.53,-2130 759.53,-2130 905.78,-2130 905.78,-2130 759.53,-2130"/>
-<polygon fill="#666666" stroke="#666666" points="759.53,-1906 759.53,-1906 771.53,-1906 771.53,-1906 759.53,-1906"/>
-<polygon fill="#666666" stroke="#666666" points="771.53,-1906 771.53,-1906 905.78,-1906 905.78,-1906 771.53,-1906"/>
-<polygon fill="none" stroke="#666666" points="759.53,-1700 759.53,-2160 905.78,-2160 905.78,-1700 759.53,-1700"/>
+<polygon fill="white" stroke="none" points="903.07,-2160 756.82,-2160 756.82,-1728 903.07,-1728 903.07,-2160"/>
+<text text-anchor="start" x="774.82" y="-2146.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.Color</text>
+<text text-anchor="start" x="808.95" y="-2134.5" font-family="Helvetica,sans-Serif" font-size="10.00">Operation</text>
+<text text-anchor="start" x="762.32" y="-2118.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-2118.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="770.82" y="-2106.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BORDER_COLOR</text>
+<text text-anchor="start" x="762.32" y="-2090.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-2090.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="770.82" y="-2078.5" font-family="Helvetica,sans-Serif" font-size="10.00"> BUTTON</text>
+<text text-anchor="start" x="762.32" y="-2062.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-2062.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int BUTTON</text>
+<text text-anchor="start" x="770.82" y="-2050.5" font-family="Helvetica,sans-Serif" font-size="10.00">_COLOR_ICON_TEXT_GAP</text>
+<text text-anchor="start" x="762.32" y="-2034.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-2034.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="770.82" y="-2022.5" font-family="Helvetica,sans-Serif" font-size="10.00"> CHOOSE_COLOR</text>
+<text text-anchor="start" x="762.32" y="-2006.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-2006.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="770.82" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00"> COLOR</text>
+<text text-anchor="start" x="762.32" y="-1978.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-1978.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final String</text>
+<text text-anchor="start" x="770.82" y="-1966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DEFAULT_HEX_COLOR</text>
+<text text-anchor="start" x="762.32" y="-1950.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-1950.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final float</text>
+<text text-anchor="start" x="770.82" y="-1938.5" font-family="Helvetica,sans-Serif" font-size="10.00"> STROKE_WIDTH</text>
+<text text-anchor="start" x="760.82" y="-1922.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="770.82" y="-1922.5" font-family="Helvetica,sans-Serif" font-size="10.00">Color chooseColor(JButton</text>
+<text text-anchor="start" x="770.82" y="-1910.5" font-family="Helvetica,sans-Serif" font-size="10.00"> button, Color currentColor,</text>
+<text text-anchor="start" x="770.82" y="-1898.5" font-family="Helvetica,sans-Serif" font-size="10.00"> boolean isQrColor)</text>
+<text text-anchor="start" x="760.82" y="-1882.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="770.82" y="-1882.5" font-family="Helvetica,sans-Serif" font-size="10.00">String colorToHex(Color</text>
+<text text-anchor="start" x="770.82" y="-1870.5" font-family="Helvetica,sans-Serif" font-size="10.00"> color)</text>
+<text text-anchor="start" x="760.82" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="770.82" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00">void initializeColorButton</text>
+<text text-anchor="start" x="770.82" y="-1842.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color color,</text>
+<text text-anchor="start" x="770.82" y="-1830.5" font-family="Helvetica,sans-Serif" font-size="10.00"> boolean isQrColor)</text>
+<text text-anchor="start" x="760.82" y="-1814.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
+<text text-anchor="start" x="770.82" y="-1814.5" font-family="Helvetica,sans-Serif" font-size="10.00">void updateButtonWithColor</text>
+<text text-anchor="start" x="770.82" y="-1802.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color color)</text>
+<text text-anchor="start" x="762.32" y="-1786.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-1786.5" font-family="Helvetica,sans-Serif" font-size="10.00">Icon createColorIcon</text>
+<text text-anchor="start" x="770.82" y="-1774.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button, Color</text>
+<text text-anchor="start" x="770.82" y="-1762.5" font-family="Helvetica,sans-Serif" font-size="10.00"> color)</text>
+<text text-anchor="start" x="762.32" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="770.82" y="-1746.5" font-family="Helvetica,sans-Serif" font-size="10.00">void disposeButtonIcon</text>
+<text text-anchor="start" x="770.82" y="-1734.5" font-family="Helvetica,sans-Serif" font-size="10.00">(JButton button)</text>
+<polygon fill="#666666" stroke="#666666" points="756.82,-2130 756.82,-2130 903.07,-2130 903.07,-2130 756.82,-2130"/>
+<polygon fill="#666666" stroke="#666666" points="756.82,-1934 756.82,-1934 768.82,-1934 768.82,-1934 756.82,-1934"/>
+<polygon fill="#666666" stroke="#666666" points="768.82,-1934 768.82,-1934 903.07,-1934 903.07,-1934 768.82,-1934"/>
+<polygon fill="none" stroke="#666666" points="756.82,-1728 756.82,-2160 903.07,-2160 903.07,-1728 756.82,-1728"/>
 </a>
 </g>
 </g>
@@ -906,31 +906,31 @@ var sectionId = 'dynsection-0';
 <g id="edge17_Node000001_Node000011" class="edge">
 <title>Node11&#45;&gt;Node1</title>
 <g id="a_edge17_Node000001_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M810.15,-1700.41C780.27,-1396.88 727.56,-861.46 695.6,-536.74"/>
-<polygon fill="none" stroke="#63b8ff" points="695.59,-536.68 691.03,-531.1 694.42,-524.74 698.99,-530.32 695.59,-536.68"/>
+<path fill="none" stroke="#63b8ff" d="M808.97,-1728.09C779.32,-1424.35 725.15,-869.49 692.66,-536.66"/>
+<polygon fill="none" stroke="#63b8ff" points="692.67,-536.77 688.11,-531.19 691.51,-524.83 696.07,-530.41 692.67,-536.77"/>
 </a>
 </g>
-<text text-anchor="start" x="806.89" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;colorOperation</text>
+<text text-anchor="start" x="806.29" y="-1122.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;colorOperation</text>
 </g>
 <!-- Node11&#45;&gt;Node2 -->
 <g id="edge14_Node000002_Node000011" class="edge">
 <title>Node11&#45;&gt;Node2</title>
 <g id="a_edge14_Node000002_Node000011"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M759.67,-1721.29C755.23,-1713.94 750.56,-1706.82 745.65,-1700 738.27,-1689.75 730.87,-1692.37 723.65,-1682 691.16,-1635.27 663.67,-1582.65 640.51,-1528.77"/>
-<polygon fill="none" stroke="#63b8ff" points="640.51,-1528.77 634.49,-1524.8 635.84,-1517.72 641.86,-1521.68 640.51,-1528.77"/>
+<path fill="none" stroke="#63b8ff" d="M756.96,-1748.79C752.51,-1741.61 747.84,-1734.65 742.95,-1728 735.45,-1717.83 728.12,-1720.4 720.95,-1710 688.34,-1662.74 660.82,-1609.59 637.7,-1555.12"/>
+<polygon fill="none" stroke="#63b8ff" points="637.66,-1555.01 631.65,-1551.02 633.03,-1543.94 639.03,-1547.93 637.66,-1555.01"/>
 </a>
 </g>
-<text text-anchor="start" x="726.65" y="-1669.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;colorOperation</text>
+<text text-anchor="start" x="723.95" y="-1697.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;colorOperation</text>
 </g>
 <!-- Node12&#45;&gt;Node2 -->
 <g id="edge15_Node000002_Node000012" class="edge">
 <title>Node12&#45;&gt;Node2</title>
 <g id="a_edge15_Node000002_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M654.5,-2183.09C653.22,-2181.37 651.94,-2179.68 650.65,-2178 643.51,-2168.72 636.5,-2170.54 631.4,-2160 583.25,-2060.44 601.36,-1774.07 590.65,-1664 590.48,-1662.22 590.31,-1660.44 590.13,-1658.66"/>
-<polygon fill="none" stroke="#63b8ff" points="590.14,-1658.77 585.57,-1653.19 588.97,-1646.83 593.54,-1652.41 590.14,-1658.77"/>
+<path fill="none" stroke="#63b8ff" d="M651.79,-2183.09C650.52,-2181.37 649.24,-2179.68 647.95,-2178 640.8,-2168.72 633.82,-2170.53 628.7,-2160 583.02,-2066.13 598.17,-1795.89 587.95,-1692 587.77,-1690.21 587.59,-1688.43 587.42,-1686.63"/>
+<polygon fill="none" stroke="#63b8ff" points="587.42,-1686.69 582.85,-1681.12 586.24,-1674.75 590.81,-1680.33 587.42,-1686.69"/>
 </a>
 </g>
-<text text-anchor="start" x="634.4" y="-1926.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;generateAndSaveService</text>
+<text text-anchor="start" x="631.7" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey">&#45;generateAndSaveService</text>
 </g>
 </g>
 </svg>

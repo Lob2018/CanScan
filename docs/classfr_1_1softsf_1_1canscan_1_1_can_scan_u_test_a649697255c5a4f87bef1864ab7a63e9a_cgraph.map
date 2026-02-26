@@ -1,5 +1,6 @@
 <map id="fr.softsf.canscan.CanScanUTest.givenConfigWithLargeLogoRatio_whenGenerateQrCodeImage_thenReturnValidImage" name="fr.softsf.canscan.CanScanUTest.givenConfigWithLargeLogoRatio_whenGenerateQrCodeImage_thenReturnValidImage">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,219,230,293"/>
+<area shape="poly" id="edge20_Node000001_Node000001" title=" " alt="" coords="67,218,70,208,80,199,96,194,118,192,143,195,159,202,157,207,142,200,117,197,97,199,83,204,75,211,72,219"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#aa3deebd610599088a79dcc90b3b980fd" title="Generates a QR code image with optional logo and styling." alt="" coords="278,235,466,277"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,253,262,253,262,259,230,259"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ae482672e4d0f995350dce61ca3e94976" title="Creates a QR code matrix for the given text." alt="" coords="537,5,725,48"/>

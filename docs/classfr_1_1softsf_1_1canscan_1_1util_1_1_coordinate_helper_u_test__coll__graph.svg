@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Suite de tests unitaires pour la validation et le formatage des coordonnées géographiques.">
 <polygon fill="#999999" stroke="none" points="171.75,-260 0,-260 0,0 171.75,0 171.75,-260"/>
 <text text-anchor="start" x="16.12" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.util.Coordinate</text>
 <text text-anchor="start" x="58.5" y="-234.5" font-family="Helvetica,sans-Serif" font-size="10.00">HelperUTest</text>

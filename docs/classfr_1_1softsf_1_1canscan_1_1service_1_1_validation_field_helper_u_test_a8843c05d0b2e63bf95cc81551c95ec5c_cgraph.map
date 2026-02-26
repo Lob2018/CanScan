@@ -1,0 +1,4 @@
+<map id="fr.softsf.canscan.service.ValidationFieldHelperUTest.givenMeetTitleWithAccentsAndSpacesWhenValidateAndGetMeetUIDThenReturnSanitizedUid" name="fr.softsf.canscan.service.ValidationFieldHelperUTest.givenMeetTitleWithAccentsAndSpacesWhenValidateAndGetMeetUIDThenReturnSanitizedUid">
+<area shape="rect" id="Node000001" title="Vérifie la sanitisation d&#39;un titre de réunion (suppression accents, espaces, ponctuation)." alt="" coords="5,29,303,104"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="96,28,99,18,111,10,129,5,154,3,184,6,203,13,201,18,183,11,154,8,130,10,113,15,104,21,101,30"/>
+</map>

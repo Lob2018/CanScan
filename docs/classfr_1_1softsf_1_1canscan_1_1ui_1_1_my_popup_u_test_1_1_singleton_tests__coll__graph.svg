@@ -22,7 +22,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="Tests vérifiant l&#39;implémentation du pattern Singleton.">
 <polygon fill="#999999" stroke="none" points="174.75,-88 0,-88 0,0 174.75,0 174.75,-88"/>
 <text text-anchor="start" x="23.25" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.ui.MyPopup</text>
 <text text-anchor="start" x="40.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest.SingletonTests</text>

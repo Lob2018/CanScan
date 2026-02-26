@@ -10,7 +10,7 @@ var classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator =
     [ "findVisibleJList", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aaf2a12382a791fc827de25518f612449", null ],
     [ "freeDataTooBig", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a38fd2d97bfc693365a8dc700273ada47", null ],
     [ "interceptAndValideDialog", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4795cbc2d8717311fd26b8589a618616", null ],
-    [ "main", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab8c7880da3362ba3c790d51a0918e774", null ],
+    [ "main", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a23e1c1427c57af215e04735bb0d78bbf", null ],
     [ "nameTypingSimulation", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ae2840980d77f2806ab5f1bd471186ed3", null ],
     [ "openLatestReleaseRepoInBrowser", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aca8bae30971c2243dc992ef4dc9d3ca8", null ],
     [ "pressEnter", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab4d4463dc9177237a8de0a7b6713e7cf", null ],

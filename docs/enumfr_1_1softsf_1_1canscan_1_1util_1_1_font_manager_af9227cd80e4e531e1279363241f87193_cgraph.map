@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.util.FontManager.loadLucioleFontAsDefaultFont" name="fr.softsf.canscan.util.FontManager.loadLucioleFontAsDefaultFont">
+<area shape="rect" id="Node000001" title="Loads the Luciole TTF, registers it in the environment, and applies it to UIManager." alt="" coords="5,5,256,48"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ac81bc280b6595dbb001f8358a2b8ceb3" title="Calculates the vertical offset required to center the font baseline." alt="" coords="304,5,509,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,24,288,24,288,29,256,29"/>
+</map>

@@ -19,6 +19,15 @@
 </a>
 </g>
 </g>
+<!-- Node1&#45;&gt;Node1 -->
+<g id="edge3_Node000001_Node000001" class="edge">
+<title>Node1&#45;&gt;Node1</title>
+<g id="a_edge3_Node000001_Node000001"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M64.67,-63.21C61.49,-72.8 74.47,-81 103.62,-81 120.94,-81 132.55,-78.11 138.45,-73.75"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="141.64,-75.21 142.02,-64.62 135.12,-72.66 141.64,-75.21"/>
+</a>
+</g>
+</g>
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
@@ -41,7 +50,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#a394e123c7a9931f51091b30804dff8cd" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#a394e123c7a9931f51091b30804dff8cd" target="_top" xlink:title="Exécute un test en simulant l&#39;absence d&#39;interaction utilisateur via JOptionPane.">
 <polygon fill="white" stroke="#666666" points="384.5,-32 243.25,-32 243.25,0 384.5,0 384.5,-32"/>
 <text text-anchor="start" x="251.25" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan</text>
 <text text-anchor="middle" x="313.88" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">UTest.executeWithoutDialog</text>

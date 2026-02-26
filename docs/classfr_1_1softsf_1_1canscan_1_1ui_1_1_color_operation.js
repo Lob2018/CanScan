@@ -9,7 +9,6 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation =
     [ "BORDER_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aa428d1645e4c1be1f71a58de1eaa0f5d", null ],
     [ "BUTTON", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aff624de7ed30dff4c4ed29ce2684c1d7", null ],
     [ "BUTTON_COLOR_ICON_TEXT_GAP", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#af65c169183eabf70bfed75ed37347c93", null ],
-    [ "BUTTON_ICON_COLOR_SIZE", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a82e42fe89273f7fde06abf402b8e9a72", null ],
     [ "CHOOSE_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a60b7117ffa094aaf0f4ee01fc024bf8f", null ],
     [ "COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#ae5c28bdc249d960b481bfb5c60012e5b", null ],
     [ "DEFAULT_HEX_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a743e5cce64d30d5f7d06b4538c77d869", null ],

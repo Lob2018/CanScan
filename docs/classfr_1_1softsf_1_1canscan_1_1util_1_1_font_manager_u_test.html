@@ -106,19 +106,32 @@ $(function() {
   <div class="headertitle"><div class="title">fr.softsf.canscan.util.FontManagerUTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Unit test suite for typography and scaling management via <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html" title="Singleton responsible for loading, applying, and scaling custom fonts in the Swing UI.">FontManager</a>.  
+ <a href="#details">More...</a></p>
 <div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Collaboration diagram for fr.softsf.canscan.util.FontManagerUTest:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test__coll__graph.svg" width="210" height="150"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test__coll__graph.svg" width="210" height="310"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pac-methods" class="groupheader"><a id="pac-methods" name="pac-methods"></a>
 Package Functions</h2></td></tr>
 <tr class="memitem:a8fd52694b2a4f6666e23b008c01870bb" id="r_a8fd52694b2a4f6666e23b008c01870bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8fd52694b2a4f6666e23b008c01870bb">givenDefaultFont_whenInitializeLuciole_thenDefaultFontIsReplaced</a> ()</td></tr>
+<tr class="memdesc:a8fd52694b2a4f6666e23b008c01870bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that the manager initialization correctly replaces the system font with Luciole.  <br /></td></tr>
+<tr class="memitem:a27db36fc07dc86aceeaa329b9c1ec2dc" id="r_a27db36fc07dc86aceeaa329b9c1ec2dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27db36fc07dc86aceeaa329b9c1ec2dc">givenLargeFont_whenGetScaledDimension_thenReturnLargerValue</a> ()</td></tr>
+<tr class="memdesc:a27db36fc07dc86aceeaa329b9c1ec2dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies scaling with a large font to simulate HiDPI/Windows Scaling.  <br /></td></tr>
+<tr class="memitem:a0b1a1ec4eeb0414486799a1a040e4de3" id="r_a0b1a1ec4eeb0414486799a1a040e4de3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0b1a1ec4eeb0414486799a1a040e4de3">givenNullFont_whenGetScaledDimension_thenUseFallbackMetrics</a> ()</td></tr>
+<tr class="memdesc:a0b1a1ec4eeb0414486799a1a040e4de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that the calculation handles the fallback font if UIManager is cleared.  <br /></td></tr>
+<tr class="memitem:ac720b3a859521b320b023fc67aa15fcd" id="r_ac720b3a859521b320b023fc67aa15fcd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac720b3a859521b320b023fc67aa15fcd">givenStandardFont_whenGetScaledDimension_thenReturnSameValue</a> ()</td></tr>
+<tr class="memdesc:ac720b3a859521b320b023fc67aa15fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that getScaledDimension returns the base value when font height matches reference.  <br /></td></tr>
 <tr class="memitem:a82e0aa2ea3ed7a58a63e457949733043" id="r_a82e0aa2ea3ed7a58a63e457949733043"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a82e0aa2ea3ed7a58a63e457949733043">setUp</a> ()</td></tr>
+<tr class="memdesc:a82e0aa2ea3ed7a58a63e457949733043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the UI default font before each test to ensure a clean state.  <br /></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Unit test suite for typography and scaling management via <a class="el" href="enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html" title="Singleton responsible for loading, applying, and scaling custom fonts in the Swing UI.">FontManager</a>. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8fd52694b2a4f6666e23b008c01870bb" name="a8fd52694b2a4f6666e23b008c01870bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fd52694b2a4f6666e23b008c01870bb">&#9670;&#160;</a></span>givenDefaultFont_whenInitializeLuciole_thenDefaultFontIsReplaced()</h2>
 
@@ -141,6 +154,113 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Verifies that the manager initialization correctly replaces the system font with Luciole. </p>
+<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test_a8fd52694b2a4f6666e23b008c01870bb_cgraph.svg" width="259" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a27db36fc07dc86aceeaa329b9c1ec2dc" name="a27db36fc07dc86aceeaa329b9c1ec2dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27db36fc07dc86aceeaa329b9c1ec2dc">&#9670;&#160;</a></span>givenLargeFont_whenGetScaledDimension_thenReturnLargerValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.util.FontManagerUTest.givenLargeFont_whenGetScaledDimension_thenReturnLargerValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifies scaling with a large font to simulate HiDPI/Windows Scaling. </p>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test_a27db36fc07dc86aceeaa329b9c1ec2dc_cgraph.svg" width="332" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0b1a1ec4eeb0414486799a1a040e4de3" name="a0b1a1ec4eeb0414486799a1a040e4de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1a1ec4eeb0414486799a1a040e4de3">&#9670;&#160;</a></span>givenNullFont_whenGetScaledDimension_thenUseFallbackMetrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.util.FontManagerUTest.givenNullFont_whenGetScaledDimension_thenUseFallbackMetrics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifies that the calculation handles the fallback font if UIManager is cleared. </p>
+<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test_a0b1a1ec4eeb0414486799a1a040e4de3_cgraph.svg" width="299" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac720b3a859521b320b023fc67aa15fcd" name="ac720b3a859521b320b023fc67aa15fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac720b3a859521b320b023fc67aa15fcd">&#9670;&#160;</a></span>givenStandardFont_whenGetScaledDimension_thenReturnSameValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.util.FontManagerUTest.givenStandardFont_whenGetScaledDimension_thenReturnSameValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel package">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifies that getScaledDimension returns the base value when font height matches reference. </p>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test_ac720b3a859521b320b023fc67aa15fcd_cgraph.svg" width="331" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -166,6 +286,8 @@ Package Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resets the UI default font before each test to ensure a clean state. </p>
 
 </div>
 </div>

@@ -46,6 +46,7 @@ var classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test =
     [ "givenWhiteColor_whenConvertToHex_thenReturnFFFFFF", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#a3f50aac1643d8082643c00423c863b0f", null ],
     [ "givenZeroImageRatio_whenDrawLogoIfPresent_thenReturnWithoutException", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#ae230c7cd421daf24cbb9d2f8e4e73e9b", null ],
     [ "setUp", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#a56b434c342d358d42850a1b88bb7278d", null ],
+    [ "tearDown", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#a2e2eff4642078502f2c2b022b5111831", null ],
     [ "colorOperation", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#aa3b7639a0e81238d01963dc497929f4d", null ],
     [ "generator", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#aad828acd2ba98ea140220a1ee8438e72", null ],
     [ "tempDir", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#ac5e9da5e8425e32c75fadf0f00ebd0f7", null ]

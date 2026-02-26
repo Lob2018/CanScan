@@ -107,23 +107,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>import java.io.IOException;</code><br />
-<code>import java.io.UncheckedIOException;</code><br />
+<code>import java.io.InputStream;</code><br />
 <code>import java.net.URI;</code><br />
 <code>import java.net.http.HttpClient;</code><br />
 <code>import java.net.http.HttpRequest;</code><br />
 <code>import java.net.http.HttpResponse;</code><br />
-<code>import java.security.KeyManagementException;</code><br />
-<code>import java.security.NoSuchAlgorithmException;</code><br />
+<code>import java.net.http.HttpTimeoutException;</code><br />
 <code>import java.time.Duration;</code><br />
 <code>import java.util.concurrent.ExecutionException;</code><br />
-<code>import java.util.regex.Matcher;</code><br />
-<code>import java.util.regex.Pattern;</code><br />
-<code>import javax.net.ssl.SSLContext;</code><br />
 <code>import javax.swing.JButton;</code><br />
 <code>import javax.swing.SwingWorker;</code><br />
-<code>import fr.softsf.canscan.constant.StringConstants;</code><br />
+<code>import com.fasterxml.jackson.databind.JsonNode;</code><br />
+<code>import com.fasterxml.jackson.databind.ObjectMapper;</code><br />
 <code>import fr.softsf.canscan.model.VersionValue;</code><br />
-<code>import fr.softsf.canscan.ui.MyPopup;</code><br />
 <code>import fr.softsf.canscan.util.Checker;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for VersionService.java:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -135,7 +131,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:fr_2Esoftsf_2Ecanscan_2Eservice_2EVersionService" id="r_fr_2Esoftsf_2Ecanscan_2Eservice_2EVersionService"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html">fr.softsf.canscan.service.VersionService</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton service for checking application version against GitHub releases.  <a href="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service for checking if the application version is up to date by querying the GitHub API.  <a href="enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Packages</h2></td></tr>
