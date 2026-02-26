@@ -71,7 +71,6 @@ class CanScanUTest {
         generator.setAdrFieldTextForTests();
         generator.setUrlFieldTextForTests();
         generator.setLogoFieldTextForTests("");
-        generator.setSizeFieldTextForTests("400");
         generator.setMarginSliderValueForTests(3);
         generator.setRatioSliderValueForTests((int) (0.27 * 100));
     }
@@ -239,10 +238,13 @@ class CanScanUTest {
     })
     @DisplayName("VALIDATION : Vérification de la saisie du champ taille")
     void givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult(
-            String input, int expected) {
-        generator.setSizeFieldTextForTests(input);
-        int result = generator.validateAndGetSize();
-        assertEquals(expected, result);
+            String input, int expected) throws Exception {
+        javax.swing.SwingUtilities.invokeAndWait(
+                () -> {
+                    generator.setSizeFieldTextForTests(input);
+                    int result = generator.validateAndGetSize();
+                    assertEquals(expected, result, "Erreur pour l'entrée : " + input);
+                });
     }
 
     @Test
