@@ -90,6 +90,7 @@ public final class CanScan extends JFrame {
     private static final String HTML_B_STRING_B_HTML = "<html><b>%s</b></html>";
     private static final int MAX_COORDINATE_LENGTH = 12;
     private static final String WARNING_ICON = "\uE002";
+    public static final int DEFAULT_SCROLLBAR_WIDTH = 15;
     private Color qrColor = Color.BLACK;
     private Color bgColor = Color.WHITE;
     private int margin = 3;
@@ -593,7 +594,7 @@ public final class CanScan extends JFrame {
         Insets insets = super.getInsets();
         int scrollBarWidth = (int) javax.swing.UIManager.get("ScrollBar.width");
         if (scrollBarWidth <= 0) {
-            scrollBarWidth = 15;
+            scrollBarWidth = DEFAULT_SCROLLBAR_WIDTH;
         }
         int optimizedWidth = prefSize.width + scrollBarWidth;
         int optimizedHeight = prefSize.height + insets.top + insets.bottom;

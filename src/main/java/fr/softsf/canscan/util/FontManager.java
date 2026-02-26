@@ -43,6 +43,7 @@ public enum FontManager {
     private static final Font JRE_GUARANTEED_FONT_FALLBACK_FOR_UNIT_TESTS =
             new Font("Dialog", Font.PLAIN, 12);
     static final double BASE_LINE_HEIGHT_REFERENCE = 16.0;
+    public static final double BASELINE_CORRECTION_FACTOR = 0.11;
 
     /** Entry point to load resources and refresh the Look and Feel. */
     public void initialize() {
@@ -91,7 +92,7 @@ public enum FontManager {
         Graphics2D g2 = img.createGraphics();
         try {
             LineMetrics lm = font.getLineMetrics("Wj", g2.getFontRenderContext());
-            return (lm.getDescent() - lm.getLeading()) / 0.11;
+            return (lm.getDescent() - lm.getLeading()) / BASELINE_CORRECTION_FACTOR;
         } finally {
             g2.dispose();
         }

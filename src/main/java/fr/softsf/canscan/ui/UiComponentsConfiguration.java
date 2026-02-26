@@ -57,6 +57,7 @@ public enum UiComponentsConfiguration {
     private static final String ADD_ROW = "addRow";
     private static final int COORDINATES_FIELDS_GAP = 5;
     private static final String POPULATE_MECARD_PANEL = "populateMecardPanel";
+    public static final double GENRATE_BUTTON_HEIGHT_SCALING_FACTOR = 1.5;
 
     /**
      * Configures a JSlider with standard margin settings.
@@ -240,7 +241,10 @@ public enum UiComponentsConfiguration {
             return;
         }
         Dimension baseDim = button.getPreferredSize();
-        Dimension finalDim = new Dimension(baseDim.width, (int) (baseDim.height * 1.5));
+        Dimension finalDim =
+                new Dimension(
+                        baseDim.width,
+                        (int) (baseDim.height * GENRATE_BUTTON_HEIGHT_SCALING_FACTOR));
         button.setPreferredSize(finalDim);
         button.setMinimumSize(finalDim);
         button.addActionListener(listener);

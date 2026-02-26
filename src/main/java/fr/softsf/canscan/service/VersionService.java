@@ -41,6 +41,8 @@ public enum VersionService {
     private static final String TOOLTIP_PREFIX = "Mise à jour :<br>";
     private static final String CLOSE_HTML = "</html>";
     private static final String OPEN_HTML = "<html>";
+    public static final int HTTP_FORBIDDEN = 403;
+    public static final int HTTP_NOT_FOUND = 404;
 
     private final HttpClient httpClient;
     private final ObjectMapper objectMapper;
@@ -99,8 +101,8 @@ public enum VersionService {
                     if (response.statusCode() != HTTP_STATUS_OK) {
                         String msg =
                                 switch (response.statusCode()) {
-                                    case 403 -> "Limite d'API GitHub atteinte (403).";
-                                    case 404 -> "Dépôt introuvable (404).";
+                                    case HTTP_FORBIDDEN -> "Limite d'API GitHub atteinte (403).";
+                                    case HTTP_NOT_FOUND -> "Dépôt introuvable (404).";
                                     default ->
                                             "Erreur serveur GitHub (Code : "
                                                     + response.statusCode()
