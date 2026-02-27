@@ -239,10 +239,13 @@ class CanScanUTest {
     })
     @DisplayName("VALIDATION : Vérification de la saisie du champ taille")
     void givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult(
-            String input, int expected) {
-        generator.setSizeFieldTextForTests(input);
-        int result = generator.validateAndGetSize();
-        assertEquals(expected, result, "Erreur pour l'entrée : " + input);
+            String input, int expected) throws InterruptedException, InvocationTargetException {
+        javax.swing.SwingUtilities.invokeAndWait(
+                () -> {
+                    generator.setSizeFieldTextForTests(input);
+                    int result = generator.validateAndGetSize();
+                    assertEquals(expected, result, "Erreur pour l'entrée : " + input);
+                });
     }
 
     @Test
