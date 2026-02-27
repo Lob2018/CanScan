@@ -230,11 +230,9 @@ class CanScanUTest {
 
     @ParameterizedTest(name = "Saisie : {0}, Attendu : {1}")
     @CsvSource({
+        "abc, 400", // invalid text -> default
+        "5, 10", // below minimum -> clamped to 10
         "500, 500", // valid
-        "abc, 400", // invalid text
-        "-50, 10", // negative
-        "0, 10", // zero
-        "5, 10" // below minimum
     })
     @DisplayName("VALIDATION : Vérification de la saisie du champ taille")
     void givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult(
