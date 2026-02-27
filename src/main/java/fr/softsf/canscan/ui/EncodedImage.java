@@ -482,8 +482,9 @@ public class EncodedImage {
     /**
      * Draws the logo at the center of the QR code if a valid logo file is provided.
      *
-     * <p>The logo is scaled to fit within 90% of the designated white box area, which is determined
-     * by the QR code size and configured image ratio.
+     * <p>The logo is cropped to a square from its center to prevent distortion, then scaled using
+     * bilinear interpolation to fit within the designated area while maintaining visual fidelity of
+     * the original.
      *
      * @param g The Graphics2D context used for rendering the QR code.
      * @param config QR code configuration containing size, logo file, and image ratio.
@@ -516,11 +517,26 @@ public class EncodedImage {
                         "Information");
                 return;
             }
+            int w = logo.getWidth();
+            int h = logo.getHeight();
+            int edge = Math.min(w, h);
+            int xOffset = (w - edge) / 2;
+            int yOffset = (h - edge) / 2;
             scaledLogo = new BufferedImage(logoMaxSize, logoMaxSize, BufferedImage.TYPE_INT_ARGB);
             gLogo = scaledLogo.createGraphics();
             gLogo.setRenderingHint(
                     RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-            gLogo.drawImage(logo, 0, 0, logoMaxSize, logoMaxSize, null);
+            gLogo.drawImage(
+                    logo,
+                    0,
+                    0,
+                    logoMaxSize,
+                    logoMaxSize,
+                    xOffset,
+                    yOffset,
+                    xOffset + edge,
+                    yOffset + edge,
+                    null);
         } finally {
             if (gLogo != null) {
                 gLogo.dispose();
