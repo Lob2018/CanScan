@@ -328,7 +328,7 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws the logo at the center of the QR code if a valid logo file is provided. </p>
-<p>The logo is scaled to fit within 90% of the designated white box area, which is determined by the QR code size and configured image ratio.</p>
+<p>The logo is cropped to a square from its center to prevent distortion, then scaled using bilinear interpolation to fit within the designated area while maintaining visual fidelity of the original.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td>The Graphics2D context used for rendering the QR code. </td></tr>
