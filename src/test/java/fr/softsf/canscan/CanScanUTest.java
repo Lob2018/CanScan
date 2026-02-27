@@ -62,17 +62,19 @@ class CanScanUTest {
     /** Initialisation de l'instance de test et configuration des champs par défaut. */
     @BeforeEach
     void setUp() throws InterruptedException, InvocationTargetException {
-        javax.swing.SwingUtilities.invokeAndWait(() -> generator = new CanScan());
+        javax.swing.SwingUtilities.invokeAndWait(() -> {
+            generator = new CanScan();
+            generator.setNameFieldTextForTests();
+            generator.setPhoneFieldTextForTests();
+            generator.setEmailFieldTextForTests();
+            generator.setOrgFieldTextForTests();
+            generator.setAdrFieldTextForTests();
+            generator.setUrlFieldTextForTests();
+            generator.setLogoFieldTextForTests("");
+            generator.setMarginSliderValueForTests(3);
+            generator.setRatioSliderValueForTests((int) (0.27 * 100));
+        });
         colorOperation = new ColorOperation();
-        generator.setNameFieldTextForTests();
-        generator.setPhoneFieldTextForTests();
-        generator.setEmailFieldTextForTests();
-        generator.setOrgFieldTextForTests();
-        generator.setAdrFieldTextForTests();
-        generator.setUrlFieldTextForTests();
-        generator.setLogoFieldTextForTests("");
-        generator.setMarginSliderValueForTests(3);
-        generator.setRatioSliderValueForTests((int) (0.27 * 100));
     }
 
     @Test
@@ -236,13 +238,10 @@ class CanScanUTest {
     })
     @DisplayName("VALIDATION : Vérification de la saisie du champ taille")
     void givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult(
-            String input, int expected) throws Exception {
-        javax.swing.SwingUtilities.invokeAndWait(
-                () -> {
-                    generator.setSizeFieldTextForTests(input);
-                    int result = generator.validateAndGetSize();
-                    assertEquals(expected, result, "Erreur pour l'entrée : " + input);
-                });
+            String input, int expected) {
+            generator.setSizeFieldTextForTests(input);
+            int result = generator.validateAndGetSize();
+            assertEquals(expected, result, "Erreur pour l'entrée : " + input);
     }
 
     @Test
