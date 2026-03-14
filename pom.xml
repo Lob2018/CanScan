@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.formdev</groupId>
       <artifactId>flatlaf</artifactId>
-      <version>3.7</version>
+      <version>3.7.1</version>
     </dependency>
     <dependency>
       <groupId>com.formdev</groupId>
       <artifactId>flatlaf-intellij-themes</artifactId>
-      <version>3.7</version>
+      <version>3.7.1</version>
     </dependency>
     <!-- Java Swing date picker dependency -->
     <dependency>
@@ -92,7 +92,7 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>5.22.0</version>
+      <version>5.23.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
