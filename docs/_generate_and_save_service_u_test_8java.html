@@ -107,17 +107,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>import java.io.File;</code><br />
+<code>import java.io.IOException;</code><br />
 <code>import javax.swing.JFileChooser;</code><br />
+<code>import javax.swing.JOptionPane;</code><br />
 <code>import org.junit.jupiter.api.BeforeEach;</code><br />
 <code>import org.junit.jupiter.api.DisplayName;</code><br />
 <code>import org.junit.jupiter.api.Test;</code><br />
 <code>import org.junit.jupiter.api.io.TempDir;</code><br />
-<code>import org.mockito.Mockito;</code><br />
+<code>import org.mockito.MockedStatic;</code><br />
 <code>import fr.softsf.canscan.ui.EncodedImage;</code><br />
 <code>import fr.softsf.canscan.ui.MyPopup;</code><br />
+<code>import fr.softsf.canscan.util.FrameHelper;</code><br />
 <code>import org.junit.jupiter.api.Assertions.assertEquals;</code><br />
+<code>import org.junit.jupiter.api.Assertions.assertNull;</code><br />
 <code>import org.junit.jupiter.api.Assertions.assertTrue;</code><br />
+<code>import org.mockito.ArgumentMatchers.any;</code><br />
+<code>import org.mockito.ArgumentMatchers.anyString;</code><br />
+<code>import org.mockito.ArgumentMatchers.eq;</code><br />
 <code>import org.mockito.Mockito.mock;</code><br />
+<code>import org.mockito.Mockito.mockStatic;</code><br />
+<code>import org.mockito.Mockito.times;</code><br />
 <code>import org.mockito.Mockito.when;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Include dependency graph for GenerateAndSaveServiceUTest.java:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
