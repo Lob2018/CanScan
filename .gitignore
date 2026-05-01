@@ -10,6 +10,10 @@ dist/
 
 ### Ignore generated picture
 mecard_*.png
+qr_*.png
+*.jpg
+*.jpeg
+*.svg
 
 ### Ignore Maven configuration file ###
 ### For NVD API key ###
@@ -21,6 +25,12 @@ mecard_*.png
 .idea/compiler.xml
 .idea/libraries/
 .idea/sonarlint/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionary.xml
+.idea/vcs.xml
+.idea/shelf/
+.idea/logs/
 *.iws
 *.iml
 *.ipr
@@ -59,6 +69,14 @@ env/
 .python-version
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Diagnostic and Traces
+*.trace
+*.hprof
+*.log
+run_configs.txt
+hs_err_pid*
+replay_pid*
 
 ### IA ###
 .aider*

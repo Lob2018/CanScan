@@ -26,6 +26,7 @@ import fr.softsf.canscan.util.Checker;
 @SuppressWarnings("ClassCanBeRecord")
 public class GenerateAndSaveService {
 
+    private static final int MAX_ATTEMPTS = 1000;
     private final EncodedImage encodedImage;
 
     /**
@@ -168,7 +169,7 @@ public class GenerateAndSaveService {
             String baseName = file.getName().replaceFirst("\\.png$", "");
             File parent = file.getParentFile();
             int counter = 1;
-            int maxAttempts = 1000;
+            int maxAttempts = MAX_ATTEMPTS;
             File candidate;
             do {
                 candidate = new File(parent, baseName + "(" + counter + ").png");

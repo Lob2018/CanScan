@@ -56,7 +56,7 @@ cd dist || { echo "Failure of cd dist"; exit 1; }
 
 echo
 echo "[3/5] Simulating runtime usage to generate native-image config-trace..."
-java --enable-native-access=ALL-UNNAMED \
+if ! java --enable-native-access=ALL-UNNAMED \
      -agentlib:native-image-agent=config-output-dir=../config-trace \
      -Djava.awt.headless=false \
      -Dawt.appname="$CANONICAL_NAME" \
@@ -66,9 +66,7 @@ java --enable-native-access=ALL-UNNAMED \
      -Duser.country="$COUNTRY_CODE" \
      -Duser.region="$COUNTRY_CODE" \
      -cp "../target/canscan-$APP_VERSION.jar:../target/test-classes" \
-          fr.softsf.canscan.NativeImageConfigSimulator
-
-if [ $? -ne 0 ]; then
+          fr.softsf.canscan.NativeImageConfigSimulator; then
     echo
     echo "[ERROR] Configuration simulation failed"
     exit 1
@@ -80,7 +78,7 @@ echo
 echo "[4/5] Building native image (GLibC Standard)..."
 echo "=========================================================="
 echo
-native-image --enable-native-access=ALL-UNNAMED \
+if ! native-image --enable-native-access=ALL-UNNAMED \
     --no-fallback \
     --strict-image-heap \
     -march=compatibility \
@@ -97,9 +95,7 @@ native-image --enable-native-access=ALL-UNNAMED \
     -Dsun.java2d.xrender=true \
     -Dsun.java2d.uiScale.enabled=true \
     -J-Xmx7G \
-    -jar "../target/canscan-$APP_VERSION.jar"
-
-if [ $? -ne 0 ]; then
+    -jar "../target/canscan-$APP_VERSION.jar"; then
     echo
     echo "[ERROR] Native image compilation failed."
     exit 1
@@ -143,17 +139,18 @@ cp dist/*.so "$APP_DIR/usr/lib/" 2>/dev/null
 
 # 4. Création du script AppRun (Le point d'entrée) - Injecte les AppID XDG/GTK
 echo "[INFO] Creating AppRun and forcing XDG/GTK Application ID..."
-echo '#!/bin/sh' > "$APP_DIR/AppRun"
-echo 'SELF=$(dirname "$(readlink -f "$0")")' >> "$APP_DIR/AppRun"
-echo 'export LD_LIBRARY_PATH="$SELF/usr/lib:$LD_LIBRARY_PATH"' >> "$APP_DIR/AppRun"
-
-# Exporte les variables pour forcer l'ID de l'application (le nom) sur les environnements modernes
-echo "export XDG_CURRENT_DESKTOP=GNOME" >> "$APP_DIR/AppRun"
-echo "export XDG_APPLICATION_ID=$APP_ID_DOMAIN" >> "$APP_DIR/AppRun"
-echo "export GDK_APPLICATION_ID=$APP_ID_DOMAIN" >> "$APP_DIR/AppRun"
-# SUPPRESSION: echo "export GDK_SET_WMCLASS=$CANONICAL_NAME" >> "$APP_DIR/AppRun"
-
-echo "exec \"\$SELF/usr/bin/$CANONICAL_NAME\" \"\$@\"" >> "$APP_DIR/AppRun"
+{
+    echo '#!/bin/sh'
+    # shellcheck disable=SC2016
+    echo 'SELF=$(dirname "$(readlink -f "$0")")'
+    # shellcheck disable=SC2016
+    echo 'export LD_LIBRARY_PATH="$SELF/usr/lib:$LD_LIBRARY_PATH"'
+    # Exporte les variables pour forcer l'ID de l'application (le nom) sur les environnements modernes
+    echo "export XDG_CURRENT_DESKTOP=GNOME"
+    echo "export XDG_APPLICATION_ID=$APP_ID_DOMAIN"
+    echo "export GDK_APPLICATION_ID=$APP_ID_DOMAIN"
+    echo "exec \"\$SELF/usr/bin/$CANONICAL_NAME\" \"\$@\""
+} > "$APP_DIR/AppRun"
 chmod +x "$APP_DIR/AppRun"
 
 # 5. Création du fichier .desktop
@@ -193,9 +190,7 @@ fi
 
 # 8. Génération de l'AppImage final (SANS SIGNATURE)
 echo "[INFO] Building final AppImage file (unsigned)..."
-ARCH=x86_64 APPIMAGE_BUNDLE_ID="$APP_GUID" VERSION="$APP_VERSION" "$APPIMAGETOOL_PATH" --no-appstream "$APP_DIR" "$OUTPUT_APPIMAGE"
-
-if [ $? -eq 0 ]; then
+if ARCH=x86_64 APPIMAGE_BUNDLE_ID="$APP_GUID" VERSION="$APP_VERSION" "$APPIMAGETOOL_PATH" --no-appstream "$APP_DIR" "$OUTPUT_APPIMAGE"; then
     echo
     echo "----------------------------------------------------------------"
     echo "[SUCCESS] AppImage généré avec succès !"
@@ -206,7 +201,6 @@ if [ $? -eq 0 ]; then
     # Nettoyage complet (AppDir, dist et appimagetool)
     echo "[INFO] Cleaning temporary files..."
     rm -rf "$APP_DIR" dist
-
 else
     echo "[ERROR] Échec de la création de l'AppImage. (Vérifiez la sortie de l'outil AppImageTool pour la raison de l'échec)."
     exit 1

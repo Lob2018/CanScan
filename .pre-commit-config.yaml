@@ -1,0 +1,53 @@
+# This file defines hooks that will run automatically before commits.
+# To install pre-commit and enable hooks on Windows, follow these steps:
+
+# 1. Setup Virtual Environment (.venv):
+#    Create:
+#      py -m venv .venv
+#    Activate:
+#      . .venv/Scripts/activate
+
+# 2. Install Tools and External Dependencies:
+#    A. Install/Update pre-commit (Safe install using binaries):
+#      py -m pip install --upgrade --only-binary=:all: pre-commit
+#    B. Install ShellCheck (Required for shellcheck hook - restart required):
+#      winget install --id=koalaman.shellcheck
+#    C. Maven: Ensure Maven is installed and in PATH (Required for mvn-checkstyle).
+#    D. Install git hooks for this repository:
+#      py -m pre_commit install
+
+# 3. Maintenance (Required for Dependabot / Security updates):
+#    A. Ensure the environment is active:
+#       . .venv/Scripts/activate
+#    B. Update pip first (Internal module update to avoid access errors):
+#       python -m pip install --upgrade pip
+#    C. Update all .venv packages & hooks (Using binary-only for safety):
+#       py -c "import importlib.metadata; from subprocess import call; [call(['pip', 'install', '--upgrade', '--only-binary=:all:', d.metadata['Name']]) for d in importlib.metadata.distributions()]" && py -m pre_commit autoupdate
+#    D. Synchronize manifest (Critical for security scanning):
+#       py -m pip freeze > requirements.txt
+#    E. Verify changes:
+#       py -m pre_commit run --all-files --verbose
+
+repos:
+  - repo: local
+    hooks:
+      - id: mvn-checkstyle
+        name: Maven Checkstyle
+        entry: mvn checkstyle:check
+        language: system
+        pass_filenames: false
+        files: \.java$
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: shellcheck
+        exclude: ^mvnw$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
