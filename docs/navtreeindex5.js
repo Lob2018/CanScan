@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"namespacefr_1_1softsf_1_1canscan_1_1model.html#a743580901f98bf9f329276bd2804c081":[1,0,0,0,0,1,8],
+"namespacefr_1_1softsf_1_1canscan_1_1model.html#a8591dea2b7e8c25c951331861b6a1a7e":[1,0,0,0,0,1,4],
 "namespacefr_1_1softsf_1_1canscan_1_1model.html#abf69832bf730a181f86508dc823333a7":[1,0,0,0,0,1,1],
 "namespacefr_1_1softsf_1_1canscan_1_1model.html#ade078294142dba87e944b149ce5d87d2":[1,0,0,0,0,1,6],
 "namespacefr_1_1softsf_1_1canscan_1_1service.html":[1,0,0,0,0,2],
