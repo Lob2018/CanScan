@@ -52,7 +52,8 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
     - [Documentation technique (en anglais)](https://lob2018.github.io/CanScan/)
 - 🔒 [Confidentialité](#-politique-de-confidentialité)
 - 🛡️ [Sécurité (Signaler une vulnérabilité)](https://github.com/Lob2018/CanScan?tab=security-ov-file#readme)
-- 🤝 [Contribuer](#-contribuer)
+- 💡 [Contribuer](#-contribuer)
+- 🤝 [Code de conduite](#-code-de-conduite)
 - 📜 [Licence](#-licence)
 
 ## ✨ Fonctionnalités
@@ -212,11 +213,15 @@ Pour "désinstaller" CanScan, il suffit de **supprimer le fichier AppImage** té
 
 **Respect de la vie privée :** CanScan s'engage à protéger la vie privée des utilisateurs. La politique complète est consultable dans le fichier [PRIVACY.txt](https://github.com/Lob2018/CanScan/blob/main/PRIVACY.txt).
 
-## 🤝 Contribuer
+## 💡 Contribuer
 
 Toutes les contributions pour CanScan sont les bienvenues — qu'il s'agisse de corrections de bugs, de nouvelles fonctionnalités, de documentation ou d'idées.
 
 Lire le **[Guide de contribution](./CONTRIBUTING.md)** pour commencer. Il contient les instructions de configuration, les standards de code, les conventions de commit et plus encore.
+
+## 🤝 Code de conduite
+
+Veuillez lire le [Code de conduite](./CODE_OF_CONDUCT.md) avant de participer.
 
 ## 📜 Licence
 
