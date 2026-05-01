@@ -8,10 +8,16 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+
 jobs:
   test_and_analyze:
     name: Test and SonarQube Analysis
     runs-on: windows-latest
+    permissions:
+      contents: read      # Pour l'analyse du code
+      pull-requests: read # Requis pour que SonarQube puisse commenter/analyser les PR
     environment: production
 
     steps:
