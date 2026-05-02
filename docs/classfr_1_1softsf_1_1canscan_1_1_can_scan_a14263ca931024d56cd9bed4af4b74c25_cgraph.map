@@ -1,6 +1,6 @@
 <map id="fr.softsf.canscan.CanScan.initializeMainPanel" name="fr.softsf.canscan.CanScan.initializeMainPanel">
 <area shape="rect" id="Node000001" title="Builds the main panel with header, QR preview overlay, and bottom spacer." alt="" coords="5,105,234,148"/>
-<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Attaches automatic QR preview updates and input validation to all fields and controls." alt="" coords="282,76,539,119"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Synchronizes the UI components with the QR code preview and validates input states." alt="" coords="282,76,539,119"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,112,266,109,266,115,235,118"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="587,105,786,148"/>
 <area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="234,127,282,128,539,128,572,127,572,133,539,133,282,133,234,133"/>

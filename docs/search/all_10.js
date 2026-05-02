@@ -8,6 +8,7 @@ var searchData=
   ['resize_5fdebounce_5fdelay_5fms_5',['RESIZE_DEBOUNCE_DELAY_MS',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#acffea6b74053192b064c6ede52b6f032',1,'fr::softsf::canscan::ui::worker::DynamicResizeWorker']]],
   ['resolvefilenameconflict_6',['resolveFileNameConflict',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
   ['resolvefilenameconflictfortests_7',['resolveFileNameConflictForTests',['../classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6b1521b6d9c68366080969bc5ac74f99',1,'fr::softsf::canscan::service::GenerateAndSaveService']]],
-  ['roundedmodulescheckbox_8',['roundedModulesCheckBox',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa64e0ee343635d7092f65ea5d1186712',1,'fr::softsf::canscan::CanScan']]],
-  ['runsimulation_9',['runSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#afbc1231d98e565f72006b6f31c7dce34',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
+  ['resolving_5ffile_5fname_5fconflict_5fmax_5fattempts_8',['RESOLVING_FILE_NAME_CONFLICT_MAX_ATTEMPTS',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#adf04ea48a26df1be114dc535a22c4ad2',1,'fr::softsf::canscan::constant::IntConstants']]],
+  ['roundedmodulescheckbox_9',['roundedModulesCheckBox',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa64e0ee343635d7092f65ea5d1186712',1,'fr::softsf::canscan::CanScan']]],
+  ['runsimulation_10',['runSimulation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#afbc1231d98e565f72006b6f31c7dce34',1,'fr::softsf::canscan::NativeImageConfigSimulator']]]
 ];

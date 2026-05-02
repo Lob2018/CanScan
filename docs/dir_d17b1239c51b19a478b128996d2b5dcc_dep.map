@@ -1,5 +1,6 @@
 <map id="src/main/java/fr/softsf/canscan/ui" name="src/main/java/fr/softsf/canscan/ui">
-<area shape="rect" id="node2" href="dir_d799202358837d13de7423e24aa089ee.html" title="worker" alt="" coords="99,64,160,91"/>
-<area shape="rect" id="clust2" href="dir_d17b1239c51b19a478b128996d2b5dcc.html" alt="" coords="27,53,171,101"/>
-<area shape="rect" id="clust1" href="dir_a68d62d5e8ea96def72cbc0a88628e3e.html" title="canscan" alt="" coords="16,16,181,112"/>
+<area shape="rect" id="node2" href="dir_41a5a989b2fd829b8806ae95e0a184b9.html" title="field" alt="" coords="99,64,144,91"/>
+<area shape="rect" id="node3" href="dir_d799202358837d13de7423e24aa089ee.html" title="worker" alt="" coords="168,64,229,91"/>
+<area shape="rect" id="clust2" href="dir_d17b1239c51b19a478b128996d2b5dcc.html" alt="" coords="27,53,240,101"/>
+<area shape="rect" id="clust1" href="dir_a68d62d5e8ea96def72cbc0a88628e3e.html" title="canscan" alt="" coords="16,16,251,112"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="fr.softsf.canscan.CanScan.automaticQRCodeRenderingForFieldsAndControls" name="fr.softsf.canscan.CanScan.automaticQRCodeRenderingForFieldsAndControls">
-<area shape="rect" id="Node000001" title="Attaches automatic QR preview updates and input validation to all fields and controls." alt="" coords="5,105,263,148"/>
+<area shape="rect" id="Node000001" title="Synchronizes the UI components with the QR code preview and validates input states." alt="" coords="5,105,263,148"/>
 <area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="311,105,510,148"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,124,295,124,295,129,263,129"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="558,5,784,48"/>

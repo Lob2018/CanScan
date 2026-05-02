@@ -23,6 +23,7 @@ var hierarchy =
     ] ],
     [ "fr.softsf.canscan.constant.DoubleConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants.html", null ],
     [ "fr.softsf.canscan.ui.EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html", null ],
+    [ "fr.softsf.canscan.ui.field.FieldFilterType", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type.html", null ],
     [ "fr.softsf.canscan.constant.FloatConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html", null ],
     [ "fr.softsf.canscan.util.FontManager", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html", null ],
     [ "fr.softsf.canscan.util.FontManagerUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test.html", null ],

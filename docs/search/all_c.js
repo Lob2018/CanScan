@@ -10,5 +10,6 @@ var searchData=
   ['north_5fpanel_7',['NORTH_PANEL',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a5a943406c18be186d8fd93a288a46582',1,'fr::softsf::canscan::CanScan']]],
   ['northpanelgridbagconstraints_8',['northPanelGridBagConstraints',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb5550da33925e95999aae23f525f7c5',1,'fr::softsf::canscan::CanScan']]],
   ['northpanelwrapper_9',['northPanelWrapper',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3858b49959ca85feb167c004f0f3fa7f',1,'fr::softsf::canscan::CanScan']]],
-  ['nowutc_10',['nowUtc',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a17871d50aacaf2ca58aef8bc023b45fd',1,'fr::softsf::canscan::util::DateHelper']]]
+  ['nowutc_10',['nowUtc',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html#a17871d50aacaf2ca58aef8bc023b45fd',1,'fr::softsf::canscan::util::DateHelper']]],
+  ['numeric_11',['NUMERIC',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type.html#a13be59e877def312f7b0a906668281b0',1,'fr::softsf::canscan::ui::field::FieldFilterType']]]
 ];

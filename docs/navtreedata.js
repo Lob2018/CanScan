@@ -40,7 +40,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -56,11 +56,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_abstract_dynamic_worker_8java.html",
-"classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aedc150c4a936d0e4572f146238753712",
+"classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0",
 "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aa428d1645e4c1be1f71a58de1eaa0f5d",
 "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#afac93461a8df245221a0be32fa402c63",
-"enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a94404c0c52c8ebabf4d7479e844ea1c9",
-"namespacefr_1_1softsf_1_1canscan_1_1model.html#a743580901f98bf9f329276bd2804c081"
+"enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a847d60134ee0342c62bd02232e8f2ed7",
+"functions_vars_w.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

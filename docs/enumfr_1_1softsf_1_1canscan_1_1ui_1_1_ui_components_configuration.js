@@ -1,8 +1,9 @@
 var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration =
 [
     [ "addRow", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a15f235f9284faf8c8a343544a8d98d23", null ],
+    [ "applyFilter", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a333f3841a4cd0415b445efa3c6e02644", null ],
     [ "assignComponentNames", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#adf7bea7b10b7a06a2211e8ef15c73654", null ],
-    [ "attachLimitedDocumentListener", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a3ee9ba799dcf7ebe32e32b9772a82fdf", null ],
+    [ "configureFieldFilters", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#af047394ab21ab4abc5271f5942c70dec", null ],
     [ "configureFreeTextArea", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a3d8dc40e728c516a45d968f9c20a4ff0", null ],
     [ "configureGenerateButton", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#adf766c6494aa7a18e44bd5dba9e03d05", null ],
     [ "configureMarginSlider", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ab7ed49a11e59771aca3540f7f0e66d19", null ],

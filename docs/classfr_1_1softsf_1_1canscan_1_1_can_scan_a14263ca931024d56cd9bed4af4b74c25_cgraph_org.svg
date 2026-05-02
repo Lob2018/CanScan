@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" target="_top" xlink:title="Attaches automatic QR preview updates and input validation to all fields and controls.">
+<g id="a_Node000002"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" target="_top" xlink:title="Synchronizes the UI components with the QR code preview and validates input states.">
 <polygon fill="white" stroke="#666666" points="400.25,-129 207.25,-129 207.25,-97 400.25,-97 400.25,-129"/>
 <text text-anchor="start" x="215.25" y="-115.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.automatic</text>
 <text text-anchor="middle" x="303.75" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">QRCodeRenderingForFieldsAndControls</text>

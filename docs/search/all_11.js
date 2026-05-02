@@ -31,9 +31,10 @@ var searchData=
   ['southspacer_28',['southSpacer',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a94662f11008aae918883b2b7acd79c4f',1,'fr::softsf::canscan::CanScan']]],
   ['stopdebouncetimer_29',['stopDebounceTimer',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a04dbe18f6ba608487e5170c1c3ac391a',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
   ['stoploader_30',['stopLoader',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abba94ac3074b49f7bfcf9669f8a68b67',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['stringconstants_31',['StringConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html',1,'fr.softsf.canscan.constant.StringConstants'],['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a996324c10ac62c04ff6550c8a01156e1',1,'fr.softsf.canscan.constant.StringConstants.StringConstants()']]],
-  ['stringconstants_2ejava_32',['StringConstants.java',['../_string_constants_8java.html',1,'']]],
-  ['stroke_5fwidth_33',['STROKE_WIDTH',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a47d8f3943372f0b1c31d7a22f0791ff7',1,'fr::softsf::canscan::ui::ColorOperation']]],
-  ['switchmode_34',['switchMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d',1,'fr::softsf::canscan::CanScan']]],
-  ['switchmodefortests_35',['switchModeForTests',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a163b11aa80682de173802920b5bbd836',1,'fr::softsf::canscan::CanScan']]]
+  ['strict_31',['STRICT',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type.html#af0b0cc4fa28aba2e1b1dbd1637a40bdc',1,'fr::softsf::canscan::ui::field::FieldFilterType']]],
+  ['stringconstants_32',['StringConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html',1,'fr.softsf.canscan.constant.StringConstants'],['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a996324c10ac62c04ff6550c8a01156e1',1,'fr.softsf.canscan.constant.StringConstants.StringConstants()']]],
+  ['stringconstants_2ejava_33',['StringConstants.java',['../_string_constants_8java.html',1,'']]],
+  ['stroke_5fwidth_34',['STROKE_WIDTH',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a47d8f3943372f0b1c31d7a22f0791ff7',1,'fr::softsf::canscan::ui::ColorOperation']]],
+  ['switchmode_35',['switchMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d',1,'fr::softsf::canscan::CanScan']]],
+  ['switchmodefortests_36',['switchModeForTests',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a163b11aa80682de173802920b5bbd836',1,'fr::softsf::canscan::CanScan']]]
 ];

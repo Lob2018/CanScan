@@ -21,6 +21,9 @@ var annotated_dup =
             [ "VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service" ]
           ] ],
           [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", [
+            [ "field", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1field.html", [
+              [ "FieldFilterType", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type" ]
+            ] ],
             [ "worker", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker.html", [
               [ "AbstractDynamicWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker" ],
               [ "DynamicPreviewWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker" ],

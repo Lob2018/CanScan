@@ -9,6 +9,5 @@ var classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service =
     [ "getSelectedPngFile", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a723bdc3c23de4858c0a30864298fdacd", null ],
     [ "resolveFileNameConflict", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526", null ],
     [ "resolveFileNameConflictForTests", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6b1521b6d9c68366080969bc5ac74f99", null ],
-    [ "encodedImage", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6f29588ca10480bac732772861f06322", null ],
-    [ "MAX_ATTEMPTS", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a1d8bdf47027bdd0117ae6ec88abd0b13", null ]
+    [ "encodedImage", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6f29588ca10480bac732772861f06322", null ]
 ];

@@ -210,7 +210,7 @@ var sectionId = 'dynsection-14';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" target="_top" xlink:title="Attaches automatic QR preview updates and input validation to all fields and controls.">
+<g id="a_Node000005"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" target="_top" xlink:title="Synchronizes the UI components with the QR code preview and validates input states.">
 <polygon fill="white" stroke="#666666" points="986.75,-452 793.75,-452 793.75,-420 986.75,-420 986.75,-452"/>
 <text text-anchor="start" x="801.75" y="-438.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.automatic</text>
 <text text-anchor="middle" x="890.25" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">QRCodeRenderingForFieldsAndControls</text>

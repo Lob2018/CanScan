@@ -1,5 +1,6 @@
 var namespacefr_1_1softsf_1_1canscan_1_1ui =
 [
+    [ "field", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1field.html", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1field" ],
     [ "worker", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker.html", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker" ],
     [ "ColorOperation", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation" ],
     [ "EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image" ],

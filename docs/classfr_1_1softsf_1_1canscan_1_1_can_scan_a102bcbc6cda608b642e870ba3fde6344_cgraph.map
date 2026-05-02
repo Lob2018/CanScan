@@ -14,7 +14,7 @@
 <area shape="poly" id="edge30_Node000001_Node000028" title=" " alt="" coords="139,473,236,518,254,524,252,529,234,522,137,478"/>
 <area shape="rect" id="Node000031" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6804e999a867e3d11b3d77e24f9b789e" title="Sets the application window icon using an image resource." alt="" coords="235,599,463,641"/>
 <area shape="poly" id="edge33_Node000001_Node000031" title=" " alt="" coords="111,473,156,530,187,560,223,588,220,592,184,564,152,533,106,477"/>
-<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Attaches automatic QR preview updates and input validation to all fields and controls." alt="" coords="787,5,1045,48"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Synchronizes the UI components with the QR code preview and validates input states." alt="" coords="787,5,1045,48"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="734,61,791,49,793,54,735,66"/>
 <area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="1103,256,1302,299"/>
 <area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="740,68,811,65,889,69,970,82,1009,93,1046,108,1090,136,1128,171,1159,208,1183,242,1179,245,1155,211,1124,175,1086,140,1043,113,1007,98,968,87,889,74,811,70,740,73"/>
