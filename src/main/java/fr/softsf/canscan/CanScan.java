@@ -65,6 +65,8 @@ import fr.softsf.canscan.ui.FlatLafDatePicker;
 import fr.softsf.canscan.ui.FlatLafTimePicker;
 import fr.softsf.canscan.ui.MyPopup;
 import fr.softsf.canscan.ui.UiComponentsConfiguration;
+import fr.softsf.canscan.ui.field.FieldConfig;
+import fr.softsf.canscan.ui.field.FieldFilterType;
 import fr.softsf.canscan.ui.worker.DynamicPreviewWorker;
 import fr.softsf.canscan.ui.worker.DynamicResizeWorker;
 import fr.softsf.canscan.util.ApplicationMetadata;
@@ -698,78 +700,81 @@ public final class CanScan extends JFrame {
                 freePanel, grid, freeField, freeScrollPane);
     }
 
-    /** Attaches automatic QR preview updates and input validation to all fields and controls. */
+    /**
+     * Synchronizes the UI components with the QR code preview and validates input states.
+     *
+     * <p>This method initializes and attaches the necessary listeners and document filters to all
+     * interactive components (text fields, sliders, checkboxes, and pickers). It ensures that:
+     *
+     * <ul>
+     *   <li>QR preview updates automatically on any relevant component change.
+     *   <li>Input fields are sanitized based on their specific {@link FieldFilterType}.
+     *   <li>The generation button's enabled state is updated according to mandatory field
+     *       completion.
+     * </ul>
+     */
     private void automaticQRCodeRenderingForFieldsAndControls() {
+        Runnable updateAction = () -> qrCodePreview.updateQrCodePreview(getQrInput());
         DocumentListener docListener =
-                UiComponentsConfiguration.INSTANCE.createDocumentListener(
-                        () -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        JTextField[] textFields = {
-            nameField,
-            phoneField,
-            emailField,
-            orgField,
-            adrField,
-            urlField,
-            meetTitleField,
-            meetNameField,
-            logoField,
-            sizeField
+                UiComponentsConfiguration.INSTANCE.createDocumentListener(updateAction);
+        JTextField[] strictFields = {
+            nameField, phoneField, emailField, orgField, adrField,
+            urlField, meetTitleField, meetNameField, logoField, sizeField
         };
-        for (JTextField field : textFields) {
+        for (JTextField field : strictFields) {
+            UiComponentsConfiguration.INSTANCE.configureFieldFilters(
+                    new FieldConfig(
+                            field,
+                            FieldFilterType.STRICT,
+                            IntConstants.ABSOLUTE_MAX_CHARS.getValue(),
+                            updateAction));
+        }
+        UiComponentsConfiguration.INSTANCE.configureFieldFilters(
+                new FieldConfig(
+                        meetLatField,
+                        FieldFilterType.NUMERIC,
+                        MAX_COORDINATE_LENGTH,
+                        updateAction));
+        UiComponentsConfiguration.INSTANCE.configureFieldFilters(
+                new FieldConfig(
+                        meetLongField,
+                        FieldFilterType.NUMERIC,
+                        MAX_COORDINATE_LENGTH,
+                        updateAction));
+        UiComponentsConfiguration.INSTANCE.configureFieldFilters(
+                new FieldConfig(
+                        freeField,
+                        FieldFilterType.FREE,
+                        IntConstants.ABSOLUTE_MAX_CHARS.getValue(),
+                        updateAction));
+        marginSlider.addChangeListener(_ -> updateAction.run());
+        ratioSlider.addChangeListener(_ -> updateAction.run());
+        roundedModulesCheckBox.addActionListener(_ -> updateAction.run());
+        JTextField[] dateTimeFields = {
+            meetBeginDatePicker.getComponentDateTextField(),
+            meetBeginTimePicker.getComponentTimeTextField(),
+            meetEndDatePicker.getComponentDateTextField(),
+            meetEndTimePicker.getComponentTimeTextField()
+        };
+        for (JTextField field : dateTimeFields) {
             field.getDocument().addDocumentListener(docListener);
         }
-        UiComponentsConfiguration.INSTANCE.attachLimitedDocumentListener(
-                meetLatField,
-                MAX_COORDINATE_LENGTH,
-                () -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        UiComponentsConfiguration.INSTANCE.attachLimitedDocumentListener(
-                meetLongField,
-                MAX_COORDINATE_LENGTH,
-                () -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        freeField.getDocument().addDocumentListener(docListener);
-        marginSlider.addChangeListener(_ -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        ratioSlider.addChangeListener(_ -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        roundedModulesCheckBox.addActionListener(
-                _ -> qrCodePreview.updateQrCodePreview(getQrInput()));
-        meetBeginDatePicker
-                .getComponentDateTextField()
-                .getDocument()
-                .addDocumentListener(docListener);
-        meetBeginTimePicker
-                .getComponentTimeTextField()
-                .getDocument()
-                .addDocumentListener(docListener);
-        meetEndDatePicker
-                .getComponentDateTextField()
-                .getDocument()
-                .addDocumentListener(docListener);
-        meetEndTimePicker
-                .getComponentTimeTextField()
-                .getDocument()
-                .addDocumentListener(docListener);
         DocumentListener generateButtonValidationListener =
                 UiComponentsConfiguration.INSTANCE.createDocumentListener(
                         this::updateGenerateButtonState);
-        nameField.getDocument().addDocumentListener(generateButtonValidationListener);
+        JTextField[] validationRequiredFields = {
+            nameField,
+            meetTitleField,
+            meetUIdField,
+            meetBeginDatePicker.getComponentDateTextField(),
+            meetBeginTimePicker.getComponentTimeTextField(),
+            meetEndDatePicker.getComponentDateTextField(),
+            meetEndTimePicker.getComponentTimeTextField()
+        };
+        for (JTextField field : validationRequiredFields) {
+            field.getDocument().addDocumentListener(generateButtonValidationListener);
+        }
         freeField.getDocument().addDocumentListener(generateButtonValidationListener);
-        meetTitleField.getDocument().addDocumentListener(generateButtonValidationListener);
-        meetUIdField.getDocument().addDocumentListener(generateButtonValidationListener);
-        meetBeginDatePicker
-                .getComponentDateTextField()
-                .getDocument()
-                .addDocumentListener(generateButtonValidationListener);
-        meetBeginTimePicker
-                .getComponentTimeTextField()
-                .getDocument()
-                .addDocumentListener(generateButtonValidationListener);
-        meetEndDatePicker
-                .getComponentDateTextField()
-                .getDocument()
-                .addDocumentListener(generateButtonValidationListener);
-        meetEndTimePicker
-                .getComponentTimeTextField()
-                .getDocument()
-                .addDocumentListener(generateButtonValidationListener);
     }
 
     /** Enables or disables the "Generate" button based on required fields for the current mode. */

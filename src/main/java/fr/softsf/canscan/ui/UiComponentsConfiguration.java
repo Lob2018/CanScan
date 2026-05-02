@@ -41,6 +41,8 @@ import fr.softsf.canscan.constant.IntConstants;
 import fr.softsf.canscan.model.MecardJFields;
 import fr.softsf.canscan.model.MeetJFields;
 import fr.softsf.canscan.model.NativeImageUiComponents;
+import fr.softsf.canscan.ui.field.FieldConfig;
+import fr.softsf.canscan.ui.field.FieldFilterType;
 import fr.softsf.canscan.util.Checker;
 import fr.softsf.canscan.util.FontManager;
 
@@ -548,28 +550,20 @@ public enum UiComponentsConfiguration {
     }
 
     /**
-     * Attaches a {@link DocumentListener} to a {@link JTextField} that:
+     * Configures the input filters and reactive listeners for a text component.
      *
-     * <ul>
-     *   <li>Executes the given {@code action} on any change to the document (insert, remove, or
-     *       change), asynchronously on the Swing EDT.
-     *   <li>Limits the text length to {@code maxLength} characters using a {@link DocumentFilter}.
-     *   <li>Removes line breaks (\n, \r) from pasted or inserted text.
-     * </ul>
+     * <p>This method applies a {@link DocumentFilter} to sanitize input based on the specified
+     * {@link FieldFilterType} and character limits. It also registers a {@link DocumentListener} to
+     * trigger the associated action upon any valid document modification.
      *
-     * <p>This allows dynamic updates (e.g., QR code preview) while preventing input overflow and
-     * unwanted line breaks.
-     *
-     * @param field the {@link JTextField} to attach the listener to; must not be null
-     * @param maxLength the maximum number of characters allowed in the field
-     * @param action the {@link Runnable} to execute on document changes; must not be null
+     * @param config The {@link FieldConfig} defining the component's constraints and behavior.
      */
-    public void attachLimitedDocumentListener(JTextField field, int maxLength, Runnable action) {
-        if (Checker.INSTANCE.checkNPE(field, "attachLimitedDocumentListener", "field")
-                || Checker.INSTANCE.checkNPE(action, "attachLimitedDocumentListener", "action")) {
+    public void configureFieldFilters(FieldConfig config) {
+        if (Checker.INSTANCE.checkNPE(config, "configureFieldFilters", "config")) {
             return;
         }
-        DocumentFilter lengthFilter =
+        AbstractDocument document = (AbstractDocument) config.field().getDocument();
+        document.setDocumentFilter(
                 new DocumentFilter() {
                     @Override
                     public void insertString(
@@ -578,9 +572,10 @@ public enum UiComponentsConfiguration {
                         if (string == null) {
                             return;
                         }
-                        String cleaned = string.replace("\n", "").replace("\r", "");
-                        if (fb.getDocument().getLength() + cleaned.length() <= maxLength) {
-                            super.insertString(fb, offset, cleaned, attr);
+                        String filtered = applyFilter(string, config.fieldFilterType());
+                        if (fb.getDocument().getLength() + filtered.length()
+                                <= config.maxLength()) {
+                            super.insertString(fb, offset, filtered, attr);
                         }
                     }
 
@@ -595,16 +590,24 @@ public enum UiComponentsConfiguration {
                         if (text == null) {
                             return;
                         }
-                        String cleaned = text.replace("\n", "").replace("\r", "");
+                        String filtered = applyFilter(text, config.fieldFilterType());
                         int currentLength = fb.getDocument().getLength();
-                        if (currentLength - length + cleaned.length() <= maxLength) {
-                            super.replace(fb, offset, length, cleaned, attrs);
+                        if (currentLength - length + filtered.length() <= config.maxLength()) {
+                            super.replace(fb, offset, length, filtered, attrs);
                         }
                     }
-                };
-        ((AbstractDocument) field.getDocument()).setDocumentFilter(lengthFilter);
-        DocumentListener listener = createDocumentListener(action);
-        field.getDocument().addDocumentListener(listener);
+                });
+
+        document.addDocumentListener(createDocumentListener(config.action()));
+    }
+
+    /** Sanitizes the input string based on the selected filter type. */
+    private String applyFilter(String text, FieldFilterType type) {
+        return switch (type) {
+            case STRICT -> text.replaceAll("[\\n\\r;]", "");
+            case FREE -> text.replaceAll("[\\n\\r]", "");
+            case NUMERIC -> text.replaceAll("[^0-9.-]", "");
+        };
     }
 
     /**
