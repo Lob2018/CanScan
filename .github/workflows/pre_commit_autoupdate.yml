@@ -24,19 +24,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Setup Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+      - name: Run pre-commit autoupdate
+        uses: pre-commit/action@646c83f61947e6a4e3c1356701873d1f103b6ef5 # v3.0.1
         with:
-          python-version: '3.x'
-          cache: 'pip'
+          extra_args: autoupdate
 
-      - name: Install pre-commit
-        run: pip install pre-commit
-
-      - name: Check pre-commit version
-        run: python -m pre_commit --version
-
-      - name: Run pre-commit autoupdate and check for changes
+      - name: Check for changes in config
         run: |
-          python -m pre_commit autoupdate
           git diff --exit-code .pre-commit-config.yaml
