@@ -21,7 +21,17 @@ updates:
         patterns:
           - "*"
 
-  # 3. Surveillance des dépendances Python (pour pre-commit et outils locaux)
+  # 3. Surveillance des hooks pre-commit (.pre-commit-config.yaml)
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      pre-commit-hooks:
+        patterns:
+          - "*"
+
+  # 4. Surveillance des dépendances Python (manifestes standards)
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
