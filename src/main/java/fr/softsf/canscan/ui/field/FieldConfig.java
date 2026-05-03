@@ -37,6 +37,11 @@ public record FieldConfig(
                 : new FieldConfig(f, ft, m, a);
     }
 
+    /**
+     * Compact constructor for {@link FieldConfig}.
+     *
+     * <p>Applies SpotBugs suppression for Swing component exposure.
+     */
     @SuppressFBWarnings(value = "EI_EXPOSE_REP2", justification = "Swing intentional")
     public FieldConfig {
         // Compact constructor to apply SpotBugs suppression on auto-generated assignments.
