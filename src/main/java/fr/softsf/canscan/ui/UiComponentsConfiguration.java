@@ -365,9 +365,17 @@ public enum UiComponentsConfiguration {
         addRow(
                 meetPanel,
                 grid,
-                "<html>Titre</html>",
-                "Titre de l'événement dans l'agenda.",
-                meetJFields.meetNameField());
+                "<html><b>Titre</b></html>",
+                "<html>Titre préfixant l'identifiant.<br>"
+                        + "Il doit être différent pour chaque événement.</html>",
+                meetJFields.meetTitleField());
+        addRow(
+                meetPanel,
+                grid,
+                "<html><b>Identifiant</b></html>",
+                "<html>Code unique permanent (<b>UID</b>).<br>"
+                        + "Il permet au calendrier de reconnaître l'événement.</html>",
+                meetJFields.meetUIdField());
         JPanel beginDateTimePanel =
                 createDateTimePanel(
                         meetJFields.meetBeginDatePicker(), meetJFields.meetBeginTimePicker());
@@ -389,17 +397,9 @@ public enum UiComponentsConfiguration {
         addRow(
                 meetPanel,
                 grid,
-                "<html><b>Référence</b></html>",
-                "<html>Référence servant à créer l'identifiant.<br>"
-                        + "Elle doit être différente pour chaque événement.</html>",
-                meetJFields.meetTitleField());
-        addRow(
-                meetPanel,
-                grid,
-                "<html><b>Identifiant</b></html>",
-                "<html>Code unique permanent (<b>UID</b>).<br>"
-                        + "Il permet au calendrier de reconnaître l'événement.</html>",
-                meetJFields.meetUIdField());
+                "<html>Organisateur</html>",
+                "Nom de l'organisateur de l'événement.",
+                meetJFields.meetNameField());
         JPanel coordinatesPanel =
                 createCoordinatesPanel(meetJFields.meetLatField(), meetJFields.meetLongField());
         addRow(
