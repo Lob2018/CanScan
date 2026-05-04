@@ -210,7 +210,7 @@ public class NativeImageConfigSimulator {
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(500);
-        freeField.setText("W".repeat(2000));
+        freeField.setText("0".repeat(3058));
         robot.delay(500);
         String actual = interceptAndValideDialog(robot);
         assertEquals(

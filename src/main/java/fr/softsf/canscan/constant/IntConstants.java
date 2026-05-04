@@ -15,7 +15,7 @@ public enum IntConstants {
     TEXT_FIELDS_COLUMNS(25),
     DEFAULT_LABEL_WIDTH(FontManager.INSTANCE.getCharWidth() * 10),
     RESOLVING_FILE_NAME_CONFLICT_MAX_ATTEMPTS(1000),
-    ABSOLUTE_MAX_CHARS(5000);
+    ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1(3058);
 
     private final int value;
 

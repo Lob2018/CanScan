@@ -73,7 +73,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 - **Identifiant** : Identifiant unique de l'événement au format `NOM@SOFT64.FR` (requis et généré automatiquement)
 - **Début** : Date et heure de début de l'événement (requis)
 - **Fin** : Date et heure de fin de l'événement (requis)
-- **Nom** : Nom de l'organisateur
+- **Organisateur** : Nom de l'organisateur
 - **Coordonnées** : Latitude et longitude du lieu (format : `latitude;longitude`)
 
 > 📍 Les coordonnées géographiques génèrent automatiquement deux champs : GEO (coordonnées brutes) et LOCATION (lien OpenStreetMap cliquable)

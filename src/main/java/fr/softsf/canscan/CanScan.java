@@ -726,7 +726,7 @@ public final class CanScan extends JFrame {
                     new FieldConfig(
                             field,
                             FieldFilterType.STRICT,
-                            IntConstants.ABSOLUTE_MAX_CHARS.getValue(),
+                            IntConstants.ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1.getValue(),
                             updateAction));
         }
         UiComponentsConfiguration.INSTANCE.configureFieldFilters(
@@ -745,7 +745,7 @@ public final class CanScan extends JFrame {
                 new FieldConfig(
                         freeField,
                         FieldFilterType.FREE,
-                        IntConstants.ABSOLUTE_MAX_CHARS.getValue(),
+                        IntConstants.ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1.getValue(),
                         updateAction));
         marginSlider.addChangeListener(_ -> updateAction.run());
         ratioSlider.addChangeListener(_ -> updateAction.run());

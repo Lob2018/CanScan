@@ -565,16 +565,17 @@ public enum UiComponentsConfiguration {
         AbstractDocument document = (AbstractDocument) config.field().getDocument();
         document.setDocumentFilter(
                 new DocumentFilter() {
+
                     @Override
                     public void insertString(
                             FilterBypass fb, int offset, String string, AttributeSet attr)
                             throws BadLocationException {
-                        if (string == null) {
+                        if (string == null || string.isEmpty()) {
                             return;
                         }
                         String filtered = applyFilter(string, config.fieldFilterType());
-                        if (fb.getDocument().getLength() + filtered.length()
-                                <= config.maxLength()) {
+                        int projectedLength = fb.getDocument().getLength() + filtered.length();
+                        if (isLengthSafe(projectedLength, config.maxLength())) {
                             super.insertString(fb, offset, filtered, attr);
                         }
                     }
@@ -591,14 +592,32 @@ public enum UiComponentsConfiguration {
                             return;
                         }
                         String filtered = applyFilter(text, config.fieldFilterType());
-                        int currentLength = fb.getDocument().getLength();
-                        if (currentLength - length + filtered.length() <= config.maxLength()) {
+                        int projectedLength =
+                                fb.getDocument().getLength() - length + filtered.length();
+                        if (isLengthSafe(projectedLength, config.maxLength())) {
                             super.replace(fb, offset, length, filtered, attrs);
                         }
                     }
                 });
-
         document.addDocumentListener(createDocumentListener(config.action()));
+    }
+
+    /**
+     * Validates the projected length against ISO 18004 thresholds and config limits.
+     *
+     * <p>Uses predictive integer arithmetic to avoid expensive String allocations. Allows one extra
+     * character (up to 3058) to trigger UI error states.
+     *
+     * @param projectedLength The calculated length after potential modification.
+     * @param configLimit The configured maximum length.
+     * @return true if the length is within the tolerance zone (ISO ceiling + 1).
+     */
+    private boolean isLengthSafe(int projectedLength, int configLimit) {
+        int absoluteCeiling = IntConstants.ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1.getValue();
+        if (projectedLength > absoluteCeiling) {
+            return false;
+        }
+        return configLimit <= 0 || projectedLength <= configLimit;
     }
 
     /** Sanitizes the input string based on the selected filter type. */
