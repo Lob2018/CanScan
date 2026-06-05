@@ -40,5 +40,5 @@ jobs:
 
       - name: Run pre-commit autoupdate and check for changes
         run: |
-          python -m pre_commit autoupdate
+          python -m pre_commit autoupdate --bleeding-edge
           git diff --exit-code .pre-commit-config.yaml
