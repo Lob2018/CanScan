@@ -22,7 +22,7 @@
 #    B. Update pip first (Internal module update to avoid access errors):
 #       python -m pip install --upgrade pip
 #    C. Update all .venv packages & hooks (Using binary-only for safety):
-#       py -c "import importlib.metadata; from subprocess import call; [call(['pip', 'install', '--upgrade', '--only-binary=:all:', d.metadata['Name']]) for d in importlib.metadata.distributions()]" && py -m pre_commit autoupdate
+#       py -c "import importlib.metadata; from subprocess import call; [call(['pip', 'install', '--upgrade', '--only-binary=:all:', d.metadata['Name']]) for d in importlib.metadata.distributions()]" && py -m pre_commit autoupdate --bleeding-edge
 #    D. Synchronize manifest (Critical for security scanning):
 #       py -m pip freeze > requirements.txt
 #    E. Verify changes:
@@ -38,16 +38,16 @@ repos:
         pass_filenames: false
         files: \.java$
   - repo: https://github.com/gitleaks/gitleaks
-    rev: 83d9cd684c87d95d656c1458ef04895a7f1cbd8e # v8.30.1
+    rev: 81fc7f93b7a0e790c3b272594b883e89f4e36c87 # v8.30.1
     hooks:
       - id: gitleaks
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 38980559e3a605691d6579f96222c30778e5a69e # v3.0.0
+    rev: 3.0.0 # v3.0.0
     hooks:
       - id: shellcheck
         exclude: ^mvnw$
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
+    rev: fa6b006f0e53d6c0a4a30d6f7b1200a899444634 # v6.0.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
