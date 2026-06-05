@@ -7,5 +7,6 @@ var dir_550e25c4f0b66c7d418995e829686afc =
     [ "DateHelper.java", "_date_helper_8java.html", "_date_helper_8java" ],
     [ "FontManager.java", "_font_manager_8java.html", "_font_manager_8java" ],
     [ "FrameHelper.java", "_frame_helper_8java.html", "_frame_helper_8java" ],
+    [ "package-info.java", "util_2package-info_8java.html", null ],
     [ "ValidationFieldHelper.java", "_validation_field_helper_8java.html", "_validation_field_helper_8java" ]
 ];

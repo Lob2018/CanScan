@@ -1,7 +1,9 @@
 <map id="fr.softsf.canscan.ui.UiComponentsConfiguration.configureFieldFilters" name="fr.softsf.canscan.ui.UiComponentsConfiguration.configureFieldFilters">
-<area shape="rect" id="Node000001" title="Configures the input filters and reactive listeners for a text component." alt="" coords="5,39,230,81"/>
+<area shape="rect" id="Node000001" title="Configures the input filters and reactive listeners for a text component." alt="" coords="5,72,230,115"/>
 <area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a333f3841a4cd0415b445efa3c6e02644" title="Sanitizes the input string based on the selected filter type." alt="" coords="288,5,512,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,44,272,39,272,44,230,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,69,291,49,292,55,211,74"/>
 <area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a8dc36de010da534a68c8dfa9a32e1759" title="Creates a simple DocumentListener that executes the given action on any change to the document." alt="" coords="278,72,522,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,71,263,74,262,80,230,76"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,91,262,91,262,96,230,96"/>
+<area shape="rect" id="Node000004" href="$enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ad21dca08ace525c8debdffc52899cd83" title="Validates the projected length against ISO 18004 thresholds and config limits." alt="" coords="288,139,512,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="211,113,292,132,291,137,210,118"/>
 </map>

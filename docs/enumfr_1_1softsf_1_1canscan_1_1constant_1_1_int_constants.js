@@ -2,9 +2,9 @@ var enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants =
 [
     [ "IntConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#afb2384e51bcce1ee8f62d6211fa8f846", null ],
     [ "getValue", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#aa88a835fa5db5bdfaa910dc1c33d15bb", null ],
-    [ "ABSOLUTE_MAX_CHARS", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#aea5549475f878014c9d46665cd76be6b", null ],
     [ "DEFAULT_GAP", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#ac76d9e9114b4e0f989571ec6fb57b6b3", null ],
     [ "DEFAULT_LABEL_WIDTH", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#aa08ee9169bc13a640491e6d0d6f5b645", null ],
+    [ "ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a6109ac11f75c0583431bd5493c3f819b", null ],
     [ "LOADER_SIZE_OFFSET", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a27cf366e0e3ffb33c2ee3d37f1e428cc", null ],
     [ "MAX_PERCENTAGE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a79d442ccfedfe7e013824e62cf156759", null ],
     [ "RESOLVING_FILE_NAME_CONFLICT_MAX_ATTEMPTS", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#adf04ea48a26df1be114dc535a22c4ad2", null ],

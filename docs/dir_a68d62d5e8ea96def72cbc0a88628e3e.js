@@ -5,5 +5,6 @@ var dir_a68d62d5e8ea96def72cbc0a88628e3e =
     [ "service", "dir_7db1b91ee8a557460823109f3966ffb8.html", "dir_7db1b91ee8a557460823109f3966ffb8" ],
     [ "ui", "dir_d17b1239c51b19a478b128996d2b5dcc.html", "dir_d17b1239c51b19a478b128996d2b5dcc" ],
     [ "util", "dir_550e25c4f0b66c7d418995e829686afc.html", "dir_550e25c4f0b66c7d418995e829686afc" ],
-    [ "CanScan.java", "_can_scan_8java.html", "_can_scan_8java" ]
+    [ "CanScan.java", "_can_scan_8java.html", "_can_scan_8java" ],
+    [ "package-info.java", "package-info_8java.html", null ]
 ];

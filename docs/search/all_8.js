@@ -24,5 +24,7 @@ var searchData=
   ['isinpositionpattern_21',['isInPositionPattern',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac5ca4991b2826e1655e2f4afe5f2659f',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['isinrange_22',['isInRange',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ac77028615e42948dee3bc8cfa1b9e3dd',1,'fr::softsf::canscan::util::CoordinateHelper']]],
   ['isintopleftpattern_23',['isInTopLeftPattern',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a42b974304eab8bbf970c930aadf1c8cd',1,'fr::softsf::canscan::ui::EncodedImage']]],
-  ['isintoprightpattern_24',['isInTopRightPattern',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a0f2ff4874795b0ea498b4840b1f0b14c',1,'fr::softsf::canscan::ui::EncodedImage']]]
+  ['isintoprightpattern_24',['isInTopRightPattern',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a0f2ff4874795b0ea498b4840b1f0b14c',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['islengthsafe_25',['isLengthSafe',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ad21dca08ace525c8debdffc52899cd83',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['iso_5f18004_5fhigh_5fnumeric_5fmax_5fchar_5fplus_5f1_26',['ISO_18004_HIGH_NUMERIC_MAX_CHAR_PLUS_1',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a6109ac11f75c0583431bd5493c3f819b',1,'fr::softsf::canscan::constant::IntConstants']]]
 ];

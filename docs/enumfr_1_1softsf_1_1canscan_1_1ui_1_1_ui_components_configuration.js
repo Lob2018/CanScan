@@ -19,6 +19,7 @@ var enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration =
     [ "createQrCodeOverlayPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a94404c0c52c8ebabf4d7479e844ea1c9", null ],
     [ "createRadioButtonsPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ab45098dd8251281a2e9968a760ff8d1e", null ],
     [ "getIconAfterTextHtml", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a9ad9d45feaa5c32cf08821e48ee2b545", null ],
+    [ "isLengthSafe", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#ad21dca08ace525c8debdffc52899cd83", null ],
     [ "populateFreePanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#aa92005bb8f61d6438f3aca2827b7077c", null ],
     [ "populateMecardPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a5955ca8e11648b9ef65136c115fb812a", null ],
     [ "populateMeetPanel", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a4a891de561e1562c1b8cf95fde5070a6", null ],

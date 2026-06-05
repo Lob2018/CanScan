@@ -9,5 +9,6 @@ var dir_d17b1239c51b19a478b128996d2b5dcc =
     [ "IFlatLafStyledForLGoodDatePicker.java", "_i_flat_laf_styled_for_l_good_date_picker_8java.html", "_i_flat_laf_styled_for_l_good_date_picker_8java" ],
     [ "LabelIconUtil.java", "_label_icon_util_8java.html", "_label_icon_util_8java" ],
     [ "MyPopup.java", "_my_popup_8java.html", "_my_popup_8java" ],
+    [ "package-info.java", "ui_2package-info_8java.html", null ],
     [ "UiComponentsConfiguration.java", "_ui_components_configuration_8java.html", "_ui_components_configuration_8java" ]
 ];

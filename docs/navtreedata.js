@@ -60,9 +60,9 @@ var NAVTREEINDEX =
 "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#aa428d1645e4c1be1f71a58de1eaa0f5d",
 "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#afac93461a8df245221a0be32fa402c63",
 "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a847d60134ee0342c62bd02232e8f2ed7",
-"functions_vars_w.html"
+"functions_vars_t.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';
