@@ -15,7 +15,6 @@ import javax.swing.SwingWorker;
 
 import org.apache.commons.lang3.StringUtils;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.model.CommonFields;
 import fr.softsf.canscan.model.EncodedData;
@@ -43,26 +42,50 @@ import fr.softsf.canscan.util.Checker;
 public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
 
     private static final int PREVIEW_DEBOUNCE_DELAY_MS = 200;
-
     private final EncodedImage encodedImage;
     private final DynamicResizeWorker qrCodeResize;
     private final JLabel qrCodeLabel;
 
     /**
+     * Creates a new instance of {@link DynamicPreviewWorker} via a static factory method.
+     *
+     * <p>This method ensures all dependencies are validated before instantiation, preventing the
+     * creation of objects in an inconsistent state.
+     *
+     * @param encodedImage source QR image
+     * @param qrCodeResize resizing worker instance
+     * @param qrCodeLabel display label
+     * @param loader progress indicator
+     * @return initialized {@link DynamicPreviewWorker}
+     */
+    public static DynamicPreviewWorker create(
+            EncodedImage encodedImage,
+            DynamicResizeWorker qrCodeResize,
+            JLabel qrCodeLabel,
+            JProgressBar loader) {
+        Checker.INSTANCE.checkNPE(encodedImage, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "encodedImage");
+        Checker.INSTANCE.checkNPE(qrCodeResize, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeResize");
+        Checker.INSTANCE.checkNPE(qrCodeLabel, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeLabel");
+        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "loader");
+        Objects.requireNonNull(encodedImage, "encodedImage ne doit pas être null");
+        Objects.requireNonNull(qrCodeResize, "qrCodeResize ne doit pas être null");
+        Objects.requireNonNull(qrCodeLabel, "qrCodeLabel ne doit pas être null");
+        Objects.requireNonNull(loader, "loader ne doit pas être null");
+        return new DynamicPreviewWorker(encodedImage, qrCodeResize, qrCodeLabel, loader);
+    }
+
+    /**
      * Constructs the asynchronous QR code preview manager.
      *
-     * <p>NOTE: References to mutable dependencies (EncodedImage, Swing components) are
-     * intentionally stored as they represent shared application state.
+     * <p>Instance creation is handled via {@link #create(EncodedImage, DynamicResizeWorker, JLabel,
+     * JProgressBar)}.
      *
-     * @param encodedImage the source QR code image; must not be {@code null}
-     * @param qrCodeResize the {@link DynamicResizeWorker} instance responsible for asynchronous
-     *     resizing; must not be {@code null}
-     * @param qrCodeLabel the label where the generated QR code preview will be displayed; must not
-     *     be {@code null}
+     * @param encodedImage the source QR code image
+     * @param qrCodeResize the {@link DynamicResizeWorker} instance
+     * @param qrCodeLabel the label where the preview is displayed
      * @param loader loader to indicate background processing
      */
-    @SuppressFBWarnings("EI_EXPOSE_REP2")
-    public DynamicPreviewWorker(
+    private DynamicPreviewWorker(
             EncodedImage encodedImage,
             DynamicResizeWorker qrCodeResize,
             JLabel qrCodeLabel,

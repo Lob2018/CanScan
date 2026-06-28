@@ -10,12 +10,13 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import fr.softsf.canscan.constant.StringConstants;
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.ui.EncodedImage;
 import fr.softsf.canscan.ui.LabelIconUtil;
@@ -40,23 +41,42 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
 
     private static final int RESIZE_DEBOUNCE_DELAY_MS = 200;
     private static final int DEFAULT_SIZE = 50;
-
     private final EncodedImage encodedImage;
     private final JLabel qrCodeLabel;
 
     /**
-     * Constructs a new QR code resize manager for a specific label.
+     * Creates a new instance of {@link DynamicResizeWorker} via a static factory method.
      *
-     * <p>NOTE: References to mutable dependencies (EncodedImage, Swing components) are
-     * intentionally stored as they represent shared application state.
+     * <p>Ensures all dependencies are validated prior to instantiation to maintain object
+     * consistency and security.
      *
-     * @param encodedImage the source QR code image; must not be {@code null}
-     * @param qrCodeLabel the label where the resized QR code will be displayed; must not be {@code
-     *     null}
-     * @param loader loader to show a wait/progress indicator
+     * @param encodedImage source QR image
+     * @param qrCodeLabel display label
+     * @param loader progress indicator
+     * @return initialized {@link DynamicResizeWorker}
      */
-    @SuppressFBWarnings("EI_EXPOSE_REP2")
-    public DynamicResizeWorker(EncodedImage encodedImage, JLabel qrCodeLabel, JProgressBar loader) {
+    public static DynamicResizeWorker create(
+            EncodedImage encodedImage, JLabel qrCodeLabel, JProgressBar loader) {
+        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "encodedImage");
+        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "qrCodeLabel");
+        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "loader");
+        Objects.requireNonNull(encodedImage, "encodedImage ne doit pas être null");
+        Objects.requireNonNull(qrCodeLabel, "qrCodeLabel ne doit pas être null");
+        Objects.requireNonNull(loader, "loader ne doit pas être null");
+        return new DynamicResizeWorker(encodedImage, qrCodeLabel, loader);
+    }
+
+    /**
+     * Constructs the asynchronous QR code resize manager.
+     *
+     * <p>Instance creation is handled via {@link #create(EncodedImage, JLabel, JProgressBar)}.
+     *
+     * @param encodedImage source QR image
+     * @param qrCodeLabel display label
+     * @param loader progress indicator
+     */
+    private DynamicResizeWorker(
+            EncodedImage encodedImage, JLabel qrCodeLabel, JProgressBar loader) {
         super(loader);
         this.encodedImage = encodedImage;
         this.qrCodeLabel = qrCodeLabel;

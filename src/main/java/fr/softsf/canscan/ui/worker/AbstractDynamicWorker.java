@@ -13,7 +13,6 @@ import javax.swing.Timer;
 
 import fr.softsf.canscan.model.WholeFields;
 import fr.softsf.canscan.ui.MyPopup;
-import fr.softsf.canscan.util.Checker;
 
 /**
  * Base class managing asynchronous QR code tasks with a unified workflow.
@@ -31,13 +30,14 @@ public abstract class AbstractDynamicWorker<T> {
     protected final JProgressBar loader;
 
     /**
-     * Initializes the QR code worker with a required loader.
+     * Constructs the worker.
+     *
+     * <p>Validation of parameters is performed by the factory method.
      *
      * @param loader {@link JProgressBar} for progress indication; must not be {@code null}
      */
     protected AbstractDynamicWorker(JProgressBar loader) {
-        Checker.INSTANCE.checkNPE(loader, "AbstractDynamicWorker", "loader");
-        this.loader = java.util.Objects.requireNonNull(loader, "loader ne doit pas être null");
+        this.loader = loader;
     }
 
     /** Stops and clears the debounce timer. */

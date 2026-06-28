@@ -25,7 +25,7 @@ import fr.softsf.canscan.util.Checker;
 
 /** Service dedicated to QR code generation and saving. */
 @SuppressWarnings("ClassCanBeRecord")
-public class GenerateAndSaveService {
+public final class GenerateAndSaveService {
 
     private final EncodedImage encodedImage;
 

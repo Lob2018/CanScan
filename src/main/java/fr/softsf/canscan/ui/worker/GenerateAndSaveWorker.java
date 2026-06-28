@@ -31,7 +31,7 @@ import fr.softsf.canscan.util.Checker;
  * SwingWorker that generates and saves QR codes in a background thread. Handles UI updates and
  * error reporting on the Event Dispatch Thread.
  */
-public class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
+public final class GenerateAndSaveWorker extends SwingWorker<BufferedImage, Void> {
     private static final String GENERATE_AND_SAVE_WORKER = "GenerateAndSaveWorker";
     private final EncodedData qrData;
     private final CommonFields config;

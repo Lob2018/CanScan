@@ -164,9 +164,9 @@ public final class CanScan extends JFrame {
     // SERVICES
     private final transient EncodedImage encodedImage = new EncodedImage();
     private final transient DynamicResizeWorker qrCodeResize =
-            new DynamicResizeWorker(encodedImage, qrCodeLabel, loader);
+            DynamicResizeWorker.create(encodedImage, qrCodeLabel, loader);
     private final transient DynamicPreviewWorker qrCodePreview =
-            new DynamicPreviewWorker(encodedImage, qrCodeResize, qrCodeLabel, loader);
+            DynamicPreviewWorker.create(encodedImage, qrCodeResize, qrCodeLabel, loader);
     private final transient ColorOperation colorOperation = new ColorOperation();
     private final transient GenerateAndSaveService generateAndSaveService =
             new GenerateAndSaveService(encodedImage);
