@@ -19,10 +19,10 @@ jobs:
       contents: read
     environment: production
     env:
-      LIBERICA_VERSION: 25.0.2
-      OPENJDK_VERSION: 25.0.2+13
+      LIBERICA_VERSION: 25.0.3
+      OPENJDK_VERSION: 25.0.3+12
       LIBERICA_FOLDER: LibericaNIK-25-OpenJDK-25
-      LIBERICA_MSI: bellsoft-liberica-vm-openjdk25.0.2+13-25.0.2+1-windows-amd64.msi
+      LIBERICA_MSI: bellsoft-liberica-vm-openjdk25.0.3+12-25.0.3+2-windows-amd64.msi
       MSVC_VCVARS: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat
       INNOSETUP_EXE: C:\Program Files (x86)\Inno Setup 6\ISCC.exe
 
@@ -186,9 +186,9 @@ jobs:
     permissions:
       contents: read
     env:
-      LIBERICA_VERSION: 25.0.2
-      OPENJDK_VERSION: 25.0.2+13
-      LIBERICA_TGZ: bellsoft-liberica-vm-openjdk25.0.2+13-25.0.2+1-linux-amd64.tar.gz
+      LIBERICA_VERSION: 25.0.3
+      OPENJDK_VERSION: 25.0.3+12
+      LIBERICA_TGZ: bellsoft-liberica-vm-openjdk25.0.3+12-25.0.3+2-linux-amd64.tar.gz
       NIK_INSTALL_DIR: $HOME/liberica-nik
 
     steps:
