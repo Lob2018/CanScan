@@ -28,12 +28,12 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
         with:
           egress-policy: audit
 
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           fetch-depth: 0
 
@@ -53,7 +53,7 @@ jobs:
           echo "JAVA_TOOL_OPTIONS=-Duser.language=$env:APP_LANG -Duser.country=$env:APP_COUNTRY -Duser.region=$env:APP_COUNTRY" >> $env:GITHUB_ENV
 
       - name: Cache Maven dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ~\.m2\repository
           key: maven-repo-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
@@ -61,7 +61,7 @@ jobs:
             maven-repo-${{ runner.os }}-
 
       - name: Cache Liberica NIK installer
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: liberica-nik.msi
           key: liberica-nik-${{ runner.os }}-${{ env.LIBERICA_VERSION }}
@@ -108,7 +108,7 @@ jobs:
           Write-Host "Version extraite: $version"
 
       - name: Cache Inno Setup installer
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ${{ runner.temp }}\is.exe
           key: inno-setup-${{ runner.os }}
@@ -193,12 +193,12 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
         with:
           egress-policy: audit
 
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           fetch-depth: 0
 
@@ -212,7 +212,7 @@ jobs:
           sudo apt install build-essential libz-dev zlib1g-dev libxext-dev libxi-dev libxrender-dev libxtst-dev libfontconfig1 -y
 
       - name: Cache Liberica NIK tarball
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: liberica-nik.tar.gz
           key: liberica-nik-${{ runner.os }}-${{ env.LIBERICA_VERSION }}
@@ -308,12 +308,12 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
         with:
           egress-policy: audit
 
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Ensure mvnw is executable
         run: chmod +x mvnw
