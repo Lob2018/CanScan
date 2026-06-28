@@ -26,8 +26,8 @@ public enum StringConstants {
     JAVA_2D_XRENDER("sun.java2d.xrender"),
     JAVA_2D_UI_SCALE_ENABLED("sun.java2d.uiScale.enabled"),
     TRUE("true"),
-    DYNAMIC_PREVIEW_WORKER ("DynamicPreviewWorker"),
-    DYNAMIC_RESIZE_WORKER ("DynamicResizeWorker");
+    DYNAMIC_PREVIEW_WORKER("DynamicPreviewWorker"),
+    DYNAMIC_RESIZE_WORKER("DynamicResizeWorker");
 
     private final String value;
 

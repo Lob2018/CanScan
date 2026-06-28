@@ -63,10 +63,14 @@ public class DynamicPreviewWorker extends AbstractDynamicWorker<BufferedImage> {
             DynamicResizeWorker qrCodeResize,
             JLabel qrCodeLabel,
             JProgressBar loader) {
-        Checker.INSTANCE.checkNPE(encodedImage, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "encodedImage");
-        Checker.INSTANCE.checkNPE(qrCodeResize, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeResize");
-        Checker.INSTANCE.checkNPE(qrCodeLabel, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeLabel");
-        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "loader");
+        Checker.INSTANCE.checkNPE(
+                encodedImage, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "encodedImage");
+        Checker.INSTANCE.checkNPE(
+                qrCodeResize, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeResize");
+        Checker.INSTANCE.checkNPE(
+                qrCodeLabel, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "qrCodeLabel");
+        Checker.INSTANCE.checkNPE(
+                loader, StringConstants.DYNAMIC_PREVIEW_WORKER.getValue(), "loader");
         Objects.requireNonNull(encodedImage, "encodedImage ne doit pas être null");
         Objects.requireNonNull(qrCodeResize, "qrCodeResize ne doit pas être null");
         Objects.requireNonNull(qrCodeLabel, "qrCodeLabel ne doit pas être null");

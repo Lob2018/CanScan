@@ -57,9 +57,12 @@ public class DynamicResizeWorker extends AbstractDynamicWorker<ImageIcon> {
      */
     public static DynamicResizeWorker create(
             EncodedImage encodedImage, JLabel qrCodeLabel, JProgressBar loader) {
-        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "encodedImage");
-        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "qrCodeLabel");
-        Checker.INSTANCE.checkNPE(loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "loader");
+        Checker.INSTANCE.checkNPE(
+                loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "encodedImage");
+        Checker.INSTANCE.checkNPE(
+                loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "qrCodeLabel");
+        Checker.INSTANCE.checkNPE(
+                loader, StringConstants.DYNAMIC_RESIZE_WORKER.getValue(), "loader");
         Objects.requireNonNull(encodedImage, "encodedImage ne doit pas être null");
         Objects.requireNonNull(qrCodeLabel, "qrCodeLabel ne doit pas être null");
         Objects.requireNonNull(loader, "loader ne doit pas être null");
