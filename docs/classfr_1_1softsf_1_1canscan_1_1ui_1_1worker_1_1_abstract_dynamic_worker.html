@@ -142,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab0df41c11e41779e245f5d11a010a632" id="r_ab0df41c11e41779e245f5d11a010a632"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab0df41c11e41779e245f5d11a010a632">AbstractDynamicWorker</a> (JProgressBar loader)</td></tr>
-<tr class="memdesc:ab0df41c11e41779e245f5d11a010a632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the QR code worker with a required loader.  <br /></td></tr>
+<tr class="memdesc:ab0df41c11e41779e245f5d11a010a632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the worker.  <br /></td></tr>
 <tr class="memitem:aa3eebdde5dae919a4d905ef2d2d4a8fb" id="r_aa3eebdde5dae919a4d905ef2d2d4a8fb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa3eebdde5dae919a4d905ef2d2d4a8fb">cancelWorker</a> ()</td></tr>
 <tr class="memdesc:aa3eebdde5dae919a4d905ef2d2d4a8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the current SwingWorker and clears its reference safely.  <br /></td></tr>
 <tr class="memitem:a49ea00730d7f891f40c32550130625df" id="r_a49ea00730d7f891f40c32550130625df"><td class="memItemLeft">abstract void&#160;</td><td class="memItemRight"><a class="el" href="#a49ea00730d7f891f40c32550130625df">clearResources</a> ()</td></tr>
@@ -207,7 +207,8 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Initializes the QR code worker with a required loader. </p>
+<p>Constructs the worker. </p>
+<p>Validation of parameters is performed by the factory method.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">loader</td><td><code><a class="el" href="">JProgressBar</a></code> for progress indication; must not be <code class="JavaDocCode">null</code> </td></tr>

@@ -1,8 +1,3 @@
-## GNU General Public License v3.0 (GPLv3.0)
-
-* CanScan (this application)
-Copyright (C) 2025-present SOFT64.FR Lob2018
-
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -677,30 +672,3 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-
-## Third-party components
-
-### Microsoft Software License Terms
-
-* Microsoft Visual C++ Redistributable (v14 family: 2015-2022)
-
-This application requires the Microsoft Visual C++ Runtime to function. CanScan uses a single unified installer to ensure compatibility across all Windows distribution channels:
-- Bundled Runtime: The installer redistributes the Microsoft Visual C++ Redistributable (x64) as provided by Microsoft. Redistribution is performed in accordance with Microsoft's licensing terms for Visual Studio. The redistributable is used unmodified solely to enable runtime compatibility for the GraalVM native-image execution environment.
-- Winget Compatibility: Although the installer is unified, installation via Winget allows the system to treat the runtime as a formal dependency, ensuring it is correctly registered and updated via official Microsoft channels.
-
-### Licence CC BY 4.0
-
-* Luciole typeface
-These fonts are freely available under Creative Commons Attribution 4.0 International Public License:
-https://creativecommons.org/licenses/by/4.0/legalcode
-
-Luciole © Laurent Bourcellier & Jonathan Perez
-
-### License Apache 2.0
-
-* Material Icons
-These icons are provided by Google under the **Apache License, Version 2.0** (the "License").
-
-A copy of the Apache 2.0 License is available at: http://www.apache.org/licenses/LICENSE-2.0
-
-These icons are used unmodified and solely for graphical representation within the application's user interface.

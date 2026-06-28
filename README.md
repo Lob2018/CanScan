@@ -57,6 +57,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 - 🛡️ [Sécurité (Signaler une vulnérabilité)](https://github.com/Lob2018/CanScan?tab=security-ov-file#readme)
 - 💡 [Contribuer](#-contribuer)
 - 🤝 [Code de conduite](#-code-de-conduite)
+- 📜 [Mentions relatives aux logiciels tiers](https://github.com/Lob2018/CanScan/blob/main/THIRD_PARTY_NOTICES.txt)
 - 📜 [Licence](#-licence)
 
 ## ✨ Fonctionnalités

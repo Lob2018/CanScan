@@ -1,0 +1,26 @@
+This product includes software, licensed under:
+
+### Microsoft Software License Terms
+
+* Microsoft Visual C++ Redistributable (v14 family: 2015-2022)
+
+This application requires the Microsoft Visual C++ Runtime to function. CanScan uses a single unified installer to ensure compatibility across all Windows distribution channels:
+- Bundled Runtime: The installer redistributes the Microsoft Visual C++ Redistributable (x64) as provided by Microsoft. Redistribution is performed in accordance with Microsoft's licensing terms for Visual Studio. The redistributable is used unmodified solely to enable runtime compatibility for the GraalVM native-image execution environment.
+- Winget Compatibility: Although the installer is unified, installation via Winget allows the system to treat the runtime as a formal dependency, ensuring it is correctly registered and updated via official Microsoft channels.
+
+### Licence CC BY 4.0
+
+* Luciole typeface
+These fonts are freely available under Creative Commons Attribution 4.0 International Public License:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Luciole © Laurent Bourcellier & Jonathan Perez
+
+### License Apache 2.0
+
+* Material Icons
+These icons are provided by Google under the **Apache License, Version 2.0** (the "License").
+
+A copy of the Apache 2.0 License is available at: http://www.apache.org/licenses/LICENSE-2.0
+
+These icons are used unmodified and solely for graphical representation within the application's user interface.

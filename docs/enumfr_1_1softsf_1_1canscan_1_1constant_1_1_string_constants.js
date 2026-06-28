@@ -5,6 +5,8 @@ var enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants =
     [ "CURRENT_OS", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a7a0f10d4c18c043d35ccc2ed68ad62bd", null ],
     [ "DEFAULT_QR_CODE_DIMENSION_FIELD", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a809296afc41822773d483e8476912906", null ],
     [ "DOMAIN", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#af9f93bd3c595423ee89a3257d5fa2769", null ],
+    [ "DYNAMIC_PREVIEW_WORKER", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#ae33ed6a7edcd66a96ee072c7434492a8", null ],
+    [ "DYNAMIC_RESIZE_WORKER", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a7612a799b42aeda15ee25d7d23c6578e", null ],
     [ "ERREUR", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a68e647b7ddc5ea05eb7f8ebc9973c554", null ],
     [ "GENERATE_AND_SAVE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aedcf68f1b7469cc54558758f632af6e6", null ],
     [ "GENERATE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#abe9a6f3aaa13bbcad32cac256fe4598b", null ],

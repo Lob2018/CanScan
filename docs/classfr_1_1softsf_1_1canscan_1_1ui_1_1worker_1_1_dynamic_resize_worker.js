@@ -2,6 +2,7 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker =
 [
     [ "DynamicResizeWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a987100a1c7576ee2badffe25266865d7", null ],
     [ "clearResources", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a864a85361a6a0c9561dc077647aca127", null ],
+    [ "create", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a2cccc2b32324b201eabbd2de5dac4296", null ],
     [ "createWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a374a76bc7e495c044177769ac9d64723", null ],
     [ "onWorkerSuccess", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a78a98ddc7187d454df16acd989c9bda2", null ],
     [ "updateLoaderSize", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a5299a7f976198123d1da10f8d27af9a4", null ],

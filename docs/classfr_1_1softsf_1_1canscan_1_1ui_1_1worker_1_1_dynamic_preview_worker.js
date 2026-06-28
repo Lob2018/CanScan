@@ -3,6 +3,7 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker =
     [ "DynamicPreviewWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a039d35209726a71faa0cf0012659d446", null ],
     [ "buildPreviewImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#ad393d963bb16532fe9de3366b05cb7d4", null ],
     [ "clearResources", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#af06bfa6a407f4b8e5cc690516a72ffc8", null ],
+    [ "create", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a43e996c437572b78c5a0d1e5646b7941", null ],
     [ "createWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a9938a9b5dc1c561d4173bc6da4458ca8", null ],
     [ "getCommonFields", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a4e8c2ddc5168882770fb4255f808fd61", null ],
     [ "onWorkerSuccess", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a56762be9ba836f708b848f1ca2c11161", null ],

@@ -17,5 +17,7 @@ var searchData=
   ['draw_5fmodules_14',['DRAW_MODULES',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a3765dc14b2d36b519c4e67d495439871',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['draw_5frounded_5ffinder_5fpattern_5fat_5fpixel_15',['DRAW_ROUNDED_FINDER_PATTERN_AT_PIXEL',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#aa075d2130b47d6475b42892f62c56704',1,'fr::softsf::canscan::ui::EncodedImage']]],
   ['draw_5fsquare_5ffinder_5fpattern_5fat_5fpixel_16',['DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a45558d7f3e282a8aaef4da5162597c75',1,'fr::softsf::canscan::ui::EncodedImage']]],
-  ['dummy_5fjlabel_17',['DUMMY_JLABEL',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ad858d8487ebf4059c984ba6e019d46d8',1,'fr::softsf::canscan::util::FontManager']]]
+  ['dummy_5fjlabel_17',['DUMMY_JLABEL',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#ad858d8487ebf4059c984ba6e019d46d8',1,'fr::softsf::canscan::util::FontManager']]],
+  ['dynamic_5fpreview_5fworker_18',['DYNAMIC_PREVIEW_WORKER',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#ae33ed6a7edcd66a96ee072c7434492a8',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['dynamic_5fresize_5fworker_19',['DYNAMIC_RESIZE_WORKER',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a7612a799b42aeda15ee25d7d23c6578e',1,'fr::softsf::canscan::constant::StringConstants']]]
 ];
