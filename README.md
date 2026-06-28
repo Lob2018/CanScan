@@ -13,6 +13,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 <br>[![License](https://img.shields.io/badge/license-GPLv3.0-brightgreen.svg)](https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme)<br>
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12719/badge)](https://www.bestpractices.dev/projects/12719)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Lob2018/CanScan/badge)](https://scorecard.dev/viewer/?uri=github.com/Lob2018/CanScan)
+[![OSV-Scanner](https://github.com/Lob2018/CanScan/actions/workflows/osv-scanner-scheduled.yml/badge.svg)](https://github.com/Lob2018/CanScan/actions/workflows/osv-scanner-scheduled.yml)<br>
 [![Snyk Scan](https://img.shields.io/badge/Snyk%20Scan-authentication%20required-brightgreen?logo=snyk)](https://app.snyk.io/org/lob2018/project/d091601e-bd98-48ed-bd26-d3f369708314)<br>
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Lob2018_CanScan&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Lob2018_CanScan)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Lob2018_CanScan&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Lob2018_CanScan)
