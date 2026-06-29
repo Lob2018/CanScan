@@ -120,20 +120,37 @@ var
   VCInstallPage: TOutputProgressWizardPage;
 
 // ============================================================================
-// Vérification du Visual C++ Redistributable
+// Vérification de Visual C++ Redistributable
+// ----------------------------------------------------------------------------
+// Logique : Vérifie la présence de VCRUNTIME140_1.dll dans {sys} (System32).
+// Si le fichier est manquant ou si sa version majeure est < 14,
+// la fonction renvoie True, déclenchant l'installation silencieuse du package.
 // ============================================================================
 function NeedsVC: Boolean;
 var
-  Major: Cardinal;
+  DllPath: String;
+  VerMS, VerLS: Cardinal;
 begin
-  // Vérifie si VCRUNTIME140_1.dll existe et sa version
-  Result := not RegQueryDWordValue(HKLM,
-    'SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x64',
-    'Major', Major) or (Major < 14);
+  DllPath := ExpandConstant('{sys}\VCRUNTIME140_1.dll');
 
-  // Fallback: vérifier la présence du fichier DLL
-  if not Result then
-    Result := not FileExists(ExpandConstant('{sys}\VCRUNTIME140_1.dll'));
+  if not FileExists(DllPath) then
+  begin
+    Result := True;
+  end
+  else
+  begin
+    if GetVersionNumbers(DllPath, VerMS, VerLS) then
+    begin
+      if (VerMS shr 16) < 14 then
+        Result := True
+      else
+        Result := False;
+    end
+    else
+    begin
+      Result := True;
+    end;
+  end;
 end;
 
 // ============================================================================
