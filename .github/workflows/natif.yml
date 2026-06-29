@@ -1,4 +1,4 @@
-name: Build and Release Native Windows App
+name: Check VC_redist version, build and Release Native Windows App
 
 on:
   push:
@@ -10,11 +10,105 @@ permissions:
 
 jobs:
   # ------------------------------------------------------------------------
+  # 0. JOB WINDOWS/Check VC_redist version
+  # ------------------------------------------------------------------------
+  check_vc_redist_version:
+    name: Check VC_redist version
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    environment: production
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      with:
+        fetch-depth: 0
+
+    - name: Validate Version
+      shell: powershell
+      run: |
+        $localPath = ".myresources/VCRUNTIME/VC_redist.x64.exe"
+        $url = "https://aka.ms/vc14/vc_redist.x64.exe"
+        $summaryPath = $env:GITHUB_STEP_SUMMARY
+
+        $msg = "Verification de la version de VC Redist..."
+        $msg | Out-File -FilePath $summaryPath -Append
+        Write-Host $msg
+
+        # Verifier que le fichier local existe
+        if (-not (Test-Path $localPath)) {
+            $msg = "Fichier local introuvable : $localPath"
+            $msg | Out-File -FilePath $summaryPath -Append
+            Write-Host $msg
+            exit 1
+        }
+
+        # Version locale
+        $localVer = [version](Get-Item $localPath).VersionInfo.FileVersion
+        $msg = "Version locale : $localVer"
+        $msg | Out-File -FilePath $summaryPath -Append
+        Write-Host $msg
+
+        # Obtenir l URL finale via la redirection
+        $response = Invoke-WebRequest -Uri $url -MaximumRedirection 0 -ErrorAction SilentlyContinue -UseBasicParsing
+        $redirectUrl = $response.Headers.Location
+
+        $msg = "URL finale : $redirectUrl"
+        $msg | Out-File -FilePath $summaryPath -Append
+        Write-Host $msg
+
+        # Telecharger seulement 1 MB du fichier distant
+        $req = [System.Net.HttpWebRequest]::Create($redirectUrl)
+        $req.AddRange(0,1000000)
+        $res = $req.GetResponse()
+
+        $tempFile = [System.IO.Path]::GetTempFileName()
+        $stream = $res.GetResponseStream()
+        $fs = [System.IO.File]::OpenWrite($tempFile)
+        $stream.CopyTo($fs)
+        $fs.Close()
+        $stream.Close()
+
+        # Version distante
+        $remoteVer = [version](Get-Item $tempFile).VersionInfo.FileVersion
+        $msg = "Version distante : $remoteVer"
+        $msg | Out-File -FilePath $summaryPath -Append
+        Write-Host $msg
+
+        # Si la version distante est vide -> ECHEC
+        if (-not $remoteVer) {
+            $msg = "ERREUR: Impossible de lire la version distante. Le fichier telecharge est incomplet ou invalide."
+            $msg | Out-File -FilePath $summaryPath -Append
+            Write-Host $msg
+            Remove-Item $tempFile
+            exit 1
+        }
+
+        # Comparaison
+        if ($localVer -lt $remoteVer) {
+            $msg = "Nouvelle version disponible !`nLocale : $localVer`nEn ligne : $remoteVer"
+            $msg | Out-File -FilePath $summaryPath -Append
+            Write-Host "Nouvelle version disponible !"
+            Write-Host "Locale : $localVer"
+            Write-Host "En ligne : $remoteVer"
+            Remove-Item $tempFile
+            exit 1
+        }
+
+        $msg = "La version locale est a jour."
+        $msg | Out-File -FilePath $summaryPath -Append
+        Write-Host $msg
+
+        Remove-Item $tempFile
+
+  # ------------------------------------------------------------------------
   # 1. JOB WINDOWS
   # ------------------------------------------------------------------------
   package_for_windows:
     name: Package for Windows
     runs-on: windows-latest
+    needs: [ check_vc_redist_version ]
     permissions:
       contents: read
     environment: production
@@ -294,9 +388,9 @@ jobs:
           name: output-ubuntu
           path: output
 
-# ------------------------------------------------------------------------
-# 3. JOB PUBLISH (Adapté pour dépendre des deux jobs précédents et télécharger les deux artifacts)
-# ------------------------------------------------------------------------
+  # ------------------------------------------------------------------------
+  # 3. JOB PUBLISH (Adapté pour dépendre des deux jobs précédents et télécharger les deux artifacts)
+  # ------------------------------------------------------------------------
   publish_release:
     name: Publish the release and tag it
     needs: [package_for_windows, package_for_ubuntu]
