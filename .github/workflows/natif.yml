@@ -118,7 +118,6 @@ jobs:
       LIBERICA_FOLDER: LibericaNIK-25-OpenJDK-25
       LIBERICA_MSI: bellsoft-liberica-vm-openjdk25.0.3+12-25.0.3+2-windows-amd64.msi
       MSVC_VCVARS: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat
-      INNOSETUP_EXE: C:\Program Files (x86)\Inno Setup 6\ISCC.exe
 
     steps:
       - name: Harden Runner
@@ -201,28 +200,23 @@ jobs:
           echo "POM_VERSION=$version" >> $env:GITHUB_ENV
           Write-Host "Version extraite: $version"
 
-      - name: Cache Inno Setup installer
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ${{ runner.temp }}\is.exe
-          key: inno-setup-${{ runner.os }}
-
       - name: Install Inno Setup
         shell: cmd
-        run: |
-          if not exist "%TEMP%\is.exe" (
-            curl -L --proto "=https" -o "%TEMP%\is.exe" https://jrsoftware.org/download.php/is.exe
-          )
-          "%TEMP%\is.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+        run: winget install --id JRSoftware.InnoSetup -e --silent --accept-package-agreements --accept-source-agreements
 
       - name: Set INNOSETUP path
         shell: pwsh
         run: |
-          if (-not (Test-Path "${{ env.INNOSETUP_EXE }}")) {
-            Write-Host "❌ Inno Setup not found at expected path"
+          $innoPath = (Get-Command "ISCC.exe" -ErrorAction SilentlyContinue).Source
+          if (-not $innoPath) {
+            $innoPath = Get-ChildItem "C:\Program Files (x86)\Inno Setup*", "C:\Program Files\Inno Setup*" -Filter "ISCC.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName -First 1
+          }
+          if (-not $innoPath -or -not (Test-Path $innoPath)) {
+            Write-Host "❌ Inno Setup not found"
             exit 1
           }
-          echo "INNOSETUP=${{ env.INNOSETUP_EXE }}" >> $env:GITHUB_ENV
+          echo "INNOSETUP=$innoPath" >> $env:GITHUB_ENV
+          Write-Host "Inno Setup found at: $innoPath"
 
       - name: Show environment variables
         shell: pwsh
