@@ -5,21 +5,28 @@
  */
 package fr.softsf.canscan.service;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpTimeoutException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.concurrent.ExecutionException;
 import javax.swing.JButton;
 import javax.swing.SwingWorker;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import fr.softsf.canscan.model.VersionValue;
 import fr.softsf.canscan.util.Checker;
 
@@ -45,12 +52,10 @@ public enum VersionService {
     public static final int HTTP_NOT_FOUND = 404;
 
     private final HttpClient httpClient;
-    private final ObjectMapper objectMapper;
 
     /** Enum constructor initializing the infrastructure. */
     VersionService() {
         this.httpClient = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(5)).build();
-        this.objectMapper = new ObjectMapper();
     }
 
     /**
@@ -164,26 +169,40 @@ public enum VersionService {
     }
 
     /**
-     * Parses the byte array directly.
+     * Parses the byte array directly using Gson.
      *
      * @param data the byte array containing the JSON response
      * @param cleanCurrentVersion the current version without prefix
      * @return an evaluated {@link VersionValue}
      */
+    @SuppressFBWarnings(
+            value = "REC_CATCH_EXCEPTION",
+            justification =
+                    "Captures all exceptions to ensure robust handling of unexpected Gson runtime"
+                            + " errors and malformed external JSON structures.")
     private VersionValue parseResponse(byte[] data, String cleanCurrentVersion) {
         if (data.length == 0) {
             return new VersionValue(HTTP_STATUS_OK, "Réponse vide.", null, true);
         }
-        try {
-            JsonNode root = objectMapper.readTree(data);
-            if (root == null || !root.isArray() || root.isEmpty()) {
+        try (Reader reader =
+                new InputStreamReader(new ByteArrayInputStream(data), StandardCharsets.UTF_8)) {
+            JsonElement rootElement = JsonParser.parseReader(reader);
+            if (rootElement == null || !rootElement.isJsonArray()) {
                 return new VersionValue(HTTP_STATUS_OK, "Aucun tag trouvé.", null, true);
             }
-            JsonNode firstTag = root.get(0).path("name");
-            if (!firstTag.isTextual()) {
+            JsonArray root = rootElement.getAsJsonArray();
+            if (root.isEmpty()) {
+                return new VersionValue(HTTP_STATUS_OK, "Aucun tag trouvé.", null, true);
+            }
+            JsonElement firstObj = root.get(0);
+            if (firstObj == null || !firstObj.isJsonObject()) {
                 return new VersionValue(HTTP_STATUS_OK, "Tag invalide.", null, true);
             }
-            String rawTag = firstTag.asText();
+            JsonObject firstTagObj = firstObj.getAsJsonObject();
+            if (!firstTagObj.has("name") || !firstTagObj.get("name").isJsonPrimitive()) {
+                return new VersionValue(HTTP_STATUS_OK, "Tag invalide.", null, true);
+            }
+            String rawTag = firstTagObj.get("name").getAsString();
             if (rawTag.length() > MAX_TAG_NAME_LENGTH) {
                 return new VersionValue(HTTP_STATUS_OK, "Nom de tag trop long.", null, true);
             }
@@ -194,7 +213,7 @@ public enum VersionService {
                     upToDate ? "Votre version est à jour." : "Une nouvelle version est disponible.",
                     rawTag,
                     upToDate);
-        } catch (IOException _) {
+        } catch (Exception _) {
             return new VersionValue(HTTP_STATUS_OK, "Erreur d'analyse du JSON.", null, true);
         }
     }

@@ -8,5 +8,5 @@ module fr.softsf.canscan {
     requires com.github.lgooddatepicker;
     requires com.github.spotbugs.annotations;
     requires java.logging;
-    requires com.fasterxml.jackson.databind;
+    requires com.google.gson;
 }

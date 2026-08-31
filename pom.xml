@@ -4,7 +4,7 @@
   <!-- Project information -->
   <groupId>fr.softsf</groupId>
   <artifactId>canscan</artifactId>
-  <version>1.2.0.4</version>
+  <version>1.2.1.0</version>
   <name>CanScan</name>
   <organization>
     <name>Soft64.fr</name>
@@ -37,11 +37,6 @@
   </properties>
   <!-- Project dependencies -->
   <dependencies>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.22.1</version>
-    </dependency>
     <!-- Flatlaf themes dependency -->
     <dependency>
       <groupId>com.formdev</groupId>
@@ -65,6 +60,12 @@
       <artifactId>spotbugs-annotations</artifactId>
       <version>4.10.3</version>
       <scope>provided</scope>
+    </dependency>
+    <!-- Google Gson for JSON -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.14.0</version>
     </dependency>
     <!-- Zxing QR Code dependency -->
     <dependency>
