@@ -9,5 +9,6 @@ var searchData=
   ['generatebutton_6',['generateButton',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a262c7c7b9075ccf754020574b3ca6855',1,'fr::softsf::canscan::CanScan']]],
   ['generator_7',['generator',['../classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#aad828acd2ba98ea140220a1ee8438e72',1,'fr::softsf::canscan::CanScanUTest']]],
   ['genrate_5fbutton_5fheight_5fscaling_5ffactor_8',['GENRATE_BUTTON_HEIGHT_SCALING_FACTOR',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a8cd55d4d6c109ef63eac2c3ad24620d4',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['github_5ftags_5fapi_5furl_9',['GITHUB_TAGS_API_URL',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2038f8598d8b13f5869d15286282040c',1,'fr::softsf::canscan::service::VersionService']]]
+  ['github_5ftags_5fapi_5furl_9',['GITHUB_TAGS_API_URL',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2038f8598d8b13f5869d15286282040c',1,'fr::softsf::canscan::service::VersionService']]],
+  ['gson_10',['gson',['../module-info_8java.html#a0877f2cca23ccc4db11146d6db4ea4ef',1,'module-info.java']]]
 ];

@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveService.executeQrGeneration" name="fr.softsf.canscan.service.GenerateAndSaveService.executeQrGeneration">
+<area shape="rect" id="Node000001" title="Executes QR code generation asynchronously using a SwingWorker." alt="" coords="5,5,227,64"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a3f40e85d8378c0b4877bd74e36bfd6a0" title="Creates a new QR generation worker." alt="" coords="275,5,523,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,32,259,32,259,37,227,37"/>
+</map>

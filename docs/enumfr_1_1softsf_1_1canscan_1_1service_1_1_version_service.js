@@ -14,7 +14,6 @@ var enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service =
     [ "LATEST_RELEASES_REPO_URL", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#aa38cce1b3bbf57882dcc4c21f7512cb4", null ],
     [ "MAX_TAG_NAME_LENGTH", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#aa4f874d13b02c31bc4a5e02faf6e81c8", null ],
     [ "MAX_TAGS_RESPONSE_SIZE", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#aa52d5d3e68f06628febcc899509ee19d", null ],
-    [ "objectMapper", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a1751ce88d83ce4323b3f340f83849e98", null ],
     [ "OPEN_HTML", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a70a34b4a0817a416e9081bb8894e67da", null ],
     [ "TOOLTIP_PREFIX", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a72f3126838ca6f70056f253ffc5a1a93", null ]
 ];

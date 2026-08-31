@@ -1,4 +1,8 @@
 <map id="fr.softsf.canscan.CanScanUTest.givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult" name="fr.softsf.canscan.CanScanUTest.givenVariousSizeInputs_whenValidateAndGetSize_thenReturnExpectedResult">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,345,88"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="109,29,111,19,123,10,144,5,175,3,211,5,232,13,231,18,210,11,175,8,145,10,125,15,115,21,115,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,345,89"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="111,30,112,20,124,11,145,6,175,4,210,7,231,14,229,19,209,12,175,9,146,11,126,16,117,23,116,31"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ab93eb7e856d16e731c3df3a5d50e3ac9" title="Sets the size field text for testing." alt="" coords="406,5,606,48"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="345,40,390,36,391,41,345,45"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="393,72,619,115"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="345,75,377,78,377,83,345,80"/>
 </map>

@@ -1,4 +1,14 @@
 <map id="fr.softsf.canscan.CanScanUTest.givenColorDialogCancelled_whenChooseColor_thenButtonTextUnchanged" name="fr.softsf.canscan.CanScanUTest.givenColorDialogCancelled_whenChooseColor_thenButtonTextUnchanged">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,302,88"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="96,29,97,19,108,10,126,5,154,3,185,5,204,13,202,17,183,11,153,8,127,10,110,15,102,21,101,29"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,302,89"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="99,30,100,20,110,11,128,6,154,4,183,7,201,14,199,19,182,12,153,9,129,11,113,16,105,23,104,31"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2b8df9a3e67501adf287968d641a0c42" title="Opens a color chooser dialog and updates the button with the selected color." alt="" coords="350,39,518,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,57,334,57,334,63,302,63"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71" title="Updates a button&#39;s icon and text to reflect a new color." alt="" coords="566,39,782,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="519,57,550,57,550,63,519,63"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2dc9a80146b95145d06e8ad45171e889" title="Converts a Color object to its hexadecimal RGB string representation." alt="" coords="833,5,1001,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="783,42,817,38,818,43,783,48"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a71702ffd14d463001f26baa6e9a77e1a" title="Creates a square icon filled with the specified color and a visible border." alt="" coords="830,72,1004,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="783,72,815,77,815,82,783,78"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a98d693b64c1f7003ca834a41a0f123cb" title="Disposes the current icon of a button to free memory." alt="" coords="1052,72,1241,115"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1004,91,1036,91,1036,96,1004,96"/>
 </map>

@@ -1,4 +1,8 @@
 <map id="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenOneThousandExistingFiles_whenResolveConflict_thenReturnNull" name="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenOneThousandExistingFiles_whenResolveConflict_thenReturnNull">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,314,104"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="99,28,103,18,115,10,133,5,160,3,191,6,211,13,209,18,190,11,159,8,134,10,117,15,107,21,104,30"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="99,28,102,18,114,10,133,5,160,3,191,6,211,13,209,18,190,11,159,8,134,10,116,15,107,21,104,30"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a6b1521b6d9c68366080969bc5ac74f99" title="Resolves file name conflicts for testing." alt="" coords="362,37,579,96"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="314,64,346,64,346,69,314,69"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526" title="Resolves potential file name conflicts by checking if the specified file already exists." alt="" coords="627,37,844,96"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="580,64,611,64,611,69,580,69"/>
 </map>

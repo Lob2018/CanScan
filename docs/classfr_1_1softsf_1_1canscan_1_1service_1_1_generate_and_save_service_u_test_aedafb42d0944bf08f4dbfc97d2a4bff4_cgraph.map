@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.setUp" name="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.setUp">
+<area shape="rect" id="Node000001" title="Initialisation du service avec un mock pour la partie rendu d&#39;image." alt="" coords="5,13,251,56"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#ab411d97860e5e469e5b387e4017ff8ab" title="Constructs a GenerateAndSaveService with the given QR code image generator." alt="" coords="299,5,527,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,32,283,32,283,37,251,37"/>
+</map>

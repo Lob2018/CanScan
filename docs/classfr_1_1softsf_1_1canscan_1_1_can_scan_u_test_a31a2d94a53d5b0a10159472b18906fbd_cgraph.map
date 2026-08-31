@@ -1,4 +1,6 @@
 <map id="fr.softsf.canscan.CanScanUTest.givenCustomColor_whenConvertToHex_thenReturnCorrectHex" name="fr.softsf.canscan.CanScanUTest.givenCustomColor_whenConvertToHex_thenReturnCorrectHex">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,29,287,88"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="91,29,92,19,102,10,120,5,146,3,176,5,194,13,192,17,174,11,146,8,121,10,105,15,97,21,97,29"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="93,29,94,19,104,10,121,5,146,3,175,5,192,13,190,17,174,11,146,8,122,10,106,15,99,21,98,29"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2dc9a80146b95145d06e8ad45171e889" title="Converts a Color object to its hexadecimal RGB string representation." alt="" coords="335,37,503,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,56,319,56,319,61,287,61"/>
 </map>

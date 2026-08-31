@@ -1,7 +1,8 @@
 <map id="fr.softsf.canscan.service.VersionService.checkLatestVersion" name="fr.softsf.canscan.service.VersionService.checkLatestVersion">
-<area shape="rect" id="Node000001" title="Checks if the current application version matches the latest release on GitHub." alt="" coords="5,39,232,81"/>
-<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a3165317f16b51635425e8be4ad5c86c8" title="Parses the byte array directly." alt="" coords="288,5,492,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,43,272,38,273,44,233,49"/>
-<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#ad09fd68eb6816aec3c09f2c4066e64f5" title="Updates the UI button state." alt="" coords="280,72,500,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,71,264,75,264,81,232,77"/>
+<area shape="rect" id="Node000001" title="Checks if the current application version matches the latest release on GitHub." alt="" coords="5,63,232,105"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a3165317f16b51635425e8be4ad5c86c8" title="Parses the byte array directly using Gson." alt="" coords="288,29,492,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,67,272,62,273,68,233,73"/>
+<area shape="rect" id="Node000003" href="$enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#ad09fd68eb6816aec3c09f2c4066e64f5" title="Updates the UI button state." alt="" coords="280,96,500,139"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="233,95,264,99,264,105,232,101"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="339,29,337,19,345,10,363,5,390,3,419,5,437,12,435,17,418,10,390,8,364,10,348,15,342,21,344,28"/>
 </map>

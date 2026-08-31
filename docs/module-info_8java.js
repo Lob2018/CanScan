@@ -2,8 +2,8 @@ var module_info_8java =
 [
     [ "annotations", "module-info_8java.html#a89f1e5ce81f9bb4ac937a8c2dd086285", null ],
     [ "canscan", "module-info_8java.html#a6ff768cb0358514c63bb0e60935ebc9c", null ],
-    [ "databind", "module-info_8java.html#ae01c48dbd005e8d3e8ec3c8f00c14442", null ],
     [ "flatlaf", "module-info_8java.html#affbd526e15138396d8269cd4bddb569f", null ],
+    [ "gson", "module-info_8java.html#a0877f2cca23ccc4db11146d6db4ea4ef", null ],
     [ "http", "module-info_8java.html#add27a91699d3d8a68e0febd4571dd067", null ],
     [ "intellijthemes", "module-info_8java.html#ad0a09d70cd259eb9ea058aab5de176c6", null ],
     [ "lang3", "module-info_8java.html#a207c469e036fa09bb5e47704e89865c9", null ],

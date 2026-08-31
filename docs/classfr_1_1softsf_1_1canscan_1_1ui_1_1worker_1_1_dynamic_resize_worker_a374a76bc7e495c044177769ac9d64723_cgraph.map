@@ -1,5 +1,9 @@
 <map id="fr.softsf.canscan.ui.worker.DynamicResizeWorker.createWorker" name="fr.softsf.canscan.ui.worker.DynamicResizeWorker.createWorker">
-<area shape="rect" id="Node000001" title="Creates a background SwingWorker that scales the QR code image to the target size." alt="" coords="5,13,242,56"/>
-<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#ae09c6bc40e1028b0cbe43c6115750c05" title=" " alt="" coords="290,5,526,64"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,32,274,32,274,37,242,37"/>
+<area shape="rect" id="Node000001" title="Creates a background SwingWorker that scales the QR code image to the target size." alt="" coords="5,43,242,85"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a0b5dfef531c7a285f816c9034146d0d0" title="Retrieves a defensive copy of the QR code image." alt="" coords="314,5,502,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,46,298,38,298,44,243,51"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#ae09c6bc40e1028b0cbe43c6115750c05" title=" " alt="" coords="290,72,526,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,77,275,81,274,86,242,82"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a85e20778f91dad2dbf3e67ded698db16" title="Creates a defensive copy of the source image." alt="" coords="574,5,762,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="503,24,559,24,559,29,503,29"/>
 </map>

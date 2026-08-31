@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.clearResources" name="fr.softsf.canscan.ui.worker.DynamicPreviewWorker.clearResources">
+<area shape="rect" id="Node000001" title="Clears the current preview image before generating a new one." alt="" coords="5,5,262,48"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a1f675a96edbc6fb8d417920bd4e26c41" title="Releases the current QR code image and its resources." alt="" coords="310,5,498,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,24,294,24,294,29,262,29"/>
+</map>
