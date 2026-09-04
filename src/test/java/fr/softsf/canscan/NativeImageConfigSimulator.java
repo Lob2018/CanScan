@@ -343,6 +343,22 @@ public class NativeImageConfigSimulator {
         String expected = "test";
         typeString(robot, expected);
         robot.delay(500);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.delay(100);
+        robot.keyPress(KeyEvent.VK_A);
+        robot.keyRelease(KeyEvent.VK_A);
+        robot.delay(100);
+        robot.keyPress(KeyEvent.VK_C);
+        robot.keyRelease(KeyEvent.VK_C);
+        robot.delay(100);
+        robot.keyPress(KeyEvent.VK_X);
+        robot.keyRelease(KeyEvent.VK_X);
+        robot.delay(100);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.delay(100);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.delay(500);
         assertEquals(
                 "\n=== Test 2: Verification de la saisie du nom ===\n",
                 expected.toLowerCase(),
