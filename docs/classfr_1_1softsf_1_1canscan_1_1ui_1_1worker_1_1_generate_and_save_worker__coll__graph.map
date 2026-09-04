@@ -1,7 +1,7 @@
 <map id="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker" name="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker">
-<area shape="rect" id="Node000001" title="SwingWorker that generates and saves QR codes in a background thread." alt="" coords="96,1597,343,2120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,723,193,808"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,822,193,1597,188,1598,103,823"/>
-<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="217,5,462,1525"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="258,1526,252,1581,247,1580,253,1525"/>
+<area shape="rect" id="Node000001" title="SwingWorker that generates and saves QR codes in a background thread." alt="" coords="98,1635,345,2157"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,741,193,827"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,841,196,1635,190,1635,103,841"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="217,5,474,1563"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,1563,255,1618,250,1618,256,1562"/>
 </map>

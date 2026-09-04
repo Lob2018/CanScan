@@ -21,6 +21,7 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image =
     [ "shouldSkipModule", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a0a54994d696c706a8bf3e6dfc9c7eb5e", null ],
     [ "updateQrOriginal", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ac0cfbc18aa43c23ef8d22f24fd5f2c7f", null ],
     [ "validateMemoryForImageSize", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ad2f4fef7b92fee167354dd11065d34e2", null ],
+    [ "ALPHA_COMPOSITE_SRC", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a61fb3f043bcaa5f8aa908c64e21883b0", null ],
     [ "AVAILABLE_MEMORY_TO_GENERATE_IMAGE", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#aeddb5a0d54970dbf2482e2d42c5bc588", null ],
     [ "BG_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#a08bb5f29f695498909ea11b81f9beb4f", null ],
     [ "BYTES_PER_KILOBYTE", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ad546711c6b1241e86366f6a3fba89570", null ],

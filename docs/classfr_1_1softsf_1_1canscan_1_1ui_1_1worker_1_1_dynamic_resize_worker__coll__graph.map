@@ -1,9 +1,9 @@
 <map id="fr.softsf.canscan.ui.worker.DynamicResizeWorker" name="fr.softsf.canscan.ui.worker.DynamicResizeWorker">
-<area shape="rect" id="Node000001" title="Asynchronously resizes a generated QR code image for display in a Swing UI." alt="" coords="186,2181,459,2581"/>
-<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" title=" " alt="" coords="5,1093,243,1605"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,1619,209,1858,257,2109,274,2181,269,2182,252,2110,204,1859,163,1620"/>
+<area shape="rect" id="Node000001" title="Asynchronously resizes a generated QR code image for display in a Swing UI." alt="" coords="124,2219,397,2619"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" title=" " alt="" coords="5,1112,243,1624"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,1639,237,2219,232,2219,156,1639"/>
 <area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html" title="Base class managing asynchronous QR code tasks with a unified workflow." alt="" coords="20,5,229,517"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,532,127,1094,122,1094,122,532"/>
-<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="267,589,512,2109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,2109,339,2164,334,2164,338,2109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="127,533,127,1112,122,1112,122,533"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="268,589,525,2147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="298,2147,291,2202,285,2202,293,2146"/>
 </map>
