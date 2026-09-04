@@ -98,7 +98,9 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 
 ### Réglages disponibles
 - **Logo** : Image centrale
-- **Taille du logo** : 27% par défaut ⚠️
+  - **Taille du logo** : 27% par défaut ⚠️
+  - 🖼️ JPG ou JPEG : Recadrage automatique en carré centré
+  - 🖼️ PNG : Format original non recadré
 - **Marge** : 3 par défaut ⚠️
 - **Couleur du fond** : Blanc ⚠️
 - **Couleur des modules** : Noir ⚠️
