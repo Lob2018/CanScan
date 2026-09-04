@@ -157,6 +157,6 @@ public class ColorOperation {
         if (Checker.INSTANCE.checkNPE(color, "colorToHex", COLOR)) {
             return DEFAULT_HEX_COLOR;
         }
-        return "#" + Integer.toHexString(color.getRGB()).substring(2).toUpperCase(Locale.ROOT);
+        return String.format(Locale.ROOT, "#%06X", color.getRGB() & 0x00FFFFFF);
     }
 }

@@ -35,6 +35,7 @@ import fr.softsf.canscan.util.Checker;
  */
 public class EncodedImage {
 
+    private static final java.awt.AlphaComposite ALPHA_COMPOSITE_SRC = java.awt.AlphaComposite.Src;
     private static final double DEFAULT_GAP_BETWEEN_LOGO_AND_MODULES = 0.9;
     private static final String CONFIG = "config";
     private static final String DRAW_SQUARE_FINDER_PATTERN_AT_PIXEL =
@@ -103,7 +104,7 @@ public class EncodedImage {
      *
      * <p>Uses ZXing with high error correction to ensure scanability even when a logo is embedded.
      * Visual properties such as size, colors, margin, and module style are applied from the given
-     * configuration.
+     * configuration. Supports transparent backgrounds when the background color alpha is zero.
      *
      * @param data the string to encode in the QR code
      * @param config configuration including size, colors, margin, module style, and optional logo
@@ -127,8 +128,11 @@ public class EncodedImage {
         BufferedImage qrImage = null;
         Graphics2D g = null;
         try {
-            qrImage = new BufferedImage(size, size, BufferedImage.TYPE_INT_RGB);
+            qrImage = new BufferedImage(size, size, BufferedImage.TYPE_INT_ARGB);
             g = qrImage.createGraphics();
+            g.setComposite(java.awt.AlphaComposite.Clear);
+            g.fillRect(0, 0, size, size);
+            g.setComposite(java.awt.AlphaComposite.SrcOver);
             g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
             fillBackground(g, size, config.bgColor());
             drawModules(g, matrix, config);
@@ -559,7 +563,7 @@ public class EncodedImage {
      * @param y Y-coordinate of the top-left corner.
      * @param diameter Diameter of the finder pattern.
      * @param qrColor Color of the QR modules.
-     * @param bgColor Background color inside the pattern.
+     * @param bgColor Background color inside the pattern, supporting native transparency.
      */
     private void drawRoundedFinderPatternAtPixel(
             Graphics2D g, double x, double y, double diameter, Color qrColor, Color bgColor) {
@@ -574,6 +578,8 @@ public class EncodedImage {
         g.setColor(qrColor);
         g.fill(new RoundRectangle2D.Double(x, y, diameter, diameter, arc, arc));
         double innerMargin = diameter / 7.0;
+        java.awt.Composite originalComposite = g.getComposite();
+        g.setComposite(ALPHA_COMPOSITE_SRC);
         g.setColor(bgColor);
         g.fill(
                 new RoundRectangle2D.Double(
@@ -583,7 +589,8 @@ public class EncodedImage {
                         diameter - 2 * innerMargin,
                         arc,
                         arc));
-        double centerMargin = diameter / 7.0 * 2;
+        g.setComposite(originalComposite);
+        double centerMargin = innerMargin * 2;
         g.setColor(qrColor);
         g.fill(
                 new RoundRectangle2D.Double(
@@ -603,7 +610,7 @@ public class EncodedImage {
      * @param y Y-coordinate of the top-left corner.
      * @param diameter Diameter of the finder pattern.
      * @param qrColor Color of the QR modules.
-     * @param bgColor Background color inside the pattern.
+     * @param bgColor Background color inside the pattern, supporting native transparency.
      */
     public void drawSquareFinderPatternAtPixel(
             Graphics2D g, double x, double y, double diameter, Color qrColor, Color bgColor) {
@@ -617,13 +624,16 @@ public class EncodedImage {
         g.setColor(qrColor);
         g.fillRect((int) x, (int) y, (int) diameter, (int) diameter);
         double innerMargin = diameter / 7.0;
+        java.awt.Composite originalComposite = g.getComposite();
+        g.setComposite(ALPHA_COMPOSITE_SRC);
         g.setColor(bgColor);
         g.fillRect(
                 (int) (x + innerMargin),
                 (int) (y + innerMargin),
                 (int) (diameter - 2 * innerMargin),
                 (int) (diameter - 2 * innerMargin));
-        double centerMargin = diameter / 7.0 * 2;
+        g.setComposite(originalComposite);
+        double centerMargin = innerMargin * 2;
         g.setColor(qrColor);
         g.fillRect(
                 (int) (x + centerMargin),
