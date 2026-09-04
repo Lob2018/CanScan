@@ -528,8 +528,8 @@ public class EncodedImage {
             gLogo = scaledLogo.createGraphics();
             gLogo.setRenderingHint(
                     RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-
-            boolean isPng = config.logoFile().getName().toLowerCase().endsWith(".png");
+            boolean isPng =
+                    config.logoFile().getName().toLowerCase(java.util.Locale.ROOT).endsWith(".png");
             if (isPng) {
                 double scale = Math.min((double) logoMaxSize / w, (double) logoMaxSize / h);
                 int drawWidth = (int) (w * scale);
