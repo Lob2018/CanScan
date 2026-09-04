@@ -423,8 +423,10 @@ public final class CanScan extends JFrame {
         UiComponentsConfiguration.INSTANCE.addRow(
                 northPanel,
                 grid,
-                "Logo",
-                "Le chemin du fichier logo (PNG, JPG, ou JPEG).",
+                UiComponentsConfiguration.INSTANCE.getIconAfterTextHtml("Logo", WARNING_ICON),
+                "<html>Le chemin du fichier logo (PNG, JPG, ou JPEG)."
+                        + "<br>JPG ou JPEG : Recadré en carré centré."
+                        + "<br>PNG : Non recadré.</html>",
                 logoField);
         browseButton.addActionListener(this::browseLogo);
         grid.gridx = 2;
