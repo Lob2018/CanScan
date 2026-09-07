@@ -21,9 +21,10 @@ var searchData=
   ['showdialog_18',['showDialog',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html#abf0ca73b87de8406f2a623eec8d85bc8',1,'fr::softsf::canscan::ui::MyPopup']]],
   ['showpreviewerrormessage_19',['showPreviewErrorMessage',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#a6aae1ee68e2d4201c3bd2716f5bd23e9',1,'fr::softsf::canscan::ui::worker::DynamicPreviewWorker']]],
   ['showyesnoconfirmdialog_20',['showYesNoConfirmDialog',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html#a4f9f75ee55d3d9f02f4801a44c864668',1,'fr::softsf::canscan::ui::MyPopup']]],
-  ['stopdebouncetimer_21',['stopDebounceTimer',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a04dbe18f6ba608487e5170c1c3ac391a',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['stoploader_22',['stopLoader',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abba94ac3074b49f7bfcf9669f8a68b67',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
-  ['stringconstants_23',['StringConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a996324c10ac62c04ff6550c8a01156e1',1,'fr::softsf::canscan::constant::StringConstants']]],
-  ['switchmode_24',['switchMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d',1,'fr::softsf::canscan::CanScan']]],
-  ['switchmodefortests_25',['switchModeForTests',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a163b11aa80682de173802920b5bbd836',1,'fr::softsf::canscan::CanScan']]]
+  ['simulateclipboardandlengthvalidation_21',['simulateClipboardAndLengthValidation',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#add389ea699ac669aebb53e208907d4cd',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
+  ['stopdebouncetimer_22',['stopDebounceTimer',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a04dbe18f6ba608487e5170c1c3ac391a',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['stoploader_23',['stopLoader',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abba94ac3074b49f7bfcf9669f8a68b67',1,'fr::softsf::canscan::ui::worker::AbstractDynamicWorker']]],
+  ['stringconstants_24',['StringConstants',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a996324c10ac62c04ff6550c8a01156e1',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['switchmode_25',['switchMode',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d',1,'fr::softsf::canscan::CanScan']]],
+  ['switchmodefortests_26',['switchModeForTests',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a163b11aa80682de173802920b5bbd836',1,'fr::softsf::canscan::CanScan']]]
 ];

@@ -17,6 +17,7 @@ var classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator =
     [ "ratioSliderTooltipSimulation", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a9e920788e82b3b113a566174265607af", null ],
     [ "runSimulation", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#afbc1231d98e565f72006b6f31c7dce34", null ],
     [ "selectABeginTime", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a346e85bc50a5fd264ba680c0c5a3d51a", null ],
+    [ "simulateClipboardAndLengthValidation", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#add389ea699ac669aebb53e208907d4cd", null ],
     [ "typeChar", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4c1895b6327fef325b1b0c8047bcfcb7", null ],
     [ "typeString", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#acc5424a9d2c1d44c93a045868f58a5ff", null ]
 ];

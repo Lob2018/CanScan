@@ -707,7 +707,7 @@ Static Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>a BufferedImage containing the generated QR code </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">WriterException</td><td>if encoding the data fails </td></tr>
+    <tr><td class="paramname">WriterException</td><td>if encoding the data fails or if data length exceeds the maximum ISO limit </td></tr>
     <tr><td class="paramname">IOException</td><td>if reading the logo file fails </td></tr>
     <tr><td class="paramname">OutOfMemoryError</td><td>if the requested size exceeds available memory </td></tr>
   </table>

@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.ui.MyTextField" name="fr.softsf.canscan.ui.MyTextField">
+<area shape="rect" id="Node000001" title="Custom text field implementation designed to extend standard JTextField functionality by intercepting..." alt="" coords="5,123,176,283"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,5,126,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,90,94,123,88,123,88,90"/>
+</map>

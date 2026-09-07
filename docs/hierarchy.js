@@ -38,6 +38,9 @@ var hierarchy =
     [ "JFrame", null, [
       [ "fr.softsf.canscan.CanScan", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html", null ]
     ] ],
+    [ "JTextField", null, [
+      [ "fr.softsf.canscan.ui.MyTextField", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html", null ]
+    ] ],
     [ "fr.softsf.canscan.ui.LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", null ],
     [ "fr.softsf.canscan.model.Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html", null ],
     [ "fr.softsf.canscan.ui.MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", null ],

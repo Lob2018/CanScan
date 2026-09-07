@@ -38,6 +38,7 @@ var annotated_dup =
             [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util" ],
             [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup" ],
             [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test" ],
+            [ "MyTextField", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field" ],
             [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration" ]
           ] ],
           [ "util", "namespacefr_1_1softsf_1_1canscan_1_1util.html", [

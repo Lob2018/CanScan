@@ -150,7 +150,7 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a4795cbc2d8717311fd26b8589a618616" id="r_a4795cbc2d8717311fd26b8589a618616"><td class="memItemLeft">static String&#160;</td><td class="memItemRight"><a class="el" href="#a4795cbc2d8717311fd26b8589a618616">interceptAndValideDialog</a> (Robot robot)</td></tr>
 <tr class="memdesc:a4795cbc2d8717311fd26b8589a618616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Confirms and closes a visible <code><a class="el" href="">JOptionPane</a></code> by pressing Enter, then returns the dialog title.  <br /></td></tr>
 <tr class="memitem:ae2840980d77f2806ab5f1bd471186ed3" id="r_ae2840980d77f2806ab5f1bd471186ed3"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ae2840980d77f2806ab5f1bd471186ed3">nameTypingSimulation</a> (JTextField nameField, Robot robot)  throws Exception </td></tr>
-<tr class="memdesc:ae2840980d77f2806ab5f1bd471186ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates typing "Test" into a <code><a class="el" href="">JTextField</a></code> and verifies the input using a <code><a class="el" href="">Robot</a></code>.  <br /></td></tr>
+<tr class="memdesc:ae2840980d77f2806ab5f1bd471186ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates typing text into a <code><a class="el" href="">JTextField</a></code> using a <code><a class="el" href="">Robot</a></code> and verifies the input.  <br /></td></tr>
 <tr class="memitem:aca8bae30971c2243dc992ef4dc9d3ca8" id="r_aca8bae30971c2243dc992ef4dc9d3ca8"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#aca8bae30971c2243dc992ef4dc9d3ca8">openLatestReleaseRepoInBrowser</a> ()  throws Exception </td></tr>
 <tr class="memdesc:aca8bae30971c2243dc992ef4dc9d3ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates opening the latest release repository URL in the system browser.  <br /></td></tr>
 <tr class="memitem:ab4d4463dc9177237a8de0a7b6713e7cf" id="r_ab4d4463dc9177237a8de0a7b6713e7cf"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#ab4d4463dc9177237a8de0a7b6713e7cf">pressEnter</a> (Robot robot)</td></tr>
@@ -161,6 +161,8 @@ Static Private Member Functions</h2></td></tr>
 <tr class="memdesc:afbc1231d98e565f72006b6f31c7dce34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the full end-to-end UI simulation for Native Image configuration using a <code><a class="el" href="">Robot</a></code>.  <br /></td></tr>
 <tr class="memitem:a346e85bc50a5fd264ba680c0c5a3d51a" id="r_a346e85bc50a5fd264ba680c0c5a3d51a"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a346e85bc50a5fd264ba680c0c5a3d51a">selectABeginTime</a> (JRadioButton meetRadio, TimePicker meetBeginTimePicker, Robot robot)  throws Exception </td></tr>
 <tr class="memdesc:a346e85bc50a5fd264ba680c0c5a3d51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates activating the meeting mode and selecting a start time through the TimePicker.  <br /></td></tr>
+<tr class="memitem:add389ea699ac669aebb53e208907d4cd" id="r_add389ea699ac669aebb53e208907d4cd"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#add389ea699ac669aebb53e208907d4cd">simulateClipboardAndLengthValidation</a> (JTextField nameField, Robot robot)  throws Exception </td></tr>
+<tr class="memdesc:add389ea699ac669aebb53e208907d4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates clipboard shortcuts (cut, copy, paste, select all), text length validation, and error dialog handling on a <code><a class="el" href="">JTextField</a></code>.  <br /></td></tr>
 <tr class="memitem:a4c1895b6327fef325b1b0c8047bcfcb7" id="r_a4c1895b6327fef325b1b0c8047bcfcb7"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a4c1895b6327fef325b1b0c8047bcfcb7">typeChar</a> (Robot robot, char c)</td></tr>
 <tr class="memdesc:a4c1895b6327fef325b1b0c8047bcfcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates typing a single character using the Robot class.  <br /></td></tr>
 <tr class="memitem:acc5424a9d2c1d44c93a045868f58a5ff" id="r_acc5424a9d2c1d44c93a045868f58a5ff"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#acc5424a9d2c1d44c93a045868f58a5ff">typeString</a> (Robot robot, String text)</td></tr>
@@ -715,18 +717,17 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Simulates typing "Test" into a <code><a class="el" href="">JTextField</a></code> and verifies the input using a <code><a class="el" href="">Robot</a></code>. </p>
-<p>Validation verifies containment due to input synchronization issues and potential character repetition (e.g., "tttest") in the environment.</p>
+<p>Simulates typing text into a <code><a class="el" href="">JTextField</a></code> using a <code><a class="el" href="">Robot</a></code> and verifies the input. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nameField</td><td>the text field to interact with </td></tr>
-    <tr><td class="paramname">robot</td><td>the Robot used for mouse and keyboard actions </td></tr>
+    <tr><td class="paramname">robot</td><td>the Robot used for keyboard and mouse actions </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Exception</td><td>if input or verification fails </td></tr>
+    <tr><td class="paramname">Exception</td><td>if typing or verification fails </td></tr>
   </table>
   </dd>
 </dl>
@@ -959,6 +960,56 @@ Static Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="add389ea699ac669aebb53e208907d4cd" name="add389ea699ac669aebb53e208907d4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add389ea699ac669aebb53e208907d4cd">&#9670;&#160;</a></span>simulateClipboardAndLengthValidation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fr.softsf.canscan.NativeImageConfigSimulator.simulateClipboardAndLengthValidation </td>
+          <td>(</td>
+          <td class="paramtype">JTextField</td>          <td class="paramname"><span class="paramname"><em>nameField</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Robot</td>          <td class="paramname"><span class="paramname"><em>robot</em></span>&#160;) throws Exception</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simulates clipboard shortcuts (cut, copy, paste, select all), text length validation, and error dialog handling on a <code><a class="el" href="">JTextField</a></code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nameField</td><td>the text field to interact with </td></tr>
+    <tr><td class="paramname">robot</td><td>the Robot used for automated input simulation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if simulation or dialog interception fails </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-16" class="dynheader closed"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-16-summary" class="dynsummary">
+</div>
+<div id="dynsection-16-content" class="dyncontent hidden">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator_add389ea699ac669aebb53e208907d4cd_cgraph.svg" width="100%" height="421"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
 <a id="a4c1895b6327fef325b1b0c8047bcfcb7" name="a4c1895b6327fef325b1b0c8047bcfcb7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c1895b6327fef325b1b0c8047bcfcb7">&#9670;&#160;</a></span>typeChar()</h2>
 
@@ -1034,10 +1085,10 @@ Static Private Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div id="dynsection-16" class="dynheader closed"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
-<div id="dynsection-16-summary" class="dynsummary">
+<div id="dynsection-17" class="dynheader closed"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
+<div id="dynsection-17-summary" class="dynsummary">
 </div>
-<div id="dynsection-16-content" class="dyncontent hidden">
+<div id="dynsection-17-content" class="dyncontent hidden">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator_acc5424a9d2c1d44c93a045868f58a5ff_cgraph.svg" width="480" height="54"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 

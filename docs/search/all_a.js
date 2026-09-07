@@ -14,6 +14,6 @@ var searchData=
   ['loadmaterialiconsfont_11',['loadMaterialIconsFont',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html#a9efcfe369b3d1cac6b75b8e15d782be5',1,'fr::softsf::canscan::util::FontManager']]],
   ['logger_12',['LOGGER',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa293e5fb23cd25b845850b2708b65973',1,'fr::softsf::canscan::CanScan']]],
   ['logging_13',['logging',['../module-info_8java.html#a446ee74ba5199709029d1b14251321ef',1,'module-info.java']]],
-  ['logofield_14',['logoField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a7a6df1515192c53219894766a3f4071c',1,'fr::softsf::canscan::CanScan']]],
+  ['logofield_14',['logoField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aecf6262e4268b56479c379d1ff579bbd',1,'fr::softsf::canscan::CanScan']]],
   ['longitude_5fprecision_15',['LONGITUDE_PRECISION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ad53dec477b0cce75d957f64a41f78105',1,'fr::softsf::canscan::util::CoordinateHelper']]]
 ];

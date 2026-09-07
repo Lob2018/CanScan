@@ -28,10 +28,10 @@ var searchData=
   ['meetjfields_2ejava_25',['MeetJFields.java',['../_meet_j_fields_8java.html',1,'']]],
   ['meetlatfield_26',['meetLatField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#af0ac4d2e1bd63f2846651598cb56ea94',1,'fr::softsf::canscan::CanScan']]],
   ['meetlongfield_27',['meetLongField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afbdb44d63eb51fa72a84d2d8fe96d275',1,'fr::softsf::canscan::CanScan']]],
-  ['meetnamefield_28',['meetNameField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a369151c44504e07b9e1e54df0dab590f',1,'fr::softsf::canscan::CanScan']]],
+  ['meetnamefield_28',['meetNameField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a558dcb9d2a6d1f6110ef30feea2cf603',1,'fr::softsf::canscan::CanScan']]],
   ['meetradio_29',['meetRadio',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a25d73a62b32eaafe1f92500f4a85791b',1,'fr::softsf::canscan::CanScan']]],
-  ['meettitlefield_30',['meetTitleField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a1b3043be0d76e9da18f7d09335a1b36f',1,'fr::softsf::canscan::CanScan']]],
-  ['meetuidfield_31',['meetUIdField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a708a41e5c971d9b6015f742bfddda79b',1,'fr::softsf::canscan::CanScan']]],
+  ['meettitlefield_30',['meetTitleField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abe80fc1ee868d036ac3c23a06dbb4a92',1,'fr::softsf::canscan::CanScan']]],
+  ['meetuidfield_31',['meetUIdField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afcdbab97ac3e258ce6b744b1d4a98eea',1,'fr::softsf::canscan::CanScan']]],
   ['minimum_5flongitude_32',['MINIMUM_LONGITUDE',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#adfc29e993e043f1fd3f1c25bbde48e0d',1,'fr::softsf::canscan::util::CoordinateHelper']]],
   ['minimum_5fqr_5fcode_5fdimension_33',['MINIMUM_QR_CODE_DIMENSION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html#aaf26f3fa6bcecc77ad60db800788aa80',1,'fr::softsf::canscan::util::ValidationFieldHelper']]],
   ['minimum_5fqr_5fcode_5fsize_34',['MINIMUM_QR_CODE_SIZE',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aefe23a4ece414d914191c04f39e5d6b1',1,'fr::softsf::canscan::CanScan']]],
@@ -45,5 +45,7 @@ var searchData=
   ['mypopup_42',['MyPopup',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html',1,'fr::softsf::canscan::ui']]],
   ['mypopup_2ejava_43',['MyPopup.java',['../_my_popup_8java.html',1,'']]],
   ['mypopuputest_44',['MyPopupUTest',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html',1,'fr::softsf::canscan::ui']]],
-  ['mypopuputest_2ejava_45',['MyPopupUTest.java',['../_my_popup_u_test_8java.html',1,'']]]
+  ['mypopuputest_2ejava_45',['MyPopupUTest.java',['../_my_popup_u_test_8java.html',1,'']]],
+  ['mytextfield_46',['MyTextField',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html',1,'fr.softsf.canscan.ui.MyTextField'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html#aa21107dfb6cd9cad3b1200fb28cdb119',1,'fr.softsf.canscan.ui.MyTextField.MyTextField(String text, int columns)'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html#a8bcc7ee12121b51563ec86e4f68b13a6',1,'fr.softsf.canscan.ui.MyTextField.MyTextField(int columns)']]],
+  ['mytextfield_2ejava_47',['MyTextField.java',['../_my_text_field_8java.html',1,'']]]
 ];

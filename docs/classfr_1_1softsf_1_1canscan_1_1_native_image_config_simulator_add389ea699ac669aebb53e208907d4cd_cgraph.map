@@ -1,0 +1,12 @@
+<map id="fr.softsf.canscan.NativeImageConfigSimulator.simulateClipboardAndLengthValidation" name="fr.softsf.canscan.NativeImageConfigSimulator.simulateClipboardAndLengthValidation">
+<area shape="rect" id="Node000001" title="Simulates clipboard shortcuts (cut, copy, paste, select all), text length validation,..." alt="" coords="5,35,209,93"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aaadd03094f00bbe2258c6e9742be224d" title="Compares two strings and prints the test result with a label." alt="" coords="257,5,487,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,47,241,42,241,48,210,52"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#a4795cbc2d8717311fd26b8589a618616" title="Confirms and closes a visible JOptionPane by pressing Enter, then returns the dialog title." alt="" coords="270,72,474,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,76,255,82,254,87,209,81"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ac80dbcb1d031bb72c93cf21315c09f27" title="Recursively searches the given container and its descendants for a JOptionPane instance." alt="" coords="535,47,778,89"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="474,87,519,81,520,87,475,92"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#ab4d4463dc9177237a8de0a7b6713e7cf" title="Simulates pressing the Enter key using the provided Robot, followed by a short delay." alt="" coords="548,113,765,156"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="475,111,533,118,533,123,474,116"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="603,47,601,37,610,27,629,22,657,20,687,22,705,29,704,34,686,28,657,25,630,27,613,32,606,38,608,45"/>
+</map>

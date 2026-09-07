@@ -6,7 +6,7 @@ var searchData=
   ['openinbrowser_3',['openInBrowser',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html#aec2092c0cacb38780ccf93f88f8fd5fc',1,'fr::softsf::canscan::util::BrowserHelper']]],
   ['openlatestreleaserepoinbrowser_4',['openLatestReleaseRepoInBrowser',['../classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html#aca8bae30971c2243dc992ef4dc9d3ca8',1,'fr::softsf::canscan::NativeImageConfigSimulator']]],
   ['organization_5',['organization',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html#a5c7e468fc63abd296a3a7027a1d6eaf4',1,'fr::softsf::canscan::util::ApplicationMetadata']]],
-  ['orgfield_6',['orgField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a2dc19323952c9652bf831f4e727b4989',1,'fr::softsf::canscan::CanScan']]],
+  ['orgfield_6',['orgField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad312c0393a6d9755f1349c0497aaec5b',1,'fr::softsf::canscan::CanScan']]],
   ['os_5flinux_5fkey_7',['OS_LINUX_KEY',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#a88118d563bdd3605777441cd16825f72',1,'fr::softsf::canscan::constant::StringConstants']]],
   ['os_5fwindows_5fkey_8',['OS_WINDOWS_KEY',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#adc931945e423ddf7bfa4d5bd94bba269',1,'fr::softsf::canscan::constant::StringConstants']]],
   ['outputfile_9',['outputFile',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#afac93461a8df245221a0be32fa402c63',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],

@@ -18,7 +18,7 @@
 <text text-anchor="start" x="14" y="-1078.5" font-family="Helvetica,sans-Serif" font-size="10.00">static final int DEFAULT</text>
 <text text-anchor="start" x="14" y="-1066.5" font-family="Helvetica,sans-Serif" font-size="10.00">_SCROLLBAR_WIDTH</text>
 <text text-anchor="start" x="5.5" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField adrField</text>
+<text text-anchor="start" x="14" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">final MyTextField adrField</text>
 <text text-anchor="start" x="5.5" y="-1034.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-1034.5" font-family="Helvetica,sans-Serif" font-size="10.00">Color bgColor</text>
 <text text-anchor="start" x="5.5" y="-1018.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
@@ -35,7 +35,7 @@
 <text text-anchor="start" x="5.5" y="-926.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-926.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode currentMode</text>
 <text text-anchor="start" x="5.5" y="-910.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-910.5" font-family="Helvetica,sans-Serif" font-size="10.00">final JTextField emailField</text>
+<text text-anchor="start" x="14" y="-910.5" font-family="Helvetica,sans-Serif" font-size="10.00">final MyTextField emailField</text>
 <text text-anchor="start" x="5.5" y="-894.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-894.5" font-family="Helvetica,sans-Serif" font-size="10.00">final transient EncodedImage</text>
 <text text-anchor="start" x="14" y="-882.5" font-family="Helvetica,sans-Serif" font-size="10.00"> encodedImage</text>
@@ -118,16 +118,16 @@
 <text text-anchor="start" x="14" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">int calculateAvailableQr</text>
 <text text-anchor="start" x="14" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">CodeLabelHeight()</text>
 <text text-anchor="start" x="5.5" y="-138.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-138.5" font-family="Helvetica,sans-Serif" font-size="10.00">JPanel colorPanel()</text>
-<text text-anchor="start" x="5.5" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00">void configureUpdateButton()</text>
-<text text-anchor="start" x="5.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeCard(JPanel</text>
-<text text-anchor="start" x="14" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freePanel, GridBagConstraints grid)</text>
+<text text-anchor="start" x="14" y="-138.5" font-family="Helvetica,sans-Serif" font-size="10.00">void clearFieldsForCurrent</text>
+<text text-anchor="start" x="14" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode()</text>
+<text text-anchor="start" x="5.5" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="14" y="-110.5" font-family="Helvetica,sans-Serif" font-size="10.00">JPanel colorPanel()</text>
+<text text-anchor="start" x="5.5" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
+<text text-anchor="start" x="14" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">void configureUpdateButton()</text>
 <text text-anchor="start" x="5.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
-<text text-anchor="start" x="14" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">void generateQrCode</text>
-<text text-anchor="start" x="14" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">(ActionEvent e)</text>
-<text text-anchor="start" x="14" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 18 more...</text>
+<text text-anchor="start" x="14" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">void freeCard(JPanel</text>
+<text text-anchor="start" x="14" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00"> freePanel, GridBagConstraints grid)</text>
+<text text-anchor="start" x="14" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 19 more...</text>
 <text text-anchor="start" x="5.5" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45;</text>
 <text text-anchor="start" x="14" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">static void configureGraphics</text>
 <text text-anchor="start" x="14" y="-22.5" font-family="Helvetica,sans-Serif" font-size="10.00">Pipeline()</text>
