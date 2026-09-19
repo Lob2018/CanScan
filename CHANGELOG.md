@@ -4,6 +4,23 @@
 ## Unreleased - 
 
 
+✨ feat: .github/workflows/natif.yml, README.md: Add CHANGELOG.md links to GitHub release body and documentation index
+- .github/workflows/natif.yml :
+  - Add reference link to CHANGELOG.md in the GitHub release body markdown.
+- README.md :
+  - Insert CHANGELOG.md link into the main project table of contents index.
+- Tests pass.
+
+([d7732242c787ab0](https://github.com/Lob2018/CanScan/commit/d7732242c787ab0a1f3a5a5b648fca0690f91804))
+
+✨ feat pom.xml: Add git-changelog-maven-plugin configuration for automated changelog generation
+- pom.xml :
+  - Add se.bjurr.gitchangelog:git-changelog-maven-plugin configuration with custom Handlebars template.
+  - Format XML indentation and whitespace within the build section.
+- Tests pass.
+
+([0e2d143ccb5686f](https://github.com/Lob2018/CanScan/commit/0e2d143ccb5686f23b28ccc26800d0bf68510da5))
+
 📚 docs Doxygen
 
 ([3e6bbd27e54f696](https://github.com/Lob2018/CanScan/commit/3e6bbd27e54f6963691669df01749f2d106ae818))

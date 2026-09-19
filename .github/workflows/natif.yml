@@ -478,7 +478,7 @@ jobs:
           tag: v${{ env.POM_VERSION }}
           body: |
             ## 📲 CanScan v${{ env.POM_VERSION }}
-            
+
             ### 📋 [CHANGELOG.md](https://github.com/lob2018/CanScan/blob/main/CHANGELOG.md)
 
             🪟 Windows (x64)
