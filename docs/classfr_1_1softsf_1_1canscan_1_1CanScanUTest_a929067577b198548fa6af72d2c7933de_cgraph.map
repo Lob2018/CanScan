@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.CanScanUTest.givenRatioPercent_whenRatioFieldCheck_thenGetRatioSetCorrectly" name="fr.softsf.canscan.CanScanUTest.givenRatioPercent_whenRatioFieldCheck_thenGetRatioSetCorrectly">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,268,92"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#abf1cb04881a0e23f0b843eed12ce05c7" title="Sets the ratio slider value for testing." alt="" coords="333,5,543,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,41,319,35,320,41,268,46"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a2793b7f01ab36cdecd4b12932ac4d828" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider for testing." alt="" coords="316,69,560,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,69,303,72,302,78,268,74"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="608,69,852,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="560,87,594,87,594,92,560,92"/>
+</map>

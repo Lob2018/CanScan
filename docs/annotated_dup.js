@@ -4,59 +4,59 @@ var annotated_dup =
       [ "softsf", null, [
         [ "canscan", "namespacefr_1_1softsf_1_1canscan.html", [
           [ "constant", "namespacefr_1_1softsf_1_1canscan_1_1constant.html", [
-            [ "DoubleConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_double_constants" ],
-            [ "FloatConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_float_constants" ],
-            [ "IntConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants" ],
-            [ "StringConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants" ]
+            [ "DoubleConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1DoubleConstants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1DoubleConstants" ],
+            [ "FloatConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1FloatConstants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1FloatConstants" ],
+            [ "IntConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1IntConstants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1IntConstants" ],
+            [ "StringConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants" ]
           ] ],
           [ "model", "namespacefr_1_1softsf_1_1canscan_1_1model.html", [
-            [ "Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html", "enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode" ]
+            [ "Mode", "enumfr_1_1softsf_1_1canscan_1_1model_1_1Mode.html", "enumfr_1_1softsf_1_1canscan_1_1model_1_1Mode" ]
           ] ],
           [ "service", "namespacefr_1_1softsf_1_1canscan_1_1service.html", [
-            [ "DataBuilderService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service" ],
-            [ "DataBuilderServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_data_builder_service_u_test" ],
-            [ "GenerateAndSaveService", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service" ],
-            [ "GenerateAndSaveServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service_u_test" ],
-            [ "ValidationFieldHelperUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1_validation_field_helper_u_test" ],
-            [ "VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service" ]
+            [ "DataBuilderService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1DataBuilderService.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1DataBuilderService" ],
+            [ "DataBuilderServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1DataBuilderServiceUTest.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1DataBuilderServiceUTest" ],
+            [ "GenerateAndSaveService", "classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveService.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveService" ],
+            [ "GenerateAndSaveServiceUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveServiceUTest.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveServiceUTest" ],
+            [ "ValidationFieldHelperUTest", "classfr_1_1softsf_1_1canscan_1_1service_1_1ValidationFieldHelperUTest.html", "classfr_1_1softsf_1_1canscan_1_1service_1_1ValidationFieldHelperUTest" ],
+            [ "VersionService", "enumfr_1_1softsf_1_1canscan_1_1service_1_1VersionService.html", "enumfr_1_1softsf_1_1canscan_1_1service_1_1VersionService" ]
           ] ],
           [ "ui", "namespacefr_1_1softsf_1_1canscan_1_1ui.html", [
             [ "field", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1field.html", [
-              [ "FieldFilterType", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1_field_filter_type" ]
+              [ "FieldFilterType", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1FieldFilterType.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1field_1_1FieldFilterType" ]
             ] ],
             [ "worker", "namespacefr_1_1softsf_1_1canscan_1_1ui_1_1worker.html", [
-              [ "AbstractDynamicWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker" ],
-              [ "DynamicPreviewWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker" ],
-              [ "DynamicResizeWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker" ],
-              [ "GenerateAndSaveWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker" ]
+              [ "AbstractDynamicWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker" ],
+              [ "DynamicPreviewWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1DynamicPreviewWorker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1DynamicPreviewWorker" ],
+              [ "DynamicResizeWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1DynamicResizeWorker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1DynamicResizeWorker" ],
+              [ "GenerateAndSaveWorker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1GenerateAndSaveWorker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1GenerateAndSaveWorker" ]
             ] ],
-            [ "ColorOperation", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation" ],
-            [ "EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image" ],
-            [ "FlatLafDatePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_date_picker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_date_picker" ],
-            [ "FlatLafTimePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_time_picker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_flat_laf_time_picker" ],
-            [ "IFlatLafStyledForLGoodDatePicker", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker.html", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1_i_flat_laf_styled_for_l_good_date_picker" ],
-            [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_label_icon_util" ],
-            [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup" ],
-            [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_popup_u_test" ],
-            [ "MyTextField", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_my_text_field" ],
-            [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration" ]
+            [ "ColorOperation", "classfr_1_1softsf_1_1canscan_1_1ui_1_1ColorOperation.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1ColorOperation" ],
+            [ "EncodedImage", "classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage" ],
+            [ "FlatLafDatePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1FlatLafDatePicker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1FlatLafDatePicker" ],
+            [ "FlatLafTimePicker", "classfr_1_1softsf_1_1canscan_1_1ui_1_1FlatLafTimePicker.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1FlatLafTimePicker" ],
+            [ "IFlatLafStyledForLGoodDatePicker", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1IFlatLafStyledForLGoodDatePicker.html", "interfacefr_1_1softsf_1_1canscan_1_1ui_1_1IFlatLafStyledForLGoodDatePicker" ],
+            [ "LabelIconUtil", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1LabelIconUtil.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1LabelIconUtil" ],
+            [ "MyPopup", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup" ],
+            [ "MyPopupUTest", "classfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopupUTest.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopupUTest" ],
+            [ "MyTextField", "classfr_1_1softsf_1_1canscan_1_1ui_1_1MyTextField.html", "classfr_1_1softsf_1_1canscan_1_1ui_1_1MyTextField" ],
+            [ "UiComponentsConfiguration", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1UiComponentsConfiguration.html", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1UiComponentsConfiguration" ]
           ] ],
           [ "util", "namespacefr_1_1softsf_1_1canscan_1_1util.html", [
-            [ "ApplicationMetadata", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_application_metadata" ],
-            [ "BrowserHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_browser_helper" ],
-            [ "Checker", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_checker" ],
-            [ "CoordinateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper" ],
-            [ "CoordinateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper_u_test" ],
-            [ "DateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper" ],
-            [ "DateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_date_helper_u_test" ],
-            [ "FontManager", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager" ],
-            [ "FontManagerUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1_font_manager_u_test" ],
-            [ "FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_frame_helper" ],
-            [ "ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1_validation_field_helper" ]
+            [ "ApplicationMetadata", "enumfr_1_1softsf_1_1canscan_1_1util_1_1ApplicationMetadata.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1ApplicationMetadata" ],
+            [ "BrowserHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1BrowserHelper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1BrowserHelper" ],
+            [ "Checker", "enumfr_1_1softsf_1_1canscan_1_1util_1_1Checker.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1Checker" ],
+            [ "CoordinateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelper" ],
+            [ "CoordinateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelperUTest.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelperUTest" ],
+            [ "DateHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1DateHelper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1DateHelper" ],
+            [ "DateHelperUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1DateHelperUTest.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1DateHelperUTest" ],
+            [ "FontManager", "enumfr_1_1softsf_1_1canscan_1_1util_1_1FontManager.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1FontManager" ],
+            [ "FontManagerUTest", "classfr_1_1softsf_1_1canscan_1_1util_1_1FontManagerUTest.html", "classfr_1_1softsf_1_1canscan_1_1util_1_1FontManagerUTest" ],
+            [ "FrameHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1FrameHelper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1FrameHelper" ],
+            [ "ValidationFieldHelper", "enumfr_1_1softsf_1_1canscan_1_1util_1_1ValidationFieldHelper.html", "enumfr_1_1softsf_1_1canscan_1_1util_1_1ValidationFieldHelper" ]
           ] ],
-          [ "CanScan", "classfr_1_1softsf_1_1canscan_1_1_can_scan.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan" ],
-          [ "CanScanUTest", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html", "classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test" ],
-          [ "NativeImageConfigSimulator", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator.html", "classfr_1_1softsf_1_1canscan_1_1_native_image_config_simulator" ]
+          [ "CanScan", "classfr_1_1softsf_1_1canscan_1_1CanScan.html", "classfr_1_1softsf_1_1canscan_1_1CanScan" ],
+          [ "CanScanUTest", "classfr_1_1softsf_1_1canscan_1_1CanScanUTest.html", "classfr_1_1softsf_1_1canscan_1_1CanScanUTest" ],
+          [ "NativeImageConfigSimulator", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator" ]
         ] ]
       ] ]
     ] ]

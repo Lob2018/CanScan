@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.ui.worker.DynamicResizeWorker" name="fr.softsf.canscan.ui.worker.DynamicResizeWorker">
+<area shape="rect" id="Node000001" title="Asynchronously resizes a generated QR code image for display in a Swing UI." alt="" coords="137,2052,434,2424"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html" title=" " alt="" coords="5,1029,275,1506"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,1519,260,2051,255,2052,175,1520"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html" title="Base class managing asynchronous QR code tasks with a unified workflow." alt="" coords="25,5,255,483"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,496,143,1029,137,1029,137,496"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html" title="Thread&#45;safe singleton to hold a shared QR code BufferedImage." alt="" coords="299,545,562,1989"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,1990,318,2036,313,2035,320,1989"/>
+</map>

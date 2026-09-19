@@ -1,0 +1,23 @@
+var enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants =
+[
+    [ "StringConstants", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a996324c10ac62c04ff6550c8a01156e1", null ],
+    [ "getValue", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a94880da5571997da1a635749d7652b7c", null ],
+    [ "CURRENT_OS", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a7a0f10d4c18c043d35ccc2ed68ad62bd", null ],
+    [ "DEFAULT_QR_CODE_DIMENSION_FIELD", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a809296afc41822773d483e8476912906", null ],
+    [ "DOMAIN", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#af9f93bd3c595423ee89a3257d5fa2769", null ],
+    [ "DYNAMIC_PREVIEW_WORKER", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#ae33ed6a7edcd66a96ee072c7434492a8", null ],
+    [ "DYNAMIC_RESIZE_WORKER", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a7612a799b42aeda15ee25d7d23c6578e", null ],
+    [ "ERREUR", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a68e647b7ddc5ea05eb7f8ebc9973c554", null ],
+    [ "GENERATE_AND_SAVE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#aedcf68f1b7469cc54558758f632af6e6", null ],
+    [ "GENERATE_QR_CODE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#abe9a6f3aaa13bbcad32cac256fe4598b", null ],
+    [ "JAVA_2D_DPI_AWARE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a299743b427ef69b2fa306c8d904dfd14", null ],
+    [ "JAVA_2D_UI_SCALE_ENABLED", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a36a863c251c686ee4a4c7b0a78fc459f", null ],
+    [ "JAVA_2D_XRENDER", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#ac5ba3d2fc517baffe701f6b30c4d5313", null ],
+    [ "LATEST_RELEASES_REPO_URL", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#ad86483fea469a22c82d59c3f710ae2db", null ],
+    [ "OS_LINUX_KEY", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#a88118d563bdd3605777441cd16825f72", null ],
+    [ "OS_WINDOWS_KEY", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#adc931945e423ddf7bfa4d5bd94bba269", null ],
+    [ "QR_DATA", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#ad16cc9547af1a3e2ea2b61ea660a6a83", null ],
+    [ "TRUE", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#aa3d0bee26f737cab1d0f87beae4eae63", null ],
+    [ "value", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#aba52e9f364c88089f11f3cc87c1a5486", null ],
+    [ "VERSION", "enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#aa80de836dc39dc285b6f1bf5b79fe3e4", null ]
+];

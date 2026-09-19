@@ -1,0 +1,20 @@
+<map id="fr.softsf.canscan.CanScan.switchMode" name="fr.softsf.canscan.CanScan.switchMode">
+<area shape="rect" id="Node000001" title="Switches between MECARD, MEET, and FREE modes, updating the panel and QR preview." alt="" coords="5,237,275,262"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="335,165,547,205"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,234,332,206,333,211,201,239"/>
+<area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a11fd9295c4843e6e68f9d1e4a710b906" title="Enables or disables the &quot;Generate&quot; button based on required fields for the current mode." alt="" coords="323,261,559,301"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="260,259,309,265,308,270,259,265"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="388,166,384,156,393,146,412,141,441,139,474,141,492,149,490,154,473,147,441,144,413,146,396,151,389,157,393,164"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a1a6235214fa4fd656875c0dae3e960bd" title="Clears input fields corresponding to the active generation mode upon exceeding capacity limits." alt="" coords="617,5,840,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="461,163,522,109,562,80,605,55,622,48,624,53,608,60,565,84,526,113,464,167"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="607,69,851,109"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="488,163,606,119,632,111,634,116,608,124,490,168"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a8a2b238ac4af96d8710b3e5d7d051f77" title="Validates and returns the current meet UID from the meet title field." alt="" coords="607,133,851,173"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="547,171,593,166,593,171,547,176"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="607,197,851,237"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="547,194,593,200,593,205,547,200"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="607,261,851,301"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="490,203,608,247,634,255,632,260,606,252,488,208"/>
+<area shape="rect" id="Node000009" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a3ce6e8b8bd62f20e8e8b9a744976c695" title="Determines whether the &quot;Generate&quot; button should be disabled for the current mode." alt="" coords="611,325,846,365"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="532,299,625,320,624,325,531,304"/>
+</map>

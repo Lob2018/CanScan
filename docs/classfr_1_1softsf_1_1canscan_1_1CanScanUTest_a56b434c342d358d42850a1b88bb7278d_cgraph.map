@@ -1,0 +1,21 @@
+<map id="fr.softsf.canscan.CanScanUTest.setUp" name="fr.softsf.canscan.CanScanUTest.setUp">
+<area shape="rect" id="Node000001" title="Initialisation de l&#39;instance de test et configuration des champs par défaut." alt="" coords="5,261,192,301"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a480afb2507eb780dcc6f77c0a4334d59" title="Sets the address field text for testing." alt="" coords="240,5,451,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,260,122,218,150,162,189,105,212,78,238,55,246,50,249,54,242,59,216,82,193,108,155,165,127,220,109,262"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a968f0f590c2211f78d1f832a2ee40b55" title="Sets the email field text for testing." alt="" coords="240,69,451,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,259,161,191,197,152,238,119,249,113,252,118,242,124,200,156,165,194,115,262"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#ac2d034a2aaa3cbc0ce5bfac06203cd33" title="Sets the logo field text for testing." alt="" coords="240,133,451,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="123,259,174,221,239,183,255,176,258,181,241,188,177,225,126,263"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a9f8732331b81ec5fcadbb39c9389a016" title="Sets the margin slider value for testing." alt="" coords="240,197,451,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="176,259,254,238,255,243,177,264"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a8affcfaf13c69cd340e48e3e7d10ae86" title="Sets the name field text for testing." alt="" coords="240,261,451,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="192,279,226,279,226,284,192,284"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a56273b7ccb4290c7d7aad2132452902e" title="Sets the organization field text for testing." alt="" coords="240,325,451,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="177,299,255,319,254,324,176,304"/>
+<area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a323e90f802787c388da8a03c9b6e47d7" title="Sets the phone field text for testing." alt="" coords="240,389,451,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="126,299,177,337,241,375,258,382,255,387,239,380,174,342,123,304"/>
+<area shape="rect" id="Node000009" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#abf1cb04881a0e23f0b843eed12ce05c7" title="Sets the ratio slider value for testing." alt="" coords="240,453,451,493"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="115,300,165,368,200,406,242,439,252,445,249,450,238,444,197,410,161,372,110,303"/>
+<area shape="rect" id="Node000010" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#af8ca8fca38ccbc56063f1cce9e5b7528" title="Sets the URL field text for testing." alt="" coords="240,517,451,557"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="109,300,127,343,155,398,193,455,216,481,242,503,249,508,246,513,238,507,212,484,189,458,150,400,122,345,105,302"/>
+</map>

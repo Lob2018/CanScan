@@ -1,0 +1,13 @@
+<map id="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.disposeAllResourcesOnExit" name="fr.softsf.canscan.ui.worker.AbstractDynamicWorker.disposeAllResourcesOnExit">
+<area shape="rect" id="Node000001" title="Releases all resources used by this worker." alt="" coords="5,94,255,149"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#ab41292fcd5ef2e86396e25bcccc4e9d4" title="Resets the current worker and associated resources." alt="" coords="303,101,563,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,119,289,119,289,124,255,124"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#aa3eebdde5dae919a4d905ef2d2d4a8fb" title="Cancels the current SwingWorker and clears its reference safely." alt="" coords="633,5,902,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,99,610,55,645,46,646,51,611,60,484,104"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#a49ea00730d7f891f40c32550130625df" title="Clears any allocated data, icons, or buffers before starting a new task." alt="" coords="627,69,908,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="563,106,613,101,613,107,563,112"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#a04dbe18f6ba608487e5170c1c3ac391a" title="Stops and clears the debounce timer." alt="" coords="611,133,924,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="563,131,597,134,597,140,563,136"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#abba94ac3074b49f7bfcf9669f8a68b67" title="Stops the loader&#39;s wait indicator." alt="" coords="640,197,895,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="484,139,611,183,646,192,645,197,610,188,482,144"/>
+</map>

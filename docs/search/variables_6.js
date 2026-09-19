@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['gbc_5fhalf_5fweight_5fx_0',['GBC_HALF_WEIGHT_X',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#abcbd64afa72da45efd00b7de3019f0da',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['generate_5fand_5fsave_5fqr_5fcode_1',['GENERATE_AND_SAVE_QR_CODE',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#aedcf68f1b7469cc54558758f632af6e6',1,'fr::softsf::canscan::constant::StringConstants']]],
-  ['generate_5fand_5fsave_5fworker_2',['GENERATE_AND_SAVE_WORKER',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a63814c994f6142b0ec6f98dd3a565e99',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
-  ['generate_5fqr_5fcode_3',['GENERATE_QR_CODE',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#abe9a6f3aaa13bbcad32cac256fe4598b',1,'fr::softsf::canscan::constant::StringConstants']]],
-  ['generate_5fqr_5fcode_5fimage_4',['GENERATE_QR_CODE_IMAGE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1_encoded_image.html#ab2de45955d6fe4e5667d995ed5642d97',1,'fr::softsf::canscan::ui::EncodedImage']]],
-  ['generateandsaveservice_5',['generateAndSaveService',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad266467ae20733f06bdfedf0ff2a76e3',1,'fr::softsf::canscan::CanScan']]],
-  ['generatebutton_6',['generateButton',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a262c7c7b9075ccf754020574b3ca6855',1,'fr::softsf::canscan::CanScan']]],
-  ['generator_7',['generator',['../classfr_1_1softsf_1_1canscan_1_1_can_scan_u_test.html#aad828acd2ba98ea140220a1ee8438e72',1,'fr::softsf::canscan::CanScanUTest']]],
-  ['genrate_5fbutton_5fheight_5fscaling_5ffactor_8',['GENRATE_BUTTON_HEIGHT_SCALING_FACTOR',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a8cd55d4d6c109ef63eac2c3ad24620d4',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
-  ['github_5ftags_5fapi_5furl_9',['GITHUB_TAGS_API_URL',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#a2038f8598d8b13f5869d15286282040c',1,'fr::softsf::canscan::service::VersionService']]],
+  ['gbc_5fhalf_5fweight_5fx_0',['GBC_HALF_WEIGHT_X',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1UiComponentsConfiguration.html#abcbd64afa72da45efd00b7de3019f0da',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['generate_5fand_5fsave_5fqr_5fcode_1',['GENERATE_AND_SAVE_QR_CODE',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#aedcf68f1b7469cc54558758f632af6e6',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['generate_5fand_5fsave_5fworker_2',['GENERATE_AND_SAVE_WORKER',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1GenerateAndSaveWorker.html#a63814c994f6142b0ec6f98dd3a565e99',1,'fr::softsf::canscan::ui::worker::GenerateAndSaveWorker']]],
+  ['generate_5fqr_5fcode_3',['GENERATE_QR_CODE',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#abe9a6f3aaa13bbcad32cac256fe4598b',1,'fr::softsf::canscan::constant::StringConstants']]],
+  ['generate_5fqr_5fcode_5fimage_4',['GENERATE_QR_CODE_IMAGE',['../classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#ab2de45955d6fe4e5667d995ed5642d97',1,'fr::softsf::canscan::ui::EncodedImage']]],
+  ['generateandsaveservice_5',['generateAndSaveService',['../classfr_1_1softsf_1_1canscan_1_1CanScan.html#ad266467ae20733f06bdfedf0ff2a76e3',1,'fr::softsf::canscan::CanScan']]],
+  ['generatebutton_6',['generateButton',['../classfr_1_1softsf_1_1canscan_1_1CanScan.html#a262c7c7b9075ccf754020574b3ca6855',1,'fr::softsf::canscan::CanScan']]],
+  ['generator_7',['generator',['../classfr_1_1softsf_1_1canscan_1_1CanScanUTest.html#aad828acd2ba98ea140220a1ee8438e72',1,'fr::softsf::canscan::CanScanUTest']]],
+  ['genrate_5fbutton_5fheight_5fscaling_5ffactor_8',['GENRATE_BUTTON_HEIGHT_SCALING_FACTOR',['../enumfr_1_1softsf_1_1canscan_1_1ui_1_1UiComponentsConfiguration.html#a8cd55d4d6c109ef63eac2c3ad24620d4',1,'fr::softsf::canscan::ui::UiComponentsConfiguration']]],
+  ['github_5ftags_5fapi_5furl_9',['GITHUB_TAGS_API_URL',['../enumfr_1_1softsf_1_1canscan_1_1service_1_1VersionService.html#a2038f8598d8b13f5869d15286282040c',1,'fr::softsf::canscan::service::VersionService']]],
   ['gson_10',['gson',['../module-info_8java.html#a0877f2cca23ccc4db11146d6db4ea4ef',1,'module-info.java']]]
 ];

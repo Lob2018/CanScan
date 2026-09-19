@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.handleSuccess" name="fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.handleSuccess">
+<area shape="rect" id="Node000001" title="Handles successful QR code generation by updating the original image and displaying a confirmation di..." alt="" coords="5,37,288,77"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#ac0cfbc18aa43c23ef8d22f24fd5f2c7f" title="Updates the QR code image using a defensive copy." alt="" coords="336,37,539,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,55,322,55,322,60,288,60"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a85e20778f91dad2dbf3e67ded698db16" title="Creates a defensive copy of the source image." alt="" coords="587,5,793,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="539,42,573,37,573,43,539,47"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a1f675a96edbc6fb8d417920bd4e26c41" title="Releases the current QR code image and its resources." alt="" coords="589,69,791,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="539,68,575,72,575,77,539,73"/>
+</map>

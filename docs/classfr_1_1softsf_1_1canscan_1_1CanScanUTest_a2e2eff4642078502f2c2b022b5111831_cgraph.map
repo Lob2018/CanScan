@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.CanScanUTest.tearDown" name="fr.softsf.canscan.CanScanUTest.tearDown">
+<area shape="rect" id="Node000001" title="Nettoyage après chaque test : fermeture de la fenêtre et libération des ressources." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a38e109eadae1f290808f2dedc0023d9d" title="Releases QR&#45;code resources and closes the window." alt="" coords="240,13,481,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+</map>

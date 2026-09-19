@@ -1,0 +1,19 @@
+<map id="fr.softsf.canscan.CanScan.generateQrCode" name="fr.softsf.canscan.CanScan.generateQrCode">
+<area shape="rect" id="Node000001" title="Generates a QR code from current input fields and visual settings, then saves it via GenerateAndSaveS..." alt="" coords="5,167,255,207"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="303,136,515,176"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,170,289,166,290,172,255,176"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="563,5,807,45"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="163,164,226,130,302,97,427,63,548,40,549,45,428,68,304,103,228,135,166,169"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="563,197,807,237"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="255,191,549,207,549,213,255,196"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="563,261,807,301"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="249,204,553,256,552,262,248,209"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="358,136,355,126,363,117,381,111,409,109,440,112,458,119,456,124,439,117,409,115,382,117,366,122,360,127,363,135"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a1a6235214fa4fd656875c0dae3e960bd" title="Clears input fields corresponding to the active generation mode upon exceeding capacity limits." alt="" coords="573,133,796,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="515,152,560,152,560,157,515,158"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="434,134,491,94,562,55,581,47,583,52,564,60,494,99,437,138"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a8a2b238ac4af96d8710b3e5d7d051f77" title="Validates and returns the current meet UID from the meet title field." alt="" coords="563,69,807,109"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="491,133,587,110,588,115,493,139"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="500,173,581,192,580,197,499,179"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="439,174,495,211,564,247,583,254,581,259,562,252,492,215,436,178"/>
+</map>

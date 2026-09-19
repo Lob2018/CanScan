@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['label_0',['label',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a4ec349f24fc336f708090bdc19e8ecf7',1,'fr::softsf::canscan::model::Mode']]],
+  ['label_0',['label',['../enumfr_1_1softsf_1_1canscan_1_1model_1_1Mode.html#a4ec349f24fc336f708090bdc19e8ecf7',1,'fr::softsf::canscan::model::Mode']]],
   ['lang3_1',['lang3',['../module-info_8java.html#a207c469e036fa09bb5e47704e89865c9',1,'module-info.java']]],
-  ['latest_5freleases_5frepo_5furl_2',['LATEST_RELEASES_REPO_URL',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_string_constants.html#ad86483fea469a22c82d59c3f710ae2db',1,'fr.softsf.canscan.constant.StringConstants.LATEST_RELEASES_REPO_URL'],['../enumfr_1_1softsf_1_1canscan_1_1service_1_1_version_service.html#aa38cce1b3bbf57882dcc4c21f7512cb4',1,'fr.softsf.canscan.service.VersionService.LATEST_RELEASES_REPO_URL']]],
-  ['latitude_5fprecision_3',['LATITUDE_PRECISION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#a9392e52266c65307bdbf0df6017c5438',1,'fr::softsf::canscan::util::CoordinateHelper']]],
+  ['latest_5freleases_5frepo_5furl_2',['latest_releases_repo_url',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#ad86483fea469a22c82d59c3f710ae2db',1,'fr.softsf.canscan.constant.StringConstants.LATEST_RELEASES_REPO_URL'],['../enumfr_1_1softsf_1_1canscan_1_1service_1_1VersionService.html#aa38cce1b3bbf57882dcc4c21f7512cb4',1,'fr.softsf.canscan.service.VersionService.LATEST_RELEASES_REPO_URL']]],
+  ['latitude_5fprecision_3',['LATITUDE_PRECISION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelper.html#a9392e52266c65307bdbf0df6017c5438',1,'fr::softsf::canscan::util::CoordinateHelper']]],
   ['lgooddatepicker_4',['lgooddatepicker',['../module-info_8java.html#a5d8fd3deee0f3474bf72b71a4580538e',1,'module-info.java']]],
-  ['loader_5',['loader',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a92b1eb5654d57a1e4d1918aec94bbb0b',1,'fr.softsf.canscan.CanScan.loader'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#a60b86c771072f07119aafa1881593c10',1,'fr.softsf.canscan.ui.worker.AbstractDynamicWorker.loader'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#aadf9dff46a3113c937cc582ec9077913',1,'fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.loader']]],
-  ['loader_5fsize_5foffset_6',['LOADER_SIZE_OFFSET',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1_int_constants.html#a27cf366e0e3ffb33c2ee3d37f1e428cc',1,'fr::softsf::canscan::constant::IntConstants']]],
-  ['logger_7',['LOGGER',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa293e5fb23cd25b845850b2708b65973',1,'fr::softsf::canscan::CanScan']]],
+  ['loader_5',['loader',['../classfr_1_1softsf_1_1canscan_1_1CanScan.html#a92b1eb5654d57a1e4d1918aec94bbb0b',1,'fr.softsf.canscan.CanScan.loader'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1AbstractDynamicWorker.html#a60b86c771072f07119aafa1881593c10',1,'fr.softsf.canscan.ui.worker.AbstractDynamicWorker.loader'],['../classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1GenerateAndSaveWorker.html#aadf9dff46a3113c937cc582ec9077913',1,'fr.softsf.canscan.ui.worker.GenerateAndSaveWorker.loader']]],
+  ['loader_5fsize_5foffset_6',['LOADER_SIZE_OFFSET',['../enumfr_1_1softsf_1_1canscan_1_1constant_1_1IntConstants.html#a27cf366e0e3ffb33c2ee3d37f1e428cc',1,'fr::softsf::canscan::constant::IntConstants']]],
+  ['logger_7',['LOGGER',['../classfr_1_1softsf_1_1canscan_1_1CanScan.html#aa293e5fb23cd25b845850b2708b65973',1,'fr::softsf::canscan::CanScan']]],
   ['logging_8',['logging',['../module-info_8java.html#a446ee74ba5199709029d1b14251321ef',1,'module-info.java']]],
-  ['logofield_9',['logoField',['../classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aecf6262e4268b56479c379d1ff579bbd',1,'fr::softsf::canscan::CanScan']]],
-  ['longitude_5fprecision_10',['LONGITUDE_PRECISION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1_coordinate_helper.html#ad53dec477b0cce75d957f64a41f78105',1,'fr::softsf::canscan::util::CoordinateHelper']]]
+  ['logofield_9',['logoField',['../classfr_1_1softsf_1_1canscan_1_1CanScan.html#aecf6262e4268b56479c379d1ff579bbd',1,'fr::softsf::canscan::CanScan']]],
+  ['longitude_5fprecision_10',['LONGITUDE_PRECISION',['../enumfr_1_1softsf_1_1canscan_1_1util_1_1CoordinateHelper.html#ad53dec477b0cce75d957f64a41f78105',1,'fr::softsf::canscan::util::CoordinateHelper']]]
 ];

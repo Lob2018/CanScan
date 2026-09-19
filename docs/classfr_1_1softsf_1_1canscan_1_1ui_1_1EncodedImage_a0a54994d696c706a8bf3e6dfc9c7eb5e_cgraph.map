@@ -1,0 +1,11 @@
+<map id="fr.softsf.canscan.ui.EncodedImage.shouldSkipModule" name="fr.softsf.canscan.ui.EncodedImage.shouldSkipModule">
+<area shape="rect" id="Node000001" title="Determines whether a QR code module should be skipped during rendering." alt="" coords="5,69,208,109"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#ac5ca4991b2826e1655e2f4afe5f2659f" title="Determines whether the given coordinates fall within any of the three QR code position patterns." alt="" coords="256,69,459,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,87,242,87,242,92,208,92"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a08c22c703968017fdad5423b34113bb1" title="Checks if coordinates are within the bottom&#45;left position pattern." alt="" coords="507,5,715,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="437,67,517,46,518,51,438,72"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a42b974304eab8bbf970c930aadf1c8cd" title="Checks if coordinates are within the top&#45;left position pattern." alt="" coords="509,69,712,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="459,87,495,87,495,92,459,92"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a0f2ff4874795b0ea498b4840b1f0b14c" title="Checks if coordinates are within the top&#45;right position pattern." alt="" coords="509,133,712,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="438,107,518,127,517,133,437,112"/>
+</map>

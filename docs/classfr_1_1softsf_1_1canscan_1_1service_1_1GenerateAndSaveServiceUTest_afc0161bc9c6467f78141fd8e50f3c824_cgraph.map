@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension" name="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenFileWithoutPngExtension_whenGetSelectedPngFile_thenReturnFileWithPngExtension">
+<area shape="rect" id="Node000001" title="Vérifie l&#39;ajout automatique de l&#39;extension .png si elle est absente lors de la sélection." alt="" coords="5,5,311,75"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveService.html#a18a2e3bc99dcd4a86dc9d3348b82fd0a" title="Returns the selected PNG file for testing." alt="" coords="359,13,627,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,37,345,37,345,43,311,43"/>
+</map>

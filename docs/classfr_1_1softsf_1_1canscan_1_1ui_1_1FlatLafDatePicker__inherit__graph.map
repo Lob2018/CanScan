@@ -1,0 +1,7 @@
+<map id="fr.softsf.canscan.ui.FlatLafDatePicker" name="fr.softsf.canscan.ui.FlatLafDatePicker">
+<area shape="rect" id="Node000001" title="DatePicker component with FlatLaf styling applied and maintained." alt="" coords="22,217,243,525"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,55,89,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,132,89,216,84,217,58,134"/>
+<area shape="rect" id="Node000003" href="$interfacefr_1_1softsf_1_1canscan_1_1ui_1_1IFlatLafStyledForLGoodDatePicker.html" title="Utility interface to apply FlatLaf styling to LGoodDatePicker components." alt="" coords="113,5,323,169"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,183,182,218,177,216,187,182"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenFileWithPngExtension_whenGetSelectedPngFile_thenReturnSameFile" name="fr.softsf.canscan.service.GenerateAndSaveServiceUTest.givenFileWithPngExtension_whenGetSelectedPngFile_thenReturnSameFile">
+<area shape="rect" id="Node000001" title="Vérifie que l&#39;extension .png est conservée si elle est déjà présente." alt="" coords="5,5,313,75"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveService.html#a18a2e3bc99dcd4a86dc9d3348b82fd0a" title="Returns the selected PNG file for testing." alt="" coords="361,13,629,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,37,347,37,347,43,314,43"/>
+</map>

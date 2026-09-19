@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['browserhelper_2ejava_0',['BrowserHelper.java',['../_browser_helper_8java.html',1,'']]]
+  ['browserhelper_2ejava_0',['BrowserHelper.java',['../BrowserHelper_8java.html',1,'']]]
 ];

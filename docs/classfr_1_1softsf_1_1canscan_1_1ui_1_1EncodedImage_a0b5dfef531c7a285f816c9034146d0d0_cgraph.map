@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.ui.EncodedImage.getQrOriginal" name="fr.softsf.canscan.ui.EncodedImage.getQrOriginal">
+<area shape="rect" id="Node000001" title="Retrieves a defensive copy of the QR code image." alt="" coords="5,5,208,45"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1EncodedImage.html#a85e20778f91dad2dbf3e67ded698db16" title="Creates a defensive copy of the source image." alt="" coords="256,5,463,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,23,242,23,242,28,208,28"/>
+</map>

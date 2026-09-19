@@ -1,0 +1,8 @@
+var enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup =
+[
+    [ "showArgumentErrorDialog", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html#ab77a25f7bc14511f69f334a35d61faf8", null ],
+    [ "showDialog", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html#abf0ca73b87de8406f2a623eec8d85bc8", null ],
+    [ "showYesNoConfirmDialog", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html#a4f9f75ee55d3d9f02f4801a44c864668", null ],
+    [ "INSTANCE", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html#ab11ba5434437f14e1d0906f124658fad", null ],
+    [ "SHOW_ARGUMENT_ERROR_DIALOG", "enumfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopup.html#a17250365f2ef881053e4f079bd421502", null ]
+];

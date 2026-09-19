@@ -1,0 +1,11 @@
+<map id="fr.softsf.canscan.CanScanUTest.givenMarginAboveMaximum_whenMarginFieldCheck_thenGetMarginSetTo10" name="fr.softsf.canscan.CanScanUTest.givenMarginAboveMaximum_whenMarginFieldCheck_thenGetMarginSetTo10">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,289,124"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#ace71c953591d075db668442eceabb760" title="Returns the margin field int for testing." alt="" coords="353,5,565,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,58,347,46,348,51,290,63"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a9f8732331b81ec5fcadbb39c9389a016" title="Sets the margin slider value for testing." alt="" coords="354,69,565,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,87,340,87,340,92,290,92"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a329f5a81e8c97276a069b8eb7f8c39ca" title="Validates and returns the current QR code margin from the margin slider for tests." alt="" coords="337,133,581,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="290,116,348,128,347,133,289,121"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="629,133,873,173"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="582,151,615,151,615,156,582,156"/>
+</map>

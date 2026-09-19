@@ -1,0 +1,9 @@
+<map id="fr.softsf.canscan.CanScanUTest.givenFileSelected_whenBrowseLogo_thenLogoFieldUpdated" name="fr.softsf.canscan.CanScanUTest.givenFileSelected_whenBrowseLogo_thenLogoFieldUpdated">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,301,82"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#ab418aab8165b2e96ce08f98422655cde" title="Opens a file chooser to select a logo image and updates the logo text field." alt="" coords="349,13,619,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,39,335,36,336,41,302,44"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#a35dc553a27bacbc3156e90afeda25336" title="Returns the logo field text for testing." alt="" coords="378,63,590,103"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,65,365,70,364,75,301,70"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1CanScan.html#ac0b9579fee0a4d633c23c085d5d9d4ef" title="Opens a file chooser for PNG, JPG, or JPEG logos." alt="" coords="667,5,904,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="619,23,653,23,653,28,619,28"/>
+</map>

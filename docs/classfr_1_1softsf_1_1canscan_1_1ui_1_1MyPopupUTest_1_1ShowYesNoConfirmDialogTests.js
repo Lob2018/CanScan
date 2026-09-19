@@ -1,0 +1,4 @@
+var classfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopupUTest_1_1ShowYesNoConfirmDialogTests =
+[
+    [ "givenValidMessage_whenShowYesNoConfirmDialog_thenReturnsValidOption", "classfr_1_1softsf_1_1canscan_1_1ui_1_1MyPopupUTest_1_1ShowYesNoConfirmDialogTests.html#afdc5873cd4d799dd6e482257070677b0", null ]
+];

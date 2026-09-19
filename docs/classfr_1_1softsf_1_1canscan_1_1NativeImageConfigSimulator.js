@@ -1,0 +1,23 @@
+var classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator =
+[
+    [ "assertEquals", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#aaadd03094f00bbe2258c6e9742be224d", null ],
+    [ "browseFoldersSimulation", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#acbf2b92c5c36da7ad4329966d92f1a1b", null ],
+    [ "chooseModuleColor", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a3ce8b70d660baabe5ed741e64dfd0af3", null ],
+    [ "findComponent", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#ad18c2e9f57e07032b9a48a10e02e61f6", null ],
+    [ "findComponent", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a841902b24e0160455b0a55411afe4b8a", null ],
+    [ "findJListInContainer", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a00f369f6ee9b0eea8bacef585d45b4c0", null ],
+    [ "findOptionPane", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#ac80dbcb1d031bb72c93cf21315c09f27", null ],
+    [ "findVisibleJList", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#aaf2a12382a791fc827de25518f612449", null ],
+    [ "freeDataTooBig", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a38fd2d97bfc693365a8dc700273ada47", null ],
+    [ "interceptAndValideDialog", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a4795cbc2d8717311fd26b8589a618616", null ],
+    [ "main", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a23e1c1427c57af215e04735bb0d78bbf", null ],
+    [ "nameTypingSimulation", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#ae2840980d77f2806ab5f1bd471186ed3", null ],
+    [ "openLatestReleaseRepoInBrowser", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#aca8bae30971c2243dc992ef4dc9d3ca8", null ],
+    [ "pressEnter", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#ab4d4463dc9177237a8de0a7b6713e7cf", null ],
+    [ "ratioSliderTooltipSimulation", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a9e920788e82b3b113a566174265607af", null ],
+    [ "runSimulation", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#afbc1231d98e565f72006b6f31c7dce34", null ],
+    [ "selectABeginTime", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a346e85bc50a5fd264ba680c0c5a3d51a", null ],
+    [ "simulateClipboardAndLengthValidation", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#add389ea699ac669aebb53e208907d4cd", null ],
+    [ "typeChar", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#a4c1895b6327fef325b1b0c8047bcfcb7", null ],
+    [ "typeString", "classfr_1_1softsf_1_1canscan_1_1NativeImageConfigSimulator.html#acc5424a9d2c1d44c93a045868f58a5ff", null ]
+];
