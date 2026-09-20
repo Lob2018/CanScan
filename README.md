@@ -25,6 +25,8 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 [![GitHub release](https://img.shields.io/github/v/release/lob2018/CanScan)](https://github.com/Lob2018/CanScan/releases)
 [![Downloads](https://img.shields.io/github/downloads/Lob2018/canscan/total?logo=github)](https://github.com/Lob2018/canscan/releases)
 
+[![Online Javadoc](https://img.shields.io/badge/🔗_Documentation-0D47A1?style=for-the-badge)](https://lob2018.github.io/CanScan/)
+[![CHANGELOG](https://img.shields.io/badge/🔗_CHANGELOG-0D47A1?style=for-the-badge)](https://github.com/lob2018/CanScan/blob/main/CHANGELOG.md)
 
 <a href="https://github.com/Lob2018/CanScan/releases/latest">
  <img src="https://raw.githubusercontent.com/Lob2018/CanScan/master/.myresources/images/CanScan_in_action.png" alt="CanScan in action"  width="400"/>

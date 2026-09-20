@@ -459,6 +459,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- CHANGELOG plugin-->
       <plugin>
         <groupId>se.bjurr.gitchangelog</groupId>
         <artifactId>git-changelog-maven-plugin</artifactId>

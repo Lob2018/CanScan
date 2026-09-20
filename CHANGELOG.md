@@ -4,6 +4,10 @@
 ## Unreleased - 
 
 
+📝 style: Run automatic code formatter
+
+([b11d1e37bb0c3f1](https://github.com/Lob2018/CanScan/commit/b11d1e37bb0c3f16c06a0d110b32379bcbde5e8a))
+
 ✨ feat: .github/workflows/natif.yml, README.md: Add CHANGELOG.md links to GitHub release body and documentation index
 - .github/workflows/natif.yml :
   - Add reference link to CHANGELOG.md in the GitHub release body markdown.
