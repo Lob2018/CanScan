@@ -1,8 +1,19 @@
 # Changelog
 
 
-## Unreleased - 
+## Unreleased -
 
+
+📚 docs .myresources/doc/mainpage.dox, README.md, pom.xml: Add CHANGELOG references and plugin configuration
+- .myresources/doc/mainpage.dox :
+  - Add CHANGELOG link to main Doxygen documentation page.
+- README.md :
+  - Insert Online Documentation and CHANGELOG shields badges.
+- pom.xml :
+  - Integrate git-changelog-maven-plugin configuration comment.
+- Tests pass.
+
+([28be15c7e511a83](https://github.com/Lob2018/CanScan/commit/28be15c7e511a83c0d32e12e9dd04c374f4b0cbb))
 
 📝 style: Run automatic code formatter
 
@@ -1295,9 +1306,6 @@ Update README.md
 
 ([da7a80d91b4b9ab](https://github.com/Lob2018/CanScan/commit/da7a80d91b4b9ab46b7e0d00a814a55aedad9f9c))
 
-## v1.0.0.0 - 2025-12-06
-
-
 📚 docs Doxygen
 
 ([56622872fbac47b](https://github.com/Lob2018/CanScan/commit/56622872fbac47bfa3e9500e6b88a814b08e5bf9))
@@ -1443,6 +1451,9 @@ Material Icons Licence Apache 2.0
     - Models, Workers Added &#x60;@SuppressFBWarnings({&quot;EI_EXPOSE_REP2&quot;, &quot;EI_EXPOSE_REP&quot;})&#x60; to all UI records (&#x60;MecardJFields&#x60;, &#x60;MeetJFields&#x60;, &#x60;NativeImageUiComponents&#x60;) and worker constructors (&#x60;DynamicPreviewWorker&#x60;, &#x60;DynamicResizeWorker&#x60;, &#x60;GenerateAndSaveWorker&#x60;).
 
 ([a09cf41942d31f6](https://github.com/Lob2018/CanScan/commit/a09cf41942d31f6d57ce20262bd351595bcf179f))
+
+## v0.11.1.0 - 2025-11-21
+
 
 📚 docs Doxygen
 
