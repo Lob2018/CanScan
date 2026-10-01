@@ -121,7 +121,7 @@
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
-        <version>3.10.1</version>
+        <version>3.10.2</version>
         <configuration>
           <ratchetFrom>NONE</ratchetFrom>
           <skip>${spotless-maven-plugin.skip}</skip>
@@ -254,7 +254,7 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.10.4.0</version>
+        <version>4.10.4.1</version>
         <configuration>
           <effort>Max</effort>
           <threshold>Low</threshold>
@@ -412,7 +412,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>3.6.3</version>
+        <version>3.6.4</version>
         <configuration>
           <mainClass>fr.softsf.canscan.CanScan</mainClass>
         </configuration>
@@ -508,7 +508,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.6.3</version>
+            <version>3.6.4</version>
             <configuration>
               <executable>java</executable>
               <arguments>
@@ -547,7 +547,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.6.3</version>
+            <version>3.6.4</version>
             <executions>
               <execution>
                 <id>exec-bash</id>
@@ -581,7 +581,7 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>3.6.3</version>
+            <version>3.6.4</version>
             <executions>
               <execution>
                 <!-- Windows package using batch script -->
