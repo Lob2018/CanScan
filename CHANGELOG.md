@@ -4,6 +4,18 @@
 ## Unreleased -
 
 
+🔧 chore spotless-maven-plugin, spotbugs-maven-plugin, exec-maven-plugin, : Bump the maven-dependencies
+
+([e700b3fc7db71d1](https://github.com/Lob2018/CanScan/commit/e700b3fc7db71d19ea61759a66da553109bbb0ea))
+
+🔧 chore setup-java, codeql-action, osv-scanner-action, qodana-action: Bump the actions-dependencies
+
+([3ff823a50754aaf](https://github.com/Lob2018/CanScan/commit/3ff823a50754aaf4694789668d23d99e5463d664))
+
+📚 docs Doxygen
+
+([b838aa2969f0a3e](https://github.com/Lob2018/CanScan/commit/b838aa2969f0a3ed289d69355dcf7923cf76e6ba))
+
 ♻️ refactor ColorOperation: Extract magic number into a constant for RGB masking
 - Add RGB_MASK constant
 - Update colorToHex method to use RGB_MASK
