@@ -47,7 +47,7 @@
   </g>
 </defs>
 <script type="application/ecmascript" xlink:href="svg.min.js"/>
-<svg id="graph" class="graph" data-view-width="853" data-view-height="420" data-section-id="dynsection-10">
+<svg id="graph" class="graph" data-view-width="853" data-view-height="420" data-section-id="dynsection-11">
 <g id="viewport">
 <title>fr.softsf.canscan.CanScan.generateQrCode</title>
 <!-- Node1 -->
@@ -99,51 +99,32 @@
 </a>
 </g>
 </g>
-<!-- Node11 -->
-<g id="Node000011" class="node">
-<title>Node11</title>
-<g id="a_Node000011"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" target="_top" xlink:title="Validates and returns the current QR code margin from the margin slider.">
+<!-- Node12 -->
+<g id="Node000012" class="node">
+<title>Node12</title>
+<g id="a_Node000012"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" target="_top" xlink:title="Validates and returns the current QR code margin from the margin slider.">
 <polygon fill="white" stroke="#666666" points="603.38,-232 433.62,-232 433.62,-200 603.38,-200 603.38,-232"/>
 <text text-anchor="start" x="441.62" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
 <text text-anchor="middle" x="518.5" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetMargin</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node11 -->
-<g id="edge15_Node000001_Node000011" class="edge">
-<title>Node1&#45;&gt;Node11</title>
-<g id="a_edge15_Node000001_Node000011"><a xlink:title=" ">
+<!-- Node1&#45;&gt;Node12 -->
+<g id="edge16_Node000001_Node000012" class="edge">
+<title>Node1&#45;&gt;Node12</title>
+<g id="a_edge16_Node000001_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M129.22,-132.47C152.53,-141.26 182.32,-151.73 209.5,-159 279.85,-177.81 360.88,-192.54 422.17,-202.31"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="421.46,-205.74 431.88,-203.84 422.55,-198.82 421.46,-205.74"/>
-</a>
-</g>
-</g>
-<!-- Node13 -->
-<g id="Node000013" class="node">
-<title>Node13</title>
-<g id="a_Node000013"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d" target="_top" xlink:title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider.">
-<polygon fill="white" stroke="#666666" points="603.38,-82 433.62,-82 433.62,-50 603.38,-50 603.38,-82"/>
-<text text-anchor="start" x="441.62" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
-<text text-anchor="middle" x="518.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetRatio</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node13 -->
-<g id="edge16_Node000001_Node000013" class="edge">
-<title>Node1&#45;&gt;Node13</title>
-<g id="a_edge16_Node000001_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M160.57,-99.54C176.62,-96.34 193.59,-93.27 209.5,-91 280.37,-80.89 361.05,-74.52 422.05,-70.75"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="421.92,-74.26 431.69,-70.17 421.5,-67.28 421.92,-74.26"/>
 </a>
 </g>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" target="_top" xlink:title="Validates and returns the QR code size from the corresponding text field.">
-<polygon fill="white" stroke="#666666" points="603.38,-32 433.62,-32 433.62,0 603.38,0 603.38,-32"/>
-<text text-anchor="start" x="441.62" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
-<text text-anchor="middle" x="518.5" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetSize</text>
+<g id="a_Node000014"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d" target="_top" xlink:title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider.">
+<polygon fill="white" stroke="#666666" points="603.38,-82 433.62,-82 433.62,-50 603.38,-50 603.38,-82"/>
+<text text-anchor="start" x="441.62" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
+<text text-anchor="middle" x="518.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetRatio</text>
 </a>
 </g>
 </g>
@@ -151,6 +132,25 @@
 <g id="edge17_Node000001_Node000014" class="edge">
 <title>Node1&#45;&gt;Node14</title>
 <g id="a_edge17_Node000001_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M160.57,-99.54C176.62,-96.34 193.59,-93.27 209.5,-91 280.37,-80.89 361.05,-74.52 422.05,-70.75"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="421.92,-74.26 431.69,-70.17 421.5,-67.28 421.92,-74.26"/>
+</a>
+</g>
+</g>
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" target="_top" xlink:title="Validates and returns the QR code size from the corresponding text field.">
+<polygon fill="white" stroke="#666666" points="603.38,-32 433.62,-32 433.62,0 603.38,0 603.38,-32"/>
+<text text-anchor="start" x="441.62" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
+<text text-anchor="middle" x="518.5" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetSize</text>
+</a>
+</g>
+</g>
+<!-- Node1&#45;&gt;Node15 -->
+<g id="edge18_Node000001_Node000015" class="edge">
+<title>Node1&#45;&gt;Node15</title>
+<g id="a_edge18_Node000001_Node000015"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M125.8,-99.51C149.5,-89.77 180.84,-77.85 209.5,-70 279.62,-50.79 360.66,-36.9 422.01,-28.02"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="422.32,-31.51 431.73,-26.64 421.33,-24.58 422.32,-31.51"/>
 </a>
@@ -218,10 +218,10 @@
 <g id="Node000005" class="node">
 <title>Node5</title>
 <g id="a_Node000005"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#a723bdc3c23de4858c0a30864298fdacd" target="_top" xlink:title="Ensures the selected file has a &quot;.png&quot; extension.">
-<polygon fill="white" stroke="#666666" points="843.25,-412 660,-412 660,-368 843.25,-368 843.25,-412"/>
-<text text-anchor="start" x="668" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
-<text text-anchor="start" x="668" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService.getSelected</text>
-<text text-anchor="middle" x="751.62" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">PngFile</text>
+<polygon fill="white" stroke="#666666" points="843.25,-350 660,-350 660,-306 843.25,-306 843.25,-350"/>
+<text text-anchor="start" x="668" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
+<text text-anchor="start" x="668" y="-324.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService.getSelected</text>
+<text text-anchor="middle" x="751.62" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">PngFile</text>
 </a>
 </g>
 </g>
@@ -229,8 +229,8 @@
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M589.14,-344.47C600.31,-347.24 611.74,-350.14 622.5,-353 635.92,-356.56 650.08,-360.49 663.9,-364.41"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="662.86,-367.75 673.44,-367.13 664.78,-361.02 662.86,-367.75"/>
+<path fill="none" stroke="#63b8ff" d="M622.89,-328C631.32,-328 639.84,-328 648.26,-328"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="648.15,-331.5 658.15,-328 648.15,-324.5 648.15,-331.5"/>
 </a>
 </g>
 </g>
@@ -238,10 +238,10 @@
 <g id="Node000006" class="node">
 <title>Node6</title>
 <g id="a_Node000006"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1service_1_1_generate_and_save_service.html#aeced3cbaf2f2c3a709ed5096aa543526" target="_top" xlink:title="Resolves potential file name conflicts by checking if the specified file already exists.">
-<polygon fill="white" stroke="#666666" points="833.12,-350 670.12,-350 670.12,-306 833.12,-306 833.12,-350"/>
-<text text-anchor="start" x="678.12" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
-<text text-anchor="start" x="678.12" y="-324.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService.resolve</text>
-<text text-anchor="middle" x="751.62" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">FileNameConflict</text>
+<polygon fill="white" stroke="#666666" points="833.12,-412 670.12,-412 670.12,-368 833.12,-368 833.12,-412"/>
+<text text-anchor="start" x="678.12" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.service.</text>
+<text text-anchor="start" x="678.12" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateAndSaveService.resolve</text>
+<text text-anchor="middle" x="751.62" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">FileNameConflict</text>
 </a>
 </g>
 </g>
@@ -249,8 +249,8 @@
 <g id="edge5_Node000004_Node000006" class="edge">
 <title>Node4&#45;&gt;Node6</title>
 <g id="a_edge5_Node000004_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M622.89,-328C634.83,-328 646.93,-328 658.7,-328"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="658.34,-331.5 668.34,-328 658.34,-324.5 658.34,-331.5"/>
+<path fill="none" stroke="#63b8ff" d="M589.14,-344.47C600.31,-347.24 611.74,-350.14 622.5,-353 635.92,-356.56 650.08,-360.49 663.9,-364.41"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="662.86,-367.75 673.44,-367.13 664.78,-361.02 662.86,-367.75"/>
 </a>
 </g>
 </g>
@@ -275,9 +275,9 @@
 </g>
 </g>
 <!-- Node9&#45;&gt;Node9 -->
-<g id="edge10_Node000009_Node000009" class="edge">
+<g id="edge11_Node000009_Node000009" class="edge">
 <title>Node9&#45;&gt;Node9</title>
-<g id="a_edge10_Node000009_Node000009"><a xlink:title=" ">
+<g id="a_edge11_Node000009_Node000009"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M257,-132.44C250.09,-141.58 262.43,-150 294,-150 311.51,-150 323.11,-147.41 328.78,-143.54"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="332.17,-144.42 330.7,-133.93 325.31,-143.05 332.17,-144.42"/>
 </a>
@@ -302,31 +302,22 @@
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node11 -->
-<g id="edge11_Node000009_Node000011" class="edge">
-<title>Node9&#45;&gt;Node11</title>
-<g id="a_edge11_Node000009_Node000011"><a xlink:title=" ">
+<!-- Node9&#45;&gt;Node12 -->
+<g id="edge12_Node000009_Node000012" class="edge">
+<title>Node9&#45;&gt;Node12</title>
+<g id="a_edge12_Node000009_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M316.29,-132.36C339.33,-149.32 377.72,-175.48 414.5,-191 418.74,-192.79 423.14,-194.47 427.62,-196.04"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="426.17,-199.25 436.77,-199.05 428.36,-192.6 426.17,-199.25"/>
 </a>
 </g>
 </g>
-<!-- Node12 -->
-<g id="Node000012" class="node">
-<title>Node12</title>
-<g id="a_Node000012"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8a2b238ac4af96d8710b3e5d7d051f77" target="_top" xlink:title="Validates and returns the current meet UID from the meet title field.">
+<!-- Node13 -->
+<g id="Node000013" class="node">
+<title>Node13</title>
+<g id="a_Node000013"><a xlink:href="classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8a2b238ac4af96d8710b3e5d7d051f77" target="_top" xlink:title="Validates and returns the current meet UID from the meet title field.">
 <polygon fill="white" stroke="#666666" points="603.38,-132 433.62,-132 433.62,-100 603.38,-100 603.38,-132"/>
 <text text-anchor="start" x="441.62" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.CanScan.validate</text>
 <text text-anchor="middle" x="518.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">AndGetMeetUID</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node12 -->
-<g id="edge12_Node000009_Node000012" class="edge">
-<title>Node9&#45;&gt;Node12</title>
-<g id="a_edge12_Node000009_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M369.09,-116C385.99,-116 404.19,-116 421.85,-116"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="421.85,-119.5 431.85,-116 421.85,-112.5 421.85,-119.5"/>
 </a>
 </g>
 </g>
@@ -334,8 +325,8 @@
 <g id="edge13_Node000009_Node000013" class="edge">
 <title>Node9&#45;&gt;Node13</title>
 <g id="a_edge13_Node000009_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M368.16,-99.56C388.98,-94.88 411.82,-89.75 433.24,-84.93"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="433.83,-88.39 442.82,-82.78 432.29,-81.56 433.83,-88.39"/>
+<path fill="none" stroke="#63b8ff" d="M369.09,-116C385.99,-116 404.19,-116 421.85,-116"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="421.85,-119.5 431.85,-116 421.85,-112.5 421.85,-119.5"/>
 </a>
 </g>
 </g>
@@ -343,8 +334,36 @@
 <g id="edge14_Node000009_Node000014" class="edge">
 <title>Node9&#45;&gt;Node14</title>
 <g id="a_edge14_Node000009_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M368.16,-99.56C388.98,-94.88 411.82,-89.75 433.24,-84.93"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="433.83,-88.39 442.82,-82.78 432.29,-81.56 433.83,-88.39"/>
+</a>
+</g>
+</g>
+<!-- Node9&#45;&gt;Node15 -->
+<g id="edge15_Node000009_Node000015" class="edge">
+<title>Node9&#45;&gt;Node15</title>
+<g id="a_edge15_Node000009_Node000015"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M316.29,-99.64C339.33,-82.68 377.72,-56.52 414.5,-41 418.74,-39.21 423.14,-37.53 427.62,-35.96"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="428.36,-39.4 436.77,-32.95 426.17,-32.75 428.36,-39.4"/>
+</a>
+</g>
+</g>
+<!-- Node11 -->
+<g id="Node000011" class="node">
+<title>Node11</title>
+<g id="a_Node000011"><a xlink:href="enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" target="_top" xlink:title="Returns the mode label.">
+<polygon fill="white" stroke="#666666" points="812.5,-182 690.75,-182 690.75,-150 812.5,-150 812.5,-182"/>
+<text text-anchor="start" x="698.75" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">fr.softsf.canscan.model.</text>
+<text text-anchor="middle" x="751.62" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00">Mode.text</text>
+</a>
+</g>
+</g>
+<!-- Node10&#45;&gt;Node11 -->
+<g id="edge10_Node000010_Node000011" class="edge">
+<title>Node10&#45;&gt;Node11</title>
+<g id="a_edge10_Node000010_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M597.43,-166C623.91,-166 653.36,-166 679.3,-166"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="679.05,-169.5 689.05,-166 679.05,-162.5 679.05,-169.5"/>
 </a>
 </g>
 </g>

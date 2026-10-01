@@ -1,0 +1,5 @@
+<map id="fr.softsf.canscan.CanScan.clearFieldsForCurrentMode" name="fr.softsf.canscan.CanScan.clearFieldsForCurrentMode">
+<area shape="rect" id="Node000001" title="Clears input fields corresponding to the active generation mode upon exceeding capacity limits." alt="" coords="5,5,215,48"/>
+<area shape="rect" id="Node000002" href="$enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" title="Returns the mode label." alt="" coords="263,5,425,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,24,247,24,247,29,215,29"/>
+</map>

@@ -1,110 +1,111 @@
 <map id="fr.softsf.canscan.CanScanUTest.setUp" name="fr.softsf.canscan.CanScanUTest.setUp">
-<area shape="rect" id="Node000001" title="Initialisation de l&#39;instance de test et configuration des champs par défaut." alt="" coords="5,940,183,983"/>
-<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a102bcbc6cda608b642e870ba3fde6344" title="Constructs the CanScan GUI, setting up layout, panels, inputs, and QR preview." alt="" coords="240,640,421,683"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,939,112,889,138,823,177,753,201,721,229,693,233,689,236,694,232,697,205,725,181,756,143,825,118,890,103,940"/>
-<area shape="rect" id="Node000044" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a480afb2507eb780dcc6f77c0a4334d59" title="Sets the address field text for testing." alt="" coords="231,707,430,749"/>
-<area shape="poly" id="edge50_Node000001_Node000044" title=" " alt="" coords="102,939,120,900,148,852,184,802,229,759,235,755,238,760,232,763,188,806,152,855,125,903,107,941"/>
-<area shape="rect" id="Node000045" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a968f0f590c2211f78d1f832a2ee40b55" title="Sets the email field text for testing." alt="" coords="231,773,430,816"/>
-<area shape="poly" id="edge51_Node000001_Node000045" title=" " alt="" coords="110,938,160,883,193,852,229,826,238,821,240,826,232,830,196,856,163,886,114,942"/>
-<area shape="rect" id="Node000046" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ac2d034a2aaa3cbc0ce5bfac06203cd33" title="Sets the logo field text for testing." alt="" coords="231,840,430,883"/>
-<area shape="poly" id="edge52_Node000001_Node000046" title=" " alt="" coords="135,937,230,892,245,886,247,891,232,897,137,942"/>
-<area shape="rect" id="Node000047" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9f8732331b81ec5fcadbb39c9389a016" title="Sets the margin slider value for testing." alt="" coords="231,907,430,949"/>
-<area shape="poly" id="edge53_Node000001_Node000047" title=" " alt="" coords="183,946,215,942,215,947,183,951"/>
-<area shape="rect" id="Node000048" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8affcfaf13c69cd340e48e3e7d10ae86" title="Sets the name field text for testing." alt="" coords="231,973,430,1016"/>
-<area shape="poly" id="edge54_Node000001_Node000048" title=" " alt="" coords="183,971,215,976,215,981,183,976"/>
-<area shape="rect" id="Node000049" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a56273b7ccb4290c7d7aad2132452902e" title="Sets the organization field text for testing." alt="" coords="231,1040,430,1083"/>
-<area shape="poly" id="edge55_Node000001_Node000049" title=" " alt="" coords="137,981,232,1026,247,1032,245,1037,230,1030,135,986"/>
-<area shape="rect" id="Node000050" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a323e90f802787c388da8a03c9b6e47d7" title="Sets the phone field text for testing." alt="" coords="231,1107,430,1149"/>
-<area shape="poly" id="edge56_Node000001_Node000050" title=" " alt="" coords="114,981,163,1036,196,1066,232,1092,240,1097,238,1102,229,1097,193,1070,160,1040,110,985"/>
-<area shape="rect" id="Node000051" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abf1cb04881a0e23f0b843eed12ce05c7" title="Sets the ratio slider value for testing." alt="" coords="231,1173,430,1216"/>
-<area shape="poly" id="edge57_Node000001_Node000051" title=" " alt="" coords="107,982,125,1020,152,1067,188,1117,232,1159,238,1163,235,1167,229,1163,184,1120,148,1070,120,1022,102,984"/>
-<area shape="rect" id="Node000052" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#af8ca8fca38ccbc56063f1cce9e5b7528" title="Sets the URL field text for testing." alt="" coords="231,1240,430,1283"/>
-<area shape="poly" id="edge58_Node000001_Node000052" title=" " alt="" coords="103,982,118,1032,143,1098,181,1166,205,1198,232,1226,236,1229,233,1233,229,1230,201,1202,177,1169,138,1100,112,1034,98,984"/>
-<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a070115929fdc69b249d21866a00a47cc" title="Assigns stable component names for testing and native&#45;image configuration." alt="" coords="478,423,706,465"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,638,394,562,432,519,476,482,497,470,499,474,480,486,436,523,398,566,346,641"/>
-<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a14263ca931024d56cd9bed4af4b74c25" title="Builds the main panel with header, QR preview overlay, and bottom spacer." alt="" coords="754,235,983,277"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="347,638,401,581,437,551,477,526,510,512,541,507,598,508,624,508,650,505,677,495,705,475,718,460,726,444,731,412,735,377,741,358,752,338,780,308,812,284,816,288,784,312,756,342,746,360,740,378,737,412,731,446,723,463,708,479,679,500,651,510,624,514,598,513,542,512,512,517,479,530,440,555,404,585,351,641"/>
-<area shape="rect" id="Node000016" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afb8d451dc5d6d9c7b6700e4b688c98a3" title="Builds the north panel with mode selection, card panels, common fields, and generate button." alt="" coords="478,540,706,583"/>
-<area shape="poly" id="edge18_Node000002_Node000016" title=" " alt="" coords="374,637,477,592,496,585,498,590,479,597,376,642"/>
-<area shape="rect" id="Node000038" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4928478365bc812571ac037662cc5f6b" title="Wraps the main panel in a scrollable container." alt="" coords="478,607,706,649"/>
-<area shape="poly" id="edge43_Node000002_Node000038" title=" " alt="" coords="421,647,462,642,463,647,422,652"/>
-<area shape="rect" id="Node000039" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a358629f85831dc6cd4978c8854d88561" title="Configures sliders for logo margin and ratio." alt="" coords="478,673,706,716"/>
-<area shape="poly" id="edge44_Node000002_Node000039" title=" " alt="" coords="422,670,463,676,462,681,421,676"/>
-<area shape="rect" id="Node000040" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0a52159db640660477196e337ec62a9b" title="Finalizes layout and dimensions using dynamic system metrics." alt="" coords="478,740,706,783"/>
-<area shape="poly" id="edge45_Node000002_Node000040" title=" " alt="" coords="405,681,431,692,455,709,479,726,493,732,491,736,477,730,452,714,429,697,403,686"/>
-<area shape="rect" id="Node000043" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6804e999a867e3d11b3d77e24f9b789e" title="Sets the application window icon using an image resource." alt="" coords="478,807,706,849"/>
-<area shape="poly" id="edge48_Node000002_Node000043" title=" " alt="" coords="388,681,411,691,432,705,449,727,455,750,459,773,470,794,465,796,454,774,450,752,444,730,428,709,409,695,386,686"/>
-<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Synchronizes the UI components with the QR code preview and validates input states." alt="" coords="1031,264,1288,307"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="984,265,1015,268,1015,273,983,270"/>
-<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="1368,205,1567,248"/>
-<area shape="poly" id="edge14_Node000004_Node000006" title=" " alt="" coords="983,248,1352,230,1352,235,983,253"/>
-<area shape="rect" id="Node000014" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a214a6314f095a389ee6bf2eaa71a6190" title="Updates the current QR input, resize the loader, and schedules a debounced resize operation." alt="" coords="1038,131,1281,189"/>
-<area shape="poly" id="edge15_Node000004_Node000014" title=" " alt="" coords="935,232,1053,192,1054,197,936,237"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1274,261,1352,246,1353,251,1275,266"/>
-<area shape="rect" id="Node000012" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#aab1382704fa1f4c27f1eab80fc8534b1" title="Updates and schedules a debounced QR code preview refresh." alt="" coords="1343,323,1592,381"/>
-<area shape="poly" id="edge12_Node000005_Node000012" title=" " alt="" coords="1262,305,1329,319,1328,324,1261,310"/>
-<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="1413,205,1411,195,1420,186,1439,181,1468,179,1499,181,1518,187,1516,192,1498,186,1468,184,1440,186,1422,191,1416,197,1418,204"/>
-<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a1a6235214fa4fd656875c0dae3e960bd" title="Clears input fields corresponding to the active generation mode upon exceeding capacity limits." alt="" coords="1656,272,1865,315"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1565,246,1649,265,1648,271,1564,251"/>
-<area shape="rect" id="Node000008" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="1647,5,1874,48"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="1543,202,1572,187,1597,167,1608,154,1615,141,1620,113,1626,86,1633,72,1645,58,1649,55,1653,59,1649,62,1638,75,1631,88,1625,114,1620,142,1613,157,1601,171,1575,192,1545,207"/>
-<area shape="rect" id="Node000009" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8a2b238ac4af96d8710b3e5d7d051f77" title="Validates and returns the current meet UID from the meet title field." alt="" coords="1647,72,1874,115"/>
-<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="1528,202,1598,167,1621,146,1631,135,1646,124,1657,119,1659,123,1649,129,1634,139,1625,149,1601,172,1531,207"/>
-<area shape="rect" id="Node000010" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="1647,139,1874,181"/>
-<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="1564,202,1648,183,1649,188,1565,207"/>
-<area shape="rect" id="Node000011" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="1647,205,1874,248"/>
-<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="1568,224,1632,224,1632,229,1568,229"/>
-<area shape="rect" id="Node000013" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abd8ce1ed48ee82ef39d7d169a051faf6" title=" " alt="" coords="1649,339,1872,397"/>
-<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="1593,356,1634,358,1633,364,1593,361"/>
-<area shape="poly" id="edge16_Node000014_Node000013" title=" " alt="" coords="1205,188,1266,224,1337,258,1409,278,1467,286,1526,293,1600,308,1664,330,1662,335,1599,313,1525,298,1466,292,1408,284,1335,262,1264,229,1202,192"/>
-<area shape="rect" id="Node000015" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a5299a7f976198123d1da10f8d27af9a4" title="Resizes the loader to a square dimension based on the given value and refreshes its parent container ..." alt="" coords="1336,115,1599,157"/>
-<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="1281,148,1320,145,1321,150,1282,153"/>
-<area shape="rect" id="Node000017" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ab2e018ca62c7497c29e84f42ae870daa" title="Adds MECARD MEET FREE card panels to the north panel." alt="" coords="767,507,970,549"/>
-<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="706,545,752,539,753,545,707,550"/>
-<area shape="rect" id="Node000021" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a94ab4df98de0d05977e6a65ab75f89f0" title="Adds common input fields to the north panel." alt="" coords="767,352,970,395"/>
-<area shape="poly" id="edge23_Node000016_Node000021" title=" " alt="" coords="677,537,705,519,722,497,728,475,735,451,752,426,789,400,792,404,756,430,740,453,734,476,726,500,708,523,680,542"/>
-<area shape="rect" id="Node000029" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9f205dfdb266d5d7f8f8899b69742663" title="Adds the generate button to the north panel." alt="" coords="767,573,970,616"/>
-<area shape="poly" id="edge32_Node000016_Node000029" title=" " alt="" coords="707,572,753,578,752,583,706,578"/>
-<area shape="rect" id="Node000030" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa469763b92dd7cbc6dfdb9aaa0116b33" title="Adds mode selection controls (MECARD/MEET/FREE) to the north panel." alt="" coords="767,440,970,483"/>
-<area shape="poly" id="edge33_Node000016_Node000030" title=" " alt="" coords="660,537,705,519,729,505,753,492,770,486,772,491,755,497,732,510,707,524,662,542"/>
-<area shape="rect" id="Node000036" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ada8edc3d5abda489ce9f75a0613cfc71" title="Creates the base north panel with layout, maximum width, and padding applied." alt="" coords="769,640,968,683"/>
-<area shape="poly" id="edge41_Node000016_Node000036" title=" " alt="" coords="679,581,708,592,732,609,756,626,769,632,767,636,753,630,729,614,705,597,677,586"/>
-<area shape="rect" id="Node000037" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb5550da33925e95999aae23f525f7c5" title="Creates default GridBagConstraints for consistent layout configuration." alt="" coords="763,707,974,749"/>
-<area shape="poly" id="edge42_Node000016_Node000037" title=" " alt="" coords="691,581,708,593,720,605,727,618,733,644,739,669,745,681,756,693,760,696,757,700,753,697,741,684,734,671,728,645,722,620,715,608,705,597,688,585"/>
-<area shape="rect" id="Node000018" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38d65dd319daee1c3288690c17e43ca5" title="Populates the FREE panel with a multiline text area." alt="" coords="1044,515,1275,541"/>
-<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="970,525,1028,525,1028,531,970,531"/>
-<area shape="rect" id="Node000019" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0" title="Populates the MECARD panel with contact fields." alt="" coords="1047,565,1272,592"/>
-<area shape="poly" id="edge21_Node000017_Node000019" title=" " alt="" coords="971,543,1064,559,1063,565,970,548"/>
-<area shape="rect" id="Node000020" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa211e37381e1a96b368390e86cddb879" title="Populates the MEET panel with meet fields." alt="" coords="1040,616,1278,643"/>
-<area shape="poly" id="edge22_Node000017_Node000020" title=" " alt="" coords="959,548,984,559,999,570,1008,581,1018,592,1032,602,1046,608,1044,613,1029,606,1014,596,1004,585,995,574,981,564,957,552"/>
-<area shape="rect" id="Node000022" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a17b0a72ab305f98f86591411b6a352f2" title="Creates the color selection panel for QR code and background colors." alt="" coords="1055,331,1264,373"/>
-<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="970,363,1039,358,1039,363,970,369"/>
-<area shape="poly" id="edge28_Node000022_Node000006" title=" " alt="" coords="1253,328,1287,316,1355,286,1415,254,1418,258,1357,291,1289,321,1255,333"/>
-<area shape="poly" id="edge31_Node000022_Node000012" title=" " alt="" coords="1265,349,1327,349,1327,355,1265,355"/>
-<area shape="rect" id="Node000023" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2b8df9a3e67501adf287968d641a0c42" title="Opens a color chooser dialog and updates the button with the selected color." alt="" coords="1384,405,1552,448"/>
-<area shape="poly" id="edge25_Node000022_Node000023" title=" " alt="" coords="1251,371,1369,400,1368,405,1250,377"/>
-<area shape="rect" id="Node000028" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a097b6f73395cc3945d514006a38dba21" title="Initializes a color button with icon, text, and tooltip." alt="" coords="1369,472,1566,515"/>
-<area shape="poly" id="edge29_Node000022_Node000028" title=" " alt="" coords="1266,370,1290,383,1307,402,1314,422,1322,440,1338,458,1356,469,1353,473,1334,462,1317,443,1309,424,1302,405,1286,387,1263,374"/>
-<area shape="rect" id="Node000024" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71" title="Updates a button&#39;s icon and text to reflect a new color." alt="" coords="1652,447,1869,489"/>
-<area shape="poly" id="edge26_Node000023_Node000024" title=" " alt="" coords="1553,436,1638,448,1637,453,1552,441"/>
-<area shape="rect" id="Node000025" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2dc9a80146b95145d06e8ad45171e889" title="Converts a Color object to its hexadecimal RGB string representation." alt="" coords="1922,447,2090,489"/>
-<area shape="poly" id="edge27_Node000024_Node000025" title=" " alt="" coords="1869,465,1906,465,1906,471,1869,471"/>
-<area shape="poly" id="edge30_Node000028_Node000024" title=" " alt="" coords="1567,482,1636,476,1637,481,1567,487"/>
-<area shape="rect" id="Node000031" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a381579d3adc53b1122b38e7fda5c0235" title="Configures the update button for version checking." alt="" coords="1042,448,1276,491"/>
-<area shape="poly" id="edge34_Node000030_Node000031" title=" " alt="" coords="970,461,1027,463,1027,468,970,467"/>
-<area shape="rect" id="Node000032" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d" title="Switches between MECARD, MEET, and FREE modes, updating the panel and QR preview." alt="" coords="1034,397,1285,424"/>
-<area shape="poly" id="edge35_Node000030_Node000032" title=" " alt="" coords="970,441,1063,425,1064,430,971,446"/>
-<area shape="poly" id="edge36_Node000032_Node000006" title=" " alt="" coords="1265,394,1286,383,1303,367,1311,349,1319,330,1334,309,1370,279,1408,254,1411,258,1373,283,1338,312,1324,332,1316,351,1308,370,1290,387,1268,399"/>
-<area shape="poly" id="edge40_Node000032_Node000012" title=" " alt="" coords="1233,394,1327,376,1328,381,1234,399"/>
-<area shape="rect" id="Node000033" href="$enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" title="Returns the mode label." alt="" coords="1386,539,1549,581"/>
-<area shape="poly" id="edge37_Node000032_Node000033" title=" " alt="" coords="1269,422,1290,434,1301,445,1308,457,1315,480,1321,503,1327,514,1338,525,1373,543,1370,548,1334,529,1323,517,1316,505,1310,482,1303,459,1297,448,1286,438,1267,427"/>
-<area shape="rect" id="Node000034" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906" title="Enables or disables the &quot;Generate&quot; button based on required fields for the current mode." alt="" coords="1358,605,1578,648"/>
-<area shape="poly" id="edge38_Node000032_Node000034" title=" " alt="" coords="1273,422,1290,434,1306,453,1314,474,1315,514,1316,554,1323,573,1338,591,1346,599,1343,603,1334,595,1319,575,1311,555,1310,514,1308,475,1301,456,1286,438,1270,427"/>
-<area shape="rect" id="Node000035" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3ce6e8b8bd62f20e8e8b9a744976c695" title="Determines whether the &quot;Generate&quot; button should be disabled for the current mode." alt="" coords="1651,605,1870,648"/>
-<area shape="poly" id="edge39_Node000034_Node000035" title=" " alt="" coords="1578,624,1635,624,1635,629,1578,629"/>
-<area shape="rect" id="Node000041" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0fe215984734bb1337dd49ca30238b78" title="Sets the loader size so it matches the QR code label height and remains centered." alt="" coords="769,773,968,816"/>
-<area shape="poly" id="edge46_Node000040_Node000041" title=" " alt="" coords="707,772,754,778,753,783,706,778"/>
-<area shape="rect" id="Node000042" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a381368b99c4a0857c6abe6349b2c6d27" title="Calculates the available height for QR code rendering." alt="" coords="1043,773,1276,816"/>
-<area shape="poly" id="edge47_Node000041_Node000042" title=" " alt="" coords="969,792,1027,792,1027,797,969,797"/>
-<area shape="poly" id="edge49_Node000043_Node000002" title=" " alt="" coords="522,809,498,799,476,785,458,762,451,738,445,713,430,688,434,685,450,711,456,736,463,759,480,781,500,794,524,804"/>
+<area shape="rect" id="Node000001" title="Initialisation de l&#39;instance de test et configuration des champs par défaut." alt="" coords="5,831,183,873"/>
+<area shape="rect" id="Node000002" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a102bcbc6cda608b642e870ba3fde6344" title="Constructs the CanScan GUI, setting up layout, panels, inputs, and QR preview." alt="" coords="240,531,421,573"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,829,112,779,138,713,177,644,201,612,229,583,233,580,236,584,232,587,205,615,181,647,143,716,118,781,103,831"/>
+<area shape="rect" id="Node000044" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a480afb2507eb780dcc6f77c0a4334d59" title="Sets the address field text for testing." alt="" coords="231,597,430,640"/>
+<area shape="poly" id="edge51_Node000001_Node000044" title=" " alt="" coords="102,829,120,791,148,743,184,693,229,650,235,646,238,650,232,654,188,697,152,746,125,794,107,832"/>
+<area shape="rect" id="Node000045" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a968f0f590c2211f78d1f832a2ee40b55" title="Sets the email field text for testing." alt="" coords="231,664,430,707"/>
+<area shape="poly" id="edge52_Node000001_Node000045" title=" " alt="" coords="110,829,160,773,193,743,229,716,238,712,240,716,232,721,196,747,163,777,114,832"/>
+<area shape="rect" id="Node000046" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ac2d034a2aaa3cbc0ce5bfac06203cd33" title="Sets the logo field text for testing." alt="" coords="231,731,430,773"/>
+<area shape="poly" id="edge53_Node000001_Node000046" title=" " alt="" coords="135,828,230,783,245,777,247,782,232,788,137,833"/>
+<area shape="rect" id="Node000047" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9f8732331b81ec5fcadbb39c9389a016" title="Sets the margin slider value for testing." alt="" coords="231,797,430,840"/>
+<area shape="poly" id="edge54_Node000001_Node000047" title=" " alt="" coords="183,837,215,832,215,838,183,842"/>
+<area shape="rect" id="Node000048" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8affcfaf13c69cd340e48e3e7d10ae86" title="Sets the name field text for testing." alt="" coords="231,864,430,907"/>
+<area shape="poly" id="edge55_Node000001_Node000048" title=" " alt="" coords="183,862,215,866,215,872,183,867"/>
+<area shape="rect" id="Node000049" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a56273b7ccb4290c7d7aad2132452902e" title="Sets the organization field text for testing." alt="" coords="231,931,430,973"/>
+<area shape="poly" id="edge56_Node000001_Node000049" title=" " alt="" coords="137,871,232,916,247,922,245,927,230,921,135,876"/>
+<area shape="rect" id="Node000050" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a323e90f802787c388da8a03c9b6e47d7" title="Sets the phone field text for testing." alt="" coords="231,997,430,1040"/>
+<area shape="poly" id="edge57_Node000001_Node000050" title=" " alt="" coords="114,872,163,927,196,957,232,983,240,988,238,992,229,988,193,961,160,931,110,875"/>
+<area shape="rect" id="Node000051" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#abf1cb04881a0e23f0b843eed12ce05c7" title="Sets the ratio slider value for testing." alt="" coords="231,1064,430,1107"/>
+<area shape="poly" id="edge58_Node000001_Node000051" title=" " alt="" coords="107,872,125,910,152,958,188,1007,232,1050,238,1054,235,1058,229,1054,184,1011,148,961,120,913,102,875"/>
+<area shape="rect" id="Node000052" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#af8ca8fca38ccbc56063f1cce9e5b7528" title="Sets the URL field text for testing." alt="" coords="231,1131,430,1173"/>
+<area shape="poly" id="edge59_Node000001_Node000052" title=" " alt="" coords="103,873,118,923,143,988,181,1057,205,1089,232,1117,236,1120,233,1124,229,1121,201,1092,177,1060,138,991,112,925,98,875"/>
+<area shape="rect" id="Node000003" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a070115929fdc69b249d21866a00a47cc" title="Assigns stable component names for testing and native&#45;image configuration." alt="" coords="478,313,706,356"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="342,529,394,453,432,410,476,372,497,361,499,365,480,377,436,414,398,456,346,532"/>
+<area shape="rect" id="Node000004" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a14263ca931024d56cd9bed4af4b74c25" title="Builds the main panel with header, QR preview overlay, and bottom spacer." alt="" coords="754,197,983,240"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="347,528,401,472,437,442,477,416,510,403,541,397,597,398,623,398,649,395,676,385,705,366,717,353,723,339,728,310,733,280,740,265,752,250,756,247,760,251,756,254,744,268,738,282,733,311,729,341,721,356,708,370,679,390,651,400,624,403,597,403,542,403,512,408,479,421,440,446,404,476,351,532"/>
+<area shape="rect" id="Node000017" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#afb8d451dc5d6d9c7b6700e4b688c98a3" title="Builds the north panel with mode selection, card panels, common fields, and generate button." alt="" coords="478,431,706,473"/>
+<area shape="poly" id="edge19_Node000002_Node000017" title=" " alt="" coords="374,528,477,483,496,476,498,481,479,488,376,533"/>
+<area shape="rect" id="Node000038" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4928478365bc812571ac037662cc5f6b" title="Wraps the main panel in a scrollable container." alt="" coords="478,497,706,540"/>
+<area shape="poly" id="edge44_Node000002_Node000038" title=" " alt="" coords="421,538,462,533,463,538,422,543"/>
+<area shape="rect" id="Node000039" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a358629f85831dc6cd4978c8854d88561" title="Configures sliders for logo margin and ratio." alt="" coords="478,564,706,607"/>
+<area shape="poly" id="edge45_Node000002_Node000039" title=" " alt="" coords="422,561,463,566,462,571,421,566"/>
+<area shape="rect" id="Node000040" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0a52159db640660477196e337ec62a9b" title="Finalizes layout and dimensions using dynamic system metrics." alt="" coords="478,631,706,673"/>
+<area shape="poly" id="edge46_Node000002_Node000040" title=" " alt="" coords="405,571,431,583,455,600,479,616,493,622,491,627,477,621,452,604,429,588,403,576"/>
+<area shape="rect" id="Node000043" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6804e999a867e3d11b3d77e24f9b789e" title="Sets the application window icon using an image resource." alt="" coords="478,697,706,740"/>
+<area shape="poly" id="edge49_Node000002_Node000043" title=" " alt="" coords="388,572,411,581,432,595,449,618,455,641,459,663,470,685,465,687,454,665,450,642,444,620,428,599,409,586,386,576"/>
+<area shape="rect" id="Node000005" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ad470e3c0750cf142dc611b1aeeda3a97" title="Synchronizes the UI components with the QR code preview and validates input states." alt="" coords="1031,197,1288,240"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="983,216,1015,216,1015,221,983,221"/>
+<area shape="rect" id="Node000006" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a180290bc488e2346592ded98ccc4b1f3" title="Collects current input and visual settings into a WholeFields for QR code generation." alt="" coords="1368,288,1567,331"/>
+<area shape="poly" id="edge15_Node000004_Node000006" title=" " alt="" coords="970,238,1031,249,1200,275,1353,294,1352,299,1199,280,1030,255,970,243"/>
+<area shape="rect" id="Node000015" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a214a6314f095a389ee6bf2eaa71a6190" title="Updates the current QR input, resize the loader, and schedules a debounced resize operation." alt="" coords="1038,85,1281,144"/>
+<area shape="poly" id="edge16_Node000004_Node000015" title=" " alt="" coords="930,194,1060,147,1061,152,931,199"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1235,238,1379,281,1377,286,1234,243"/>
+<area shape="rect" id="Node000013" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_preview_worker.html#aab1382704fa1f4c27f1eab80fc8534b1" title="Updates and schedules a debounced QR code preview refresh." alt="" coords="1343,181,1592,240"/>
+<area shape="poly" id="edge13_Node000005_Node000013" title=" " alt="" coords="1288,213,1327,212,1327,217,1289,218"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="1413,288,1411,278,1420,269,1439,263,1468,261,1499,264,1518,270,1516,275,1498,269,1468,267,1440,269,1422,273,1416,279,1418,287"/>
+<area shape="rect" id="Node000007" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a1a6235214fa4fd656875c0dae3e960bd" title="Clears input fields corresponding to the active generation mode upon exceeding capacity limits." alt="" coords="1656,355,1865,397"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1565,329,1649,348,1648,353,1564,334"/>
+<area shape="rect" id="Node000009" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a4e67b1b5c764e72414a5c0f387810f5c" title="Validates and returns the current QR code margin from the margin slider." alt="" coords="1647,288,1874,331"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="1568,307,1632,307,1632,312,1568,312"/>
+<area shape="rect" id="Node000010" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a8a2b238ac4af96d8710b3e5d7d051f77" title="Validates and returns the current meet UID from the meet title field." alt="" coords="1647,88,1874,131"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="1543,285,1572,270,1597,250,1608,237,1615,223,1620,196,1626,168,1633,154,1645,141,1649,137,1653,142,1649,145,1638,157,1631,170,1625,197,1620,225,1613,239,1601,254,1575,274,1545,290"/>
+<area shape="rect" id="Node000011" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9e8188875168199cde065113ae2a393d" title="Validates and returns the current image&#45;to&#45;QR ratio from the ratio slider." alt="" coords="1647,155,1874,197"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="1528,285,1598,250,1621,228,1631,218,1646,207,1657,201,1659,206,1649,212,1634,222,1625,232,1601,254,1531,290"/>
+<area shape="rect" id="Node000012" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a6d139bb8d0a3c7081096c8956189b684" title="Validates and returns the QR code size from the corresponding text field." alt="" coords="1647,221,1874,264"/>
+<area shape="poly" id="edge12_Node000006_Node000012" title=" " alt="" coords="1564,285,1648,265,1649,271,1565,290"/>
+<area shape="rect" id="Node000008" href="$enumfr_1_1softsf_1_1canscan_1_1model_1_1_mode.html#a16a898a11ca939056bd7b275f11ea54c" title="Returns the mode label." alt="" coords="1925,480,2087,523"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1854,395,1875,407,1891,422,1900,437,1909,451,1923,466,1929,470,1926,474,1920,470,1905,455,1896,440,1887,425,1872,412,1851,400"/>
+<area shape="rect" id="Node000014" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_abstract_dynamic_worker.html#abd8ce1ed48ee82ef39d7d169a051faf6" title=" " alt="" coords="1649,5,1872,64"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1547,178,1574,164,1598,146,1613,128,1620,110,1629,92,1646,74,1650,70,1654,75,1649,78,1633,95,1625,113,1617,131,1601,150,1577,168,1550,183"/>
+<area shape="poly" id="edge17_Node000015_Node000014" title=" " alt="" coords="1281,88,1336,79,1490,58,1633,43,1634,49,1491,64,1336,84,1282,93"/>
+<area shape="rect" id="Node000016" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_dynamic_resize_worker.html#a5299a7f976198123d1da10f8d27af9a4" title="Resizes the loader to a square dimension based on the given value and refreshes its parent container ..." alt="" coords="1336,93,1599,136"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="1281,112,1321,112,1321,117,1281,117"/>
+<area shape="rect" id="Node000018" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ab2e018ca62c7497c29e84f42ae870daa" title="Adds MECARD MEET FREE card panels to the north panel." alt="" coords="767,531,970,573"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="679,471,708,483,732,500,756,516,769,522,767,527,753,521,729,504,705,488,677,476"/>
+<area shape="rect" id="Node000022" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a94ab4df98de0d05977e6a65ab75f89f0" title="Adds common input fields to the north panel." alt="" coords="767,397,970,440"/>
+<area shape="poly" id="edge24_Node000017_Node000022" title=" " alt="" coords="706,436,752,430,753,435,707,441"/>
+<area shape="rect" id="Node000030" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a9f205dfdb266d5d7f8f8899b69742663" title="Adds the generate button to the north panel." alt="" coords="767,597,970,640"/>
+<area shape="poly" id="edge33_Node000017_Node000030" title=" " alt="" coords="691,472,708,483,720,496,727,509,733,535,739,560,745,572,756,583,760,586,757,591,753,587,741,575,734,562,728,536,722,511,715,499,705,487,688,476"/>
+<area shape="rect" id="Node000031" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa469763b92dd7cbc6dfdb9aaa0116b33" title="Adds mode selection controls (MECARD/MEET/FREE) to the north panel." alt="" coords="767,464,970,507"/>
+<area shape="poly" id="edge34_Node000017_Node000031" title=" " alt="" coords="707,463,753,469,752,474,706,468"/>
+<area shape="rect" id="Node000036" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#ada8edc3d5abda489ce9f75a0613cfc71" title="Creates the base north panel with layout, maximum width, and padding applied." alt="" coords="769,264,968,307"/>
+<area shape="poly" id="edge42_Node000017_Node000036" title=" " alt="" coords="677,428,705,410,721,387,727,364,734,340,752,317,757,313,761,317,756,321,739,343,733,366,726,390,708,414,680,432"/>
+<area shape="rect" id="Node000037" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aeb5550da33925e95999aae23f525f7c5" title="Creates default GridBagConstraints for consistent layout configuration." alt="" coords="763,331,974,373"/>
+<area shape="poly" id="edge43_Node000017_Node000037" title=" " alt="" coords="660,428,705,410,729,396,753,383,770,376,772,381,755,388,732,401,707,414,662,433"/>
+<area shape="rect" id="Node000019" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a38d65dd319daee1c3288690c17e43ca5" title="Populates the FREE panel with a multiline text area." alt="" coords="1044,581,1275,608"/>
+<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="971,564,1049,576,1048,581,970,570"/>
+<area shape="rect" id="Node000020" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0" title="Populates the MECARD panel with contact fields." alt="" coords="1047,632,1272,659"/>
+<area shape="poly" id="edge22_Node000018_Node000020" title=" " alt="" coords="956,571,984,583,1008,601,1032,618,1050,625,1049,630,1029,622,1005,605,981,588,954,576"/>
+<area shape="rect" id="Node000021" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aa211e37381e1a96b368390e86cddb879" title="Populates the MEET panel with meet fields." alt="" coords="1040,531,1278,557"/>
+<area shape="poly" id="edge23_Node000018_Node000021" title=" " alt="" coords="970,547,1024,545,1025,550,970,552"/>
+<area shape="rect" id="Node000023" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a17b0a72ab305f98f86591411b6a352f2" title="Creates the color selection panel for QR code and background colors." alt="" coords="1055,347,1264,389"/>
+<area shape="poly" id="edge25_Node000022_Node000023" title=" " alt="" coords="970,398,1039,386,1040,392,971,404"/>
+<area shape="poly" id="edge29_Node000023_Node000006" title=" " alt="" coords="1264,345,1352,329,1353,334,1265,351"/>
+<area shape="poly" id="edge32_Node000023_Node000013" title=" " alt="" coords="1187,344,1252,297,1335,250,1348,244,1350,249,1337,254,1255,302,1190,348"/>
+<area shape="rect" id="Node000024" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2b8df9a3e67501adf287968d641a0c42" title="Opens a color chooser dialog and updates the button with the selected color." alt="" coords="1384,355,1552,397"/>
+<area shape="poly" id="edge26_Node000023_Node000024" title=" " alt="" coords="1265,368,1368,371,1368,376,1265,373"/>
+<area shape="rect" id="Node000029" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a097b6f73395cc3945d514006a38dba21" title="Initializes a color button with icon, text, and tooltip." alt="" coords="1369,421,1566,464"/>
+<area shape="poly" id="edge30_Node000023_Node000029" title=" " alt="" coords="1251,387,1362,415,1361,420,1250,393"/>
+<area shape="rect" id="Node000025" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a466717b99c523fa665a8895bb9c91b71" title="Updates a button&#39;s icon and text to reflect a new color." alt="" coords="1652,421,1869,464"/>
+<area shape="poly" id="edge27_Node000024_Node000025" title=" " alt="" coords="1553,393,1650,415,1649,420,1552,398"/>
+<area shape="rect" id="Node000026" href="$classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a2dc9a80146b95145d06e8ad45171e889" title="Converts a Color object to its hexadecimal RGB string representation." alt="" coords="1922,413,2090,456"/>
+<area shape="poly" id="edge28_Node000025_Node000026" title=" " alt="" coords="1869,436,1906,435,1906,441,1869,442"/>
+<area shape="poly" id="edge31_Node000029_Node000025" title=" " alt="" coords="1567,440,1637,440,1637,445,1567,445"/>
+<area shape="rect" id="Node000032" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a381579d3adc53b1122b38e7fda5c0235" title="Configures the update button for version checking." alt="" coords="1042,464,1276,507"/>
+<area shape="poly" id="edge35_Node000031_Node000032" title=" " alt="" coords="970,483,1027,483,1027,488,970,488"/>
+<area shape="rect" id="Node000033" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a428c742b098fa27d4c8984c1030c238d" title="Switches between MECARD, MEET, and FREE modes, updating the panel and QR preview." alt="" coords="1034,413,1285,440"/>
+<area shape="poly" id="edge36_Node000031_Node000033" title=" " alt="" coords="970,462,1030,449,1072,441,1073,446,1031,455,971,467"/>
+<area shape="poly" id="edge37_Node000033_Node000006" title=" " alt="" coords="1263,410,1287,399,1302,386,1310,371,1318,355,1334,341,1352,331,1355,335,1338,345,1323,359,1315,374,1306,389,1289,404,1265,415"/>
+<area shape="poly" id="edge38_Node000033_Node000008" title=" " alt="" coords="1248,438,1289,450,1313,462,1337,473,1413,490,1491,502,1648,513,1792,513,1909,508,1909,513,1792,519,1648,518,1491,507,1412,495,1335,479,1311,467,1287,454,1246,443"/>
+<area shape="poly" id="edge41_Node000033_Node000013" title=" " alt="" coords="1270,411,1286,399,1301,382,1308,365,1310,328,1312,289,1320,269,1334,250,1336,248,1340,252,1338,254,1324,272,1318,290,1316,328,1313,366,1305,385,1290,403,1273,415"/>
+<area shape="rect" id="Node000034" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a11fd9295c4843e6e68f9d1e4a710b906" title="Enables or disables the &quot;Generate&quot; button based on required fields for the current mode." alt="" coords="1358,539,1578,581"/>
+<area shape="poly" id="edge39_Node000033_Node000034" title=" " alt="" coords="1267,438,1290,450,1307,467,1315,484,1322,502,1338,518,1357,530,1354,534,1334,522,1318,505,1310,487,1302,470,1286,454,1264,443"/>
+<area shape="rect" id="Node000035" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a3ce6e8b8bd62f20e8e8b9a744976c695" title="Determines whether the &quot;Generate&quot; button should be disabled for the current mode." alt="" coords="1651,539,1870,581"/>
+<area shape="poly" id="edge40_Node000034_Node000035" title=" " alt="" coords="1578,557,1635,557,1635,563,1578,563"/>
+<area shape="rect" id="Node000041" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a0fe215984734bb1337dd49ca30238b78" title="Sets the loader size so it matches the QR code label height and remains centered." alt="" coords="769,673,968,716"/>
+<area shape="poly" id="edge47_Node000040_Node000041" title=" " alt="" coords="707,667,754,674,753,680,706,672"/>
+<area shape="rect" id="Node000042" href="$classfr_1_1softsf_1_1canscan_1_1_can_scan.html#a381368b99c4a0857c6abe6349b2c6d27" title="Calculates the available height for QR code rendering." alt="" coords="1043,683,1276,725"/>
+<area shape="poly" id="edge48_Node000041_Node000042" title=" " alt="" coords="969,695,1028,697,1027,702,969,701"/>
+<area shape="poly" id="edge50_Node000043_Node000002" title=" " alt="" coords="522,699,498,690,476,675,458,652,451,628,445,604,430,579,434,576,450,602,456,627,463,650,480,671,500,685,524,694"/>
 </map>

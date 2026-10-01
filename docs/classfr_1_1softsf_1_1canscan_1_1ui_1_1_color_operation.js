@@ -12,5 +12,6 @@ var classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation =
     [ "CHOOSE_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a60b7117ffa094aaf0f4ee01fc024bf8f", null ],
     [ "COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#ae5c28bdc249d960b481bfb5c60012e5b", null ],
     [ "DEFAULT_HEX_COLOR", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a743e5cce64d30d5f7d06b4538c77d869", null ],
+    [ "RGB_MASK", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a84c2556987928710682d597223579a4c", null ],
     [ "STROKE_WIDTH", "classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a47d8f3943372f0b1c31d7a22f0791ff7", null ]
 ];

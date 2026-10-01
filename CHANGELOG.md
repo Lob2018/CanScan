@@ -4,6 +4,23 @@
 ## Unreleased -
 
 
+♻️ refactor ColorOperation: Extract magic number into a constant for RGB masking
+- Add RGB_MASK constant
+- Update colorToHex method to use RGB_MASK
+- Tests pass.
+
+([69df71b994d7ef7](https://github.com/Lob2018/CanScan/commit/69df71b994d7ef76b815fef12882d69b52c8de0d))
+
+🔧 chore requirements.txt: Bump the python-dependencies
+
+([7565579a68798f1](https://github.com/Lob2018/CanScan/commit/7565579a68798f152cdcb331b61b24647952a10f))
+
+♻️ refactor CanScan: Enhance mode error handling
+- Update method Javadoc and handle null and default modes with dialog popups
+- Tests pass.
+
+([ae1369126f33fb4](https://github.com/Lob2018/CanScan/commit/ae1369126f33fb4ecead51e4a3d014f663221323))
+
 ✨ feat src/*, LICENSE.txt, pom.xml, README.md: Update license from GPLv3 to AGPLv3
 - Update license headers and project metadata to AGPLv3.
 - Tests pass.

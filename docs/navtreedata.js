@@ -27,7 +27,7 @@ var NAVTREE =
   [ "CanScan", "index.html", [
     [ "Documentation de CanScan", "index.html", "index" ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", null ],
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ]
@@ -55,11 +55,14 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AbstractDynamicWorker_8java.html",
-"classfr_1_1softsf_1_1canscan_1_1service_1_1GenerateAndSaveService.html#a165443738e1833533e7771d37ead17ed",
-"enumfr_1_1softsf_1_1canscan_1_1constant_1_1StringConstants.html#adc931945e423ddf7bfa4d5bd94bba269",
-"ui_2worker_2package-info_8java.html"
+"_abstract_dynamic_worker_8java.html",
+"classfr_1_1softsf_1_1canscan_1_1_can_scan.html#aed7e3048974882318a6519d8d36e8ec0",
+"classfr_1_1softsf_1_1canscan_1_1ui_1_1_color_operation.html#a71702ffd14d463001f26baa6e9a77e1a",
+"classfr_1_1softsf_1_1canscan_1_1ui_1_1worker_1_1_generate_and_save_worker.html#a63814c994f6142b0ec6f98dd3a565e99",
+"enumfr_1_1softsf_1_1canscan_1_1ui_1_1_ui_components_configuration.html#a140cdf06b78d5f2b0d588f7cc4c88178",
+"functions_s.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';
