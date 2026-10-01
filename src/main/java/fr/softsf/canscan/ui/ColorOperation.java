@@ -29,6 +29,7 @@ import fr.softsf.canscan.util.FrameHelper;
 public class ColorOperation {
 
     private static final int BUTTON_COLOR_ICON_TEXT_GAP = 10;
+    public static final int RGB_MASK = 0x00FFFFFF;
     private static final float STROKE_WIDTH = 2f;
     private static final String BORDER_COLOR = "#003f5e";
     private static final String DEFAULT_HEX_COLOR = "#FFFFFF";
@@ -157,6 +158,6 @@ public class ColorOperation {
         if (Checker.INSTANCE.checkNPE(color, "colorToHex", COLOR)) {
             return DEFAULT_HEX_COLOR;
         }
-        return String.format(Locale.ROOT, "#%06X", color.getRGB() & 0x00FFFFFF);
+        return String.format(Locale.ROOT, "#%06X", color.getRGB() & RGB_MASK);
     }
 }
