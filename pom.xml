@@ -35,7 +35,7 @@
     <app.organization>${project.organization.name}</app.organization>
     <app.version>${project.version}</app.version>
     <java.version>25</java.version>
-    <license.name>GPLv3.0</license.name>
+    <license.name>AGPLv3.0</license.name>
     <maven.version>3.9.9</maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -223,7 +223,7 @@
               <content><![CDATA[
 /*
  * CanScan - Copyright © 2025-present SOFT64.FR Lob2018
- * Licensed under the GNU General Public License v3.0 (GPLv3.0).
+ * Licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
  * See the full license at: https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme
  */
 ]]></content>

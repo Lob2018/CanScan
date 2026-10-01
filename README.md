@@ -10,7 +10,7 @@ Générez en un instant un code QR pour **ajouter un contact**, **créer un év�
 - [x] 📷 **Vérifier et tester** : S’assurer que le code QR est scannable grâce à l’aperçu dynamique
 - [x] 💾 **Enregistrer facilement** : Sauvegarder l’image au format PNG
 
-<br>[![License](https://img.shields.io/badge/license-GPLv3.0-brightgreen.svg)](https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme)<br>
+<br>[![License](https://img.shields.io/badge/license-AGPLv3.0-brightgreen.svg)](https://github.com/Lob2018/CanScan?tab=License-1-ov-file#readme)<br>
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12719/badge)](https://www.bestpractices.dev/projects/12719)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Lob2018/CanScan/badge)](https://scorecard.dev/viewer/?uri=github.com/Lob2018/CanScan)
 [![OSV-Scanner](https://github.com/Lob2018/CanScan/actions/workflows/osv-scanner-scheduled.yml/badge.svg)](https://github.com/Lob2018/CanScan/actions/workflows/osv-scanner-scheduled.yml)<br>
@@ -234,5 +234,5 @@ Veuillez lire le [Code de conduite](./CODE_OF_CONDUCT.md) avant de participer.
 
 ## 📜 Licence
 
-GPLv3.0 License © 2025 SOFT64.FR Lob2018<br>
+AGPLv3.0 License © 2025 SOFT64.FR Lob2018<br>
 📜 [Consulter la licence complète LICENSE.txt](https://github.com/Lob2018/CanScan/blob/main/LICENSE.txt)

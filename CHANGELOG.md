@@ -4,6 +4,12 @@
 ## Unreleased -
 
 
+📚 docs pom.xml: Add SCM configuration
+- Add connection, developerConnection, url, and tag elements to the pom.xml file.
+- Tests pass.
+
+([75ec88b111b1286](https://github.com/Lob2018/CanScan/commit/75ec88b111b1286eeeb06cd3e7b5f8ddea3d1ae5))
+
 📚 docs .myresources/doc/mainpage.dox, README.md, pom.xml: Add CHANGELOG references and plugin configuration
 - .myresources/doc/mainpage.dox :
   - Add CHANGELOG link to main Doxygen documentation page.
