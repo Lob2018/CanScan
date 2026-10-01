@@ -4,6 +4,12 @@
 ## Unreleased -
 
 
+✨ feat src/*, LICENSE.txt, pom.xml, README.md: Update license from GPLv3 to AGPLv3
+- Update license headers and project metadata to AGPLv3.
+- Tests pass.
+
+([f5d77f6f1b66db4](https://github.com/Lob2018/CanScan/commit/f5d77f6f1b66db4598fa7dfe96c2cb8dec620474))
+
 📚 docs pom.xml: Add SCM configuration
 - Add connection, developerConnection, url, and tag elements to the pom.xml file.
 - Tests pass.

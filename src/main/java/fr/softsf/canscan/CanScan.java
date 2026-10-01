@@ -966,7 +966,7 @@ public final class CanScan extends JFrame {
 
     /**
      * Clears input fields corresponding to the active generation mode upon exceeding capacity
-     * limits.
+     * limits. Triggers an error dialog if the active mode is unhandled or null.
      */
     private void clearFieldsForCurrentMode() {
         switch (currentMode) {
@@ -983,7 +983,14 @@ public final class CanScan extends JFrame {
                 meetTitleField.setText("");
                 meetNameField.setText("");
             }
-            default -> {}
+            case null ->
+                    MyPopup.INSTANCE.showDialog(
+                            "❌ Mode de génération non géré:\n",
+                            "Mode non initialisé (null)",
+                            "Erreur");
+            default ->
+                    MyPopup.INSTANCE.showDialog(
+                            "❌ Mode de génération non géré:\n", currentMode.text(), "Erreur");
         }
     }
 
