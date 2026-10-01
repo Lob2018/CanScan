@@ -4,6 +4,10 @@
 ## Unreleased -
 
 
+🔧 chore pom.xml: Bump project version to 1.2.3.0
+
+([677a14f076f0867](https://github.com/Lob2018/CanScan/commit/677a14f076f08674e2d7c5fb07bcc48edad90dcb))
+
 🔧 chore spotless-maven-plugin, spotbugs-maven-plugin, exec-maven-plugin, : Bump the maven-dependencies
 
 ([e700b3fc7db71d1](https://github.com/Lob2018/CanScan/commit/e700b3fc7db71d19ea61759a66da553109bbb0ea))
